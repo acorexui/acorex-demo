@@ -1,4 +1,4 @@
-Stage 1: Build the Angular application
+#Stage 1: Build the Angular application
 FROM node:22.3.0 AS build
 
 WORKDIR /usr/src/app
