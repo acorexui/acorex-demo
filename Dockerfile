@@ -1,31 +1,32 @@
-# Base image
-FROM node:16.15.1 as build
+Stage 1: Build the Angular application
+FROM node:22.3.0 AS build
 
-# Set the working directory
-WORKDIR /app
+WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install --force --no-package-lock
+RUN npm i
 
-# Copy the rest of the application code
+# Copy the entire application source code
 COPY . .
 
-# Build the Angular application
+# Build the Angular SSR application
 RUN npm run build
 
-# Production image
-FROM nginx:1.21.0-alpine
+# Stage 2: Create the final production image
+FROM node:22.3.0
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+WORKDIR /usr/src/app
 
-# Copy the built Angular app from the build stage to the NGINX HTML directory
-COPY --from=build /app/dist/acorex-demo /usr/share/nginx/html
+# Copy the built Angular SSR files from the previous stage
+COPY --from=build /usr/src/app/dist ./dist
 
-# Expose the NGINX port
-EXPOSE 80
+# Install only production dependencies
+COPY package*.json ./
+RUN npm i 
 
-# Start NGINX
-CMD ["nginx", "-g", "daemon off;"]
+
+# Start the SSR server
+CMD ["npm", "run", "serve:ssr:acorex-demo"]
