@@ -1,0 +1,16 @@
+<ax-drawer-container class="ax-h-96 ax-w-full ax-border ax-border-primary-100 dark:ax-border-white/30">
+  <ax-drawer class="ax-bg-on-surface" #drawer5 location="start" mode="push">
+    <ax-header>
+      <ax-title> Push Drawer </ax-title>
+      <ax-close-button></ax-close-button>
+    </ax-header>
+    <ax-content class="ax-flex ax-min-w-[300px] ax-flex-col ax-p-8">
+      <div>Some contents...</div>
+      <div>Some contents...</div>
+      <div>Some contents...</div>
+    </ax-content>
+  </ax-drawer>
+  <ax-content class="ax-bg-light-100 dark:ax-bg-dark-500 ax-flex ax-h-full ax-w-full ax-items-center ax-justify-around ax-p-3 dark:ax-border-white/30">
+    <ax-button color="primary" look="twotone" text="Open Push Drawer" (onClick)="drawer5.toggle()"> </ax-button>
+  </ax-content>
+</ax-drawer-container>

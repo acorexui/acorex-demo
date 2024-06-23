@@ -1,0 +1,11 @@
+<div class="ax-mx-auto ax-w-full lg:ax-w-1/2">
+  <ax-image class="ax-mx-auto ax-h-96 ax-rounded" src="https://4kwallpapers.com/images/walls/thumbs_3t/14464.jpg" [overlayMode]="'hover'">
+    <ax-overlay class="ax-flex ax-justify-center">
+      <ax-button color="secondary" (onClick)="showFullImage(image)" text="View Image"></ax-button>
+    </ax-overlay>
+    <ax-loading></ax-loading>
+  </ax-image>
+</div>
+<ng-template #image>
+  <img src="https://4kwallpapers.com/images/walls/thumbs_3t/14464.jpg" alt="overlay image" />
+</ng-template>

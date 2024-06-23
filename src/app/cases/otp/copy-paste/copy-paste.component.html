@@ -1,0 +1,17 @@
+<div
+    class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-py-16 ax-text-center"
+>
+    <div>
+        <div class="ax-h4">Copy / Paste</div>
+        <p>
+            Copy a string of numbers or the code below and then paste it on one
+            of the inputs
+        </p>
+        <pre axTooltip="Click to copy" (click)="handleCopyClick('1234567')">
+123456</pre
+        >
+    </div>
+    <div class="ax-w-80">
+        <ax-otp [length]="6" look="fill" state="error"></ax-otp>
+    </div>
+</div>

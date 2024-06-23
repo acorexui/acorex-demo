@@ -1,0 +1,16 @@
+<div class="ax-flex ax-h-[300px] ax-w-full ax-items-center ax-justify-center">
+  <ax-button [text]="leaveButtonText" #leaveBtn look="twotone" color="primary"></ax-button>
+</div>
+<ax-popover
+  [openOn]="'hover'"
+  [closeOn]="'leave'"
+  (onOpened)="changeButtonText('leaveButtonText', 'Leave to Close')"
+  (onClosed)="changeButtonText('leaveButtonText', 'Hover to Open')"
+  [target]="leaveBtn"
+>
+  <div class="ax-overlay-pane ax-p-4">
+    <b class="ax-text-sm">Title</b>
+    <br />
+    <small>This popover close when you leave the button</small>
+  </div>
+</ax-popover>

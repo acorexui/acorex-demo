@@ -1,0 +1,10 @@
+<div class="ax-flex ax-h-[300px] ax-w-full ax-items-center ax-justify-center">
+  <ax-button [text]="'Simple Popover'" #actionButton look="twotone" color="primary"></ax-button>
+</div>
+<ax-popover [openOn]="'click'" [target]="actionButton">
+  <div class="ax-overlay-pane ax-p-4">
+    <b class="ax-text-sm">Title</b>
+    <br />
+    <small>This is a simple popover</small>
+  </div>
+</ax-popover>
