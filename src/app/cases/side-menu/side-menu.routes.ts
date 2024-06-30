@@ -8,7 +8,7 @@ export const routes: Routes = [
   },
 
   {
-    path: 'backgroun-text',
+    path: 'background-text',
     loadComponent: () =>
       import('./background-text/background-text.component').then(
         (e) => e.BackgroundTextComponent
@@ -28,6 +28,13 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./use-decorator/use-decorator.component').then(
         (e) => e.UseDecoratorComponent
+      ),
+  },
+  {
+    path: 'group-title',
+    loadComponent: () =>
+      import('./group-title/group-title.component').then(
+        (e) => e.GroupTitleComponent
       ),
   },
 ];
