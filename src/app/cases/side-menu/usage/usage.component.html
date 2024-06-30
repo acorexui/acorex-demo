@@ -1,4 +1,6 @@
-<div class="ax-w-60 ax-rounded-md ax-bg-secondary-700 ax-p-2 ax-text-secondary-fore">
+<div
+  class="ax-w-60 ax-rounded-md ax-bg-secondary-700 ax-p-2 ax-text-secondary-fore"
+>
   <ax-side-menu>
     <ax-side-menu-item>
       <span>Dashboard</span>
@@ -38,8 +40,14 @@
       <ax-suffix>
         <ax-badge text="+3" color="danger"></ax-badge>
       </ax-suffix>
-      <ax-side-menu-item text="All Comments" [disabled]="_options.disabled"></ax-side-menu-item>
-      <ax-side-menu-item text="Comments approved" [disabled]="_options.disabled"></ax-side-menu-item>
+      <ax-side-menu-item
+        text="All Comments"
+        [disabled]="_options.disabled"
+      ></ax-side-menu-item>
+      <ax-side-menu-item
+        text="Comments approved"
+        [disabled]="_options.disabled"
+      ></ax-side-menu-item>
       <ax-side-menu-item text="Unverified comments"></ax-side-menu-item>
     </ax-side-menu-item>
   </ax-side-menu>
