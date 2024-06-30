@@ -9,9 +9,15 @@ import { AXPopupModule, AXPopupService } from '@acorex/components/popup';
 @Component({
   standalone: true,
   templateUrl: 'overlay.component.html',
-  imports: [AXImageModule, AXLoadingModule, AXDecoratorModule, AXButtonModule, AXPopupModule]
+  imports: [
+    AXImageModule,
+    AXLoadingModule,
+    AXDecoratorModule,
+    AXButtonModule,
+    AXPopupModule,
+  ],
 })
-export class UsageComponent {
+export class OverlayComponent {
   private popupService = inject(AXPopupService);
 
   protected showFullImage(image: TemplateRef<HTMLElement>) {
@@ -20,7 +26,7 @@ export class UsageComponent {
       title: '',
       closeButton: false,
       header: false,
-      closeOnBackdropClick: true
+      closeOnBackdropClick: true,
     });
   }
 }

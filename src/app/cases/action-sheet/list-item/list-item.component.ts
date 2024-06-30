@@ -1,4 +1,8 @@
-import { AXActionSheetItem, AXActionSheetModule, AXActionSheetService } from '@acorex/components/action-sheet';
+import {
+  AXActionSheetItem,
+  AXActionSheetModule,
+  AXActionSheetService,
+} from '@acorex/components/action-sheet';
 import { AXButtonModule } from '@acorex/components/button';
 import { AXDialogModule } from '@acorex/components/dialog';
 import { Component, WritableSignal, inject, signal } from '@angular/core';

@@ -1,8 +1,19 @@
-<ax-button text="Open Action sheet" color="secondary" (onClick)="openActionSheet()">
+<ax-button
+  text="Open Action sheet"
+  color="secondary"
+  (onClick)="openActionSheet()"
+>
 </ax-button>
 
 <ng-template #customTemplate>
-  <div class="ax-py-8 ax-px-16 ax-flex ax-justify-center ax-items-center ax-text-lg">
-    This is a custom template 😊
+  <div class="ax-px-16 ax-py-8">
+    <ax-result>
+      <ax-icon class="fa-solid fa-circle-check ax-text-success-500"> </ax-icon>
+      <ax-title> Your payment information has been received </ax-title>
+      <ax-content>
+        Your order will arrive in less than 24 hours. You can track your order
+        from the sales support department
+      </ax-content>
+    </ax-result>
   </div>
 </ng-template>

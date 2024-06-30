@@ -1,13 +1,24 @@
-import { AXActionSheetItem, AXActionSheetModule, AXActionSheetService } from '@acorex/components/action-sheet';
+import {
+  AXActionSheetItem,
+  AXActionSheetModule,
+  AXActionSheetService,
+} from '@acorex/components/action-sheet';
 import { AXAvatarModule } from '@acorex/components/avatar';
 import { AXButtonModule } from '@acorex/components/button';
-import { Component, TemplateRef, ViewChild, WritableSignal, inject, signal } from '@angular/core';
+import {
+  Component,
+  TemplateRef,
+  ViewChild,
+  WritableSignal,
+  inject,
+  signal,
+} from '@angular/core';
 @Component({
   templateUrl: 'both-mode.component.html',
   imports: [AXButtonModule, AXActionSheetModule, AXAvatarModule],
   standalone: true,
 })
-export class ActionSheetListItemComponent {
+export class ActionSheetBothModeComponent {
   @ViewChild('bothTemplate')
   bothTemplate!: TemplateRef<unknown>;
 

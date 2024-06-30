@@ -5,6 +5,6 @@ import { AXBadgeModule } from '@acorex/components/badge';
 @Component({
   standalone: true,
   templateUrl: 'usage.component.html',
-  imports: [AXBadgeModule]
+  imports: [AXBadgeModule],
 })
 export class UsageComponent {}

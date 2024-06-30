@@ -9,4 +9,4 @@ import { AXDecoratorModule } from '@acorex/components/decorators';
   templateUrl: 'loading-placeholder.component.html',
   imports: [AXImageModule, AXLoadingModule, AXDecoratorModule]
 })
-export class UsageComponent {}
+export class LoadingPlaceholderComponent {}

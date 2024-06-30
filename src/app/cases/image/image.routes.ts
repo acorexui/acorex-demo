@@ -7,13 +7,15 @@ export const routes: Routes = [
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
   {
-    path: 'colors',
+    path: 'overlay',
     loadComponent: () =>
-      import('./colors/colors.component').then((e) => e.ColorsComponent),
+      import('./overlay/overlay.component').then((e) => e.OverlayComponent),
   },
   {
-    path: 'look',
+    path: 'loading-placeholder',
     loadComponent: () =>
-      import('./look/look.component').then((e) => e.LookComponent),
+      import('./loading-placeholder/loading-placeholder.component').then(
+        (e) => e.LoadingPlaceholderComponent
+      ),
   },
 ];

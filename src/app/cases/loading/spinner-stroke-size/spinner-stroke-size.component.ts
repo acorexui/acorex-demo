@@ -4,7 +4,7 @@ import { AXLoadingModule } from '@acorex/components/loading';
 
 @Component({
   standalone: true,
-  templateUrl: 'loading-spinner.component.html',
+  templateUrl: 'spinner-stroke-size.component.html',
   imports: [AXLoadingModule],
 })
-export class LoadingSpinnerComponent {}
+export class SpinnerStrokeSizeComponent {}
