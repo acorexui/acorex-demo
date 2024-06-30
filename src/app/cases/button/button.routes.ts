@@ -23,6 +23,20 @@ export const routes: Routes = [
             ),
     },
     {
+        path: 'inverted-color',
+        loadComponent: () =>
+            import('./inverted-color/inverted-color.component').then(
+                (i) => i.invertedColorButtonComponent,
+            ),
+    },
+    {
+        path: 'dropdown',
+        loadComponent: () =>
+            import('./dropdown/dropdown.component').then(
+                (l) => l.DropdownComponent,
+            ),
+    },
+    {
         path: 'loading-state',
         loadComponent: () =>
             import('./loading-state/loading-state.component').then(

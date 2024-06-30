@@ -2,14 +2,13 @@ import { Component } from '@angular/core';
 
 import { AXListModule } from '@acorex/components/list';
 import { AXDataSource } from '@acorex/components/common';
-import { AXDecoratorModule } from '@acorex/components/decorators';
 
 @Component({
   standalone: true,
-  templateUrl: 'list-custom-footer.component.html',
-  imports: [AXListModule, AXDecoratorModule]
+  templateUrl: 'custom-item.component.html',
+  imports: [AXListModule]
 })
-export class UsageComponent {
+export class CustomItemComponent {
   protected items = [
     { id: 1, text: 'Apple 🍏', hint: 'Delicious Fruit' },
     { id: 2, text: 'Orange 🍊', hint: 'Delicious Fruit' },

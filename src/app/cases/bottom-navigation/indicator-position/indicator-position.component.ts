@@ -5,7 +5,7 @@ import { AXBottomNavigationModule } from '@acorex/components/bottom-navigation';
 
 @Component({
   standalone: true,
-  templateUrl: 'disabled.component.html',
+  templateUrl: 'indicator-position.component.html',
   imports: [AXDecoratorModule, AXBottomNavigationModule]
 })
-export class disabledComponent {}
+export class IndicatorPositionComponent {}

@@ -1,0 +1,14 @@
+<div class="ax-size-96">
+  <ax-list
+    class="ax-default ax-border ax-border-default"
+    [dataSource]="dataSource"
+    [valueField]="'id'"
+    [textField]="'text'"
+    multiple="true"
+    [loadingTemplate]="customLoadingTemplate"
+  >
+    <ng-template #customLoadingTemplate let-item>
+      <span>Loading</span>
+    </ng-template>
+  </ax-list>
+</div>

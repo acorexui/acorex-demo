@@ -8,4 +8,4 @@ import { AXDecoratorModule } from '@acorex/components/decorators';
     standalone: true,
     imports: [AXCircularProgressModule, AXDecoratorModule],
 })
-export class UsingContentInsidComponent {}
+export class UsingContentInsideComponent {}

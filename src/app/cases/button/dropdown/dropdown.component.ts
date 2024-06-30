@@ -9,7 +9,7 @@ import { AXDropdownModule } from '@acorex/components/dropdown';
     standalone: true,
     imports: [AXButtonModule, AXDecoratorModule, AXDropdownModule],
 })
-export class BadgeInButtonComponent {
+export class DropdownComponent {
   handleOnItemClick(e: any) {
     console.log(e)
   }

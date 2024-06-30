@@ -5,10 +5,10 @@ import { AXDataSource } from '@acorex/components/common';
 
 @Component({
   standalone: true,
-  templateUrl: 'list-multiple.component.html',
+  templateUrl: 'custom-loading.component.html',
   imports: [AXListModule]
 })
-export class UsageComponent {
+export class CustomLoadingComponent {
   protected items = [
     { id: 1, text: 'Apple 🍏', hint: 'Delicious Fruit' },
     { id: 2, text: 'Orange 🍊', hint: 'Delicious Fruit' },

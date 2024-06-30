@@ -2,14 +2,13 @@ import { Component } from '@angular/core';
 
 import { AXListModule } from '@acorex/components/list';
 import { AXDataSource } from '@acorex/components/common';
-import { AXDecoratorModule } from '@acorex/components/decorators';
 
 @Component({
   standalone: true,
-  templateUrl: 'list-custom-header.component.html',
-  imports: [AXListModule, AXDecoratorModule]
+  templateUrl: 'multiple.component.html',
+  imports: [AXListModule],
 })
-export class UsageComponent {
+export class MultipleComponent {
   protected items = [
     { id: 1, text: 'Apple 🍏', hint: 'Delicious Fruit' },
     { id: 2, text: 'Orange 🍊', hint: 'Delicious Fruit' },
@@ -29,24 +28,24 @@ export class UsageComponent {
     { id: 16, text: 'Lemon 🍋', hint: 'Delicious Fruit' },
     { id: 17, text: 'Lime 🍈', hint: 'Delicious Fruit' },
     { id: 18, text: 'Apricot 🍑', hint: 'Delicious Fruit' },
-    { id: 19, text: 'Lychee 🍈', hint: 'Delicious Fruit' }
+    { id: 19, text: 'Lychee 🍈', hint: 'Delicious Fruit' },
   ];
 
   protected dataSource = new AXDataSource<unknown>({
     pageSize: 5,
-    load: e => {
-      return new Promise(resolve => {
+    load: (e) => {
+      return new Promise((resolve) => {
         setTimeout(() => {
           const result = this.items;
           resolve({
             items: result.slice(e.skip, e.skip + e.take),
-            total: result.length
+            total: result.length,
           });
         }, 300);
       });
     },
-    byKey: key => {
-      return Promise.resolve(this.items.find(c => c == key));
-    }
+    byKey: (key) => {
+      return Promise.resolve(this.items.find((c) => c == key));
+    },
   });
 }

@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: 'validate.component.html',
   imports: [AXFormModule, CommonModule, AXTextBoxModule, AXLabelModule, AXDateTimeBoxModule, AXButtonModule]
 })
-export class UsageComponent {
+export class ValidateOnValidateComponent {
   options = {
     validateOn: 'change' as AXFormUpdateOn,
     messageStyle: 'float' as AXFormMessageStyle
