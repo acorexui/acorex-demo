@@ -1,16 +1,17 @@
 <ax-form [messageStyle]="'float'" [updateOn]="'change'">
-    <ax-form-field>
-      <ax-select-box
-        [dataSource]="dataSource"
-        [placeholder]="options.placeholder"
-        [loadingTemplate]="customLoadingTemplate"
-      >
-        <ng-template #customLoadingTemplate>
-          <div class="ax-p-2">Custom Loading... <br /></div>
-        </ng-template>
-        <ax-search-box look="fill"></ax-search-box>
-        <ax-validation-rule message="field can't be empty" rule="required"> </ax-validation-rule>
-        <ax-clear-button></ax-clear-button>
-      </ax-select-box>
-    </ax-form-field>
-  </ax-form>
+  <ax-form-field>
+    <ax-select-box
+      [dataSource]="dataSource"
+      [placeholder]="options.placeholder"
+      [loadingTemplate]="customLoadingTemplate"
+    >
+      <ng-template #customLoadingTemplate>
+        <div class="ax-p-2">Custom Loading... <br /></div>
+      </ng-template>
+      <ax-search-box look="fill"></ax-search-box>
+      <ax-validation-rule message="field can't be empty" rule="required">
+      </ax-validation-rule>
+      <ax-clear-button></ax-clear-button>
+    </ax-select-box>
+  </ax-form-field>
+</ax-form>

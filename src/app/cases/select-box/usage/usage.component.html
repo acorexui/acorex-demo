@@ -1,10 +1,10 @@
 <ax-form [messageStyle]="'float'" [updateOn]="'change'">
-    <ax-form-field>
-        <ax-select-box [dataSource]="dataSource">
-            <ax-search-box look="fill"></ax-search-box>
-            <ax-validation-rule message="field can't be empty" rule="required">
-            </ax-validation-rule>
-            <ax-clear-button></ax-clear-button>
-        </ax-select-box>
-    </ax-form-field>
+  <ax-form-field>
+    <ax-select-box [dataSource]="dataSource" placeholder="Choose...">
+      <ax-search-box look="fill"></ax-search-box>
+      <ax-validation-rule message="field can't be empty" rule="required">
+      </ax-validation-rule>
+      <ax-clear-button></ax-clear-button>
+    </ax-select-box>
+  </ax-form-field>
 </ax-form>
