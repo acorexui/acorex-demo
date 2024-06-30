@@ -63,7 +63,7 @@ export const appRoutes: Route[] = [
     path: 'circular-progress',
     component: MasterLayoutComponent,
     loadChildren: () =>
-      import('./cases/circular-progress/circular-progress.routes').then(
+      import('./cases/circular-progress/circular-bar.routes').then(
         (c) => c.routes
       ),
   },

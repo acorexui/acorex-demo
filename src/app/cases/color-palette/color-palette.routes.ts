@@ -29,7 +29,7 @@ export const routes: Routes = [
         path: 'full-option',
         loadComponent: () =>
             import('./full-options/full-option.component').then(
-                (e) => e.FullOptionComponent,
+                (e) => e.FullOptionsComponent,
             ),
     },
 ];
