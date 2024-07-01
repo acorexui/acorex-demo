@@ -8,28 +8,30 @@ export const routes: Routes = [
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
   {
-    path: 'multiple',
+    path: 'multiple-selection',
     loadComponent: () =>
-      import('./multiple/multiple.component').then((e) => e.MultipleComponent),
+      import('./multiple-selection/multiple-selection.component').then(
+        (e) => e.MultipleComponent
+      ),
   },
   {
-    path: 'item-template',
+    path: 'custom-item-template',
     loadComponent: () =>
-      import('./item-template/item-template.component').then(
+      import('./custom-item-template/custom-item-template.component').then(
         (e) => e.ItemTemplateComponent
       ),
   },
   {
-    path: 'loading-template',
+    path: 'custom-loading-template',
     loadComponent: () =>
-      import('./loading-template/loading-template.component').then(
-        (e) => e.LoadingTemplateComponent
-      ),
+      import(
+        './custom-loading-template/custom-loading-template.component'
+      ).then((e) => e.LoadingTemplateComponent),
   },
   {
-    path: 'empty-template',
+    path: 'custom-empty-template',
     loadComponent: () =>
-      import('./empty-template/empty-template.component').then(
+      import('./custom-empty-template/custom-empty-template.component').then(
         (e) => e.EmptyTemplateComponent
       ),
   },

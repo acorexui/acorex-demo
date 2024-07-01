@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 
 @Component({
   standalone: true,
-  templateUrl: 'loading-template.component.html',
+  templateUrl: 'custom-loading-template.component.html',
   imports: [
     AXSelectBoxModule,
     AXFormModule,
@@ -19,7 +19,7 @@ import { Component } from '@angular/core';
 })
 export class LoadingTemplateComponent {
   options = {
-    placeholder: 'Selet Item(s) ...',
+    placeholder: 'Select Item(s) ...',
   };
 
   itemsObjects = Array.from({ length: 100 }).map((_, i) => ({

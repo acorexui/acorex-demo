@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 
 @Component({
   standalone: true,
-  templateUrl: 'empty-template.component.html',
+  templateUrl: 'multiple-selection.component.html',
   imports: [
     AXSelectBoxModule,
     AXFormModule,
@@ -17,9 +17,9 @@ import { Component } from '@angular/core';
     AXDecoratorModule,
   ],
 })
-export class EmptyTemplateComponent {
+export class MultipleComponent {
   options = {
-    placeholder: 'Selet Item(s) ...',
+    placeholder: 'Select Item(s) ...',
   };
 
   itemsObjects = Array.from({ length: 100 }).map((_, i) => ({
