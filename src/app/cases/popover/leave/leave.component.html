@@ -1,11 +1,15 @@
 <div class="ax-flex ax-h-[300px] ax-w-full ax-items-center ax-justify-center">
-  <ax-button [text]="leaveButtonText" #leaveBtn look="twotone" color="primary"></ax-button>
+  <ax-button
+    [text]="leaveButtonText"
+    #leaveBtn
+    color="secondary"
+  ></ax-button>
 </div>
 <ax-popover
   [openOn]="'hover'"
   [closeOn]="'leave'"
-  (onOpened)="changeButtonText('leaveButtonText', 'Leave to Close')"
-  (onClosed)="changeButtonText('leaveButtonText', 'Hover to Open')"
+  (onOpened)="changeButtonText('Leave to Close')"
+  (onClosed)="changeButtonText('Hover to Open')"
   [target]="leaveBtn"
 >
   <div class="ax-overlay-pane ax-p-4">

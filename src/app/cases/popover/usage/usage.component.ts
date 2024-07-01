@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
 @Component({
   templateUrl: './usage.component.html',
   standalone: true,
-  imports: [AXPopoverModule, AXButtonModule]
+  imports: [AXPopoverModule, AXButtonModule],
 })
 export class PopoverUsageComponent {}

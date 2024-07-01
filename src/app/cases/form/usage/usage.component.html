@@ -1,6 +1,12 @@
 <div class="ax-flex ax-items-center">
-  <ax-form #form1 [updateOn]="options.validateOn" [messageStyle]="options.messageStyle">
-    <div class="ax-flex ax-w-80 ax-flex-col ax-justify-center ax-gap-4 ax-py-10">
+  <ax-form
+    #form1
+    [updateOn]="options.validateOn"
+    [messageStyle]="options.messageStyle"
+  >
+    <div
+      class="ax-flex ax-w-80 ax-flex-col ax-justify-center ax-gap-4 ax-py-10"
+    >
       <div class="ax-flex ax-w-full ax-flex-row ax-gap-4">
         <ax-form-field class="ax-flex-1">
           <ax-label>Firstname</ax-label>
@@ -31,8 +37,21 @@
         </ax-form-field>
       </div>
       <div class="ax-flex ax-w-full ax-flex-row ax-gap-4">
-        <ax-button class="ax-flex-1" [type]="'submit'" text="Submit" color="primary"> </ax-button>
-        <ax-button class="ax-flex-1" [type]="'reset'" text="Clear" color="danger" [look]="'outline'"> </ax-button>
+        <ax-button
+          class="ax-flex-1"
+          [type]="'submit'"
+          text="Submit"
+          color="primary"
+        >
+        </ax-button>
+        <ax-button
+          class="ax-flex-1"
+          [type]="'reset'"
+          text="Clear"
+          color="danger"
+          [look]="'outline'"
+        >
+        </ax-button>
       </div>
     </div>
   </ax-form>

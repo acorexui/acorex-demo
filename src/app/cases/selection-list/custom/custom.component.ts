@@ -60,13 +60,13 @@ export class CustomComponent {
   };
 
   protected items = [
-    { id: 1, text: 'Apple 🍏', hint: 'Delicious Fruit' },
-    { id: 2, text: 'Orange 🍊', hint: 'Delicious Fruit', disabled: true },
-    { id: 3, text: 'Banana 🍌', hint: 'Delicious Fruit' },
-    { id: 4, text: 'Kiwi 🥝', hint: 'Delicious Fruit' },
-    { id: 5, text: 'Coconut 🥥', hint: 'Delicious Fruit' },
-    { id: 6, text: 'Avocado 🥑', hint: 'Delicious Fruit' },
-    { id: 7, text: 'Watermelon 🍉', hint: 'Delicious Fruit' },
+    { id: 1, text: 'Apple', hint: 'Delicious Fruit' },
+    { id: 2, text: 'Orange', hint: 'Delicious Fruit', disabled: true },
+    { id: 3, text: 'Banana', hint: 'Delicious Fruit' },
+    { id: 4, text: 'Kiwi', hint: 'Delicious Fruit' },
+    { id: 5, text: 'Coconut', hint: 'Delicious Fruit' },
+    { id: 6, text: 'Avocado', hint: 'Delicious Fruit' },
+    { id: 7, text: 'Watermelon', hint: 'Delicious Fruit' },
   ];
 
   protected usageExampleItems = this.items
