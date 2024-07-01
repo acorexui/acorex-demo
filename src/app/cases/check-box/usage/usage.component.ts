@@ -5,8 +5,8 @@ import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXLabelModule } from '@acorex/components/label';
 
 @Component({
-    standalone: true,
-    templateUrl: 'usage.component.html',
-    imports: [AXDecoratorModule, AXCheckBoxModule, AXLabelModule],
+  standalone: true,
+  templateUrl: 'usage.component.html',
+  imports: [AXDecoratorModule, AXCheckBoxModule, AXLabelModule],
 })
 export class UsageComponent {}

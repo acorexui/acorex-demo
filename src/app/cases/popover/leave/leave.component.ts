@@ -5,12 +5,11 @@ import { Component } from '@angular/core';
 @Component({
   templateUrl: './leave.component.html',
   standalone: true,
-  imports: [AXPopoverModule, AXButtonModule]
+  imports: [AXPopoverModule, AXButtonModule],
 })
 export class PopoverLeaveComponent {
   leaveButtonText: string = 'Hover to Open';
-  btn = ''
-  changeButtonText(btn: string, text: string) {
-    this.btn = text;
+  changeButtonText(text: string) {
+    this.leaveButtonText = text;
   }
 }

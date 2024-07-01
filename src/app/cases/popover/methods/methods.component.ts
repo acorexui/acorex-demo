@@ -5,11 +5,11 @@ import { Component } from '@angular/core';
 @Component({
   templateUrl: './methods.component.html',
   standalone: true,
-  imports: [AXPopoverModule, AXButtonModule]
+  imports: [AXPopoverModule, AXButtonModule],
 })
 export class PopoverMethodsComponent {
   clickButtonText: string = 'Hover to Open';
- 
+
   writeLog(status: string) {
     console.log(`Popover ${status}`);
   }

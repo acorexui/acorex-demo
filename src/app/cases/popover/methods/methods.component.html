@@ -1,7 +1,13 @@
 <div class="ax-flex ax-h-[300px] ax-w-full ax-items-center ax-justify-center">
-  <ax-button [text]="'Show Popover'" #methodsBtn look="twotone" color="primary"></ax-button>
+  <ax-button [text]="'Show Popover'" #methodsBtn color="secondary"></ax-button>
 </div>
-<ax-popover [openOn]="'click'" [closeOn]="'clickOut'" [target]="methodsBtn" (onOpened)="writeLog('opened')" (onClosed)="writeLog('closed')">
+<ax-popover
+  [openOn]="'click'"
+  [closeOn]="'clickOut'"
+  [target]="methodsBtn"
+  (onOpened)="writeLog('opened')"
+  (onClosed)="writeLog('closed')"
+>
   <div class="ax-overlay-pane ax-p-4">
     <b class="ax-text-sm">Title</b>
     <br />

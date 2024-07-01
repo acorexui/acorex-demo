@@ -11,9 +11,9 @@ import { AXSelectionListModule } from '@acorex/components/selection-list';
 })
 export class UsageComponent {
   protected items = [
-    { id: 1, text: 'Apple 🍏', hint: 'Delicious Fruit' },
-    { id: 2, text: 'Orange 🍊', hint: 'Delicious Fruit' },
-    { id: 3, text: 'Banana 🍌', hint: 'Delicious Fruit' },
+    { id: 1, text: 'Apple', hint: 'Delicious Fruit' },
+    { id: 2, text: 'Orange', hint: 'Delicious Fruit' },
+    { id: 3, text: 'Banana', hint: 'Delicious Fruit' },
   ];
 
   protected options = {

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
 @Component({
   templateUrl: './hover.component.html',
   standalone: true,
-  imports: [AXPopoverModule, AXButtonModule]
+  imports: [AXPopoverModule, AXButtonModule],
 })
 export class PopoverHoverComponent {
   clickButtonText: string = 'Hover to Open';
