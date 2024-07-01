@@ -3,7 +3,7 @@ import { AXCollapseModule } from '@acorex/components/collapse';
 
 @Component({
   standalone: true,
-  templateUrl: 'usage.component.html',
+  templateUrl: './accordion-mode.component.html',
   imports: [AXCollapseModule],
 })
 export class AccordionMode {}

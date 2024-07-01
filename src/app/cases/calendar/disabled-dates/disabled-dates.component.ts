@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   imports: [AXCalendarModule],
 })
 export class DisabledDates {
+  today: Date = new Date();
+  tommorow = new Date(this.today.getTime() + 86400000);
+  disabledDates: any[] = [this.today, this.tommorow];
   constructor() {}
 }
