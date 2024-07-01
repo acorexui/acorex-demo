@@ -14,7 +14,7 @@ import {
   signal,
 } from '@angular/core';
 @Component({
-  templateUrl: 'both-mode.component.html',
+  templateUrl: 'List-item-and-custom-content-together.component.html',
   imports: [AXButtonModule, AXActionSheetModule, AXAvatarModule],
   standalone: true,
 })

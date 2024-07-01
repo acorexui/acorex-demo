@@ -10,6 +10,12 @@ export const appRoutes: Route[] = [
       import('./cases/action-sheet/action-sheet.routes').then((c) => c.routes),
   },
   {
+    path: 'alert',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/alert/alert.routes').then((c) => c.routes),
+  },
+  {
     path: 'avatar',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -48,6 +54,12 @@ export const appRoutes: Route[] = [
       import('./cases/button-group/button-group.routes').then((c) => c.routes),
   },
   {
+    path: 'calendar',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/calendar/calendar.routes').then((c) => c.routes),
+  },
+  {
     path: 'check-box',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -63,9 +75,15 @@ export const appRoutes: Route[] = [
     path: 'circular-progress',
     component: MasterLayoutComponent,
     loadChildren: () =>
-      import('./cases/circular-progress/circular-bar.routes').then(
+      import('./cases/circular-progress/circular-progress.routes').then(
         (c) => c.routes
       ),
+  },
+  {
+    path: 'collapse',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/collapse/collapse.routes').then((c) => c.routes),
   },
   {
     path: 'color-box',

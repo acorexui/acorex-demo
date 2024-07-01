@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
+  { path: '', redirectTo: 'usage', pathMatch: 'full' },
   {
     path: 'region',
     loadComponent: () =>

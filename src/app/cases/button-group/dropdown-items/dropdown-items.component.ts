@@ -7,7 +7,7 @@ import { AXDecoratorModule } from '@acorex/components/decorators';
 
 @Component({
   standalone: true,
-  templateUrl: 'dropdown-button.component.html',
+  templateUrl: 'dropdown-items.component.html',
   imports: [
     AXButtonGroupModule,
     AXButtonModule,

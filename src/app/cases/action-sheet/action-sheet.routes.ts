@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
+  { path: '', redirectTo: 'usage', pathMatch: 'full' },
   {
     path: 'list-item',
     loadComponent: () =>
@@ -16,10 +17,10 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'both-mode',
+    path: 'List-item-and-custom-content-together',
     loadComponent: () =>
-      import('./both-mode/both-mode.component').then(
-        (a) => a.ActionSheetBothModeComponent
-      ),
+      import(
+        './List-item-and-custom-content-together/List-item-and-custom-content-together.component'
+      ).then((a) => a.ActionSheetBothModeComponent),
   },
 ];

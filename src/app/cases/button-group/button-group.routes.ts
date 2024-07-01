@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
+  { path: '', redirectTo: 'usage', pathMatch: 'full' },
   {
     path: 'usage',
     loadComponent: () =>
@@ -14,9 +15,9 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'drowpdown-button',
+    path: 'dropdown-items',
     loadComponent: () =>
-      import('./drowpdown-button/dropdown-button.component').then(
+      import('./dropdown-items/dropdown-items.component').then(
         (e) => e.DropdownButtonComponent
       ),
   },

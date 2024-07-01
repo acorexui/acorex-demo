@@ -7,24 +7,21 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
-
   {
-    path: 'counter',
+    path: 'accordion-mode',
     loadComponent: () =>
-      import('./counter/counter.component').then((e) => e.CounterComponent),
-  },
-
-  {
-    path: 'counter-max-length',
-    loadComponent: () =>
-      import('./counter-max-length/counter-max-length.component').then(
-        (e) => e.CounterMaxLengthComponent
+      import('./accordion-mode/accordion-mode.component').then(
+        (e) => e.AccordionMode
       ),
   },
-
   {
-    path: 'rows',
+    path: 'header-icon',
     loadComponent: () =>
-      import('./rows/rows.component').then((e) => e.RowsComponent),
+      import('./header-icon/header-icon.component').then((e) => e.HeaderIcon),
+  },
+  {
+    path: 'loading',
+    loadComponent: () =>
+      import('./loading/loading.component').then((e) => e.LoadingComponent),
   },
 ];
