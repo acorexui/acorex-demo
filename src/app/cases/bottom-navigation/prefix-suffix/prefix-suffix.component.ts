@@ -7,6 +7,6 @@ import { AXBadgeComponent, AXBadgeModule } from '@acorex/components/badge';
 @Component({
   standalone: true,
   templateUrl: 'prefix-suffix.component.html',
-  imports: [AXDecoratorModule, AXBottomNavigationModule, AXBadgeModule]
+  imports: [AXDecoratorModule, AXBottomNavigationModule, AXBadgeModule],
 })
 export class PrefixSuffixComponent {}

@@ -2,6 +2,11 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'usage',
+    pathMatch: 'full',
+  },
+  {
     path: 'usage',
     loadComponent: () =>
       import('./usage/usage.component').then((e) => e.PopoverUsageComponent),
@@ -9,16 +14,12 @@ export const routes: Routes = [
   {
     path: 'hover',
     loadComponent: () =>
-      import('./hover/hover.component').then(
-        (e) => e.PopoverHoverComponent
-      ),
+      import('./hover/hover.component').then((e) => e.PopoverHoverComponent),
   },
   {
     path: 'leave',
     loadComponent: () =>
-      import('./leave/leave.component').then(
-        (e) => e.PopoverLeaveComponent
-      ),
+      import('./leave/leave.component').then((e) => e.PopoverLeaveComponent),
   },
   {
     path: 'methods',

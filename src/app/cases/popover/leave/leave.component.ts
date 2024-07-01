@@ -9,7 +9,8 @@ import { Component } from '@angular/core';
 })
 export class PopoverLeaveComponent {
   leaveButtonText: string = 'Hover to Open';
+  btn = ''
   changeButtonText(btn: string, text: string) {
-    this[btn] = text;
+    this.btn = text;
   }
 }

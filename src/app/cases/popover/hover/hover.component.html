@@ -2,8 +2,8 @@
   <ax-button [text]="clickButtonText" #hoverBtn look="twotone" color="primary"></ax-button>
 </div>
 <ax-popover
-  (onOpened)="changeButtonText('clickButtonText', 'Click Outside to Close')"
-  (onClosed)="changeButtonText('clickButtonText', 'Hover to Open')"
+  (onOpened)="changeButtonText('Click Outside to Close')"
+  (onClosed)="changeButtonText('Hover to Open')"
   [openOn]="'hover'"
   [target]="hoverBtn"
 >

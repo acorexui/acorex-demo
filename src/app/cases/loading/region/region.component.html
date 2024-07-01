@@ -22,6 +22,9 @@
     (onClick)="onButtonRegionClick()"
     [disabled]="buttonLoading"
   >
-    <ax-loading *ngIf="buttonLoading"></ax-loading>
+    @if(buttonLoading){
+    <ax-loading ></ax-loading>
+
+    }
   </ax-button>
 </div>

@@ -9,9 +9,7 @@ import { Component } from '@angular/core';
 })
 export class PopoverMethodsComponent {
   clickButtonText: string = 'Hover to Open';
-  changeButtonText(btn: string, text: string) {
-    this[btn] = text;
-  }
+ 
   writeLog(status: string) {
     console.log(`Popover ${status}`);
   }
