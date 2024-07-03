@@ -1,0 +1,21 @@
+<ax-dropdown-button color="secondary" mode="split" text="Confirm">
+  <ax-button-item-list>
+    <ax-button-item text="Save as..." name="save" data="save-data">
+      <ax-prefix>
+        <ax-icon icon="fa-regular fa-floppy-disk"></ax-icon>
+      </ax-prefix>
+    </ax-button-item>
+    <ax-title>Group</ax-title>
+    <ax-button-item text="Export" [disabled]="true" [divided]="true">
+      <ax-prefix>
+        <ax-icon icon="fa-solid fa-file-export"></ax-icon>
+      </ax-prefix>
+    </ax-button-item>
+    <ax-divider></ax-divider>
+    <ax-button-item text="Delete" color="danger">
+      <ax-prefix>
+        <ax-icon icon="fa-solid fa-trash-can"></ax-icon>
+      </ax-prefix>
+    </ax-button-item>
+  </ax-button-item-list>
+</ax-dropdown-button>

@@ -195,4 +195,12 @@ export const appRoutes: Route[] = [
     loadChildren: () =>
       import('./cases/text-box/text-box.routes').then((c) => c.routes),
   },
+  {
+    path: '**',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import(
+        './shared/layout/not-found.component.html/not-found.routes'
+      ).then((c) => c.routes),
+  },
 ];
