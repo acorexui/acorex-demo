@@ -28,7 +28,7 @@ export class EmptyTemplateComponent {
     },
   };
 
-  protected result = Array.from({ length: 100 }, (_, i) => ({
+  protected result = Array.from({ length: 4 }, (_, i) => ({
     id: i,
     firstName: `first name ${i}`,
     lastName: `last name ${i}`,

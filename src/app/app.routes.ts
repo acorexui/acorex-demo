@@ -115,7 +115,9 @@ export const appRoutes: Route[] = [
     path: 'dropdown-button',
     component: MasterLayoutComponent,
     loadChildren: () =>
-      import('./cases/dropdown-button/dropdown-button.routes').then((c) => c.routes),
+      import('./cases/dropdown-button/dropdown-button.routes').then(
+        (c) => c.routes
+      ),
   },
   {
     path: 'form',

@@ -28,7 +28,7 @@ export class AllowResizeAndReorderComponent {
     },
   };
 
-  protected result = Array.from({ length: 100 }, (_, i) => ({
+  protected result = Array.from({ length:10 }, (_, i) => ({
     id: i,
     firstName: `first name ${i}`,
     lastName: `last name ${i}`,
