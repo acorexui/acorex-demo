@@ -1,23 +1,131 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ACoreX Demo</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#000000" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
 
-<head>
-  <meta charset="utf-8">
-  <title>ACoreX Demo</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="manifest" href="images/site.webmanifest">
-  <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#000000">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
-</head>
+    <style>
+      .app-loading {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0c0e0f;
+        top: 0;
+        right: 0;
+        z-index: 10000;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
 
-<body>
-  <app-root></app-root>
-</body>
+      .app-loading svg {
+        width: 180px;
+      }
 
+      .app-loading svg .path {
+        fill: rgba(255, 255, 255, 0.75);
+      }
+
+      .app-loading .loader {
+        width: 200px;
+        height: 4px;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        margin-top: 0.5rem;
+      }
+
+      .app-loading .loader::after {
+        content: "";
+        width: 96px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.75);
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        animation: hitZak 0.6s ease-in-out infinite alternate;
+      }
+
+      @keyframes hitZak {
+        0% {
+          left: 0;
+          transform: translateX(-1%);
+        }
+
+        100% {
+          left: 100%;
+          transform: translateX(-99%);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="app-loading">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 734.85 115.64"
+        tabindex="0"
+      >
+        <g id="Layer_2" data-name="Layer 2">
+          <g id="Layer_1-2" data-name="Layer 1">
+            <path
+              d="M64.15,4.53a8,8,0,0,0-14.42,0L.81,102.34l-.07.14a8.2,8.2,0,0,0,3.8,10.74l.53.22a9.17,9.17,0,0,0,3,.56,8.83,8.83,0,0,0,1.38-.08,9.77,9.77,0,0,0,1.45.08h94.65a8.08,8.08,0,0,0,7-3.86,8.36,8.36,0,0,0,.44-7.58Zm-43,93.29L56.85,26.13,92.57,97.82Z"
+              fill="#14b8a6"
+            ></path>
+            <path
+              d="M186.17,18.15A40.34,40.34,0,0,1,215,30.09a7.94,7.94,0,0,0,5.66,2.38h0a7.93,7.93,0,0,0,5.65-2.38,8.16,8.16,0,0,0,0-11.49A56.17,56.17,0,0,0,186.17,2c-31.12,0-56.44,25.49-56.44,56.82s25.32,56.82,56.44,56.82A56.15,56.15,0,0,0,226.26,99a8.15,8.15,0,0,0,0-11.49,7.91,7.91,0,0,0-11.31,0,40.62,40.62,0,1,1-28.78-69.4Z"
+              class="path"
+            ></path>
+            <path
+              d="M310.51,0h-.72a56.71,56.71,0,1,0,.72,0Zm-.72,97.71a40.77,40.77,0,1,1,0-81.54h.48a40.77,40.77,0,0,1-.48,81.54Z"
+              class="path"
+            ></path>
+            <path
+              d="M732.77,100.27,694.85,56.83l37.88-43.39a8,8,0,0,0,2.1-6A7.75,7.75,0,0,0,732,2a8,8,0,0,0-6-2,7.71,7.71,0,0,0-5.37,2.84L684.05,44.56,647.5,2.77a8.08,8.08,0,0,0-12.3,10.49l38.21,43.57-38.09,43.44-.12.14a8.1,8.1,0,0,0,6.21,13.24,8.22,8.22,0,0,0,6.13-2.8L684.05,69.1l36.54,41.6a7.48,7.48,0,0,0,6.16,2.94,7.92,7.92,0,0,0,5.32-2.08,7.7,7.7,0,0,0,2.76-5.3A8,8,0,0,0,732.77,100.27Z"
+              class="path"
+            ></path>
+            <path
+              d="M483.34,36a36,36,0,0,0-36-36H407.12a8,8,0,0,0-7.65,5.65A8,8,0,0,0,398.73,9v97a8,8,0,0,0,16,0V16h32.61a20,20,0,0,1,0,40H433.59a8,8,0,0,0-4.82,14.37L469,111.59a8,8,0,0,0,11.45-11.18L452.37,71.64A36,36,0,0,0,483.34,36Z"
+              class="path"
+            ></path>
+            <path
+              d="M589.32,16a8,8,0,0,0,0-16H530.73a8,8,0,0,0-8,8v98a8,8,0,0,0,8,8h58.59a8,8,0,0,0,0-16H538.73V65h41a8,8,0,0,0,0-16h-41V16Z"
+              class="path"
+            ></path>
+          </g>
+        </g>
+      </svg>
+      <span class="loader"></span>
+    </div>
+    <app-root></app-root>
+  </body>
 </html>
