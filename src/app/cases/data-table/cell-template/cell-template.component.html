@@ -1,0 +1,49 @@
+<div class="ax-h-[500px] ax-w-full ax-max-w-[800px]">
+  <ax-data-table
+    [showHeader]="_options.showHeader"
+    [fixedHeader]="_options.fixedHeader"
+    [showFooter]="_options.showFooter"
+    [fixedFooter]="_options.fixedFooter"
+    [loading]="_options.loading"
+    [itemHeight]="_options.itemHeight"
+    [alternative]="_options.alternative"
+    [dataSource]="dataSource"
+    [paging]="true"
+    [fetchDataMode]="'auto'"
+    [allowReordering]="true"
+  >
+    <ax-index-column [width]="'60px'" [padZero]="true" fixed="start">
+    </ax-index-column>
+    <ax-select-column [width]="'50px'" fixed="start"> </ax-select-column>
+    <ax-text-column
+      [allowResizing]="true"
+      name="firstName"
+      [width]="'180px'"
+      [dataField]="'firstName'"
+      caption="User"
+    ></ax-text-column>
+    <ax-text-column
+      name="email"
+      [width]="'150px'"
+      [dataField]="'email'"
+      caption="email"
+    ></ax-text-column>
+    <ax-text-column
+      [allowResizing]="true"
+      [dataField]="'status'"
+      name="lastName"
+      [width]="'180px'"
+      [cellTemplate]="customCell"
+      caption="Status"
+    >
+    </ax-text-column>
+  </ax-data-table>
+</div>
+
+<ng-template #customCell let-row>
+  @if(row.data.status === 'Active'){
+  <ax-badge color="success" text="offline"></ax-badge>
+  }@else {
+  <ax-badge color="danger" text="online"></ax-badge>
+  }
+</ng-template>

@@ -100,6 +100,12 @@ export const appRoutes: Route[] = [
       ),
   },
   {
+    path: 'data-table',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/data-table/data-table.routes').then((c) => c.routes),
+  },
+  {
     path: 'drawer',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -199,8 +205,8 @@ export const appRoutes: Route[] = [
     path: '**',
     component: MasterLayoutComponent,
     loadChildren: () =>
-      import(
-        './shared/layout/not-found.component.html/not-found.routes'
-      ).then((c) => c.routes),
+      import('./shared/layout/not-found.component.html/not-found.routes').then(
+        (c) => c.routes
+      ),
   },
 ];

@@ -1,0 +1,69 @@
+<div class="ax-h-[500px] ax-w-full ax-max-w-[800px]">
+  <ax-data-table
+    [showHeader]="_options.showHeader"
+    [fixedHeader]="_options.fixedHeader"
+    [showFooter]="_options.showFooter"
+    [fixedFooter]="_options.fixedFooter"
+    [loading]="_options.loading"
+    [itemHeight]="_options.itemHeight"
+    [alternative]="_options.alternative"
+    [dataSource]="dataSource"
+    [paging]="true"
+    [fetchDataMode]="'auto'"
+    [allowReordering]="true"
+  >
+    <ax-index-column [width]="'60px'" [padZero]="true" fixed="start">
+    </ax-index-column>
+    <ax-select-column [width]="'50px'" fixed="start"> </ax-select-column>
+    <ax-text-column
+      name="firstName"
+      [width]="'180px'"
+      [dataField]="'firstName'"
+      caption="First Name"
+    ></ax-text-column>
+    <ax-text-column
+      [allowResizing]="true"
+      name="lastName"
+      [width]="'180px'"
+      [dataField]="'lastName'"
+      caption="Last Name"
+    >
+    </ax-text-column>
+    <ax-text-column
+      [allowResizing]="true"
+      name="price"
+      [footerTemplate]="footer"
+      format="number"
+      [width]="'120px'"
+      [dataField]="'price'"
+      caption="price"
+    >
+      <ng-template #footer let-data>SUM: {{ getSum(data) }} </ng-template>
+    </ax-text-column>
+    <ax-text-column
+      [allowResizing]="true"
+      name="mobile"
+      [width]="'180px'"
+      [dataField]="'mobile'"
+      caption="mobile"
+    >
+    </ax-text-column>
+    <ax-text-column
+      [allowResizing]="true"
+      name="email"
+      [width]="'150px'"
+      [dataField]="'email'"
+      caption="email"
+    ></ax-text-column>
+    <ax-dropdown-command-column
+      fixed="end"
+      [width]="'60px'"
+      [items]="dropdownRowItems"
+    ></ax-dropdown-command-column>
+    <ax-command-column
+      fixed="end"
+      [width]="'60px'"
+      [items]="inlineRowItems"
+    ></ax-command-column>
+  </ax-data-table>
+</div>
