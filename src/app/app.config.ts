@@ -18,6 +18,7 @@ import { AXValidationModule } from '@acorex/core/validation';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { MyCustomHolidaysLoader, MyTranslationLoader } from './app.loaders';
 import { AXConversationModule } from '@acorex/components/conversation';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -25,6 +26,7 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(appRoutes),
     provideHttpClient(withFetch()),
+    provideAnimations(),
     importProvidersFrom(
       AXValidationModule.forRoot(),
       AXConversationModule.forRoot(),
