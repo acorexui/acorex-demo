@@ -162,6 +162,12 @@ export const appRoutes: Route[] = [
       import('./cases/navbar/navbar.routes').then((c) => c.routes),
   },
   {
+    path: 'notification',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/notification/notification.routes').then((c) => c.routes),
+  },
+  {
     path: 'otp',
     component: MasterLayoutComponent,
     loadChildren: () => import('./cases/otp/otp.routes').then((c) => c.routes),
