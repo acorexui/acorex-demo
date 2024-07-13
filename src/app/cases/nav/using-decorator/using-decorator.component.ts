@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AXNavModule } from '@acorex/components/nav';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXBadgeModule } from '@acorex/components/badge';
