@@ -150,6 +150,12 @@ export const appRoutes: Route[] = [
       import('./cases/menu/menu.routes').then((c) => c.routes),
   },
   {
+    path: 'nav',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/nav/nav.routes').then((c) => c.routes),
+  },
+  {
     path: 'otp',
     component: MasterLayoutComponent,
     loadChildren: () => import('./cases/otp/otp.routes').then((c) => c.routes),
