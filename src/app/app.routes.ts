@@ -190,6 +190,12 @@ export const appRoutes: Route[] = [
       import('./cases/progress-bar/progress-bar.routes').then((c) => c.routes),
   },
   {
+    path: 'result',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/result/result.routes').then((c) => c.routes),
+  },
+  {
     path: 'search-box',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -214,6 +220,18 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/side-menu/side-menu.routes').then((c) => c.routes),
+  },
+  {
+    path: 'skeleton',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/skeleton/skeleton.routes').then((c) => c.routes),
+  },
+  {
+    path: 'switch',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/switch/switch.routes').then((c) => c.routes),
   },
   {
     path: 'tag',
