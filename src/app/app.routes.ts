@@ -173,6 +173,11 @@ export const appRoutes: Route[] = [
     loadChildren: () => import('./cases/otp/otp.routes').then((c) => c.routes),
   },
   {
+    path: 'phone-box',
+    component: MasterLayoutComponent,
+    loadChildren: () => import('./cases/phone-box/phone-box.routes').then((c) => c.routes),
+  },
+  {
     path: 'popover',
     component: MasterLayoutComponent,
     loadChildren: () =>
