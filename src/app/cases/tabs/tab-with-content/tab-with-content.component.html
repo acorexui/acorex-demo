@@ -1,0 +1,17 @@
+<div class="ax-flex ax-w-full ax-flex-col ax-p-3">
+  <ax-tabs
+    [content]="cons"
+    class="ax-mb-3"
+    [look]="'with-line'"
+    [fitParent]="true"
+  >
+    @for (i of [1, 2, 3, 4, 5]; track $index) {
+    <ax-tab-item text="Tab {{ i }}" track>
+      <ax-content> Content of Tab {{ i }} </ax-content>
+    </ax-tab-item>
+    }
+  </ax-tabs>
+  <div class="ax-flex ax-justify-center ax-p-5">
+    <ng-template [axTabContent] #cons="axTabContent"> </ng-template>
+  </div>
+</div>

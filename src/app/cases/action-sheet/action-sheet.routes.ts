@@ -17,10 +17,10 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'List-item-and-custom-content-together',
+    path: 'list-item-and-custom-content-together',
     loadComponent: () =>
       import(
-        './List-item-and-custom-content-together/List-item-and-custom-content-together.component'
+        './list-item-and-custom-content-together/list-item-and-custom-content-together.component'
       ).then((a) => a.ActionSheetBothModeComponent),
   },
 ];

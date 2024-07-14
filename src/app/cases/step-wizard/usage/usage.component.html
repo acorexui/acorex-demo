@@ -1,0 +1,37 @@
+<div class="ax-w-full">
+  <ax-step-wizard
+    [content]="usageContent"
+    [look]="'classic-rounded'"
+    #usageWizard
+  >
+    <ax-step-wizard-item [label]="'First Step'" [id]="'first'">
+      <ax-icon class="fas fa-check"> </ax-icon>
+      <ax-content>
+        <div class="ax-mt-5">Step 1</div>
+      </ax-content>
+    </ax-step-wizard-item>
+    <ax-step-wizard-item [label]="'Second Step'" [id]="'second'">
+      <ax-icon class="fas fa-check"> </ax-icon>
+      <ax-content>
+        <div class="ax-mt-5">Step 2</div>
+      </ax-content>
+    </ax-step-wizard-item>
+  </ax-step-wizard>
+  <div class="ax-flex ax-justify-center ax-p-5">
+    <ng-template [axStepWizardContent] #usageContent="axStepWizardContent">
+    </ng-template>
+  </div>
+  <div class="ax-mt-10 ax-flex ax-justify-end ax-gap-3">
+    <ax-button
+      (onClick)="usageWizard.previous()"
+      color="primary"
+      look="outline"
+      text="Previous"
+    ></ax-button>
+    <ax-button
+      (onClick)="usageWizard.next()"
+      color="primary"
+      text="Next"
+    ></ax-button>
+  </div>
+</div>

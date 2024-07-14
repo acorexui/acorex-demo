@@ -1,0 +1,50 @@
+<div class="ax-w-full">
+  <ax-step-wizard
+    [content]="navigationContent"
+    [look]="'classic-rounded'"
+    #navigationWizard
+  >
+    <ax-step-wizard-item [label]="'First Step'" [id]="'first'">
+      <ax-icon class="fas fa-check"> </ax-icon>
+      <ax-content>
+        <div class="ax-mt-5">Step 1</div>
+      </ax-content>
+    </ax-step-wizard-item>
+    <ax-step-wizard-item [label]="'Second Step'" [id]="'second'">
+      <ax-icon class="fas fa-check"> </ax-icon>
+      <ax-content>
+        <div class="ax-mt-5">Step 2</div>
+      </ax-content>
+    </ax-step-wizard-item>
+    <ax-step-wizard-item [label]="'Third Step'" [id]="'third'">
+      <ax-icon class="fas fa-check"> </ax-icon>
+      <ax-content>
+        <div class="ax-mt-5">Step 3</div>
+      </ax-content>
+    </ax-step-wizard-item>
+  </ax-step-wizard>
+  <div class="ax-flex ax-justify-center ax-p-5">
+    <ng-template [axStepWizardContent] #navigationContent="axStepWizardContent">
+    </ng-template>
+  </div>
+  <div class="ax-mt-10 ax-flex ax-justify-end ax-gap-3">
+    <ax-button
+      [disabled]="navigationWizard.isFirst()"
+      (onClick)="navigationWizard.previous()"
+      [color]="'primary'"
+      mode="split"
+      text="Previous"
+      look="outline"
+    >
+    </ax-button>
+    @if(navigationWizard.isLast()){
+    <ax-button (onClick)="handleDone()" color="success" text="Done"></ax-button>
+    }@else {
+    <ax-button
+      (onClick)="navigationWizard.next()"
+      color="primary"
+      text="Next"
+    ></ax-button>
+    }
+  </div>
+</div>

@@ -106,6 +106,18 @@ export const appRoutes: Route[] = [
       import('./cases/data-table/data-table.routes').then((c) => c.routes),
   },
   {
+    path: 'datetime-box',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/datetime-box/datetime-box.routes').then((c) => c.routes),
+  },
+  {
+    path: 'dialog',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/dialog/dialog.routes').then((c) => c.routes),
+  },
+  {
     path: 'drawer',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -152,8 +164,7 @@ export const appRoutes: Route[] = [
   {
     path: 'nav',
     component: MasterLayoutComponent,
-    loadChildren: () =>
-      import('./cases/nav/nav.routes').then((c) => c.routes),
+    loadChildren: () => import('./cases/nav/nav.routes').then((c) => c.routes),
   },
   {
     path: 'navbar',
@@ -175,13 +186,20 @@ export const appRoutes: Route[] = [
   {
     path: 'phone-box',
     component: MasterLayoutComponent,
-    loadChildren: () => import('./cases/phone-box/phone-box.routes').then((c) => c.routes),
+    loadChildren: () =>
+      import('./cases/phone-box/phone-box.routes').then((c) => c.routes),
   },
   {
     path: 'popover',
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/popover/popover.routes').then((c) => c.routes),
+  },
+  {
+    path: 'popup',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/popup/popup.routes').then((c) => c.routes),
   },
   {
     path: 'progress-bar',
@@ -228,10 +246,22 @@ export const appRoutes: Route[] = [
       import('./cases/skeleton/skeleton.routes').then((c) => c.routes),
   },
   {
+    path: 'step-wizard',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/step-wizard/step-wizard.routes').then((c) => c.routes),
+  },
+  {
     path: 'switch',
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/switch/switch.routes').then((c) => c.routes),
+  },
+  {
+    path: 'tabs',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/tabs/tabs.routes').then((c) => c.routes),
   },
   {
     path: 'tag',
