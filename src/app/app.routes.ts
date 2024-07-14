@@ -251,6 +251,12 @@ export const appRoutes: Route[] = [
       import('./cases/text-box/text-box.routes').then((c) => c.routes),
   },
   {
+    path: 'tooltip',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/tooltip/tooltip.routes').then((c) => c.routes),
+  },
+  {
     path: '**',
     component: MasterLayoutComponent,
     loadChildren: () =>
