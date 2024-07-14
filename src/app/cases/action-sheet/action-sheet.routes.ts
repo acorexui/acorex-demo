@@ -17,10 +17,10 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'list-item-and-custom-content-together',
+    path: 'both-mode',
     loadComponent: () =>
-      import(
-        './list-item-and-custom-content-together/list-item-and-custom-content-together.component'
-      ).then((a) => a.ActionSheetBothModeComponent),
+      import('./both-mode/both-mode.component').then(
+        (a) => a.ActionSheetBothModeComponent
+      ),
   },
 ];
