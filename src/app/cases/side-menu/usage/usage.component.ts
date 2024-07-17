@@ -1,19 +1,16 @@
 import { Component } from '@angular/core';
-
 import { AXBadgeModule } from '@acorex/components/badge';
-
 import { AXDecoratorModule } from '@acorex/components/decorators';
-
 import { AXSideMenuModule } from '@acorex/components/side-menu';
 
 @Component({
-    standalone: true,
-    templateUrl: 'usage.component.html',
-    imports: [AXSideMenuModule, AXDecoratorModule, AXBadgeModule],
+  standalone: true,
+  templateUrl: 'usage.component.html',
+  imports: [AXSideMenuModule, AXDecoratorModule, AXBadgeModule],
 })
 export class UsageComponent {
-    protected _options = {
-        disabled: false,
-        active: true,
-    };
+  protected _options = {
+    disabled: false,
+    active: true,
+  };
 }

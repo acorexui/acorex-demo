@@ -8,10 +8,10 @@ import { AXButtonModule } from '@acorex/components/button';
 import {
   Component,
   TemplateRef,
-  ViewChild,
   WritableSignal,
   inject,
   signal,
+  viewChild,
 } from '@angular/core';
 @Component({
   templateUrl: 'both-mode.component.html',
@@ -19,8 +19,7 @@ import {
   standalone: true,
 })
 export class ActionSheetBothModeComponent {
-  @ViewChild('bothTemplate')
-  bothTemplate!: TemplateRef<unknown>;
+  bothTemplate = viewChild<TemplateRef<unknown>>('bothTemplate');
 
   actionSheetItems: WritableSignal<AXActionSheetItem[]> = signal([
     {
@@ -37,7 +36,7 @@ export class ActionSheetBothModeComponent {
     this.actionSheetService.open({
       title: 'Who has seen your post?',
       items: this.actionSheetItems(),
-      content: this.bothTemplate,
+      content: this.bothTemplate(),
     });
   }
 }

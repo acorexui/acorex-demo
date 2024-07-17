@@ -5,7 +5,7 @@ import {
 import { AXButtonModule } from '@acorex/components/button';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXResultModule } from '@acorex/components/result';
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { Component, inject, TemplateRef, viewChild } from '@angular/core';
 @Component({
   templateUrl: './custom-content.component.html',
   imports: [
@@ -17,16 +17,15 @@ import { Component, TemplateRef, ViewChild } from '@angular/core';
   standalone: true,
 })
 export class ActionSheetCustomContentComponent {
-  @ViewChild('customTemplate')
-  customTemplate!: TemplateRef<unknown>;
+  customTemplate = viewChild<TemplateRef<unknown>>('customTemplate');
 
-  constructor(private actionSheetService: AXActionSheetService) {}
+  actionSheetService = inject(AXActionSheetService);
 
   openActionSheet() {
     this.actionSheetService.open({
       title: 'Choose an action',
       header: false,
-      content: this.customTemplate,
+      content: this.customTemplate(),
     });
   }
 }
