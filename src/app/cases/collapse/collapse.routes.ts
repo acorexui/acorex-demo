@@ -24,4 +24,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./loading/loading.component').then((e) => e.LoadingComponent),
   },
+  {
+    path: 'custom-header-template',
+    loadComponent: () =>
+      import('./custom-header-template/custom-header-template.component').then(
+        (e) => e.CustomHeaderTemplate
+      ),
+  },
 ];
