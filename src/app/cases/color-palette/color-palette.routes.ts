@@ -27,9 +27,9 @@ export const routes: Routes = [
       import('./preview/preview.component').then((e) => e.PreviewComponent),
   },
   {
-    path: 'full-option',
+    path: 'full-options',
     loadComponent: () =>
-      import('./full-options/full-option.component').then(
+      import('./full-options/full-options.component').then(
         (e) => e.FullOptionsComponent
       ),
   },
