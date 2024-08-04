@@ -100,16 +100,44 @@ export const appRoutes: Route[] = [
       ),
   },
   {
+    path: 'comment',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/comment/comment.routes').then((c) => c.routes),
+  },
+  {
+    path: 'conversation',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/conversation/conversation.routes').then((c) => c.routes),
+  },
+  {
+    path: 'data-pager',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/data-pager/data-pager.routes').then((c) => c.routes),
+  },
+  {
     path: 'data-table',
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/data-table/data-table.routes').then((c) => c.routes),
   },
   {
-    path: 'datetime-box',
+    path: 'date-time-box',
     component: MasterLayoutComponent,
     loadChildren: () =>
-      import('./cases/datetime-box/datetime-box.routes').then((c) => c.routes),
+      import('./cases/date-time-box/date-time-box.routes').then(
+        (c) => c.routes
+      ),
+  },
+  {
+    path: 'date-time-picker',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/date-time-picker/date-time-picker.routes').then(
+        (c) => c.routes
+      ),
   },
   {
     path: 'dialog',
@@ -156,6 +184,14 @@ export const appRoutes: Route[] = [
       import('./cases/loading/loading.routes').then((c) => c.routes),
   },
   {
+    path: 'loading-dialog',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/loading-dialog/loading-dialog.routes').then(
+        (c) => c.routes
+      ),
+  },
+  {
     path: 'menu',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -179,9 +215,21 @@ export const appRoutes: Route[] = [
       import('./cases/notification/notification.routes').then((c) => c.routes),
   },
   {
+    path: 'number-box',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/number-box/number-box.routes').then((c) => c.routes),
+  },
+  {
     path: 'otp',
     component: MasterLayoutComponent,
     loadChildren: () => import('./cases/otp/otp.routes').then((c) => c.routes),
+  },
+  {
+    path: 'password-box',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/password-box/password-box.routes').then((c) => c.routes),
   },
   {
     path: 'phone-box',
@@ -246,6 +294,12 @@ export const appRoutes: Route[] = [
       import('./cases/skeleton/skeleton.routes').then((c) => c.routes),
   },
   {
+    path: 'slider',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/slider/slider.routes').then((c) => c.routes),
+  },
+  {
     path: 'step-wizard',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -281,10 +335,28 @@ export const appRoutes: Route[] = [
       import('./cases/text-box/text-box.routes').then((c) => c.routes),
   },
   {
+    path: 'toast',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/toast/toast.routes').then((c) => c.routes),
+  },
+  {
     path: 'tooltip',
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/tooltip/tooltip.routes').then((c) => c.routes),
+  },
+  {
+    path: 'uploader',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/uploader/uploader.routes').then((c) => c.routes),
+  },
+  {
+    path: 'wysiwyg',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/wysiwyg/wysiwyg.routes').then((c) => c.routes),
   },
   {
     path: '**',

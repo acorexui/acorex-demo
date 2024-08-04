@@ -1,0 +1,44 @@
+<ax-comment-container>
+  <ax-comment-view>
+    <ax-comment-item>
+      <ax-avatar [color]="options().color" [look]="options().look">
+        <ax-image src="https://i.pravatar.cc/300"></ax-image>
+      </ax-avatar>
+      <ax-title>Meysa</ax-title>
+      <ax-content
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
+        mollitia.</ax-content
+      >
+      <ax-comment-like [liked]="false">2</ax-comment-like>
+      <ax-comment-reply>4</ax-comment-reply>
+
+      <ax-comment-item>
+        <ax-avatar [color]="options().color" [look]="options().look">
+          <ax-image src="https://i.pravatar.cc/300"></ax-image>
+        </ax-avatar>
+        <ax-title>Meysa</ax-title>
+        <ax-content
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
+          mollitia.</ax-content
+        >
+        <ax-comment-like [liked]="true">4</ax-comment-like>
+        <ax-comment-reply>3</ax-comment-reply>
+      </ax-comment-item>
+    </ax-comment-item>
+
+    <ax-comment-item>
+      <ax-avatar [color]="options().color" [look]="options().look">
+        <ax-image src="https://i.pravatar.cc/300"></ax-image>
+      </ax-avatar>
+      <ax-title>Meysa</ax-title>
+      <ax-content
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
+        mollitia.</ax-content
+      >
+      <ax-comment-like [liked]="true">4</ax-comment-like>
+      <ax-comment-reply>3</ax-comment-reply>
+    </ax-comment-item>
+  </ax-comment-view>
+
+  <ax-comment-input (commentValue)="valueHandler($event)"></ax-comment-input>
+</ax-comment-container>
