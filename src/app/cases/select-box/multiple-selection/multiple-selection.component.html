@@ -1,8 +1,11 @@
 <ax-form [messageStyle]="'float'" [updateOn]="'change'">
   <ax-form-field>
     <ax-select-box
+      [multiple]="true"
+      textField="name"
+      valueField="id"
       [dataSource]="dataSource"
-      [placeholder]="options.placeholder"
+      placeholder="Select Item(s) ..."
       [loadingTemplate]="customLoadingTemplate"
     >
       <ng-template #customLoadingTemplate>

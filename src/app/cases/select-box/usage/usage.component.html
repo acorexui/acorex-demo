@@ -1,6 +1,11 @@
 <ax-form [messageStyle]="'float'" [updateOn]="'change'">
   <ax-form-field>
-    <ax-select-box [dataSource]="dataSource" placeholder="Choose...">
+    <ax-select-box
+      [dataSource]="dataSource"
+      textField="name"
+      valueField="id"
+      placeholder="Choose..."
+    >
       <ax-search-box look="fill"></ax-search-box>
       <ax-validation-rule message="field can't be empty" rule="required">
       </ax-validation-rule>

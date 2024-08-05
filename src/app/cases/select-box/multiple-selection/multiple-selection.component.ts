@@ -4,7 +4,8 @@ import { AXFormModule } from '@acorex/components/form';
 import { AXSearchBoxModule } from '@acorex/components/search-box';
 import { AXSelectBoxModule } from '@acorex/components/select-box';
 import { AXTextBoxModule } from '@acorex/components/text-box';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { DataService } from '../select-box.service';
 
 @Component({
   standalone: true,
@@ -18,36 +19,17 @@ import { Component } from '@angular/core';
   ],
 })
 export class MultipleComponent {
-  options = {
-    placeholder: 'Select Item(s) ...',
-  };
-
-  itemsObjects = Array.from({ length: 100 }).map((_, i) => ({
-    id: i,
-    text: `Item #${i}`,
-  }));
+  apiService = inject(DataService);
 
   protected dataSource = new AXDataSource<any>({
     pageSize: 10,
     key: 'id',
-    load: (e) => {
-      return new Promise((resolve) => {
-        setTimeout(
-          () => {
-            const list = this.itemsObjects;
-            const result = e.filter
-              ? list.filter((item) =>
-                  item.text.includes(e.filter?.value as string)
-                )
-              : list;
-            resolve({
-              items: result.slice(e.skip, e.skip + e.take),
-              total: result.length,
-            });
-          },
-          e.skip == 0 ? 100 : 300
-        );
-      });
+    load: async (e) => {
+      const items = await this.apiService.getData();
+      return {
+        items,
+        total: items.length,
+      };
     },
   });
 }
