@@ -1,0 +1,12 @@
+<ax-data-pager
+  #p
+  [total]="options().totalCount"
+  [size]="options().pageSize"
+  [disabled]="options().disabled"
+  [readonly]="options().readonly"
+  [displayMode]="options().compact ? 'compact' : 'full'"
+>
+  <ax-prefix>
+    <ax-data-pager-numeric-selector></ax-data-pager-numeric-selector>
+  </ax-prefix>
+</ax-data-pager>

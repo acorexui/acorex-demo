@@ -1,0 +1,10 @@
+<ax-number-box
+  [(ngModel)]="options().value"
+  [thousandsSeparator]="options().thousandsSeparator"
+  (ngModelChange)="_writeLog()"
+  [showSpinButtons]="options().showSpinButtons"
+  [readonly]="options().readonly"
+  [disabled]="options().disabled"
+>
+  <ax-clear-button *ngIf="options().allowClear"></ax-clear-button>
+</ax-number-box>

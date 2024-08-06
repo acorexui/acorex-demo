@@ -5,10 +5,10 @@ import {
 } from '@acorex/components/uploader';
 
 @Component({
-  templateUrl: './usage.component.html',
+  templateUrl: './feature-title.component.html',
   standalone: true,
   imports: [AXUploaderModule],
 })
-export class UsageComponent {
+export class FeatureTitleComponent {
   uploaderService: AXUploaderService = inject(AXUploaderService);
 }
