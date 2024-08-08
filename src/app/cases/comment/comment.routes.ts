@@ -7,11 +7,4 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
-  {
-    path: 'comment-input-type',
-    loadComponent: () =>
-      import('./comment-input-type/comment-input-type.component').then(
-        (e) => e.CommentInputTypeComponent
-      ),
-  },
 ];

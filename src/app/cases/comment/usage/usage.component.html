@@ -11,6 +11,7 @@
       >
       <ax-comment-like [liked]="false">2</ax-comment-like>
       <ax-comment-reply>4</ax-comment-reply>
+      <ax-comment-reply-text (click)="replyHandler()"></ax-comment-reply-text>
 
       <ax-comment-item>
         <ax-avatar [color]="options().color" [look]="options().look">
@@ -23,6 +24,7 @@
         >
         <ax-comment-like [liked]="true">4</ax-comment-like>
         <ax-comment-reply>3</ax-comment-reply>
+        <ax-comment-reply-text (click)="replyHandler()"></ax-comment-reply-text>
       </ax-comment-item>
     </ax-comment-item>
 
@@ -37,8 +39,20 @@
       >
       <ax-comment-like [liked]="true">4</ax-comment-like>
       <ax-comment-reply>3</ax-comment-reply>
+      <ax-comment-reply-text (click)="replyHandler()"></ax-comment-reply-text>
     </ax-comment-item>
   </ax-comment-view>
 
-  <ax-comment-input (commentValue)="valueHandler($event)"></ax-comment-input>
+  <ax-wysiwyg-container>
+    <ax-wysiwyg-view></ax-wysiwyg-view>
+    <ax-wysiwyg-toolbar (outputHTML)="getHTML($event)" #t>
+      <ax-suffix>
+        <ax-button
+          color="primary"
+          text="Send Message"
+          (onClick)="t.out()"
+        ></ax-button
+      ></ax-suffix>
+    </ax-wysiwyg-toolbar>
+  </ax-wysiwyg-container>
 </ax-comment-container>

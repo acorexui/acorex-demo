@@ -1,6 +1,10 @@
 <ax-wysiwyg-container>
-  <ax-wysiwyg-view></ax-wysiwyg-view>
-  <ax-wysiwyg-toolbar (outputHTML)="getHTML($event)" #t>
+  <ax-wysiwyg-view class="ax-min-h-28"></ax-wysiwyg-view>
+  <ax-wysiwyg-toolbar
+    [config]="WysiwygConfig()"
+    (outputHTML)="getHTML($event)"
+    #t
+  >
     <ax-suffix>
       <ax-button
         color="primary"
