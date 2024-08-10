@@ -46,4 +46,11 @@ export const routes: Routes = [
         (l) => l.LoadingStateComponent
       ),
   },
+  {
+    path: 'responsive',
+    loadComponent: () =>
+      import('./responsive/responsive.component').then(
+        (l) => l.ResponsiveButtonComponent
+      ),
+  },
 ];
