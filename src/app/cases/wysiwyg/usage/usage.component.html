@@ -1,16 +1,26 @@
-<ax-wysiwyg-container>
-  <ax-wysiwyg-view class="ax-min-h-28"></ax-wysiwyg-view>
-  <ax-wysiwyg-toolbar
-    [config]="WysiwygConfig()"
-    (outputHTML)="getHTML($event)"
-    #t
-  >
-    <ax-suffix>
-      <ax-button
-        color="primary"
-        text="Send Message"
-        (onClick)="t.out()"
-      ></ax-button
-    ></ax-suffix>
-  </ax-wysiwyg-toolbar>
-</ax-wysiwyg-container>
+<ax-form>
+  <ax-form-field>
+    <ax-wysiwyg-container
+      [look]="options().look"
+      (ngModelChange)="valueChange($event)"
+      [(ngModel)]="value"
+    >
+      <ax-wysiwyg-view class="ax-min-h-28"></ax-wysiwyg-view>
+      <ax-wysiwyg-toolbar>
+        <ax-wysiwyg-history></ax-wysiwyg-history>
+        <ax-wysiwyg-font-style></ax-wysiwyg-font-style>
+        <ax-wysiwyg-colors></ax-wysiwyg-colors>
+        <ax-wysiwyg-list></ax-wysiwyg-list>
+        <ax-wysiwyg-alignment></ax-wysiwyg-alignment>
+        <ax-wysiwyg-insert></ax-wysiwyg-insert>
+        <ax-suffix>
+          <ax-button type="submit" color="primary" text="Send"></ax-button
+        ></ax-suffix>
+      </ax-wysiwyg-toolbar>
+      <ax-validation-rule
+        rule="callback"
+        [options]="{ validate: validateFn }"
+      ></ax-validation-rule>
+    </ax-wysiwyg-container>
+  </ax-form-field>
+</ax-form>

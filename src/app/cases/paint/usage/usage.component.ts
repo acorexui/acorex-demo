@@ -1,19 +1,19 @@
-import { AXButtonModule } from '@acorex/components/button';
 import { AXStyleLookType } from '@acorex/components/common';
-import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXFormModule } from '@acorex/components/form';
-import { AXWysiwygModule } from '@acorex/components/wysiwyg';
 import { Component, signal } from '@angular/core';
+import { AXPaintModule, AXPaintViewComponent } from '@acorex/components/paint';
+import { AXButtonModule } from '@acorex/components/button';
+import { AXDecoratorModule } from '@acorex/components/decorators';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   templateUrl: './usage.component.html',
   standalone: true,
   imports: [
-    AXWysiwygModule,
-    AXDecoratorModule,
-    AXButtonModule,
     AXFormModule,
+    AXPaintModule,
+    AXButtonModule,
+    AXDecoratorModule,
     FormsModule,
   ],
 })
@@ -26,20 +26,21 @@ export class UsageComponent {
     look: 'solid',
   });
 
-  valueChange(e: any) {
-    console.log(e);
+  outputHandler(elem: AXPaintViewComponent) {
+    elem.getOutPut('image/webp');
+    console.log(this.value());
   }
 
   validateFn = (val: string) => {
     let isValid = true;
 
-    if (!val || val === '<p><br></p>') {
+    if (!val) {
       isValid = false;
     }
     return {
       rule: 'callback',
       result: isValid,
-      message: isValid ? '' : 'Please fill the content',
+      message: isValid ? '' : 'Please draw the content',
       value: val,
     };
   };

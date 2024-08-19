@@ -1,27 +1,21 @@
 <ax-comment-container>
   <ax-comment-view>
     <ax-comment-item>
-      <ax-avatar [color]="options().color" [look]="options().look">
+      <ax-avatar [color]="avatarOptions().color" [look]="avatarOptions().look">
         <ax-image src="https://i.pravatar.cc/300"></ax-image>
       </ax-avatar>
       <ax-title>Meysa</ax-title>
-      <ax-content
-        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-        mollitia.</ax-content
-      >
+      <ax-content>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, mollitia.</ax-content>
       <ax-comment-like [liked]="false">2</ax-comment-like>
       <ax-comment-reply>4</ax-comment-reply>
       <ax-comment-reply-text (click)="replyHandler()"></ax-comment-reply-text>
 
       <ax-comment-item>
-        <ax-avatar [color]="options().color" [look]="options().look">
+        <ax-avatar [color]="avatarOptions().color" [look]="avatarOptions().look">
           <ax-image src="https://i.pravatar.cc/300"></ax-image>
         </ax-avatar>
         <ax-title>Meysa</ax-title>
-        <ax-content
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-          mollitia.</ax-content
-        >
+        <ax-content>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, mollitia.</ax-content>
         <ax-comment-like [liked]="true">4</ax-comment-like>
         <ax-comment-reply>3</ax-comment-reply>
         <ax-comment-reply-text (click)="replyHandler()"></ax-comment-reply-text>
@@ -29,30 +23,32 @@
     </ax-comment-item>
 
     <ax-comment-item>
-      <ax-avatar [color]="options().color" [look]="options().look">
+      <ax-avatar [color]="avatarOptions().color" [look]="avatarOptions().look">
         <ax-image src="https://i.pravatar.cc/300"></ax-image>
       </ax-avatar>
       <ax-title>Meysa</ax-title>
-      <ax-content
-        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-        mollitia.</ax-content
-      >
+      <ax-content>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, mollitia.</ax-content>
       <ax-comment-like [liked]="true">4</ax-comment-like>
       <ax-comment-reply>3</ax-comment-reply>
       <ax-comment-reply-text (click)="replyHandler()"></ax-comment-reply-text>
     </ax-comment-item>
   </ax-comment-view>
 
-  <ax-wysiwyg-container>
-    <ax-wysiwyg-view></ax-wysiwyg-view>
-    <ax-wysiwyg-toolbar (outputHTML)="getHTML($event)" #t>
-      <ax-suffix>
-        <ax-button
-          color="primary"
-          text="Send Message"
-          (onClick)="t.out()"
-        ></ax-button
-      ></ax-suffix>
-    </ax-wysiwyg-toolbar>
-  </ax-wysiwyg-container>
+  <ax-form>
+    <ax-form-field>
+      <ax-wysiwyg-container [look]="wysiwygOptions().look" (ngModelChange)="valueChange($event)" [(ngModel)]="value">
+        <ax-wysiwyg-view class="ax-min-h-28"></ax-wysiwyg-view>
+        <ax-wysiwyg-toolbar>
+          <ax-wysiwyg-history></ax-wysiwyg-history>
+          <ax-wysiwyg-font-style></ax-wysiwyg-font-style>
+          <ax-wysiwyg-colors></ax-wysiwyg-colors>
+          <ax-wysiwyg-list></ax-wysiwyg-list>
+          <ax-wysiwyg-alignment></ax-wysiwyg-alignment>
+          <ax-wysiwyg-insert></ax-wysiwyg-insert>
+          <ax-suffix> <ax-button type="submit" color="primary" text="Send"></ax-button></ax-suffix>
+        </ax-wysiwyg-toolbar>
+        <ax-validation-rule rule="callback" [options]="{validate:validateFn}"></ax-validation-rule>
+      </ax-wysiwyg-container>
+    </ax-form-field>
+  </ax-form>
 </ax-comment-container>

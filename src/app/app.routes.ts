@@ -226,6 +226,12 @@ export const appRoutes: Route[] = [
     loadChildren: () => import('./cases/otp/otp.routes').then((c) => c.routes),
   },
   {
+    path: 'paint',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/paint/paint.routes').then((c) => c.routes),
+  },
+  {
     path: 'password-box',
     component: MasterLayoutComponent,
     loadChildren: () =>
