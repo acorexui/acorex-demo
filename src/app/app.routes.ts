@@ -300,10 +300,10 @@ export const appRoutes: Route[] = [
       import('./cases/skeleton/skeleton.routes').then((c) => c.routes),
   },
   {
-    path: 'slider',
+    path: 'range-slider',
     component: MasterLayoutComponent,
     loadChildren: () =>
-      import('./cases/slider/slider.routes').then((c) => c.routes),
+      import('./cases/range-slider/range-slider.routes').then((c) => c.routes),
   },
   {
     path: 'step-wizard',

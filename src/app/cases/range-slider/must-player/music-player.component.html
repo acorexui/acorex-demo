@@ -1,0 +1,27 @@
+<div class="flex ax-flex-col ax-justify-center ax-items-center ax-p-5">
+  <ax-range-slider
+    class="ax-w-[20rem] ax-h-5"
+    [ngModel]="value().value"
+    [min]="value().min"
+    [max]="value().max"
+    [color]="'secondary'"
+    (ngModelChange)="change($event)"
+  ></ax-range-slider>
+  <div class="ax-flex ax-gap-4 ax-justify-center ax-items-center">
+    <ax-button color="ghost" (onClick)="previous()">
+      <ax-icon>
+        <i class="fa-solid fa-backward"></i>
+      </ax-icon>
+    </ax-button>
+    <ax-button color="ghost" (onClick)="play()">
+      <ax-icon>
+        <i class="fa-solid" [class]="style()"></i>
+      </ax-icon>
+    </ax-button>
+    <ax-button color="ghost" (onClick)="next()">
+      <ax-icon>
+        <i class="fa-solid fa-forward"></i>
+      </ax-icon>
+    </ax-button>
+  </div>
+</div>

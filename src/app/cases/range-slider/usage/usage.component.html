@@ -1,0 +1,13 @@
+<ax-range-slider
+  class="ax-w-[20rem]"
+  [(ngModel)]="value"
+  [min]="0"
+  [max]="100"
+  [color]="'primary'"
+  [hasSnap]="true"
+  [hasLable]="true"
+  [snapMode]="'both'"
+  [snap]="10"
+  [hasTooltip]="true"
+  (ngModelChange)="onModelChanged($event)"
+></ax-range-slider>
