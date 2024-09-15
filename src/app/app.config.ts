@@ -19,6 +19,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { MyCustomHolidaysLoader, MyTranslationLoader } from './app.loaders';
 import { AXConversationModule } from '@acorex/components/conversation';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import { AXMediaViewerModule } from '@acorex/components/media-viewer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -30,7 +31,8 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(
       AXValidationModule.forRoot(),
       AXConversationModule.forRoot(),
-      AXFormatModule.forRoot()
+      AXFormatModule.forRoot(),
+      AXMediaViewerModule.forRoot()
     ),
     {
       provide: AX_DATETIME_HOLIDAYS_LOADER,
