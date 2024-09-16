@@ -1,7 +1,6 @@
 import { AXButtonModule } from '@acorex/components/button';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXFormModule } from '@acorex/components/form';
-import { AXWysiwygModule } from '@acorex/components/wysiwyg';
 import {
   AXMediaViewerData,
   AXMediaViewerModule,
@@ -13,7 +12,6 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './usage.component.html',
   standalone: true,
   imports: [
-    AXWysiwygModule,
     AXDecoratorModule,
     AXButtonModule,
     AXFormModule,
