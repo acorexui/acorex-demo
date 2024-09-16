@@ -1,0 +1,16 @@
+import { AXRangeSliderModule } from '@acorex/components/range-slider';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+@Component({
+  standalone: true,
+  templateUrl: './vertical.component.html',
+  imports: [AXRangeSliderModule, FormsModule],
+})
+export class VerticalComponent {
+  protected value?: number;
+  onModelChanged(event: any) {
+    console.log(event.constructor.name);
+    console.log(event);
+  }
+}

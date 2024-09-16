@@ -8,15 +8,8 @@ export const routes: Routes = [
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
   {
-    path: 'vertical',
+    path: 'logo',
     loadComponent: () =>
-      import('./vertical/vertical.component').then((e) => e.VerticalComponent),
-  },
-  {
-    path: 'music-player',
-    loadComponent: () =>
-      import('./must-player/music-player.component').then(
-        (e) => e.MusicPlayerComponent
-      ),
+      import('./logo/logo.component').then((e) => e.LogoComponent),
   },
 ];

@@ -268,6 +268,12 @@ export const appRoutes: Route[] = [
       import('./cases/progress-bar/progress-bar.routes').then((c) => c.routes),
   },
   {
+    path: 'qrcode',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/qrcode/qrcode.routes').then((c) => c.routes),
+  },
+  {
     path: 'result',
     component: MasterLayoutComponent,
     loadChildren: () =>
