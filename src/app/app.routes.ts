@@ -192,6 +192,11 @@ export const appRoutes: Route[] = [
       ),
   },
   {
+    path: 'map',
+    component: MasterLayoutComponent,
+    loadChildren: () => import('./cases/map/map.routes').then((c) => c.routes),
+  },
+  {
     path: 'menu',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -318,6 +323,12 @@ export const appRoutes: Route[] = [
       import('./cases/range-slider/range-slider.routes').then((c) => c.routes),
   },
   {
+    path: 'rate-picker',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/rate-picker/rate-picker.routes').then((c) => c.routes),
+  },
+  {
     path: 'step-wizard',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -351,6 +362,12 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/text-box/text-box.routes').then((c) => c.routes),
+  },
+  {
+    path: 'time-line',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/time-line/time-line.routes').then((c) => c.routes),
   },
   {
     path: 'toast',
