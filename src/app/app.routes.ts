@@ -172,6 +172,12 @@ export const appRoutes: Route[] = [
       import('./cases/image/image.routes').then((c) => c.routes),
   },
   {
+    path: 'image-editor',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/image-editor/image-editor.routes').then((c) => c.routes),
+  },
+  {
     path: 'list',
     component: MasterLayoutComponent,
     loadChildren: () =>

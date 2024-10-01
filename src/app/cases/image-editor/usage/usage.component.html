@@ -1,0 +1,9 @@
+<ax-image-editor-container>
+  <ax-image-editor-view src="https://picsum.photos/600/600">
+  </ax-image-editor-view>
+  <ax-image-editor-toolbar (onValueChanged)="saveHandler($event)">
+    <ax-image-editor-color-picker></ax-image-editor-color-picker>
+    <ax-image-editor-pen-mode-changer></ax-image-editor-pen-mode-changer>
+    <ax-image-editor-crop></ax-image-editor-crop>
+  </ax-image-editor-toolbar>
+</ax-image-editor-container>
