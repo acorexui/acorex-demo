@@ -35,4 +35,9 @@ export const routes: Routes = [
         (e) => e.EmptyTemplateComponent
       ),
   },
+  {
+    path: 'api-call',
+    loadComponent: () =>
+      import('./api-call/api-call.component').then((e) => e.ApiCallComponent),
+  },
 ];

@@ -8,6 +8,7 @@ import { AXButtonModule } from '@acorex/components/button';
 import { AXStyleLookType, AXDataSource } from '@acorex/components/common';
 import { AXFormModule } from '@acorex/components/form';
 import { FormsModule } from '@angular/forms';
+import { AXDropdownModule } from '@acorex/components/dropdown';
 
 @Component({
   templateUrl: './usage.component.html',
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     AXButtonModule,
     AXFormModule,
     FormsModule,
+    AXDropdownModule,
   ],
 })
 export class UsageComponent {
