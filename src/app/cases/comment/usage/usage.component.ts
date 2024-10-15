@@ -1,5 +1,5 @@
-import { Component, inject, signal } from '@angular/core';
-import { AXCommentModule, AXCommentService } from '@acorex/components/comment';
+import { Component, signal } from '@angular/core';
+import { AXCommentModule } from '@acorex/components/comment';
 import { AXAvatarModule } from '@acorex/components/avatar';
 import { AXImageModule } from '@acorex/components/image';
 import { AXDecoratorModule } from '@acorex/components/decorators';
@@ -26,8 +26,6 @@ import { AXDropdownModule } from '@acorex/components/dropdown';
   ],
 })
 export class UsageComponent {
-  commentService = inject(AXCommentService);
-
   value = signal('');
 
   protected wysiwygOptions = signal<{
