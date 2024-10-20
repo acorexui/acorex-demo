@@ -1,4 +1,20 @@
-<ax-media-viewer-container [dataArray]="data()">
+<ax-media-viewer-container #c [dataArray]="data()">
+  <ax-header>
+    <ax-file-info></ax-file-info>
+  </ax-header>
+
+  <ax-prefix>
+    <ax-button (click)="c.next()">
+      <ax-icon class="ax-icon ax-icon-chevron-right"> </ax-icon>
+    </ax-button>
+  </ax-prefix>
+
+  <ax-suffix>
+    <ax-button (click)="c.prev()">
+      <ax-icon class="ax-icon ax-icon-chevron-left"> </ax-icon>
+    </ax-button>
+  </ax-suffix>
+
   <ax-footer>
     <ax-media-viewer-thumbnail></ax-media-viewer-thumbnail
   ></ax-footer>

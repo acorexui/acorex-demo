@@ -1,10 +1,13 @@
 <ax-comment-container>
   <ax-comment-view>
-    <ax-comment-item>
+    <ax-comment-item [replyCount]="2">
+      <ax-comment-reply-more></ax-comment-reply-more>
+
       <ax-avatar [color]="avatarOptions().color" [look]="avatarOptions().look">
         <ax-image src="https://i.pravatar.cc/300"></ax-image>
       </ax-avatar>
       <ax-title>Meysa</ax-title>
+      <ax-comment-date>2d</ax-comment-date>
       <ax-comment-menu-options>
         <ax-button class="ax-sm" look="blank" color="secondary ">
           <ax-icon
@@ -33,6 +36,7 @@
       >
       <ax-comment-like [liked]="false">5</ax-comment-like>
       <ax-comment-reply-text (click)="replyHandler()"></ax-comment-reply-text>
+
       <ax-comment-item>
         <ax-avatar
           [color]="avatarOptions().color"
@@ -41,6 +45,7 @@
           <ax-image src="https://i.pravatar.cc/300"></ax-image>
         </ax-avatar>
         <ax-title>Meysa</ax-title>
+        <ax-comment-date>1d</ax-comment-date>
         <ax-comment-menu-options>
           <ax-button class="ax-sm" look="blank" color="secondary ">
             <ax-icon
@@ -78,6 +83,7 @@
         <ax-image src="https://i.pravatar.cc/300"></ax-image>
       </ax-avatar>
       <ax-title>Meysa</ax-title>
+      <ax-comment-date>3d</ax-comment-date>
       <ax-comment-menu-options>
         <ax-button class="ax-sm" look="blank" color="secondary ">
           <ax-icon
