@@ -11,7 +11,6 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
-
   {
     path: 'use-decorators',
     loadComponent: () =>
@@ -19,12 +18,16 @@ export const routes: Routes = [
         (e) => e.UseDecoratorsComponent
       ),
   },
-
   {
     path: 'multi-level',
     loadComponent: () =>
       import('./multi-level/multi-level.component').then(
         (e) => e.MultiLevelComponent
       ),
+  },
+  {
+    path: 'vertical',
+    loadComponent: () =>
+      import('./vertical/vertical.component').then((e) => e.VerticalComponent),
   },
 ];
