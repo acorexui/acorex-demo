@@ -7,15 +7,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
-
   {
-    path: 'background-text',
+    path: 'color',
     loadComponent: () =>
-      import('./background-text/background-text.component').then(
-        (e) => e.BackgroundTextComponent
-      ),
+      import('./color/color.component').then((e) => e.ColorComponent),
   },
-
   {
     path: 'customize-font',
     loadComponent: () =>
@@ -23,7 +19,6 @@ export const routes: Routes = [
         (e) => e.CustomizeFontComponent
       ),
   },
-
   {
     path: 'use-decorator',
     loadComponent: () =>
