@@ -23,4 +23,11 @@ export const routes: Routes = [
         (a) => a.ActionSheetBothModeComponent
       ),
   },
+  {
+    path: 'on-close',
+    loadComponent: () =>
+      import('./on-close/on-close.component').then(
+        (a) => a.ActionSheetOnCloseComponent
+      ),
+  },
 ];
