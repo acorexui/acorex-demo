@@ -16,4 +16,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./hint/hint.component').then((e) => e.HintComponent),
   },
+  {
+    path: 'indeterminate',
+    loadComponent: () =>
+      import('./indeterminate/indeterminate.component').then(
+        (e) => e.IndeterminateComponent
+      ),
+  },
 ];
