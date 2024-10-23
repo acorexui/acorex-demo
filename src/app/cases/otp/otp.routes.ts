@@ -26,4 +26,11 @@ export const routes: Routes = [
         (e) => e.ValidationComponent
       ),
   },
+  {
+    path: 'auto-focus',
+    loadComponent: () =>
+      import('./auto-focus/auto-focus.component').then(
+        (e) => e.AutoFocusComponent
+      ),
+  },
 ];
