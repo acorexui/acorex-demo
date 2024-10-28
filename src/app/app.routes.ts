@@ -400,6 +400,12 @@ export const appRoutes: Route[] = [
       import('./cases/wysiwyg/wysiwyg.routes').then((c) => c.routes),
   },
   {
+    path: 'json-viewer',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/json-viewer/json-viewer.routes').then((c) => c.routes),
+  },
+  {
     path: '**',
     component: MasterLayoutComponent,
     loadChildren: () =>
