@@ -18,4 +18,11 @@ export const routes: Routes = [
         (e) => e.UsingDecoratorsComponent
       ),
   },
+  {
+    path: 'number-mode',
+    loadComponent: () =>
+      import('./number-mode/number-mode.component').then(
+        (e) => e.NumberModeComponent
+      ),
+  },
 ];
