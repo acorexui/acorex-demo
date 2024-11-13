@@ -25,4 +25,11 @@ export const routes: Routes = [
         (e) => e.CustomizationComponent
       ),
   },
+  {
+    path: 'indeterminate',
+    loadComponent: () =>
+      import('./indeterminate/indeterminate.component').then(
+        (e) => e.IndeterminateComponent
+      ),
+  },
 ];
