@@ -33,4 +33,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./toggle/toggle.component').then((e) => e.ToggleComponent),
   },
+  {
+    path: 'password-strength-validation',
+    loadComponent: () =>
+      import(
+        './password-strength-validation/password-strength-validation.component'
+      ).then((e) => e.PasswordStrengthValidationComponent),
+  },
 ];
