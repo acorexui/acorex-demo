@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'asynchronous-process',
+    redirectTo: 'usage',
     pathMatch: 'full',
   },
   {
@@ -12,5 +12,10 @@ export const routes: Routes = [
       import('./asynchronous-process/asynchronous-process.component').then(
         (e) => e.AsynchronousProcessComponent
       ),
+  },
+  {
+    path: 'usage',
+    loadComponent: () =>
+      import('./usage/usage.component').then((e) => e.UsageComponent),
   },
 ];
