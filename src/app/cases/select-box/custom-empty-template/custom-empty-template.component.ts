@@ -7,15 +7,14 @@ import { AXTextBoxModule } from '@acorex/components/text-box';
 import { Component } from '@angular/core';
 
 @Component({
-  standalone: true,
-  templateUrl: 'custom-empty-template.component.html',
-  imports: [
-    AXSelectBoxModule,
-    AXFormModule,
-    AXSearchBoxModule,
-    AXTextBoxModule,
-    AXDecoratorModule,
-  ],
+    templateUrl: 'custom-empty-template.component.html',
+    imports: [
+        AXSelectBoxModule,
+        AXFormModule,
+        AXSearchBoxModule,
+        AXTextBoxModule,
+        AXDecoratorModule,
+    ]
 })
 export class EmptyTemplateComponent {
   options = {

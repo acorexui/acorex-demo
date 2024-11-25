@@ -6,10 +6,9 @@ import { AXBasePageComponent } from '@acorex/components/page';
 import { Component, inject } from '@angular/core';
 
 @Component({
-  templateUrl: 'agreement.components.html',
-  standalone: true,
-  imports: [AXDecoratorModule, AXButtonModule],
-  providers: [AXDialogService],
+    templateUrl: 'agreement.components.html',
+    imports: [AXDecoratorModule, AXButtonModule],
+    providers: [AXDialogService]
 })
 export class AgreementComponents extends AXBasePageComponent {
   private _dialogService: AXDialogService = inject(AXDialogService);

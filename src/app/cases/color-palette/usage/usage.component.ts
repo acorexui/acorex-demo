@@ -4,8 +4,7 @@ import { AXColorPaletteModule } from '@acorex/components/color-palette';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  standalone: true,
-  templateUrl: 'usage.component.html',
-  imports: [AXColorPaletteModule, FormsModule],
+    templateUrl: 'usage.component.html',
+    imports: [AXColorPaletteModule, FormsModule]
 })
 export class UsageComponent {}

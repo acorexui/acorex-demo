@@ -5,13 +5,12 @@ import { AXLabelModule } from '@acorex/components/label';
 import { Component } from '@angular/core';
 
 @Component({
-  standalone: true,
-  templateUrl: 'time-only.component.html',
-  imports: [
-    AXFormModule,
-    AXLabelModule,
-    AXDateTimeBoxModule,
-    AXDecoratorModule,
-  ],
+    templateUrl: 'time-only.component.html',
+    imports: [
+        AXFormModule,
+        AXLabelModule,
+        AXDateTimeBoxModule,
+        AXDecoratorModule,
+    ]
 })
 export class TimeOnlyComponent {}

@@ -7,9 +7,8 @@ import {
 } from '@acorex/components/notification';
 
 @Component({
-  standalone: true,
-  templateUrl: './asynchronous-process.component.html',
-  imports: [AXButtonModule, AXNotificationModule],
+    templateUrl: './asynchronous-process.component.html',
+    imports: [AXButtonModule, AXNotificationModule]
 })
 export class AsynchronousProcesseDecoratorComponent {
   constructor(private notificationService: AXNotificationService) {}

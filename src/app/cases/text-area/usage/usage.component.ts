@@ -6,8 +6,7 @@ import { AXLabelModule } from '@acorex/components/label';
 import { AXTextAreaModule } from '@acorex/components/text-area';
 
 @Component({
-    standalone: true,
     templateUrl: 'usage.component.html',
-    imports: [AXTextAreaModule, AXDecoratorModule, AXFormModule, AXLabelModule],
+    imports: [AXTextAreaModule, AXDecoratorModule, AXFormModule, AXLabelModule]
 })
 export class UsageComponent {}

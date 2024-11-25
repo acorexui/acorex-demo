@@ -8,9 +8,8 @@ import {
 import { AXDataSource } from '@acorex/components/common';
 
 @Component({
-  templateUrl: './allow-resize-and-reorder.component.html',
-  standalone: true,
-  imports: [CommonModule, AXBadgeModule, AXDataTableModule],
+    templateUrl: './allow-resize-and-reorder.component.html',
+    imports: [CommonModule, AXBadgeModule, AXDataTableModule]
 })
 export class AllowResizeAndReorderComponent {
   protected _options = {

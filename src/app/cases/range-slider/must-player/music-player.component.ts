@@ -15,14 +15,13 @@ import {
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  standalone: true,
-  templateUrl: './music-player.component.html',
-  imports: [
-    AXRangeSliderModule,
-    FormsModule,
-    AXButtonModule,
-    AXDecoratorModule,
-  ],
+    templateUrl: './music-player.component.html',
+    imports: [
+        AXRangeSliderModule,
+        FormsModule,
+        AXButtonModule,
+        AXDecoratorModule,
+    ]
 })
 export class MusicPlayerComponent {
   protected value = signal({ value: 10, min: 10, max: 100 });

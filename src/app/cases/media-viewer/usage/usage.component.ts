@@ -9,15 +9,14 @@ import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  templateUrl: './usage.component.html',
-  standalone: true,
-  imports: [
-    AXDecoratorModule,
-    AXButtonModule,
-    AXFormModule,
-    FormsModule,
-    AXMediaViewerModule,
-  ],
+    templateUrl: './usage.component.html',
+    imports: [
+        AXDecoratorModule,
+        AXButtonModule,
+        AXFormModule,
+        FormsModule,
+        AXMediaViewerModule,
+    ]
 })
 export class UsageComponent {
   protected data = signal<AXMediaViewerData[]>([

@@ -5,9 +5,8 @@ import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXSelectionListModule } from '@acorex/components/selection-list';
 
 @Component({
-  standalone: true,
-  templateUrl: 'usage.component.html',
-  imports: [AXSelectionListModule, AXDecoratorModule],
+    templateUrl: 'usage.component.html',
+    imports: [AXSelectionListModule, AXDecoratorModule]
 })
 export class UsageComponent {
   protected items = [

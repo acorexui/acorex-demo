@@ -7,9 +7,8 @@ import {
 } from '@acorex/components/notification';
 
 @Component({
-  standalone: true,
-  templateUrl: './usage.component.html',
-  imports: [AXButtonModule, AXNotificationModule],
+    templateUrl: './usage.component.html',
+    imports: [AXButtonModule, AXNotificationModule]
 })
 export class UsageComponent {
   constructor(private notificationService: AXNotificationService) {}

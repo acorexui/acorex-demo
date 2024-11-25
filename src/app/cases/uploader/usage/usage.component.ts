@@ -5,9 +5,8 @@ import {
 } from '@acorex/components/uploader';
 
 @Component({
-  templateUrl: './usage.component.html',
-  standalone: true,
-  imports: [AXUploaderModule],
+    templateUrl: './usage.component.html',
+    imports: [AXUploaderModule]
 })
 export class UsageComponent {
   uploaderService: AXUploaderService = inject(AXUploaderService);

@@ -4,9 +4,8 @@ import { AXListModule } from '@acorex/components/list';
 import { AXDataSource } from '@acorex/components/common';
 
 @Component({
-  standalone: true,
-  templateUrl: 'custom-loading.component.html',
-  imports: [AXListModule],
+    templateUrl: 'custom-loading.component.html',
+    imports: [AXListModule]
 })
 export class CustomLoadingComponent {
   protected items = [

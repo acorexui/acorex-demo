@@ -5,9 +5,8 @@ import { AXDataSource } from '@acorex/components/common';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 
 @Component({
-  standalone: true,
-  templateUrl: 'custom-header.component.html',
-  imports: [AXListModule, AXDecoratorModule],
+    templateUrl: 'custom-header.component.html',
+    imports: [AXListModule, AXDecoratorModule]
 })
 export class CustomHeaderComponent {
   protected items = [

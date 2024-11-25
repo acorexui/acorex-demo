@@ -8,9 +8,8 @@ import {
 import { AXDataSource } from '@acorex/components/common';
 
 @Component({
-  templateUrl: './empty-template.component.html',
-  standalone: true,
-  imports: [CommonModule, AXBadgeModule, AXDataTableModule],
+    templateUrl: './empty-template.component.html',
+    imports: [CommonModule, AXBadgeModule, AXDataTableModule]
 })
 export class EmptyTemplateComponent {
   protected _options = {

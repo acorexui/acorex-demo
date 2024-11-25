@@ -5,9 +5,8 @@ import { AXLabelModule } from '@acorex/components/label';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  standalone: true,
-  templateUrl: 'indeterminate.component.html',
-  imports: [AXDecoratorModule, AXCheckBoxModule, AXLabelModule, FormsModule],
+    templateUrl: 'indeterminate.component.html',
+    imports: [AXDecoratorModule, AXCheckBoxModule, AXLabelModule, FormsModule]
 })
 export class IndeterminateComponent {
   protected options = signal({

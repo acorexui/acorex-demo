@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
 
 @Component({
     templateUrl: './icon-button.component.html',
-    standalone: true,
-    imports: [AXButtonModule, AXDecoratorModule],
+    imports: [AXButtonModule, AXDecoratorModule]
 })
 export class IconButtonComponent {}

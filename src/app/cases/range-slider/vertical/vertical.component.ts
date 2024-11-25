@@ -3,9 +3,8 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  standalone: true,
-  templateUrl: './vertical.component.html',
-  imports: [AXRangeSliderModule, FormsModule],
+    templateUrl: './vertical.component.html',
+    imports: [AXRangeSliderModule, FormsModule]
 })
 export class VerticalComponent {
   protected value?: number;

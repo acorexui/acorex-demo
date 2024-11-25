@@ -4,9 +4,8 @@ import { AgreementComponents } from '../../../shared/agreement/agreement.compone
 import { AXPopupModule, AXPopupService } from '@acorex/components/popup';
 
 @Component({
-  templateUrl: './usage.component.html',
-  standalone: true,
-  imports: [AXButtonModule, AXPopupModule],
+    templateUrl: './usage.component.html',
+    imports: [AXButtonModule, AXPopupModule]
 })
 export class PopUpUsageComponent {
   private popup: AXPopupService = inject(AXPopupService);

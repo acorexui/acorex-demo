@@ -5,7 +5,6 @@ import { AXDecoratorModule } from '@acorex/components/decorators';
 
 @Component({
     templateUrl: 'text-mode.component.html',
-    imports: [AXAvatarModule, AXDecoratorModule],
-    standalone: true,
+    imports: [AXAvatarModule, AXDecoratorModule]
 })
 export class TextModeComponent {}

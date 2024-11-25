@@ -6,8 +6,7 @@ import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXButtonModule } from '@acorex/components/button';
 
 @Component({
-  standalone: true,
-  templateUrl: 'inline.component.html',
-  imports: [AXBadgeModule, AXAlertModule, AXDecoratorModule, AXButtonModule],
+    templateUrl: 'inline.component.html',
+    imports: [AXBadgeModule, AXAlertModule, AXDecoratorModule, AXButtonModule]
 })
 export class InlineComponent {}

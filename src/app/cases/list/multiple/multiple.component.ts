@@ -4,9 +4,8 @@ import { AXListModule } from '@acorex/components/list';
 import { AXDataSource } from '@acorex/components/common';
 
 @Component({
-  standalone: true,
-  templateUrl: 'multiple.component.html',
-  imports: [AXListModule],
+    templateUrl: 'multiple.component.html',
+    imports: [AXListModule]
 })
 export class MultipleComponent {
   protected items = [

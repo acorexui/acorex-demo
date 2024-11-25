@@ -6,15 +6,14 @@ import { AXDropdownButtonModule } from '@acorex/components/dropdown-button';
 import { AXToastModule, AXToastService } from '@acorex/components/toast';
 
 @Component({
-  templateUrl: './navigation-state.component.html',
-  standalone: true,
-  imports: [
-    AXStepWizardModule,
-    AXDecoratorModule,
-    AXButtonModule,
-    AXDropdownButtonModule,
-    AXToastModule,
-  ],
+    templateUrl: './navigation-state.component.html',
+    imports: [
+        AXStepWizardModule,
+        AXDecoratorModule,
+        AXButtonModule,
+        AXDropdownButtonModule,
+        AXToastModule,
+    ]
 })
 export class NavigationStateComponent {
   protected toastService = inject(AXToastService);

@@ -7,7 +7,6 @@ import { AXLabelModule } from '@acorex/components/label';
 import { AXTextAreaModule } from '@acorex/components/text-area';
 
 @Component({
-    standalone: true,
     templateUrl: 'counter-max-length.component.html',
     imports: [
         AXTextAreaModule,
@@ -15,6 +14,6 @@ import { AXTextAreaModule } from '@acorex/components/text-area';
         AXFormModule,
         AXLabelModule,
         AXButtonModule,
-    ],
+    ]
 })
 export class CounterMaxLengthComponent {}

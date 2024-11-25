@@ -5,8 +5,7 @@ import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXImageModule } from '@acorex/components/image';
 
 @Component({
-  templateUrl: 'image-mode.component.html',
-  imports: [AXAvatarModule, AXDecoratorModule, AXImageModule],
-  standalone: true,
+    templateUrl: 'image-mode.component.html',
+    imports: [AXAvatarModule, AXDecoratorModule, AXImageModule]
 })
 export class ImageModeComponent {}

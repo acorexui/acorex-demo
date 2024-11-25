@@ -3,9 +3,8 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  standalone: true,
-  templateUrl: './usage.component.html',
-  imports: [AXRangeSliderModule, FormsModule],
+    templateUrl: './usage.component.html',
+    imports: [AXRangeSliderModule, FormsModule]
 })
 export class UsageComponent {
   protected value?: number;

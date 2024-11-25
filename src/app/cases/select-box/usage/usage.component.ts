@@ -9,16 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { DataService } from '../select-box.service';
 
 @Component({
-  standalone: true,
-  templateUrl: 'usage.component.html',
-  imports: [
-    AXSelectBoxModule,
-    AXFormModule,
-    AXSearchBoxModule,
-    AXTextBoxModule,
-    AXDecoratorModule,
-    FormsModule,
-  ],
+    templateUrl: 'usage.component.html',
+    imports: [
+        AXSelectBoxModule,
+        AXFormModule,
+        AXSearchBoxModule,
+        AXTextBoxModule,
+        AXDecoratorModule,
+        FormsModule,
+    ]
 })
 export class UsageComponent {
   apiService = inject(DataService);

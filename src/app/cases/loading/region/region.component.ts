@@ -5,9 +5,8 @@ import { AXButtonModule } from '@acorex/components/button';
 import { AXLoadingModule, AXLoadingService } from '@acorex/components/loading';
 
 @Component({
-    standalone: true,
     templateUrl: 'region.component.html',
-    imports: [AXLoadingModule, AXButtonModule],
+    imports: [AXLoadingModule, AXButtonModule]
 })
 export class RegionComponent {
     protected _options = {

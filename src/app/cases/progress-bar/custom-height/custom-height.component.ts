@@ -5,7 +5,6 @@ import { AXProgressBarModule } from '@acorex/components/progress-bar';
 
 @Component({
     templateUrl: './custom-height.component.html',
-    standalone: true,
-    imports: [AXDecoratorModule, AXProgressBarModule],
+    imports: [AXDecoratorModule, AXProgressBarModule]
 })
 export class CustomHeightComponent {}

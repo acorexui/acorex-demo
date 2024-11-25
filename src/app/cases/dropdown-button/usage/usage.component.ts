@@ -5,8 +5,7 @@ import { AXDropdownButtonModule } from '@acorex/components/dropdown-button';
 
 
 @Component({
-  templateUrl: './usage.component.html',
-  standalone: true,
-  imports: [AXButtonModule,AXDecoratorModule,AXDropdownButtonModule]
+    templateUrl: './usage.component.html',
+    imports: [AXButtonModule, AXDecoratorModule, AXDropdownButtonModule]
 })
 export class DropdownButtonUsageComponent {}

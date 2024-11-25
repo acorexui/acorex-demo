@@ -10,17 +10,16 @@ import { AXDataSource } from '@acorex/components/common';
 import { firstValueFrom } from 'rxjs';
 
 @Component({
-  standalone: true,
-  templateUrl: 'api-call.component.html',
-  imports: [
-    AXSelectBoxModule,
-    AXFormModule,
-    AXSearchBoxModule,
-    AXTextBoxModule,
-    AXDecoratorModule,
-    HttpClientModule,
-    FormsModule,
-  ],
+    templateUrl: 'api-call.component.html',
+    imports: [
+        AXSelectBoxModule,
+        AXFormModule,
+        AXSearchBoxModule,
+        AXTextBoxModule,
+        AXDecoratorModule,
+        HttpClientModule,
+        FormsModule,
+    ]
 })
 export class ApiCallComponent {
   protected http = inject(HttpClient);

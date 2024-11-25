@@ -5,9 +5,8 @@ import { AXDataSource } from '@acorex/components/common';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 
 @Component({
-  standalone: true,
-  templateUrl: 'custom-footer.component.html',
-  imports: [AXListModule, AXDecoratorModule],
+    templateUrl: 'custom-footer.component.html',
+    imports: [AXListModule, AXDecoratorModule]
 })
 export class CustomFooterComponent {
   protected items = [

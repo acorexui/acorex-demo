@@ -3,9 +3,8 @@ import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  templateUrl: './usage.component.html',
-  standalone: true,
-  imports: [AXDateTimePickerModule, FormsModule],
+    templateUrl: './usage.component.html',
+    imports: [AXDateTimePickerModule, FormsModule]
 })
 export class UsageComponent {
   protected options = signal({

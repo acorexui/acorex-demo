@@ -8,15 +8,14 @@ import { Component, inject } from '@angular/core';
 import { DataService } from '../select-box.service';
 
 @Component({
-  standalone: true,
-  templateUrl: 'multiple-selection.component.html',
-  imports: [
-    AXSelectBoxModule,
-    AXFormModule,
-    AXSearchBoxModule,
-    AXTextBoxModule,
-    AXDecoratorModule,
-  ],
+    templateUrl: 'multiple-selection.component.html',
+    imports: [
+        AXSelectBoxModule,
+        AXFormModule,
+        AXSearchBoxModule,
+        AXTextBoxModule,
+        AXDecoratorModule,
+    ]
 })
 export class MultipleComponent {
   apiService = inject(DataService);

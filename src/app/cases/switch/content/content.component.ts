@@ -3,8 +3,7 @@ import { AXSwitchModule } from '@acorex/components/switch';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  standalone: true,
-  templateUrl: './content.component.html',
-  imports: [FormsModule,AXSwitchModule],
+    templateUrl: './content.component.html',
+    imports: [FormsModule, AXSwitchModule]
 })
 export class ContentComponent {}

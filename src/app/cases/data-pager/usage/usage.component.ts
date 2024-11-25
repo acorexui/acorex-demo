@@ -3,9 +3,8 @@ import { AXDecoratorModule } from '@acorex/components/decorators';
 import { Component, signal } from '@angular/core';
 
 @Component({
-  templateUrl: './usage.component.html',
-  standalone: true,
-  imports: [AXDataPagerModule, AXDecoratorModule],
+    templateUrl: './usage.component.html',
+    imports: [AXDataPagerModule, AXDecoratorModule]
 })
 export class UsageComponent {
   protected options = signal({

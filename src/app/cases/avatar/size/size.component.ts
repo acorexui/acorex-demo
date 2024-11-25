@@ -12,7 +12,6 @@ import { AXLoadingModule } from '@acorex/components/loading';
         AXDecoratorModule,
         AXImageModule,
         AXLoadingModule,
-    ],
-    standalone: true,
+    ]
 })
 export class TextModeComponent {}

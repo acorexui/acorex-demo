@@ -13,17 +13,16 @@ import { CommonModule } from '@angular/common';
 import { AXToastModule, AXToastService } from '@acorex/components/toast';
 
 @Component({
-  standalone: true,
-  templateUrl: 'summary.component.html',
-  imports: [
-    AXFormModule,
-    CommonModule,
-    AXTextBoxModule,
-    AXLabelModule,
-    AXDateTimeBoxModule,
-    AXButtonModule,
-    AXToastModule,
-  ],
+    templateUrl: 'summary.component.html',
+    imports: [
+        AXFormModule,
+        CommonModule,
+        AXTextBoxModule,
+        AXLabelModule,
+        AXDateTimeBoxModule,
+        AXButtonModule,
+        AXToastModule,
+    ]
 })
 export class SummaryComponent {
   toast = inject(AXToastService);

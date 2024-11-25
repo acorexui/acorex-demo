@@ -3,9 +3,8 @@ import { AXRatePickerModule } from '@acorex/components/rate-picker';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  templateUrl: './usage.component.html',
-  standalone: true,
-  imports: [AXRatePickerModule, FormsModule],
+    templateUrl: './usage.component.html',
+    imports: [AXRatePickerModule, FormsModule]
 })
 export class UsageComponent implements OnInit {
   value?: number;

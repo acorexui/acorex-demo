@@ -5,8 +5,7 @@ import { AXLabelModule } from '@acorex/components/label';
 import { AXTextBoxModule } from '@acorex/components/text-box';
 
 @Component({
-  standalone: true,
-  templateUrl: 'number-mode.component.html',
-  imports: [AXTextBoxModule, AXDecoratorModule, AXFormModule, AXLabelModule],
+    templateUrl: 'number-mode.component.html',
+    imports: [AXTextBoxModule, AXDecoratorModule, AXFormModule, AXLabelModule]
 })
 export class NumberModeComponent {}

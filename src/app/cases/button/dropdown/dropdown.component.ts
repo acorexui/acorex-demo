@@ -4,9 +4,8 @@ import { Component } from '@angular/core';
 import { AXDropdownModule } from '@acorex/components/dropdown';
 
 @Component({
-  templateUrl: './dropdown.component.html',
-  standalone: true,
-  imports: [AXButtonModule, AXDecoratorModule, AXDropdownModule],
+    templateUrl: './dropdown.component.html',
+    imports: [AXButtonModule, AXDecoratorModule, AXDropdownModule]
 })
 export class DropdownComponent {
   handleOnItemClick(e: any) {

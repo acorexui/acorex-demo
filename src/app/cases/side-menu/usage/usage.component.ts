@@ -4,9 +4,8 @@ import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXSideMenuModule } from '@acorex/components/side-menu';
 
 @Component({
-  standalone: true,
-  templateUrl: 'usage.component.html',
-  imports: [AXSideMenuModule, AXDecoratorModule, AXBadgeModule],
+    templateUrl: 'usage.component.html',
+    imports: [AXSideMenuModule, AXDecoratorModule, AXBadgeModule]
 })
 export class UsageComponent {
   protected _options = {

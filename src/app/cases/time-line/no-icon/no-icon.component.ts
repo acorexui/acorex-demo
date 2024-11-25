@@ -4,9 +4,8 @@ import { Component, signal } from '@angular/core';
 import { AXTimeLineModule } from '@acorex/components/time-line';
 
 @Component({
-  templateUrl: './no-icon.component.html',
-  standalone: true,
-  imports: [AXDecoratorModule, AXTimeLineModule],
+    templateUrl: './no-icon.component.html',
+    imports: [AXDecoratorModule, AXTimeLineModule]
 })
 export class NoIconComponent {
   protected options = signal({

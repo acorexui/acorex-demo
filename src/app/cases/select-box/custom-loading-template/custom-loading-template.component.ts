@@ -8,15 +8,14 @@ import { Component, inject } from '@angular/core';
 import { DataService } from '../select-box.service';
 
 @Component({
-  standalone: true,
-  templateUrl: 'custom-loading-template.component.html',
-  imports: [
-    AXSelectBoxModule,
-    AXFormModule,
-    AXSearchBoxModule,
-    AXTextBoxModule,
-    AXDecoratorModule,
-  ],
+    templateUrl: 'custom-loading-template.component.html',
+    imports: [
+        AXSelectBoxModule,
+        AXFormModule,
+        AXSearchBoxModule,
+        AXTextBoxModule,
+        AXDecoratorModule,
+    ]
 })
 export class LoadingTemplateComponent {
   apiService = inject(DataService);

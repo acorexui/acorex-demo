@@ -3,9 +3,8 @@ import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  templateUrl: './usage.component.html',
-  standalone: true,
-  imports: [FormsModule, AXJsonViewerModule],
+    templateUrl: './usage.component.html',
+    imports: [FormsModule, AXJsonViewerModule]
 })
 export class UsageComponent {
   mockData = signal({

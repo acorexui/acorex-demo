@@ -5,9 +5,8 @@ import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  templateUrl: './change-on-scroll.component.html',
-  standalone: true,
-  imports: [AXNumberBoxModule, AXDecoratorModule, FormsModule, CommonModule],
+    templateUrl: './change-on-scroll.component.html',
+    imports: [AXNumberBoxModule, AXDecoratorModule, FormsModule, CommonModule]
 })
 export class ChangeOnScrollComponent {
   protected options = signal({

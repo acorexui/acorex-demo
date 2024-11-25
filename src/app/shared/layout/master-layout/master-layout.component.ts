@@ -3,11 +3,10 @@ import { Component, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-master-layout',
-  templateUrl: './master-layout.component.html',
-  styleUrls: ['./master-layout.component.scss'],
-  standalone: true,
-  imports: [RouterOutlet],
+    selector: 'app-master-layout',
+    templateUrl: './master-layout.component.html',
+    styleUrls: ['./master-layout.component.scss'],
+    imports: [RouterOutlet]
 })
 export class MasterLayoutComponent {
   platform = inject(AXPlatform);

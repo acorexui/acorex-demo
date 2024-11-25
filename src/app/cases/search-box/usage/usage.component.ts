@@ -4,8 +4,7 @@ import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXSearchBoxModule } from '@acorex/components/search-box';
 
 @Component({
-    standalone: true,
     templateUrl: 'usage.component.html',
-    imports: [AXSearchBoxModule, AXDecoratorModule],
+    imports: [AXSearchBoxModule, AXDecoratorModule]
 })
 export class UsageComponent {}

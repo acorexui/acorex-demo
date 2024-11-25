@@ -5,9 +5,8 @@ import {
 } from '@acorex/components/collapse';
 
 @Component({
-  standalone: true,
-  templateUrl: 'loading.component.html',
-  imports: [AXCollapseModule],
+    templateUrl: 'loading.component.html',
+    imports: [AXCollapseModule]
 })
 export class LoadingComponent {
   protected _options: { color: string; isAccordion: boolean; look: any } = {

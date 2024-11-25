@@ -4,9 +4,8 @@ import { AXToastModule, AXToastService } from '@acorex/components/toast';
 import { Component, inject, signal } from '@angular/core';
 
 @Component({
-  templateUrl: './usage.component.html',
-  standalone: true,
-  imports: [AXButtonModule, AXToastModule],
+    templateUrl: './usage.component.html',
+    imports: [AXButtonModule, AXToastModule]
 })
 export class UsageComponent {
   toastService = inject(AXToastService);

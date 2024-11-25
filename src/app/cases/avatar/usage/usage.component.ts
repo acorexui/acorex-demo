@@ -4,7 +4,6 @@ import { AXAvatarModule } from '@acorex/components/avatar';
 
 @Component({
     templateUrl: 'usage.component.html',
-    imports: [AXAvatarModule],
-    standalone: true,
+    imports: [AXAvatarModule]
 })
 export class UsageComponent {}

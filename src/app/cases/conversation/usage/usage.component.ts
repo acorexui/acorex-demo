@@ -9,13 +9,12 @@ import { afterNextRender, Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  templateUrl: './usage.component.html',
-  standalone: true,
-  imports: [AXConversationModule, FormsModule],
-  styles: `
+    templateUrl: './usage.component.html',
+    imports: [AXConversationModule, FormsModule],
+    styles: `
   .ax-demo-conversation-container{
     min-width:50rem
-  }`,
+  }`
 })
 export class UsageComponent {
   fileService: AXFileService = inject(AXFileService);

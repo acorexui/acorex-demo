@@ -7,15 +7,14 @@ import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  templateUrl: './usage.component.html',
-  standalone: true,
-  imports: [
-    AXWysiwygModule,
-    AXDecoratorModule,
-    AXButtonModule,
-    AXFormModule,
-    FormsModule,
-  ],
+    templateUrl: './usage.component.html',
+    imports: [
+        AXWysiwygModule,
+        AXDecoratorModule,
+        AXButtonModule,
+        AXFormModule,
+        FormsModule,
+    ]
 })
 export class UsageComponent {
   value = signal('');

@@ -4,9 +4,8 @@ import { Component, inject, ViewChild } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({
-  standalone: true,
-  templateUrl: 'asynchronous-process.component.html',
-  imports: [AXButtonModule, AXDialogModule],
+    templateUrl: 'asynchronous-process.component.html',
+    imports: [AXButtonModule, AXDialogModule]
 })
 export class AsynchronousProcessComponent {
   private _dialogService: AXDialogService = inject(AXDialogService);

@@ -7,15 +7,14 @@ import { AXDecoratorModule } from '@acorex/components/decorators';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  templateUrl: './usage.component.html',
-  standalone: true,
-  imports: [
-    AXFormModule,
-    AXPaintModule,
-    AXButtonModule,
-    AXDecoratorModule,
-    FormsModule,
-  ],
+    templateUrl: './usage.component.html',
+    imports: [
+        AXFormModule,
+        AXPaintModule,
+        AXButtonModule,
+        AXDecoratorModule,
+        FormsModule,
+    ]
 })
 export class UsageComponent {
   value = signal('');

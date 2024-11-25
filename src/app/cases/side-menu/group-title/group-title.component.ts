@@ -7,9 +7,8 @@ import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXSideMenuModule } from '@acorex/components/side-menu';
 
 @Component({
-  standalone: true,
-  templateUrl: 'group-title.component.html',
-  imports: [AXSideMenuModule, AXDecoratorModule, AXBadgeModule],
+    templateUrl: 'group-title.component.html',
+    imports: [AXSideMenuModule, AXDecoratorModule, AXBadgeModule]
 })
 export class GroupTitleComponent {
   protected _options = {

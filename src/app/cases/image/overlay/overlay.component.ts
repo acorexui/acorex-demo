@@ -7,15 +7,14 @@ import { AXButtonModule } from '@acorex/components/button';
 import { AXPopupModule, AXPopupService } from '@acorex/components/popup';
 
 @Component({
-  standalone: true,
-  templateUrl: 'overlay.component.html',
-  imports: [
-    AXImageModule,
-    AXLoadingModule,
-    AXDecoratorModule,
-    AXButtonModule,
-    AXPopupModule,
-  ],
+    templateUrl: 'overlay.component.html',
+    imports: [
+        AXImageModule,
+        AXLoadingModule,
+        AXDecoratorModule,
+        AXButtonModule,
+        AXPopupModule,
+    ]
 })
 export class OverlayComponent {
   private popupService = inject(AXPopupService);

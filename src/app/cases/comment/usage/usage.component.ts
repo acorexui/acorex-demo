@@ -11,19 +11,18 @@ import { FormsModule } from '@angular/forms';
 import { AXDropdownModule } from '@acorex/components/dropdown';
 
 @Component({
-  templateUrl: './usage.component.html',
-  standalone: true,
-  imports: [
-    AXCommentModule,
-    AXAvatarModule,
-    AXImageModule,
-    AXDecoratorModule,
-    AXWysiwygModule,
-    AXButtonModule,
-    AXFormModule,
-    FormsModule,
-    AXDropdownModule,
-  ],
+    templateUrl: './usage.component.html',
+    imports: [
+        AXCommentModule,
+        AXAvatarModule,
+        AXImageModule,
+        AXDecoratorModule,
+        AXWysiwygModule,
+        AXButtonModule,
+        AXFormModule,
+        FormsModule,
+        AXDropdownModule,
+    ]
 })
 export class UsageComponent {
   value = signal('');

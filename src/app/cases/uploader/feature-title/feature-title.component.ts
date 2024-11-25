@@ -5,9 +5,8 @@ import {
 } from '@acorex/components/uploader';
 
 @Component({
-  templateUrl: './feature-title.component.html',
-  standalone: true,
-  imports: [AXUploaderModule],
+    templateUrl: './feature-title.component.html',
+    imports: [AXUploaderModule]
 })
 export class FeatureTitleComponent {
   uploaderService: AXUploaderService = inject(AXUploaderService);

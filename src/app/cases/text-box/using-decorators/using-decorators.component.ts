@@ -7,14 +7,13 @@ import { AXLabelModule } from '@acorex/components/label';
 import { AXTextBoxModule } from '@acorex/components/text-box';
 
 @Component({
-  standalone: true,
-  templateUrl: 'using-decorators.component.html',
-  imports: [
-    AXTextBoxModule,
-    AXDecoratorModule,
-    AXFormModule,
-    AXLabelModule,
-    AXButtonModule,
-  ],
+    templateUrl: 'using-decorators.component.html',
+    imports: [
+        AXTextBoxModule,
+        AXDecoratorModule,
+        AXFormModule,
+        AXLabelModule,
+        AXButtonModule,
+    ]
 })
 export class UsingDecoratorsComponent {}

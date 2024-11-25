@@ -4,8 +4,7 @@ import { AXBreadcrumbsModule } from '@acorex/components/breadcrumbs';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 
 @Component({
-    standalone: true,
     templateUrl: 'icon-mode.component.html',
-    imports: [AXBreadcrumbsModule, AXDecoratorModule],
+    imports: [AXBreadcrumbsModule, AXDecoratorModule]
 })
 export class IconModeComponent {}

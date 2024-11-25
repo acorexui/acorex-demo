@@ -3,8 +3,7 @@ import { AXNavModule } from '@acorex/components/nav';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 
 @Component({
-  standalone: true,
-  templateUrl: './custom-title.component.html',
-  imports: [AXNavModule, AXDecoratorModule],
+    templateUrl: './custom-title.component.html',
+    imports: [AXNavModule, AXDecoratorModule]
 })
 export class CustomTitleComponent {}

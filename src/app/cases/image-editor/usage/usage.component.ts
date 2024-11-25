@@ -3,9 +3,8 @@ import { AXImageEditorModule } from '@acorex/components/image-editor';
 import { AXValueChangedEvent } from '@acorex/components/common';
 
 @Component({
-  templateUrl: './usage.component.html',
-  standalone: true,
-  imports: [AXImageEditorModule],
+    templateUrl: './usage.component.html',
+    imports: [AXImageEditorModule]
 })
 export class UsageComponent {
   saveHandler(e: AXValueChangedEvent<any>) {

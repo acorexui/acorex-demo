@@ -4,9 +4,8 @@ import { Component, inject, ViewChild } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({
-  standalone: true,
-  templateUrl: 'usage.component.html',
-  imports: [AXButtonModule, AXDialogModule],
+    templateUrl: 'usage.component.html',
+    imports: [AXButtonModule, AXDialogModule]
 })
 export class UsageComponent {
   private _dialogService: AXDialogService = inject(AXDialogService);

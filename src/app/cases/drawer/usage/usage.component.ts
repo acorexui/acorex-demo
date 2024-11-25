@@ -5,8 +5,7 @@ import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXButtonModule } from '@acorex/components/button';
 
 @Component({
-  templateUrl: './usage.component.html',
-  standalone: true,
-  imports: [AXDrawerModule, CommonModule, AXDecoratorModule, AXButtonModule]
+    templateUrl: './usage.component.html',
+    imports: [AXDrawerModule, CommonModule, AXDecoratorModule, AXButtonModule]
 })
 export class DrawerUsageComponent {}

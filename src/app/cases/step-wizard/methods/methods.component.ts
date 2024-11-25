@@ -5,13 +5,12 @@ import { AXButtonModule } from '@acorex/components/button';
 import { AXDropdownButtonModule } from '@acorex/components/dropdown-button';
 
 @Component({
-  templateUrl: './methods.component.html',
-  standalone: true,
-  imports: [
-    AXStepWizardModule,
-    AXDecoratorModule,
-    AXButtonModule,
-    AXDropdownButtonModule,
-  ],
+    templateUrl: './methods.component.html',
+    imports: [
+        AXStepWizardModule,
+        AXDecoratorModule,
+        AXButtonModule,
+        AXDropdownButtonModule,
+    ]
 })
 export class MethodsComponent {}

@@ -8,9 +8,8 @@ import {
 } from '@acorex/components/selection-list';
 
 @Component({
-  standalone: true,
-  templateUrl: 'custom.component.html',
-  imports: [AXSelectionListModule, AXDecoratorModule],
+    templateUrl: 'custom.component.html',
+    imports: [AXSelectionListModule, AXDecoratorModule]
 })
 export class CustomComponent {
   protected _options = {

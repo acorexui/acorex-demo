@@ -13,16 +13,15 @@ import { AXTextBoxModule } from '@acorex/components/text-box';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  standalone: true,
-  templateUrl: 'validate.component.html',
-  imports: [
-    AXFormModule,
-    CommonModule,
-    AXTextBoxModule,
-    AXLabelModule,
-    AXDateTimeBoxModule,
-    AXButtonModule,
-  ],
+    templateUrl: 'validate.component.html',
+    imports: [
+        AXFormModule,
+        CommonModule,
+        AXTextBoxModule,
+        AXLabelModule,
+        AXDateTimeBoxModule,
+        AXButtonModule,
+    ]
 })
 export class ValidateOnValidateComponent {
   options = {

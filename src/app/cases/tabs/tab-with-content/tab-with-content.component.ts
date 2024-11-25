@@ -4,8 +4,7 @@ import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXBadgeModule } from '@acorex/components/badge';
 
 @Component({
-  standalone: true,
-  templateUrl: './tab-with-content.component.html',
-  imports: [AXTabsModule, AXDecoratorModule, AXBadgeModule],
+    templateUrl: './tab-with-content.component.html',
+    imports: [AXTabsModule, AXDecoratorModule, AXBadgeModule]
 })
 export class TabWithContentComponent {}

@@ -6,9 +6,8 @@ import {
 import { AXButtonModule } from '@acorex/components/button';
 
 @Component({
-  templateUrl: './usage.component.html',
-  standalone: true,
-  imports: [AXLoadingDialogModule, AXButtonModule],
+    templateUrl: './usage.component.html',
+    imports: [AXLoadingDialogModule, AXButtonModule]
 })
 export class UsageComponent {
   private loadingDialog = inject(AXLoadingDialogService);

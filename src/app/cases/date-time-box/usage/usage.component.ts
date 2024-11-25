@@ -6,15 +6,14 @@ import { AXDateTimeBoxModule } from '@acorex/components/datetime-box';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 
 @Component({
-  standalone: true,
-  templateUrl: 'usage.component.html',
-  imports: [
-    FormsModule,
-    AXFormModule,
-    AXLabelModule,
-    AXDateTimeBoxModule,
-    AXDecoratorModule,
-  ],
+    templateUrl: 'usage.component.html',
+    imports: [
+        FormsModule,
+        AXFormModule,
+        AXLabelModule,
+        AXDateTimeBoxModule,
+        AXDecoratorModule,
+    ]
 })
 export class UsageComponent {
   protected _options = {
