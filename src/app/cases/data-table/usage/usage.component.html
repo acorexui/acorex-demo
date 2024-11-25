@@ -1,0 +1,30 @@
+<ax-data-table
+  (selectedRowsChange)="handleSelectionChange($event)"
+  [dataSource]="dataSource"
+>
+  <ax-index-column [width]="'60px'" fixed="start"> </ax-index-column>
+  <ax-select-column [width]="'50px'" fixed="start"> </ax-select-column>
+  <ax-text-column
+    name="firstName"
+    [width]="'180px'"
+    [dataField]="'firstName'"
+    caption="First Name"
+  ></ax-text-column>
+
+  <ax-text-column
+    [allowResizing]="true"
+    name="lastName"
+    [width]="'180px'"
+    [dataField]="'lastName'"
+    caption="Last Name"
+  >
+  </ax-text-column>
+
+  <ax-text-column
+    name="mobile"
+    [width]="'180px'"
+    [dataField]="'mobile'"
+    caption="mobile"
+  >
+  </ax-text-column>
+</ax-data-table>

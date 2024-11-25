@@ -2,7 +2,7 @@ import { Route } from '@angular/router';
 import { MasterLayoutComponent } from './shared/layout/master-layout/master-layout.component';
 
 export const appRoutes: Route[] = [
-  { path: '', redirectTo: 'action-sheet/list-item', pathMatch: 'full' },
+  { path: '', redirectTo: 'action-sheet/usage', pathMatch: 'full' },
   {
     path: 'action-sheet',
     component: MasterLayoutComponent,
@@ -253,6 +253,12 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/paint/paint.routes').then((c) => c.routes),
+  },
+  {
+    path: 'picker',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/picker/picker.routes').then((c) => c.routes),
   },
   {
     path: 'password-box',

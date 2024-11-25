@@ -8,6 +8,11 @@ export const routes: Routes = [
       import('./region/region.component').then((e) => e.RegionComponent),
   },
   {
+    path: 'usage',
+    loadComponent: () =>
+      import('./usage/usage.component').then((e) => e.UsageComponent),
+  },
+  {
     path: 'spinner-color',
     loadComponent: () =>
       import('./spinner-color/spinner-color.component').then(

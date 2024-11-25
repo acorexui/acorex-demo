@@ -7,6 +7,11 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'usage',
+    loadComponent: () =>
+      import('./usage/usage.component').then((b) => b.UsageComponent),
+  },
+  {
     path: 'badge-in-button',
     loadComponent: () =>
       import('./badge-in-button/badge-in-button.component').then(

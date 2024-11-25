@@ -3,6 +3,11 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   { path: '', redirectTo: 'cell-template', pathMatch: 'full' },
   {
+    path: 'usage',
+    loadComponent: () =>
+      import('./usage/usage.component').then((e) => e.UsageComponent),
+  },
+  {
     path: 'cell-template',
     loadComponent: () =>
       import('./cell-template/cell-template.component').then(

@@ -10,10 +10,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'usage',
+    loadComponent: () =>
+      import('./usage/usage.component').then((e) => e.UsageComponent),
+  },
+  {
     path: 'no-icon',
     loadComponent: () =>
-      import('./no-icon/no-icon.component').then(
-        (e) => e.NoIconComponent
-      ),
+      import('./no-icon/no-icon.component').then((e) => e.NoIconComponent),
   },
 ];
