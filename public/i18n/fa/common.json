@@ -163,15 +163,84 @@
   },
   "datapager": {
     "info": {
-      "text": "[page] از [totalPages] صفحه ([totalItems] صفحه)"
+      "text": "[page] از [totalPages] صفحه ( [totalItems] رکورد)"
     }
   },
   "uploader": {
     "zone": {
-      "text": "برای آپلود فایل را رها کنید"
+      "text": "برای آپلود فایل را رها کنید",
+      "drag": "بکشید یا رها کنید یا ",
+      "choose": "فایل را انتخاب کنید",
+      "to-upload": " "
     }
   },
   "action-sheet": {
     "title": "اکشن شیت"
-  }
+  },
+  "comment": {
+    "view": "مشاهده",
+    "reply": "پاسخ",
+    "replies": "پاسخ‌ها"
+  },
+  "time": {
+    "second": "ثانیه",
+    "Seconds": "ثانیه ها",
+    "minute": "دقیقه",
+    "Minutes": "دقیقه ها",
+    "month": "ماه",
+    "Months": "ماه ها",
+    "hour": "ساعت",
+    "Hours": "ساعت ها",
+    "day": "روز",
+    "Days": "روز ها",
+    "year": "سال",
+    "Years": "سال ها"
+  },
+
+  "custom": "سفارشی",
+  "every": "هر",
+  "between": "بین",
+  "and": "و",
+  "generate-expression": "تولید عبارت",
+  "select-second": "انتخاب ثانیه( ها)",
+  "select-minute": "انتخاب دقیقه( ها)",
+  "select-month": "انتخاب ماه( ها)",
+  "select-hour": "انتخاب ساعت( ها)",
+  "select-day": "انتخاب روز( ها)",
+  "select-year": "انتخاب سال( ها)",
+  "second-starting": "ثانیه(هایی) که شروع میشوند از ثانیه",
+  "minute-starting": "دقیقه(هایی) که شروع میشوند از دقیقه",
+  "month-starting": "ماه(هایی) که شروع میشوند از ماه",
+  "hour-starting": "ساعت(هایی) که شروع میشوند از ساعت",
+  "year-starting": "سال(هایی) که شروع میشوند از سال",
+  "specific-second": "ثانیه(های) به خصوص (انتخاب یکی یا بیشتر)",
+  "specific-minute": "دقیقه(های) به خصوص (انتخاب یکی یا بیشتر)",
+  "specific-month": "ماه(های) به خصوص (انتخاب یکی یا بیشتر)",
+  "specific-hour": "ساعت(های) به خصوص (انتخاب یکی یا بیشتر)",
+  "specific-year": "سال(های) به خصوص (انتخاب یکی یا بیشتر)",
+  "base-on-week": "بر اساس هفته",
+  "on-the-last": "در آخرین",
+  "of-the-month": "ماه",
+  "on-the": "در",
+  "st": "امین",
+  "of-month": "ماه",
+  "base-on-month": "بر اساس ماه",
+  "on-the-last-day-of-the-month": "در آخرین روز ماه",
+  "day-before-the-end-of-the-month": "روز(های) قبل از اتمام ماه",
+  "st-of-the-month": "ام ماه",
+  "specific-day-of-month": "روز(های) به خصوص از ماه(انتخاب یک مورد یا بیشنر)",
+  "specific-day-of-week": "روز(های) به خصوص از هفته(انتخاب یک مورد یا بیشنر)",
+  "day-starting-on": "روزی(های) که شروع میشود در",
+  "more-notification": "و {{ number }} اعلان دیگر...",
+  "more-toast": "و {{ number }} اعلان دیگر...",
+  "at-least-8-characters": "حداقل هشت کاراکتر",
+  "english-upper-case-letter": "استفاده از حروف بزرگ",
+  "english-lower-case-letter": "استفاده از حروف کوچک",
+  "special-character": "استفاده از کاراکتر های ویژه (%,$, ...)",
+  "digits": "استفاده از اعداد",
+  "fragile": "شکننده",
+  "weak": "ضعیف",
+  "good": "خوب",
+  "strong": "قوی",
+  "unbreakable": "مستحکم"
 }
