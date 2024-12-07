@@ -35,6 +35,28 @@
     <meta http-equiv="Expires" content="0" />
 
     <style>
+      @media (prefers-color-scheme: dark) {
+        .app-loading {
+          background-color: rgb(24, 32, 43);
+        }
+        .app-loading svg .path {
+          fill: rgb(255, 255, 255);
+        }
+        .app-loading .loader::after {
+          background: rgb(255, 255, 255);
+        }
+      }
+      @media (prefers-color-scheme: light) {
+        .app-loading {
+          background-color: rgb(249, 250, 251);
+        }
+        .app-loading svg .path {
+          fill: rgb(22, 22, 22);
+        }
+        .app-loading .loader::after {
+          background: rgb(22, 22, 22);
+        }
+      }
       .app-loading {
         position: fixed;
         width: 100vw;
@@ -42,7 +64,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgba(var(--ax-color-background-default));
         top: 0;
         right: 0;
         z-index: 10000;
@@ -53,10 +74,6 @@
 
       .app-loading svg {
         width: 180px;
-      }
-
-      .app-loading svg .path {
-        fill: rgba(var(--ax-color-text-default));
       }
 
       .app-loading .loader {
@@ -72,7 +89,6 @@
         content: "";
         width: 96px;
         height: 4px;
-        background: rgba(var(--ax-color-text-default));
         position: absolute;
         top: 0;
         left: 0;
