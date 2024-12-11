@@ -1,2 +1,4 @@
-<ax-cron-job-container (onExpressionChange)="getExpreesionHandler($event)">
-</ax-cron-job-container>
+<ax-cron-job-container
+  [ngModel]="expreesion()"
+  (onValueChanged)="getExpreesionHandler($event)"
+></ax-cron-job-container>

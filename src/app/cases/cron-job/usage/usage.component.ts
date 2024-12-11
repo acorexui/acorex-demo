@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, signal, viewChild } from '@angular/core';
 import { AXCronJobModule } from '@acorex/components/cron-job';
-import { AXClickEvent } from '@acorex/components/common';
+import { AXValueChangedEvent } from '@acorex/components/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-    templateUrl: './usage.component.html',
-    imports: [AXCronJobModule]
+  templateUrl: './usage.component.html',
+  imports: [AXCronJobModule, FormsModule],
 })
 export class UsageComponent {
-  getExpreesionHandler(e: AXClickEvent) {
-    console.log(e.data);
+  expreesion = signal('* * * ? * * *');
+
+  getExpreesionHandler(e: AXValueChangedEvent) {
+    console.log(e.value);
   }
 }
