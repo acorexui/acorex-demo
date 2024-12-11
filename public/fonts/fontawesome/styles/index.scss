@@ -1,4 +1,4 @@
-@import './fontawesome';
-@import './brands';
-@import './light';
-@import './solid';
+@forward "./fontawesome";
+@forward "./brands";
+@forward "./light";
+@forward "./solid";

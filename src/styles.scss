@@ -1,11 +1,11 @@
+@use "@acorex/styles/index.scss" as *;
+@use "@acorex/styles/themes/default.scss" as *;
+@use "@acorex/styles/icons/fontawesome/fontawesome.scss" as *;
+@use "@acorex/styles/icons/index.scss" as *;
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import "@acorex/styles/index.scss";
-@import "@acorex/styles/themes/default.scss";
-@import "@acorex/styles/icons/fontawesome/fontawesome.scss";
-@import "@acorex/styles/icons/index.scss";
 
 html,
 body {
