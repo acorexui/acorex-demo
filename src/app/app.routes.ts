@@ -172,6 +172,14 @@ export const appRoutes: Route[] = [
       import('./cases/form/form.routes').then((c) => c.routes),
   },
   {
+    path: 'grid-layout-builder',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/grid-layout-builder/grid-layout-builder.routes').then(
+        (c) => c.routes
+      ),
+  },
+  {
     path: 'image',
     component: MasterLayoutComponent,
     loadChildren: () =>
