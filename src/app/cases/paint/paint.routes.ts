@@ -7,4 +7,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
+  {
+    path: 'signature-box',
+    loadComponent: () =>
+      import('./signature-box/signature-box.component').then(
+        (e) => e.SignatureBoxComponent
+      ),
+  },
 ];
