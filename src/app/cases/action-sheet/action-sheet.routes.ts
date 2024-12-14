@@ -35,4 +35,11 @@ export const routes: Routes = [
         (a) => a.ActionSheetOnCloseComponent
       ),
   },
+  {
+    path: 'draggable',
+    loadComponent: () =>
+      import('./draggable/draggable.component').then(
+        (a) => a.DraggableComponent
+      ),
+  },
 ];
