@@ -17,10 +17,10 @@ export class GridLayoutBuilderUsageComponent {
     minRow: 1,
     removable: '.grid-stack-trash',
     acceptWidgets: true,
-    // float: true,
+    float: true,
     // rtl: true,
     resizable: { handles: 'se, sw' },
-    columnOpts: { breakpoints: [{ w: 768, c: 1 }] },
+    //columnOpts: { breakpoints: [{ w: 768, c: 1 }] },
   };
 
   public widgetOption1: AXGridLayoutNode = {
