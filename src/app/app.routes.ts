@@ -311,6 +311,14 @@ export const appRoutes: Route[] = [
       import('./cases/result/result.routes').then((c) => c.routes),
   },
   {
+    path: 'rail-navigation',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/rail-navigation/rail-navigation.routes').then(
+        (c) => c.routes
+      ),
+  },
+  {
     path: 'search-box',
     component: MasterLayoutComponent,
     loadChildren: () =>
