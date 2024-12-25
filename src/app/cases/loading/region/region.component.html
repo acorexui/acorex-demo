@@ -4,26 +4,26 @@
 >
   <ax-button
     text="Screen region"
-    color="secondary"
+    color="neutral"
     (onClick)="onScreenRegionClick()"
     [disabled]="_isLoading"
   >
   </ax-button>
   <ax-button
     text="Container region"
-    color="secondary"
+    color="neutral"
     (onClick)="onContainerRegionClick()"
     [disabled]="_isLoading"
   >
   </ax-button>
   <ax-button
     text="Button region"
-    color="secondary"
+    color="neutral"
     (onClick)="onButtonRegionClick()"
     [disabled]="buttonLoading"
   >
     @if(buttonLoading){
-    <ax-loading ></ax-loading>
+    <ax-loading></ax-loading>
 
     }
   </ax-button>
