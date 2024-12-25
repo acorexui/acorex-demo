@@ -9,20 +9,21 @@ import { AXStyleLookType, AXDataSource } from '@acorex/components/common';
 import { AXFormModule } from '@acorex/components/form';
 import { FormsModule } from '@angular/forms';
 import { AXDropdownModule } from '@acorex/components/dropdown';
-
+import { AXToolBarModule } from '@acorex/components/toolbar';
 @Component({
-    templateUrl: './usage.component.html',
-    imports: [
-        AXCommentModule,
-        AXAvatarModule,
-        AXImageModule,
-        AXDecoratorModule,
-        AXWysiwygModule,
-        AXButtonModule,
-        AXFormModule,
-        FormsModule,
-        AXDropdownModule,
-    ]
+  templateUrl: './usage.component.html',
+  imports: [
+    AXCommentModule,
+    AXAvatarModule,
+    AXImageModule,
+    AXDecoratorModule,
+    AXWysiwygModule,
+    AXButtonModule,
+    AXFormModule,
+    FormsModule,
+    AXDropdownModule,
+    AXToolBarModule,
+  ],
 })
 export class UsageComponent {
   value = signal('');

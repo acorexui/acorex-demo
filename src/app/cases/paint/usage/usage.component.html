@@ -2,9 +2,12 @@
   <ax-form-field>
     <ax-paint-container [look]="options().look" [(ngModel)]="value">
       <ax-paint-view #c class="ax-h-80"></ax-paint-view>
-      <ax-paint-toolbar>
-        <ax-paint-color-picker></ax-paint-color-picker>
-        <ax-paint-pen-mode-changer></ax-paint-pen-mode-changer>
+      <ax-toolbar>
+        <ax-prefix>
+          <ax-paint-color-picker></ax-paint-color-picker>
+          <ax-paint-pen-mode-changer></ax-paint-pen-mode-changer>
+        </ax-prefix>
+
         <ax-suffix>
           <ax-button
             type="submit"
@@ -13,7 +16,7 @@
             text="Output"
           ></ax-button
         ></ax-suffix>
-      </ax-paint-toolbar>
+      </ax-toolbar>
       <ax-validation-rule
         rule="callback"
         [options]="{ validate: validateFn }"

@@ -6,17 +6,20 @@
       [(ngModel)]="value"
     >
       <ax-wysiwyg-view class="ax-min-h-28"></ax-wysiwyg-view>
-      <ax-wysiwyg-toolbar>
-        <ax-wysiwyg-history></ax-wysiwyg-history>
-        <ax-wysiwyg-font-style></ax-wysiwyg-font-style>
-        <ax-wysiwyg-colors></ax-wysiwyg-colors>
-        <ax-wysiwyg-list></ax-wysiwyg-list>
-        <ax-wysiwyg-alignment></ax-wysiwyg-alignment>
-        <ax-wysiwyg-insert></ax-wysiwyg-insert>
+      <ax-toolbar>
+        <ax-prefix>
+          <ax-wysiwyg-history></ax-wysiwyg-history>
+          <ax-wysiwyg-font-style></ax-wysiwyg-font-style>
+          <ax-wysiwyg-colors></ax-wysiwyg-colors>
+          <ax-wysiwyg-list></ax-wysiwyg-list>
+          <ax-wysiwyg-alignment></ax-wysiwyg-alignment>
+          <ax-wysiwyg-insert></ax-wysiwyg-insert>
+        </ax-prefix>
+
         <ax-suffix>
           <ax-button type="submit" color="primary" text="Send"></ax-button
         ></ax-suffix>
-      </ax-wysiwyg-toolbar>
+      </ax-toolbar>
       <ax-validation-rule
         rule="callback"
         [options]="{ validate: validateFn }"

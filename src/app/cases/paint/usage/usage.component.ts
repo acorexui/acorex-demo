@@ -5,16 +5,17 @@ import { AXPaintModule, AXPaintViewComponent } from '@acorex/components/paint';
 import { AXButtonModule } from '@acorex/components/button';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import { FormsModule } from '@angular/forms';
-
+import { AXToolBarModule } from '@acorex/components/toolbar';
 @Component({
-    templateUrl: './usage.component.html',
-    imports: [
-        AXFormModule,
-        AXPaintModule,
-        AXButtonModule,
-        AXDecoratorModule,
-        FormsModule,
-    ]
+  templateUrl: './usage.component.html',
+  imports: [
+    AXFormModule,
+    AXPaintModule,
+    AXButtonModule,
+    AXDecoratorModule,
+    FormsModule,
+    AXToolBarModule,
+  ],
 })
 export class UsageComponent {
   value = signal('');
