@@ -433,6 +433,12 @@ export const appRoutes: Route[] = [
       import('./cases/tooltip/tooltip.routes').then((c) => c.routes),
   },
   {
+    path: 'toolbar',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/toolbar/toolbar.routes').then((c) => c.routes),
+  },
+  {
     path: 'uploader',
     component: MasterLayoutComponent,
     loadChildren: () =>
