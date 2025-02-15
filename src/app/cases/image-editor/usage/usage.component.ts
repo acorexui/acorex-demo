@@ -1,13 +1,48 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { AXImageEditorModule } from '@acorex/components/image-editor';
-import { AXValueChangedEvent } from '@acorex/components/common';
+import {
+  AXStyleLookType,
+  AXValueChangedEvent,
+} from '@acorex/components/common';
+import { AXFormModule } from '@acorex/components/form';
+import { AXToolBarModule } from '@acorex/components/toolbar';
+import { AXDecoratorModule } from '@acorex/components/decorators';
+import { AXButtonModule } from '@acorex/components/button';
 
 @Component({
-    templateUrl: './usage.component.html',
-    imports: [AXImageEditorModule]
+  templateUrl: './usage.component.html',
+  imports: [
+    AXImageEditorModule,
+    AXFormModule,
+    AXToolBarModule,
+    AXDecoratorModule,
+    AXButtonModule,
+  ],
 })
 export class UsageComponent {
-  saveHandler(e: AXValueChangedEvent<any>) {
+  protected options = signal<{
+    look: AXStyleLookType;
+  }>({
+    look: 'solid',
+  });
+
+  saveHandler(e: AXValueChangedEvent<unknown>) {
     console.log(e.value);
   }
+
+  validateFn = (val: string) => {
+    console.log(val);
+
+    let isValid = true;
+
+    if (!val) {
+      isValid = false;
+    }
+    return {
+      rule: 'callback',
+      result: isValid,
+      message: isValid ? '' : 'Please draw the content',
+      value: val,
+    };
+  };
 }

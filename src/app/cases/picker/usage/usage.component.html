@@ -1,4 +1,12 @@
-<ax-picker>
-  <ax-picker-column title="Hours" [items]="hours()" [ngModel]="10">
-  </ax-picker-column>
-</ax-picker>
+<ax-picker-container class="ax-h-48">
+  <ax-picker-title>
+    <ax-text>Hours</ax-text>
+  </ax-picker-title>
+  <ax-picker-items
+    [disabled]="options().disabled"
+    [readonly]="options().readonly"
+    (onValueChanged)="onModelChanged($event)"
+    [items]="hours()"
+    [ngModel]="10"
+  ></ax-picker-items>
+</ax-picker-container>

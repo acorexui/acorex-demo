@@ -4,8 +4,8 @@ import { Component, inject, ViewChild } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({
-    templateUrl: 'usage.component.html',
-    imports: [AXButtonModule, AXDialogModule]
+  templateUrl: 'usage.component.html',
+  imports: [AXButtonModule, AXDialogModule],
 })
 export class UsageComponent {
   private _dialogService: AXDialogService = inject(AXDialogService);
@@ -25,7 +25,7 @@ export class UsageComponent {
         },
         {
           text: 'No',
-          color: 'ghost',
+          color: 'default',
           autofocus: true,
           onClick: () => {
             dialog.close();

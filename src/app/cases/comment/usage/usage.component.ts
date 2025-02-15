@@ -36,11 +36,11 @@ export class UsageComponent {
 
   protected avatarOptions = signal<{
     color: string;
-    look: 'sharp' | 'soft' | 'rounded';
+    look: 'solid' | 'twotone';
     type: string;
   }>({
     color: 'primary',
-    look: 'rounded',
+    look: 'solid',
     type: 'solid', // 'image' | 'text' | 'icon' | 'default'
   });
 

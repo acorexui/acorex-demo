@@ -1,9 +1,34 @@
-<ax-image-editor-container>
-  <ax-image-editor-view src="https://picsum.photos/600/600">
-  </ax-image-editor-view>
-  <ax-image-editor-toolbar (onValueChanged)="saveHandler($event)">
-    <ax-image-editor-color-picker></ax-image-editor-color-picker>
-    <ax-image-editor-pen-mode-changer></ax-image-editor-pen-mode-changer>
-    <ax-image-editor-crop></ax-image-editor-crop>
-  </ax-image-editor-toolbar>
-</ax-image-editor-container>
+<ax-form class="ax-flex ax-justify-center">
+  <ax-form-field>
+    <ax-image-editor-container
+      [look]="options().look"
+      (onValueChanged)="saveHandler($event)"
+      #c
+    >
+      <ax-image-editor-view src="https://picsum.photos/600/600">
+      </ax-image-editor-view>
+
+      <ax-toolbar>
+        <ax-prefix>
+          <ax-image-editor-color-picker></ax-image-editor-color-picker>
+          <ax-image-editor-pen-mode-changer></ax-image-editor-pen-mode-changer>
+          <ax-image-editor-crop></ax-image-editor-crop>
+        </ax-prefix>
+
+        <ax-suffix>
+          <ax-button
+            type="submit"
+            (onClick)="c.save()"
+            color="primary"
+            text="save"
+          ></ax-button>
+        </ax-suffix>
+      </ax-toolbar>
+
+      <ax-validation-rule
+        rule="callback"
+        [options]="{ validate: validateFn }"
+      ></ax-validation-rule>
+    </ax-image-editor-container>
+  </ax-form-field>
+</ax-form>

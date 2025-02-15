@@ -7,8 +7,8 @@ import {
 } from '@acorex/components/notification';
 
 @Component({
-    templateUrl: './asynchronous-process.component.html',
-    imports: [AXButtonModule, AXNotificationModule]
+  templateUrl: './asynchronous-process.component.html',
+  imports: [AXButtonModule, AXNotificationModule],
 })
 export class AsynchronousProcesseDecoratorComponent {
   constructor(private notificationService: AXNotificationService) {}
@@ -41,7 +41,7 @@ export class AsynchronousProcesseDecoratorComponent {
         },
         {
           text: 'cancel',
-          color: 'ghost',
+          color: 'default',
           onClick: (e) => {
             if (!subject.closed) {
               subject.next('Canceled');

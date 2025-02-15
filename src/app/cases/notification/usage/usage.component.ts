@@ -7,8 +7,8 @@ import {
 } from '@acorex/components/notification';
 
 @Component({
-    templateUrl: './usage.component.html',
-    imports: [AXButtonModule, AXNotificationModule]
+  templateUrl: './usage.component.html',
+  imports: [AXButtonModule, AXNotificationModule],
 })
 export class UsageComponent {
   constructor(private notificationService: AXNotificationService) {}
@@ -28,7 +28,7 @@ export class UsageComponent {
         },
         {
           text: 'No',
-          color: 'ghost',
+          color: 'default',
           onClick: () => {
             dialog.close();
           },
