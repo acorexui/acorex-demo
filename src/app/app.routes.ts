@@ -172,6 +172,14 @@ export const appRoutes: Route[] = [
       import('./cases/form/form.routes').then((c) => c.routes),
   },
   {
+    path: 'file-explorer',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/file-explorer/file-explorer.routes').then(
+        (c) => c.routes
+      ),
+  },
+  {
     path: 'grid-layout-builder',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -298,6 +306,14 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/qrcode/qrcode.routes').then((c) => c.routes),
+  },
+  {
+    path: 'query-builder',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/query-builder/query-builder.routes').then(
+        (c) => c.routes
+      ),
   },
   {
     path: 'result',

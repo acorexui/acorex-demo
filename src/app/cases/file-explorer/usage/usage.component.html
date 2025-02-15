@@ -1,0 +1,10 @@
+<ax-file-explorer-container>
+  <ax-tree-view
+    [selectable]="false"
+    hasChildField="hasChild"
+    [items]="callApiSimulate"
+  ></ax-tree-view>
+  <ax-file-explorer-view
+    [dataCallBack]="callApiSimulate"
+  ></ax-file-explorer-view>
+</ax-file-explorer-container>
