@@ -1,0 +1,37 @@
+<ax-sliding-item>
+  <ax-sliding-item-prefix
+    (onClick)="clickHandler($event)"
+    color="danger"
+    text="delete"
+  >
+    <ax-icon class="fa-solid fa-trash"></ax-icon>
+  </ax-sliding-item-prefix>
+
+  <ax-sliding-item-prefix
+    (onClick)="clickHandler($event)"
+    color="default"
+    text="info"
+  >
+    <ax-icon class="fa-solid fa-info"></ax-icon>
+  </ax-sliding-item-prefix>
+
+  <ax-content>
+    <ax-text>slide to right or left</ax-text>
+  </ax-content>
+
+  <ax-sliding-item-suffix
+    (onClick)="clickHandler($event)"
+    color="primary"
+    text="edit"
+  >
+    <ax-icon class="fa-solid fa-pen"></ax-icon>
+  </ax-sliding-item-suffix>
+
+  <ax-sliding-item-suffix
+    (onClick)="clickHandler($event)"
+    color="warning"
+    text="alert"
+  >
+    <ax-icon class="fa-solid fa-bell"></ax-icon>
+  </ax-sliding-item-suffix>
+</ax-sliding-item>

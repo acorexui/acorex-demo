@@ -362,6 +362,12 @@ export const appRoutes: Route[] = [
       import('./cases/skeleton/skeleton.routes').then((c) => c.routes),
   },
   {
+    path: 'sliding-item',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/sliding-item/sliding-item.routes').then((c) => c.routes),
+  },
+  {
     path: 'range-slider',
     component: MasterLayoutComponent,
     loadChildren: () =>
