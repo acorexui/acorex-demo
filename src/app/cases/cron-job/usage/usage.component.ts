@@ -1,4 +1,4 @@
-import { Component, signal, viewChild } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { AXCronJobModule } from '@acorex/components/cron-job';
 import { AXValueChangedEvent } from '@acorex/components/common';
 import { FormsModule } from '@angular/forms';
@@ -8,9 +8,9 @@ import { FormsModule } from '@angular/forms';
   imports: [AXCronJobModule, FormsModule],
 })
 export class UsageComponent {
-  expreesion = signal('* * * ? * * *');
+  expression = signal('* * * ? * * *');
 
-  getExpreesionHandler(e: AXValueChangedEvent) {
+  getExpressionHandler(e: AXValueChangedEvent) {
     console.log(e.value);
   }
 }
