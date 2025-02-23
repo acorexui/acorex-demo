@@ -463,6 +463,11 @@ export const appRoutes: Route[] = [
       import('./cases/json-viewer/json-viewer.routes').then((c) => c.routes),
   },
   {
+    path: 'kbd',
+    component: MasterLayoutComponent,
+    loadChildren: () => import('./cases/kbd/kbd.routes').then((c) => c.routes),
+  },
+  {
     path: '**',
     component: MasterLayoutComponent,
     loadChildren: () =>
