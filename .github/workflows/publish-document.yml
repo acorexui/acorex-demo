@@ -72,6 +72,8 @@ jobs:
   #         EOF
 
   dispatch-deploy-api:
+    permissions: write-all
+
     runs-on: ubuntu-latest
 
     steps:
