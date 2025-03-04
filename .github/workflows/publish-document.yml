@@ -25,52 +25,52 @@ env:
   REPO_WORKFLOW_ID: ${{ secrets.REPO_WORKFLOW_ID }}
 
 jobs:
-  # build-and-deploy:
-  #   runs-on: ubuntu-latest
+  build-and-deploy:
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v4
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-  #     - name: Build Docker Image
-  #       run: |
-  #         docker build -t ${{ env.APP_IMAGE_NAME }} -f ${{ env.DOCKER_FILE_PATH }} .
+      - name: Build Docker Image
+        run: |
+          docker build -t ${{ env.APP_IMAGE_NAME }} -f ${{ env.DOCKER_FILE_PATH }} .
 
-  #     - name: Save Docker Image
-  #       run: |
-  #         docker save -o ${{ env.APP_IMAGE_NAME }}.tar ${{ env.APP_IMAGE_NAME }}
-  #         chmod 644 ${{ env.APP_IMAGE_NAME }}.tar
-  #         ls -l ${{ env.APP_IMAGE_NAME }}.tar
+      - name: Save Docker Image
+        run: |
+          docker save -o ${{ env.APP_IMAGE_NAME }}.tar ${{ env.APP_IMAGE_NAME }}
+          chmod 644 ${{ env.APP_IMAGE_NAME }}.tar
+          ls -l ${{ env.APP_IMAGE_NAME }}.tar
 
-  #     - name: Create .env File
-  #       run: |
-  #         touch .env
-  #         echo APP_NAME=${{ env.APP_NAME }} >> .env
-  #         echo APP_URL=${{ env.APP_URL }} >> .env
-  #         echo APP_PORT=${{ env.APP_PORT }} >> .env
-  #         chmod 644 .env
+      - name: Create .env File
+        run: |
+          touch .env
+          echo APP_NAME=${{ env.APP_NAME }} >> .env
+          echo APP_URL=${{ env.APP_URL }} >> .env
+          echo APP_PORT=${{ env.APP_PORT }} >> .env
+          chmod 644 .env
 
-  #     - name: Set up SSH key and known_hosts
-  #       run: |
-  #         mkdir -p ~/.ssh
-  #         echo "${{ env.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-  #         chmod 600 ~/.ssh/id_rsa
-  #         ssh-keyscan -H -p "${{ env.SSH_PORT }}" "${{ env.SERVER_IP }}" >> ~/.ssh/known_hosts
+      - name: Set up SSH key and known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ env.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H -p "${{ env.SSH_PORT }}" "${{ env.SERVER_IP }}" >> ~/.ssh/known_hosts
 
-  #     - name: Copy .env and Image File to Remote Server
-  #       run: |
-  #         ssh -p ${{ env.SSH_PORT }} -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ env.SERVER_USERNAME }}@${{ env.SERVER_IP }} "mkdir -p ${{ env.REMOTE_DIR_PATH }}"
-  #         scp -P ${{ env.SSH_PORT }} -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ env.APP_IMAGE_NAME }}.tar ${{ env.SERVER_USERNAME }}@${{ env.SERVER_IP }}:${{ env.REMOTE_DIR_PATH }}/${{ env.APP_IMAGE_NAME }}.tar
-  #         scp -P ${{ env.SSH_PORT }} -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no .env ${{ env.SERVER_USERNAME }}@${{ env.SERVER_IP }}:${{ env.REMOTE_DIR_PATH }}/.env
+      - name: Copy .env and Image File to Remote Server
+        run: |
+          ssh -p ${{ env.SSH_PORT }} -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ env.SERVER_USERNAME }}@${{ env.SERVER_IP }} "mkdir -p ${{ env.REMOTE_DIR_PATH }}"
+          scp -P ${{ env.SSH_PORT }} -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ env.APP_IMAGE_NAME }}.tar ${{ env.SERVER_USERNAME }}@${{ env.SERVER_IP }}:${{ env.REMOTE_DIR_PATH }}/${{ env.APP_IMAGE_NAME }}.tar
+          scp -P ${{ env.SSH_PORT }} -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no .env ${{ env.SERVER_USERNAME }}@${{ env.SERVER_IP }}:${{ env.REMOTE_DIR_PATH }}/.env
 
-  #     - name: SSH to Remote Server and Run Docker Container
-  #       run: |
-  #         ssh -i ~/.ssh/id_rsa -p "${{ env.SSH_PORT }}" -o StrictHostKeyChecking=no ${{ env.SERVER_USERNAME }}@${{ env.SERVER_IP }} << 'EOF'
-  #           docker load -i ${{ env.REMOTE_DIR_PATH }}/${{ env.APP_IMAGE_NAME }}.tar
-  #           docker stop ${{ env.APP_IMAGE_NAME }} || true
-  #           docker rm ${{ env.APP_IMAGE_NAME }} || true
-  #           docker run -d -p ${{ env.APP_PORT }}:${{ env.APP_PORT }} --env-file ${{ env.REMOTE_DIR_PATH }}/.env --name ${{ env.APP_IMAGE_NAME }} ${{ env.APP_IMAGE_NAME }}
-  #         EOF
+      - name: SSH to Remote Server and Run Docker Container
+        run: |
+          ssh -i ~/.ssh/id_rsa -p "${{ env.SSH_PORT }}" -o StrictHostKeyChecking=no ${{ env.SERVER_USERNAME }}@${{ env.SERVER_IP }} << 'EOF'
+            docker load -i ${{ env.REMOTE_DIR_PATH }}/${{ env.APP_IMAGE_NAME }}.tar
+            docker stop ${{ env.APP_IMAGE_NAME }} || true
+            docker rm ${{ env.APP_IMAGE_NAME }} || true
+            docker run -d -p ${{ env.APP_PORT }}:${{ env.APP_PORT }} --env-file ${{ env.REMOTE_DIR_PATH }}/.env --name ${{ env.APP_IMAGE_NAME }} ${{ env.APP_IMAGE_NAME }}
+          EOF
 
   dispatch-deploy-api:
     runs-on: ubuntu-latest
