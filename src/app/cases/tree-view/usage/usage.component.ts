@@ -1,7 +1,7 @@
 import {
+  AXTreeItemClickBaseEvent,
   AXTreeViewComponent,
   AXTreeViewModule,
-  AXTreeViewSchema,
 } from '@acorex/components/tree-view';
 import { CommonModule } from '@angular/common';
 import { Component, signal, viewChild } from '@angular/core';
@@ -14,13 +14,12 @@ import { FormsModule } from '@angular/forms';
 export class UsageComponent {
   treeRef = viewChild<AXTreeViewComponent>('treeRef');
 
-  treeViewData = signal<AXTreeViewSchema[]>([
+  treeViewData = signal<any[]>([
     {
       id: '1',
       text: 'Node 1',
       icon: 'fa-solid fa-folder ax-text-yellow-500',
       hasChild: true,
-      tooltip: 'test',
     },
     {
       id: '1.1',
@@ -75,21 +74,19 @@ export class UsageComponent {
     },
   ]);
 
-  provideLazyTreeView: any = (selectedItemId: string | number) => {
+  provideLazyTreeView = (selectedItemId: any): any[] => {
     if (selectedItemId) {
       return Promise.resolve(
         this.treeViewData().filter((x) => x.parentId === selectedItemId)
-      );
+      ) as any;
     } else {
-      return Promise.resolve(this.treeViewData().filter((x) => !x.parentId));
+      return Promise.resolve(
+        this.treeViewData().filter((x) => !x.parentId)
+      ) as any;
     }
   };
 
-  handleTreeviewClick(e: unknown) {
-    console.log(e);
-  }
-
-  handleItemClick(e: unknown) {
+  handleNodeClick(e: AXTreeItemClickBaseEvent) {
     console.log(e);
   }
 }

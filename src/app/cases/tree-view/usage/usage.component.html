@@ -1,7 +1,6 @@
 <ax-tree-view
   hasChildField="hasChild"
-  (onSelectionChange)="handleTreeviewClick($event)"
-  (onItemClick)="handleItemClick($event)"
+  (onNodeClick)="handleNodeClick($event)"
   #treeRef
   [items]="provideLazyTreeView"
 ></ax-tree-view>

@@ -1,30 +1,32 @@
 <ax-form class="ax-flex ax-justify-center">
   <ax-form-field>
     <ax-image-editor-container
+      #f
       [look]="options().look"
       (onValueChanged)="saveHandler($event)"
-      #c
     >
+      <ax-header>
+        <ax-toolbar>
+          <ax-prefix>
+            <ax-image-editor-history></ax-image-editor-history>
+          </ax-prefix>
+
+          <ax-suffix>
+            <ax-button
+              type="submit"
+              (onClick)="f.save()"
+              axTooltip="Save"
+              axTooltipPlacement="top"
+              look="blank"
+            >
+              <ax-icon class="ax-icon ax-icon-save"> </ax-icon>
+            </ax-button>
+          </ax-suffix>
+        </ax-toolbar>
+      </ax-header>
+
       <ax-image-editor-view src="https://picsum.photos/600/600">
       </ax-image-editor-view>
-
-      <ax-toolbar>
-        <ax-prefix>
-          <ax-image-editor-color-picker></ax-image-editor-color-picker>
-          <ax-image-editor-pen-mode-changer></ax-image-editor-pen-mode-changer>
-          <ax-image-editor-crop></ax-image-editor-crop>
-        </ax-prefix>
-
-        <ax-suffix>
-          <ax-button
-            type="submit"
-            (onClick)="c.save()"
-            color="primary"
-            text="save"
-          ></ax-button>
-        </ax-suffix>
-      </ax-toolbar>
-
       <ax-validation-rule
         rule="callback"
         [options]="{ validate: validateFn }"
