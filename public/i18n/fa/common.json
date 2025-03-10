@@ -36,6 +36,7 @@
   "firstname": "اسم",
   "next": "بعدی",
   "prev": "قبلی",
+  "noRecord": "رکوردی یافت نشد",
   "error": {
     "message": "خطا: {{message}}"
   },
@@ -171,7 +172,9 @@
       "text": "برای آپلود فایل را رها کنید",
       "drag": "بکشید یا رها کنید یا ",
       "choose": "فایل را انتخاب کنید",
-      "to-upload": " "
+      "to-upload": " ",
+      "uploadFile": "آپلود فایل",
+      "uploadFiles": "آپلود فایل ها"
     }
   },
   "action-sheet": {
@@ -201,7 +204,6 @@
   "every": "هر",
   "between": "بین",
   "and": "و",
-  "generate-expression": "تولید عبارت",
   "select-second": "انتخاب ثانیه( ها)",
   "select-minute": "انتخاب دقیقه( ها)",
   "select-month": "انتخاب ماه( ها)",

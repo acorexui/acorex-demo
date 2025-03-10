@@ -37,6 +37,8 @@
   "required": "Required",
   "next": "Next",
   "prev": "Previous",
+  "noRecord": "No Record Found",
+
   "error": {
     "message": "Error: {{ message }}"
   },
@@ -172,7 +174,9 @@
       "text": "Drop files to upload them",
       "drag": "Drag & Drop or ",
       "choose": "Choose File",
-      "to-upload": " to Upload"
+      "to-upload": " to Upload",
+      "uploadFile": "Upload File",
+      "uploadFiles": "Upload Files"
     }
   },
   "action-sheet": {
@@ -201,7 +205,6 @@
   "every": "Every",
   "between": "between",
   "and": "and",
-  "generate-expression": "Generate Expression",
   "select-second": "select second(s)",
   "select-minute": "select minute(s)",
   "select-month": "select month(s)",
