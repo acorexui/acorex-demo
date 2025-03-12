@@ -15,7 +15,7 @@ export const routes: Routes = [
   {
     path: 'music-player',
     loadComponent: () =>
-      import('./must-player/music-player.component').then(
+      import('./music-player/music-player.component').then(
         (e) => e.MusicPlayerComponent
       ),
   },
