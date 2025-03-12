@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
 import {
   AXGridLayoutBuilderModule,
   AXGridLayoutNode,
   AXGridLayoutOptions,
 } from '@acorex/components/grid-layout-builder';
+import { Component } from '@angular/core';
 
 @Component({
   templateUrl: './usage.component.html',
@@ -23,14 +23,14 @@ export class GridLayoutBuilderUsageComponent {
   };
 
   public widgetOption1: AXGridLayoutNode = {
-    h: 2,
-    w: 2,
+    height: 2,
+    width: 2,
     x: 0,
     y: 0,
   };
   public widgetOption2: AXGridLayoutNode = {
-    h: 2,
-    w: 2,
+    height: 2,
+    width: 2,
     x: 5,
     y: 0,
   };
