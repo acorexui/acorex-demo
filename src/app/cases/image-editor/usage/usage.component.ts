@@ -31,8 +31,6 @@ export class UsageComponent {
   }
 
   validateFn = (val: string) => {
-    console.log(val);
-
     let isValid = true;
 
     if (!val) {

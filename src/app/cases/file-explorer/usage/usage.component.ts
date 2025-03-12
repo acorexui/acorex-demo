@@ -5,13 +5,10 @@ import {
   AXFileExplorerModule,
   AXFileExplorerSchema,
 } from '@acorex/components/file-explorer';
-import {
-  AXTreeViewModule,
-  AXTreeViewSchema,
-} from '@acorex/components/tree-view';
+import { AXTreeViewModule } from '@acorex/components/tree-view';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 
-type MergedInterface = AXTreeViewSchema & AXFileExplorerSchema;
+type MergedInterface = any & AXFileExplorerSchema;
 
 @Component({
   templateUrl: 'usage.component.html',
