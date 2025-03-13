@@ -3,15 +3,9 @@ import { AXRatePickerModule } from '@acorex/components/rate-picker';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-    templateUrl: './usage.component.html',
-    imports: [AXRatePickerModule, FormsModule]
+  templateUrl: './usage.component.html',
+  imports: [AXRatePickerModule, FormsModule],
 })
-export class UsageComponent implements OnInit {
+export class UsageComponent {
   value?: number;
-  ngOnInit(): void {
-    document.documentElement.style.setProperty(
-      '--ax-rate-picker-color',
-      `rgba(var(--ax-color-warning-500))`
-    );
-  }
 }

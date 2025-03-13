@@ -7,4 +7,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
+  {
+    path: 'custom-icon',
+    loadComponent: () =>
+      import('./custom-icon/custom-icon.component').then(
+        (e) => e.CustomIconComponent
+      ),
+  },
 ];
