@@ -1,0 +1,9 @@
+<ax-tag-box
+  [addOnComma]="false"
+  [(ngModel)]="tagBoxValue"
+  [allowDuplicateValues]="true"
+  placeholder="Enter your tags..."
+  (onValueChanged)="handleValueChange($event)"
+>
+  <ax-autocomplete [dataSource]="data()"></ax-autocomplete>
+</ax-tag-box>

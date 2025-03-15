@@ -474,6 +474,12 @@ export const appRoutes: Route[] = [
       import('./cases/context-menu/context-menu.routes').then((c) => c.routes),
   },
   {
+    path: 'tag-box',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/tag-box/tag-box.routes').then((c) => c.routes),
+  },
+  {
     path: '**',
     component: MasterLayoutComponent,
     loadChildren: () =>
