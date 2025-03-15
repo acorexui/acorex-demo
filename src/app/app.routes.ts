@@ -468,6 +468,12 @@ export const appRoutes: Route[] = [
     loadChildren: () => import('./cases/kbd/kbd.routes').then((c) => c.routes),
   },
   {
+    path: 'context-menu',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/context-menu/context-menu.routes').then((c) => c.routes),
+  },
+  {
     path: '**',
     component: MasterLayoutComponent,
     loadChildren: () =>

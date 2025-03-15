@@ -1,0 +1,15 @@
+<div
+  id="ax-context-container"
+  class="ax-flex ax-h-60 ax-w-96 ax-items-center ax-justify-center ax-rounded ax-bg-surface"
+>
+  <span>Right click here.</span>
+</div>
+<ax-context-menu
+  [openOn]="'click'"
+  [closeOn]="'click'"
+  target="#ax-context-container"
+  [orientation]="'horizontal'"
+  (onOpening)="handleContextMenuOpening($event)"
+  (onItemClick)="handleContextMenuItemClick($event)"
+>
+</ax-context-menu>
