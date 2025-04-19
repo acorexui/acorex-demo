@@ -1,0 +1,22 @@
+<ng-template #c>
+  <ax-agreement-text title="LICENSE GRANTED"></ax-agreement-text>
+
+  <ax-modal-footer>
+    <ax-prefix>
+      <ax-button
+        color="danger"
+        look="outline"
+        text="Don't accept and leave"
+      ></ax-button>
+    </ax-prefix>
+    <ax-suffix>
+      <ax-button text="Accept and continue" color="primary"></ax-button>
+    </ax-suffix>
+  </ax-modal-footer>
+</ng-template>
+
+<ax-button
+  (onClick)="handleOpenServiceTemplate()"
+  color="primary"
+  text="Open Template Modal"
+></ax-button>

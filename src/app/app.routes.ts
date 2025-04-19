@@ -237,6 +237,12 @@ export const appRoutes: Route[] = [
       import('./cases/media-viewer/media-viewer.routes').then((c) => c.routes),
   },
   {
+    path: 'modal',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/modal/modal.routes').then((c) => c.routes),
+  },
+  {
     path: 'navbar',
     component: MasterLayoutComponent,
     loadChildren: () =>

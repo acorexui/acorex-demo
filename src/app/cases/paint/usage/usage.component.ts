@@ -1,11 +1,13 @@
 import { AXStyleLookType } from '@acorex/components/common';
 import { AXFormModule } from '@acorex/components/form';
-import { Component, signal } from '@angular/core';
+import { Component, inject, PLATFORM_ID, signal } from '@angular/core';
 import { AXPaintModule, AXPaintViewComponent } from '@acorex/components/paint';
 import { AXButtonModule } from '@acorex/components/button';
 import { AXDecoratorModule } from '@acorex/components/decorators';
-import { FormsModule } from '@angular/forms';
 import { AXToolBarModule } from '@acorex/components/toolbar';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 @Component({
   templateUrl: './usage.component.html',
   imports: [
@@ -13,22 +15,31 @@ import { AXToolBarModule } from '@acorex/components/toolbar';
     AXPaintModule,
     AXButtonModule,
     AXDecoratorModule,
-    FormsModule,
     AXToolBarModule,
+    FormsModule,
   ],
 })
 export class UsageComponent {
   value = signal('');
+  private document = inject(DOCUMENT);
+  private platformID = inject(PLATFORM_ID);
 
   protected options = signal<{
     look: AXStyleLookType;
+    disabled: boolean;
   }>({
     look: 'solid',
+    disabled: false,
   });
 
-  outputHandler(elem: AXPaintViewComponent) {
+  downloadHandler(elem: AXPaintViewComponent) {
     elem.getOutPut('image/webp');
-    console.log(this.value());
+    if (this.value() && isPlatformBrowser(this.platformID)) {
+      const a = this.document.createElement('a');
+      a.href = this.value();
+      a.download = 'AXPaint';
+      a.click();
+    }
   }
 
   validateFn = (val: string) => {
