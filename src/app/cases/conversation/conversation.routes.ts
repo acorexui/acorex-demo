@@ -7,4 +7,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
+  {
+    path: 'custom',
+    loadComponent: () =>
+      import('./custom/custom.component').then((e) => e.CustomComponent),
+  },
 ];

@@ -1,0 +1,14 @@
+<div class="ax-demo-conversation-container">
+  <ax-conversation-container>
+    <ax-conversation-view
+      (onAction)="handleOnAction($event)"
+      class="ax-mb-3 ax-max-h-96"
+    >
+    </ax-conversation-view>
+    <ax-conversation-input
+      placeholder="placeholder"
+      [(ngModel)]="options().value"
+      (onSendClick)="handleOnSend($event)"
+    ></ax-conversation-input>
+  </ax-conversation-container>
+</div>

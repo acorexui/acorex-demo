@@ -20,6 +20,7 @@ import { MyCustomHolidaysLoader, MyTranslationLoader } from './app.loaders';
 import { AXConversationModule } from '@acorex/components/conversation';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { AXMediaViewerModule } from '@acorex/components/media-viewer';
+import { CustomTestMessageComponent } from './cases/conversation/custom/test-custom.component';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -30,7 +31,9 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     importProvidersFrom(
       AXValidationModule.forRoot(),
-      AXConversationModule.forRoot(),
+      AXConversationModule.forRoot({
+        types: [{ component: CustomTestMessageComponent, name: 'custom' }],
+      }),
       AXFormatModule.forRoot(),
       AXMediaViewerModule.forRoot()
     ),
