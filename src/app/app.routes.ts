@@ -486,6 +486,12 @@ export const appRoutes: Route[] = [
       import('./cases/tag-box/tag-box.routes').then((c) => c.routes),
   },
   {
+    path: 'scheduler',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/scheduler/scheduler.routes').then((c) => c.routes),
+  },
+  {
     path: '**',
     component: MasterLayoutComponent,
     loadChildren: () =>
