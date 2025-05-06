@@ -28,6 +28,12 @@ export const appRoutes: Route[] = [
       import('./cases/badge/badge.routes').then((c) => c.routes),
   },
   {
+    path: 'bar-chart',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/bar-chart/bar-chart.routes').then((c) => c.routes),
+  },
+  {
     path: 'bottom-navigation',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -152,6 +158,12 @@ export const appRoutes: Route[] = [
       import('./cases/dialog/dialog.routes').then((c) => c.routes),
   },
   {
+    path: 'donut-chart',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/donut-chart/donut-chart.routes').then((c) => c.routes),
+  },
+  {
     path: 'drawer',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -172,6 +184,12 @@ export const appRoutes: Route[] = [
       import('./cases/form/form.routes').then((c) => c.routes),
   },
   {
+    path: 'gauge-chart',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/gauge-chart/gauge-chart.routes').then((c) => c.routes),
+  },
+  {
     path: 'file-explorer',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -184,6 +202,14 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/grid-layout-builder/grid-layout-builder.routes').then(
+        (c) => c.routes
+      ),
+  },
+  {
+    path: 'hierarchy-chart',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/hierarchy-chart/hierarchy-chart.routes').then(
         (c) => c.routes
       ),
   },
@@ -472,6 +498,12 @@ export const appRoutes: Route[] = [
     path: 'kbd',
     component: MasterLayoutComponent,
     loadChildren: () => import('./cases/kbd/kbd.routes').then((c) => c.routes),
+  },
+  {
+    path: 'line-chart',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/line-chart/line-chart.routes').then((c) => c.routes),
   },
   {
     path: 'context-menu',

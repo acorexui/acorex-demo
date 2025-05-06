@@ -10,8 +10,8 @@ import {
   AXTranslationLoaderOptions,
 } from '@acorex/core/translation';
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable, delay } from 'rxjs';
+import { inject, Injectable } from '@angular/core';
+import { Observable, delay, first, of } from 'rxjs';
 
 @Injectable()
 export class MyCustomHolidaysLoader implements AXHolidaysLoader {
@@ -35,17 +35,16 @@ export class MyCustomHolidaysLoader implements AXHolidaysLoader {
 
 @Injectable()
 export class MyTranslationLoader implements AXTranslationLoader {
-  constructor(private http: HttpClient) {}
+  http = inject(HttpClient);
 
-  getTranslation(
-    options: AXTranslationLoaderOptions
-  ): Observable<AXTranslation> {
+  load(options: AXTranslationLoaderOptions): Observable<AXTranslation> {
     // Simulated delay in milliseconds
     const simulatedDelay = 0; // 2 seconds
+    const httpRequest = this.http
+      .get<AXTranslation>(`./assets/i18n/${options.lang}/${options.scope}.json`)
+      .pipe(first(), delay(simulatedDelay));
 
-    return this.http
-      .get<AXTranslation>(`/i18n/${options.lang}/${options.scope}.json`)
-      .pipe(delay(simulatedDelay));
+    return httpRequest;
   }
 }
 

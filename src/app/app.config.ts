@@ -21,6 +21,7 @@ import { AXConversationModule } from '@acorex/components/conversation';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { AXMediaViewerModule } from '@acorex/components/media-viewer';
 import { CustomTestMessageComponent } from './cases/conversation/custom/test-custom.component';
+import { AXLocaleModule } from '@acorex/core/locale';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -30,6 +31,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withFetch()),
     provideAnimations(),
     importProvidersFrom(
+      AXLocaleModule,
       AXValidationModule.forRoot(),
       AXConversationModule.forRoot({
         types: [{ component: CustomTestMessageComponent, name: 'custom' }],
@@ -48,8 +50,14 @@ export const appConfig: ApplicationConfig = {
     {
       provide: AX_TRANSLATION_CONFIG,
       useValue: translationConfig({
-        preloadLangs: ['en'],
-        defaultLang: 'en',
+        preload: {
+          langs: ['en-US'],
+          scopes: ['common'],
+        },
+        defaults: {
+          lang: 'en-US',
+          scope: 'common',
+        },
       }),
     },
   ],
