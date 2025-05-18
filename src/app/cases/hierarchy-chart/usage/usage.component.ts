@@ -84,7 +84,6 @@ export class UsageComponent {
     nodeWidth: 200,
     nodeHeight: 80,
     nodeStrokeWidth: 1.5,
-    linkColor: 'blue',
     linkWidth: 1.5,
     linkStyle: 'step',
     nodeSpacingX: 80,

@@ -5,7 +5,7 @@ import { AXImageModule } from '@acorex/components/image';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXWysiwygModule } from '@acorex/components/wysiwyg';
 import { AXButtonModule } from '@acorex/components/button';
-import { AXStyleLookType, AXDataSource } from '@acorex/components/common';
+import { AXStyleLookType, AXDataSource } from '@acorex/cdk/common';
 import { AXFormModule } from '@acorex/components/form';
 import { FormsModule } from '@angular/forms';
 import { AXDropdownModule } from '@acorex/components/dropdown';

@@ -1,4 +1,4 @@
-import { AXDataSource } from '@acorex/components/common';
+import { AXDataSource } from '@acorex/cdk/common';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXFormModule } from '@acorex/components/form';
 import { AXSearchBoxModule } from '@acorex/components/search-box';
@@ -9,15 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { DataService } from '../select-box.service';
 
 @Component({
-    templateUrl: 'usage.component.html',
-    imports: [
-        AXSelectBoxModule,
-        AXFormModule,
-        AXSearchBoxModule,
-        AXTextBoxModule,
-        AXDecoratorModule,
-        FormsModule,
-    ]
+  templateUrl: 'usage.component.html',
+  imports: [
+    AXSelectBoxModule,
+    AXFormModule,
+    AXSearchBoxModule,
+    AXTextBoxModule,
+    AXDecoratorModule,
+    FormsModule,
+  ],
 })
 export class UsageComponent {
   apiService = inject(DataService);

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AXDirection } from '@acorex/components/common';
+import { AXDirection } from '@acorex/cdk/common';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import {
   AXSelectionListLook,
@@ -8,8 +8,8 @@ import {
 } from '@acorex/components/selection-list';
 
 @Component({
-    templateUrl: 'multiple.component.html',
-    imports: [AXSelectionListModule, AXDecoratorModule]
+  templateUrl: 'multiple.component.html',
+  imports: [AXSelectionListModule, AXDecoratorModule],
 })
 export class UsageComponent {
   protected items = [

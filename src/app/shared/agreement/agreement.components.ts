@@ -1,5 +1,5 @@
 import { AXButtonModule } from '@acorex/components/button';
-import { AXComponentClosing } from '@acorex/components/common';
+import { AXComponentClosing } from '@acorex/cdk/common';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXDialogService } from '@acorex/components/dialog';
 import { AXBasePageComponent } from '@acorex/components/page';

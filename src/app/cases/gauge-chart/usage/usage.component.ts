@@ -17,7 +17,6 @@ export class UsageComponent {
     maxValue: 100,
     gaugeWidth: 25,
     cornerRadius: 5,
-    valueColor: '#4f46e5',
     showValue: true,
     label: 'Percentage',
     animationDuration: 750,

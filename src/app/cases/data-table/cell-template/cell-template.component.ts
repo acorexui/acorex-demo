@@ -5,11 +5,11 @@ import {
   AXDataTableModule,
   AXRowCommandItem,
 } from '@acorex/components/data-table';
-import { AXDataSource } from '@acorex/components/common';
+import { AXDataSource } from '@acorex/cdk/common';
 
 @Component({
-    templateUrl: './cell-template.component.html',
-    imports: [CommonModule, AXBadgeModule, AXDataTableModule]
+  templateUrl: './cell-template.component.html',
+  imports: [CommonModule, AXBadgeModule, AXDataTableModule],
 })
 export class CellTemplateComponent {
   protected _options = {

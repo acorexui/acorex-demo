@@ -1,4 +1,4 @@
-import { AXStyleLookType } from '@acorex/components/common';
+import { AXStyleLookType } from '@acorex/cdk/common';
 import { AXFormModule } from '@acorex/components/form';
 import { Component, inject, PLATFORM_ID, signal } from '@angular/core';
 import { AXPaintModule, AXPaintViewComponent } from '@acorex/components/paint';

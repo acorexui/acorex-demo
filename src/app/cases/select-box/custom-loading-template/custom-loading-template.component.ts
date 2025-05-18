@@ -1,4 +1,4 @@
-import { AXDataSource } from '@acorex/components/common';
+import { AXDataSource } from '@acorex/cdk/common';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXFormModule } from '@acorex/components/form';
 import { AXSearchBoxModule } from '@acorex/components/search-box';
@@ -8,14 +8,14 @@ import { Component, inject } from '@angular/core';
 import { DataService } from '../select-box.service';
 
 @Component({
-    templateUrl: 'custom-loading-template.component.html',
-    imports: [
-        AXSelectBoxModule,
-        AXFormModule,
-        AXSearchBoxModule,
-        AXTextBoxModule,
-        AXDecoratorModule,
-    ]
+  templateUrl: 'custom-loading-template.component.html',
+  imports: [
+    AXSelectBoxModule,
+    AXFormModule,
+    AXSearchBoxModule,
+    AXTextBoxModule,
+    AXDecoratorModule,
+  ],
 })
 export class LoadingTemplateComponent {
   apiService = inject(DataService);

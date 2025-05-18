@@ -5,11 +5,11 @@ import {
   AXDataTableModule,
   AXRowCommandItem,
 } from '@acorex/components/data-table';
-import { AXDataSource } from '@acorex/components/common';
+import { AXDataSource } from '@acorex/cdk/common';
 
 @Component({
-    templateUrl: './allow-resize-and-reorder.component.html',
-    imports: [CommonModule, AXBadgeModule, AXDataTableModule]
+  templateUrl: './allow-resize-and-reorder.component.html',
+  imports: [CommonModule, AXBadgeModule, AXDataTableModule],
 })
 export class AllowResizeAndReorderComponent {
   protected _options = {
@@ -27,7 +27,7 @@ export class AllowResizeAndReorderComponent {
     },
   };
 
-  protected result = Array.from({ length:10 }, (_, i) => ({
+  protected result = Array.from({ length: 10 }, (_, i) => ({
     id: i,
     firstName: `first name ${i}`,
     lastName: `last name ${i}`,

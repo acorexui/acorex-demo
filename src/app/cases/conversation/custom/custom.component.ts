@@ -1,4 +1,4 @@
-import { AXClickEvent } from '@acorex/components/common';
+import { AXClickEvent } from '@acorex/cdk/common';
 import {
   AXConversationActionEvent,
   AXConversationModule,

@@ -1,4 +1,4 @@
-import { AXDataSource } from '@acorex/components/common';
+import { AXDataSource } from '@acorex/cdk/common';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXFormModule } from '@acorex/components/form';
 import { AXSearchBoxModule } from '@acorex/components/search-box';
@@ -7,14 +7,14 @@ import { AXTextBoxModule } from '@acorex/components/text-box';
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: 'custom-item-template.component.html',
-    imports: [
-        AXSelectBoxModule,
-        AXFormModule,
-        AXSearchBoxModule,
-        AXTextBoxModule,
-        AXDecoratorModule,
-    ]
+  templateUrl: 'custom-item-template.component.html',
+  imports: [
+    AXSelectBoxModule,
+    AXFormModule,
+    AXSearchBoxModule,
+    AXTextBoxModule,
+    AXDecoratorModule,
+  ],
 })
 export class ItemTemplateComponent {
   options = {

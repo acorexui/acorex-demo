@@ -453,6 +453,14 @@ export const appRoutes: Route[] = [
       import('./cases/time-line/time-line.routes').then((c) => c.routes),
   },
   {
+    path: 'time-duration',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/time-duration/time-duration.routes').then(
+        (c) => c.routes
+      ),
+  },
+  {
     path: 'toast',
     component: MasterLayoutComponent,
     loadChildren: () =>

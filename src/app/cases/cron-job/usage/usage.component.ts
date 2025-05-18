@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { AXCronJobModule } from '@acorex/components/cron-job';
-import { AXValueChangedEvent } from '@acorex/components/common';
+import { AXValueChangedEvent } from '@acorex/cdk/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({

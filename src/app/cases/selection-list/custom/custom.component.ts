@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AXDirection, AXValueChangedEvent } from '@acorex/components/common';
+import { AXDirection, AXValueChangedEvent } from '@acorex/cdk/common';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import {
   AXSelectionListLook,
@@ -8,8 +8,8 @@ import {
 } from '@acorex/components/selection-list';
 
 @Component({
-    templateUrl: 'custom.component.html',
-    imports: [AXSelectionListModule, AXDecoratorModule]
+  templateUrl: 'custom.component.html',
+  imports: [AXSelectionListModule, AXDecoratorModule],
 })
 export class CustomComponent {
   protected _options = {

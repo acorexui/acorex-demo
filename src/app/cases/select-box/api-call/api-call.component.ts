@@ -6,20 +6,20 @@ import { AXTextBoxModule } from '@acorex/components/text-box';
 import { Component, inject, signal } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { AXDataSource } from '@acorex/components/common';
+import { AXDataSource } from '@acorex/cdk/common';
 import { firstValueFrom } from 'rxjs';
 
 @Component({
-    templateUrl: 'api-call.component.html',
-    imports: [
-        AXSelectBoxModule,
-        AXFormModule,
-        AXSearchBoxModule,
-        AXTextBoxModule,
-        AXDecoratorModule,
-        HttpClientModule,
-        FormsModule,
-    ]
+  templateUrl: 'api-call.component.html',
+  imports: [
+    AXSelectBoxModule,
+    AXFormModule,
+    AXSearchBoxModule,
+    AXTextBoxModule,
+    AXDecoratorModule,
+    HttpClientModule,
+    FormsModule,
+  ],
 })
 export class ApiCallComponent {
   protected http = inject(HttpClient);

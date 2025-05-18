@@ -1,5 +1,5 @@
 import { AXButtonModule } from '@acorex/components/button';
-import { AXStyleLookType } from '@acorex/components/common';
+import { AXStyleLookType } from '@acorex/cdk/common';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXFormModule } from '@acorex/components/form';
 import { AXWysiwygModule } from '@acorex/components/wysiwyg';

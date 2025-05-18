@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AXClickEvent } from '@acorex/components/common';
+import { AXClickEvent } from '@acorex/cdk/common';
 import { AXSlidingItemModule } from '@acorex/components/sliding-item';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 

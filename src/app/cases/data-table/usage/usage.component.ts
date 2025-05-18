@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AXDataTableModule } from '@acorex/components/data-table';
-import { AXDataSource } from '@acorex/components/common';
+import { AXDataSource } from '@acorex/cdk/common';
 
 @Component({
   templateUrl: 'usage.component.html',

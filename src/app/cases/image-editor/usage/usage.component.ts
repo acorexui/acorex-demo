@@ -1,9 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { AXImageEditorModule } from '@acorex/components/image-editor';
-import {
-  AXStyleLookType,
-  AXValueChangedEvent,
-} from '@acorex/components/common';
+import { AXStyleLookType, AXValueChangedEvent } from '@acorex/cdk/common';
 import { AXFormModule } from '@acorex/components/form';
 import { AXToolBarModule } from '@acorex/components/toolbar';
 import { AXDecoratorModule } from '@acorex/components/decorators';

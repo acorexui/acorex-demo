@@ -1,4 +1,4 @@
-import { AXValueChangedEvent } from '@acorex/components/common';
+import { AXValueChangedEvent } from '@acorex/cdk/common';
 import { AXTagBoxComponent } from '@acorex/components/tag-box';
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
