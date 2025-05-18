@@ -43,6 +43,26 @@
     "message": "Error: {{ message }}"
   },
   "dateTime": {
+    "set": "Set",
+    "today": "Today",
+    "now": "Now",
+    "hour": "Hour",
+    "minute": "Minute",
+    "second": "Second",
+    "date": "Date",
+    "time": "Time",
+    "millisecond": "millisecond",
+    "Seconds": "Seconds",
+    "Minutes": "Minutes",
+    "month": "month",
+    "Months": "Months",
+    "week": "week",
+    "Hours": "Hours",
+    "day": "day",
+    "Days": "Days",
+    "year": "year",
+    "Years": "Years",
+
     "weekdays": {
       "short": {
         "0": "Sun",
@@ -132,14 +152,6 @@
       "a": "a",
       "p": "p"
     },
-    "set": "Set",
-    "today": "Today",
-    "now": "Now",
-    "hour": "Hour",
-    "minute": "Minute",
-    "second": "Second",
-    "date": "Date",
-    "time": "Time",
     "duration": {
       "format_second": "{0} second(s)",
       "format_minute": "{0} minute(s)",
@@ -197,20 +209,6 @@
     "view": "View",
     "reply": "Reply",
     "replies": "Replies"
-  },
-  "time": {
-    "second": "second",
-    "Seconds": "Seconds",
-    "minute": "minute",
-    "Minutes": "Minutes",
-    "month": "month",
-    "Months": "Months",
-    "hour": "hour",
-    "Hours": "Hours",
-    "day": "day",
-    "Days": "Days",
-    "year": "year",
-    "Years": "Years"
   },
   "custom": "Custom",
   "every": "Every",

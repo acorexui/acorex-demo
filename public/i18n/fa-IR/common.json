@@ -41,6 +41,26 @@
     "message": "خطا: {{message}}"
   },
   "dateTime": {
+    "set": "تنظیم",
+    "today": "امروز",
+    "now": "الان",
+    "hour": "ساعت",
+    "minute": "دقیقه",
+    "second": "ثانیه",
+    "date": "تاریخ",
+    "time": "زمان",
+    "millisecond": "میلی ثانیه",
+    "Seconds": "ثانیه ها",
+    "Minutes": "دقیقه ها",
+    "month": "ماه",
+    "Months": "ماه ها",
+    "week": "هفته",
+    "Hours": "ساعت ها",
+    "day": "روز",
+    "Days": "روز ها",
+    "year": "سال",
+    "Years": "سال ها",
+
     "weekdays": {
       "short": {
         "0": "ی",
@@ -130,14 +150,6 @@
       "a": "a",
       "p": "p"
     },
-    "set": "تنظیم",
-    "today": "امروز",
-    "now": "الان",
-    "hour": "ساعت",
-    "minute": "دقیقه",
-    "second": "ثانیه",
-    "date": "تاریخ",
-    "time": "زمان",
     "duration": {
       "format_second": "{0} ثانیه(s)",
       "format_minute": "{0} دقیقه(s)",
@@ -195,20 +207,6 @@
     "view": "مشاهده",
     "reply": "پاسخ",
     "replies": "پاسخ‌ها"
-  },
-  "time": {
-    "second": "ثانیه",
-    "Seconds": "ثانیه ها",
-    "minute": "دقیقه",
-    "Minutes": "دقیقه ها",
-    "month": "ماه",
-    "Months": "ماه ها",
-    "hour": "ساعت",
-    "Hours": "ساعت ها",
-    "day": "روز",
-    "Days": "روز ها",
-    "year": "سال",
-    "Years": "سال ها"
   },
   "custom": "سفارشی",
   "every": "هر",

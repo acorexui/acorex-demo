@@ -1,1 +1,10 @@
-axaaxx
+<ax-time-duration
+  class="ax-block ax-min-w-[45rem]"
+  [valueStart]="valueStart()"
+  [valueEnd]="valueEnd()"
+  [look]="options().look"
+  [disabled]="options().disabled"
+  [readonly]="options().readonly"
+  (onValueChanged)="onValueChanged($event)"
+  [ngModel]="value"
+></ax-time-duration>
