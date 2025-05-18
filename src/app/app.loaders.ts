@@ -41,7 +41,7 @@ export class MyTranslationLoader implements AXTranslationLoader {
     // Simulated delay in milliseconds
     const simulatedDelay = 0; // 2 seconds
     const httpRequest = this.http
-      .get<AXTranslation>(`./assets/i18n/${options.lang}/${options.scope}.json`)
+      .get<AXTranslation>(`/i18n/${options.lang}/${options.scope}.json`)
       .pipe(first(), delay(simulatedDelay));
 
     return httpRequest;
