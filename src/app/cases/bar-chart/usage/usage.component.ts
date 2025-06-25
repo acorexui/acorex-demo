@@ -1,8 +1,8 @@
 import { Component, signal } from '@angular/core';
 import {
   AXBarChartClickEvent,
-  AXPBarChartData,
-  AXPBarChartOption,
+  AXBarChartData,
+  AXBarChartOption,
   AXBarChartComponent,
 } from '@acorex/charts/bar-chart';
 
@@ -11,7 +11,7 @@ import {
   imports: [AXBarChartComponent],
 })
 export class UsageComponent {
-  barChartData = signal<AXPBarChartData[]>([
+  barChartData = signal<AXBarChartData[]>([
     { id: 'bar-1', label: 'Jan', value: 45, color: '#3498db' },
     { id: 'bar-2', label: 'Feb', value: 60, color: '#2ecc71' },
     { id: 'bar-3', label: 'Mar', value: 30, color: '#f1c40f' },
@@ -20,7 +20,7 @@ export class UsageComponent {
     { id: 'bar-6', label: 'Jun', value: 65, color: '#1abc9c' },
   ]);
 
-  barChartOptions = signal<AXPBarChartOption>({
+  barChartOptions = signal<AXBarChartOption>({
     showXAxis: true,
     showYAxis: true,
     showGrid: true,

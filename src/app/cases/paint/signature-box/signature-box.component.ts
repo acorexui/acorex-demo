@@ -1,12 +1,12 @@
 import { AXStyleLookType } from '@acorex/cdk/common';
 import { AXFormModule } from '@acorex/components/form';
-import { Component, inject, PLATFORM_ID, signal } from '@angular/core';
+import { Component, inject, PLATFORM_ID, signal, DOCUMENT } from '@angular/core';
 import { AXPaintModule, AXPaintViewComponent } from '@acorex/components/paint';
 import { AXButtonModule } from '@acorex/components/button';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import { FormsModule } from '@angular/forms';
 import { AXToolBarModule } from '@acorex/components/toolbar';
-import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 @Component({
   templateUrl: './signature-box.component.html',
   imports: [

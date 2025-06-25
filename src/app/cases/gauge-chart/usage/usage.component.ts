@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import {
-  AXPGaugeChartOption,
-  AXPGaugeChartValue,
+  AXGaugeChartOption,
+  AXGaugeChartValue,
   AXGaugeChartComponent,
 } from '@acorex/charts/gauge-chart';
 
@@ -10,9 +10,9 @@ import {
   imports: [AXGaugeChartComponent],
 })
 export class UsageComponent {
-  gaugeChartValue = signal<AXPGaugeChartValue>(Math.floor(Math.random() * 100));
+  gaugeChartValue = signal<AXGaugeChartValue>(Math.floor(Math.random() * 100));
 
-  gaugeChartOptions = signal<AXPGaugeChartOption>({
+  gaugeChartOptions = signal<AXGaugeChartOption>({
     minValue: 0,
     maxValue: 100,
     gaugeWidth: 25,

@@ -1,5 +1,5 @@
 <div class="ax-demo-conversation-container">
-  <ax-conversation-container>
+  <ax-conversation-container [chatData]="chat()">
     <ax-conversation-view
       (onAction)="handleOnAction($event)"
       class="ax-mb-3 ax-max-h-96"
