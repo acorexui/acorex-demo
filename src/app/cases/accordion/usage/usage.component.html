@@ -1,0 +1,42 @@
+<ax-accordion-group
+  (activeIndexChange)="handleActiveIndexChange($event)"
+  [accordion]="options().isAccordion"
+  [look]="options().look"
+  class="ax-my-6 ax-w-full"
+>
+  <ax-accordion-item
+    (isCollapsedChange)="handleIsCollapsedChange($event)"
+    (onClick)="handleClick($event)"
+    caption="Google"
+  >
+    <p>
+      Google LLC is an American multinational technology company focusing on
+      artificial intelligence, online advertising, search engine technology,
+      cloud computing, computer software, quantum computing, e-commerce, and
+      consumer electronics.
+    </p>
+  </ax-accordion-item>
+  <ax-accordion-item
+    (isCollapsedChange)="handleIsCollapsedChange($event)"
+    (onClick)="handleClick($event)"
+    caption="Microsoft"
+  >
+    <p>
+      Microsoft Corporation is an American multinational technology corporation
+      headquartered in Redmond, Washington. Microsoft's best-known software
+      products are the Windows line of operating systems, the Microsoft 365
+      suite of productivity applications, and the Edge web browser.
+    </p>
+  </ax-accordion-item>
+  <ax-accordion-item
+    (isCollapsedChange)="handleIsCollapsedChange($event)"
+    (onClick)="handleClick($event)"
+    caption="Apple"
+  >
+    <p>
+      Apple Inc. is an American multinational technology company headquartered
+      in Cupertino, California, in Silicon Valley. It designs, develops, and
+      sells consumer electronics, computer software, and online services.
+    </p>
+  </ax-accordion-item>
+</ax-accordion-group>

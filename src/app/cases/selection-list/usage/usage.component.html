@@ -1,7 +1,12 @@
-<div class="ax-w-full">
-  <ax-selection-list
-    [direction]="options.direction"
-    [showControl]="options.showControl"
-    [items]="items"
-  ></ax-selection-list>
-</div>
+<ax-selection-list2
+  [showControl]="options().showControl"
+  [look]="options().look"
+  [disabled]="options().disabled"
+  [readonly]="options().readonly"
+  [items]="items"
+  [direction]="options().direction"
+  [multiple]="options().multiple"
+  [(ngModel)]="options().value"
+  (onValueChanged)="_writeLog($event)"
+>
+</ax-selection-list2>

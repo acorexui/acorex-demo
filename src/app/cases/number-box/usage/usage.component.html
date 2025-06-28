@@ -1,4 +1,4 @@
-<ax-number-box
+<ax-number-box-2
   [(ngModel)]="options().value"
   [thousandsSeparator]="options().thousandsSeparator"
   (ngModelChange)="_writeLog()"
@@ -7,4 +7,4 @@
   [disabled]="options().disabled"
 >
   <ax-clear-button *ngIf="options().allowClear"></ax-clear-button>
-</ax-number-box>
+</ax-number-box-2>

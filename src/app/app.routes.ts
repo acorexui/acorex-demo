@@ -4,6 +4,12 @@ import { MasterLayoutComponent } from './shared/layout/master-layout/master-layo
 export const appRoutes: Route[] = [
   { path: '', redirectTo: 'action-sheet/usage', pathMatch: 'full' },
   {
+    path: 'accordion',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/accordion/accordion.routes').then((c) => c.routes),
+  },
+  {
     path: 'action-sheet',
     component: MasterLayoutComponent,
     loadChildren: () =>

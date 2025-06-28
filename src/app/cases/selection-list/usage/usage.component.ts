@@ -1,22 +1,45 @@
-import { Component } from '@angular/core';
-
-import { AXDirection } from '@acorex/cdk/common';
+import { Component, signal } from '@angular/core';
+import { AXSelectionList2Module } from '@acorex/components/selection-list-2';
+import { AXDirection, AXValueChangedEvent } from '@acorex/cdk/common';
 import { AXDecoratorModule } from '@acorex/components/decorators';
-import { AXSelectionListModule } from '@acorex/components/selection-list';
+import {
+  AXSelectionListLook,
+  AXSelectionListModule,
+} from '@acorex/components/selection-list';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   templateUrl: 'usage.component.html',
-  imports: [AXSelectionListModule, AXDecoratorModule],
+  imports: [
+    AXSelectionListModule,
+    AXDecoratorModule,
+    AXSelectionList2Module,
+    FormsModule,
+  ],
 })
 export class UsageComponent {
+  protected options = signal({
+    direction: 'vertical' as AXDirection,
+    showControl: true,
+    multiple: false,
+    disabled: false,
+    readonly: false,
+    value: 3,
+    look: 'card' as AXSelectionListLook,
+  });
+
   protected items = [
     { id: 1, text: 'Apple', hint: 'Delicious Fruit' },
     { id: 2, text: 'Orange', hint: 'Delicious Fruit' },
     { id: 3, text: 'Banana', hint: 'Delicious Fruit' },
   ];
 
-  protected options = {
-    direction: 'vertical' as AXDirection,
-    showControl: true,
-  };
+  protected _writeLog(e: AXValueChangedEvent) {
+    console.log(`<b>Selected Value:</b> ${e.value}`);
+    console.log(
+      `<b>Selected Items:</b> [${e.component.selectedItems
+        .map((c: any) => c['text'])
+        .join(', ')}]`
+    );
+  }
 }

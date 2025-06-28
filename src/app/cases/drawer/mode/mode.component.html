@@ -1,23 +1,47 @@
-<ax-drawer-container
-  class="ax-min-w-96 ax-border ax-rounded-default ax-flex ax-items-center ax-h-44"
->
-  <ax-drawer class="ax-bg-on-surface" #drawer location="start" mode="overlay">
+<ax-drawer2-container class="ax-h-96 ax-w-full">
+  <ax-drawer2
+    (collapsedStateChanged)="onCollapsedChange($event)"
+    mode="push"
+    #drawer1
+    location="start"
+    class="ax-bg-surface ax-p-4"
+  >
     <ax-header>
-      <ax-title> Push Drawer </ax-title>
+      <ax-title> Basic Drawer </ax-title>
       <ax-close-button></ax-close-button>
     </ax-header>
-    <ax-content class="ax-flex ax-min-w-[300px] ax-flex-col ax-p-8">
+    <ax-content>
       <div>Some contents...</div>
       <div>Some contents...</div>
       <div>Some contents...</div>
     </ax-content>
-  </ax-drawer>
-  <ax-content class="ax-flex ax-justify-center ax-items-center">
-    <ax-button
-      color="secondary"
-      text="Open Push Drawer"
-      (onClick)="drawer.toggle()"
-    >
+  </ax-drawer2>
+
+  <ax-drawer2
+    (collapsedStateChanged)="onCollapsedChange($event)"
+    mode="overlay"
+    #drawer2
+    location="end"
+    class="ax-bg-surface ax-p-4"
+  >
+    <ax-header>
+      <ax-title> Basic Drawer </ax-title>
+      <ax-close-button></ax-close-button>
+    </ax-header>
+    <ax-content>
+      <div>Some contents...</div>
+      <div>Some contents...</div>
+      <div>Some contents...</div>
+    </ax-content>
+  </ax-drawer2>
+
+  <ax-content
+    class="ax-flex ax-h-full ax-w-full ax-items-center ax-justify-around ax-p-3"
+  >
+    <ax-button (onClick)="drawer1.toggle()" color="primary" text="Open Start">
+    </ax-button>
+
+    <ax-button (onClick)="drawer2.toggle()" color="primary" text="Open End">
     </ax-button>
   </ax-content>
-</ax-drawer-container>
+</ax-drawer2-container>
