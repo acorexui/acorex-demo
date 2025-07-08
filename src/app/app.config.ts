@@ -52,11 +52,11 @@ export const appConfig: ApplicationConfig = {
       useValue: translationConfig({
         preload: {
           langs: ['en-US'],
-          scopes: ['common'],
+          scopes: ['acorex'],
         },
         defaults: {
           lang: 'en-US',
-          scope: 'common',
+          scope: 'acorex',
         },
       }),
     },
