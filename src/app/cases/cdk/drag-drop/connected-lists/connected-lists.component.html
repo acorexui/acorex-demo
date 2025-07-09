@@ -1,44 +1,42 @@
-<div class="ax-rounded ax-p-4 ax-surface">
-  <div class="ax-grid ax-grid-cols-1 ax-gap-8 md:ax-grid-cols-2">
-    <!-- To Do List -->
-    <div>
-      <p class="ax-pb-2 ax-text-center ax-text-lg ax-font-semibold">To Do</p>
+<div class="ax-grid ax-grid-cols-1 ax-gap-8 md:ax-grid-cols-2">
+  <!-- To Do List -->
+  <div>
+    <p class="ax-pb-2 ax-text-center ax-text-lg ax-font-semibold">To Do</p>
+    <div
+      id="todo-list"
+      axDropList
+      dropListGroup="tasks"
+      (dropListDropped)="drop($event)"
+      class="ax-drop-list ax-drop-list-sorting-transition ax-bg-background/50 ax-rounded-md ax-border ax-border-dashed ax-border-primary ax-p-2"
+    >
+      @for(item of todo; track item) {
       <div
-        id="todo-list"
-        axDropList
-        dropListGroup="tasks"
-        (dropListDropped)="drop($event)"
-        class="ax-drop-list ax-drop-list-sorting-transition ax-bg-background/50 ax-rounded-md ax-border ax-border-dashed ax-border-primary ax-p-2"
+        axDrag
+        class="ax-drag ax-bg-background ax-cursor-move ax-rounded ax-border ax-border-transparent ax-p-2 ax-shadow-sm"
       >
-        @for(item of todo; track item) {
-        <div
-          axDrag
-          class="ax-drag ax-bg-background ax-cursor-move ax-rounded ax-border ax-border-transparent ax-p-2 ax-shadow-sm"
-        >
-          {{ item }}
-        </div>
-        }
+        {{ item }}
       </div>
+      }
     </div>
-    <!-- Done List -->
-    <div>
-      <p class="ax-pb-2 ax-text-center ax-text-lg ax-font-semibold">Done</p>
+  </div>
+  <!-- Done List -->
+  <div>
+    <p class="ax-pb-2 ax-text-center ax-text-lg ax-font-semibold">Done</p>
+    <div
+      id="done-list"
+      axDropList
+      dropListGroup="tasks"
+      (dropListDropped)="drop($event)"
+      class="ax-drop-list ax-drop-list-sorting-transition ax-bg-background/50 ax-rounded-md ax-border ax-border-dashed ax-border-secondary ax-p-2"
+    >
+      @for(item of done; track item) {
       <div
-        id="done-list"
-        axDropList
-        dropListGroup="tasks"
-        (dropListDropped)="drop($event)"
-        class="ax-drop-list ax-drop-list-sorting-transition ax-bg-background/50 ax-rounded-md ax-border ax-border-dashed ax-border-secondary ax-p-2"
+        axDrag
+        class="ax-drag ax-bg-background ax-cursor-move ax-rounded ax-border ax-border-transparent ax-p-2 ax-shadow-sm"
       >
-        @for(item of done; track item) {
-        <div
-          axDrag
-          class="ax-drag ax-bg-background ax-cursor-move ax-rounded ax-border ax-border-transparent ax-p-2 ax-shadow-sm"
-        >
-          {{ item }}
-        </div>
-        }
+        {{ item }}
       </div>
+      }
     </div>
   </div>
 </div>
