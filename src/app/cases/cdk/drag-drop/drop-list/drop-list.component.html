@@ -1,0 +1,33 @@
+<p class="ax-pb-2">Vertical List (Default):</p>
+<div
+  axDropList
+  id="simple-list"
+  (dropListDropped)="drop($event)"
+  class="ax-drop-list max-w-[12.5rem] ax-flex ax-w-full ax-flex-col ax-rounded-sm ax-border ax-border-dashed ax-border-primary"
+>
+  @for(item of items; track item) {
+  <div
+    axDrag
+    class="ax-drag ax-bg-background ax-cursor-move ax-border-b ax-border-primary/20 ax-px-4 ax-py-2 ax-text-center"
+  >
+    {{ item }}
+  </div>
+  }
+</div>
+<p class="ax-py-2">Horizontal List :</p>
+<div
+  axDropList
+  id="simple-list"
+  (dropListDropped)="drop($event)"
+  [dropListOrientation]="'horizontal'"
+  class="max-w-[12.5rem] ax-flex ax-w-full ax-rounded-sm ax-border ax-border-dashed ax-border-primary"
+>
+  @for(item of items; track item) {
+  <div
+    axDrag
+    class="ax-drag ax-bg-background ax-w-full ax-cursor-move ax-border-r ax-border-primary/20 ax-px-4 ax-py-2 ax-text-center"
+  >
+    {{ item }}
+  </div>
+  }
+</div>

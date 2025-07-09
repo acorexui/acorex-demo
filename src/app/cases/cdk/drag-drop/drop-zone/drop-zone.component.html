@@ -1,0 +1,20 @@
+<div class="ax-flex ax-gap-4 ax-rounded ax-p-4 ax-surface">
+  <div
+    axDropZone
+    #zone="axDropZone"
+    [dropZoneGroup]="'dropZoneGroup1'"
+    (onElementDrop)="dropZoneDropEventHandler($event)"
+    [ngClass]="{ 'ax-bg-primary/25': zone.isHovered() }"
+    (onElementHover)="dropZoneHoverEventHandler($event)"
+    class="transition-colors ax-relative ax-flex ax-h-36 ax-w-36 ax-items-center ax-justify-center ax-rounded-sm ax-border ax-border-dashed ax-border-primary ax-p-2 ax-text-center ax-text-sm"
+  >
+    Drop zone (Group 1)
+  </div>
+  <div
+    axDrag
+    [dropZoneGroup]="'dropZoneGroup1'"
+    class="ax-relative ax-flex ax-h-36 ax-w-36 ax-items-center ax-justify-center ax-rounded-sm ax-p-2 ax-text-center ax-text-sm ax-shadow ax-primary-surface"
+  >
+    Draggable (Group 1)
+  </div>
+</div>

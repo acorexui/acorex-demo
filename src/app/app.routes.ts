@@ -538,8 +538,11 @@ export const appRoutes: Route[] = [
       import('./cases/scheduler/scheduler.routes').then((c) => c.routes),
   },
   {
+    path: 'cdk',
+    loadChildren: () => import('./cases/cdk/cdk.routes').then((c) => c.routes),
+  },
+  {
     path: '**',
-    component: MasterLayoutComponent,
     loadChildren: () =>
       import('./shared/layout/not-found.component.html/not-found.routes').then(
         (c) => c.routes
