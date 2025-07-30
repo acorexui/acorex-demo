@@ -1,14 +1,13 @@
 <ax-form [messageStyle]="'float'" [updateOn]="'change'">
   <ax-form-field>
+    <ax-label>Comments</ax-label>
     <ax-select-box
       [(ngModel)]="options().value"
       [dataSource]="dataSource"
-      [textField]="'name'"
-      [placeholder]="options().placeholder"
+      [textField]="'body'"
     >
       <ax-search-box look="fill"></ax-search-box>
-      <ax-validation-rule message="field can't be empty" rule="required">
-      </ax-validation-rule>
+
       <ax-clear-button></ax-clear-button>
     </ax-select-box>
   </ax-form-field>
