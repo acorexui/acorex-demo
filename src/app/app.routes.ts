@@ -538,6 +538,12 @@ export const appRoutes: Route[] = [
       import('./cases/scheduler/scheduler.routes').then((c) => c.routes),
   },
   {
+    path: 'kanban',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/kanban/kanban.routes').then((c) => c.routes),
+  },
+  {
     path: 'cdk',
     loadChildren: () => import('./cases/cdk/cdk.routes').then((c) => c.routes),
   },
