@@ -1,9 +1,8 @@
+import { AXBadgeModule } from '@acorex/components/badge';
 import { Component } from '@angular/core';
 
-import { AXBadgeModule } from '@acorex/components/badge';
-
 @Component({
-    templateUrl: 'usage.component.html',
-    imports: [AXBadgeModule]
+  templateUrl: 'usage.component.html',
+  imports: [AXBadgeModule],
 })
 export class UsageComponent {}

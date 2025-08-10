@@ -1,13 +1,24 @@
-<ax-bottom-navigation class="ax-w-96" indicatorPosition="top" look="with-line">
-  <ax-bottom-navigation-item name="home" [active]="true">
+<ax-bottom-navigation
+  class="ax-w-96"
+  look="with-line"
+  indicatorPosition="top"
+  (onItemClick)="handleItemClick($event)"
+>
+  <ax-bottom-navigation-item name="home" [active]="'home' === selectedItem()">
     <ax-icon class="fa-light fa-house"> </ax-icon>
     <ax-text> Home </ax-text>
   </ax-bottom-navigation-item>
-  <ax-bottom-navigation-item name="favorite">
+  <ax-bottom-navigation-item
+    name="favorite"
+    [active]="'favorite' === selectedItem()"
+  >
     <ax-icon class="fa-light fa-heart"> </ax-icon>
     <ax-text> Favorite </ax-text>
   </ax-bottom-navigation-item>
-  <ax-bottom-navigation-item name="profile">
+  <ax-bottom-navigation-item
+    name="profile"
+    [active]="'profile' === selectedItem()"
+  >
     <ax-icon class="fa-light fa-user"> </ax-icon>
     <ax-text> Profile </ax-text>
   </ax-bottom-navigation-item>
