@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { AXAlertModule } from '@acorex/components/alert';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 

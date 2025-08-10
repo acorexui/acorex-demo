@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { AXAvatarModule } from '@acorex/components/avatar';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 
