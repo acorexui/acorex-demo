@@ -72,6 +72,12 @@ export const appRoutes: Route[] = [
       import('./cases/calendar/calendar.routes').then((c) => c.routes),
   },
   {
+    path: 'calendar-range',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/calendar-range/calendar-range.routes').then((c) => c.routes),
+  },
+  {
     path: 'check-box',
     component: MasterLayoutComponent,
     loadChildren: () =>

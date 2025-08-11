@@ -3,15 +3,15 @@ import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-    templateUrl: './usage.component.html',
-    imports: [AXDateTimePickerModule, FormsModule]
+  templateUrl: './usage.component.html',
+  imports: [AXDateTimePickerModule, FormsModule],
 })
 export class UsageComponent {
   protected options = signal({
     disabled: false,
     readonly: false,
     format: 'yyyy/MM/dd HH:mm',
-    type: 'georgian',
+    type: 'gregorian',
     value: new Date(),
     value1: null,
     value2: null,

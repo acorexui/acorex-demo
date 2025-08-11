@@ -1,8 +1,8 @@
+import { AXCalendarComponent } from '@acorex/components/calendar';
 import { Component } from '@angular/core';
-import { AXCalendarModule } from '@acorex/components/calendar';
 
 @Component({
-    templateUrl: 'usage.component.html',
-    imports: [AXCalendarModule]
+  templateUrl: 'usage.component.html',
+  imports: [AXCalendarComponent],
 })
 export class UsageComponent {}
