@@ -1,21 +1,24 @@
-<ax-conversation-container [chatData]="chat()">
-  <ax-conversation-view
-    (onScrollEnd)="loadData($event)"
-    (onAction)="handleOnAction($event)"
-    class="ax-mb-3"
-  >
-  </ax-conversation-view>
-  <ax-conversation-input
-    [placeholder]="options().placeholder"
-    [(ngModel)]="options().value"
-    (onSendClick)="handleOnSend($event)"
-    (onFileChange)="handleFileChange($event)"
-    (onStopRecording)="handleEndRecord($event)"
-    (onCancelRecording)="handleCancelRecord($event)"
-    (onEnterPressed)="keydownHandler($event)"
-  >
-    <ax-icon>
-      <i class="ax-icon ax-icon-arrow-long-up"></i>
-    </ax-icon>
-  </ax-conversation-input>
-</ax-conversation-container>
+<div class="ax-demo-conversation-container ax-p-5">
+  <ax-conversation-container [chatData]="chat()">
+    <ax-conversation-view
+      (onScrollEnd)="loadData($event)"
+      (onAction)="handleOnAction($event)"
+      class="ax-mb-3"
+      chatBoxHeight="400px"
+    >
+    </ax-conversation-view>
+    <ax-conversation-input
+      [placeholder]="options().placeholder"
+      [(ngModel)]="options().value"
+      (onSendClick)="handleOnSend($event)"
+      (onFileChange)="handleFileChange($event)"
+      (onStopRecording)="handleEndRecord($event)"
+      (onCancelRecording)="handleCancelRecord($event)"
+      (onEnterPressed)="keydownHandler($event)"
+    >
+      <ax-icon>
+        <i class="ax-icon ax-icon-arrow-long-up"></i>
+      </ax-icon>
+    </ax-conversation-input>
+  </ax-conversation-container>
+</div>
