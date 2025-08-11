@@ -37,4 +37,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./disabled/disabled.component').then((e) => e.disabledComponent),
   },
+  {
+    path: 'look',
+    loadComponent: () =>
+      import('./look/look.component').then((e) => e.LookComponent),
+  },
 ];

@@ -1,9 +1,4 @@
-<ax-bottom-navigation
-  class="ax-w-96"
-  look="with-line"
-  indicatorPosition="top"
-  (onItemClick)="handleItemClick($event)"
->
+<ax-bottom-navigation class="ax-w-96" (onItemClick)="handleItemClick($event)">
   <ax-bottom-navigation-item name="home" [active]="'home' === selectedItem()">
     <ax-icon class="fa-light fa-house"> </ax-icon>
     <ax-text> Home </ax-text>
