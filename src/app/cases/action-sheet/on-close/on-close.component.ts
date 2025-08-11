@@ -1,5 +1,6 @@
 import {
   AXActionSheetItem,
+  AXActionSheetModule,
   AXActionSheetService,
 } from '@acorex/components/action-sheet';
 import { AXButtonComponent } from '@acorex/components/button';
@@ -7,7 +8,7 @@ import { Component, inject, signal } from '@angular/core';
 
 @Component({
   templateUrl: 'on-close.component.html',
-  imports: [AXButtonComponent],
+  imports: [AXButtonComponent, AXActionSheetModule],
 })
 export class ActionSheetOnCloseComponent {
   actionSheetService = inject(AXActionSheetService);

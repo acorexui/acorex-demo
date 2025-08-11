@@ -1,5 +1,6 @@
 import {
   AXActionSheetItem,
+  AXActionSheetModule,
   AXActionSheetService,
 } from '@acorex/components/action-sheet';
 import {
@@ -17,7 +18,12 @@ import {
 } from '@angular/core';
 @Component({
   templateUrl: 'both-mode.component.html',
-  imports: [AXButtonComponent, AXAvatarComponent, AXAvatarGroupComponent],
+  imports: [
+    AXButtonComponent,
+    AXAvatarComponent,
+    AXActionSheetModule,
+    AXAvatarGroupComponent,
+  ],
 })
 export class ActionSheetBothModeComponent {
   bothTemplate = viewChild<TemplateRef<unknown>>('bothTemplate');

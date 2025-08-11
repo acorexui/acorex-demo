@@ -1,4 +1,7 @@
-import { AXActionSheetService } from '@acorex/components/action-sheet';
+import {
+  AXActionSheetModule,
+  AXActionSheetService,
+} from '@acorex/components/action-sheet';
 import { AXButtonComponent } from '@acorex/components/button';
 import {
   AXDecoratorGenericComponent,
@@ -12,6 +15,7 @@ import { Component, inject, TemplateRef, viewChild } from '@angular/core';
   imports: [
     AXButtonComponent,
     AXResultComponent,
+    AXActionSheetModule,
     AXDecoratorIconComponent,
     AXDecoratorGenericComponent,
   ],

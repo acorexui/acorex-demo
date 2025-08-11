@@ -1,5 +1,6 @@
 import {
   AXActionSheetItem,
+  AXActionSheetModule,
   AXActionSheetService,
 } from '@acorex/components/action-sheet';
 import { AXButtonComponent } from '@acorex/components/button';
@@ -7,9 +8,11 @@ import { Component, inject, signal } from '@angular/core';
 
 @Component({
   templateUrl: 'usage.component.html',
-  imports: [AXButtonComponent],
+  imports: [AXButtonComponent, AXActionSheetModule],
 })
 export class UsageComponent {
+  actionSheetService = inject(AXActionSheetService);
+
   protected options = signal({
     title: 'Sample Title',
     subTitle:
@@ -41,8 +44,6 @@ export class UsageComponent {
       },
     },
   ]);
-
-  actionSheetService = inject(AXActionSheetService);
 
   open() {
     this.actionSheetService
