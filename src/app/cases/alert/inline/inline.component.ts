@@ -1,11 +1,20 @@
+import { AXAlertComponent } from '@acorex/components/alert';
+import { AXButtonComponent } from '@acorex/components/button';
+import {
+  AXDecoratorCloseButtonComponent,
+  AXDecoratorGenericComponent,
+  AXDecoratorIconComponent,
+} from '@acorex/components/decorators';
 import { Component } from '@angular/core';
-import { AXBadgeModule } from '@acorex/components/badge';
-import { AXAlertModule } from '@acorex/components/alert';
-import { AXDecoratorModule } from '@acorex/components/decorators';
-import { AXButtonModule } from '@acorex/components/button';
 
 @Component({
   templateUrl: 'inline.component.html',
-  imports: [AXBadgeModule, AXAlertModule, AXDecoratorModule, AXButtonModule],
+  imports: [
+    AXAlertComponent,
+    AXDecoratorIconComponent,
+    AXDecoratorGenericComponent,
+    AXButtonComponent,
+    AXDecoratorCloseButtonComponent,
+  ],
 })
 export class InlineComponent {}

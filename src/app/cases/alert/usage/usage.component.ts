@@ -1,9 +1,16 @@
+import { AXAlertComponent } from '@acorex/components/alert';
+import {
+  AXDecoratorGenericComponent,
+  AXDecoratorIconComponent,
+} from '@acorex/components/decorators';
 import { Component } from '@angular/core';
-import { AXAlertModule } from '@acorex/components/alert';
-import { AXDecoratorModule } from '@acorex/components/decorators';
 
 @Component({
-    templateUrl: 'usage.component.html',
-    imports: [AXAlertModule, AXDecoratorModule]
+  templateUrl: 'usage.component.html',
+  imports: [
+    AXAlertComponent,
+    AXDecoratorIconComponent,
+    AXDecoratorGenericComponent,
+  ],
 })
 export class UsageComponent {}

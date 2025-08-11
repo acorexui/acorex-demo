@@ -1,9 +1,16 @@
-import { AXBreadcrumbsModule } from '@acorex/components/breadcrumbs';
-import { AXDecoratorModule } from '@acorex/components/decorators';
+import {
+  AXBreadCrumbsComponent,
+  AXBreadCrumbsItemComponent,
+} from '@acorex/components/breadcrumbs';
+import { AXDecoratorIconComponent } from '@acorex/components/decorators';
 import { Component } from '@angular/core';
 
 @Component({
   templateUrl: 'icon-mode.component.html',
-  imports: [AXBreadcrumbsModule, AXDecoratorModule],
+  imports: [
+    AXBreadCrumbsComponent,
+    AXBreadCrumbsItemComponent,
+    AXDecoratorIconComponent,
+  ],
 })
 export class IconModeComponent {}

@@ -6,9 +6,9 @@ import {
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl: 'usage.component.html',
+  templateUrl: 'size.component.html',
   imports: [AXButtonGroupComponent, AXButtonGroupItemComponent],
 })
-export class UsageComponent {
+export class SizeComponent {
   selection: AXSelectionMode = 'single';
 }

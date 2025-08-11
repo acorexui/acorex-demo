@@ -1,9 +1,9 @@
+import { AXButtonComponent } from '@acorex/components/button';
 import { Component } from '@angular/core';
-import { AXButtonModule } from '@acorex/components/button';
 
 @Component({
   templateUrl: 'usage.component.html',
-  imports: [AXButtonModule],
+  imports: [AXButtonComponent],
 })
 export class UsageComponent {
   open() {

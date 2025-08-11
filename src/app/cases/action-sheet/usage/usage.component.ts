@@ -1,15 +1,13 @@
-import { Component, inject, signal } from '@angular/core';
 import {
   AXActionSheetItem,
-  AXActionSheetModule,
   AXActionSheetService,
 } from '@acorex/components/action-sheet';
-import { AXButtonModule } from '@acorex/components/button';
-import { AXDialogModule } from '@acorex/components/dialog';
+import { AXButtonComponent } from '@acorex/components/button';
+import { Component, inject, signal } from '@angular/core';
 
 @Component({
   templateUrl: 'usage.component.html',
-  imports: [AXButtonModule, AXActionSheetModule, AXDialogModule],
+  imports: [AXButtonComponent],
 })
 export class UsageComponent {
   protected options = signal({

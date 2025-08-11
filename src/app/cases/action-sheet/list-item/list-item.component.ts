@@ -1,15 +1,13 @@
 import {
   AXActionSheetItem,
-  AXActionSheetModule,
   AXActionSheetService,
 } from '@acorex/components/action-sheet';
-import { AXButtonModule } from '@acorex/components/button';
-import { AXDialogModule } from '@acorex/components/dialog';
+import { AXButtonComponent } from '@acorex/components/button';
 import { Component, WritableSignal, inject, signal } from '@angular/core';
 
 @Component({
   templateUrl: 'list-item.component.html',
-  imports: [AXButtonModule, AXActionSheetModule, AXDialogModule],
+  imports: [AXButtonComponent],
 })
 export class ActionSheetListItemComponent {
   actionSheetService = inject(AXActionSheetService);

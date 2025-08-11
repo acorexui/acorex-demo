@@ -1,9 +1,20 @@
-import { AXBottomNavigationModule } from '@acorex/components/bottom-navigation';
-import { AXDecoratorModule } from '@acorex/components/decorators';
+import {
+  AXBottomNavigationComponent,
+  AXBottomNavigationItemComponent,
+} from '@acorex/components/bottom-navigation';
+import {
+  AXDecoratorIconComponent,
+  AXDecoratorGenericComponent,
+} from '@acorex/components/decorators';
 import { Component } from '@angular/core';
 
 @Component({
   templateUrl: 'indicator-position.component.html',
-  imports: [AXDecoratorModule, AXBottomNavigationModule],
+  imports: [
+    AXBottomNavigationComponent,
+    AXBottomNavigationItemComponent,
+    AXDecoratorIconComponent,
+    AXDecoratorGenericComponent,
+  ],
 })
 export class IndicatorPositionComponent {}
