@@ -1,11 +1,9 @@
+import { AXCheckBoxComponent } from '@acorex/components/check-box';
+import { AXLabelComponent } from '@acorex/components/label';
 import { Component } from '@angular/core';
 
-import { AXCheckBoxModule } from '@acorex/components/check-box';
-import { AXDecoratorModule } from '@acorex/components/decorators';
-import { AXLabelModule } from '@acorex/components/label';
-
 @Component({
-    templateUrl: 'usage.component.html',
-    imports: [AXDecoratorModule, AXCheckBoxModule, AXLabelModule]
+  templateUrl: 'usage.component.html',
+  imports: [AXCheckBoxComponent, AXLabelComponent],
 })
 export class UsageComponent {}

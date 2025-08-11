@@ -1,5 +1,3 @@
-import { Component } from '@angular/core';
-
 import {
   AXDragDirective,
   AXDropZoneDirective,
@@ -7,6 +5,7 @@ import {
   AXDropZoneHoverEvent,
 } from '@acorex/cdk/drag-drop';
 import { NgClass } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
   templateUrl: 'drop-zone.component.html',

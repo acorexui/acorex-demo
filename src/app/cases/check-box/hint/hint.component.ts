@@ -1,11 +1,10 @@
+import { AXCheckBoxComponent } from '@acorex/components/check-box';
+import { AXDecoratorGenericComponent } from '@acorex/components/decorators';
+import { AXLabelComponent } from '@acorex/components/label';
 import { Component } from '@angular/core';
 
-import { AXCheckBoxModule } from '@acorex/components/check-box';
-import { AXDecoratorModule } from '@acorex/components/decorators';
-import { AXLabelModule } from '@acorex/components/label';
-
 @Component({
-    templateUrl: 'hint.component.html',
-    imports: [AXDecoratorModule, AXCheckBoxModule, AXLabelModule]
+  templateUrl: 'hint.component.html',
+  imports: [AXCheckBoxComponent, AXLabelComponent, AXDecoratorGenericComponent],
 })
 export class HintComponent {}

@@ -1,5 +1,3 @@
-import { Component } from '@angular/core';
-
 import {
   AXDragDirective,
   AXDropListDirective,
@@ -7,6 +5,7 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@acorex/cdk/drag-drop';
+import { Component } from '@angular/core';
 
 @Component({
   templateUrl: 'connected-lists.component.html',

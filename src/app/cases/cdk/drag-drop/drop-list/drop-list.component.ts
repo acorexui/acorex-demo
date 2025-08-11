@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
-
 import {
   AXDragDirective,
   AXDropListDirective,
   AXDropListDroppedEvent,
   moveItemInArray,
 } from '@acorex/cdk/drag-drop';
+import { Component } from '@angular/core';
 
 @Component({
   templateUrl: 'drop-list.component.html',

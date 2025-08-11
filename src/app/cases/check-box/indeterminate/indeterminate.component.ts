@@ -1,12 +1,17 @@
+import { AXCheckBoxComponent } from '@acorex/components/check-box';
+import { AXDecoratorGenericComponent } from '@acorex/components/decorators';
+import { AXLabelComponent } from '@acorex/components/label';
 import { Component, signal } from '@angular/core';
-import { AXCheckBoxModule } from '@acorex/components/check-box';
-import { AXDecoratorModule } from '@acorex/components/decorators';
-import { AXLabelModule } from '@acorex/components/label';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-    templateUrl: 'indeterminate.component.html',
-    imports: [AXDecoratorModule, AXCheckBoxModule, AXLabelModule, FormsModule]
+  templateUrl: 'indeterminate.component.html',
+  imports: [
+    FormsModule,
+    AXLabelComponent,
+    AXCheckBoxComponent,
+    AXDecoratorGenericComponent,
+  ],
 })
 export class IndeterminateComponent {
   protected options = signal({
