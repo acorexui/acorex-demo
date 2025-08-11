@@ -210,6 +210,12 @@ export const appRoutes: Route[] = [
       ),
   },
   {
+    path: 'flow-chart',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/flow-chart/flow-chart.routes').then((c) => c.routes),
+  },
+  {
     path: 'grid-layout-builder',
     component: MasterLayoutComponent,
     loadChildren: () =>

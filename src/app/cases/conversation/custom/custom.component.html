@@ -1,8 +1,9 @@
-<div class="ax-demo-conversation-container">
+<div class="ax-demo-conversation-container ax-p-5">
   <ax-conversation-container [chatData]="chat()">
     <ax-conversation-view
       (onAction)="handleOnAction($event)"
       class="ax-mb-3 ax-max-h-96"
+      chatBoxHeight="400px"
     >
     </ax-conversation-view>
     <ax-conversation-input

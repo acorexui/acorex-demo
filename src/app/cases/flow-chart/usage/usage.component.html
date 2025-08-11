@@ -1,0 +1,15 @@
+<ax-flow-chart
+  [initialFlowChartNode]="flowDataNode()"
+  [initialFlowChartEdge]="flowDataEdge()"
+  #ref
+>
+  <ax-footer> <ax-flow-chart-creator></ax-flow-chart-creator></ax-footer>
+  <ax-flow-chart-renderer
+    (onLineClick)="onLineClick($event)"
+    (onLineDbClick)="onLineDbClick($event)"
+    (onNodeClick)="onNodeClick($event)"
+    (onNodeDbClick)="onNodeDbClick($event)"
+    (onEdgeUpdate)="onEdgeUpdate($event)"
+    (onNodeUpdate)="onNodeUpdate($event)"
+  ></ax-flow-chart-renderer>
+</ax-flow-chart>
