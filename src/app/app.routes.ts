@@ -549,6 +549,7 @@ export const appRoutes: Route[] = [
   },
   {
     path: '**',
+    component: MasterLayoutComponent,
     loadChildren: () =>
       import('./shared/layout/not-found.component.html/not-found.routes').then(
         (c) => c.routes
