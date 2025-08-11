@@ -1,10 +1,11 @@
+import {
+  AXBreadCrumbsComponent,
+  AXBreadCrumbsItemComponent,
+} from '@acorex/components/breadcrumbs';
 import { Component } from '@angular/core';
 
-import { AXBreadcrumbsModule } from '@acorex/components/breadcrumbs';
-import { AXDecoratorModule } from '@acorex/components/decorators';
-
 @Component({
-    templateUrl: 'disabled-state.component.html',
-    imports: [AXBreadcrumbsModule, AXDecoratorModule]
+  templateUrl: 'disabled-state.component.html',
+  imports: [AXBreadCrumbsComponent, AXBreadCrumbsItemComponent],
 })
 export class DisabledStateComponent {}

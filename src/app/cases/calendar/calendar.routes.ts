@@ -25,8 +25,8 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'range',
+    path: 'holiday',
     loadComponent: () =>
-      import('./range/range.component').then((e) => e.RangeComponent),
+      import('./holiday/holiday.component').then((e) => e.HolidayComponent),
   },
 ];

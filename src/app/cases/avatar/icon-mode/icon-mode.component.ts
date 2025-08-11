@@ -1,10 +1,9 @@
+import { AXAvatarComponent } from '@acorex/components/avatar';
+import { AXDecoratorIconComponent } from '@acorex/components/decorators';
 import { Component } from '@angular/core';
 
-import { AXAvatarModule } from '@acorex/components/avatar';
-import { AXDecoratorModule } from '@acorex/components/decorators';
-
 @Component({
-    templateUrl: 'icon-mode.component.html',
-    imports: [AXAvatarModule, AXDecoratorModule]
+  templateUrl: 'icon-mode.component.html',
+  imports: [AXAvatarComponent, AXDecoratorIconComponent],
 })
 export class IconModeComponent {}

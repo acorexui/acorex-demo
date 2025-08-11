@@ -1,10 +1,8 @@
+import { AXAvatarComponent } from '@acorex/components/avatar';
 import { Component } from '@angular/core';
 
-import { AXAvatarModule } from '@acorex/components/avatar';
-import { AXDecoratorModule } from '@acorex/components/decorators';
-
 @Component({
-    templateUrl: 'look.component.html',
-    imports: [AXAvatarModule, AXDecoratorModule]
+  templateUrl: 'look.component.html',
+  imports: [AXAvatarComponent],
 })
 export class LookComponent {}

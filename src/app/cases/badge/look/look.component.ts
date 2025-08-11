@@ -1,9 +1,8 @@
+import { AXBadgeComponent } from '@acorex/components/badge';
 import { Component } from '@angular/core';
 
-import { AXBadgeModule } from '@acorex/components/badge';
-
 @Component({
-    templateUrl: 'look.component.html',
-    imports: [AXBadgeModule]
+  templateUrl: 'look.component.html',
+  imports: [AXBadgeComponent],
 })
 export class LookComponent {}

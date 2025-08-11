@@ -1,17 +1,28 @@
+import {
+  AXButtonItemListComponent,
+  AXButtonItemComponent,
+} from '@acorex/components/button';
+import {
+  AXButtonGroupComponent,
+  AXButtonGroupItemComponent,
+} from '@acorex/components/button-group';
+import {
+  AXDecoratorGenericComponent,
+  AXDecoratorIconComponent,
+} from '@acorex/components/decorators';
+import { AXDropdownPanelComponent } from '@acorex/components/dropdown';
 import { Component } from '@angular/core';
 
-import { AXButtonModule } from '@acorex/components/button';
-import { AXButtonGroupModule } from '@acorex/components/button-group';
-import { AXDropdownModule } from '@acorex/components/dropdown';
-import { AXDecoratorModule } from '@acorex/components/decorators';
-
 @Component({
-    templateUrl: 'dropdown-items.component.html',
-    imports: [
-        AXButtonGroupModule,
-        AXButtonModule,
-        AXDropdownModule,
-        AXDecoratorModule,
-    ]
+  templateUrl: 'dropdown-items.component.html',
+  imports: [
+    AXButtonGroupComponent,
+    AXButtonGroupItemComponent,
+    AXDecoratorGenericComponent,
+    AXDecoratorIconComponent,
+    AXDropdownPanelComponent,
+    AXButtonItemListComponent,
+    AXButtonItemComponent,
+  ],
 })
 export class DropdownButtonComponent {}

@@ -1,9 +1,8 @@
+import { AXAvatarComponent } from '@acorex/components/avatar';
 import { Component } from '@angular/core';
 
-import { AXAvatarModule } from '@acorex/components/avatar';
-
 @Component({
-    templateUrl: 'usage.component.html',
-    imports: [AXAvatarModule]
+  templateUrl: 'usage.component.html',
+  imports: [AXAvatarComponent],
 })
 export class UsageComponent {}

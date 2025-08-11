@@ -43,6 +43,11 @@ export const routes: Routes = [
       import('./look/look.component').then((e) => e.LookComponent),
   },
   {
+    path: 'shape',
+    loadComponent: () =>
+      import('./shape/shape.component').then((e) => e.ShapeComponent),
+  },
+  {
     path: 'avatar-group',
     loadComponent: () =>
       import('./avatar-group/avatar-group.component').then(
