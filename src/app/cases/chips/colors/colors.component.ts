@@ -1,10 +1,16 @@
+import { AXChipsComponent } from '@acorex/components/chips';
+import {
+  AXDecoratorGenericComponent,
+  AXDecoratorIconComponent,
+} from '@acorex/components/decorators';
 import { Component } from '@angular/core';
 
-import { AXChipsModule } from '@acorex/components/chips';
-import { AXDecoratorModule } from '@acorex/components/decorators';
-
 @Component({
-    templateUrl: 'colors.component.html',
-    imports: [AXChipsModule, AXDecoratorModule]
+  templateUrl: 'colors.component.html',
+  imports: [
+    AXChipsComponent,
+    AXDecoratorGenericComponent,
+    AXDecoratorIconComponent,
+  ],
 })
 export class ColorsComponent {}
