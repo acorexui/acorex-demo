@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
-
-import { AXListModule } from '@acorex/components/list';
 import { AXDataSource } from '@acorex/cdk/common';
+import { AXListComponent } from '@acorex/components/list';
+import { Component } from '@angular/core';
 
 @Component({
   templateUrl: 'usage.component.html',
-  imports: [AXListModule],
+  imports: [AXListComponent],
 })
 export class UsageComponent {
   protected items = [

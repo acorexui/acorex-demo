@@ -1,9 +1,8 @@
+import { AXLoadingSpinnerComponent } from '@acorex/components/loading';
 import { Component } from '@angular/core';
 
-import { AXLoadingModule } from '@acorex/components/loading';
-
 @Component({
-    templateUrl: 'loading-spinner.component.html',
-    imports: [AXLoadingModule]
+  templateUrl: 'loading-spinner.component.html',
+  imports: [AXLoadingSpinnerComponent],
 })
 export class LoadingSpinnerComponent {}

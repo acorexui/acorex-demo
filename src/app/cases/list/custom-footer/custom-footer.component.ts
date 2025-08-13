@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
-
-import { AXListModule } from '@acorex/components/list';
 import { AXDataSource } from '@acorex/cdk/common';
-import { AXDecoratorModule } from '@acorex/components/decorators';
+import { AXDecoratorGenericComponent } from '@acorex/components/decorators';
+import { AXListComponent } from '@acorex/components/list';
+import { Component } from '@angular/core';
 
 @Component({
   templateUrl: 'custom-footer.component.html',
-  imports: [AXListModule, AXDecoratorModule],
+  imports: [AXListComponent, AXDecoratorGenericComponent],
 })
 export class CustomFooterComponent {
   protected items = [

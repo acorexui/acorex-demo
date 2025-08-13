@@ -1,12 +1,13 @@
+import { AXButtonComponent } from '@acorex/components/button';
+import {
+  AXLoadingComponent,
+  AXLoadingService,
+} from '@acorex/components/loading';
 import { Component, ElementRef, ViewChild, inject } from '@angular/core';
-
-import { AXButtonModule } from '@acorex/components/button';
-
-import { AXLoadingModule, AXLoadingService } from '@acorex/components/loading';
 
 @Component({
   templateUrl: 'region.component.html',
-  imports: [AXLoadingModule, AXButtonModule],
+  imports: [AXLoadingComponent, AXButtonComponent],
 })
 export class RegionComponent {
   protected _options = {
