@@ -1,10 +1,4 @@
-<ax-datetime-picker
-  [(ngModel)]="options().value"
-  (ngModelChange)="_writeLog()"
-  [readonly]="options().readonly"
-  [disabled]="options().disabled"
-  [type]="options().type"
-  [disabledDates]="disabledDates()"
-  [format]="options().format"
->
-</ax-datetime-picker>
+<div class="ax-flex ax-flex-col ax-gap-4 ax-items-center">
+  <ax-datetime-picker class="ax-w-fit" [(ngModel)]="date"></ax-datetime-picker>
+  <span class="ax-text-sm">{{ date() }}</span>
+</div>
