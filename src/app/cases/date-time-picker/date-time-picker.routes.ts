@@ -12,4 +12,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./picker/picker.component').then((e) => e.PickerComponent),
   },
+  {
+    path: 'type',
+    loadComponent: () =>
+      import('./type/type.component').then((e) => e.TypeComponent),
+  },
 ];
