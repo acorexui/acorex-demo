@@ -1,0 +1,18 @@
+<div class="ax-max-w-[100vw] ax-max-h-[100vh]">
+  <ax-kanban
+    class="ax-p-4"
+    [hasActions]="true"
+    [statuses]="statuses()"
+    [dataSource]="dataSource()"
+    (onSortChanged)="sort($event)"
+    (onActionClick)="handleActionClick($event)"
+  ></ax-kanban>
+</div>
+
+<ax-context-menu
+  [openOn]="'click'"
+  [closeOn]="'click'"
+  (onOpening)="handleContextMenuOpening($event)"
+  (onItemClick)="handleContextMenuItemClick($event)"
+>
+</ax-context-menu>

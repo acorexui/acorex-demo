@@ -2,6 +2,7 @@
   <ax-kanban
     class="ax-p-4"
     [statuses]="statuses()"
+    [dragStartDelay]="1000"
     [dataSource]="dataSource()"
     (onSortChanged)="sort($event)"
   ></ax-kanban>
