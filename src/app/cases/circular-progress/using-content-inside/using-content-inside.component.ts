@@ -1,10 +1,9 @@
+import { AXCircularProgressComponent } from '@acorex/components/circular-progress';
+import { AXDecoratorGenericComponent } from '@acorex/components/decorators';
 import { Component } from '@angular/core';
 
-import { AXCircularProgressModule } from '@acorex/components/circular-progress';
-import { AXDecoratorModule } from '@acorex/components/decorators';
-
 @Component({
-    templateUrl: './using-content-inside.component.html',
-    imports: [AXCircularProgressModule, AXDecoratorModule]
+  templateUrl: './using-content-inside.component.html',
+  imports: [AXCircularProgressComponent, AXDecoratorGenericComponent],
 })
 export class UsingContentInsideComponent {}

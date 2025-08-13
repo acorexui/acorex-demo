@@ -1,8 +1,11 @@
+import {
+  AXCollapseComponent,
+  AXCollapseGroupComponent,
+} from '@acorex/components/collapse';
 import { Component } from '@angular/core';
-import { AXCollapseModule } from '@acorex/components/collapse';
 
 @Component({
-    templateUrl: './accordion-mode.component.html',
-    imports: [AXCollapseModule]
+  templateUrl: './accordion-mode.component.html',
+  imports: [AXCollapseGroupComponent, AXCollapseComponent],
 })
 export class AccordionMode {}

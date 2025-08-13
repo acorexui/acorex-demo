@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
 import {
   AXCollapseClickEvent,
-  AXCollapseModule,
+  AXCollapseComponent,
+  AXCollapseGroupComponent,
 } from '@acorex/components/collapse';
+import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: 'loading.component.html',
-    imports: [AXCollapseModule]
+  templateUrl: 'loading.component.html',
+  imports: [AXCollapseGroupComponent, AXCollapseComponent],
 })
 export class LoadingComponent {
   protected _options: { color: string; isAccordion: boolean; look: any } = {

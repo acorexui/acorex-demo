@@ -1,10 +1,8 @@
+import { AXCircularProgressComponent } from '@acorex/components/circular-progress';
 import { Component } from '@angular/core';
 
-import { AXCircularProgressModule } from '@acorex/components/circular-progress';
-import { AXDecoratorModule } from '@acorex/components/decorators';
-
 @Component({
-    templateUrl: './usage.component.html',
-    imports: [AXCircularProgressModule, AXDecoratorModule]
+  templateUrl: './usage.component.html',
+  imports: [AXCircularProgressComponent],
 })
 export class UsageComponent {}

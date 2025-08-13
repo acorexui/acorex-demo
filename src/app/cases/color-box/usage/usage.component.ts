@@ -1,9 +1,9 @@
+import { AXColorBoxComponent } from '@acorex/components/color-box';
 import { Component } from '@angular/core';
-import { AXColorBoxModule } from '@acorex/components/color-box';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-    templateUrl: 'usage.component.html',
-    imports: [AXColorBoxModule, FormsModule]
+  templateUrl: 'usage.component.html',
+  imports: [AXColorBoxComponent, FormsModule],
 })
 export class UsageComponent {}

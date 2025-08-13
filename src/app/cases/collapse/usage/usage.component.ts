@@ -1,8 +1,11 @@
+import {
+  AXCollapseGroupComponent,
+  AXCollapseComponent,
+} from '@acorex/components/collapse';
 import { Component } from '@angular/core';
-import { AXCollapseModule } from '@acorex/components/collapse';
 
 @Component({
-    templateUrl: 'usage.component.html',
-    imports: [AXCollapseModule]
+  templateUrl: 'usage.component.html',
+  imports: [AXCollapseGroupComponent, AXCollapseComponent],
 })
 export class UsageComponent {}

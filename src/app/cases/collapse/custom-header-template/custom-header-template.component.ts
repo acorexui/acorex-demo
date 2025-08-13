@@ -1,10 +1,10 @@
-import { AXCollapseModule } from '@acorex/components/collapse';
-import { AXImageModule } from '@acorex/components/image';
+import { AXCollapseComponent } from '@acorex/components/collapse';
+import { AXImageComponent } from '@acorex/components/image';
 import { Component } from '@angular/core';
 
 @Component({
   templateUrl: 'custom-header-template.component.html',
-  imports: [AXCollapseModule, AXImageModule],
+  imports: [AXCollapseComponent, AXImageComponent],
 })
 export class CustomHeaderTemplate {
   protected _options: { color: string; isAccordion: boolean; look: any } = {

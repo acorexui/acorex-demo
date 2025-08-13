@@ -21,4 +21,9 @@ export const routes: Routes = [
         (e) => e.DateOnlyComponent
       ),
   },
+  {
+    path: 'min-max',
+    loadComponent: () =>
+      import('./min-max/min-max.component').then((e) => e.MinMaxComponent),
+  },
 ];
