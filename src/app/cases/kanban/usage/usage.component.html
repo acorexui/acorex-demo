@@ -1,6 +1,9 @@
-<ax-kanban
-  [hasActions]="true"
-  [statuses]="statuses()"
-  [dataSource]="dataSource()"
-  (onSortChanged)="sort($event)"
-></ax-kanban>
+<div class="ax-max-w-[100vw] ax-max-h-[100vh]">
+  <ax-kanban
+    class="ax-p-4"
+    [hasActions]="true"
+    [statuses]="statuses()"
+    [dataSource]="dataSource()"
+    (onSortChanged)="sort($event)"
+  ></ax-kanban>
+</div>
