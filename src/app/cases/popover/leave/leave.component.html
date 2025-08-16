@@ -1,9 +1,9 @@
 <div class="ax-flex ax-h-[300px] ax-w-full ax-items-center ax-justify-center">
-  <ax-button [text]="leaveButtonText" #leaveBtn color="secondary"></ax-button>
+  <ax-button [text]="leaveButtonText" #leaveBtn color="primary"></ax-button>
 </div>
 <ax-popover
-  [openOn]="'hover'"
-  [closeOn]="'leave'"
+  openOn="hover"
+  closeOn="leave"
   (onOpened)="changeButtonText('Leave to Close')"
   (onClosed)="changeButtonText('Hover to Open')"
   [target]="leaveBtn"

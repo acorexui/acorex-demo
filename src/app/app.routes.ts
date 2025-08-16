@@ -75,7 +75,9 @@ export const appRoutes: Route[] = [
     path: 'calendar-range',
     component: MasterLayoutComponent,
     loadChildren: () =>
-      import('./cases/calendar-range/calendar-range.routes').then((c) => c.routes),
+      import('./cases/calendar-range/calendar-range.routes').then(
+        (c) => c.routes
+      ),
   },
   {
     path: 'check-box',
@@ -428,6 +430,14 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/rate-picker/rate-picker.routes').then((c) => c.routes),
+  },
+  {
+    path: 'rest-api-generator',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/rest-api-generator/rest-api-generator.routes').then(
+        (c) => c.routes
+      ),
   },
   {
     path: 'step-wizard',

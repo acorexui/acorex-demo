@@ -1,10 +1,10 @@
 <div class="ax-flex ax-h-[300px] ax-w-full ax-items-center ax-justify-center">
-  <ax-button [text]="clickButtonText" #hoverBtn color="secondary"></ax-button>
+  <ax-button [text]="clickButtonText" #hoverBtn color="primary"></ax-button>
 </div>
 <ax-popover
   (onOpened)="changeButtonText('Click Outside to Close')"
   (onClosed)="changeButtonText('Hover to Open')"
-  [openOn]="'hover'"
+  openOn="hover"
   [target]="hoverBtn"
 >
   <div class="ax-overlay-pane ax-p-4">
