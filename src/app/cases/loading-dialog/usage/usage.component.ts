@@ -1,13 +1,13 @@
-import { Component, inject } from '@angular/core';
+import { AXButtonComponent } from '@acorex/components/button';
 import {
   AXLoadingDialogModule,
   AXLoadingDialogService,
 } from '@acorex/components/loading-dialog';
-import { AXButtonModule } from '@acorex/components/button';
+import { Component, inject } from '@angular/core';
 
 @Component({
-    templateUrl: './usage.component.html',
-    imports: [AXLoadingDialogModule, AXButtonModule]
+  templateUrl: './usage.component.html',
+  imports: [AXLoadingDialogModule, AXButtonComponent],
 })
 export class UsageComponent {
   private loadingDialog = inject(AXLoadingDialogService);
