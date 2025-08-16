@@ -1,0 +1,29 @@
+<div class="ax-flex ax-flex-col ax-gap-4">
+  <div class="ax-flex ax-items-center ax-gap-2">
+    <ax-button
+      text="Save"
+      color="secondary"
+      (onClick)="save()"
+      [disabled]="(loading.isLoading$(ctx, 'SAVE') | async) === true"
+    >
+      @if(loading.isLoading(ctx, 'SAVE')){<ax-loading
+        [context]="{ text: 'Saving…' }"
+      ></ax-loading
+      >}
+    </ax-button>
+  </div>
+
+  <div class="ax-flex ax-items-center ax-gap-2">
+    <ax-button
+      text="Load"
+      color="secondary"
+      (onClick)="load()"
+      [disabled]="(loading.isLoading$(ctx, 'LOAD') | async) === true"
+    >
+      @if(loading.isLoading(ctx, 'LOAD')){<ax-loading
+        [context]="{ text: 'Loading…' }"
+      ></ax-loading
+      >}
+    </ax-button>
+  </div>
+</div>

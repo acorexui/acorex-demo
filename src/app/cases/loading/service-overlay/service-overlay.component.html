@@ -1,0 +1,21 @@
+<div class="ax-flex ax-flex-col ax-gap-3">
+  <div class="ax-flex ax-gap-2">
+    <ax-button
+      text="Show on screen"
+      color="secondary"
+      (onClick)="showOnScreen()"
+    ></ax-button>
+    <ax-button
+      text="Show in container"
+      color="secondary"
+      (onClick)="showInContainer()"
+    ></ax-button>
+  </div>
+
+  <div
+    #host
+    class="ax-h-40 ax-border ax-rounded ax-p-4 ax-flex ax-items-center ax-justify-center"
+  >
+    Container content
+  </div>
+</div>

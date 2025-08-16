@@ -8,15 +8,69 @@ export const routes: Routes = [
       import('./region/region.component').then((e) => e.RegionComponent),
   },
   {
+    path: 'directive',
+    loadComponent: () =>
+      import('./directive/directive.component').then(
+        (e) => e.DirectiveComponent
+      ),
+  },
+  {
     path: 'usage',
     loadComponent: () =>
       import('./usage/usage.component').then((e) => e.UsageComponent),
+  },
+  {
+    path: 'service-overlay',
+    loadComponent: () =>
+      import('./service-overlay/service-overlay.component').then(
+        (e) => e.ServiceOverlayComponent
+      ),
+  },
+  {
+    path: 'service-doloading',
+    loadComponent: () =>
+      import('./service-doloading/service-doloading.component').then(
+        (e) => e.ServiceDoloadingComponent
+      ),
+  },
+  {
+    path: 'multi-loader-state',
+    loadComponent: () =>
+      import('./multi-loader-state/multi-loader-state.component').then(
+        (e) => e.MultiLoaderStateComponent
+      ),
+  },
+  {
+    path: 'context',
+    loadComponent: () =>
+      import('./context/context.component').then((e) => e.ContextComponent),
+  },
+  {
+    path: 'custom-spinner',
+    loadComponent: () =>
+      import('./custom-spinner/custom-spinner.component').then(
+        (e) => e.CustomSpinnerComponent
+      ),
   },
   {
     path: 'spinner-color',
     loadComponent: () =>
       import('./spinner-color/spinner-color.component').then(
         (e) => e.SpinnerColorComponent
+      ),
+  },
+  {
+    path: 'spinner-text',
+    loadComponent: () =>
+      import('./spinner-text/spinner-text.component').then(
+        (e) => e.SpinnerTextComponent
+      ),
+  },
+  {
+    path: 'spinner-contrast',
+    loadComponent: () =>
+      import('./spinner-contrast/spinner-contrast.component').then(
+        (e) => e.SpinnerContrastComponent
       ),
   },
   {

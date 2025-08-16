@@ -1,0 +1,13 @@
+<div class="ax-flex ax-flex-col ax-gap-3">
+  <ax-button text="Toggle" color="secondary" (onClick)="toggle()"></ax-button>
+
+  <div
+    class="ax-h-48 ax-border ax-rounded ax-p-4 ax-relative"
+    [axIsLoading]="isLoading"
+  >
+    <div>This is content inside the container.</div>
+    <section class="ax-mt-2">
+      Overlay should cover this section when loading is true.
+    </section>
+  </div>
+</div>
