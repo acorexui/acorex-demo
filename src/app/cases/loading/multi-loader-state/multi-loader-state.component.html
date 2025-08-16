@@ -2,7 +2,7 @@
   <div class="ax-flex ax-items-center ax-gap-2">
     <ax-button
       text="Save"
-      color="secondary"
+      color="primary"
       (onClick)="save()"
       [disabled]="(loading.isLoading$(ctx, 'SAVE') | async) === true"
     >
@@ -16,7 +16,7 @@
   <div class="ax-flex ax-items-center ax-gap-2">
     <ax-button
       text="Load"
-      color="secondary"
+      color="primary"
       (onClick)="load()"
       [disabled]="(loading.isLoading$(ctx, 'LOAD') | async) === true"
     >
