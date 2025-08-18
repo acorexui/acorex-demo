@@ -1,0 +1,21 @@
+<div style="display: flex; gap: 0.5rem; margin-bottom: 1rem">
+  <ax-button
+    [color]="'primary'"
+    (onClick)="open()"
+    [text]="'Open (draggable + dragUp)'"
+  ></ax-button>
+  <ax-button
+    [color]="'primary'"
+    (onClick)="clear()"
+    [text]="'Clear'"
+  ></ax-button>
+</div>
+
+<ul>
+  @for (e of events(); track $index) {
+  <li>
+    {{ e.data.state }} | user: {{ e.isUserInteraction }} | native:
+    {{ e.nativeEvent?.type || "-" }}
+  </li>
+  }
+</ul>

@@ -1,2 +1,9 @@
-<ax-button text="Open Action sheet" color="primary" (onClick)="open()">
-</ax-button>
+<ax-button
+  [color]="'primary'"
+  (onClick)="open()"
+  [text]="'Open Action Sheet'"
+></ax-button>
+
+@if(lastResult() !== null){
+<div style="margin-top: 1rem">Last result: {{ lastResult() | json }}</div>
+}

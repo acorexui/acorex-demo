@@ -1,0 +1,20 @@
+<ax-button
+  [color]="'primary'"
+  (onClick)="open(contentTpl)"
+  [text]="'Open Custom Content'"
+></ax-button>
+
+<ng-template #contentTpl let-data let-ref="ref">
+  <div style="padding: 1rem">
+    <h3>Inside Action Sheet</h3>
+    <p>Title: {{ data?.title }}</p>
+    <p>SubTitle: {{ data?.subTitle }}</p>
+    <p>Note (data.note): {{ data?.data?.note }}</p>
+
+    <ax-button
+      [color]="'primary'"
+      [text]="'Close from inside'"
+      (onClick)="ref.close({ from: 'custom-template', at: date() })"
+    ></ax-button>
+  </div>
+</ng-template>

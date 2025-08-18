@@ -42,4 +42,25 @@ export const routes: Routes = [
         (a) => a.DraggableComponent
       ),
   },
+  {
+    path: 'custom-content-data',
+    loadComponent: () =>
+      import('./custom-content-data/custom-content-data.component').then(
+        (m) => m.CustomContentDataComponent
+      ),
+  },
+  {
+    path: 'lifecycle-events',
+    loadComponent: () =>
+      import('./lifecycle-events/lifecycle-events.component').then(
+        (m) => m.LifecycleEventsComponent
+      ),
+  },
+  {
+    path: 'drag-up-fullscreen',
+    loadComponent: () =>
+      import('./drag-up-fullscreen/drag-up-fullscreen.component').then(
+        (m) => m.DragUpFullscreenComponent
+      ),
+  },
 ];
