@@ -1,0 +1,14 @@
+<ax-menu>
+  <ax-menu-item [disabled]="true">
+    <ax-text>Disabled parent</ax-text>
+  </ax-menu-item>
+  <ax-menu-item>
+    <ax-text>Actions</ax-text>
+    <ax-menu-item [disabled]="true">
+      <ax-text>Disabled child</ax-text>
+    </ax-menu-item>
+    <ax-menu-item>
+      <ax-text>Enabled child</ax-text>
+    </ax-menu-item>
+  </ax-menu-item>
+</ax-menu>

@@ -1,0 +1,19 @@
+<div class="ax-flex ax-flex-col ax-gap-4 ax-items-center ax-justify-center">
+  <div class="ax-text-sm ax-text-muted">Projected: ax-title and ax-divider</div>
+  <ax-menu [orientation]="'vertical'">
+    <ax-title>Section Header</ax-title>
+    <ax-menu-item>
+      <ax-text>Alpha</ax-text>
+    </ax-menu-item>
+    <ax-divider></ax-divider>
+    <ax-menu-item>
+      <ax-text>Beta</ax-text>
+    </ax-menu-item>
+    <ax-divider></ax-divider>
+    <ax-menu-item>
+      <ax-text>Gamma</ax-text>
+    </ax-menu-item>
+  </ax-menu>
+  <div class="ax-text-sm ax-text-muted">Data-driven: group.title and break</div>
+  <ax-menu [orientation]="'vertical'" [items]="items()"></ax-menu>
+</div>

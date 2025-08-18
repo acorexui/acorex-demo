@@ -1,0 +1,17 @@
+<ax-button
+  [color]="'primary'"
+  (click)="closeAll($event)"
+  [text]="'Close after 1 second'"
+></ax-button>
+
+<ax-menu #menuRef [closeOn]="'click'">
+  <ax-menu-item>
+    <ax-text>File</ax-text>
+    <ax-menu-item>
+      <ax-text>Open</ax-text>
+    </ax-menu-item>
+    <ax-menu-item>
+      <ax-text>Save</ax-text>
+    </ax-menu-item>
+  </ax-menu-item>
+</ax-menu>

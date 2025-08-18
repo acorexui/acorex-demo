@@ -30,4 +30,57 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./vertical/vertical.component').then((e) => e.VerticalComponent),
   },
+  {
+    path: 'data-driven',
+    loadComponent: () =>
+      import('./data-driven/items.component').then((e) => e.ItemsComponent),
+  },
+  {
+    path: 'open-close',
+    loadComponent: () =>
+      import('./open-close/triggers.component').then(
+        (e) => e.TriggersComponent
+      ),
+  },
+  {
+    path: 'disabled',
+    loadComponent: () =>
+      import('./disabled/disabled.component').then((e) => e.DisabledComponent),
+  },
+  {
+    path: 'color',
+    loadComponent: () =>
+      import('./color/color.component').then((e) => e.ColorComponent),
+  },
+  {
+    path: 'hide-arrows',
+    loadComponent: () =>
+      import('./hide-arrows/hide-arrows.component').then(
+        (e) => e.HideArrowsComponent
+      ),
+  },
+  {
+    path: 'dividers',
+    loadComponent: () =>
+      import('./dividers/dividers.component').then((e) => e.DividersComponent),
+  },
+  {
+    path: 'programmatic-close',
+    loadComponent: () =>
+      import('./programmatic-close/programmatic-close.component').then(
+        (e) => e.ProgrammaticCloseComponent
+      ),
+  },
+  {
+    path: 'rtl',
+    loadComponent: () =>
+      import('./rtl/rtl.component').then((e) => e.RtlComponent),
+  },
+  {
+    path: 'scrollable',
+    loadComponent: () =>
+      import('./scrollable/scrollable.component').then(
+        (e) => e.ScrollableComponent
+      ),
+  },
 ];

@@ -1,10 +1,17 @@
+import {
+  AXDecoratorGenericComponent,
+  AXDecoratorIconComponent,
+} from '@acorex/components/decorators';
+import { AXMenuComponent, AXMenuItemComponent } from '@acorex/components/menu';
 import { Component } from '@angular/core';
 
-import { AXDecoratorModule } from '@acorex/components/decorators';
-import { AXMenuModule } from '@acorex/components/menu';
-
 @Component({
-    templateUrl: 'multi-level.component.html',
-    imports: [AXMenuModule, AXDecoratorModule]
+  templateUrl: 'multi-level.component.html',
+  imports: [
+    AXMenuComponent,
+    AXMenuItemComponent,
+    AXDecoratorGenericComponent,
+    AXDecoratorIconComponent,
+  ],
 })
 export class MultiLevelComponent {}

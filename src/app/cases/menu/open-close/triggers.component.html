@@ -1,0 +1,48 @@
+<div
+  class="ax-flex ax-flex-col ax-gap-4 ax-h-60 ax-items-center ax-justify-center"
+>
+  <div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-2">
+    <div class="ax-text-sm ax-text-muted">
+      openOn: 'click' • closeOn: 'leave'
+    </div>
+    <ax-menu [orientation]="'vertical'" [openOn]="'click'" [closeOn]="'leave'">
+      <ax-menu-item>
+        <ax-text>File</ax-text>
+        <ax-menu-item>
+          <ax-text>Open</ax-text>
+        </ax-menu-item>
+        <ax-menu-item>
+          <ax-text>Save</ax-text>
+        </ax-menu-item>
+      </ax-menu-item>
+      <ax-menu-item>
+        <ax-text>Edit</ax-text>
+        <ax-menu-item>
+          <ax-text>Undo</ax-text>
+        </ax-menu-item>
+      </ax-menu-item>
+    </ax-menu>
+  </div>
+  <div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-2">
+    <div class="ax-text-sm ax-text-muted">
+      openOn: 'hover' • closeOn: 'click'
+    </div>
+    <ax-menu [orientation]="'vertical'" [openOn]="'hover'" [closeOn]="'click'">
+      <ax-menu-item>
+        <ax-text>File</ax-text>
+        <ax-menu-item>
+          <ax-text>Open</ax-text>
+        </ax-menu-item>
+        <ax-menu-item>
+          <ax-text>Save</ax-text>
+        </ax-menu-item>
+      </ax-menu-item>
+      <ax-menu-item>
+        <ax-text>Edit</ax-text>
+        <ax-menu-item>
+          <ax-text>Undo</ax-text>
+        </ax-menu-item>
+      </ax-menu-item>
+    </ax-menu>
+  </div>
+</div>
