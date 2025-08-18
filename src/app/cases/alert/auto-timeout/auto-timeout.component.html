@@ -1,0 +1,10 @@
+<div class="ax-flex ax-flex-col ax-gap-1">
+  @if(visible()){
+  <ax-alert color="warning" [timeOut]="3000" (onClosed)="onClosed()">
+    <ax-icon></ax-icon>
+    <ax-title>Auto closing in {{ seconds() }}s…</ax-title>
+  </ax-alert>
+  } @else {
+  <ax-button text="Show again" (onClick)="start()"></ax-button>
+  }
+</div>

@@ -1,0 +1,11 @@
+<div class="ax-flex ax-flex-col ax-gap-1">
+  <ax-alert
+    [color]="color()"
+    (colorChange)="log($event)"
+    (onOptionChanged)="log($event)"
+  >
+    <ax-icon></ax-icon>
+    <ax-title>Events</ax-title>
+  </ax-alert>
+  <ax-button text="Toggle color" (onClick)="toggleColor()"></ax-button>
+</div>
