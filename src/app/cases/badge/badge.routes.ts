@@ -29,4 +29,18 @@ export const routes: Routes = [
         (e) => e.MiniBadgeComponent
       ),
   },
+  {
+    path: 'badge-in-button',
+    loadComponent: () =>
+      import('./badge-in-button/badge-in-button.component').then(
+        (e) => e.BadgeInButtonComponent
+      ),
+  },
+  {
+    path: 'single-character',
+    loadComponent: () =>
+      import('./single-character/single-character.component').then(
+        (e) => e.SingleCharacterComponent
+      ),
+  },
 ];

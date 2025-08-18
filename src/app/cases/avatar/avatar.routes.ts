@@ -54,4 +54,19 @@ export const routes: Routes = [
         (e) => e.AvatarGroupComponent
       ),
   },
+  {
+    path: 'defaults',
+    loadComponent: () =>
+      import('./defaults/defaults.component').then((e) => e.DefaultsComponent),
+  },
+  {
+    path: 'content',
+    loadComponent: () =>
+      import('./content/content.component').then((e) => e.ContentComponent),
+  },
+  {
+    path: 'group',
+    loadComponent: () =>
+      import('./group/group.component').then((e) => e.GroupComponent),
+  },
 ];
