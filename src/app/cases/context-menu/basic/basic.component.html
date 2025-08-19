@@ -1,0 +1,22 @@
+<div class="ax-rounded ax-bg-surface ax-p-4">
+  <h3>Basic Context Menu</h3>
+  <p>Right-click the gray box to open the menu. Disabled and nested items are included.</p>
+
+  <div
+    class="basic-target ax-rounded"
+    style="user-select:none; background:#f5f5f7; padding:32px; border-radius:8px;"
+  >
+    Right-click here
+  </div>
+
+  <div class="ax-mt-2 ax-text-secondary">Last action: {{ lastAction || '—' }}</div>
+
+  <ax-context-menu
+    target=".basic-target"
+    (onOpening)="handleOpening($event)"
+    (onItemClick)="handleItemClick($event)"
+  >
+  </ax-context-menu>
+</div>
+
+

@@ -1,0 +1,36 @@
+<div style="display:flex; gap:8px; margin-bottom:12px">
+  <button type="button" (click)="toggleReplies()">Toggle replies</button>
+  <button type="button" (click)="scrollToR2()">Scroll to reply r2</button>
+  </div>
+
+<ax-comment-container #container>
+  <ax-comment-item #parentItem id="p1" [replyCount]="2">
+    <ax-avatar></ax-avatar>
+    <ax-title>Moderator</ax-title>
+    <ax-comment-date>now</ax-comment-date>
+
+    <ax-content>
+      Please keep the discussion on topic. See replies below.
+    </ax-content>
+
+    <!-- Nested replies inside collapsible area -->
+    <ax-comment-item id="r1">
+      <ax-avatar></ax-avatar>
+      <ax-title>Alice</ax-title>
+      <ax-comment-date>1 min ago</ax-comment-date>
+      <ax-content>Understood, thanks.</ax-content>
+    </ax-comment-item>
+
+    <ax-comment-item id="r2">
+      <ax-avatar></ax-avatar>
+      <ax-title>Bob</ax-title>
+      <ax-comment-date>just now</ax-comment-date>
+      <ax-content>Apologies, will do.</ax-content>
+    </ax-comment-item>
+
+    <ax-comment-reply-more>Show more</ax-comment-reply-more>
+    <ax-comment-reply-text>Reply</ax-comment-reply-text>
+  </ax-comment-item>
+</ax-comment-container>
+
+

@@ -1,0 +1,34 @@
+<div class="ax-rounded ax-bg-surface ax-p-4 ax-flex ax-flex-col ax-gap-3">
+  <div>
+    <h3>Dynamic Items via onOpening</h3>
+    <p>
+      Right-click each chip; the menu adds a context-aware “Filter by ...” item
+      for that chip.
+    </p>
+  </div>
+
+  <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+    <ax-chips
+      text="Design"
+      class="dyn-target chip"
+      data-tag="Design"
+    ></ax-chips>
+    <ax-chips
+      text="Backend"
+      class="dyn-target chip"
+      data-tag="Backend"
+    ></ax-chips>
+    <ax-chips text="QA" class="dyn-target chip" data-tag="QA"></ax-chips>
+  </div>
+
+  <div class="ax-text-secondary">
+    Last action: {{ lastAction || "—" }}
+  </div>
+
+  <ax-context-menu
+    target=".dyn-target"
+    (onOpening)="handleOpening($event)"
+    (onItemClick)="handleItemClick($event)"
+  >
+  </ax-context-menu>
+</div>

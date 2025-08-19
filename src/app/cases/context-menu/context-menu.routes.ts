@@ -7,4 +7,19 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
+  {
+    path: 'basic',
+    loadComponent: () =>
+      import('./basic/basic.component').then((m) => m.BasicContextMenuComponent),
+  },
+  {
+    path: 'dynamic-items',
+    loadComponent: () =>
+      import('./dynamic-items/dynamic-items.component').then((m) => m.DynamicItemsContextMenuComponent),
+  },
+  {
+    path: 'programmatic-open',
+    loadComponent: () =>
+      import('./programmatic-open/programmatic-open.component').then((m) => m.ProgrammaticOpenContextMenuComponent),
+  },
 ];

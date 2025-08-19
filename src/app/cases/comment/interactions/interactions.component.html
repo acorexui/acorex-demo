@@ -1,0 +1,46 @@
+<ax-comment-container>
+  <!-- Comment 1 -->
+  <ax-comment-item id="c1">
+    <ax-avatar></ax-avatar>
+    <ax-title>Jane Doe</ax-title>
+    <ax-comment-date>2 hours ago</ax-comment-date>
+    <ax-comment-menu-options>...</ax-comment-menu-options>
+
+    <ax-content>
+      Great article! The comment system feels smooth.
+    </ax-content>
+
+    <div class="ax-reactions">
+      <ax-comment-like
+        [liked]="liked1()"
+        (likedChange)="liked1.set($event)"
+        (onLiked)="lastLiked = $event"
+      >12</ax-comment-like>
+
+      <ax-comment-reply-text>Reply</ax-comment-reply-text>
+    </div>
+  </ax-comment-item>
+
+  <!-- Comment 2 -->
+  <ax-comment-item id="c2">
+    <ax-avatar></ax-avatar>
+    <ax-title>John Smith</ax-title>
+    <ax-comment-date>yesterday</ax-comment-date>
+
+    <ax-content>
+      Thanks for sharing. Looking forward to more updates.
+    </ax-content>
+
+    <div class="ax-reactions">
+      <ax-comment-like
+        [liked]="liked2()"
+        (likedChange)="liked2.set($event)"
+        (onLiked)="lastLiked = $event"
+      >7</ax-comment-like>
+
+      <ax-comment-reply-text>Reply</ax-comment-reply-text>
+    </div>
+  </ax-comment-item>
+</ax-comment-container>
+
+

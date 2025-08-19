@@ -7,4 +7,18 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
+  {
+    path: 'interactions',
+    loadComponent: () =>
+      import('./interactions/interactions.component').then(
+        (m) => m.InteractionsComponent
+      ),
+  },
+  {
+    path: 'programmatic',
+    loadComponent: () =>
+      import('./programmatic/programmatic.component').then(
+        (m) => m.ProgrammaticComponent
+      ),
+  },
 ];

@@ -1,0 +1,6 @@
+<ax-button
+  class="ax-mb-2"
+  [text]="'Confirm Delete'"
+  (onClick)="askConfirm()"
+></ax-button>
+<div>Result: {{ resultText() ?? "-" }}</div>

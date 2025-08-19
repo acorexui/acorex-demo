@@ -12,4 +12,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./custom/custom.component').then((e) => e.CustomComponent),
   },
+  {
+    path: 'infinite-scroll',
+    loadComponent: () =>
+      import('./infinite-scroll/infinite-scroll.component').then(
+        (c) => c.InfiniteScrollComponent
+      ),
+  },
 ];

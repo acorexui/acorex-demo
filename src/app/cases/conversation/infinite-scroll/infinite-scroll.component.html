@@ -1,0 +1,15 @@
+<div class="ax-min-w-[50rem]">
+  <ax-conversation-container [chatData]="chat()">
+    <ax-conversation-view
+      chatBoxHeight="30vh"
+      (onScrollEnd)="loadOlder()"
+    ></ax-conversation-view>
+
+    <ax-conversation-input
+      placeholder="Type to append newer messages"
+      (onSendClick)="handleSend($event)"
+    >
+      <ax-icon><i class="ax-icon ax-icon-send"></i></ax-icon>
+    </ax-conversation-input>
+  </ax-conversation-container>
+</div>
