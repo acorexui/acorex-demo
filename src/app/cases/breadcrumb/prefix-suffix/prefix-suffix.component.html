@@ -1,0 +1,24 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-3 ax-py-6"
+>
+  <ax-breadcrumbs>
+    <ax-breadcrumbs-item>
+      <ax-prefix>
+        <ax-icon icon="far fa-home"></ax-icon>
+      </ax-prefix>
+      <a>Home</a>
+    </ax-breadcrumbs-item>
+    <ax-breadcrumbs-item>
+      <a>Orders</a>
+      <ax-suffix>
+        <span
+          class="ax-text-xs ax-rounded-full ax-bg-primary-500 ax-text-white ax-px-2"
+          >24</span
+        >
+      </ax-suffix>
+    </ax-breadcrumbs-item>
+    <ax-breadcrumbs-item [active]="true">
+      <a>Order #3521</a>
+    </ax-breadcrumbs-item>
+  </ax-breadcrumbs>
+</div>

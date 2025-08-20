@@ -1,0 +1,23 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-3 ax-py-6"
+>
+  <div>
+    <ax-button
+      look="solid"
+      color="primary"
+      (onClick)="restart()"
+      text="Simulate route data load"
+    ></ax-button>
+  </div>
+  <ax-breadcrumbs>
+    @for (c of crumbs(); track $index) {
+    <ax-breadcrumbs-item [active]="c.active">
+      @if (c.url) {
+      <a [routerLink]="c.url">{{ c.label }}</a>
+      } @else {
+      <a>{{ c.label }}</a>
+      }
+    </ax-breadcrumbs-item>
+    }
+  </ax-breadcrumbs>
+</div>

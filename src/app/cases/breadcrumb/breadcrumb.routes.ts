@@ -31,4 +31,32 @@ export const routes: Routes = [
         (e) => e.IconModeComponent
       ),
   },
+  {
+    path: 'custom-divider',
+    loadComponent: () =>
+      import('./custom-divider/custom-divider.component').then(
+        (e) => e.CustomDividerComponent
+      ),
+  },
+  {
+    path: 'prefix-suffix',
+    loadComponent: () =>
+      import('./prefix-suffix/prefix-suffix.component').then(
+        (e) => e.PrefixSuffixComponent
+      ),
+  },
+  {
+    path: 'dynamic-async',
+    loadComponent: () =>
+      import('./dynamic-async/dynamic-async.component').then(
+        (e) => e.DynamicAsyncComponent
+      ),
+  },
+  {
+    path: 'overflow-scroll',
+    loadComponent: () =>
+      import('./overflow-scroll/overflow-scroll.component').then(
+        (e) => e.OverflowScrollComponent
+      ),
+  },
 ];
