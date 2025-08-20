@@ -1,7 +1,11 @@
 <div class="ax-flex ax-flex-col ax-gap-1">
+  @if (visible()) {
   <ax-button text="Close now" (onClick)="a.close()"></ax-button>
-  <ax-alert #a color="danger">
+  <ax-alert #a color="danger" (onClosed)="onClosed()">
     <ax-icon></ax-icon>
     <ax-title>Manual close</ax-title>
   </ax-alert>
+  } @else {
+  <ax-button text="Show alert" (onClick)="show()"></ax-button>
+  }
 </div>

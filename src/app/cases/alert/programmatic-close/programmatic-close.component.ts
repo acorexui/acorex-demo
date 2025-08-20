@@ -4,7 +4,7 @@ import {
   AXDecoratorGenericComponent,
   AXDecoratorIconComponent,
 } from '@acorex/components/decorators';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   templateUrl: 'programmatic-close.component.html',
@@ -15,4 +15,14 @@ import { Component } from '@angular/core';
     AXDecoratorGenericComponent,
   ],
 })
-export class ProgrammaticCloseComponent {}
+export class ProgrammaticCloseComponent {
+  visible = signal(true);
+
+  show() {
+    this.visible.set(true);
+  }
+
+  onClosed() {
+    this.visible.set(false);
+  }
+}

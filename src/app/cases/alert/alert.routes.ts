@@ -52,4 +52,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./events/events.component').then((e) => e.EventsComponent),
   },
+  {
+    path: 'long-content',
+    loadComponent: () =>
+      import('./long-content/long-content.component').then(
+        (e) => e.LongContentComponent
+      ),
+  },
 ];
