@@ -18,11 +18,6 @@ export const routes: Routes = [
       import('./look/look.component').then((e) => e.LookComponent),
   },
   {
-    path: 'text',
-    loadComponent: () =>
-      import('./text/text.component').then((e) => e.TextComponent),
-  },
-  {
     path: 'mini-badge',
     loadComponent: () =>
       import('./mini-badge/mini-badge.component').then(
@@ -41,6 +36,13 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./single-character/single-character.component').then(
         (e) => e.SingleCharacterComponent
+      ),
+  },
+  {
+    path: 'prefix-suffix',
+    loadComponent: () =>
+      import('./prefix-suffix/prefix-suffix.component').then(
+        (e) => e.PrefixSuffixComponent
       ),
   },
 ];

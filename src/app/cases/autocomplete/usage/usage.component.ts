@@ -17,6 +17,6 @@ export class UsageComponent {
   ]);
 
   handleValueChange(tags: AXValueChangedEvent<string[]>) {
-    console.log(tags);
+    console.log(tags.value);
   }
 }
