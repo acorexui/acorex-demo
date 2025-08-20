@@ -4,15 +4,20 @@
   (onClick)="openActionSheet()"
 ></ax-button>
 
-<ng-template #customTemplate>
-  <div class="ax-px-16 ax-py-8">
+<ng-template #customTemplate let-data let-ref="ref">
+  <div class="ax-p-6 ax-flex ax-flex-col ax-gap-4">
     <ax-result>
       <ax-icon class="fa-solid fa-circle-check ax-text-success-500"> </ax-icon>
-      <ax-title> Your payment information has been received </ax-title>
+      <ax-title>{{ data?.title }}</ax-title>
       <ax-content>
-        Your order will arrive in less than 24 hours. You can track your order
-        from the sales support department
+        {{ data?.subTitle }} <br />
+        Note : {{ data?.data?.note }}
       </ax-content>
     </ax-result>
+    <ax-button
+      color="primary"
+      text="Close from inside"
+      (onClick)="ref.close({ from: 'custom-template' })"
+    ></ax-button>
   </div>
 </ng-template>

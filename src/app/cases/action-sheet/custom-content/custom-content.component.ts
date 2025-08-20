@@ -27,8 +27,11 @@ export class ActionSheetCustomContentComponent {
 
   openActionSheet() {
     this.actionSheetService.open({
-      title: 'Choose an action',
+      title: 'Custom Content',
+      subTitle:
+        'Title and subtitle are passed via data. The button below closes the action sheet and returns a payload.',
       header: false,
+      data: { note: 'Payload passed to the template' },
       content: this.customTemplate(),
     });
   }

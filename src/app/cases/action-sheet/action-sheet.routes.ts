@@ -8,13 +8,6 @@ export const routes: Routes = [
       import('./usage/usage.component').then((a) => a.UsageComponent),
   },
   {
-    path: 'list-item',
-    loadComponent: () =>
-      import('./list-item/list-item.component').then(
-        (a) => a.ActionSheetListItemComponent
-      ),
-  },
-  {
     path: 'custom-content',
     loadComponent: () =>
       import('./custom-content/custom-content.component').then(
@@ -29,24 +22,10 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'on-close',
-    loadComponent: () =>
-      import('./on-close/on-close.component').then(
-        (a) => a.ActionSheetOnCloseComponent
-      ),
-  },
-  {
     path: 'draggable',
     loadComponent: () =>
       import('./draggable/draggable.component').then(
         (a) => a.DraggableComponent
-      ),
-  },
-  {
-    path: 'custom-content-data',
-    loadComponent: () =>
-      import('./custom-content-data/custom-content-data.component').then(
-        (m) => m.CustomContentDataComponent
       ),
   },
   {
