@@ -1,0 +1,24 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-3 ax-py-6"
+>
+  <div class="ax-flex ax-items-center ax-gap-2">
+    <ax-check-box
+      [ngModel]="disabled()"
+      (onValueChanged)="disabled.set($event.value)"
+    >
+      <ax-label>disabled = {{ disabled() }}</ax-label>
+      Disabled second item
+    </ax-check-box>
+  </div>
+  <ax-breadcrumbs>
+    <ax-breadcrumbs-item>
+      <a>Home</a>
+    </ax-breadcrumbs-item>
+    <ax-breadcrumbs-item [disabled]="disabled()">
+      <a>Orders</a>
+    </ax-breadcrumbs-item>
+    <ax-breadcrumbs-item [active]="true">
+      <a aria-current="page">Order #3521</a>
+    </ax-breadcrumbs-item>
+  </ax-breadcrumbs>
+</div>

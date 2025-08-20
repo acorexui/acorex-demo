@@ -42,4 +42,18 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./look/look.component').then((e) => e.LookComponent),
   },
+  {
+    path: 'icon-only',
+    loadComponent: () =>
+      import('./icon-only/icon-only.component').then(
+        (e) => e.IconOnlyComponent
+      ),
+  },
+  {
+    path: 'many-items',
+    loadComponent: () =>
+      import('./many-items/many-items.component').then(
+        (e) => e.ManyItemsComponent
+      ),
+  },
 ];

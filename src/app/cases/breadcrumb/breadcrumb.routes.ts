@@ -59,4 +59,18 @@ export const routes: Routes = [
         (e) => e.OverflowScrollComponent
       ),
   },
+  {
+    path: 'disabled-change',
+    loadComponent: () =>
+      import('./disabled-change/disabled-change.component').then(
+        (e) => e.DisabledChangeComponent
+      ),
+  },
+  {
+    path: 'long-labels-tooltip',
+    loadComponent: () =>
+      import('./long-labels-tooltip/long-labels-tooltip.component').then(
+        (e) => e.LongLabelsTooltipComponent
+      ),
+  },
 ];
