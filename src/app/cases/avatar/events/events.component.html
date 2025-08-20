@@ -1,0 +1,25 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-py-6"
+>
+  <div class="ax-flex ax-gap-2">
+    <ax-button (onClick)="cycleColor()" text="Cycle color"></ax-button>
+    <ax-button (onClick)="dec()" text="- size"></ax-button>
+    <ax-button (onClick)="inc()" text="+ size"></ax-button>
+  </div>
+
+  <ax-avatar
+    [color]="color()"
+    [size]="size()"
+    (colorChange)="onColorChange($event)"
+    (sizeChange)="onSizeChange($event)"
+    (onOptionChanged)="onOptionChanged($event)"
+  >
+    <ax-text>EV</ax-text>
+  </ax-avatar>
+
+  <div class="ax-flex ax-flex-col ax-gap-1 ax-w-[400px] ax-px-4">
+    @for(item of logs();track $index){
+    <div>{{ item }}</div>
+    }
+  </div>
+</div>

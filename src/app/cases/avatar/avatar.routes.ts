@@ -55,6 +55,16 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'badge',
+    loadComponent: () =>
+      import('./badge/badge.component').then((e) => e.BadgeComponent),
+  },
+  {
+    path: 'events',
+    loadComponent: () =>
+      import('./events/events.component').then((e) => e.EventsComponent),
+  },
+  {
     path: 'defaults',
     loadComponent: () =>
       import('./defaults/defaults.component').then((e) => e.DefaultsComponent),

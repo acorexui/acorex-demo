@@ -1,0 +1,12 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-2">
+  <ax-tag-box
+    [addOnComma]="false"
+    [(ngModel)]="tagBoxValue"
+    [allowDuplicateValues]="true"
+    placeholder="Enter your tags..."
+    (onValueChanged)="handleValueChange($event)"
+  >
+    <ax-autocomplete [dataSource]="data()"></ax-autocomplete>
+  </ax-tag-box>
+  <div class="ax-text-xs ax-text-muted">Try typing: Ali, Hasan, Reza</div>
+</div>

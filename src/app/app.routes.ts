@@ -566,6 +566,12 @@ export const appRoutes: Route[] = [
       import('./cases/kanban/kanban.routes').then((c) => c.routes),
   },
   {
+    path: 'autocomplete',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/autocomplete/autocomplete.routes').then((c) => c.routes),
+  },
+  {
     path: 'cdk',
     loadChildren: () => import('./cases/cdk/cdk.routes').then((c) => c.routes),
   },

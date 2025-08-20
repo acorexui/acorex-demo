@@ -1,0 +1,55 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-py-6"
+>
+  <div class="ax-flex ax-items-center ax-justify-center ax-gap-6">
+    <ax-avatar [size]="64">
+      <ax-text>AM</ax-text>
+      <ax-badge
+        [color]="
+          status() === 'online'
+            ? 'success'
+            : status() === 'busy'
+            ? 'warning'
+            : 'secondary'
+        "
+        class="ax-absolute ax-bottom-0 ax-right-0"
+      >
+      </ax-badge>
+    </ax-avatar>
+
+    <ax-avatar color="primary" [size]="64">
+      <ax-icon><i class="fa-light fa-user"></i></ax-icon>
+      <ax-badge
+        [color]="
+          status() === 'online'
+            ? 'success'
+            : status() === 'busy'
+            ? 'warning'
+            : 'secondary'
+        "
+        class="ax-absolute ax-bottom-0 ax-right-0"
+      >
+      </ax-badge>
+    </ax-avatar>
+
+    <ax-avatar [size]="64">
+      <ax-image src="https://i.pravatar.cc/300"></ax-image>
+      <ax-badge
+        [color]="
+          status() === 'online'
+            ? 'success'
+            : status() === 'busy'
+            ? 'warning'
+            : 'secondary'
+        "
+        class="ax-absolute ax-bottom-0 ax-right-0"
+      >
+      </ax-badge>
+    </ax-avatar>
+  </div>
+
+  <ax-button
+    (onClick)="cycle()"
+    text="Change status ({{ status() }})"
+  ></ax-button>
+</div>
