@@ -29,4 +29,14 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./holiday/holiday.component').then((e) => e.HolidayComponent),
   },
+  {
+    path: 'navigation',
+    loadComponent: () =>
+      import('./navigation/navigation.component').then((e) => e.NavigationComponent),
+  },
+  {
+    path: 'range',
+    loadComponent: () =>
+      import('./range/range.component').then((e) => e.RangeComponent),
+  },
 ];

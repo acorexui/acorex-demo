@@ -1,0 +1,20 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4">
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+    <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
+      <small class="ax-text-center">
+        Selected:
+        {{
+          selectedRange().start ? selectedRange().start!.toDateString() : "None"
+        }}
+        to
+        {{ selectedRange().end ? selectedRange().end!.toDateString() : "None" }}
+      </small>
+    </div>
+
+    <ax-calendar-range
+      [value]="selectedRange()"
+      (onValueChanged)="onRangeChanged($event)"
+    >
+    </ax-calendar-range>
+  </div>
+</div>
