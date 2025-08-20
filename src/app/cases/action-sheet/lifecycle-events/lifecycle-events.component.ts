@@ -9,7 +9,6 @@ import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-lifecycle-events',
-  standalone: true,
   imports: [AXButtonComponent, AXActionSheetModule],
   templateUrl: './lifecycle-events.component.html',
 })

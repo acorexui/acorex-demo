@@ -7,7 +7,6 @@ import { Component, TemplateRef, inject, signal } from '@angular/core';
 
 @Component({
   selector: 'app-custom-content-data',
-  standalone: true,
   imports: [AXButtonComponent, AXActionSheetModule],
   templateUrl: './custom-content-data.component.html',
 })

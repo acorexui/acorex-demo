@@ -9,7 +9,6 @@ import { Component, inject, signal } from '@angular/core';
 
 @Component({
   selector: 'app-usage',
-  standalone: true,
   imports: [JsonPipe, AXActionSheetModule, AXButtonComponent],
   templateUrl: './usage.component.html',
 })
