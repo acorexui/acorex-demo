@@ -54,4 +54,25 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./look/look.component').then((l) => l.LookComponent),
   },
+  {
+    path: 'toggleable-selected',
+    loadComponent: () =>
+      import('./toggleable-selected/toggleable-selected.component').then(
+        (c) => c.ToggleableSelectedComponent
+      ),
+  },
+  {
+    path: 'form-submit-reset',
+    loadComponent: () =>
+      import('./form-submit-reset/form-submit-reset.component').then(
+        (c) => c.FormSubmitResetComponent
+      ),
+  },
+  {
+    path: 'loading-text-async',
+    loadComponent: () =>
+      import('./loading-text-async/loading-text-async.component').then(
+        (c) => c.LoadingTextAsyncComponent
+      ),
+  },
 ];

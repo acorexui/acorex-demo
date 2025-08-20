@@ -1,0 +1,68 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-px-4"
+>
+  <section class="ax-w-full">
+    <h4 class="ax-text-sm ax-mb-2">None (no selection)</h4>
+    <ax-button-group
+      [selection]="modeNone"
+      (onClick)="handleGroupClick($event)"
+      (selectedButtonChange)="handleSelectedButtonChange($event)"
+    >
+      <ax-button-group-item name="bold" text="Bold"></ax-button-group-item>
+      <ax-button-group-item name="italic" text="Italic"></ax-button-group-item>
+      <ax-button-group-item
+        name="underline"
+        text="Underline"
+      ></ax-button-group-item>
+    </ax-button-group>
+  </section>
+
+  <section class="ax-w-full">
+    <h4 class="ax-text-sm ax-mb-2">Single (with pre-selected)</h4>
+    <ax-button-group
+      [selection]="modeSingle"
+      (onClick)="handleGroupClick($event)"
+      (selectedButtonChange)="handleSelectedButtonChange($event)"
+    >
+      <ax-button-group-item
+        name="list"
+        text="List"
+        [selected]="true"
+      ></ax-button-group-item>
+      <ax-button-group-item name="grid" text="Grid"></ax-button-group-item>
+      <ax-button-group-item
+        name="gallery"
+        text="Gallery"
+      ></ax-button-group-item>
+    </ax-button-group>
+  </section>
+
+  <section class="ax-w-full">
+    <h4 class="ax-text-sm ax-mb-2">Multiple (with pre-selected)</h4>
+    <ax-button-group
+      [selection]="modeMultiple"
+      (onClick)="handleGroupClick($event)"
+      (selectedButtonChange)="handleSelectedButtonChange($event)"
+    >
+      <ax-button-group-item
+        name="bold"
+        text="Bold"
+        [selected]="true"
+      ></ax-button-group-item>
+      <ax-button-group-item
+        name="italic"
+        text="Italic"
+        [selected]="true"
+      ></ax-button-group-item>
+      <ax-button-group-item
+        name="underline"
+        text="Underline"
+      ></ax-button-group-item>
+    </ax-button-group>
+  </section>
+
+  <div class="ax-text-xs ax-text-subtle ax-w-full">
+    <div>Last onClick: {{ lastGroupEvent() }}</div>
+    <div>Last selectedButtonChange: {{ lastSelectedButton() }}</div>
+  </div>
+</div>

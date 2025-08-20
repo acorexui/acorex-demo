@@ -1,0 +1,14 @@
+<div class="ax-flex ax-flex-col md:ax-flex-row ax-items-center ax-gap-4">
+  <ax-button
+    [toggleable]="true"
+    text="Toggle (default off)"
+    (selectedChange)="onSelectedChange('toggle', $event)"
+  ></ax-button>
+  <ax-button
+    [toggleable]="true"
+    [selected]="true"
+    color="primary"
+    text="Initially selected"
+    (selectedChange)="onSelectedChange('initial', $event)"
+  ></ax-button>
+</div>

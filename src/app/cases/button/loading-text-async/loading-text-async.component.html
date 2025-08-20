@@ -1,0 +1,19 @@
+<div class="ax-flex ax-flex-col md:ax-flex-row ax-items-center ax-gap-4">
+  <ax-button
+    color="primary"
+    (onClick)="start()"
+    [text]="buttonText()"
+    [disabled]="isDisabled()"
+    [loadingText]="loadingText()"
+  >
+    @if(step() === 'loading'){
+    <ax-loading></ax-loading>
+    }
+  </ax-button>
+  <ax-button
+    look="link"
+    text="Restart"
+    color="default"
+    (onClick)="restart()"
+  ></ax-button>
+</div>

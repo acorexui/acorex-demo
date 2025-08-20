@@ -1,0 +1,54 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-px-4"
+>
+  <section class="ax-w-full">
+    <h4 class="ax-text-sm ax-mb-2">Group look/color propagated to items</h4>
+    <ax-button-group look="solid" color="primary">
+      <ax-button-group-item text="Orders"></ax-button-group-item>
+      <ax-button-group-item text="Invoices"></ax-button-group-item>
+      <ax-button-group-item text="Shipments"></ax-button-group-item>
+    </ax-button-group>
+    <p class="ax-text-xs ax-mt-1">Group sets look/color; items follow.</p>
+  </section>
+
+  <section class="ax-w-full">
+    <h4 class="ax-text-sm ax-mb-2">Per-item color overrides</h4>
+    <ax-button-group look="solid" color="default">
+      <ax-button-group-item text="Default"></ax-button-group-item>
+      <ax-button-group-item
+        text="Primary"
+        color="primary"
+      ></ax-button-group-item>
+      <ax-button-group-item
+        text="Success"
+        color="success"
+      ></ax-button-group-item>
+      <ax-button-group-item text="Danger" color="danger"></ax-button-group-item>
+    </ax-button-group>
+    <p class="ax-text-xs ax-mt-1">
+      Items can override <code>color</code>. Group <code>look</code> still
+      applies.
+    </p>
+  </section>
+
+  <section class="ax-w-full">
+    <h4 class="ax-text-sm ax-mb-2">
+      Per-item look does not override (group forces look)
+    </h4>
+    <ax-button-group look="outline" color="primary">
+      <ax-button-group-item text="Outline (group)"></ax-button-group-item>
+      <ax-button-group-item
+        text="Trying solid (ignored)"
+        look="solid"
+      ></ax-button-group-item>
+      <ax-button-group-item
+        text="Trying ghost (ignored)"
+        look="ghost"
+      ></ax-button-group-item>
+    </ax-button-group>
+    <p class="ax-text-xs ax-mt-1">
+      Group binds <code>look</code> to items; per-item <code>look</code> is
+      overridden.
+    </p>
+  </section>
+</div>

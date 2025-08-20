@@ -8,6 +8,13 @@ export const routes: Routes = [
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
   {
+    path: 'selection-modes',
+    loadComponent: () =>
+      import('./selection-modes/selection-modes.component').then(
+        (e) => e.SelectionModesComponent
+      ),
+  },
+  {
     path: 'look',
     loadComponent: () =>
       import('./look/look.component').then((e) => e.LookComponent),
@@ -34,6 +41,25 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./dropdown-items/dropdown-items.component').then(
         (e) => e.DropdownButtonComponent
+      ),
+  },
+  {
+    path: 'per-item-overrides',
+    loadComponent: () =>
+      import('./per-item-overrides/per-item-overrides.component').then(
+        (e) => e.PerItemOverridesComponent
+      ),
+  },
+  {
+    path: 'dividers',
+    loadComponent: () =>
+      import('./dividers/dividers.component').then((e) => e.DividersComponent),
+  },
+  {
+    path: 'icon-only',
+    loadComponent: () =>
+      import('./icon-only/icon-only.component').then(
+        (e) => e.IconOnlyComponent
       ),
   },
 ];

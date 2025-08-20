@@ -1,0 +1,27 @@
+<div class="ax-flex ax-flex-col ax-gap-3 ax-w-full md:ax-w-2/3 ax-px-4">
+  <form
+    (submit)="onSubmit($event)"
+    (reset)="onReset()"
+    class="ax-flex ax-items-center ax-gap-2"
+  >
+    <ax-button
+      [type]="'submit'"
+      look="solid"
+      color="primary"
+      text="Submit"
+    ></ax-button>
+    <ax-button
+      [type]="'reset'"
+      look="outline"
+      color="primary"
+      text="Reset"
+    ></ax-button>
+    <ax-button
+      [type]="'button'"
+      look="link"
+      color="default"
+      text="No-op Button"
+    ></ax-button>
+  </form>
+  <div class="ax-text-sm ax-opacity-70">{{ message }}</div>
+</div>
