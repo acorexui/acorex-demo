@@ -52,7 +52,7 @@ export class DraggableComponent {
         title: this.options().title,
         closeButton: false,
         draggable: true,
-        dragUp: true,
+        dragUp: false,
       })
       .then((c) => {
         console.log('Then Actionsheet', c);

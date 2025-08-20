@@ -42,7 +42,7 @@ export class ActionSheetListItemComponent {
   openActionSheet() {
     this.actionSheetService.open({
       items: this.actionSheetItems(),
-      title: 'Choos an action',
+      title: 'Choose an action',
     });
   }
 }

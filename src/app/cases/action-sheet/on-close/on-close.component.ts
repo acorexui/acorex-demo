@@ -8,6 +8,7 @@ import { Component, inject, signal } from '@angular/core';
 
 @Component({
   templateUrl: 'on-close.component.html',
+  standalone: true,
   imports: [AXButtonComponent, AXActionSheetModule],
 })
 export class ActionSheetOnCloseComponent {

@@ -1,9 +1,13 @@
-<ax-button
-  [color]="'primary'"
-  (onClick)="open()"
-  [text]="'Open Action Sheet'"
-></ax-button>
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-3 ax-py-6"
+>
+  <ax-button
+    [color]="'primary'"
+    (onClick)="open()"
+    [text]="'Open Action Sheet'"
+  ></ax-button>
 
-@if(lastResult() !== null){
-<div style="margin-top: 1rem">Last result: {{ lastResult() | json }}</div>
-}
+  @if(lastResult() !== null){
+  <small class="ax-mt-4">Last result: {{ lastResult() | json }}</small>
+  }
+</div>

@@ -1,4 +1,4 @@
-<div style="display: flex; gap: 0.5rem; margin-bottom: 1rem">
+<div class="ax-flex ax-gap-2 ax-mb-4">
   <ax-button
     [color]="'primary'"
     (onClick)="open()"
@@ -11,7 +11,7 @@
   ></ax-button>
 </div>
 
-<ul>
+<ul class="ax-flex ax-flex-col ax-gap-1">
   @for (e of events(); track $index) {
   <li>
     {{ e.data.state }} | user: {{ e.isUserInteraction }} | native:
