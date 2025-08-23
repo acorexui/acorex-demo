@@ -21,8 +21,4 @@ export class ProgrammaticCloseComponent {
   show() {
     this.visible.set(true);
   }
-
-  onClosed() {
-    this.visible.set(false);
-  }
 }
