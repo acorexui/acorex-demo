@@ -1,0 +1,23 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-2 ax-px-4"
+>
+  <div class="ax-flex ax-gap-2 ax-items-center">
+    <ax-label>Depth:</ax-label>
+    <ax-button
+      text="Day"
+      (click)="setDepth('day')"
+      [class.ax-state-selected]="depth() === 'day'"
+    ></ax-button>
+    <ax-button
+      text="Month"
+      (click)="setDepth('month')"
+      [class.ax-state-selected]="depth() === 'month'"
+    ></ax-button>
+    <ax-button
+      text="Year"
+      (click)="setDepth('year')"
+      [class.ax-state-selected]="depth() === 'year'"
+    ></ax-button>
+  </div>
+  <ax-calendar-range [depth]="depth()"></ax-calendar-range>
+</div>

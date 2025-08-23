@@ -1,0 +1,10 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4">
+  <ax-check-box [isLoading]="isLoading()">
+    <ax-label>Processing...</ax-label>
+  </ax-check-box>
+
+  <ax-button
+    text="Toggle Loading"
+    (click)="isLoading.set(!isLoading())"
+  ></ax-button>
+</div>

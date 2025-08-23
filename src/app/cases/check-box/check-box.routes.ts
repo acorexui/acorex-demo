@@ -23,4 +23,28 @@ export const routes: Routes = [
         (e) => e.IndeterminateComponent
       ),
   },
+  {
+    path: 'disabled-readonly',
+    loadComponent: () =>
+      import('./disabled-readonly/disabled-readonly.component').then(
+        (e) => e.DisabledReadonlyComponent
+      ),
+  },
+  {
+    path: 'loading',
+    loadComponent: () =>
+      import('./loading/loading.component').then((e) => e.LoadingComponent),
+  },
+  {
+    path: 'colors',
+    loadComponent: () =>
+      import('./colors/colors.component').then((e) => e.ColorsComponent),
+  },
+  {
+    path: 'validation',
+    loadComponent: () =>
+      import('./validation/validation.component').then(
+        (e) => e.ValidationComponent
+      ),
+  },
 ];

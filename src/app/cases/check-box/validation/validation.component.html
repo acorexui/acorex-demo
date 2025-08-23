@@ -1,0 +1,15 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4">
+  <ax-form-field>
+    <ax-check-box [(ngModel)]="value">
+      <ax-label>Accept Terms</ax-label>
+      <ax-validation-rule
+        rule="required"
+        message="Please accept terms to continue."
+      ></ax-validation-rule>
+    </ax-check-box>
+  </ax-form-field>
+  <div>
+    Value:
+    {{ value() === true ? "true" : value() === false ? "false" : "null" }}
+  </div>
+</div>

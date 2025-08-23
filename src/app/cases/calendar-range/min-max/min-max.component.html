@@ -1,0 +1,17 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-2 ax-px-4"
+>
+  <div class="ax-flex ax-gap-2 ax-items-center">
+    <ax-label>Min:</ax-label>
+    <ax-datetime-box
+      [value]="min()"
+      (onValueChanged)="min.set($event.value)"
+    ></ax-datetime-box>
+    <ax-label>Max:</ax-label>
+    <ax-datetime-box
+      [value]="max()"
+      (onValueChanged)="max.set($event.value)"
+    ></ax-datetime-box>
+  </div>
+  <ax-calendar-range [minValue]="min()" [maxValue]="max()"></ax-calendar-range>
+</div>

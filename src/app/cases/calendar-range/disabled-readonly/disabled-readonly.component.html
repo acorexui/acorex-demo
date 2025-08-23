@@ -1,0 +1,20 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-2 ax-px-4"
+>
+  <div class="ax-flex ax-gap-2 ax-items-center">
+    <ax-button
+      [text]="'Toggle Disabled'"
+      [class.ax-state-selected]="disabled()"
+      (click)="disabled.set(!this.disabled())"
+    ></ax-button>
+    <ax-button
+      [text]="'Toggle Readonly'"
+      [class.ax-state-selected]="readonly()"
+      (click)="readonly.set(!this.readonly())"
+    ></ax-button>
+  </div>
+  <ax-calendar-range
+    [disabled]="disabled()"
+    [readonly]="readonly()"
+  ></ax-calendar-range>
+</div>
