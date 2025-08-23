@@ -32,11 +32,25 @@ export const routes: Routes = [
   {
     path: 'navigation',
     loadComponent: () =>
-      import('./navigation/navigation.component').then((e) => e.NavigationComponent),
+      import('./navigation/navigation.component').then(
+        (e) => e.NavigationComponent
+      ),
+  },
+  {
+    path: 'multi-month',
+    loadComponent: () =>
+      import('./multi-month/multi-month.component').then(
+        (e) => e.MultiMonthComponent
+      ),
   },
   {
     path: 'range',
     loadComponent: () =>
       import('./range/range.component').then((e) => e.RangeComponent),
+  },
+  {
+    path: 'min-max',
+    loadComponent: () =>
+      import('./min-max/min-max.component').then((e) => e.MinMaxComponent),
   },
 ];

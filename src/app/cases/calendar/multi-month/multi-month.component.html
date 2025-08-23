@@ -1,0 +1,7 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-2">
+  <ax-button (onClick)="toggleCount()">
+    @if (count() === 2) { Show 3 months } @else { Show 2 months }
+  </ax-button>
+
+  <ax-calendar [count]="count()"></ax-calendar>
+</div>

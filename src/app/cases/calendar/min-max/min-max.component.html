@@ -1,0 +1,8 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-2">
+  <div class="ax-flex ax-gap-2">
+    <ax-button (onClick)="shiftWindow(-7)">Shift -7 days</ax-button>
+    <ax-button (onClick)="shiftWindow(7)">Shift +7 days</ax-button>
+  </div>
+
+  <ax-calendar [minValue]="min()" [maxValue]="max()"></ax-calendar>
+</div>
