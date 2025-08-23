@@ -1,3 +1,4 @@
+import { AXButtonComponent } from '@acorex/components/button';
 import { AXCheckBoxComponent } from '@acorex/components/check-box';
 import { AXDecoratorGenericComponent } from '@acorex/components/decorators';
 import { AXLabelComponent } from '@acorex/components/label';
@@ -11,6 +12,7 @@ import { FormsModule } from '@angular/forms';
     AXLabelComponent,
     AXCheckBoxComponent,
     AXDecoratorGenericComponent,
+    AXButtonComponent,
   ],
 })
 export class IndeterminateComponent {

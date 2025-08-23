@@ -1,7 +1,13 @@
-<ax-check-box
-  [(ngModel)]="options().value"
-  [indeterminate]="options().indeterminate"
->
-  <ax-label>Checkbox</ax-label>
-  <ax-form-hint>Sample text hint long text with long note</ax-form-hint>
-</ax-check-box>
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-2">
+  <ax-check-box
+    [(ngModel)]="options().value"
+    [indeterminate]="options().indeterminate"
+  >
+    <ax-label>Checkbox</ax-label>
+    <ax-form-hint>Sample text hint long text with long note</ax-form-hint>
+  </ax-check-box>
+  <ax-button
+    [text]="'Restart'"
+    (click)="options.set({ value: null, indeterminate: true })"
+  ></ax-button>
+</div>
