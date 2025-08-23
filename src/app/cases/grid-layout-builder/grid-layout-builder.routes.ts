@@ -5,6 +5,22 @@ export const routes: Routes = [
   {
     path: 'usage',
     loadComponent: () =>
-      import('./usage/usage.component').then((e) => e.GridLayoutBuilderUsageComponent),
+      import('./usage/usage.component').then(
+        (e) => e.GridLayoutBuilderUsageComponent
+      ),
+  },
+  {
+    path: 'responsive',
+    loadComponent: () =>
+      import('./responsive/responsive.component').then(
+        (m) => m.GridLayoutBuilderResponsiveComponent
+      ),
+  },
+  {
+    path: 'api',
+    loadComponent: () =>
+      import('./api/api.component').then(
+        (m) => m.GridLayoutBuilderApiComponent
+      ),
   },
 ];

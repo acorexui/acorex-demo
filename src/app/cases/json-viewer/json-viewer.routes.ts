@@ -7,4 +7,18 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
+  {
+    path: 'nested',
+    loadComponent: () =>
+      import('./nested/nested.component').then(
+        (m) => m.NestedJsonViewerComponent
+      ),
+  },
+  {
+    path: 'dynamic',
+    loadComponent: () =>
+      import('./dynamic/dynamic.component').then(
+        (m) => m.DynamicJsonViewerComponent
+      ),
+  },
 ];
