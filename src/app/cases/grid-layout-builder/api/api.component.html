@@ -1,0 +1,28 @@
+<div class="case-toolbar" style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:12px;">
+  <button type="button" (click)="addWidget()">Add 2x2 at empty space</button>
+  <button type="button" (click)="compact()">Compact</button>
+  <button type="button" (click)="clearAll()">Remove all</button>
+
+  <span style="margin-left:12px;">Columns:</span>
+  <button type="button" (click)="setCols(4)">4</button>
+  <button type="button" (click)="setCols(8)">8</button>
+  <button type="button" (click)="setCols(12)">12</button>
+
+  <span style="margin-left:12px;">Cell height:</span>
+  <button type="button" (click)="setCellHeight(80)">80</button>
+  <button type="button" (click)="setCellHeight(120)">120</button>
+  <button type="button" (click)="setCellHeight(0)">0</button>
+</div>
+
+<ax-grid-layout-container #grid [options]="containerOptions()">
+  @for (w of [
+    { x: 0, y: 0, width: 3, height: 2, label: 'Start A (3x2)' },
+    { x: 3, y: 0, width: 3, height: 2, label: 'Start B (3x2)' },
+  ]; track w) {
+    <ax-grid-layout-widget [options]="w">
+      <div style="padding:12px;">{{ w.label }}</div>
+    </ax-grid-layout-widget>
+  }
+</ax-grid-layout-container>
+
+
