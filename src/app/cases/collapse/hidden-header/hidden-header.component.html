@@ -1,0 +1,16 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-2">
+  <div class="ax-flex ax-gap-2">
+    <ax-button
+      look="outline"
+      [text]="'Toggle Header'"
+      (onClick)="showHeader = !showHeader"
+    ></ax-button>
+  </div>
+  <ax-collapse
+    [showHeader]="showHeader"
+    caption="Hidden Header"
+    class="ax-container ax-px-12"
+  >
+    <p>The header can be toggled off; the body remains accessible.</p>
+  </ax-collapse>
+</div>

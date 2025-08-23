@@ -1,0 +1,28 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-2">
+  <div class="ax-flex ax-gap-2">
+    <ax-button
+      look="outline"
+      [text]="'Open 1'"
+      (onClick)="c1.open()"
+    ></ax-button>
+    <ax-button
+      look="outline"
+      [text]="'Close 1'"
+      (onClick)="c1.close()"
+    ></ax-button>
+    <ax-button
+      look="outline"
+      [text]="'Toggle 1'"
+      (onClick)="c1.toggle()"
+    ></ax-button>
+    <ax-button
+      look="outline"
+      [text]="'Toggle 2'"
+      (onClick)="c2.toggle()"
+    ></ax-button>
+  </div>
+  <ax-collapse-group class="ax-container ax-px-12 ax-gap-2">
+    <ax-collapse #c1 caption="Panel 1"></ax-collapse>
+    <ax-collapse #c2 caption="Panel 2"></ax-collapse>
+  </ax-collapse-group>
+</div>

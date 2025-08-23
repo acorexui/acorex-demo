@@ -1,0 +1,11 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-2">
+  <div class="ax-h-40 ax-flex ax-items-center ax-justify-center">
+    <ax-circular-progress [size]="72" [stroke]="8" [progress]="progress()">
+      <ax-text>{{ progress() }}%</ax-text>
+    </ax-circular-progress>
+  </div>
+
+  <div class="ax-flex ax-gap-2">
+    <ax-button text="Restart" (onClick)="restart()"></ax-button>
+  </div>
+</div>

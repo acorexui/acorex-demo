@@ -1,3 +1,4 @@
+import { AXButtonComponent } from '@acorex/components/button';
 import {
   AXCollapseClickEvent,
   AXCollapseComponent,
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 
 @Component({
   templateUrl: 'loading.component.html',
-  imports: [AXCollapseGroupComponent, AXCollapseComponent],
+  imports: [AXCollapseGroupComponent, AXCollapseComponent, AXButtonComponent],
 })
 export class LoadingComponent {
   protected _options: { color: string; isAccordion: boolean; look: any } = {
@@ -24,5 +25,9 @@ export class LoadingComponent {
         e.component.isLoading = false;
       }, 1000);
     }
+  }
+  _restart(c: AXCollapseComponent) {
+    c.isLoading = false;
+    c.isCollapsed = true;
   }
 }

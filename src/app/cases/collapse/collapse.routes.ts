@@ -8,6 +8,11 @@ export const routes: Routes = [
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
   {
+    path: 'disabled',
+    loadComponent: () =>
+      import('./disabled/disabled.component').then((e) => e.DisabledComponent),
+  },
+  {
     path: 'accordion-mode',
     loadComponent: () =>
       import('./accordion-mode/accordion-mode.component').then(
@@ -29,6 +34,32 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./custom-header-template/custom-header-template.component').then(
         (e) => e.CustomHeaderTemplate
+      ),
+  },
+  {
+    path: 'looks',
+    loadComponent: () =>
+      import('./looks/looks.component').then((e) => e.LooksComponent),
+  },
+  {
+    path: 'programmatic-control',
+    loadComponent: () =>
+      import('./programmatic-control/programmatic-control.component').then(
+        (e) => e.ProgrammaticControlComponent
+      ),
+  },
+  {
+    path: 'active-index',
+    loadComponent: () =>
+      import('./active-index/active-index.component').then(
+        (e) => e.ActiveIndexComponent
+      ),
+  },
+  {
+    path: 'hidden-header',
+    loadComponent: () =>
+      import('./hidden-header/hidden-header.component').then(
+        (e) => e.HiddenHeaderComponent
       ),
   },
 ];

@@ -32,4 +32,11 @@ export const routes: Routes = [
         (e) => e.IndeterminateComponent
       ),
   },
+  {
+    path: 'async-progress',
+    loadComponent: () =>
+      import('./async-progress/async-progress.component').then(
+        (e) => e.AsyncProgressComponent
+      ),
+  },
 ];

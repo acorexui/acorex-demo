@@ -1,15 +1,25 @@
-<ax-collapse-group look="fill" [accordion]="true" class="ax-container ax-px-12">
-  <ax-collapse
-    caption="Google"
-    icon="fa-brands fa-google fa-lg"
-    [isCollapsed]="true"
-    (onClick)="_handleCollapseClick($event)"
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-2">
+  <ax-collapse-group
+    look="fill"
+    [accordion]="true"
+    class="ax-container ax-px-12 ax-gap-2"
   >
-    <p>
-      Google LLC is an American multinational technology company focusing on
-      artificial intelligence, online advertising, search engine technology,
-      cloud computing, computer software, quantum computing, e-commerce, and
-      consumer electronics.
-    </p>
-  </ax-collapse>
-</ax-collapse-group>
+    <ax-collapse
+      #c
+      caption="Google"
+      icon="fa-brands fa-google fa-lg"
+      [isCollapsed]="true"
+      (onClick)="_handleCollapseClick($event)"
+    >
+      <p>
+        Google LLC is an American multinational technology company focusing on
+        artificial intelligence, online advertising, search engine technology,
+        cloud computing, computer software, quantum computing, e-commerce, and
+        consumer electronics.
+      </p>
+    </ax-collapse>
+    <div class="ax-flex ax-justify-end ax-w-full">
+      <ax-button look="outline" (onClick)="_restart(c)">Restart</ax-button>
+    </div>
+  </ax-collapse-group>
+</div>

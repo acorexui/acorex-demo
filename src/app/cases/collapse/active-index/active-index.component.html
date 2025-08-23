@@ -1,0 +1,28 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-2">
+  <div class="ax-flex ax-gap-2">
+    <ax-button
+      look="outline"
+      [text]="'First'"
+      (onClick)="index = 0"
+    ></ax-button>
+    <ax-button
+      look="outline"
+      [text]="'Second'"
+      (onClick)="index = 1"
+    ></ax-button>
+    <ax-button
+      look="outline"
+      [text]="'Third'"
+      (onClick)="index = 2"
+    ></ax-button>
+  </div>
+  <ax-collapse-group
+    [accordion]="true"
+    [activeIndex]="index"
+    class="ax-container ax-px-12 ax-gap-2"
+  >
+    <ax-collapse caption="Panel 1"></ax-collapse>
+    <ax-collapse caption="Panel 2"></ax-collapse>
+    <ax-collapse caption="Panel 3"></ax-collapse>
+  </ax-collapse-group>
+</div>
