@@ -1,9 +1,8 @@
+import { AXColorPalleteComponent } from '@acorex/components/color-palette';
 import { Component } from '@angular/core';
 
-import { AXColorPaletteModule } from '@acorex/components/color-palette';
-
 @Component({
-    templateUrl: 'swatches.component.html',
-    imports: [AXColorPaletteModule]
+  templateUrl: 'swatches.component.html',
+  imports: [AXColorPalleteComponent],
 })
 export class SwatchesComponent {}
