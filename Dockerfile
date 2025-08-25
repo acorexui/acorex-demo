@@ -1,5 +1,5 @@
 #Stage 1: Build the Angular application
-FROM node:22.12.0 AS build
+FROM node:latest AS build
 
 WORKDIR /usr/src/app
 
@@ -16,7 +16,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Create the final production image
-FROM node:22.12.0
+FROM node:latest
 
 WORKDIR /usr/src/app
 
