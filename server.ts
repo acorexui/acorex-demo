@@ -20,7 +20,7 @@ export function app(): express.Express {
   // Serve static files from the /browser directory.
   // The RegExp object ensures the route is correctly parsed.
   server.get(
-    new RegExp('/(.*)'), // <-- Changed this line
+    new RegExp('/(.*)'),
     express.static(browserDistFolder, {
       maxAge: '1y',
       index: 'index.html',
