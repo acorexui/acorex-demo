@@ -1,7 +1,7 @@
 import {
-  AXColorPalleteComponent,
-  AXColorPalettePickerComponent,
   AXColorPaletteInputComponent,
+  AXColorPalettePickerComponent,
+  AXColorPalleteComponent,
 } from '@acorex/components/color-palette';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -9,10 +9,10 @@ import { FormsModule } from '@angular/forms';
 @Component({
   templateUrl: 'usage.component.html',
   imports: [
-    AXColorPalleteComponent,
     FormsModule,
-    AXColorPalettePickerComponent,
+    AXColorPalleteComponent,
     AXColorPaletteInputComponent,
+    AXColorPalettePickerComponent,
   ],
 })
 export class UsageComponent {}

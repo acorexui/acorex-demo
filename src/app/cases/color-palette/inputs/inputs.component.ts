@@ -1,10 +1,18 @@
+import {
+  AXColorPaletteInputComponent,
+  AXColorPalettePreviewComponent,
+  AXColorPalleteComponent,
+} from '@acorex/components/color-palette';
 import { Component } from '@angular/core';
-
-import { AXColorPaletteModule } from '@acorex/components/color-palette';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-    templateUrl: 'inputs.component.html',
-    imports: [AXColorPaletteModule, FormsModule]
+  templateUrl: 'inputs.component.html',
+  imports: [
+    FormsModule,
+    AXColorPalleteComponent,
+    AXColorPaletteInputComponent,
+    AXColorPalettePreviewComponent,
+  ],
 })
 export class InputsComponent {}
