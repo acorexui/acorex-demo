@@ -1,7 +1,20 @@
-<div class="ax-py-10">
-  <ax-color-box [ngModel]="'#3b82f6'">
+<div class="ax-flex ax-flex-col ax-gap-4">
+  <ax-color-box
+    [ngModel]="color()"
+    (onValueChanged)="color.set($event.value)"
+    placeholder="Theme color"
+  >
+    <ax-prefix>
+      <ax-button color="secondary" (onClick)="reset()">
+        <ax-icon class="fa-solid fa-refresh"></ax-icon>
+      </ax-button>
+    </ax-prefix>
     <ax-suffix>
-      <ax-button color="secondary" text="Apply to theme"></ax-button>
+      <ax-button text="Apply" color="primary" (onClick)="value.set(color())">
+      </ax-button>
     </ax-suffix>
+    <ax-clear-button></ax-clear-button>
   </ax-color-box>
+
+  <div class="ax-text-sm">Current: {{ value() ?? "null" }}</div>
 </div>

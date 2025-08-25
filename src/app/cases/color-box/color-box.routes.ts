@@ -26,4 +26,18 @@ export const routes: Routes = [
         (e) => e.UsingDecoratorsComponent
       ),
   },
+  {
+    path: 'visual-toggles',
+    loadComponent: () =>
+      import('./visual-toggles/visual-toggles.component').then(
+        (e) => e.VisualTogglesComponent
+      ),
+  },
+  {
+    path: 'clear-behavior',
+    loadComponent: () =>
+      import('./clear-behavior/clear-behavior.component').then(
+        (e) => e.ClearBehaviorComponent
+      ),
+  },
 ];
