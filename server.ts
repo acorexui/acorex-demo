@@ -17,19 +17,19 @@ export function app(): express.Express {
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
 
-  // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
-  // Serve static files from /browser
+  // Serve static files from the /browser directory.
+  // The RegExp object ensures the route is correctly parsed.
   server.get(
-    '**',
+    new RegExp('/(.*)'), // <-- Changed this line
     express.static(browserDistFolder, {
       maxAge: '1y',
       index: 'index.html',
     })
   );
 
-  // All regular routes use the Angular engine
-  server.get('**', (req, res, next) => {
+  // All other routes are handled by the Angular engine.
+  // The `{*path}` syntax is the correct way to handle a catch-all route.
+  server.get('/{*path}', (req, res, next) => {
     const { protocol, originalUrl, baseUrl, headers } = req;
 
     commonEngine
