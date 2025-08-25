@@ -33,4 +33,11 @@ export const routes: Routes = [
         (e) => e.FullOptionsComponent
       ),
   },
+  {
+    path: 'custom-swatches-favorites',
+    loadComponent: () =>
+      import('./custom-swatches-favorites/custom-swatches-favorites.component').then(
+        (e) => e.CustomSwatchesFavoritesComponent
+      ),
+  },
 ];
