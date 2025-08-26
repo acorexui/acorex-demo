@@ -1,0 +1,45 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+>
+  <div class="ax-w-64">
+    <ax-button-item-list
+      (onItemClick)="handleItemClick($event)"
+      class="ax-rounded-lg ax-border ax-border-surface"
+    >
+      <ax-button-item
+        text="First Item"
+        name="item1"
+        (onClick)="handleClick($event)"
+      >
+        <ax-prefix>
+          <ax-icon icon="fa-solid fa-home"></ax-icon>
+        </ax-prefix>
+      </ax-button-item>
+
+      <ax-button-item
+        text="Second Item"
+        name="item2"
+        (onClick)="handleClick($event)"
+      >
+        <ax-prefix>
+          <ax-icon icon="fa-solid fa-user"></ax-icon>
+        </ax-prefix>
+      </ax-button-item>
+
+      <ax-button-item
+        text="Third Item"
+        name="item3"
+        (onClick)="handleClick($event)"
+      >
+        <ax-prefix>
+          <ax-icon icon="fa-solid fa-cog"></ax-icon>
+        </ax-prefix>
+      </ax-button-item>
+    </ax-button-item-list>
+  </div>
+
+  <div class="ax-mt-4 ax-text-sm">
+    <p>Last clicked: {{ lastClicked() || "None" }}</p>
+    <p>Item name: {{ lastItemName() || "None" }}</p>
+  </div>
+</div>

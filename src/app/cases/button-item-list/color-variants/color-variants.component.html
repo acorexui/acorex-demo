@@ -1,0 +1,14 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+>
+  <h3 class="ax-text-lg ax-font-semibold">Button Item List Color Variants</h3>
+
+  <div class="ax-w-64">
+    <ax-button-item-list
+      [items]="items()"
+      (onItemClick)="handleItemClick($event)"
+      class="ax-rounded-lg ax-border ax-border-surface"
+    >
+    </ax-button-item-list>
+  </div>
+</div>

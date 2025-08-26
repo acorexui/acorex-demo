@@ -1,0 +1,43 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+>
+  <div class="ax-w-64">
+    <ax-button-item-list
+      [items]="items()"
+      (onItemClick)="handleItemClick($event)"
+      class="ax-rounded-lg ax-border ax-border-surface"
+    >
+      <!-- Content projection items -->
+      <ax-button-item
+        text="Custom Item 1"
+        name="custom1"
+        color="primary"
+        (onClick)="handleClick($event)"
+      >
+        <ax-prefix>
+          <ax-icon icon="fa-solid fa-star"></ax-icon>
+        </ax-prefix>
+      </ax-button-item>
+
+      <ax-button-item
+        text="Custom Item 2"
+        name="custom2"
+        color="success"
+        [divided]="true"
+        (onClick)="handleClick($event)"
+      >
+        <ax-prefix>
+          <ax-icon icon="fa-solid fa-heart"></ax-icon>
+        </ax-prefix>
+      </ax-button-item>
+    </ax-button-item-list>
+  </div>
+
+  <div class="ax-mt-4 ax-text-sm">
+    <p>Last clicked: {{ lastClicked() || "None" }}</p>
+    <p>Item name: {{ lastItemName() || "None" }}</p>
+    <p class="ax-text-xs">
+      Note: Items from array appear first, then content projection items
+    </p>
+  </div>
+</div>

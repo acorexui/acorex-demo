@@ -60,6 +60,14 @@ export const appRoutes: Route[] = [
       import('./cases/button/button.routes').then((c) => c.routes),
   },
   {
+    path: 'button-item-list',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/button-item-list/button-item-list.routes').then(
+        (c) => c.routes
+      ),
+  },
+  {
     path: 'button-group',
     component: MasterLayoutComponent,
     loadChildren: () =>
