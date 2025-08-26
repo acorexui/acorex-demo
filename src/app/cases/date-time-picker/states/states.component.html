@@ -1,0 +1,29 @@
+<div class="ax-flex ax-flex-row ax-items-center ax-justify-center ax-gap-4">
+  <div class="ax-flex ax-flex-col ax-gap-4">
+    <ax-label>Component States</ax-label>
+    <div class="ax-flex ax-gap-4">
+      <div class="ax-flex ax-items-center ax-gap-2">
+        <ax-switch
+          [(ngModel)]="isDisabled"
+          (ngModelChange)="isDisabled.set($event)"
+        ></ax-switch>
+        <span>Disabled</span>
+      </div>
+      <div class="ax-flex ax-items-center ax-gap-2">
+        <ax-switch
+          [(ngModel)]="isReadonly"
+          (ngModelChange)="isReadonly.set($event)"
+        ></ax-switch>
+        <span>Readonly</span>
+      </div>
+    </div>
+  </div>
+
+  <ax-datetime-picker
+    [disabled]="isDisabled()"
+    [readonly]="isReadonly()"
+    [ngModel]="selectedValue()"
+    placeholder="Select date and time"
+    (onValueChanged)="selectedValue.set($event.value)"
+  ></ax-datetime-picker>
+</div>

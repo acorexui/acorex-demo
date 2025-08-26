@@ -1,0 +1,57 @@
+<div class="ax-flex ax-flex-row ax-items-center ax-justify-center ax-gap-6">
+  <div class="ax-flex ax-flex-col ax-gap-4">
+    <ax-label>Date Constraints</ax-label>
+    <div class="ax-flex ax-flex-col ax-gap-4">
+      <div class="ax-flex ax-items-center ax-gap-2">
+        <ax-switch
+          [(ngModel)]="useMinMax"
+          (ngModelChange)="useMinMax.set($event)"
+        ></ax-switch>
+        <span>Min/Max Range</span>
+      </div>
+      <div class="ax-flex ax-items-center ax-gap-2">
+        <ax-switch
+          [(ngModel)]="useDisabledDates"
+          (ngModelChange)="useDisabledDates.set($event)"
+        ></ax-switch>
+        <span>Disabled Dates (Weekends)</span>
+      </div>
+      <div class="ax-flex ax-items-center ax-gap-2">
+        <ax-switch
+          [(ngModel)]="useHolidays"
+          (ngModelChange)="useHolidays.set($event)"
+        ></ax-switch>
+        <span>Holiday Dates</span>
+      </div>
+    </div>
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <ax-title>Constraints Info</ax-title>
+      <div>
+        <ax-subtitle>
+          Min Date: {{ useMinMax() ? minValue.toLocaleDateString() : "None" }}
+        </ax-subtitle>
+        <ax-subtitle>
+          Max Date: {{ useMinMax() ? maxValue.toLocaleDateString() : "None" }}
+        </ax-subtitle>
+        <ax-subtitle>
+          Disabled Dates:
+          {{ useDisabledDates() ? disabledDates.length + " dates" : "None" }}
+        </ax-subtitle>
+        <ax-subtitle>
+          Holiday Dates:
+          {{ useHolidays() ? holidayDates.length + " dates" : "None" }}
+        </ax-subtitle>
+      </div>
+    </div>
+  </div>
+
+  <ax-datetime-picker
+    [ngModel]="selectedValue()"
+    (ngModelChange)="selectedValue.set($event)"
+    [minValue]="useMinMax() ? minValue : null"
+    [maxValue]="useMinMax() ? maxValue : null"
+    [disabledDates]="useDisabledDates() ? disabledDates : null"
+    [holidayDates]="useHolidays() ? holidayDates : null"
+    placeholder="Select date and time"
+  ></ax-datetime-picker>
+</div>

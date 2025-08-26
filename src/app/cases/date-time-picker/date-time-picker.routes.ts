@@ -17,4 +17,16 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./type/type.component').then((e) => e.TypeComponent),
   },
+  {
+    path: 'states',
+    loadComponent: () =>
+      import('./states/states.component').then((e) => e.StatesComponent),
+  },
+  {
+    path: 'constraints',
+    loadComponent: () =>
+      import('./constraints/constraints.component').then(
+        (e) => e.ConstraintsComponent
+      ),
+  },
 ];

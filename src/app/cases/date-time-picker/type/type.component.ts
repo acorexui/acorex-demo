@@ -1,6 +1,4 @@
-import { AXButtonComponent } from '@acorex/components/button';
 import { AXDateTimePickerComponent } from '@acorex/components/datetime-picker';
-import { AXDecoratorGenericComponent } from '@acorex/components/decorators';
 import { AXLabelComponent } from '@acorex/components/label';
 import { AXSelectBoxComponent } from '@acorex/components/select-box';
 import { Component, signal } from '@angular/core';
@@ -12,10 +10,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     FormsModule,
     AXLabelComponent,
-    AXButtonComponent,
     AXSelectBoxComponent,
     AXDateTimePickerComponent,
-    AXDecoratorGenericComponent,
   ],
 })
 export class TypeComponent {

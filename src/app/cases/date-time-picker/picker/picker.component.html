@@ -13,13 +13,4 @@
     placeholder="Select date/time"
     (onValueChanged)="selectedValue.set($event.value)"
   ></ax-datetime-picker>
-
-  <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
-    <ax-title>Selected Value</ax-title>
-    <ax-subtitle>{{ formatSelectedValue() }}</ax-subtitle>
-    <ax-button
-      [text]="'Clear Selection'"
-      (onClick)="clearSelection()"
-    ></ax-button>
-  </div>
 </div>

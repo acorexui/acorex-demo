@@ -1,7 +1,5 @@
-import { AXButtonComponent } from '@acorex/components/button';
 import { AXDateTimePickerType } from '@acorex/components/calendar';
 import { AXDateTimePickerComponent } from '@acorex/components/datetime-picker';
-import { AXDecoratorGenericComponent } from '@acorex/components/decorators';
 import { AXLabelComponent } from '@acorex/components/label';
 import { AXSelectBoxComponent } from '@acorex/components/select-box';
 import { Component, signal } from '@angular/core';
@@ -11,12 +9,10 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-picker',
   templateUrl: './picker.component.html',
   imports: [
-    AXDateTimePickerComponent,
-    AXButtonComponent,
+    FormsModule,
     AXLabelComponent,
     AXSelectBoxComponent,
-    FormsModule,
-    AXDecoratorGenericComponent,
+    AXDateTimePickerComponent,
   ],
 })
 export class PickerComponent {
