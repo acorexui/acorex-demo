@@ -1,11 +1,9 @@
 <div class="ax-flex ax-flex-row ax-items-center ax-justify-center ax-gap-4">
-  <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
-    <ax-datetime-picker
-      [ngModel]="selectedDateTime()"
-      placeholder="Choose date and time"
-      (onValueChanged)="selectedDateTime.set($event.value)"
-    ></ax-datetime-picker>
-  </div>
+  <ax-datetime-picker
+    [ngModel]="selectedDateTime()"
+    placeholder="Choose date and time"
+    (onValueChanged)="selectedDateTime.set($event.value)"
+  ></ax-datetime-picker>
 
   <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
     <ax-title>Selected Value</ax-title>
