@@ -1,1 +1,25 @@
-<ax-datetime-picker [calendar]="'solar-hijri'"></ax-datetime-picker>
+<div class="ax-flex ax-flex-row ax-items-center ax-justify-center ax-gap-4">
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
+    <ax-label>Calendar Type</ax-label>
+    <ax-select-box
+      [dataSource]="calendarTypes"
+      [(ngModel)]="currentCalendarType"
+    ></ax-select-box>
+  </div>
+
+  <ax-datetime-picker
+    [ngModel]="selectedValue()"
+    placeholder="Select date/time"
+    [calendar]="currentCalendarType()"
+    (onValueChanged)="selectedValue.set($event.value)"
+  ></ax-datetime-picker>
+
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
+    <ax-title>Selected Value</ax-title>
+    <ax-subtitle>{{ formatSelectedValue() }}</ax-subtitle>
+    <ax-button
+      [text]="'Clear Selection'"
+      (onClick)="clearSelection()"
+    ></ax-button>
+  </div>
+</div>

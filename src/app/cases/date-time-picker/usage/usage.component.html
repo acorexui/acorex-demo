@@ -1,4 +1,24 @@
-<div class="ax-flex ax-flex-col ax-gap-4 ax-items-center">
-  <ax-datetime-picker class="ax-w-fit" [(ngModel)]="date"></ax-datetime-picker>
-  <span class="ax-text-sm">{{ date() }}</span>
+<div class="ax-flex ax-flex-row ax-items-center ax-justify-center ax-gap-4">
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
+    <ax-datetime-picker
+      [ngModel]="selectedDateTime()"
+      placeholder="Choose date and time"
+      (onValueChanged)="selectedDateTime.set($event.value)"
+    ></ax-datetime-picker>
+  </div>
+
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
+    <ax-title>Selected Value</ax-title>
+    <ax-subtitle>
+      {{
+        selectedDateTime()
+          ? selectedDateTime()?.toLocaleString()
+          : "No date selected"
+      }}
+    </ax-subtitle>
+    <ax-button
+      (onClick)="resetToNow()"
+      [text]="'Reset to Current Time'"
+    ></ax-button>
+  </div>
 </div>
