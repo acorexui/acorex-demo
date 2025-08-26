@@ -12,18 +12,15 @@ import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-button-item-list-mixed-content',
+  templateUrl: './mixed-content.component.html',
   imports: [
     AXButtonItemListComponent,
     AXButtonItemComponent,
     AXDecoratorIconComponent,
     AXDecoratorGenericComponent,
   ],
-  templateUrl: './mixed-content.component.html',
 })
 export class ButtonItemListMixedContentComponent {
-  lastClicked = signal<string>('');
-  lastItemName = signal<string>('');
-
   items = signal<AXButtonItemListItem[]>([
     {
       name: 'save',
@@ -44,13 +41,10 @@ export class ButtonItemListMixedContentComponent {
   ]);
 
   handleClick(event: AXClickEvent) {
-    this.lastClicked.set(event.component.text || 'Unknown');
     console.log('Content projection button item clicked:', event);
   }
 
   handleItemClick(event: any) {
-    this.lastClicked.set(event.item.text || 'Unknown');
-    this.lastItemName.set(event.name || 'Unknown');
     console.log('Button item list item clicked:', event);
   }
 }

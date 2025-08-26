@@ -1,31 +1,16 @@
 <div
   class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
 >
-  <div class="ax-flex ax-w-64 ax-flex-col ax-gap-4">
-    <div>
-      <h4 class="ax-text-md ax-mb-2 ax-font-medium">Enabled List</h4>
-      <ax-button-item-list
-        [items]="items()"
-        (onItemClick)="handleItemClick($event)"
-        class="ax-rounded-lg ax-border ax-border-surface"
-      >
-      </ax-button-item-list>
-    </div>
-
-    <div>
-      <h4 class="ax-text-md ax-mb-2 ax-font-medium">
-        List with Disabled Items
-      </h4>
-      <ax-button-item-list
-        [items]="disabledItems()"
-        (onItemClick)="handleItemClick($event)"
-        class="ax-rounded-lg ax-border ax-border-surface"
-      >
-      </ax-button-item-list>
-    </div>
+  <div class="ax-w-64">
+    <ax-button-item-list
+      [items]="items()"
+      (onItemClick)="handleItemClick($event)"
+      class="ax-rounded-lg ax-border ax-border-surface"
+    >
+    </ax-button-item-list>
   </div>
 
-  <div class="ax-mt-4 ax-text-sm ax-text-gray-600">
+  <div class="ax-mt-4 ax-text-sm">
     <p>Last clicked: {{ lastClicked() || "None" }}</p>
     <p>Item name: {{ lastItemName() || "None" }}</p>
     <p class="ax-text-xs">Note: Disabled list items cannot be clicked</p>

@@ -6,8 +6,8 @@ import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-button-item-list-with-dividers',
-  imports: [AXButtonItemListComponent],
   templateUrl: './with-dividers.component.html',
+  imports: [AXButtonItemListComponent],
 })
 export class ButtonItemListWithDividersComponent {
   items = signal<AXButtonItemListItem[]>([

@@ -6,8 +6,8 @@ import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-button-item-list-with-items-array',
-  imports: [AXButtonItemListComponent],
   templateUrl: './with-items-array.component.html',
+  imports: [AXButtonItemListComponent],
 })
 export class ButtonItemListWithItemsArrayComponent {
   items = signal<AXButtonItemListItem[]>([

@@ -11,21 +11,12 @@ import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-button-item-list-usage',
-  standalone: true,
+  templateUrl: './usage.component.html',
   imports: [
     AXButtonItemListComponent,
     AXButtonItemComponent,
     AXDecoratorIconComponent,
     AXDecoratorGenericComponent,
-  ],
-  templateUrl: './usage.component.html',
-  styles: [
-    `
-      :host {
-        display: block;
-        min-height: 250px;
-      }
-    `,
   ],
 })
 export class ButtonItemListUsageComponent {

@@ -6,17 +6,8 @@ import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-button-item-list-selected-state',
-  standalone: true,
-  imports: [AXButtonItemListComponent],
   templateUrl: './selected-state.component.html',
-  styles: [
-    `
-      :host {
-        display: block;
-        min-height: 250px;
-      }
-    `,
-  ],
+  imports: [AXButtonItemListComponent],
 })
 export class ButtonItemListSelectedStateComponent {
   selectedOption = signal<string>('');

@@ -6,17 +6,8 @@ import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-button-item-list-color-variants',
-  standalone: true,
-  imports: [AXButtonItemListComponent],
   templateUrl: './color-variants.component.html',
-  styles: [
-    `
-      :host {
-        display: block;
-        min-height: 300px;
-      }
-    `,
-  ],
+  imports: [AXButtonItemListComponent],
 })
 export class ButtonItemListColorVariantsComponent {
   items = signal<AXButtonItemListItem[]>([
