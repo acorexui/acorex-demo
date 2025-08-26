@@ -10,7 +10,7 @@ import { Component, signal } from '@angular/core';
   templateUrl: './priority.component.html',
   imports: [AXKanbanComponent],
 })
-export class PiorityComponent {
+export class PriorityComponent {
   dataSource = signal<AXKanbanItem[]>([
     {
       id: 1,

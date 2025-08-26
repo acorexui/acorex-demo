@@ -2,8 +2,27 @@
   <ax-kanban
     class="ax-p-4"
     [statuses]="statuses()"
-    [tooltipTemplate]="'Hi :)'"
     [dataSource]="dataSource()"
     (onSortChanged)="sort($event)"
+    [tooltipTemplate]="tooltipTemplate"
   ></ax-kanban>
 </div>
+
+<!-- Custom Tooltip Template -->
+<ng-template #tooltipTemplate let-item>
+  @if (item.id === 2) {
+  <div class="ax-flex ax-flex-col ax-gap-2 ax-p-3 ax-max-w-xs">
+    <div class="ax-flex ax-items-center ax-gap-2">
+      <div class="ax-w-2 ax-h-2 ax-bg-blue-500 ax-rounded-full"></div>
+      <span class="ax-font-medium">{{ item.title }}</span>
+    </div>
+    <p class="ax-text-sm ax-text-gray-600">{{ item.description }}</p>
+    <div class="ax-flex ax-justify-between ax-text-xs ax-text-gray-500">
+      <span>ID: {{ item.id }}</span>
+      <span>Status: {{ item.statusKey }}</span>
+    </div>
+  </div>
+  } @else {
+  <span>{{ getTooltipForItem(item) || "No tooltip available" }}</span>
+  }
+</ng-template>

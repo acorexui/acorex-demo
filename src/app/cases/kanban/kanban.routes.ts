@@ -29,13 +29,27 @@ export const routes: Routes = [
   {
     path: 'priority',
     loadComponent: () =>
-      import('./priority/priority.component').then((e) => e.PiorityComponent),
+      import('./priority/priority.component').then((e) => e.PriorityComponent),
   },
   {
     path: 'drag-start-delay',
     loadComponent: () =>
       import('./drag-start-delay/drag-start-delay.component').then(
         (e) => e.DragStartDelayComponent
+      ),
+  },
+  {
+    path: 'custom-templates',
+    loadComponent: () =>
+      import('./custom-templates/custom-templates.component').then(
+        (e) => e.CustomTemplatesComponent
+      ),
+  },
+  {
+    path: 'mouse-events',
+    loadComponent: () =>
+      import('./mouse-events/mouse-events.component').then(
+        (e) => e.MouseEventsComponent
       ),
   },
 ];

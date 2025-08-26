@@ -1,0 +1,42 @@
+<div
+  class="ax-flex ax-flex-col ax-h-full ax-gap-4 ax-p-4 ax-max-w-[100vw] ax-max-h-[100vh]"
+>
+  <!-- Event Display Panel -->
+  <div class="ax-flex ax-flex-col ax-gap-2 ax-p-4 ax-surface ax-rounded-lg">
+    <ax-title class="ax-text-lg">Event Log</ax-title>
+    <div class="ax-flex ax-gap-4 ax-items-center">
+      <div class="ax-flex-1">
+        <ax-subtitle> Last Event: </ax-subtitle>
+        <div
+          class="ax-text-sm ax-font-mono ax-lighter-surface ax-p-2 ax-rounded ax-border"
+        >
+          {{ lastEvent() || "No events yet" }}
+        </div>
+      </div>
+      <div class="ax-flex-1">
+        <ax-subtitle>Selected Item:</ax-subtitle>
+        <div
+          class="ax-text-sm ax-font-mono ax-lighter-surface ax-p-2 ax-rounded ax-border"
+        >
+          {{ selectedItem() ? selectedItem()?.title : "None" }}
+        </div>
+      </div>
+      <ax-button
+        text="Clear"
+        look="outline"
+        class="ax-self-end"
+        (click)="clearSelection()"
+      ></ax-button>
+    </div>
+  </div>
+
+  <!-- Kanban Board -->
+  <ax-kanban
+    [statuses]="statuses()"
+    [dataSource]="dataSource()"
+    (onSortChanged)="sort($event)"
+    (onItemClick)="handleItemClick($event)"
+    (onItemDblClick)="handleItemDblClick($event)"
+    (onItemRightClick)="handleItemRightClick($event)"
+  ></ax-kanban>
+</div>
