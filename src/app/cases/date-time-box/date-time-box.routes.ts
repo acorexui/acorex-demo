@@ -26,4 +26,28 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./min-max/min-max.component').then((e) => e.MinMaxComponent),
   },
+  {
+    path: 'states',
+    loadComponent: () =>
+      import('./states/states.component').then((e) => e.StatesComponent),
+  },
+  {
+    path: 'looks',
+    loadComponent: () =>
+      import('./looks/looks.component').then((e) => e.LooksComponent),
+  },
+  {
+    path: 'allow-typing',
+    loadComponent: () =>
+      import('./allow-typing/allow-typing.component').then(
+        (e) => e.AllowTypingComponent
+      ),
+  },
+  {
+    path: 'calendar-types',
+    loadComponent: () =>
+      import('./calendar-types/calendar-types.component').then(
+        (e) => e.CalendarTypesComponent
+      ),
+  },
 ];

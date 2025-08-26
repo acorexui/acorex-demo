@@ -1,0 +1,30 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-py-8"
+>
+  <div class="ax-w-72">
+    <ax-form-field>
+      <ax-label>Meeting date and time</ax-label>
+      <ax-datetime-box
+        [allowTyping]="allowTyping()"
+        placeholder="Select the meeting date and time"
+      >
+        <ax-clear-button></ax-clear-button>
+      </ax-datetime-box>
+    </ax-form-field>
+  </div>
+
+  <div class="ax-flex ax-flex-col ax-gap-2 ax-w-72">
+    <ax-button
+      (click)="toggleAllowTyping()"
+      [look]="allowTyping() ? 'solid' : 'outline'"
+      [text]="`${allowTyping() ? 'Disable' : 'Enable'} Manual Typing`"
+    ></ax-button>
+    <ax-subtitle>
+      {{
+        allowTyping()
+          ? "You can now type directly in the input field"
+          : "Click the calendar icon to select date/time"
+      }}
+    </ax-subtitle>
+  </div>
+</div>

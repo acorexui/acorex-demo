@@ -1,0 +1,35 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-py-8"
+>
+  <div class="ax-w-72">
+    <ax-form-field>
+      <ax-label>Meeting date and time</ax-label>
+      <ax-datetime-box
+        [disabled]="disabled()"
+        [readonly]="readonly()"
+        [state]="hasError() ? 'error' : 'clear'"
+        placeholder="Select the meeting date and time"
+      >
+        <ax-clear-button></ax-clear-button>
+      </ax-datetime-box>
+    </ax-form-field>
+  </div>
+
+  <div class="ax-flex ax-flex-col ax-gap-2 ax-w-72">
+    <ax-button
+      (click)="toggleDisabled()"
+      [look]="disabled() ? 'solid' : 'outline'"
+      [text]="`${disabled() ? 'Enable' : 'Disable'} Component`"
+    ></ax-button>
+    <ax-button
+      (click)="toggleReadonly()"
+      [look]="readonly() ? 'solid' : 'outline'"
+      [text]="`${readonly() ? 'Make Editable' : 'Make Readonly'} Component`"
+    ></ax-button>
+    <ax-button
+      (click)="toggleError()"
+      [look]="hasError() ? 'solid' : 'outline'"
+      [text]="`${hasError() ? 'Clear Error' : 'Show Error'} Component`"
+    ></ax-button>
+  </div>
+</div>
