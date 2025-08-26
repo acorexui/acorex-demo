@@ -11,18 +11,23 @@
 <!-- Custom Tooltip Template -->
 <ng-template #tooltipTemplate let-item>
   @if (item.id === 2) {
-  <div class="ax-flex ax-flex-col ax-gap-2 ax-p-3 ax-max-w-xs">
+  <div
+    class="ax-flex ax-flex-col ax-gap-2 ax-p-3 ax-max-w-xs ax-surface ax-rounded-lg ax-shadow-lg ax-border"
+  >
     <div class="ax-flex ax-items-center ax-gap-2">
       <div class="ax-w-2 ax-h-2 ax-bg-blue-500 ax-rounded-full"></div>
       <span class="ax-font-medium">{{ item.title }}</span>
     </div>
-    <p class="ax-text-sm ax-text-gray-600">{{ item.description }}</p>
-    <div class="ax-flex ax-justify-between ax-text-xs ax-text-gray-500">
-      <span>ID: {{ item.id }}</span>
+    <p class="ax-text-sm ax-text-muted">{{ item.description }}</p>
+    <div class="ax-flex ax-justify-between ax-items-center ax-text-xs">
+      <span>Priority: {{ item.priority || "none" }}</span>
       <span>Status: {{ item.statusKey }}</span>
     </div>
   </div>
   } @else {
-  <span>{{ getTooltipForItem(item) || "No tooltip available" }}</span>
+  <div class="ax-p-2 ax-surface ax-rounded ax-shadow ax-border">
+    <div class="ax-font-medium">{{ item.title }}</div>
+    <div class="ax-text-sm ax-text-muted">{{ item.description }}</div>
+  </div>
   }
 </ng-template>

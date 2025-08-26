@@ -22,39 +22,31 @@ export class TooltipsComponent {
       id: 2,
       title: 'Template Tooltip',
       statusKey: 'todo',
-      description: 'This item uses a rich template tooltip',
+      description: 'This item uses a rich template tooltip with custom styling',
+      priority: 'high',
     },
     {
       id: 3,
       title: 'No Tooltip',
       statusKey: 'in-progress',
-      description: 'This item has no tooltip configured',
+      description: 'This item has no tooltip',
     },
     {
       id: 4,
-      title: 'Another String Tooltip',
-      statusKey: 'in-progress',
-      description: 'Another example with string tooltip',
+      title: 'Another Template Tooltip',
+      statusKey: 'done',
+      description: 'This item also uses a template tooltip',
+      priority: 'medium',
     },
   ]);
 
   statuses = signal<AXKanbanStatus[]>([
-    { key: 'todo', title: 'To Do' },
-    { key: 'in-progress', title: 'In Progress' },
-    { key: 'done', title: 'Done' },
+    { key: 'todo', title: 'To Do', index: 0 },
+    { key: 'in-progress', title: 'In Progress', index: 1 },
+    { key: 'done', title: 'Done', index: 2 },
   ]);
 
   sort(event: AXKanbanSortEvent) {
     this.dataSource.set(event.allItems);
-  }
-
-  getTooltipForItem(item: AXKanbanItem): string | null {
-    if (item.id === 1) {
-      return 'Simple string tooltip for item 1';
-    }
-    if (item.id === 4) {
-      return 'Another string tooltip with more details';
-    }
-    return null;
   }
 }

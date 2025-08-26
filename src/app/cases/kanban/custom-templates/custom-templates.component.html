@@ -55,22 +55,30 @@
   >
     <div class="ax-flex ax-justify-between ax-items-start">
       <ax-title class="ax-text-sm ax-font-medium">{{ item.title }}</ax-title>
-      <ax-subtitle
+      <div
         class="ax-text-xs ax-px-2 ax-py-1 ax-rounded-full"
         [ngClass]="{
-          'ax-bg-red-100 ax-text-red-800': item.priority === 'highest',
-          'ax-bg-orange-100 ax-text-orange-800': item.priority === 'high',
-          'ax-bg-yellow-100 ax-text-yellow-800': item.priority === 'medium',
-          'ax-bg-green-100 ax-text-green-800': item.priority === 'low',
-          'ax-bg-blue-100 ax-text-blue-800': item.priority === 'lowest',
-          'ax-bg-gray-100 ax-text-gray-800': !item.priority
+          'ax-bg-red-100 ax-text-red-800 dark:ax-bg-red-900 dark:ax-text-red-200':
+            item.priority === 'highest',
+          'ax-bg-orange-100 ax-text-orange-800 dark:ax-bg-orange-900 dark:ax-text-orange-200':
+            item.priority === 'high',
+          'ax-bg-yellow-100 ax-text-yellow-800 dark:ax-bg-yellow-900 dark:ax-text-yellow-200':
+            item.priority === 'medium',
+          'ax-bg-green-100 ax-text-green-800 dark:ax-bg-green-900 dark:ax-text-green-200':
+            item.priority === 'low',
+          'ax-bg-blue-100 ax-text-blue-800 dark:ax-bg-blue-900 dark:ax-text-blue-200':
+            item.priority === 'lowest',
+          'ax-bg-gray-100 ax-text-gray-800 dark:ax-bg-gray-700 dark:ax-text-gray-200':
+            !item.priority
         }"
       >
         {{ item.priority || "none" }}
-      </ax-subtitle>
+      </div>
     </div>
     <ax-subtitle>{{ item.description }}</ax-subtitle>
-    <div class="ax-flex ax-justify-between ax-items-center ax-text-xs">
+    <div
+      class="ax-flex ax-justify-between ax-items-center ax-text-xs ax-text-muted"
+    >
       <span>ID: {{ item.id }}</span>
       <span>{{ item.statusKey }}</span>
     </div>
