@@ -5,6 +5,22 @@ export const routes: Routes = [
   {
     path: 'simple-usage',
     loadComponent: () =>
-      import('./simple-usage/simple-usage.component').then((e) => e.UsageDecoratorComponent),
+      import('./simple-usage/simple-usage.component').then(
+        (e) => e.UsageDecoratorComponent
+      ),
+  },
+  {
+    path: 'look-variants',
+    loadComponent: () =>
+      import('./look-variants/look-variants.component').then(
+        (e) => e.LookVariantsComponent
+      ),
+  },
+  {
+    path: 'content-projection',
+    loadComponent: () =>
+      import('./content-projection/content-projection.component').then(
+        (e) => e.ContentProjectionComponent
+      ),
   },
 ];

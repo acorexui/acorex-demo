@@ -1,0 +1,80 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-w-[40rem]"
+>
+  <div class="ax-flex ax-flex-col ax-gap-6 ax-w-full ax-max-w-4xl">
+    <!-- Example 1: Basic Content Projection -->
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <h3 class="ax-text-lg ax-font-semibold">Basic Content Projection</h3>
+      <ax-navbar look="fill">
+        <ax-prefix>
+          <ax-button color="default" look="blank">
+            <ax-icon><i class="fa-solid fa-bars"></i></ax-icon>
+          </ax-button>
+        </ax-prefix>
+        <ax-title>Application Name</ax-title>
+        <ax-suffix>
+          <ax-button color="default" look="blank">
+            <ax-icon><i class="fa-solid fa-search"></i></ax-icon>
+          </ax-button>
+        </ax-suffix>
+      </ax-navbar>
+    </div>
+
+    <!-- Example 2: Rich Content in Slots -->
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <h3 class="ax-text-lg ax-font-semibold">Rich Content in Slots</h3>
+      <ax-navbar look="flat">
+        <ax-prefix>
+          <div class="ax-flex ax-items-center ax-gap-2">
+            <ax-button color="primary" look="solid" text="New Project">
+              <ax-icon><i class="fa-solid fa-plus"></i></ax-icon>
+            </ax-button>
+            <ax-badge color="success" text="3"></ax-badge>
+          </div>
+        </ax-prefix>
+        <ax-title>
+          <div class="ax-flex ax-items-center ax-gap-2">
+            <i class="fa-solid fa-rocket ax-text-primary"></i>
+            Dashboard
+          </div>
+        </ax-title>
+        <ax-suffix>
+          <div class="ax-flex ax-items-center ax-gap-2">
+            <ax-button color="default" look="blank">
+              <ax-icon><i class="fa-solid fa-bell"></i></ax-icon>
+            </ax-button>
+            <ax-avatar [size]="32">
+              <ax-text>JD</ax-text>
+            </ax-avatar>
+          </div>
+        </ax-suffix>
+      </ax-navbar>
+    </div>
+
+    <!-- Example 3: Navigation Items -->
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <h3 class="ax-text-lg ax-font-semibold">Navigation with Items</h3>
+      <ax-navbar look="solid">
+        <ax-prefix>
+          <ax-button color="default" look="blank">
+            <ax-icon><i class="fa-solid fa-home"></i></ax-icon>
+          </ax-button>
+        </ax-prefix>
+        <ax-title>E-Commerce Store</ax-title>
+        <ax-suffix>
+          <div class="ax-flex ax-items-center ax-gap-3">
+            <ax-button color="default" look="blank">
+              <ax-icon><i class="fa-solid fa-shopping-cart"></i></ax-icon>
+            </ax-button>
+            <ax-button color="default" look="blank">
+              <ax-icon><i class="fa-solid fa-heart"></i></ax-icon>
+            </ax-button>
+            <ax-button color="default" look="blank">
+              <ax-icon><i class="fa-solid fa-user"></i></ax-icon>
+            </ax-button>
+          </div>
+        </ax-suffix>
+      </ax-navbar>
+    </div>
+  </div>
+</div>
