@@ -51,4 +51,11 @@ export const routes: Routes = [
         (e) => e.CustomEmptyComponent
       ),
   },
+  {
+    path: 'selection-mode',
+    loadComponent: () =>
+      import('./selection-mode/selection-mode.component').then(
+        (e) => e.SelectionModeComponent
+      ),
+  },
 ];

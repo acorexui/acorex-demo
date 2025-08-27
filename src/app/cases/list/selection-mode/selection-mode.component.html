@@ -1,0 +1,24 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4">
+  <div class="ax-flex ax-items-center ax-gap-2">
+    <span class="ax-font-medium">Selection Mode:</span>
+    <span class="ax-text-sm ax-text-muted">{{ selectionMode() }}</span>
+    <ax-button
+      class="ax-sm"
+      text="Toggle Mode"
+      (onClick)="toggleSelectionMode()"
+    >
+    </ax-button>
+  </div>
+
+  <div class="ax-size-96">
+    <ax-list
+      [valueField]="'id'"
+      [textField]="'text'"
+      [dataSource]="dataSource"
+      [checkbox]="selectionMode() !== 'none'"
+      [multiple]="selectionMode() === 'multiple'"
+      class="ax-default ax-border ax-border-default"
+    >
+    </ax-list>
+  </div>
+</div>
