@@ -6,7 +6,8 @@ on:
       - main
 
 env:
-  APP_PORT: ${{ secrets.APP_PORT }}
+  APP_PORT_IN: 80
+  APP_PORT_OUT: ${{ secrets.APP_PORT }}
   APP_IMAGE_NAME: ${{ secrets.APP_IMAGE_NAME }}
 
   SERVER_IP: ${{ secrets.SERVER_IP }}
@@ -69,7 +70,7 @@ jobs:
             docker load -i ${{ env.REMOTE_DIR_PATH }}/${{ env.APP_IMAGE_NAME }}.tar
             docker stop ${{ env.APP_IMAGE_NAME }} || true
             docker rm ${{ env.APP_IMAGE_NAME }} || true
-            docker run -d -p ${{ env.APP_PORT }}:${{ env.APP_PORT }} --env-file ${{ env.REMOTE_DIR_PATH }}/.env --name ${{ env.APP_IMAGE_NAME }} ${{ env.APP_IMAGE_NAME }}
+            docker run -d -p ${{ env.APP_PORT_OUT }}:${{ env.APP_PORT_IN }} --env-file ${{ env.REMOTE_DIR_PATH }}/.env --name ${{ env.APP_IMAGE_NAME }} ${{ env.APP_IMAGE_NAME }}
           EOF
 
   dispatch-deploy-api:

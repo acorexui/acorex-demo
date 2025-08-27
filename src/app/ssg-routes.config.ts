@@ -1,5 +1,5 @@
 // Auto-generated SSG routes configuration
-// Generated on: 2025-08-27T08:47:48.501Z
+// Generated on: 2025-08-27T09:33:08.250Z
 
 export const ssgRoutes = [
   '/',

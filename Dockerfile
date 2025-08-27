@@ -1,4 +1,4 @@
-#Stage 1: Build the Angular application
+# Stage 1: Build the Angular application with SSG
 FROM node:latest AS build
 
 WORKDIR /usr/src/app
@@ -12,21 +12,20 @@ RUN npm i
 # Copy the entire application source code
 COPY . .
 
-# Build the Angular SSR application
-RUN npm run build
+# Build the Angular application with SSG (Static Site Generation)
+RUN npm run build:ssg
 
-# Stage 2: Create the final production image
-FROM node:latest
+# Stage 2: Create the final production image with Nginx
+FROM nginx:alpine
 
-WORKDIR /usr/src/app
+# Copy the built static files from the previous stage
+COPY --from=build /usr/src/app/dist/acorex-demo/browser /usr/share/nginx/html
 
-# Copy the built Angular SSR files from the previous stage
-COPY --from=build /usr/src/app/dist ./dist
+# Copy custom nginx configuration
+COPY nginx.conf /etc/nginx/nginx.conf
 
-# Install only production dependencies
-COPY package*.json ./
-RUN npm i 
+# Expose port 80
+EXPOSE 80
 
-
-# Start the SSR server
-CMD ["npm", "run", "serve:ssr:acorex-demo"]
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
