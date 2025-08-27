@@ -1,0 +1,43 @@
+<ax-form>
+  <div
+    class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+  >
+    <ax-form-field>
+      <ax-label>Search Products</ax-label>
+      <ax-text-box
+        placeholder="Type to search..."
+        aria-describedby="search-help"
+      >
+      </ax-text-box>
+      <ax-form-hint>
+        Enter product name, category, or description to find what you're looking
+        for.
+      </ax-form-hint>
+    </ax-form-field>
+
+    <ax-form-field>
+      <ax-label>Quantity</ax-label>
+      <ax-text-box
+        min="0"
+        max="999"
+        type="number"
+        placeholder="0"
+        aria-describedby="quantity-help"
+      >
+      </ax-text-box>
+      <ax-form-hint> Enter a number between 0 and 999. </ax-form-hint>
+    </ax-form-field>
+
+    <ax-form-field>
+      <ax-label>Special Instructions</ax-label>
+      <ax-text-box
+        placeholder="Any special requests..."
+        aria-describedby="instructions-help"
+      >
+      </ax-text-box>
+      <ax-form-hint>
+        Optional: Add any special instructions or notes for your order.
+      </ax-form-hint>
+    </ax-form-field>
+  </div>
+</ax-form>

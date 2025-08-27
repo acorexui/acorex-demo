@@ -580,6 +580,12 @@ export const appRoutes: Route[] = [
       import('./cases/autocomplete/autocomplete.routes').then((c) => c.routes),
   },
   {
+    path: 'label',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/label/label.routes').then((c) => c.routes),
+  },
+  {
     path: 'cdk',
     loadChildren: () => import('./cases/cdk/cdk.routes').then((c) => c.routes),
   },

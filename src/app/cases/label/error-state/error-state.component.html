@@ -1,0 +1,26 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+>
+  <ax-form-field>
+    <ax-label>Username</ax-label>
+    <ax-text-box placeholder="Enter username" [state]="'error'"></ax-text-box>
+  </ax-form-field>
+
+  <ax-form-field>
+    <ax-label>Email Address</ax-label>
+    <ax-text-box
+      type="email"
+      [state]="'error'"
+      placeholder="Enter email"
+    ></ax-text-box>
+  </ax-form-field>
+
+  <ax-form-field>
+    <ax-label>Password</ax-label>
+    <ax-text-box
+      type="password"
+      [state]="'error'"
+      placeholder="Enter password"
+    ></ax-text-box>
+  </ax-form-field>
+</div>
