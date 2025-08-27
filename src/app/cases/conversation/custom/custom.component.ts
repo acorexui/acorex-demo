@@ -11,10 +11,6 @@ import { FormsModule } from '@angular/forms';
 @Component({
   templateUrl: './custom.component.html',
   imports: [AXConversationModule, FormsModule],
-  styles: `
-  .ax-demo-conversation-container{
-    min-width:50rem
-  }`,
 })
 export class CustomComponent {
   fileService: AXFileService = inject(AXFileService);

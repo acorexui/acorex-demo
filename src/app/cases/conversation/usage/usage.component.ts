@@ -13,10 +13,6 @@ import { FormsModule } from '@angular/forms';
 @Component({
   templateUrl: './usage.component.html',
   imports: [AXConversationModule, FormsModule, AXDecoratorModule],
-  styles: `
-  .ax-console-conversation-container{
-    min-width:50rem
-  }`,
 })
 export class UsageComponent {
   private fileService: AXFileService = inject(AXFileService);

@@ -1,8 +1,9 @@
-<div class="ax-min-w-[50rem]">
+<div class="ax-m-10">
   <ax-conversation-container [chatData]="chat()">
     <ax-conversation-view
       chatBoxHeight="30vh"
       (onScrollEnd)="loadOlder()"
+      class="ax-mb-3"
     ></ax-conversation-view>
 
     <ax-conversation-input

@@ -1,10 +1,18 @@
 <div class="ax-rounded ax-bg-surface ax-p-4">
   <h3>Programmatic open with showAt</h3>
-  <p>Click the button to open the context menu at the click position (no target binding required).</p>
+  <p>
+    Click the button to open the context menu at the click position (no target
+    binding required).
+  </p>
 
-  <button class="ax-btn" (click)="openAtClick($event)" style="padding:8px 12px;">Open menu at cursor</button>
+  <ax-button
+    class="ax-my-5"
+    color="primary"
+    text="Open menu at cursor"
+    (onClick)="openAtClick($event)"
+  ></ax-button>
 
-  <div class="ax-mt-2 ax-text-secondary">Last action: {{ lastAction || '—' }}</div>
+  <div class="ax-text-secondary">Last action: {{ lastAction || "—" }}</div>
 
   <ax-context-menu
     (onOpening)="handleOpening($event)"
@@ -12,6 +20,3 @@
   >
   </ax-context-menu>
 </div>
-
-
-
