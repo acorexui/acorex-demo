@@ -1,0 +1,21 @@
+<div class="ax-size-96">
+  <ax-list
+    class="ax-default ax-border ax-border-default"
+    [dataSource]="dataSource"
+    [valueField]="'id'"
+    [textField]="'text'"
+    [emptyTemplate]="customEmptyTemplate"
+  >
+  </ax-list>
+  <ng-template #customEmptyTemplate>
+    <div
+      class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-2 ax-text-center"
+    >
+      <i class="ax-icon ax-icon-inbox ax-text-4xl ax-text-muted"></i>
+      <span class="ax-font-medium">No items found</span>
+      <span class="ax-text-sm ax-text-muted">
+        Try adjusting your search criteria
+      </span>
+    </div>
+  </ng-template>
+</div>

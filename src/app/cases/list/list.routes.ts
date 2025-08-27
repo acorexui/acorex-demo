@@ -44,4 +44,11 @@ export const routes: Routes = [
         (e) => e.CustomLoadingComponent
       ),
   },
+  {
+    path: 'custom-empty',
+    loadComponent: () =>
+      import('./custom-empty/custom-empty.component').then(
+        (e) => e.CustomEmptyComponent
+      ),
+  },
 ];
