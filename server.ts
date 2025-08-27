@@ -4,6 +4,7 @@ import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import bootstrap from './src/main.server';
+import { ssgRoutes } from './src/app/ssg-routes.config';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
@@ -17,19 +18,18 @@ export function app(): express.Express {
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
 
-  // Serve static files from the /browser directory.
-  // The RegExp object ensures the route is correctly parsed.
+  // Example Express Rest API endpoints
+  // server.get('/api/**', (req, res) => { });
+  // Serve static files from /browser
   server.get(
-    new RegExp('/(.*)'),
+    '*.*',
     express.static(browserDistFolder, {
       maxAge: '1y',
-      index: 'index.html',
     })
   );
 
-  // All other routes are handled by the Angular engine.
-  // The `{*path}` syntax is the correct way to handle a catch-all route.
-  server.get('/{*path}', (req, res, next) => {
+  // All regular routes use the Universal engine
+  server.get('*', (req, res, next) => {
     const { protocol, originalUrl, baseUrl, headers } = req;
 
     commonEngine
@@ -40,15 +40,15 @@ export function app(): express.Express {
         publicPath: browserDistFolder,
         providers: [{ provide: APP_BASE_HREF, useValue: baseUrl }],
       })
-      .then((html) => res.send(html))
-      .catch((err) => next(err));
+      .then((html: string) => res.send(html))
+      .catch((err: any) => next(err));
   });
 
   return server;
 }
 
 function run(): void {
-  const port = process.env['APP_PORT'] || 4000;
+  const port = process.env['PORT'] || 4000;
 
   // Start up the Node server
   const server = app();
@@ -57,4 +57,14 @@ function run(): void {
   });
 }
 
-run();
+// Webpack will replace 'require' with '__webpack_require__'
+// '__non_webpack_require__' is a proxy to Node 'require'
+// The below code is to ensure that the server is run only when not requiring the bundle.
+declare const __non_webpack_require__: NodeRequire;
+const mainModule = __non_webpack_require__.main;
+const moduleFilename = (mainModule && mainModule.filename) || '';
+if (moduleFilename === __filename || moduleFilename.includes('iisnode')) {
+  run();
+}
+
+export * from './src/main.server';

@@ -42,7 +42,9 @@
             ],
             "scripts": [],
             "server": "src/main.server.ts",
-            "prerender": true,
+            "prerender": {
+              "routesFile": "prerender.config.ts"
+            },
             "ssr": {
               "entry": "server.ts"
             }
