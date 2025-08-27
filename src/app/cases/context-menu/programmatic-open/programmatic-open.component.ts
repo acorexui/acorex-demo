@@ -5,10 +5,12 @@ import {
   AXContextMenuOpeningEvent,
   AXMenuItem,
 } from '@acorex/components/menu';
+import { AXButtonComponent } from '@acorex/components/button';
+import type { AXClickEvent } from '@acorex/cdk/common';
 
 @Component({
   templateUrl: './programmatic-open.component.html',
-  imports: [AXContextMenuComponent],
+  imports: [AXContextMenuComponent, AXButtonComponent],
 })
 export class ProgrammaticOpenContextMenuComponent {
   lastAction = '';
@@ -20,8 +22,8 @@ export class ProgrammaticOpenContextMenuComponent {
     { text: 'New Folder', icon: 'fa-regular fa-folder' },
   ];
 
-  openAtClick(event: MouseEvent) {
-    this.contextMenu()?.showAt({ x: event.clientX, y: event.clientY });
+  openAtClick(event: AXClickEvent) {
+    this.contextMenu()?.showAt({ x: event.nativeEvent.clientX, y: event.nativeEvent.clientY });
   }
 
   protected handleOpening(e: AXContextMenuOpeningEvent) {
@@ -35,5 +37,3 @@ export class ProgrammaticOpenContextMenuComponent {
     }
   }
 }
-
-
