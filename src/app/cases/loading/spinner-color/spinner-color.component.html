@@ -1,8 +1,53 @@
 <div
-  class="ax-flex ax-h-64 ax-w-full ax-items-center ax-justify-center ax-gap-4"
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-p-4"
 >
-  <ax-loading-spinner [size]="16" color="primary"></ax-loading-spinner>
-  <ax-loading-spinner [size]="32" color="warning"></ax-loading-spinner>
-  <ax-loading-spinner [size]="40" color="danger"></ax-loading-spinner>
-  <ax-loading-spinner [size]="16" color="success"></ax-loading-spinner>
+  <!-- Theme Colors -->
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+    <h3 class="ax-text-lg ax-font-medium">Theme Colors</h3>
+    <div class="ax-flex ax-items-center ax-justify-center ax-gap-6">
+      <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
+        <ax-loading-spinner [size]="24" color="default"></ax-loading-spinner>
+        <span class="ax-text-sm">Default</span>
+      </div>
+      <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
+        <ax-loading-spinner [size]="24" color="primary"></ax-loading-spinner>
+        <span class="ax-text-sm">Primary</span>
+      </div>
+      <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
+        <ax-loading-spinner [size]="24" color="secondary"></ax-loading-spinner>
+        <span class="ax-text-sm">Secondary</span>
+      </div>
+      <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
+        <ax-loading-spinner [size]="24" color="success"></ax-loading-spinner>
+        <span class="ax-text-sm">Success</span>
+      </div>
+      <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
+        <ax-loading-spinner [size]="24" color="warning"></ax-loading-spinner>
+        <span class="ax-text-sm">Warning</span>
+      </div>
+      <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
+        <ax-loading-spinner [size]="24" color="danger"></ax-loading-spinner>
+        <span class="ax-text-sm">Danger</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contrast Colors -->
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+    <h3 class="ax-text-lg ax-font-medium">Contrast Colors</h3>
+    <div class="ax-flex ax-items-center ax-justify-center ax-gap-8">
+      <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
+        <div class="ax-bg-gray-800 ax-p-4 ax-rounded">
+          <ax-loading-spinner [size]="24" color="white"></ax-loading-spinner>
+        </div>
+        <span class="ax-text-sm">White</span>
+      </div>
+      <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
+        <div class="ax-bg-gray-200 ax-p-4 ax-rounded">
+          <ax-loading-spinner [size]="24" color="black"></ax-loading-spinner>
+        </div>
+        <span class="ax-text-sm">Black</span>
+      </div>
+    </div>
+  </div>
 </div>
