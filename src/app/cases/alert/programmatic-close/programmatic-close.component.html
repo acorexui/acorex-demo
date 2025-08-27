@@ -4,6 +4,9 @@
   <ax-alert #a color="danger" (onClosed)="visible.set(false)">
     <ax-icon></ax-icon>
     <ax-title>Manual close</ax-title>
+    <ax-content>
+      This is a simple content for the alert.you can add more content here.
+    </ax-content>
   </ax-alert>
   } @else {
   <ax-button text="Show alert" (onClick)="show()"></ax-button>
