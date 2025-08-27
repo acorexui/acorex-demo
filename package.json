@@ -5,9 +5,13 @@
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0 --port 4202",
     "build": "ng build",
+    "build:ssg": "npm run generate:ssg-routes && ng build --prerender",
+    "build:ssr": "ng build --ssr",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:acorex-demo": "node dist/acorex-demo/server/server.mjs"
+    "generate:ssg-routes": "node scripts/generate-ssg-routes.js",
+    "serve:ssr:acorex-demo": "node dist/acorex-demo/server/server.mjs",
+    "serve:ssg": "npx http-server dist/acorex-demo/browser -p 4000"
   },
   "private": true,
   "dependencies": {
