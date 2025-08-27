@@ -1,9 +1,23 @@
-<ax-modal #modal>
-  <ax-agreement-text title="LICENSE GRANTED"></ax-agreement-text>
-</ax-modal>
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4">
+  <ax-button
+    (onClick)="modal.open(options)"
+    color="primary"
+    text="Open Modal"
+  ></ax-button>
 
-<ax-button
-  (onClick)="modal.open(options)"
-  color="primary"
-  text="Open Modal"
-></ax-button>
+  <ax-modal #modal>
+    <div class="ax-px-4 ax-py-2">
+      <ax-title class="ax-text-lg ax-font-medium ax-mb-4">
+        Welcome to Modal
+      </ax-title>
+      <ax-subtitle class="ax-mb-4">
+        This is a basic modal dialog. You can customize its appearance and
+        behavior using various options.
+      </ax-subtitle>
+      <ax-subtitle>
+        The modal provides a focused way to display content while temporarily
+        blocking interaction with the rest of the application.
+      </ax-subtitle>
+    </div>
+  </ax-modal>
+</div>

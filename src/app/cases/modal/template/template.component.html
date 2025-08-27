@@ -1,22 +1,41 @@
-<ng-template #c>
-  <ax-agreement-text title="LICENSE GRANTED"></ax-agreement-text>
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4">
+  <ax-button
+    (onClick)="handleOpenServiceTemplate()"
+    color="primary"
+    text="Open Template Modal"
+  ></ax-button>
 
-  <ax-modal-footer>
-    <ax-prefix>
-      <ax-button
-        color="danger"
-        look="outline"
-        text="Don't accept and leave"
-      ></ax-button>
-    </ax-prefix>
-    <ax-suffix>
-      <ax-button text="Accept and continue" color="primary"></ax-button>
-    </ax-suffix>
-  </ax-modal-footer>
-</ng-template>
+  <ng-template #c>
+    <div class="ax-px-4 ax-py-2">
+      <ax-title class="ax-text-lg ax-font-medium ax-mb-4">
+        Template Content
+      </ax-title>
+      <ax-subtitle class="ax-mb-4">
+        This modal content is created using a template. Templates allow you to
+        create complex layouts with custom styling.
+      </ax-subtitle>
+      <ax-subtitle>
+        You can include any HTML content, components, or interactive elements
+        within the template.
+      </ax-subtitle>
+    </div>
 
-<ax-button
-  (onClick)="handleOpenServiceTemplate()"
-  color="primary"
-  text="Open Template Modal"
-></ax-button>
+    <ax-modal-footer>
+      <ax-prefix>
+        <ax-button
+          color="danger"
+          look="outline"
+          text="Cancel"
+          (onClick)="closeModal()"
+        ></ax-button>
+      </ax-prefix>
+      <ax-suffix>
+        <ax-button
+          text="Confirm"
+          color="primary"
+          (onClick)="closeModal()"
+        ></ax-button>
+      </ax-suffix>
+    </ax-modal-footer>
+  </ng-template>
+</div>

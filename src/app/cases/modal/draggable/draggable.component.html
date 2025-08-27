@@ -1,0 +1,46 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4">
+  <div class="ax-flex ax-gap-4">
+    <ax-button
+      (onClick)="draggableModal.open(draggableOptions)"
+      color="primary"
+      text="Draggable Modal"
+    ></ax-button>
+
+    <ax-button
+      (onClick)="nonDraggableModal.open(nonDraggableOptions)"
+      color="secondary"
+      text="Non-Draggable Modal"
+    ></ax-button>
+  </div>
+
+  <ax-modal #draggableModal>
+    <div class="ax-px-4 ax-py-2">
+      <ax-title class="ax-text-lg ax-font-medium ax-mb-4">
+        Draggable Modal
+      </ax-title>
+      <ax-subtitle class="ax-mb-4">
+        This modal can be dragged around the screen by clicking and dragging the
+        header.
+      </ax-subtitle>
+      <ax-subtitle>
+        Try dragging this modal to different positions on the screen. The modal
+        will maintain its position until you close it.
+      </ax-subtitle>
+    </div>
+  </ax-modal>
+
+  <ax-modal #nonDraggableModal>
+    <div class="ax-px-4 ax-py-2">
+      <ax-title class="ax-text-lg ax-font-medium ax-mb-4">
+        Non-Draggable Modal
+      </ax-title>
+      <ax-subtitle class="ax-mb-4">
+        This modal cannot be dragged. It stays in the center of the screen.
+      </ax-subtitle>
+      <ax-subtitle>
+        Notice how you cannot move this modal by dragging the header. This is
+        useful when you want to ensure the modal stays in a fixed position.
+      </ax-subtitle>
+    </div>
+  </ax-modal>
+</div>

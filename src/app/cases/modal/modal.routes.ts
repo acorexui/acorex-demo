@@ -21,4 +21,30 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./template/template.component').then((e) => e.TemplateComponent),
   },
+  {
+    path: 'sizes',
+    loadComponent: () =>
+      import('./sizes/sizes.component').then((e) => e.SizesComponent),
+  },
+  {
+    path: 'draggable',
+    loadComponent: () =>
+      import('./draggable/draggable.component').then(
+        (e) => e.DraggableComponent
+      ),
+  },
+  {
+    path: 'minimize-maximize',
+    loadComponent: () =>
+      import('./minimize-maximize/minimize-maximize.component').then(
+        (e) => e.MinimizeMaximizeComponent
+      ),
+  },
+  {
+    path: 'backdrop-options',
+    loadComponent: () =>
+      import('./backdrop-options/backdrop-options.component').then(
+        (e) => e.BackdropOptionsComponent
+      ),
+  },
 ];

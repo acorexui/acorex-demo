@@ -1,0 +1,66 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4">
+  <div class="ax-flex ax-flex-wrap ax-gap-2 ax-justify-center">
+    <ax-button
+      (onClick)="minimizeModal.open(minimizeOptions)"
+      color="primary"
+      text="Minimizable Modal"
+    ></ax-button>
+
+    <ax-button
+      (onClick)="maximizeModal.open(maximizeOptions)"
+      color="secondary"
+      text="Maximizable Modal"
+    ></ax-button>
+
+    <ax-button
+      (onClick)="fullControlModal.open(fullOptions)"
+      color="success"
+      text="Full Control Modal"
+    ></ax-button>
+  </div>
+
+  <ax-modal #minimizeModal>
+    <div class="ax-px-4 ax-py-2">
+      <ax-title class="ax-text-lg ax-font-medium ax-mb-4">
+        Minimizable Modal
+      </ax-title>
+      <ax-subtitle>
+        This modal can be minimized to the bottom-right corner of the screen.
+      </ax-subtitle>
+      <ax-subtitle>
+        Click the minimize button in the header to minimize this modal. It will
+        appear as a small bar at the bottom of the screen.
+      </ax-subtitle>
+    </div>
+  </ax-modal>
+
+  <ax-modal #maximizeModal>
+    <div class="ax-px-4 ax-py-2">
+      <ax-title class="ax-text-lg ax-font-medium ax-mb-4">
+        Maximizable Modal
+      </ax-title>
+      <ax-subtitle>
+        This modal can be maximized to fullscreen mode.
+      </ax-subtitle>
+      <ax-subtitle>
+        Click the maximize button in the header to enter fullscreen mode. Press
+        Escape or click the restore button to exit fullscreen.
+      </ax-subtitle>
+    </div>
+  </ax-modal>
+
+  <ax-modal #fullControlModal>
+    <div class="ax-px-4 ax-py-2">
+      <ax-title class="ax-text-lg ax-font-medium ax-mb-4">
+        Full Control Modal
+      </ax-title>
+      <ax-subtitle>
+        This modal has both minimize and maximize controls.
+      </ax-subtitle>
+      <ax-subtitle>
+        You can minimize it to the bottom-left corner or maximize it to
+        fullscreen. Try both controls to see how they work together.
+      </ax-subtitle>
+    </div>
+  </ax-modal>
+</div>

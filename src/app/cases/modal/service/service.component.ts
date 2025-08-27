@@ -1,10 +1,10 @@
-import { Component, inject } from '@angular/core';
+import { AXButtonComponent } from '@acorex/components/button';
 import {
   AXModalModule,
   AXModalOptions,
   AXModalService,
 } from '@acorex/components/modal';
-import { AXButtonComponent } from '@acorex/components/button';
+import { Component, inject } from '@angular/core';
 
 @Component({
   templateUrl: 'service.component.html',
@@ -14,28 +14,32 @@ export class ServiceComponent {
   private modalService = inject(AXModalService);
 
   protected options: AXModalOptions = {
+    title: 'Service Modal',
+    size: 'md',
+    header: true,
+    draggable: true,
     backdrop: {
       enabled: true,
-      cssClass: 'ax-bg-black/50',
       closeOnClick: true,
       background: true,
     },
-    draggable: true,
-    buttons: {
-      minimize: {
-        enable: true,
-        position: 'bottom-right',
-      },
-      close: true,
-    },
-    title: 'Modal Title',
-    size: 'fit',
   };
 
   protected async handleOpenServiceComponent() {
-    const component = (
-      await import('../../../shared/agreement/agreement.components')
-    ).AgreementComponents;
-    this.modalService.open(component, this.options);
+    const modalContent = `
+      <div class="ax-px-4 ax-py-2">
+        <ax-title class="ax-text-lg ax-font-medium ax-mb-4">Service Modal</ax-title>
+        <ax-subtitle class="ax-mb-4">
+          This modal was opened using the modal service programmatically.
+        </ax-subtitle>
+        <ax-subtitle>
+          The service allows you to create modals from components, templates, or HTML content without using the declarative component.
+        </ax-subtitle>
+      </div>
+    `;
+
+    const div = document.createElement('div');
+    div.innerHTML = modalContent;
+    this.modalService.open(div, this.options);
   }
 }

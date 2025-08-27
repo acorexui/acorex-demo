@@ -1,0 +1,27 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4">
+  <div class="ax-flex ax-flex-wrap ax-gap-2 ax-justify-center">
+    @for (size of sizes; track size.size) {
+    <ax-button
+      (onClick)="modal.open(getOptions(size.size))"
+      color="primary"
+      [text]="size.name"
+    ></ax-button>
+    }
+  </div>
+
+  <ax-modal #modal>
+    <div class="ax-px-4 ax-py-2">
+      <ax-title class="ax-text-lg ax-font-medium ax-mb-4">
+        Modal Content
+      </ax-title>
+      <ax-subtitle class="ax-mb-4">
+        This is a sample modal with different sizes. You can see how the modal
+        adapts to different content and screen sizes.
+      </ax-subtitle>
+      <ax-subtitle>
+        The modal size determines the maximum width and height constraints. Try
+        resizing your browser window to see how the modal responds.
+      </ax-subtitle>
+    </div>
+  </ax-modal>
+</div>

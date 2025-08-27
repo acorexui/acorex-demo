@@ -1,0 +1,89 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-bg-surface ax-w-[100vw] ax-h-[100vh]"
+>
+  <div class="ax-flex ax-flex-wrap ax-gap-2 ax-justify-center">
+    <ax-button
+      (onClick)="defaultModal.open(defaultBackdropOptions)"
+      color="primary"
+      text="Default Backdrop"
+    ></ax-button>
+
+    <ax-button
+      (onClick)="noBackdropModal.open(noBackdropOptions)"
+      color="secondary"
+      text="No Backdrop"
+    ></ax-button>
+
+    <ax-button
+      (onClick)="customBackdropModal.open(customBackdropOptions)"
+      color="success"
+      text="Custom Backdrop"
+    ></ax-button>
+
+    <ax-button
+      (onClick)="noClickCloseModal.open(noClickCloseOptions)"
+      color="warning"
+      text="No Click to Close"
+    ></ax-button>
+  </div>
+
+  <ax-modal #defaultModal>
+    <div class="ax-px-4 ax-py-2">
+      <ax-title class="ax-text-lg ax-font-medium ax-mb-4">
+        Default Backdrop
+      </ax-title>
+      <ax-subtitle>
+        This modal has the default backdrop with semi-transparent black
+        background.
+      </ax-subtitle>
+      <ax-subtitle>
+        You can click outside the modal (on the backdrop) to close it. This is
+        the standard behavior.
+      </ax-subtitle>
+    </div>
+  </ax-modal>
+
+  <ax-modal #noBackdropModal>
+    <div class="ax-px-4 ax-py-2">
+      <ax-title class="ax-text-lg ax-font-medium ax-mb-4">No Backdrop</ax-title>
+      <ax-subtitle>
+        This modal has no backdrop, so you can see the content behind it.
+      </ax-subtitle>
+      <ax-subtitle>
+        You can only close this modal using the close button in the header, not
+        by clicking outside.
+      </ax-subtitle>
+    </div>
+  </ax-modal>
+
+  <ax-modal #customBackdropModal>
+    <div class="ax-px-4 ax-py-2">
+      <ax-title class="ax-text-lg ax-font-medium ax-mb-4">
+        Custom Backdrop
+      </ax-title>
+      <ax-subtitle>
+        This modal has a custom blue backdrop with 30% opacity.
+      </ax-subtitle>
+      <ax-subtitle>
+        Notice the blue tint on the backdrop. You cannot close this modal by
+        clicking the backdrop.
+      </ax-subtitle>
+    </div>
+  </ax-modal>
+
+  <ax-modal #noClickCloseModal>
+    <div class="ax-px-4 ax-py-2">
+      <ax-title class="ax-text-lg ax-font-medium ax-mb-4">
+        No Click to Close
+      </ax-title>
+      <ax-subtitle>
+        This modal has a backdrop but clicking on it won't close the modal.
+      </ax-subtitle>
+      <ax-subtitle>
+        You can only close this modal using the close button in the header. This
+        is useful for important dialogs where you want to prevent accidental
+        closure.
+      </ax-subtitle>
+    </div>
+  </ax-modal>
+</div>
