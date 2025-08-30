@@ -33,26 +33,4 @@ export const routes: Routes = [
         (e) => e.AutoFocusComponent
       ),
   },
-  {
-    path: 'looks',
-    loadComponent: () =>
-      import('./looks/looks.component').then((e) => e.LooksComponent),
-  },
-  {
-    path: 'states',
-    loadComponent: () =>
-      import('./states/states.component').then((e) => e.StatesComponent),
-  },
-  {
-    path: 'disabled-readonly',
-    loadComponent: () =>
-      import('./disabled-readonly/disabled-readonly.component').then(
-        (e) => e.DisabledReadonlyComponent
-      ),
-  },
-  {
-    path: 'events',
-    loadComponent: () =>
-      import('./events/events.component').then((e) => e.EventsComponent),
-  },
 ];
