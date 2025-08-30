@@ -1,1 +1,19 @@
-<ax-button (onClick)="_handleAsyncClick()" [color]="'danger'" [text]="'Start Async Process'"></ax-button>
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+>
+  <div class="ax-flex ax-flex-wrap ax-gap-2 ax-justify-center">
+    <ax-button
+      text="Delete File (Async)"
+      color="danger"
+      (onClick)="showAsyncNotification()"
+    >
+    </ax-button>
+
+    <ax-button
+      text="Progress Notification"
+      color="primary"
+      (onClick)="showProgressNotification()"
+    >
+    </ax-button>
+  </div>
+</div>

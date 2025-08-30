@@ -8,7 +8,7 @@ import { Component, inject, signal } from '@angular/core';
 
 @Component({
   templateUrl: 'draggable.component.html',
-  imports: [AXButtonComponent, AXActionSheetModule],
+  imports: [AXButtonComponent, ],
 })
 export class DraggableComponent {
   protected options = signal({

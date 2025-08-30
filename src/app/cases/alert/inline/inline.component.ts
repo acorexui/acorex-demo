@@ -1,5 +1,4 @@
 import { AXAlertComponent } from '@acorex/components/alert';
-import { AXButtonComponent } from '@acorex/components/button';
 import {
   AXDecoratorCloseButtonComponent,
   AXDecoratorGenericComponent,
@@ -13,7 +12,6 @@ import { Component } from '@angular/core';
     AXAlertComponent,
     AXDecoratorIconComponent,
     AXDecoratorGenericComponent,
-    AXButtonComponent,
     AXDecoratorCloseButtonComponent,
   ],
 })

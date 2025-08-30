@@ -1,6 +1,5 @@
 import {
   AXActionSheetItem,
-  AXActionSheetModule,
   AXActionSheetService,
 } from '@acorex/components/action-sheet';
 import { AXButtonComponent } from '@acorex/components/button';
@@ -9,7 +8,7 @@ import { Component, inject, signal } from '@angular/core';
 
 @Component({
   selector: 'app-usage',
-  imports: [JsonPipe, AXActionSheetModule, AXButtonComponent],
+  imports: [JsonPipe, AXButtonComponent],
   templateUrl: './usage.component.html',
 })
 export class UsageComponent {

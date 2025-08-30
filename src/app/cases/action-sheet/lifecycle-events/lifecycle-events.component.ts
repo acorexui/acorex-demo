@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-lifecycle-events',
-  imports: [AXButtonComponent, AXActionSheetModule],
+  imports: [AXButtonComponent],
   templateUrl: './lifecycle-events.component.html',
 })
 export class LifecycleEventsComponent implements OnDestroy {

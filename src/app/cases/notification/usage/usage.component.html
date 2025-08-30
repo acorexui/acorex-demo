@@ -1,1 +1,33 @@
-<ax-button (onClick)="_handleClick()" [text]="'Open Notification'"></ax-button>
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+>
+  <div class="ax-flex ax-flex-wrap ax-gap-2 ax-justify-center">
+    <ax-button
+      color="success"
+      text="Success Notification"
+      (onClick)="showBasicNotification()"
+    >
+    </ax-button>
+
+    <ax-button
+      color="primary"
+      text="Info Notification"
+      (onClick)="showInfoNotification()"
+    >
+    </ax-button>
+
+    <ax-button
+      color="warning"
+      text="Warning Notification"
+      (onClick)="showWarningNotification()"
+    >
+    </ax-button>
+
+    <ax-button
+      color="danger"
+      text="Error Notification"
+      (onClick)="showErrorNotification()"
+    >
+    </ax-button>
+  </div>
+</div>

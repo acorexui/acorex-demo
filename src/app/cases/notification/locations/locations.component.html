@@ -1,0 +1,36 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+>
+  <div class="ax-flex ax-flex-wrap ax-gap-2 ax-justify-center">
+    <ax-button color="primary" text="Top Start" (onClick)="showTopStart()">
+    </ax-button>
+
+    <ax-button color="success" text="Top Center" (onClick)="showTopCenter()">
+    </ax-button>
+
+    <ax-button color="warning" text="Top End" (onClick)="showTopEnd()">
+    </ax-button>
+
+    <ax-button color="danger" text="Bottom Start" (onClick)="showBottomStart()">
+    </ax-button>
+
+    <ax-button
+      color="secondary"
+      text="Bottom Center"
+      (onClick)="showBottomCenter()"
+    >
+    </ax-button>
+
+    <ax-button color="default" text="Bottom End" (onClick)="showBottomEnd()">
+    </ax-button>
+  </div>
+
+  <div class="ax-mt-4">
+    <ax-button
+      color="primary"
+      text="Show All Locations"
+      (onClick)="showMultipleLocations()"
+    >
+    </ax-button>
+  </div>
+</div>

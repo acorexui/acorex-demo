@@ -1,56 +1,73 @@
-import { Component } from '@angular/core';
-import { AXButtonModule } from '@acorex/components/button';
-import { Subject } from 'rxjs';
+import { AXButtonComponent } from '@acorex/components/button';
 import {
   AXNotificationModule,
   AXNotificationService,
 } from '@acorex/components/notification';
+import { Component, inject } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   templateUrl: './asynchronous-process.component.html',
-  imports: [AXButtonModule, AXNotificationModule],
+  imports: [AXButtonComponent, AXNotificationModule],
 })
 export class AsynchronousProcesseDecoratorComponent {
-  constructor(private notificationService: AXNotificationService) {}
-  _handleAsyncClick() {
+  private notificationService = inject(AXNotificationService);
+
+  showAsyncNotification() {
     const subject = new Subject();
-    const dialog = this.notificationService.show({
-      content: 'Are you sure you want to permanently delete the file?',
+
+    const notification = this.notificationService.show({
       title: 'Delete File',
+      content: 'Are you sure you want to permanently delete the file?',
       color: 'danger',
       location: 'bottom-end',
+      closeButton: false,
       buttons: [
         {
-          text: 'delete',
+          text: 'Delete',
           color: 'danger',
-          onClick: (e: any) => {
-            e.handled = true;
-            e.source.text = 'Deleting...';
-            e.source.disabled = true;
-            e.source.loading = true;
+          onClick: (e) => {
+            if (e) {
+              e.handled = true;
+              e.source.text = 'Deleting...';
+              e.source.disabled = true;
+              e.source.loading = true;
+            }
             subject.next('Started');
+
             setTimeout(() => {
               if (!subject.closed) {
                 subject.next('Completed');
                 subject.complete();
-                dialog.close();
-                alert('Notification Done.');
+                notification.close();
+                alert('File deleted successfully!');
               }
             }, 3000);
           },
         },
         {
-          text: 'cancel',
+          text: 'Cancel',
           color: 'default',
-          onClick: (e) => {
+          onClick: () => {
             if (!subject.closed) {
               subject.next('Canceled');
-              dialog.close();
+              notification.close();
             }
           },
         },
       ],
-      closeButton: false,
+    });
+  }
+
+  showProgressNotification() {
+    const notification = this.notificationService.show({
+      title: 'Processing Data',
+      content: 'Please wait while we process your data...',
+      color: 'primary',
+      location: 'top-center',
+      timeOut: 5000,
+      timeOutProgress: true,
+      pauseOnHover: false,
     });
   }
 }

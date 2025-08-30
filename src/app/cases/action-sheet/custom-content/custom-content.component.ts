@@ -15,7 +15,6 @@ import { Component, inject, TemplateRef, viewChild } from '@angular/core';
   imports: [
     AXButtonComponent,
     AXResultComponent,
-    AXActionSheetModule,
     AXDecoratorIconComponent,
     AXDecoratorGenericComponent,
   ],

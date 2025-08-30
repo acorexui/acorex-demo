@@ -7,7 +7,7 @@ import { Component, inject } from '@angular/core';
 
 @Component({
   selector: 'app-drag-up-fullscreen',
-  imports: [AXActionSheetModule, AXButtonComponent],
+  imports: [AXButtonComponent],
   templateUrl: './drag-up-fullscreen.component.html',
 })
 export class DragUpFullscreenComponent {

@@ -1,0 +1,43 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+>
+  <div class="ax-flex ax-flex-wrap ax-gap-2 ax-justify-center">
+    <ax-button
+      color="primary"
+      text="Short Timeout (2s)"
+      (onClick)="showShortTimeout()"
+    >
+    </ax-button>
+
+    <ax-button
+      color="success"
+      text="Long Timeout (10s)"
+      (onClick)="showLongTimeout()"
+    >
+    </ax-button>
+
+    <ax-button
+      color="warning"
+      text="No Progress Bar"
+      (onClick)="showNoProgress()"
+    >
+    </ax-button>
+
+    <ax-button text="Pause on Hover" (onClick)="showPauseOnHover()">
+    </ax-button>
+
+    <ax-button
+      color="danger"
+      text="No Pause on Hover"
+      (onClick)="showNoPauseOnHover()"
+    >
+    </ax-button>
+
+    <ax-button
+      color="secondary"
+      text="Manual Close Only"
+      (onClick)="showManualClose()"
+    >
+    </ax-button>
+  </div>
+</div>

@@ -18,12 +18,7 @@ import {
 } from '@angular/core';
 @Component({
   templateUrl: 'both-mode.component.html',
-  imports: [
-    AXButtonComponent,
-    AXAvatarComponent,
-    AXActionSheetModule,
-    AXAvatarGroupComponent,
-  ],
+  imports: [AXButtonComponent, AXAvatarComponent, AXAvatarGroupComponent],
 })
 export class ActionSheetBothModeComponent {
   bothTemplate = viewChild<TemplateRef<unknown>>('bothTemplate');

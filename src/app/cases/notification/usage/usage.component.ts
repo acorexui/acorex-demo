@@ -1,39 +1,50 @@
-import { Component } from '@angular/core';
-import { AXButtonModule } from '@acorex/components/button';
-import { Subject } from 'rxjs';
+import { AXButtonComponent } from '@acorex/components/button';
 import {
   AXNotificationModule,
   AXNotificationService,
 } from '@acorex/components/notification';
+import { Component, inject } from '@angular/core';
 
 @Component({
   templateUrl: './usage.component.html',
-  imports: [AXButtonModule, AXNotificationModule],
+  imports: [AXButtonComponent, AXNotificationModule],
 })
 export class UsageComponent {
-  constructor(private notificationService: AXNotificationService) {}
-  _handleClick() {
-    const dialog = this.notificationService.show({
-      content: 'Are you sure?',
-      title: 'Task',
-      color: 'warning',
+  private notificationService = inject(AXNotificationService);
+
+  showBasicNotification() {
+    this.notificationService.show({
+      title: 'Success!',
+      content: 'Your action was completed successfully.',
+      color: 'success',
       location: 'top-end',
-      buttons: [
-        {
-          text: 'Yes',
-          color: 'warning',
-          onClick: () => {
-            dialog.close();
-          },
-        },
-        {
-          text: 'No',
-          color: 'default',
-          onClick: () => {
-            dialog.close();
-          },
-        },
-      ],
+    });
+  }
+
+  showInfoNotification() {
+    this.notificationService.show({
+      title: 'Information',
+      content: 'Here is some important information for you.',
+      color: 'primary',
+      location: 'top-center',
+    });
+  }
+
+  showWarningNotification() {
+    this.notificationService.show({
+      title: 'Warning',
+      content: 'Please review your input before proceeding.',
+      color: 'warning',
+      location: 'top-start',
+    });
+  }
+
+  showErrorNotification() {
+    this.notificationService.show({
+      title: 'Error',
+      content: 'Something went wrong. Please try again.',
+      color: 'danger',
+      location: 'bottom-end',
     });
   }
 }
