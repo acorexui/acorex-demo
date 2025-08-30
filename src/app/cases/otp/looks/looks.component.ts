@@ -1,19 +1,13 @@
-import { AXButtonModule } from '@acorex/components/button';
 import {
   AXButtonGroupComponent,
   AXButtonGroupItemComponent,
 } from '@acorex/components/button-group';
-import { AXOtpModule } from '@acorex/components/otp';
+import { AXOtpComponent } from '@acorex/components/otp';
 import { Component, signal } from '@angular/core';
 
 @Component({
   templateUrl: 'looks.component.html',
-  imports: [
-    AXOtpModule,
-    AXButtonModule,
-    AXButtonGroupComponent,
-    AXButtonGroupItemComponent,
-  ],
+  imports: [AXOtpComponent, AXButtonGroupComponent, AXButtonGroupItemComponent],
   standalone: true,
 })
 export class LooksComponent {

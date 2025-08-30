@@ -10,15 +10,15 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
 })
 export class DisabledReadonlyComponent {
+  otpValue = signal('1234');
   isDisabled = signal(false);
   isReadonly = signal(false);
-  otpValue = signal('1234');
 
-  toggleDisabled() {
-    this.isDisabled.update((value) => !value);
+  toggleDisabled(event: boolean) {
+    this.isDisabled.set(event);
   }
 
-  toggleReadonly() {
-    this.isReadonly.update((value) => !value);
+  toggleReadonly(event: boolean) {
+    this.isReadonly.set(event);
   }
 }

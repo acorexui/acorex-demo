@@ -12,7 +12,7 @@
     <div class="ax-flex ax-items-center ax-gap-3">
       <ax-switch
         [ngModel]="isDisabled()"
-        (ngModelChange)="toggleDisabled()"
+        (onValueChanged)="toggleDisabled($event.value)"
       ></ax-switch>
       <span>Disabled</span>
     </div>
@@ -20,7 +20,7 @@
     <div class="ax-flex ax-items-center ax-gap-3">
       <ax-switch
         [ngModel]="isReadonly()"
-        (ngModelChange)="toggleReadonly()"
+        (onValueChanged)="toggleReadonly($event.value)"
       ></ax-switch>
       <span>Readonly</span>
     </div>
@@ -29,9 +29,9 @@
   <div class="ax-w-80">
     <ax-otp
       [length]="4"
+      [ngModel]="otpValue"
       [disabled]="isDisabled()"
       [readonly]="isReadonly()"
-      [ngModel]="otpValue"
       placeholder="Enter code"
     ></ax-otp>
   </div>

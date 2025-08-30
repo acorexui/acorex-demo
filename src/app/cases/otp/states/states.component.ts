@@ -1,11 +1,19 @@
-import { AXButtonModule } from '@acorex/components/button';
-import { AXOtpModule } from '@acorex/components/otp';
+import {
+  AXButtonGroupComponent,
+  AXButtonGroupItemComponent,
+} from '@acorex/components/button-group';
+import { AXOtpComponent } from '@acorex/components/otp';
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   templateUrl: 'states.component.html',
-  imports: [AXOtpModule, AXButtonModule, FormsModule],
+  imports: [
+    FormsModule,
+    AXOtpComponent,
+    AXButtonGroupComponent,
+    AXButtonGroupItemComponent,
+  ],
   standalone: true,
 })
 export class StatesComponent {

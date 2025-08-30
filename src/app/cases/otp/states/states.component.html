@@ -7,24 +7,25 @@
   </div>
 
   <div class="ax-flex ax-flex-wrap ax-justify-center ax-gap-2">
-    @for (state of states; track state.value) {
-    <ax-button
-      [color]="selectedState() === state.value ? 'primary' : 'secondary'"
-      [size]="'sm'"
-      (click)="setState(state.value)"
-    >
-      {{ state.label }}
-    </ax-button>
-    }
+    <ax-button-group>
+      @for (state of states; track state.value) {
+      <ax-button-group-item
+        class="ax-sm"
+        [text]="state.label"
+        (onClick)="setState(state.value)"
+        [selected]="selectedState() === state.value"
+      >
+      </ax-button-group-item>
+      }
+    </ax-button-group>
   </div>
 
   <div class="ax-w-80">
     <ax-otp
-      [(ngModel)]="otpValue"
       [length]="4"
+      [(ngModel)]="otpValue"
       [state]="selectedState()"
       (onCompleted)="onCompleted($event)"
-      placeholder="Enter code"
     ></ax-otp>
   </div>
 
