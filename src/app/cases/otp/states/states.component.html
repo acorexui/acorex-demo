@@ -1,0 +1,37 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-py-16 ax-text-center"
+>
+  <div>
+    <div class="ax-h4">OTP Validation States</div>
+    <p class="ax-text-sm">Different validation states for the OTP component</p>
+  </div>
+
+  <div class="ax-flex ax-flex-wrap ax-justify-center ax-gap-2">
+    @for (state of states; track state.value) {
+    <ax-button
+      [color]="selectedState() === state.value ? 'primary' : 'secondary'"
+      [size]="'sm'"
+      (click)="setState(state.value)"
+    >
+      {{ state.label }}
+    </ax-button>
+    }
+  </div>
+
+  <div class="ax-w-80">
+    <ax-otp
+      [(ngModel)]="otpValue"
+      [length]="4"
+      [state]="selectedState()"
+      (onCompleted)="onCompleted($event)"
+      placeholder="Enter code"
+    ></ax-otp>
+  </div>
+
+  <div class="ax-text-xs ax-text-muted">
+    Current state: <strong>{{ selectedState() }}</strong>
+    @if (otpValue()) {
+    <br />Value: <strong>{{ otpValue() }}</strong>
+    }
+  </div>
+</div>

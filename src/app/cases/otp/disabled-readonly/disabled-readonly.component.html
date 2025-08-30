@@ -1,0 +1,48 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-py-16 ax-text-center"
+>
+  <div>
+    <div class="ax-h4">OTP Disabled & Readonly States</div>
+    <p class="ax-text-sm">
+      Control the disabled and readonly states of the OTP component
+    </p>
+  </div>
+
+  <div class="ax-flex ax-flex-col ax-gap-4 ax-items-center">
+    <div class="ax-flex ax-items-center ax-gap-3">
+      <ax-switch
+        [ngModel]="isDisabled()"
+        (ngModelChange)="toggleDisabled()"
+      ></ax-switch>
+      <span>Disabled</span>
+    </div>
+
+    <div class="ax-flex ax-items-center ax-gap-3">
+      <ax-switch
+        [ngModel]="isReadonly()"
+        (ngModelChange)="toggleReadonly()"
+      ></ax-switch>
+      <span>Readonly</span>
+    </div>
+  </div>
+
+  <div class="ax-w-80">
+    <ax-otp
+      [length]="4"
+      [disabled]="isDisabled()"
+      [readonly]="isReadonly()"
+      [ngModel]="otpValue"
+      placeholder="Enter code"
+    ></ax-otp>
+  </div>
+
+  <div class="ax-text-xs ax-text-muted">
+    @if (isDisabled()) {
+    <div class="ax-text-warning">Component is disabled</div>
+    } @if (isReadonly()) {
+    <div class="ax-text-info">Component is readonly</div>
+    } @if (!isDisabled() && !isReadonly()) {
+    <div class="ax-text-success">Component is interactive</div>
+    }
+  </div>
+</div>
