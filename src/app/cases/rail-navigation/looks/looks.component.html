@@ -1,0 +1,38 @@
+<div class="ax-flex ax-items-center ax-justify-center ax-gap-4 ax-p-4">
+  <ax-rail-navigation [look]="currentLook()" class="ax-h-[100vh]">
+    <ax-rail-navigation-item [active]="true">
+      <ax-icon class="fa-solid fa-home"></ax-icon>
+      <ax-text>Home</ax-text>
+    </ax-rail-navigation-item>
+    <ax-rail-navigation-item>
+      <ax-icon class="fa-solid fa-store"></ax-icon>
+      <ax-text>Store</ax-text>
+    </ax-rail-navigation-item>
+    <ax-rail-navigation-item>
+      <ax-icon class="fa-solid fa-user"></ax-icon>
+      <ax-text>Profile</ax-text>
+    </ax-rail-navigation-item>
+    <ax-rail-navigation-item>
+      <ax-icon class="fa-solid fa-cog"></ax-icon>
+      <ax-text>Settings</ax-text>
+    </ax-rail-navigation-item>
+    <ax-suffix>
+      <ax-rail-navigation-item>
+        <ax-icon class="fa-solid fa-sun-bright"></ax-icon>
+      </ax-rail-navigation-item>
+    </ax-suffix>
+  </ax-rail-navigation>
+
+  <div class="ax-flex ax-flex-col ax-gap-2">
+    <label class="ax-text-sm ax-font-medium">Select Look:</label>
+    <ax-select-box
+      class="ax-w-40"
+      textField="text"
+      valueField="value"
+      [ngModel]="currentLook()"
+      [dataSource]="dataSource()"
+      (onValueChanged)="onLookChange($event.value)"
+    >
+    </ax-select-box>
+  </div>
+</div>

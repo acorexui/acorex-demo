@@ -1,0 +1,78 @@
+<div class="ax-flex ax-items-center ax-justify-center ax-gap-4 ax-p-4">
+  <ax-rail-navigation look="pills-color" class="ax-h-[100vh]">
+    <ax-rail-navigation-item
+      [active]="isActive(0)"
+      [disabled]="isDisabled(0)"
+      (onClick)="onItemClick(0)"
+    >
+      <ax-icon class="fa-solid fa-home"></ax-icon>
+      <ax-text>Home</ax-text>
+    </ax-rail-navigation-item>
+    <ax-rail-navigation-item
+      [active]="isActive(1)"
+      [disabled]="isDisabled(1)"
+      (onClick)="onItemClick(1)"
+    >
+      <ax-icon class="fa-solid fa-store"></ax-icon>
+      <ax-text>Store</ax-text>
+    </ax-rail-navigation-item>
+    <ax-rail-navigation-item
+      [active]="isActive(2)"
+      [disabled]="isDisabled(2)"
+      (onClick)="onItemClick(2)"
+    >
+      <ax-icon class="fa-solid fa-user"></ax-icon>
+      <ax-text>Profile</ax-text>
+    </ax-rail-navigation-item>
+    <ax-rail-navigation-item
+      [active]="isActive(3)"
+      [disabled]="isDisabled(3)"
+      (onClick)="onItemClick(3)"
+    >
+      <ax-icon class="fa-solid fa-cog"></ax-icon>
+      <ax-text>Settings</ax-text>
+    </ax-rail-navigation-item>
+    <ax-suffix>
+      <ax-rail-navigation-item>
+        <ax-icon class="fa-solid fa-sun-bright"></ax-icon>
+      </ax-rail-navigation-item>
+    </ax-suffix>
+  </ax-rail-navigation>
+
+  <div class="ax-flex-1 ax-flex ax-flex-col ax-gap-4">
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <h3 class="ax-text-lg ax-font-semibold">Active Item</h3>
+      <div class="ax-flex ax-gap-2 ax-flex-wrap">
+        @for (item of ['Home', 'Store', 'Profile', 'Settings']; track $index) {
+        <ax-button
+          [text]="item"
+          class="ax-sm"
+          color="primary"
+          (onClick)="onItemClick($index)"
+          [look]="isActive($index) ? 'solid' : 'outline'"
+        >
+        </ax-button>
+        }
+      </div>
+    </div>
+
+    <div class="ax-flex-1 ax-flex ax-flex-col ax-gap-4">
+      <div class="ax-flex ax-flex-col ax-gap-2">
+        <h3 class="ax-text-lg ax-font-semibold">Disabled Items</h3>
+        <div class="ax-flex ax-gap-2 ax-flex-wrap">
+          @for (item of ['Home', 'Store', 'Profile', 'Settings']; track $index)
+          {
+          <ax-button
+            [text]="item"
+            class="ax-sm"
+            color="primary"
+            (onClick)="toggleDisabled($index)"
+            [look]="isDisabled($index) ? 'solid' : 'outline'"
+          >
+          </ax-button>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

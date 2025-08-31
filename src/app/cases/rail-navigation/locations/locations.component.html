@@ -1,0 +1,50 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+>
+  <div class="ax-flex ax-flex-col ax-gap-4 ax-w-full ax-max-w-2xl">
+    <div class="ax-flex ax-gap-4 ax-justify-center">
+      @for (location of locations; track location) {
+      <ax-button
+        (onClick)="onLocationChange(location)"
+        [text]="`${location === 'start' ? 'Left' : 'Right'} Side`"
+        [look]="currentLocation() === location ? 'solid' : 'outline'"
+      >
+      </ax-button>
+      }
+    </div>
+
+    <div
+      class="ax-h-[400px] ax-border ax-border-surface-low ax-rounded-lg ax-relative"
+    >
+      <ax-rail-navigation
+        [location]="currentLocation()"
+        look="with-line-color"
+        class="ax-absolute ax-top-0 ax-bottom-0"
+        [class.ax-left-0]="currentLocation() === 'start'"
+        [class.ax-right-0]="currentLocation() === 'end'"
+      >
+        <ax-rail-navigation-item [active]="true">
+          <ax-icon class="fa-solid fa-home"></ax-icon>
+          <ax-text>Home</ax-text>
+        </ax-rail-navigation-item>
+        <ax-rail-navigation-item>
+          <ax-icon class="fa-solid fa-store"></ax-icon>
+          <ax-text>Store</ax-text>
+        </ax-rail-navigation-item>
+        <ax-rail-navigation-item>
+          <ax-icon class="fa-solid fa-user"></ax-icon>
+          <ax-text>Profile</ax-text>
+        </ax-rail-navigation-item>
+        <ax-rail-navigation-item>
+          <ax-icon class="fa-solid fa-cog"></ax-icon>
+          <ax-text>Settings</ax-text>
+        </ax-rail-navigation-item>
+        <ax-suffix>
+          <ax-rail-navigation-item>
+            <ax-icon class="fa-solid fa-sun-bright"></ax-icon>
+          </ax-rail-navigation-item>
+        </ax-suffix>
+      </ax-rail-navigation>
+    </div>
+  </div>
+</div>

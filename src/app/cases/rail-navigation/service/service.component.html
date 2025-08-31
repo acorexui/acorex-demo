@@ -1,0 +1,39 @@
+<div class="ax-flex ax-items-center ax-justify-center ax-gap-4 ax-p-4">
+  <ax-rail-navigation look="pills-color" class="ax-h-[100vh]">
+    @for (item of items(); track $index) {
+    <ax-rail-navigation-item
+      [active]="isActive($index)"
+      (onClick)="onItemClick($event, $index)"
+    >
+      <ax-icon [class]="item.icon"></ax-icon>
+      <ax-text>{{ item.text }}</ax-text>
+    </ax-rail-navigation-item>
+    }
+    <ax-suffix>
+      <ax-rail-navigation-item>
+        <ax-icon class="fa-solid fa-sun-bright"></ax-icon>
+      </ax-rail-navigation-item>
+    </ax-suffix>
+  </ax-rail-navigation>
+
+  <div class="ax-flex-1 ax-flex ax-flex-col ax-gap-4">
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <h3 class="ax-text-lg ax-font-semibold">Programmatic Control</h3>
+      <p class="ax-text-sm ax-text-surface-low">
+        Use the AXRailNavigationService to programmatically control which item
+        is active.
+      </p>
+      <div class="ax-flex ax-gap-2 ax-flex-wrap">
+        @for (item of items(); track $index) {
+        <ax-button
+          [text]="'Set ' + item.text + ' Active'"
+          class="ax-sm"
+          [look]="isActive($index) ? 'solid' : 'outline'"
+          (onClick)="setActiveProgrammatically($index)"
+        >
+        </ax-button>
+        }
+      </div>
+    </div>
+  </div>
+</div>
