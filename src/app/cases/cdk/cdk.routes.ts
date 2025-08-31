@@ -21,4 +21,9 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./accordion/accordion.routes').then((c) => c.routes),
   },
+  {
+    path: 'drawer',
+    component: MasterLayoutComponent,
+    loadChildren: () => import('./drawer/drawer.routes').then((c) => c.routes),
+  },
 ];
