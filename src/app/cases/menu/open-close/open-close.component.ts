@@ -3,7 +3,7 @@ import { AXMenuComponent, AXMenuItemComponent } from '@acorex/components/menu';
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl: 'triggers.component.html',
+  templateUrl: 'open-close.component.html',
   imports: [AXMenuComponent, AXMenuItemComponent, AXDecoratorGenericComponent],
 })
-export class TriggersComponent {}
+export class OpenCloseComponent {}

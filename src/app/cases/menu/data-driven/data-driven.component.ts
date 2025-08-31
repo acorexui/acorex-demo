@@ -2,10 +2,10 @@ import { AXMenuComponent, AXMenuItem } from '@acorex/components/menu';
 import { Component, signal } from '@angular/core';
 
 @Component({
-  templateUrl: 'items.component.html',
+  templateUrl: 'data-driven.component.html',
   imports: [AXMenuComponent],
 })
-export class ItemsComponent {
+export class DataDrivenComponent {
   protected readonly items = signal<AXMenuItem[]>([
     {
       text: 'New',

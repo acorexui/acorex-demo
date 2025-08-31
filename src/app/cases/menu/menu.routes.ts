@@ -33,13 +33,15 @@ export const routes: Routes = [
   {
     path: 'data-driven',
     loadComponent: () =>
-      import('./data-driven/items.component').then((e) => e.ItemsComponent),
+      import('./data-driven/data-driven.component').then(
+        (e) => e.DataDrivenComponent
+      ),
   },
   {
     path: 'open-close',
     loadComponent: () =>
-      import('./open-close/triggers.component').then(
-        (e) => e.TriggersComponent
+      import('./open-close/open-close.component').then(
+        (e) => e.OpenCloseComponent
       ),
   },
   {
