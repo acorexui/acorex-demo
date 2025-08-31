@@ -15,4 +15,10 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./carousel/carousel.routes').then((c) => c.routes),
   },
+  {
+    path: 'accordion',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./accordion/accordion.routes').then((c) => c.routes),
+  },
 ];
