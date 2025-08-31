@@ -1,0 +1,17 @@
+<div
+  #f="axCarousel"
+  axCarousel
+  [carouselOptions]="carouselOptions()"
+  class="ax-carousel"
+>
+  <div class="ax-carousel-wrapper">
+    @for (item of data(); track item.id) {
+    <div class="ax-carousel-slide">
+      <img class="ax-w-full" src="{{ item.url }}" alt="" />
+    </div>
+    }
+  </div>
+  <div class="ax-carousel-pagination"></div>
+  <div class="ax-carousel-button-prev"></div>
+  <div class="ax-carousel-button-next"></div>
+</div>

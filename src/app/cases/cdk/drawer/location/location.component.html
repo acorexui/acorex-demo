@@ -1,0 +1,44 @@
+<div axDrawerContainer class="ax-mb-3 ax-h-32 ax-w-full">
+  <div
+    [closeOnBackdropClick]="true"
+    axDrawerItem
+    #r="axDrawerItem"
+    location="end"
+    class="ax-h-full ax-border ax-border-on-surface ax-bg-surface ax-p-2"
+  >
+    <ul>
+      <li class="ax-text-on-surface"><ax-text>Home</ax-text></li>
+      <li class="ax-my-2 ax-text-on-surface"><ax-text>About</ax-text></li>
+      <li class="ax-text-on-surface"><ax-text>Contact Us</ax-text></li>
+    </ul>
+  </div>
+  <ax-text
+    >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis,
+    exercitationem.</ax-text
+  >
+</div>
+
+<div axDrawerContainer class="ax-mb-3 ax-h-32 ax-w-full">
+  <div
+    location="start"
+    [closeOnBackdropClick]="true"
+    axDrawerItem
+    #p="axDrawerItem"
+    class="ax-h-full ax-border ax-border-on-surface ax-bg-surface ax-p-2"
+  >
+    <ul>
+      <li class="ax-text-on-surface"><ax-text>Home</ax-text></li>
+      <li class="ax-my-2 ax-text-on-surface"><ax-text>About</ax-text></li>
+      <li class="ax-text-on-surface"><ax-text>Contact Us</ax-text></li>
+    </ul>
+  </div>
+  <ax-text
+    >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis,
+    exercitationem.</ax-text
+  >
+</div>
+
+<div class="ax-flex ax-justify-center ax-gap-2">
+  <ax-button text="Toggle End Drawer" (click)="r.toggle()"></ax-button>
+  <ax-button text="Toggle Start Drawer" (click)="p.toggle()"></ax-button>
+</div>
