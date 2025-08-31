@@ -9,4 +9,10 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./drag-drop/drag-drop.routes').then((c) => c.routes),
   },
+  {
+    path: 'carousel',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./carousel/carousel.routes').then((c) => c.routes),
+  },
 ];
