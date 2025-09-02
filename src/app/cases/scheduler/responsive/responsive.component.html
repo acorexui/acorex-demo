@@ -1,0 +1,29 @@
+<div class="ax-flex ax-flex-col ax-gap-4 ax-p-4">
+  <div class="ax-flex ax-items-center ax-gap-4">
+    <ax-title>Responsive Demo</ax-title>
+    <ax-subtitle>Test scheduler in different container sizes</ax-subtitle>
+  </div>
+
+  <div class="ax-flex ax-items-center ax-gap-2">
+    <span class="ax-text-sm ax-font-medium">Container Size:</span>
+    <ax-select-box
+      [dataSource]="sizes()"
+      [value]="selectedSize()"
+      (valueChange)="onSizeChange($event)"
+      style="width: 200px"
+    ></ax-select-box>
+  </div>
+
+  <div
+    class="ax-border-2 ax-border-dashed ax-border-gray-300 ax-rounded-lg ax-overflow-hidden"
+    [style.width]="currentSize().width"
+    [style.height]="currentSize().height"
+  >
+    <ax-scheduler
+      [selectedView]="'month'"
+      [startingDate]="startingDate()"
+      [dataSource]="appointmentsData()"
+      [allowFullScreen]="allowFullScreen()"
+    ></ax-scheduler>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div
+  class="ax-w-[100vw] ax-h-[100vh] ax-flex ax-justify-center ax-items-center ax-flex-col ax-gap-4 ax-p-4"
+>
+  <div class="ax-flex ax-items-center ax-gap-2">
+    <span class="ax-text-sm ax-font-medium">Select Calendar:</span>
+    <ax-select-box
+      [dataSource]="calendars()"
+      [value]="selectedCalendar()"
+      (onValueChanged)="onCalendarChange($event.value)"
+      style="width: 250px"
+    ></ax-select-box>
+  </div>
+
+  @defer () {
+  <ax-scheduler
+    [selectedView]="'month'"
+    [calendar]="selectedCalendar()"
+    [startingDate]="startingDate()"
+    [dataSource]="appointmentsData()"
+    class="ax-bg-lightest dark:ax-bg-darkest ax-h-[90%]"
+  ></ax-scheduler>
+  }
+</div>

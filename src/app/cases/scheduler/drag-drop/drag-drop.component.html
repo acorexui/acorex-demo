@@ -1,0 +1,38 @@
+<div
+  class="ax-w-[100vw] ax-h-[100vh] ax-flex ax-justify-center ax-items-center ax-flex-col ax-gap-4 ax-p-4"
+>
+  <div class="ax-flex ax-items-center ax-gap-4">
+    <div class="ax-flex ax-items-center ax-gap-2">
+      <span class="ax-text-sm ax-font-medium">Draggable:</span>
+      <ax-select-box
+        [value]="draggable()"
+        [dataSource]="options()"
+        (onValueChanged)="onDraggableChange($event.value)"
+        style="width: 150px"
+      ></ax-select-box>
+    </div>
+
+    <div class="ax-flex ax-items-center ax-gap-2">
+      <span class="ax-text-sm ax-font-medium">Start Delay:</span>
+      <ax-select-box
+        [disabled]="!draggable()"
+        [value]="dragStartDelay()"
+        [dataSource]="delayOptions()"
+        (onValueChanged)="onDelayChange($event.value)"
+        style="width: 150px"
+      ></ax-select-box>
+    </div>
+  </div>
+
+  @defer () {
+  <ax-scheduler
+    [selectedView]="'month'"
+    [draggable]="draggable()"
+    [startingDate]="startingDate()"
+    [dataSource]="appointmentsData()"
+    [dragStartDelay]="dragStartDelay()"
+    (onAppointmentDrop)="onAppointmentDrop($event)"
+    class="ax-bg-lightest dark:ax-bg-darkest ax-h-[90%]"
+  ></ax-scheduler>
+  }
+</div>

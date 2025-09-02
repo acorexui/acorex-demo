@@ -1,0 +1,40 @@
+<div
+  class="ax-w-[100vw] ax-h-[100vh] ax-flex ax-justify-center ax-items-center ax-flex-col ax-gap-4 ax-p-4"
+>
+  <div class="ax-flex ax-items-center ax-gap-2">
+    <span class="ax-text-sm ax-font-medium">Template:</span>
+    <ax-select-box
+      [dataSource]="options()"
+      [value]="selectedTemplate()"
+      (onValueChanged)="onTemplateChange($event.value)"
+      style="width: 200px"
+    ></ax-select-box>
+  </div>
+
+  @defer(){
+  <ax-scheduler
+    [selectedView]="'month'"
+    [startingDate]="startingDate()"
+    [dataSource]="appointmentsData()"
+    [tooltipTemplate]="tooltipTemplate || ''"
+    class="ax-bg-lightest dark:ax-bg-darkest ax-h-[90%]"
+  ></ax-scheduler>
+  }
+
+  <!-- Custom tooltip template -->
+  <ng-template #tooltipTemplate let-appointment>
+    <div class="ax-p-3 ax-surface ax-border ax-rounded-lg ax-shadow-lg">
+      <ax-title> {{ appointment.title }} </ax-title>
+      <ax-subtitle> {{ appointment.description }} </ax-subtitle>
+      <div class="ax-flex ax-justify-between ax-text-xs">
+        <span>Start: {{ appointment.startDate | format : "datetime" }}</span>
+        <span>End: {{ appointment.endDate | format : "datetime" }}</span>
+      </div>
+      <div class="ax-mt-2 ax-pt-2 ax-border-t">
+        <div class="ax-text-xs">
+          Priority: {{ appointment.priority || "Medium" }}
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

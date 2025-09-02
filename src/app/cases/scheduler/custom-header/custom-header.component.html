@@ -1,0 +1,44 @@
+<div
+  class="ax-w-[100vw] ax-h-[100vh] ax-flex ax-justify-center ax-items-center ax-flex-col ax-gap-4 ax-p-4"
+>
+  <div
+    class="ax-flex ax-items-center ax-gap-4 ax-p-4 ax-surface ax-rounded-lg ax-w-full"
+  >
+    <div class="ax-flex ax-items-center ax-gap-2">
+      <span class="ax-text-sm ax-font-medium">View:</span>
+      <ax-select-box
+        [dataSource]="views()"
+        [value]="selectedView()"
+        (onValueChanged)="onViewChange($event.value)"
+        style="width: 150px"
+      ></ax-select-box>
+    </div>
+
+    <div class="ax-flex ax-items-center ax-gap-2">
+      <ax-button (click)="goToPrevious()" class="ax-sm" look="secondary">
+        <ax-icon name="chevron-left"></ax-icon>
+      </ax-button>
+      <div class="ax-text-center ax-min-w-[120px]">
+        <div class="ax-font-medium">
+          {{ currentDateText }}
+        </div>
+      </div>
+      <ax-button (click)="goToNext()" class="ax-sm" look="secondary">
+        <ax-icon name="chevron-right"></ax-icon>
+      </ax-button>
+    </div>
+    <div class="ax-flex ax-justify-center">
+      <ax-button (click)="goToToday()" text="Today" class="ax-sm"> </ax-button>
+    </div>
+  </div>
+
+  <ax-scheduler
+    [selectedView]="'month'"
+    [hasHeader]="hasHeader()"
+    [views]="[selectedView()]"
+    [startingDate]="startingDate()"
+    [selectedView]="selectedView()"
+    [dataSource]="appointmentsData()"
+    class="ax-bg-lightest dark:ax-bg-darkest ax-h-[90%]"
+  ></ax-scheduler>
+</div>

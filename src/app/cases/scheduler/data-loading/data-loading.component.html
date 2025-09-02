@@ -1,0 +1,55 @@
+<div
+  class="ax-w-[100vw] ax-h-[100vh] ax-flex ax-justify-center ax-items-center ax-flex-col ax-gap-4 ax-p-4"
+>
+  <div class="ax-flex ax-items-center ax-gap-4">
+    <ax-button
+      (click)="loadData()"
+      [disabled]="loadingState() === 'loading'"
+      [text]="loadingState() === 'loading' ? 'Loading...' : 'Load Data'"
+    >
+    </ax-button>
+    <ax-button
+      color="danger"
+      look="outline"
+      text="Load with Error"
+      (click)="loadDataWithError()"
+      [disabled]="loadingState() === 'loading'"
+    >
+    </ax-button>
+    <ax-button
+      text="Reset"
+      look="outline"
+      (click)="reset()"
+      [disabled]="loadingState() === 'loading'"
+    >
+    </ax-button>
+  </div>
+
+  <div class="ax-flex ax-items-center ax-gap-2">
+    <span class="ax-text-sm ax-font-medium">Status:</span>
+    <span
+      class="ax-text-sm ax-font-medium"
+      [class]="{
+        'ax-text-secondary': loadingState() === 'idle',
+        'ax-text-primary': loadingState() === 'loading',
+        'ax-text-success': loadingState() === 'loaded',
+        'ax-text-danger': loadingState() === 'error'
+      }"
+    >
+      @switch (loadingState()) { @case ('idle') { Ready to load data }
+      @case('loading') { Loading data... } @case ('loaded') { Data loaded
+      successfully } @case ('error') { Error loading data } }
+    </span>
+  </div>
+
+  @defer(){
+  <ax-scheduler
+    [selectedView]="'month'"
+    [startingDate]="startingDate()"
+    [dataSource]="appointmentsData()"
+    (onDataLoaded)="onDataLoaded($event)"
+    (onRangeChanged)="onRangeChanged($event)"
+    class="ax-bg-lightest dark:ax-bg-darkest ax-h-[90%]"
+  ></ax-scheduler>
+  }
+</div>

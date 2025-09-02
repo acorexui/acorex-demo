@@ -1,0 +1,43 @@
+<div
+  class="ax-w-[100vw] ax-h-[100vh] ax-flex ax-justify-center ax-items-center ax-flex-col ax-gap-4 ax-p-4"
+>
+  <div class="ax-flex ax-gap-4">
+    <div class="ax-flex-1">
+      <div class="ax-h-[40rem] ax-w-[40rem]">
+        @defer(){
+        <ax-scheduler
+          selectedView="month"
+          [startingDate]="startingDate()"
+          [dataSource]="appointmentsData()"
+          (onSlotClicked)="onSlotClicked($event)"
+          (onSlotDblClicked)="onSlotDblClicked($event)"
+          (onSlotRightClick)="onSlotRightClick($event)"
+          (onAppointmentClicked)="onAppointmentClicked($event)"
+          (onAppointmentDblClicked)="onAppointmentDblClicked($event)"
+          (onAppointmentRightClick)="onAppointmentRightClick($event)"
+        ></ax-scheduler>
+        }
+      </div>
+    </div>
+
+    <div class="ax-w-80">
+      <div class="ax-flex ax-items-center ax-justify-between ax-mb-2">
+        <ax-subtitle>Event Log</ax-subtitle>
+        <ax-button (click)="clearLog()" class="ax-sm" text="Clear"></ax-button>
+      </div>
+      <div
+        class="ax-bg-gray-50 ax-p-3 ax-rounded ax-h-[40rem] ax-overflow-y-auto"
+      >
+        @for (event of eventLog(); track $index) {
+        <div class="ax-text-sm ax-text-gray-700 ax-mb-1 ax-font-mono">
+          {{ event }}
+        </div>
+        } @if (eventLog().length === 0) {
+        <div class="ax-text-gray-500 ax-text-sm">
+          No events yet. Click on slots or appointments to see events.
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,11 +1,17 @@
 <div class="ax-w-[100vw] ax-h-[100vh] ax-p-4">
-  @defer () {
+  @defer(){
   <ax-scheduler
+    [hasActions]="true"
     [selectedView]="'month'"
     [startingDate]="startingDate()"
     [dataSource]="appointmentsData()"
-    (onAppointmentDrop)="apptDropHandler($event)"
+    (onActionClick)="onActionClick($event)"
     class="ax-bg-lightest dark:ax-bg-darkest"
   ></ax-scheduler>
   }
+  <ax-context-menu
+    #contextMenu
+    (onOpening)="handleOpening($event)"
+    (onItemClick)="onContextMenuItemClick($event)"
+  ></ax-context-menu>
 </div>
