@@ -37,81 +37,7 @@
     />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-
-    <style>
-      @media (prefers-color-scheme: dark) {
-        .app-loading {
-          background-color: rgb(24, 32, 43);
-        }
-        .app-loading svg .path {
-          fill: rgb(255, 255, 255);
-        }
-        .app-loading .loader::after {
-          background: rgb(255, 255, 255);
-        }
-      }
-      @media (prefers-color-scheme: light) {
-        .app-loading {
-          background-color: rgb(249, 250, 251);
-        }
-        .app-loading svg .path {
-          fill: rgb(22, 22, 22);
-        }
-        .app-loading .loader::after {
-          background: rgb(22, 22, 22);
-        }
-      }
-      .app-loading {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 0;
-        right: 0;
-        z-index: 10000;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .app-loading svg {
-        width: 180px;
-      }
-
-      .app-loading .loader {
-        width: 200px;
-        height: 4px;
-        display: inline-block;
-        position: relative;
-        overflow: hidden;
-        margin-top: 0.5rem;
-      }
-
-      .app-loading .loader::after {
-        content: "";
-        width: 96px;
-        height: 4px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        box-sizing: border-box;
-        animation: hitZak 0.6s ease-in-out infinite alternate;
-      }
-
-      @keyframes hitZak {
-        0% {
-          left: 0;
-          transform: translateX(-1%);
-        }
-
-        100% {
-          left: 100%;
-          transform: translateX(-99%);
-        }
-      }
-    </style>
+   
   </head>
 
   <body>
@@ -150,7 +76,6 @@
           </g>
         </g>
       </svg>
-      <span class="loader"></span>
     </div>
     <app-root></app-root>
   </body>
