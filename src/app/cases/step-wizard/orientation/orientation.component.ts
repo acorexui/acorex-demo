@@ -1,3 +1,4 @@
+import { AXOrientation } from '@acorex/cdk/common';
 import { AXButtonComponent } from '@acorex/components/button';
 import {
   AXDecoratorGenericComponent,
@@ -8,16 +9,14 @@ import {
   AXStepWizardContentDirective,
   AXStepWizardItemComponent,
 } from '@acorex/components/step-wizard';
-import { AXTextBoxComponent } from '@acorex/components/text-box';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-usage',
-  templateUrl: './usage.component.html',
+  selector: 'app-orientation',
+  templateUrl: './orientation.component.html',
   standalone: true,
   imports: [
     AXButtonComponent,
-    AXTextBoxComponent,
     AXStepWizardComponent,
     AXDecoratorIconComponent,
     AXStepWizardItemComponent,
@@ -25,8 +24,10 @@ import { Component } from '@angular/core';
     AXStepWizardContentDirective,
   ],
 })
-export class UsageComponent {
-  getCurrentStep(): number {
-    return 1;
+export class OrientationComponent {
+  selectedOrientation = signal<AXOrientation>('horizontal');
+
+  setOrientation(orientation: AXOrientation) {
+    this.selectedOrientation.set(orientation);
   }
 }

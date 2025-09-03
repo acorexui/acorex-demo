@@ -1,50 +1,292 @@
-<div class="ax-w-full">
+<div class="ax-w-full ax-max-w-4xl ax-mx-auto">
   <ax-step-wizard
-    [content]="navigationContent"
-    [look]="'rounded-icon'"
+    [size]="'ax-md'"
     #navigationWizard
+    [connector]="true"
+    [look]="'circular-icon'"
+    [content]="navigationContent"
   >
-    <ax-step-wizard-item [label]="'First Step'" [id]="'first'">
-      <ax-icon class="fas fa-check"> </ax-icon>
-      <ax-content>
-        <div class="ax-mt-5">Step 1</div>
+    <ax-step-wizard-item
+      [id]="'validation'"
+      [state]="validationState()"
+      [label]="'Data Validation'"
+      [description]="'Validate input data'"
+    >
+      <ax-icon class="fas fa-check-circle"></ax-icon>
+      <ax-content class="ax-w-full">
+        <ax-title level="3" class="ax-mb-4">Data Validation</ax-title>
+        <ax-subtitle class="ax-mb-4">
+          Validate the input data for completeness and accuracy.
+        </ax-subtitle>
+
+        <div class="ax-space-y-4">
+          <div class="ax-flex ax-items-center ax-gap-3">
+            <ax-button
+              (onClick)="setValidationState('pending')"
+              color="warning"
+              look="outline"
+              text="Set Pending"
+            ></ax-button>
+            <ax-button
+              (onClick)="setValidationState('success')"
+              color="success"
+              look="outline"
+              text="Set Success"
+            ></ax-button>
+            <ax-button
+              (onClick)="setValidationState('error')"
+              color="danger"
+              look="outline"
+              text="Set Error"
+            ></ax-button>
+          </div>
+
+          <div
+            class="dark:ax-light-surface ax-dark-surface ax-p-4 ax-rounded-md ax-border"
+          >
+            <ax-title level="4" class="ax-mb-2">
+              Current State: {{ validationState() }}
+            </ax-title>
+            <ax-subtitle>
+              @if (validationState() === 'pending') { ⏳ Validation is in
+              progress... } @else if (validationState() === 'success') { ✅ Data
+              validation completed successfully } @else if (validationState()
+              === 'error') { ❌ Data validation failed. Please check your input.
+              } @else { 🔍 Ready to validate data }
+            </ax-subtitle>
+          </div>
+        </div>
       </ax-content>
     </ax-step-wizard-item>
-    <ax-step-wizard-item [label]="'Second Step'" [id]="'second'">
-      <ax-icon class="fas fa-check"> </ax-icon>
-      <ax-content>
-        <div class="ax-mt-5">Step 2</div>
+
+    <ax-step-wizard-item
+      [label]="'Processing'"
+      [description]="'Process the data'"
+      [id]="'processing'"
+      [state]="processingState()"
+    >
+      <ax-icon class="fas fa-cogs"></ax-icon>
+      <ax-content class="ax-w-full">
+        <ax-title level="3" class="ax-mb-4">Data Processing</ax-title>
+        <ax-subtitle class="ax-mb-4">
+          Process and transform the validated data.
+        </ax-subtitle>
+
+        <div class="ax-space-y-4">
+          <div class="ax-flex ax-items-center ax-gap-3">
+            <ax-button
+              (onClick)="setProcessingState('pending')"
+              color="warning"
+              look="outline"
+              text="Set Pending"
+            ></ax-button>
+            <ax-button
+              (onClick)="setProcessingState('success')"
+              color="success"
+              look="outline"
+              text="Set Success"
+            ></ax-button>
+            <ax-button
+              (onClick)="setProcessingState('warning')"
+              color="warning"
+              look="outline"
+              text="Set Warning"
+            ></ax-button>
+          </div>
+
+          <div
+            class="dark:ax-light-surface ax-dark-surface ax-p-4 ax-rounded-md ax-border"
+          >
+            <ax-title level="4" class="ax-mb-2">
+              Current State: {{ processingState() }}
+            </ax-title>
+            <ax-subtitle>
+              @if (processingState() === 'pending') { ⏳ Processing data... }
+              @else if (processingState() === 'success') { ✅ Data processing
+              completed successfully } @else if (processingState() ===
+              'warning') { ⚠️ Data processing completed with warnings } @else {
+              🔄 Ready to process data }
+            </ax-subtitle>
+          </div>
+        </div>
       </ax-content>
     </ax-step-wizard-item>
-    <ax-step-wizard-item [label]="'Third Step'" [id]="'third'">
-      <ax-icon class="fas fa-check"> </ax-icon>
-      <ax-content>
-        <div class="ax-mt-5">Step 3</div>
+
+    <ax-step-wizard-item
+      [label]="'Quality Check'"
+      [description]="'Verify output quality'"
+      [id]="'quality'"
+      [state]="qualityState()"
+    >
+      <ax-icon class="fas fa-search"></ax-icon>
+      <ax-content class="ax-w-full">
+        <ax-title level="3" class="ax-mb-4">Quality Check</ax-title>
+        <ax-subtitle class="ax-mb-4">
+          Verify the quality and accuracy of processed data.
+        </ax-subtitle>
+
+        <div class="ax-space-y-4">
+          <div class="ax-flex ax-items-center ax-gap-3">
+            <ax-button
+              (onClick)="setQualityState('pending')"
+              color="warning"
+              look="outline"
+              text="Set Pending"
+            ></ax-button>
+            <ax-button
+              (onClick)="setQualityState('success')"
+              color="success"
+              look="outline"
+              text="Set Success"
+            ></ax-button>
+            <ax-button
+              (onClick)="setQualityState('error')"
+              color="danger"
+              look="outline"
+              text="Set Error"
+            ></ax-button>
+          </div>
+
+          <div
+            class="dark:ax-light-surface ax-dark-surface ax-p-4 ax-rounded-md ax-border"
+          >
+            <ax-title level="4" class="ax-mb-2">
+              Current State: {{ qualityState() }}
+            </ax-title>
+            <ax-subtitle>
+              @if (qualityState() === 'pending') { ⏳ Quality check in
+              progress... } @else if (qualityState() === 'success') { ✅ Quality
+              check passed successfully } @else if (qualityState() === 'error')
+              { ❌ Quality check failed. Issues detected. } @else { 🔍 Ready to
+              perform quality check }
+            </ax-subtitle>
+          </div>
+        </div>
+      </ax-content>
+    </ax-step-wizard-item>
+
+    <ax-step-wizard-item
+      [label]="'Final Review'"
+      [description]="'Review final results'"
+      [id]="'review'"
+      [state]="reviewState()"
+    >
+      <ax-icon class="fas fa-clipboard-check"></ax-icon>
+      <ax-content class="ax-w-full">
+        <ax-title level="3" class="ax-mb-4">Final Review</ax-title>
+        <ax-subtitle class="ax-mb-4">
+          Review all results and approve for final delivery.
+        </ax-subtitle>
+
+        <div class="ax-space-y-4">
+          <div class="ax-flex ax-items-center ax-gap-3">
+            <ax-button
+              (onClick)="setReviewState('pending')"
+              color="warning"
+              look="outline"
+              text="Set Pending"
+            ></ax-button>
+            <ax-button
+              (onClick)="setReviewState('success')"
+              color="success"
+              look="outline"
+              text="Set Success"
+            ></ax-button>
+            <ax-button
+              (onClick)="setReviewState('warning')"
+              color="warning"
+              look="outline"
+              text="Set Warning"
+            ></ax-button>
+          </div>
+
+          <div
+            class="dark:ax-light-surface ax-dark-surface ax-p-4 ax-rounded-md ax-border"
+          >
+            <ax-title level="4" class="ax-mb-2">
+              Current State: {{ reviewState() }}
+            </ax-title>
+            <ax-subtitle>
+              @if (reviewState() === 'pending') { ⏳ Final review in progress...
+              } @else if (reviewState() === 'success') { ✅ Final review
+              completed successfully } @else if (reviewState() === 'warning') {
+              ⚠️ Final review completed with minor issues } @else { 📋 Ready for
+              final review }
+            </ax-subtitle>
+          </div>
+        </div>
       </ax-content>
     </ax-step-wizard-item>
   </ax-step-wizard>
-  <div class="ax-flex ax-justify-center ax-p-5">
-    <ng-template [axStepWizardContent] #navigationContent="axStepWizardContent">
-    </ng-template>
-  </div>
-  <div class="ax-mt-10 ax-flex ax-justify-end ax-gap-3">
-    <ax-button
-      [disabled]="navigationWizard.isFirst()"
-      (onClick)="navigationWizard.previous()"
-      [color]="'primary'"
-      mode="split"
-      text="Previous"
-      look="outline"
+
+  <div
+    class="ax-p-4 dark:ax-light-surface ax-dark-surface ax-rounded-lg ax-mt-4"
+  >
+    <div
+      class="ax-flex ax-justify-center ax-w-full ax-pb-4 ax-border-b ax-border-surface ax-mb-2"
     >
-    </ax-button>
-    @if(navigationWizard.isLast()){
-    <ax-button (onClick)="handleDone()" color="success" text="Done"></ax-button>
-    }@else {
-    <ax-button
-      (onClick)="navigationWizard.next()"
-      color="primary"
-      text="Next"
-    ></ax-button>
-    }
+      <ng-template
+        [axStepWizardContent]
+        #navigationContent="axStepWizardContent"
+      >
+      </ng-template>
+    </div>
+
+    <ax-title level="3" class="ax-mb-4">State Management</ax-title>
+    <ax-subtitle class="ax-mb-4">
+      Use the buttons above each step to change its state and see how it affects
+      the visual appearance.
+    </ax-subtitle>
+
+    <div class="ax-flex ax-justify-between">
+      <div class="ax-space-y-3">
+        <ax-title level="4">Navigation Controls</ax-title>
+        <div class="ax-flex ax-gap-2 ax-flex-wrap">
+          <ax-button
+            (onClick)="navigationWizard.previous()"
+            [disabled]="navigationWizard.isFirst()"
+            color="primary"
+            look="outline"
+            text="Previous"
+          ></ax-button>
+          <ax-button
+            (onClick)="navigationWizard.next()"
+            [disabled]="navigationWizard.isLast()"
+            color="primary"
+            text="Next"
+          ></ax-button>
+        </div>
+      </div>
+
+      <div class="ax-space-y-3">
+        <ax-title level="4">Quick Actions</ax-title>
+        <div class="ax-flex ax-gap-2 ax-flex-wrap">
+          <ax-button
+            (onClick)="resetAllStates()"
+            color="danger"
+            look="outline"
+            text="Reset All States"
+          ></ax-button>
+          <ax-button
+            (onClick)="setAllSuccess()"
+            color="success"
+            look="outline"
+            text="Set All Success"
+          ></ax-button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ax-mt-4 ax-pt-2 ax-border-t ax-border-surface">
+      <ax-title level="4" class="ax-mb-3">Current Progress</ax-title>
+      <ax-subtitle class="ax-flex ax-items-center">
+        Current Step: {{ getCurrentStep() }} of 4
+        <ax-badge
+          class="ax-ml-4"
+          [text]="getCompletedSteps() + ' steps completed'"
+        >
+        </ax-badge>
+      </ax-subtitle>
+    </div>
   </div>
 </div>

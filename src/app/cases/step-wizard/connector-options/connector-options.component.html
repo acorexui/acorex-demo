@@ -1,0 +1,97 @@
+<div class="ax-w-full ax-max-w-4xl ax-mx-auto">
+  <div class="ax-mb-6">
+    <ax-title level="3" class="ax-mb-2">Toggle Connectors</ax-title>
+    <ax-switch
+      [value]="showConnector()"
+      (onChange)="toggleConnector()"
+    ></ax-switch>
+    <span class="ax-ml-2">{{
+      showConnector() ? "Connectors Visible" : "Connectors Hidden"
+    }}</span>
+  </div>
+
+  <ax-step-wizard
+    [content]="content"
+    [look]="'circular-icon'"
+    [connector]="showConnector()"
+    [size]="'ax-md'"
+    #wizard
+  >
+    <ax-step-wizard-item
+      [label]="'Setup'"
+      [description]="'Initial configuration'"
+      [id]="'setup'"
+    >
+      <ax-icon class="fas fa-cog"></ax-icon>
+      <ax-content>
+        <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
+          <h4>Setup Complete</h4>
+          <p>Basic configuration finished</p>
+        </div>
+      </ax-content>
+    </ax-step-wizard-item>
+
+    <ax-step-wizard-item
+      [label]="'Install'"
+      [description]="'Install dependencies'"
+      [id]="'install'"
+    >
+      <ax-icon class="fas fa-box"></ax-icon>
+      <ax-content>
+        <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
+          <h4>Installation Complete</h4>
+          <p>All packages installed successfully</p>
+        </div>
+      </ax-content>
+    </ax-step-wizard-item>
+
+    <ax-step-wizard-item
+      [label]="'Configure'"
+      [description]="'Final setup'"
+      [id]="'configure'"
+    >
+      <ax-icon class="fas fa-wrench"></ax-icon>
+      <ax-content>
+        <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
+          <h4>Configuration Complete</h4>
+          <p>Ready to use</p>
+        </div>
+      </ax-content>
+    </ax-step-wizard-item>
+
+    <ax-step-wizard-item
+      [label]="'Deploy'"
+      [description]="'Go live'"
+      [id]="'deploy'"
+    >
+      <ax-icon class="fas fa-rocket"></ax-icon>
+      <ax-content>
+        <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
+          <h4>Deployment Complete</h4>
+          <p>Application deployed successfully</p>
+        </div>
+      </ax-content>
+    </ax-step-wizard-item>
+  </ax-step-wizard>
+
+  <div class="ax-flex ax-justify-center ax-p-4">
+    <ng-template [axStepWizardContent] #content="axStepWizardContent">
+    </ng-template>
+  </div>
+
+  <div class="ax-flex ax-justify-center ax-gap-2">
+    <ax-button
+      (onClick)="wizard.previous()"
+      [disabled]="wizard.isFirst()"
+      color="primary"
+      look="outline"
+      text="Previous"
+    ></ax-button>
+    <ax-button
+      (onClick)="wizard.next()"
+      [disabled]="wizard.isLast()"
+      color="primary"
+      text="Next"
+    ></ax-button>
+  </div>
+</div>

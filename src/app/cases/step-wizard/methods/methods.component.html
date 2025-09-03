@@ -1,56 +1,118 @@
-<div class="ax-w-full">
+<div class="ax-w-full ax-max-w-4xl ax-mx-auto">
   <ax-step-wizard
-    [content]="methodsContent"
-    [look]="'rounded-icon'"
     #methodsWizard
+    [size]="'ax-md'"
+    [connector]="true"
+    [look]="'circular-icon'"
+    [content]="methodsContent"
   >
-    <ax-step-wizard-item [label]="'First Step'" [id]="'first'">
-      <ax-icon class="fas fa-check"> </ax-icon>
-      <ax-content>
-        <div class="ax-mt-5">Step 1</div>
-      </ax-content>
+    <ax-step-wizard-item
+      [label]="'Project Setup'"
+      [description]="'Initialize project configuration'"
+      [id]="'setup'"
+    >
+      <ax-icon class="fas fa-cog"></ax-icon>
     </ax-step-wizard-item>
-    <ax-step-wizard-item [label]="'Second Step'" [id]="'second'">
-      <ax-icon class="fas fa-check"> </ax-icon>
-      <ax-content>
-        <div class="ax-mt-5">Step 2</div>
-      </ax-content>
+
+    <ax-step-wizard-item
+      [id]="'deps'"
+      [label]="'Dependencies'"
+      [description]="'Install required packages'"
+    >
+      <ax-icon class="fas fa-box"></ax-icon>
     </ax-step-wizard-item>
-    <ax-step-wizard-item [label]="'Third Step'" [id]="'third'">
-      <ax-icon class="fas fa-check"> </ax-icon>
-      <ax-content>
-        <div class="ax-mt-5">Step 3</div>
-      </ax-content>
+
+    <ax-step-wizard-item
+      [id]="'config'"
+      [label]="'Configuration'"
+      [description]="'Setup build and test configs'"
+    >
+      <ax-icon class="fas fa-wrench"></ax-icon>
+    </ax-step-wizard-item>
+
+    <ax-step-wizard-item
+      [id]="'ready'"
+      [label]="'Ready to Start'"
+      [description]="'Project is configured'"
+    >
+      <ax-icon class="fas fa-rocket"></ax-icon>
     </ax-step-wizard-item>
   </ax-step-wizard>
-  <div class="ax-flex ax-justify-center ax-p-5">
+
+  <div class="ax-flex ax-justify-center ax-p-4">
     <ng-template [axStepWizardContent] #methodsContent="axStepWizardContent">
     </ng-template>
   </div>
-  <div class="ax-mt-10 ax-flex ax-justify-end ax-gap-3">
-    <ax-dropdown-button
-      (onClick)="methodsWizard.previous()"
-      [color]="'primary'"
-      mode="split"
-      text="Previous"
-      look="outline"
-    >
-      <ax-button-item-list>
-        <ax-button-item (onClick)="methodsWizard.reset()" text="Reset">
-        </ax-button-item>
-      </ax-button-item-list>
-    </ax-dropdown-button>
-    <ax-dropdown-button
-      (onClick)="methodsWizard.next()"
-      [color]="'primary'"
-      mode="split"
-      text="Next"
-      look="solid"
-    >
-      <ax-button-item-list>
-        <ax-button-item (onClick)="methodsWizard.goStep(3)" text="Go to Step 3">
-        </ax-button-item>
-      </ax-button-item-list>
-    </ax-dropdown-button>
+
+  <div class="ax-mt-8 ax-p-4 ax-surface ax-rounded-lg">
+    <ax-title level="3" class="ax-mb-4">Navigation Controls</ax-title>
+    <ax-subtitle class="ax-mb-4">
+      Use these buttons to demonstrate different navigation methods:
+    </ax-subtitle>
+
+    <div class="ax-flex ax-flex-col ax-gap-4">
+      <div class="ax-space-y-3">
+        <ax-title level="4" class="ax-mb-4">Basic Navigation</ax-title>
+        <div class="ax-flex ax-gap-2 ax-flex-wrap">
+          <ax-button
+            (onClick)="methodsWizard.previous()"
+            [disabled]="methodsWizard.isFirst()"
+            color="primary"
+            look="outline"
+            text="Previous"
+          ></ax-button>
+          <ax-button
+            (onClick)="methodsWizard.next()"
+            [disabled]="methodsWizard.isLast()"
+            color="primary"
+            text="Next"
+          ></ax-button>
+        </div>
+      </div>
+
+      <div class="ax-space-y-3">
+        <ax-title level="4" class="ax-mb-4">Direct Navigation</ax-title>
+        <div class="ax-flex ax-gap-2 ax-flex-wrap">
+          <ax-button
+            (onClick)="methodsWizard.goStep(1)"
+            color="primary"
+            look="outline"
+            text="Go to Step 1"
+          ></ax-button>
+          <ax-button
+            (onClick)="methodsWizard.goStep(2)"
+            color="primary"
+            look="outline"
+            text="Go to Step 2"
+          ></ax-button>
+          <ax-button
+            (onClick)="methodsWizard.goStep(3)"
+            color="primary"
+            look="outline"
+            text="Go to Step 3"
+          ></ax-button>
+          <ax-button
+            (onClick)="methodsWizard.goStep(4)"
+            color="primary"
+            look="outline"
+            text="Go to Step 4"
+          ></ax-button>
+        </div>
+      </div>
+      <div class="ax-flex ax-gap-2 ax-flex-col ax-justify-center ax-pt-4">
+        <ax-title level="4">Utility Actions</ax-title>
+        <div class="ax-flex ax-gap-3">
+          <ax-button
+            color="danger"
+            look="outline"
+            text="Reset to First Step"
+            (onClick)="methodsWizard.reset()"
+          ></ax-button>
+          <div class="ax-text-sm ax-opacity-75 ax-flex ax-items-center">
+            Current Step: {{ getCurrentStep() }} of 4
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

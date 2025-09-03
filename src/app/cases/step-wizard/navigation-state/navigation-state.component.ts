@@ -1,30 +1,79 @@
-import { Component, inject } from '@angular/core';
-import { AXStepWizardModule } from '@acorex/components/step-wizard';
-import { AXDecoratorModule } from '@acorex/components/decorators';
-import { AXButtonModule } from '@acorex/components/button';
-import { AXDropdownButtonModule } from '@acorex/components/dropdown-button';
-import { AXToastModule, AXToastService } from '@acorex/components/toast';
+import { AXBadgeComponent } from '@acorex/components/badge';
+import { AXButtonComponent } from '@acorex/components/button';
+import {
+  AXDecoratorGenericComponent,
+  AXDecoratorIconComponent,
+} from '@acorex/components/decorators';
+import {
+  AXStepWizardComponent,
+  AXStepWizardContentDirective,
+  AXStepWizardItemComponent,
+  AXStepWizardState,
+} from '@acorex/components/step-wizard';
+import { Component, signal, viewChild } from '@angular/core';
 
 @Component({
-    templateUrl: './navigation-state.component.html',
-    imports: [
-        AXStepWizardModule,
-        AXDecoratorModule,
-        AXButtonModule,
-        AXDropdownButtonModule,
-        AXToastModule,
-    ]
+  selector: 'app-navigation-state',
+  templateUrl: './navigation-state.component.html',
+  standalone: true,
+  imports: [
+    AXButtonComponent,
+    AXStepWizardComponent,
+    AXDecoratorIconComponent,
+    AXStepWizardItemComponent,
+    AXDecoratorGenericComponent,
+    AXStepWizardContentDirective,
+    AXBadgeComponent,
+  ],
 })
 export class NavigationStateComponent {
-  protected toastService = inject(AXToastService);
+  navigationWizard = viewChild<AXStepWizardComponent>('navigationWizard');
 
-  protected handleDone() {
-    this.toastService.show({
-      color: 'success',
-      title: 'Process Completed Successfully',
-      timeOut: 3000,
-      content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione fugiat a quibusdam repellendus voluptates cupiditate?',
-    });
+  validationState = signal<AXStepWizardState>('clear');
+  processingState = signal<AXStepWizardState>('clear');
+  qualityState = signal<AXStepWizardState>('clear');
+  reviewState = signal<AXStepWizardState>('clear');
+
+  setValidationState(state: AXStepWizardState) {
+    this.validationState.set(state);
+  }
+
+  setProcessingState(state: AXStepWizardState) {
+    this.processingState.set(state);
+  }
+
+  setQualityState(state: AXStepWizardState) {
+    this.qualityState.set(state);
+  }
+
+  setReviewState(state: AXStepWizardState) {
+    this.reviewState.set(state);
+  }
+
+  resetAllStates() {
+    this.validationState.set('clear');
+    this.processingState.set('clear');
+    this.qualityState.set('clear');
+    this.reviewState.set('clear');
+  }
+
+  setAllSuccess() {
+    this.validationState.set('success');
+    this.processingState.set('success');
+    this.qualityState.set('success');
+    this.reviewState.set('success');
+  }
+
+  getCompletedSteps(): number {
+    let completed = 0;
+    if (this.validationState() === 'success') completed++;
+    if (this.processingState() === 'success') completed++;
+    if (this.qualityState() === 'success') completed++;
+    if (this.reviewState() === 'success') completed++;
+    return completed;
+  }
+
+  getCurrentStep(): number {
+    return (this.navigationWizard() as any).activeStepIndex() + 1;
   }
 }

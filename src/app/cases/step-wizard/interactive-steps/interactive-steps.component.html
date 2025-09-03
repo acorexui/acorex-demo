@@ -1,0 +1,147 @@
+<div class="ax-w-full ax-max-w-4xl ax-mx-auto">
+  <div class="ax-mb-6">
+    <ax-title level="3" class="ax-mb-2">Toggle Interactive Features</ax-title>
+    <ax-switch
+      [value]="enableInteractiveSteps()"
+      (onChange)="toggleInteractiveSteps()"
+    ></ax-switch>
+    <span class="ax-ml-2">{{
+      enableInteractiveSteps() ? "Interactive Enabled" : "Interactive Disabled"
+    }}</span>
+  </div>
+
+  <ax-step-wizard
+    [content]="content"
+    [look]="'circular-icon'"
+    [connector]="true"
+    [size]="'ax-md'"
+    #wizard
+  >
+    <ax-step-wizard-item
+      [label]="'Dashboard'"
+      [description]="'Overview'"
+      [id]="'dashboard'"
+      [class]="
+        enableInteractiveSteps()
+          ? 'ax-cursor-pointer hover:ax-scale-105 ax-transition-transform'
+          : ''
+      "
+    >
+      <ax-icon class="fas fa-tachometer-alt"></ax-icon>
+      <ax-content>
+        <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
+          <h4>Dashboard Overview</h4>
+          <p>Click to view comprehensive dashboard metrics and insights</p>
+        </div>
+      </ax-content>
+    </ax-step-wizard-item>
+
+    <ax-step-wizard-item
+      [label]="'Analytics'"
+      [description]="'Reports'"
+      [id]="'analytics'"
+      [class]="
+        enableInteractiveSteps()
+          ? 'ax-cursor-pointer hover:ax-scale-105 ax-transition-transform'
+          : ''
+      "
+    >
+      <ax-icon class="fas fa-chart-bar"></ax-icon>
+      <ax-content>
+        <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
+          <h4>Analytics & Reports</h4>
+          <p>Click to explore detailed analytics and generate reports</p>
+        </div>
+      </ax-content>
+    </ax-step-wizard-item>
+
+    <ax-step-wizard-item
+      [label]="'Settings'"
+      [description]="'Configuration'"
+      [id]="'settings'"
+      [class]="
+        enableInteractiveSteps()
+          ? 'ax-cursor-pointer hover:ax-scale-105 ax-transition-transform'
+          : ''
+      "
+    >
+      <ax-icon class="fas fa-cog"></ax-icon>
+      <ax-content>
+        <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
+          <h4>Settings & Configuration</h4>
+          <p>Click to customize your preferences and system settings</p>
+        </div>
+      </ax-content>
+    </ax-step-wizard-item>
+
+    <ax-step-wizard-item
+      [label]="'Profile'"
+      [description]="'User info'"
+      [id]="'profile'"
+      [class]="
+        enableInteractiveSteps()
+          ? 'ax-cursor-pointer hover:ax-scale-105 ax-transition-transform'
+          : ''
+      "
+    >
+      <ax-icon class="fas fa-user"></ax-icon>
+      <ax-content>
+        <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
+          <h4>User Profile</h4>
+          <p>Click to view and edit your personal information</p>
+        </div>
+      </ax-content>
+    </ax-step-wizard-item>
+  </ax-step-wizard>
+
+  <div class="ax-flex ax-justify-center ax-p-4">
+    <ng-template [axStepWizardContent] #content="axStepWizardContent">
+    </ng-template>
+  </div>
+
+  <div class="ax-flex ax-justify-center ax-gap-2">
+    <ax-button
+      (onClick)="wizard.previous()"
+      [disabled]="wizard.isFirst()"
+      color="primary"
+      look="outline"
+      text="Previous"
+    ></ax-button>
+    <ax-button
+      (onClick)="wizard.next()"
+      [disabled]="wizard.isLast()"
+      color="primary"
+      text="Next"
+    ></ax-button>
+  </div>
+
+  <div class="ax-mt-6 ax-p-4 ax-surface ax-rounded-lg ax-border">
+    <ax-title level="4" class="ax-mb-2">Quick Navigation</ax-title>
+    <div class="ax-flex ax-gap-2 ax-flex-wrap">
+      <ax-button
+        (onClick)="wizard.goStep(1)"
+        color="secondary"
+        look="outline"
+        text="Step 1"
+      ></ax-button>
+      <ax-button
+        (onClick)="wizard.goStep(2)"
+        color="secondary"
+        look="outline"
+        text="Step 2"
+      ></ax-button>
+      <ax-button
+        (onClick)="wizard.goStep(3)"
+        color="secondary"
+        look="outline"
+        text="Step 3"
+      ></ax-button>
+      <ax-button
+        (onClick)="wizard.goStep(4)"
+        color="secondary"
+        look="outline"
+        text="Step 4"
+      ></ax-button>
+    </div>
+  </div>
+</div>

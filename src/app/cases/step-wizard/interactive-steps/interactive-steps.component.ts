@@ -8,13 +8,13 @@ import {
   AXStepWizardContentDirective,
   AXStepWizardItemComponent,
 } from '@acorex/components/step-wizard';
-import { ChangeDetectionStrategy, Component, viewChild } from '@angular/core';
+import { AXSwitchComponent } from '@acorex/components/switch';
+import { Component, signal, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-methods',
-  templateUrl: './methods.component.html',
+  selector: 'app-interactive-steps',
+  templateUrl: './interactive-steps.component.html',
   standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AXButtonComponent,
     AXStepWizardComponent,
@@ -22,12 +22,19 @@ import { ChangeDetectionStrategy, Component, viewChild } from '@angular/core';
     AXStepWizardItemComponent,
     AXDecoratorGenericComponent,
     AXStepWizardContentDirective,
+    AXSwitchComponent,
   ],
 })
-export class MethodsComponent {
-  methodsWizard = viewChild<AXStepWizardComponent>('methodsWizard');
+export class InteractiveStepsComponent {
+  @ViewChild('wizard') interactiveWizard!: AXStepWizardComponent;
+
+  enableInteractiveSteps = signal<boolean>(true);
+
+  toggleInteractiveSteps() {
+    this.enableInteractiveSteps.set(!this.enableInteractiveSteps());
+  }
 
   getCurrentStep(): number {
-    return (this.methodsWizard() as any).activeStepIndex() + 1;
+    return 1; // Placeholder - should be updated to use actual wizard state
   }
 }

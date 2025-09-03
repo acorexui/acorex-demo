@@ -8,25 +8,27 @@ import {
   AXStepWizardContentDirective,
   AXStepWizardItemComponent,
 } from '@acorex/components/step-wizard';
-import { AXTextBoxComponent } from '@acorex/components/text-box';
-import { Component } from '@angular/core';
+import { AXSwitchComponent } from '@acorex/components/switch';
+import { Component, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-usage',
-  templateUrl: './usage.component.html',
+  selector: 'app-connector-options',
+  templateUrl: './connector-options.component.html',
   standalone: true,
   imports: [
     AXButtonComponent,
-    AXTextBoxComponent,
     AXStepWizardComponent,
     AXDecoratorIconComponent,
     AXStepWizardItemComponent,
     AXDecoratorGenericComponent,
     AXStepWizardContentDirective,
+    AXSwitchComponent,
   ],
 })
-export class UsageComponent {
-  getCurrentStep(): number {
-    return 1;
+export class ConnectorOptionsComponent {
+  showConnector = signal<boolean>(true);
+
+  toggleConnector() {
+    this.showConnector.set(!this.showConnector());
   }
 }

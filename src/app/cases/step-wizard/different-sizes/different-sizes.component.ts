@@ -7,17 +7,16 @@ import {
   AXStepWizardComponent,
   AXStepWizardContentDirective,
   AXStepWizardItemComponent,
+  AXStepWizardSize,
 } from '@acorex/components/step-wizard';
-import { AXTextBoxComponent } from '@acorex/components/text-box';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-usage',
-  templateUrl: './usage.component.html',
+  selector: 'app-different-sizes',
+  templateUrl: './different-sizes.component.html',
   standalone: true,
   imports: [
     AXButtonComponent,
-    AXTextBoxComponent,
     AXStepWizardComponent,
     AXDecoratorIconComponent,
     AXStepWizardItemComponent,
@@ -25,8 +24,10 @@ import { Component } from '@angular/core';
     AXStepWizardContentDirective,
   ],
 })
-export class UsageComponent {
-  getCurrentStep(): number {
-    return 1;
+export class DifferentSizesComponent {
+  selectedSize = signal<AXStepWizardSize>('ax-md');
+
+  setSize(size: AXStepWizardSize) {
+    this.selectedSize.set(size);
   }
 }
