@@ -26,4 +26,22 @@ export const routes: Routes = [
     component: MasterLayoutComponent,
     loadChildren: () => import('./drawer/drawer.routes').then((c) => c.routes),
   },
+  {
+    path: 'focus-trap',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./focus-trap/focus-trap.routes').then((c) => c.routes),
+  },
+  {
+    path: 'input-mask',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./input-mask/input-mask.routes').then((c) => c.routes),
+  },
+  {
+    path: 'list-navigation',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./list-navigation/list-navigation.routes').then((c) => c.routes),
+  },
 ];

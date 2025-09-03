@@ -1,0 +1,19 @@
+<div
+  orientation="horizontal"
+  #f="axListNavigation"
+  class="ax-outline-none ax-flex"
+  axListNavigation
+>
+  @for (item of ['Item 1', 'Item 2', 'Item 3']; track $index) {
+  <div
+    class="ax-p-2"
+    [ngClass]="{
+      'ax-border ax-border-primary-500 ax-outline-none': a.isActive()
+    }"
+    #a="axListNavigationItem"
+    axListNavigationItem
+  >
+    {{ item }} {{ a.isActive() }}
+  </div>
+  }
+</div>
