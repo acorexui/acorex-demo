@@ -13,7 +13,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   signal,
-  ViewChild,
+  viewChild,
 } from '@angular/core';
 
 @Component({
@@ -31,15 +31,14 @@ import {
   ],
 })
 export class InteractiveStepsComponent {
-  @ViewChild('wizard') interactiveWizard!: AXStepWizardComponent;
-
   enableInteractiveSteps = signal<boolean>(true);
+  interactiveWizard = viewChild<AXStepWizardComponent>('wizard');
 
   toggleInteractiveSteps() {
     this.enableInteractiveSteps.set(!this.enableInteractiveSteps());
   }
 
   getCurrentStep(): number {
-    return 1; // Placeholder - should be updated to use actual wizard state
+    return (this.interactiveWizard()?.activeStepIndex() ?? 0) + 1;
   }
 }

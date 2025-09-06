@@ -9,7 +9,7 @@ import {
   AXStepWizardItemComponent,
 } from '@acorex/components/step-wizard';
 import { AXTextBoxComponent } from '@acorex/components/text-box';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, viewChild } from '@angular/core';
 
 @Component({
   selector: 'app-usage',
@@ -26,7 +26,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   ],
 })
 export class UsageComponent {
+  stepWizard = viewChild<AXStepWizardComponent>('usageWizard');
+
   getCurrentStep(): number {
-    return 1;
+    return (this.stepWizard()?.activeStepIndex() ?? 0) + 1;
   }
 }

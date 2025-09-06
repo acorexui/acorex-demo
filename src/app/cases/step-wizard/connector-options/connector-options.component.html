@@ -5,17 +5,18 @@
       [value]="showConnector()"
       (onChange)="toggleConnector()"
     ></ax-switch>
-    <span class="ax-ml-2">{{
-      showConnector() ? "Connectors Visible" : "Connectors Hidden"
-    }}</span>
+    <span class="ax-ml-2">
+      {{ showConnector() ? "Connectors Visible" : "Connectors Hidden" }}
+    </span>
   </div>
 
   <ax-step-wizard
+    #wizard
+    [size]="'ax-md'"
     [content]="content"
+    [scrollToStep]="false"
     [look]="'circular-icon'"
     [connector]="showConnector()"
-    [size]="'ax-md'"
-    #wizard
   >
     <ax-step-wizard-item
       [label]="'Setup'"

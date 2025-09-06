@@ -24,11 +24,12 @@
   </div>
 
   <ax-step-wizard
-    [content]="content"
-    [look]="'circular-icon'"
-    [connector]="true"
-    [size]="selectedSize()"
     #wizard
+    [connector]="true"
+    [content]="content"
+    [scrollToStep]="false"
+    [size]="selectedSize()"
+    [look]="'circular-icon'"
   >
     <ax-step-wizard-item
       [label]="'Setup'"

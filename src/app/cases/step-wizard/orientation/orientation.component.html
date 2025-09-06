@@ -20,12 +20,13 @@
   </div>
 
   <ax-step-wizard
-    [content]="content"
-    [look]="'circular-icon'"
-    [connector]="true"
-    [size]="'ax-md'"
-    [orientation]="selectedOrientation()"
     #wizard
+    [size]="'ax-md'"
+    [connector]="true"
+    [content]="content"
+    [scrollToStep]="false"
+    [look]="'circular-icon'"
+    [orientation]="selectedOrientation()"
   >
     <ax-step-wizard-item
       [label]="'Setup'"

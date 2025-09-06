@@ -27,6 +27,6 @@ export class MethodsComponent {
   methodsWizard = viewChild<AXStepWizardComponent>('methodsWizard');
 
   getCurrentStep(): number {
-    return (this.methodsWizard() as any).activeStepIndex() + 1;
+    return (this.methodsWizard()?.activeStepIndex() ?? 0) + 1;
   }
 }

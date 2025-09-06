@@ -79,6 +79,6 @@ export class NavigationStateComponent {
   }
 
   getCurrentStep(): number {
-    return (this.navigationWizard() as any).activeStepIndex() + 1;
+    return (this.navigationWizard()?.activeStepIndex() ?? 0) + 1;
   }
 }

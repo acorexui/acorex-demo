@@ -1,9 +1,10 @@
 <ax-step-wizard
-  [content]="usageContent"
-  [look]="'circular-icon'"
-  [connector]="true"
-  [size]="'ax-md'"
   #usageWizard
+  [size]="'ax-md'"
+  [connector]="true"
+  [scrollToStep]="false"
+  [look]="'circular-icon'"
+  [content]="usageContent"
 >
   <ax-step-wizard-item
     [label]="'Personal Information'"

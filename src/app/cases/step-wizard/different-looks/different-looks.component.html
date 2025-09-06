@@ -36,11 +36,12 @@
   </div>
 
   <ax-step-wizard
-    [content]="content"
-    [look]="selectedLook()"
-    [connector]="true"
-    [size]="'ax-md'"
     #wizard
+    [size]="'ax-md'"
+    [content]="content"
+    [connector]="true"
+    [scrollToStep]="false"
+    [look]="selectedLook()"
   >
     <ax-step-wizard-item
       [label]="'Setup'"
