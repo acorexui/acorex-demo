@@ -1,0 +1,21 @@
+<div class="ax-flex ax-flex-col ax-gap-4">
+  <div class="ax-flex ax-gap-2 ax-items-center">
+    <span class="ax-text-sm ax-font-medium">Look:</span>
+    <ax-button-group [selection]="selection">
+      @for (look of looks; track look.value) {
+      <ax-button-group-item
+        [text]="look.text"
+        [selected]="selectedLook() === look.value"
+        (onClick)="selectedLook.set(look.value)"
+      >
+      </ax-button-group-item>
+      }
+    </ax-button-group>
+  </div>
+
+  <ax-tabs [look]="selectedLook()">
+    <ax-tab-item text="Home" [active]="true"></ax-tab-item>
+    <ax-tab-item text="About"></ax-tab-item>
+    <ax-tab-item text="Contact"></ax-tab-item>
+  </ax-tabs>
+</div>

@@ -1,0 +1,14 @@
+<div class="ax-flex ax-flex-col ax-gap-4">
+  <ax-tabs (onActiveTabChanged)="onTabChanged($event)">
+    <ax-tab-item text="Home" [active]="true"></ax-tab-item>
+    <ax-tab-item text="About"></ax-tab-item>
+    <ax-tab-item text="Contact"></ax-tab-item>
+    <ax-tab-item text="Settings"></ax-tab-item>
+  </ax-tabs>
+
+  <div class="ax-surface ax-p-4 ax-rounded-lg">
+    <ax-title size="sm">Event Information</ax-title>
+    <p><strong>Selected Tab:</strong> {{ selectedTab() }}</p>
+    <p><strong>Selected Index:</strong> {{ selectedIndex() }}</p>
+  </div>
+</div>

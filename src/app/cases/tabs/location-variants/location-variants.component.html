@@ -1,0 +1,26 @@
+<div class="ax-flex ax-flex-col ax-gap-4">
+  <div class="ax-flex ax-gap-2 ax-items-center">
+    <span class="ax-text-sm ax-font-medium">Location:</span>
+    <ax-button-group [selection]="selection">
+      @for (location of locations; track location.value) {
+      <ax-button-group-item
+        [text]="location.text"
+        [selected]="selectedLocation() === location.value"
+        (onClick)="selectedLocation.set(location.value)"
+      >
+      </ax-button-group-item>
+      }
+    </ax-button-group>
+  </div>
+
+  <div
+    class="ax-border ax-surface ax-rounded-lg ax-p-4"
+    style="min-height: 200px"
+  >
+    <ax-tabs [location]="selectedLocation()" [look]="'with-line-color'">
+      <ax-tab-item text="Home" [active]="true"></ax-tab-item>
+      <ax-tab-item text="About"></ax-tab-item>
+      <ax-tab-item text="Contact"></ax-tab-item>
+    </ax-tabs>
+  </div>
+</div>

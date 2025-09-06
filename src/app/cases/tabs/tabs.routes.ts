@@ -28,4 +28,32 @@ export const routes: Routes = [
         (e) => e.TabWithContentComponent
       ),
   },
+  {
+    path: 'look-variants',
+    loadComponent: () =>
+      import('./look-variants/look-variants.component').then(
+        (e) => e.LookVariantsComponent
+      ),
+  },
+  {
+    path: 'location-variants',
+    loadComponent: () =>
+      import('./location-variants/location-variants.component').then(
+        (e) => e.LocationVariantsComponent
+      ),
+  },
+  {
+    path: 'disabled-state',
+    loadComponent: () =>
+      import('./disabled-state/disabled-state.component').then(
+        (e) => e.DisabledStateComponent
+      ),
+  },
+  {
+    path: 'event-handling',
+    loadComponent: () =>
+      import('./event-handling/event-handling.component').then(
+        (e) => e.EventHandlingComponent
+      ),
+  },
 ];
