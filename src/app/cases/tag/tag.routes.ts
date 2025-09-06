@@ -21,4 +21,16 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./look/look.component').then((e) => e.LookComponent),
   },
+  {
+    path: 'size',
+    loadComponent: () =>
+      import('./size/size.component').then((e) => e.SizeComponent),
+  },
+  {
+    path: 'decorators',
+    loadComponent: () =>
+      import('./decorators/decorators.component').then(
+        (e) => e.DecoratorsComponent
+      ),
+  },
 ];
