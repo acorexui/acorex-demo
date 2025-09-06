@@ -44,4 +44,22 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./list-navigation/list-navigation.routes').then((c) => c.routes),
   },
+  {
+    path: 'selection',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./selection/selection.routes').then((c) => c.routes),
+  },
+  {
+    path: 'sliding-item',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./sliding-item/sliding-item.routes').then((c) => c.routes),
+  },
+  {
+    path: 'virtual-scroll',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./virtual-scroll/virtual-scroll.routes').then((c) => c.routes),
+  },
 ];

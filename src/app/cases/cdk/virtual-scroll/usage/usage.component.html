@@ -1,0 +1,9 @@
+<div class="ax-border ax-p-4">
+  <div axVirtualScrollingContainer (ScrollEnd)="callForUpdate()" height="10vh">
+    @for (item of chat(); track item.id) {
+    <div class="ax-p-1" axVirtualScrollingItem>
+      <ax-text>{{ item.content }}</ax-text>
+    </div>
+    }
+  </div>
+</div>

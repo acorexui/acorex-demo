@@ -1,0 +1,36 @@
+<div
+  [multiple]="true"
+  (selectedKeysChange)="changeState($event)"
+  #f="axSelectionGroup"
+  axSelectionGroup
+>
+  <div
+    key="1"
+    class="ax-cursor-pointer ax-p-2"
+    [class]="{ 'ax-bg-blue-500': a.isActive() }"
+    #a="axSelectionItem"
+    axSelectionItem
+  >
+    Item 1
+  </div>
+  <div
+    key="2"
+    class="ax-cursor-pointer ax-p-2"
+    [class]="{ 'ax-bg-red-500': b.isActive() }"
+    #b="axSelectionItem"
+    axSelectionItem
+  >
+    Item 2
+  </div>
+  <div
+    key="3"
+    class="ax-cursor-pointer ax-p-2"
+    [class]="{ 'ax-bg-green-500': c.isActive() }"
+    #c="axSelectionItem"
+    axSelectionItem
+  >
+    Item 3
+  </div>
+</div>
+
+<p>Selected Keys: {{ f.selectedKeys() }}</p>
