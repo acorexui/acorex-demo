@@ -25,11 +25,25 @@ export const routes: Routes = [
   {
     path: 'on-off-content',
     loadComponent: () =>
-      import('./on-off-content/on-off-content.component').then((e) => e.OnOffContentComponent),
+      import('./on-off-content/on-off-content.component').then(
+        (e) => e.OnOffContentComponent
+      ),
   },
   {
     path: 'loading',
     loadComponent: () =>
       import('./loading/loading.component').then((e) => e.LoadingComponent),
+  },
+  {
+    path: 'size',
+    loadComponent: () =>
+      import('./size/size.component').then((e) => e.SizeComponent),
+  },
+  {
+    path: 'disabled-readonly',
+    loadComponent: () =>
+      import('./disabled-readonly/disabled-readonly.component').then(
+        (e) => e.DisabledReadonlyComponent
+      ),
   },
 ];

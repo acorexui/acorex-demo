@@ -1,0 +1,65 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4">
+  <div class="ax-flex ax-flex-col ax-gap-6 ax-w-full ax-max-w-md">
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <ax-label>Normal State (Interactive)</ax-label>
+      <div class="ax-flex ax-items-center ax-gap-4">
+        <ax-switch color="primary" [ngModel]="false"></ax-switch>
+        <ax-switch color="secondary" [ngModel]="true"></ax-switch>
+        <ax-switch color="success" [ngModel]="false"></ax-switch>
+      </div>
+    </div>
+
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <ax-label>Disabled State</ax-label>
+      <div class="ax-flex ax-items-center ax-gap-4">
+        <ax-switch color="primary" [ngModel]="false" [disabled]="true">
+        </ax-switch>
+        <ax-switch color="secondary" [ngModel]="true" [disabled]="true">
+        </ax-switch>
+        <ax-switch color="success" [ngModel]="false" [disabled]="true">
+        </ax-switch>
+      </div>
+    </div>
+
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <ax-label>Readonly State</ax-label>
+      <div class="ax-flex ax-items-center ax-gap-4">
+        <ax-switch color="primary" [ngModel]="false" [readonly]="true">
+        </ax-switch>
+        <ax-switch color="secondary" [ngModel]="true" [readonly]="true">
+        </ax-switch>
+        <ax-switch color="success" [ngModel]="false" [readonly]="true">
+        </ax-switch>
+      </div>
+    </div>
+
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <ax-label>Disabled vs Readonly Comparison</ax-label>
+      <div class="ax-flex ax-items-center ax-gap-4">
+        <ax-switch color="primary" [ngModel]="true" [disabled]="true">
+        </ax-switch>
+        <ax-switch color="primary" [ngModel]="true" [readonly]="true">
+        </ax-switch>
+        <ax-switch color="primary" [ngModel]="true"></ax-switch>
+      </div>
+    </div>
+
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <ax-label>Loading with Disabled State</ax-label>
+      <div class="ax-flex ax-items-center ax-gap-4">
+        <ax-switch
+          color="primary"
+          [ngModel]="true"
+          [isLoading]="true"
+          [disabled]="true"
+        ></ax-switch>
+        <ax-switch
+          color="secondary"
+          [ngModel]="false"
+          [isLoading]="true"
+          [disabled]="true"
+        ></ax-switch>
+      </div>
+    </div>
+  </div>
+</div>

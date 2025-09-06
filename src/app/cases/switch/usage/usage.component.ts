@@ -1,8 +1,8 @@
+import { AXSwitchComponent } from '@acorex/components/switch';
 import { Component } from '@angular/core';
-import { AXSwitchModule } from '@acorex/components/switch';
 
 @Component({
-    templateUrl: './usage.component.html',
-    imports: [AXSwitchModule]
+  templateUrl: './usage.component.html',
+  imports: [AXSwitchComponent],
 })
 export class UsageComponent {}
