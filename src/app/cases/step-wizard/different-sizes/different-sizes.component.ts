@@ -9,12 +9,12 @@ import {
   AXStepWizardItemComponent,
   AXStepWizardSize,
 } from '@acorex/components/step-wizard';
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-different-sizes',
   templateUrl: './different-sizes.component.html',
-  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AXButtonComponent,
     AXStepWizardComponent,

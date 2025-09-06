@@ -10,12 +10,17 @@ import {
   AXStepWizardItemComponent,
   AXStepWizardState,
 } from '@acorex/components/step-wizard';
-import { Component, signal, viewChild } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  signal,
+  viewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-navigation-state',
   templateUrl: './navigation-state.component.html',
-  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AXButtonComponent,
     AXStepWizardComponent,

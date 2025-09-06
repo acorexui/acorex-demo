@@ -9,12 +9,12 @@ import {
   AXStepWizardContentDirective,
   AXStepWizardItemComponent,
 } from '@acorex/components/step-wizard';
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-orientation',
   templateUrl: './orientation.component.html',
-  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AXButtonComponent,
     AXStepWizardComponent,

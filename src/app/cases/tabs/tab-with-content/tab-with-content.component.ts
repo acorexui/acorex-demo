@@ -1,10 +1,18 @@
+import { AXDecoratorGenericComponent } from '@acorex/components/decorators';
+import {
+  AXTabContentDirective,
+  AXTabItemComponent,
+  AXTabsComponent,
+} from '@acorex/components/tabs';
 import { Component } from '@angular/core';
-import { AXTabsModule } from '@acorex/components/tabs';
-import { AXDecoratorModule } from '@acorex/components/decorators';
-import { AXBadgeModule } from '@acorex/components/badge';
 
 @Component({
-    templateUrl: './tab-with-content.component.html',
-    imports: [AXTabsModule, AXDecoratorModule, AXBadgeModule]
+  templateUrl: './tab-with-content.component.html',
+  imports: [
+    AXTabsComponent,
+    AXTabItemComponent,
+    AXTabContentDirective,
+    AXDecoratorGenericComponent,
+  ],
 })
 export class TabWithContentComponent {}

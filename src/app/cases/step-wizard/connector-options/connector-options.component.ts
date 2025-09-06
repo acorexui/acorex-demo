@@ -9,12 +9,12 @@ import {
   AXStepWizardItemComponent,
 } from '@acorex/components/step-wizard';
 import { AXSwitchComponent } from '@acorex/components/switch';
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-connector-options',
   templateUrl: './connector-options.component.html',
-  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AXButtonComponent,
     AXStepWizardComponent,

@@ -1,10 +1,19 @@
+import { AXBadgeComponent } from '@acorex/components/badge';
+import {
+  AXDecoratorGenericComponent,
+  AXDecoratorIconComponent,
+} from '@acorex/components/decorators';
+import { AXTabItemComponent, AXTabsComponent } from '@acorex/components/tabs';
 import { Component } from '@angular/core';
-import { AXTabsModule } from '@acorex/components/tabs';
-import { AXDecoratorModule } from '@acorex/components/decorators';
-import { AXBadgeModule } from '@acorex/components/badge';
 
 @Component({
-    templateUrl: './decoration.component.html',
-    imports: [AXTabsModule, AXDecoratorModule, AXBadgeModule]
+  templateUrl: './decoration.component.html',
+  imports: [
+    AXTabsComponent,
+    AXBadgeComponent,
+    AXTabItemComponent,
+    AXDecoratorIconComponent,
+    AXDecoratorGenericComponent,
+  ],
 })
 export class DecorationComponent {}

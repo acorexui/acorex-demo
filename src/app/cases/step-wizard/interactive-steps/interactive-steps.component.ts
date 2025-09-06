@@ -9,12 +9,17 @@ import {
   AXStepWizardItemComponent,
 } from '@acorex/components/step-wizard';
 import { AXSwitchComponent } from '@acorex/components/switch';
-import { Component, signal, ViewChild } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  signal,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-interactive-steps',
   templateUrl: './interactive-steps.component.html',
-  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AXButtonComponent,
     AXStepWizardComponent,

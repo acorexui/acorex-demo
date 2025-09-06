@@ -9,12 +9,12 @@ import {
   AXStepWizardItemComponent,
 } from '@acorex/components/step-wizard';
 import { AXTextBoxComponent } from '@acorex/components/text-box';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-usage',
   templateUrl: './usage.component.html',
-  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AXButtonComponent,
     AXTextBoxComponent,

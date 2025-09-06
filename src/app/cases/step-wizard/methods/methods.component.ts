@@ -13,7 +13,6 @@ import { ChangeDetectionStrategy, Component, viewChild } from '@angular/core';
 @Component({
   selector: 'app-methods',
   templateUrl: './methods.component.html',
-  standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AXButtonComponent,
