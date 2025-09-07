@@ -2,6 +2,7 @@
   #stepWizard
   [size]="'ax-md'"
   [connector]="true"
+  [changeStep]="true"
   [scrollToStep]="false"
   [look]="'circular-icon'"
   [content]="usageContent"
@@ -12,7 +13,7 @@
     [id]="'personal'"
   >
     <ax-icon class="fas fa-user"></ax-icon>
-    <ax-content>
+    <ax-content class="ax-w-full">
       <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
         <ax-title level="3" class="ax-mb-4">Personal Information</ax-title>
         <ax-subtitle class="ax-mb-4">
@@ -41,13 +42,13 @@
     [id]="'contact'"
   >
     <ax-icon class="fas fa-envelope"></ax-icon>
-    <ax-content>
+    <ax-content class="ax-w-full">
       <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
         <ax-title level="3" class="ax-mb-4">Contact Details</ax-title>
         <ax-subtitle class="ax-mb-4">
           We need your contact information to send you important updates.
         </ax-subtitle>
-        <div class="ax-flex ax-flex-col ax-gap-4">
+        <div class="ax-grid ax-grid-cols-2 ax-gap-4">
           <div class="ax-flex ax-flex-col">
             <ax-text-box type="email" placeholder="john.doe@example.com">
               <label>Email Address</label>
@@ -69,13 +70,13 @@
     [description]="'Create your account'"
   >
     <ax-icon class="fas fa-lock"></ax-icon>
-    <ax-content>
+    <ax-content class="ax-w-full">
       <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
         <ax-title level="3" class="ax-mb-4">Account Setup</ax-title>
         <ax-subtitle class="ax-mb-4">
           Choose a username and password for your new account.
         </ax-subtitle>
-        <div class="ax-flex ax-flex-col ax-gap-4">
+        <div class="ax-grid ax-grid-cols-2 ax-gap-4">
           <div class="ax-flex ax-flex-col">
             <ax-text-box type="text" placeholder="johndoe">
               <label>Username</label>
@@ -97,7 +98,7 @@
     [id]="'review'"
   >
     <ax-icon class="fas fa-check-circle"></ax-icon>
-    <ax-content>
+    <ax-content class="ax-w-full">
       <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
         <ax-title level="3" class="ax-mb-4">Review & Submit</ax-title>
         <ax-subtitle class="ax-mb-4">
