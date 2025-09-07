@@ -1,16 +1,20 @@
-<div class="ax-h-[300px] ax-w-full ax-flex ax-justify-center ax-items-center">
-    <ax-button [text]="'Show Tooltip'" [axTooltip]="custom" [axTooltipPlacement]="'top'"
-      color="primary"></ax-button>
-    <ng-template #custom>
-      <div class="ax-overlay-pane ax-p-4">
-        <p class="ax-text-sm">
-          <b>Title</b><br>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-          Necessitatibus ipsum suscipit esse velit
-        </p>
-        <p class="ax-mt-4">
-          <ax-button class="ax-xs" text="Okay" color="success"></ax-button>
-        </p>
-      </div>
-    </ng-template>
-  </div>
+<div class="ax-w-full ax-flex ax-justify-center ax-items-center">
+  <ax-button
+    color="primary"
+    [axTooltip]="custom"
+    [text]="'Show Tooltip'"
+    [axTooltipPlacement]="'top'"
+  ></ax-button>
+  <ng-template #custom>
+    <div class="ax-overlay-pane ax-p-4">
+      <p class="ax-text-sm">
+        <b>Title</b><br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
+        Necessitatibus ipsum suscipit esse velit
+      </p>
+      <p class="ax-mt-4">
+        <ax-button class="ax-xs" text="Okay" color="success"></ax-button>
+      </p>
+    </div>
+  </ng-template>
+</div>
