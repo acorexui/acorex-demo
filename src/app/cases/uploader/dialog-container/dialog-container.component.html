@@ -1,0 +1,26 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+>
+  <ax-title>Dialog Container</ax-title>
+  <ax-subtitle
+    >Demonstrates the uploader dialog container with collapse/expand
+    animations</ax-subtitle
+  >
+
+  <div class="ax-flex ax-gap-2 ax-mb-4">
+    <ax-button (onClick)="addSampleFiles()">Add Sample Files</ax-button>
+    <ax-button (onClick)="clearFiles()">Clear All</ax-button>
+  </div>
+
+  <div class="ax-w-full ax-max-w-2xl">
+    <ax-uploader-dialog-container></ax-uploader-dialog-container>
+  </div>
+
+  <div class="ax-text-sm ax-text-gray-600 ax-text-center ax-max-w-lg">
+    <p>
+      This component provides a dialog container for the uploader list with
+      collapse and expand animations. It includes a header with title and
+      controls, and can be collapsed to save space.
+    </p>
+  </div>
+</div>

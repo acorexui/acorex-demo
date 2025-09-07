@@ -1,0 +1,25 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+>
+  <div class="ax-w-full ax-max-w-2xl">
+    <div
+      axUploaderZone
+      (onChanged)="onFilesChanged($event)"
+      (onFileUploadComplete)="onFileUploadComplete($event)"
+      (onFilesUploadComplete)="onFilesUploadComplete($event)"
+      class="ax-border-2 ax-border-dashed ax-surface ax-rounded-lg ax-p-8 ax-text-center hover:ax-lighter-surface ax-transition-colors"
+    >
+      <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+        <div class="ax-text-4xl">📁</div>
+        <div>
+          <ax-title> Upload Files </ax-title>
+          <ax-subtitle>
+            Click the button below to browse for files
+          </ax-subtitle>
+        </div>
+        <ax-button axUploaderBrowseHandle text="Browse Files" color="primary">
+        </ax-button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,13 +1,18 @@
-import { AXButtonModule } from '@acorex/components/button';
+import { AXButtonComponent } from '@acorex/components/button';
 import {
-  AXUploaderModule,
+  AXUploaderBrowseDirective,
   AXUploaderService,
+  AXUploaderZoneDirective,
 } from '@acorex/components/uploader';
 import { Component, inject } from '@angular/core';
 
 @Component({
   templateUrl: './usage.component.html',
-  imports: [AXUploaderModule, AXButtonModule],
+  imports: [
+    AXButtonComponent,
+    AXUploaderZoneDirective,
+    AXUploaderBrowseDirective,
+  ],
 })
 export class UsageComponent {
   uploaderService: AXUploaderService = inject(AXUploaderService);

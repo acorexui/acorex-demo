@@ -1,0 +1,12 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+>
+  <div class="ax-flex ax-gap-2 ax-mb-4">
+    <ax-button (onClick)="addSampleFiles()" text="Add Sample Files"></ax-button>
+    <ax-button (onClick)="clearFiles()" text="Clear All"></ax-button>
+  </div>
+
+  <div class="ax-w-full ax-max-w-2xl">
+    <ax-uploader-list></ax-uploader-list>
+  </div>
+</div>
