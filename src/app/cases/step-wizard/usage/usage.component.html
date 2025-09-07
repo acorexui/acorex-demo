@@ -1,5 +1,5 @@
 <ax-step-wizard
-  #usageWizard
+  #stepWizard
   [size]="'ax-md'"
   [connector]="true"
   [scrollToStep]="false"
@@ -127,20 +127,20 @@
 <div
   class="ax-mt-8 ax-flex ax-justify-between ax-items-center ax-p-4 ax-surface ax-rounded-lg"
 >
-  <span>Step {{ getCurrentStep() }} of 4</span>
+  <span>Step {{ getCurrentStep(stepWizard) }} of 4</span>
   <div class="ax-flex ax-gap-3">
     <ax-button
-      (onClick)="usageWizard.previous()"
-      [disabled]="usageWizard.isFirst()"
-      color="primary"
       look="outline"
+      color="primary"
       text="Previous"
+      (onClick)="stepWizard.previous()"
+      [disabled]="stepWizard.isFirst()"
     ></ax-button>
     <ax-button
-      (onClick)="usageWizard.next()"
-      [disabled]="usageWizard.isLast()"
-      color="primary"
       text="Next"
+      color="primary"
+      (onClick)="stepWizard.next()"
+      [disabled]="stepWizard.isLast()"
     ></ax-button>
   </div>
 </div>

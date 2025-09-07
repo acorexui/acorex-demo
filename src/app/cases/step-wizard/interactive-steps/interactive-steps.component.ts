@@ -17,7 +17,6 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-interactive-steps',
   templateUrl: './interactive-steps.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [

@@ -281,7 +281,7 @@
     <div class="ax-mt-4 ax-pt-2 ax-border-t ax-border-surface">
       <ax-title level="4" class="ax-mb-3">Current Progress</ax-title>
       <ax-subtitle class="ax-flex ax-items-center">
-        Current Step: {{ getCurrentStep() }} of 4
+        Current Step: {{ getCurrentStep(navigationWizard) }} of 4
         <ax-badge
           class="ax-ml-4"
           [text]="getCompletedSteps() + ' steps completed'"

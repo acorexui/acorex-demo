@@ -1,27 +1,26 @@
 import { AXButtonComponent } from '@acorex/components/button';
 import {
-  AXDecoratorGenericComponent,
-  AXDecoratorIconComponent,
-} from '@acorex/components/decorators';
+  AXButtonGroupComponent,
+  AXButtonGroupItemComponent,
+} from '@acorex/components/button-group';
+import { AXDecoratorIconComponent } from '@acorex/components/decorators';
 import {
   AXStepWizardComponent,
-  AXStepWizardContentDirective,
   AXStepWizardItemComponent,
   AXStepWizardSize,
 } from '@acorex/components/step-wizard';
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-different-sizes',
   templateUrl: './different-sizes.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AXButtonComponent,
     AXStepWizardComponent,
+    AXButtonGroupComponent,
     AXDecoratorIconComponent,
     AXStepWizardItemComponent,
-    AXDecoratorGenericComponent,
-    AXStepWizardContentDirective,
+    AXButtonGroupItemComponent,
   ],
 })
 export class DifferentSizesComponent {
@@ -29,5 +28,9 @@ export class DifferentSizesComponent {
 
   setSize(size: AXStepWizardSize) {
     this.selectedSize.set(size);
+  }
+
+  handleOnItemClick(event: any) {
+    console.log('Button item clicked:', event);
   }
 }

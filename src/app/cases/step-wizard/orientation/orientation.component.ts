@@ -1,12 +1,12 @@
 import { AXOrientation } from '@acorex/cdk/common';
 import { AXButtonComponent } from '@acorex/components/button';
 import {
-  AXDecoratorGenericComponent,
-  AXDecoratorIconComponent,
-} from '@acorex/components/decorators';
+  AXButtonGroupComponent,
+  AXButtonGroupItemComponent,
+} from '@acorex/components/button-group';
+import { AXDecoratorIconComponent } from '@acorex/components/decorators';
 import {
   AXStepWizardComponent,
-  AXStepWizardContentDirective,
   AXStepWizardItemComponent,
 } from '@acorex/components/step-wizard';
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
@@ -18,10 +18,10 @@ import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
   imports: [
     AXButtonComponent,
     AXStepWizardComponent,
+    AXButtonGroupComponent,
     AXDecoratorIconComponent,
     AXStepWizardItemComponent,
-    AXDecoratorGenericComponent,
-    AXStepWizardContentDirective,
+    AXButtonGroupItemComponent,
   ],
 })
 export class OrientationComponent {

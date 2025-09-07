@@ -10,30 +10,21 @@ import {
   AXStepWizardItemComponent,
   AXStepWizardState,
 } from '@acorex/components/step-wizard';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  signal,
-  viewChild,
-} from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-navigation-state',
   templateUrl: './navigation-state.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
+    AXBadgeComponent,
     AXButtonComponent,
     AXStepWizardComponent,
     AXDecoratorIconComponent,
     AXStepWizardItemComponent,
     AXDecoratorGenericComponent,
     AXStepWizardContentDirective,
-    AXBadgeComponent,
   ],
 })
 export class NavigationStateComponent {
-  navigationWizard = viewChild<AXStepWizardComponent>('navigationWizard');
-
   validationState = signal<AXStepWizardState>('clear');
   processingState = signal<AXStepWizardState>('clear');
   qualityState = signal<AXStepWizardState>('clear');
@@ -78,7 +69,7 @@ export class NavigationStateComponent {
     return completed;
   }
 
-  getCurrentStep(): number {
-    return (this.navigationWizard()?.activeStepIndex() ?? 0) + 1;
+  getCurrentStep(stepWizard: AXStepWizardComponent): number {
+    return (stepWizard.activeStepIndex() ?? 0) + 1;
   }
 }

@@ -1,108 +1,76 @@
-<div class="ax-w-full ax-max-w-4xl ax-mx-auto">
-  <div class="ax-mb-6">
-    <ax-title level="3" class="ax-mb-2">Select Orientation</ax-title>
-    <div class="ax-flex ax-gap-2 ax-flex-wrap">
-      <ax-button
-        (onClick)="setOrientation('horizontal')"
-        [color]="
-          selectedOrientation() === 'horizontal' ? 'primary' : 'secondary'
-        "
-        look="outline"
+<div
+  class="ax-w-full ax-flex ax-justify-center ax-items-center ax-flex-col ax-gap-4"
+>
+  <div class="ax-flex ax-gap-2 ax-flex-wrap">
+    <ax-button-group>
+      <ax-button-group-item
         text="Horizontal"
-      ></ax-button>
-      <ax-button
-        (onClick)="setOrientation('vertical')"
-        [color]="selectedOrientation() === 'vertical' ? 'primary' : 'secondary'"
-        look="outline"
+        (onClick)="setOrientation('horizontal')"
+        [selected]="selectedOrientation() === 'horizontal'"
+      ></ax-button-group-item>
+      <ax-button-group-item
         text="Vertical"
-      ></ax-button>
-    </div>
+        (onClick)="setOrientation('vertical')"
+        [selected]="selectedOrientation() === 'vertical'"
+      ></ax-button-group-item>
+    </ax-button-group>
   </div>
 
   <ax-step-wizard
     #wizard
     [size]="'ax-md'"
     [connector]="true"
-    [content]="content"
     [scrollToStep]="false"
     [look]="'circular-icon'"
     [orientation]="selectedOrientation()"
+    [class.ax-w-[45rem]]="selectedOrientation() === 'horizontal'"
   >
     <ax-step-wizard-item
+      [id]="'setup'"
       [label]="'Setup'"
       [description]="'Initial configuration'"
-      [id]="'setup'"
     >
       <ax-icon class="fas fa-cog"></ax-icon>
-      <ax-content>
-        <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
-          <h4>Setup Complete</h4>
-          <p>Basic configuration finished</p>
-        </div>
-      </ax-content>
     </ax-step-wizard-item>
 
     <ax-step-wizard-item
+      [id]="'install'"
       [label]="'Install'"
       [description]="'Install dependencies'"
-      [id]="'install'"
     >
       <ax-icon class="fas fa-box"></ax-icon>
-      <ax-content>
-        <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
-          <h4>Installation Complete</h4>
-          <p>All packages installed successfully</p>
-        </div>
-      </ax-content>
     </ax-step-wizard-item>
 
     <ax-step-wizard-item
+      [id]="'configure'"
       [label]="'Configure'"
       [description]="'Final setup'"
-      [id]="'configure'"
     >
       <ax-icon class="fas fa-wrench"></ax-icon>
-      <ax-content>
-        <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
-          <h4>Configuration Complete</h4>
-          <p>Ready to use</p>
-        </div>
-      </ax-content>
     </ax-step-wizard-item>
 
     <ax-step-wizard-item
+      [id]="'deploy'"
       [label]="'Deploy'"
       [description]="'Go live'"
-      [id]="'deploy'"
     >
       <ax-icon class="fas fa-rocket"></ax-icon>
-      <ax-content>
-        <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
-          <h4>Deployment Complete</h4>
-          <p>Application deployed successfully</p>
-        </div>
-      </ax-content>
     </ax-step-wizard-item>
   </ax-step-wizard>
 
-  <div class="ax-flex ax-justify-center ax-p-4">
-    <ng-template [axStepWizardContent] #content="axStepWizardContent">
-    </ng-template>
-  </div>
-
   <div class="ax-flex ax-justify-center ax-gap-2">
     <ax-button
-      (onClick)="wizard.previous()"
-      [disabled]="wizard.isFirst()"
-      color="primary"
       look="outline"
       text="Previous"
+      color="primary"
+      (onClick)="wizard.previous()"
+      [disabled]="wizard.isFirst()"
     ></ax-button>
     <ax-button
+      text="Next"
+      color="primary"
       (onClick)="wizard.next()"
       [disabled]="wizard.isLast()"
-      color="primary"
-      text="Next"
     ></ax-button>
   </div>
 </div>

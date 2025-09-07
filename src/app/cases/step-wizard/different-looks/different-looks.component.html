@@ -1,44 +1,32 @@
-<div class="ax-w-full ax-max-w-4xl ax-mx-auto">
-  <div class="ax-mb-6">
-    <ax-title level="3" class="ax-mb-2">Select Look Style</ax-title>
-    <div class="ax-flex ax-gap-2 ax-flex-wrap">
-      <ax-button
-        (onClick)="setLook('circular')"
-        [color]="selectedLook() === 'circular' ? 'primary' : 'secondary'"
-        look="outline"
+<div class="ax-flex ax-flex-col ax-gap-6 ax-items-center">
+  <div class="ax-flex ax-gap-2 ax-flex-wrap">
+    <ax-button-group>
+      <ax-button-group-item
         text="Circular"
-      ></ax-button>
-      <ax-button
-        (onClick)="setLook('circular-icon')"
-        [color]="selectedLook() === 'circular-icon' ? 'primary' : 'secondary'"
-        look="outline"
+        (onClick)="setLook('circular')"
+        [selected]="selectedLook() === 'circular'"
+      ></ax-button-group-item>
+      <ax-button-group-item
         text="Circular Icon"
-      ></ax-button>
-      <ax-button
-        (onClick)="setLook('rounded-icon')"
-        [color]="selectedLook() === 'rounded-icon' ? 'primary' : 'secondary'"
-        look="outline"
+        (onClick)="setLook('circular-icon')"
+        [selected]="selectedLook() === 'circular-icon'"
+      ></ax-button-group-item>
+      <ax-button-group-item
         text="Rounded Icon"
-      ></ax-button>
-      <ax-button
-        (onClick)="setLook('text-line')"
-        [color]="selectedLook() === 'text-line' ? 'primary' : 'secondary'"
-        look="outline"
+        (onClick)="setLook('rounded-icon')"
+        [selected]="selectedLook() === 'rounded-icon'"
+      ></ax-button-group-item>
+      <ax-button-group-item
         text="Text Line"
-      ></ax-button>
-      <ax-button
-        (onClick)="setLook('custom')"
-        [color]="selectedLook() === 'custom' ? 'primary' : 'secondary'"
-        look="outline"
-        text="Custom"
-      ></ax-button>
-    </div>
+        (onClick)="setLook('text-line')"
+        [selected]="selectedLook() === 'text-line'"
+      ></ax-button-group-item>
+    </ax-button-group>
   </div>
 
   <ax-step-wizard
     #wizard
     [size]="'ax-md'"
-    [content]="content"
     [connector]="true"
     [scrollToStep]="false"
     [look]="selectedLook()"
@@ -49,12 +37,6 @@
       [id]="'setup'"
     >
       <ax-icon class="fas fa-cog"></ax-icon>
-      <ax-content>
-        <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
-          <h4>Setup Complete</h4>
-          <p>Basic configuration finished</p>
-        </div>
-      </ax-content>
     </ax-step-wizard-item>
 
     <ax-step-wizard-item
@@ -63,12 +45,6 @@
       [id]="'install'"
     >
       <ax-icon class="fas fa-box"></ax-icon>
-      <ax-content>
-        <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
-          <h4>Installation Complete</h4>
-          <p>All packages installed successfully</p>
-        </div>
-      </ax-content>
     </ax-step-wizard-item>
 
     <ax-step-wizard-item
@@ -77,33 +53,22 @@
       [id]="'configure'"
     >
       <ax-icon class="fas fa-wrench"></ax-icon>
-      <ax-content>
-        <div class="ax-p-4 ax-surface ax-rounded-lg ax-border">
-          <h4>Configuration Complete</h4>
-          <p>Ready to use</p>
-        </div>
-      </ax-content>
     </ax-step-wizard-item>
   </ax-step-wizard>
 
-  <div class="ax-flex ax-justify-center ax-p-4">
-    <ng-template [axStepWizardContent] #content="axStepWizardContent">
-    </ng-template>
-  </div>
-
   <div class="ax-flex ax-justify-center ax-gap-2">
     <ax-button
-      (onClick)="wizard.previous()"
-      [disabled]="wizard.isFirst()"
-      color="primary"
       look="outline"
       text="Previous"
+      color="primary"
+      (onClick)="wizard.previous()"
+      [disabled]="wizard.isFirst()"
     ></ax-button>
     <ax-button
+      text="Next"
+      color="primary"
       (onClick)="wizard.next()"
       [disabled]="wizard.isLast()"
-      color="primary"
-      text="Next"
     ></ax-button>
   </div>
 </div>

@@ -11,7 +11,6 @@ import {
 import { ChangeDetectionStrategy, Component, viewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-methods',
   templateUrl: './methods.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
