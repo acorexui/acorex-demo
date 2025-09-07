@@ -21,20 +21,20 @@ export const routes: Routes = [
         (e) => e.DragDropZoneComponent
       ),
   },
-  {
-    path: 'file-list',
-    loadComponent: () =>
-      import('./file-list/file-list.component').then(
-        (e) => e.FileListComponent
-      ),
-  },
-  {
-    path: 'dialog-container',
-    loadComponent: () =>
-      import('./dialog-container/dialog-container.component').then(
-        (e) => e.DialogContainerComponent
-      ),
-  },
+  // {
+  //   path: 'file-list',
+  //   loadComponent: () =>
+  //     import('./file-list/file-list.component').then(
+  //       (e) => e.FileListComponent
+  //     ),
+  // },
+  // {
+  //   path: 'dialog-container',
+  //   loadComponent: () =>
+  //     import('./dialog-container/dialog-container.component').then(
+  //       (e) => e.DialogContainerComponent
+  //     ),
+  // },
   {
     path: 'zone-directive',
     loadComponent: () =>
