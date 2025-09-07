@@ -30,14 +30,12 @@
       "every": "Every",
       "no-result-found": "No results found",
       "more-items": "{{ number }} more",
-      "no-record": "No record"
+      "no-record": "No record",
+      "no-data-yet": "No Data Loaded Yet."
     },
     "notifications": {
       "more": "And {{ number }} more...",
-      "info": "Info",
-      "success": "Success",
-      "operation_completed": "Operation completed successfully",
-      "warning_message": "Please review your input before proceeding."
+      "info": "Info"
     }
   },
   "error": {
@@ -273,5 +271,24 @@
     "rotate-left": "Rotate Left",
     "rotate-right": "Rotate Right",
     "rotate": "Rotate"
+  },
+  "time": {
+    "left": "left",
+    "ago": "ago",
+    "seconds": "seconds",
+    "minute": "minute",
+    "minutes": "minutes",
+    "hour": "hour",
+    "hours": "hours",
+    "day": "day",
+    "days": "days",
+    "month": "month",
+    "months": "months",
+    "year": "year",
+    "years": "years",
+    "an-hour": "an hour",
+    "a-day": "a day",
+    "a-month": "a month",
+    "a-year": "a year"
   }
 }
