@@ -1,0 +1,10 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-px-4"
+>
+  <ax-select-box
+    class="ax-w-52"
+    [dataSource]="locations"
+    [ngModel]="'bottom-center'"
+    (onValueChanged)="showToast($event.value)"
+  ></ax-select-box>
+</div>

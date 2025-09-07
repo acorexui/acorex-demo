@@ -33,7 +33,11 @@
       "no-record": "No record"
     },
     "notifications": {
-      "more": "And {{ number }} more..."
+      "more": "And {{ number }} more...",
+      "info": "Info",
+      "success": "Success",
+      "operation_completed": "Operation completed successfully",
+      "warning_message": "Please review your input before proceeding."
     }
   },
   "error": {
@@ -123,7 +127,15 @@
       "years": "Years"
     },
     "weekdays": {
-      "short": { "0": "Sun", "1": "Mon", "2": "Tue", "3": "Wed", "4": "Thu", "5": "Fri", "6": "Sat" },
+      "short": {
+        "0": "Sun",
+        "1": "Mon",
+        "2": "Tue",
+        "3": "Wed",
+        "4": "Thu",
+        "5": "Fri",
+        "6": "Sat"
+      },
       "long": {
         "0": "Sunday",
         "1": "Monday",

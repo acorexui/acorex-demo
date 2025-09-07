@@ -1,11 +1,11 @@
-import { AXButtonModule } from '@acorex/components/button';
-import { AXStyleColorType, AXLocation } from '@acorex/cdk/common';
+import { AXLocation, AXStyleColorType } from '@acorex/cdk/common';
+import { AXButtonComponent } from '@acorex/components/button';
 import { AXToastModule, AXToastService } from '@acorex/components/toast';
 import { Component, inject, signal } from '@angular/core';
 
 @Component({
   templateUrl: './usage.component.html',
-  imports: [AXButtonModule, AXToastModule],
+  imports: [AXButtonComponent, AXToastModule],
 })
 export class UsageComponent {
   toastService = inject(AXToastService);

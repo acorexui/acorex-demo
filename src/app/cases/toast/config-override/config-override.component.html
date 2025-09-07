@@ -1,0 +1,36 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-px-4"
+>
+  <ax-title>Configuration Override</ax-title>
+  <ax-subtitle
+    >Customizing toast behavior with different configuration
+    options</ax-subtitle
+  >
+
+  <div class="ax-flex ax-flex-wrap ax-gap-2 ax-justify-center">
+    <ax-button
+      color="primary"
+      text="Custom Config (15s)"
+      (onClick)="showWithCustomConfig()"
+    ></ax-button>
+
+    <ax-button
+      color="success"
+      text="Minimal Config"
+      (onClick)="showWithMinimalConfig()"
+    ></ax-button>
+
+    <ax-button
+      color="warning"
+      text="Extended Config"
+      (onClick)="showWithExtendedConfig()"
+    ></ax-button>
+
+    <ax-button
+      color="danger"
+      text="Custom Location"
+      (onClick)="showWithDifferentLocation()"
+    ></ax-button>
+  </div>
+</div>
+

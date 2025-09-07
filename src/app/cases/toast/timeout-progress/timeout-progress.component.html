@@ -1,0 +1,29 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4">
+  <ax-button
+    class="ax-w-full"
+    color="success"
+    text="With Progress Bar"
+    (onClick)="showWithProgress()"
+  ></ax-button>
+
+  <ax-button
+    class="ax-w-full"
+    color="warning"
+    text="Without Progress Bar"
+    (onClick)="showWithoutProgress()"
+  ></ax-button>
+
+  <ax-button
+    class="ax-w-full"
+    color="primary"
+    text="Quick Timeout (2s)"
+    (onClick)="showQuickTimeout()"
+  ></ax-button>
+
+  <ax-button
+    class="ax-w-full"
+    color="secondary"
+    text="Long Timeout (10s)"
+    (onClick)="showLongTimeout()"
+  ></ax-button>
+</div>
