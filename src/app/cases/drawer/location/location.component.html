@@ -1,45 +1,47 @@
-<ax-drawer2-container class="ax-h-96 ax-w-full">
-  <ax-drawer2
-    (collapsedStateChanged)="onCollapsedChange($event)"
-    #drawer1
-    location="start"
-    class="ax-bg-surface ax-p-4"
-  >
-    <ax-header>
-      <ax-title> Basic Drawer </ax-title>
-      <ax-close-button></ax-close-button>
-    </ax-header>
-    <ax-content>
-      <div>Some contents...</div>
-      <div>Some contents...</div>
-      <div>Some contents...</div>
+<div class="ax-w-96">
+  <ax-drawer2-container class="ax-h-96 ax-w-full">
+    <ax-drawer2
+      (collapsedStateChanged)="onCollapsedChange($event)"
+      #drawer1
+      location="start"
+      class="ax-bg-surface ax-p-4"
+    >
+      <ax-header>
+        <ax-title> Basic Drawer </ax-title>
+        <ax-close-button></ax-close-button>
+      </ax-header>
+      <ax-content>
+        <div>Some contents...</div>
+        <div>Some contents...</div>
+        <div>Some contents...</div>
+      </ax-content>
+    </ax-drawer2>
+
+    <ax-drawer2
+      (collapsedStateChanged)="onCollapsedChange($event)"
+      #drawer2
+      location="end"
+      class="ax-bg-surface ax-p-4"
+    >
+      <ax-header>
+        <ax-title> Basic Drawer </ax-title>
+        <ax-close-button></ax-close-button>
+      </ax-header>
+      <ax-content>
+        <div>Some contents...</div>
+        <div>Some contents...</div>
+        <div>Some contents...</div>
+      </ax-content>
+    </ax-drawer2>
+
+    <ax-content
+      class="ax-flex ax-h-full ax-w-full ax-items-center ax-justify-around ax-p-3"
+    >
+      <ax-button (onClick)="drawer1.toggle()" color="primary" text="Open Start">
+      </ax-button>
+
+      <ax-button (onClick)="drawer2.toggle()" color="primary" text="Open End">
+      </ax-button>
     </ax-content>
-  </ax-drawer2>
-
-  <ax-drawer2
-    (collapsedStateChanged)="onCollapsedChange($event)"
-    #drawer2
-    location="end"
-    class="ax-bg-surface ax-p-4"
-  >
-    <ax-header>
-      <ax-title> Basic Drawer </ax-title>
-      <ax-close-button></ax-close-button>
-    </ax-header>
-    <ax-content>
-      <div>Some contents...</div>
-      <div>Some contents...</div>
-      <div>Some contents...</div>
-    </ax-content>
-  </ax-drawer2>
-
-  <ax-content
-    class="ax-flex ax-h-full ax-w-full ax-items-center ax-justify-around ax-p-3"
-  >
-    <ax-button (onClick)="drawer1.toggle()" color="primary" text="Open Start">
-    </ax-button>
-
-    <ax-button (onClick)="drawer2.toggle()" color="primary" text="Open End">
-    </ax-button>
-  </ax-content>
-</ax-drawer2-container>
+  </ax-drawer2-container>
+</div>
