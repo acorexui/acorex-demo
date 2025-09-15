@@ -1,46 +1,41 @@
 <ax-comment-container>
-  <!-- Comment 1 -->
-  <ax-comment-item id="c1">
-    <ax-avatar></ax-avatar>
-    <ax-title>Jane Doe</ax-title>
-    <ax-comment-date>2 hours ago</ax-comment-date>
-    <ax-comment-menu-options>...</ax-comment-menu-options>
+  <ax-comment-view>
+    <ax-comment-item>
+      <ax-avatar>
+        <ax-image src="https://i.pravatar.cc/300"></ax-image>
+      </ax-avatar>
+      <ax-title>Meysa</ax-title>
+      <ax-comment-date>3d</ax-comment-date>
+      <ax-comment-menu-options>
+        <ax-button class="ax-sm" look="blank" color="secondary ">
+          <ax-icon
+            icon="ax-icon ax-icon-solid ax-icon-more-horizontal"
+          ></ax-icon
+        ></ax-button>
+        <ax-dropdown-panel>
+          <ax-button-item-list>
+            <ax-button-item text="Edit" color="secondary">
+              <ax-prefix>
+                <ax-icon icon="fa-solid fa-edit"></ax-icon>
+              </ax-prefix>
+            </ax-button-item>
 
-    <ax-content>
-      Great article! The comment system feels smooth.
-    </ax-content>
-
-    <div class="ax-reactions">
-      <ax-comment-like
-        [liked]="liked1()"
-        (likedChange)="liked1.set($event)"
-        (onLiked)="lastLiked = $event"
-      >12</ax-comment-like>
-
-      <ax-comment-reply-text>Reply</ax-comment-reply-text>
-    </div>
-  </ax-comment-item>
-
-  <!-- Comment 2 -->
-  <ax-comment-item id="c2">
-    <ax-avatar></ax-avatar>
-    <ax-title>John Smith</ax-title>
-    <ax-comment-date>yesterday</ax-comment-date>
-
-    <ax-content>
-      Thanks for sharing. Looking forward to more updates.
-    </ax-content>
-
-    <div class="ax-reactions">
-      <ax-comment-like
-        [liked]="liked2()"
-        (likedChange)="liked2.set($event)"
-        (onLiked)="lastLiked = $event"
-      >7</ax-comment-like>
-
-      <ax-comment-reply-text>Reply</ax-comment-reply-text>
-    </div>
-  </ax-comment-item>
+            <ax-button-item text="Delete" color="danger">
+              <ax-prefix>
+                <ax-icon icon="fa-solid fa-trash-can"></ax-icon>
+              </ax-prefix>
+            </ax-button-item>
+          </ax-button-item-list>
+        </ax-dropdown-panel>
+      </ax-comment-menu-options>
+      <ax-content
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
+        mollitia.</ax-content
+      >
+      <ax-comment-like (likedChange)="changeLike($event)" [like]="true"
+        >4</ax-comment-like
+      >
+      <ax-comment-reply-text></ax-comment-reply-text>
+    </ax-comment-item>
+  </ax-comment-view>
 </ax-comment-container>
-
-

@@ -1,7 +1,15 @@
-<div style="display:flex; gap:8px; margin-bottom:12px">
-  <button type="button" (click)="toggleReplies()">Toggle replies</button>
-  <button type="button" (click)="scrollToR2()">Scroll to reply r2</button>
-  </div>
+<div class="ax-flex ax-gap-2">
+  <ax-button
+    color="primary"
+    text="Toggle replies"
+    (onClick)="toggleReplies()"
+  ></ax-button>
+  <ax-button
+    color="primary"
+    text="Scroll to reply r2"
+    (onClick)="scrollToR2()"
+  ></ax-button>
+</div>
 
 <ax-comment-container #container>
   <ax-comment-item #parentItem id="p1" [replyCount]="2">
@@ -27,10 +35,5 @@
       <ax-comment-date>just now</ax-comment-date>
       <ax-content>Apologies, will do.</ax-content>
     </ax-comment-item>
-
-    <ax-comment-reply-more>Show more</ax-comment-reply-more>
-    <ax-comment-reply-text>Reply</ax-comment-reply-text>
   </ax-comment-item>
 </ax-comment-container>
-
-

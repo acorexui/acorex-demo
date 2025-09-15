@@ -1,11 +1,12 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ViewChild } from '@angular/core';
 import { AXCommentModule } from '@acorex/components/comment';
 import { AXAvatarModule } from '@acorex/components/avatar';
+import { AXButtonModule } from '@acorex/components/button';
 
 @Component({
   standalone: true,
   selector: 'app-comment-programmatic',
-  imports: [AXCommentModule, AXAvatarModule],
+  imports: [AXCommentModule, AXAvatarModule, AXButtonModule],
   templateUrl: './programmatic.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
@@ -21,5 +22,3 @@ export class ProgrammaticComponent {
     this.container?.scrollToReply('r2');
   }
 }
-
-
