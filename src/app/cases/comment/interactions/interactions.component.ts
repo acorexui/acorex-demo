@@ -10,7 +10,7 @@ import { AXAvatarModule } from '@acorex/components/avatar';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class InteractionsComponent {
-  changeLike(like: boolean) {
+  changeLike(like: Event) {
     console.log('Liked status changed:', like);
   }
 }

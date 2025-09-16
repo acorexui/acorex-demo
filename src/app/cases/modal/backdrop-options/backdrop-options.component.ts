@@ -37,7 +37,7 @@ export class BackdropOptionsComponent {
       enabled: true,
       closeOnClick: false,
       background: true,
-      cssClass: 'ax-bg-blue-500/30',
+      backdropClass: 'ax-bg-blue-500/30',
     },
   };
 
