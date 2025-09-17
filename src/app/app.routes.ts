@@ -128,6 +128,12 @@ export const appRoutes: Route[] = [
       ),
   },
   {
+    path: 'command',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/command/command.routes').then((c) => c.routes),
+  },
+  {
     path: 'comment',
     component: MasterLayoutComponent,
     loadChildren: () =>
