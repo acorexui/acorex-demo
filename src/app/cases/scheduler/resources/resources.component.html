@@ -1,0 +1,55 @@
+<div
+  class="ax-w-[100vw] ax-h-[100vh] ax-flex ax-justify-center ax-items-center ax-flex-col ax-gap-4 ax-p-4"
+>
+  <div class="ax-flex ax-items-center ax-gap-4 ax-mb-4">
+    <span class="ax-text-sm ax-font-medium">Resource Headers:</span>
+    <ax-select-box
+      style="width: 150px"
+      [dataSource]="resourceHeaderOptions()"
+      [ngModel]="showResourceHeaders()"
+      (onValueChanged)="onResourceHeadersChange($event.value)"
+    >
+    </ax-select-box>
+
+    <span class="ax-text-sm ax-font-medium">Unassigned:</span>
+    <ax-select-box
+      style="width: 150px"
+      [dataSource]="unassignedOptions()"
+      [ngModel]="showUnassignedAppointments()"
+      (onValueChanged)="onUnassignedAppointmentsChange($event.value)"
+    >
+    </ax-select-box>
+
+    <span class="ax-text-sm ax-font-medium">View:</span>
+    <ax-select-box
+      style="width: 200px"
+      [dataSource]="timelineViews()"
+      [ngModel]="selectedView()"
+      (onValueChanged)="onViewChange($event.value)"
+    >
+    </ax-select-box>
+  </div>
+
+  @defer () {
+  <ax-scheduler
+    [views]="[
+      'timeline-day',
+      'timeline-multi-day',
+      'timeline-month',
+      'timeline-year'
+    ]"
+    [endDayHour]="20"
+    [readonly]="false"
+    [startDayHour]="8"
+    [draggable]="true"
+    [hasActions]="true"
+    [resources]="resources"
+    [selectedView]="selectedView()"
+    [startingDate]="startingDate()"
+    [dataSource]="appointmentsData()"
+    [showResourceHeaders]="showResourceHeaders()"
+    class="ax-bg-lightest dark:ax-bg-darkest ax-h-[90%]"
+    [showUnassignedAppointments]="showUnassignedAppointments()"
+  ></ax-scheduler>
+  }
+</div>

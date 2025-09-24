@@ -1,0 +1,30 @@
+<div
+  class="ax-w-[100vw] ax-h-[100vh] ax-flex ax-justify-center ax-items-center ax-flex-col ax-gap-4 ax-p-4"
+>
+  <div class="ax-flex ax-items-center ax-gap-4 ax-mb-4">
+    <span class="ax-text-sm ax-font-medium">Current Time Indicator:</span>
+    <ax-select-box
+      style="width: 200px"
+      [dataSource]="indicatorOptions()"
+      [ngModel]="showCurrentTimeIndicator()"
+      (onValueChanged)="onCurrentTimeIndicatorChange($event.value)"
+    >
+    </ax-select-box>
+  </div>
+
+  @defer () {
+  <ax-scheduler
+    [endDayHour]="18"
+    [readonly]="false"
+    [startDayHour]="8"
+    [draggable]="true"
+    [hasActions]="true"
+    [selectedView]="'day'"
+    [startingDate]="startingDate()"
+    [dataSource]="appointmentsData()"
+    [views]="['day', 'week', 'month']"
+    class="ax-bg-lightest dark:ax-bg-darkest ax-h-[90%]"
+    [showCurrentTimeIndicator]="showCurrentTimeIndicator()"
+  ></ax-scheduler>
+  }
+</div>

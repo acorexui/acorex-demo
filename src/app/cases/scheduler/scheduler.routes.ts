@@ -83,4 +83,16 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./actions/actions.component').then((e) => e.ActionsComponent),
   },
+  {
+    path: 'current-time-indicator',
+    loadComponent: () =>
+      import('./current-time-indicator/current-time-indicator.component').then(
+        (e) => e.CurrentTimeIndicatorComponent
+      ),
+  },
+  {
+    path: 'resources',
+    loadComponent: () =>
+      import('./resources/resources.component').then((e) => e.ResourcesComponent),
+  },
 ];
