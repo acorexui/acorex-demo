@@ -1,0 +1,25 @@
+<div class="ax-flex ax-flex-col ax-gap-6 ax-p-4">
+  <ax-rate-picker
+    [max]="5"
+    [step]="0.5"
+    [class]="'ax-md'"
+    [(ngModel)]="valueHalf"
+    [iconName]="'fa-star'"
+  ></ax-rate-picker>
+
+  <ax-rate-picker
+    [max]="5"
+    [step]="1"
+    [class]="'ax-md'"
+    [(ngModel)]="valueWhole"
+    [iconName]="'fa-star'"
+  ></ax-rate-picker>
+
+  <ax-rate-picker
+    [max]="5"
+    [step]="0.25"
+    [class]="'ax-md'"
+    [(ngModel)]="valueQuarter"
+    [iconName]="'fa-star'"
+  ></ax-rate-picker>
+</div>

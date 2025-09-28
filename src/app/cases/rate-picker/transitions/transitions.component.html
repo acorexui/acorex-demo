@@ -1,0 +1,17 @@
+<div class="ax-flex ax-flex-col ax-gap-6 ax-p-4">
+  <ax-rate-picker
+    [max]="5"
+    [hasTransition]="true"
+    [class]="'ax-md'"
+    [(ngModel)]="valueWithTransition"
+    [iconName]="'fa-star'"
+  ></ax-rate-picker>
+
+  <ax-rate-picker
+    [max]="5"
+    [hasTransition]="false"
+    [class]="'ax-md'"
+    [(ngModel)]="valueWithoutTransition"
+    [iconName]="'fa-star'"
+  ></ax-rate-picker>
+</div>
