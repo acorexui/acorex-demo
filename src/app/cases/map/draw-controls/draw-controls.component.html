@@ -1,0 +1,15 @@
+<div class="ax-w-full ax-h-96 ax-border ax-rounded">
+  <ax-map
+    [latitude]="latitude()"
+    [longitude]="longitude()"
+    [zoomLevel]="zoomLevel()"
+    [hasDraw]="hasDraw()"
+    [maxMarker]="maxMarker()"
+    [maxPolygon]="maxPolygon()"
+    (onMarkerAdded)="onMarkerAdded($event)"
+    (onMarkerChanged)="onMarkerChanged($event)"
+    (onPolygonAdded)="onPolygonAdded($event)"
+    (onPolygonChanged)="onPolygonChanged($event)"
+  >
+  </ax-map>
+</div>
