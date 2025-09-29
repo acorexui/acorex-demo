@@ -1,0 +1,28 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-8">
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+    <h3 class="ax-text-lg ax-font-semibold">Small Donut (250x250)</h3>
+    <ax-donut-chart
+      [data]="donutChartData()"
+      [options]="smallDonutOptions()"
+      (segmentClick)="handleDonutChartSegmentClick($event)"
+    ></ax-donut-chart>
+  </div>
+
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+    <h3 class="ax-text-lg ax-font-semibold">Medium Donut (400x400)</h3>
+    <ax-donut-chart
+      [data]="donutChartData()"
+      [options]="mediumDonutOptions()"
+      (segmentClick)="handleDonutChartSegmentClick($event)"
+    ></ax-donut-chart>
+  </div>
+
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+    <h3 class="ax-text-lg ax-font-semibold">Large Donut (600x600)</h3>
+    <ax-donut-chart
+      [data]="donutChartData()"
+      [options]="largeDonutOptions()"
+      (segmentClick)="handleDonutChartSegmentClick($event)"
+    ></ax-donut-chart>
+  </div>
+</div>

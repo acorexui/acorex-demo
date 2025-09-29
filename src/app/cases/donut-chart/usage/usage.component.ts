@@ -11,20 +11,19 @@ import {
 })
 export class UsageComponent {
   donutChartData = signal<AXDonutChartData[]>([
-    { id: 'segment-1', label: 'Category A', value: 35 },
-    { id: 'segment-2', label: 'Category B', value: 25 },
-    { id: 'segment-3', label: 'Category C', value: 20 },
-    { id: 'segment-4', label: 'Category D', value: 15 },
-    { id: 'segment-5', label: 'Category E', value: 5 },
+    { id: 'desktop', label: 'Desktop', value: 45, color: '#3498db' },
+    { id: 'mobile', label: 'Mobile', value: 35, color: '#e74c3c' },
+    { id: 'tablet', label: 'Tablet', value: 15, color: '#2ecc71' },
+    { id: 'other', label: 'Other', value: 5, color: '#f39c12' },
   ]);
 
   donutChartOptions = signal<AXDonutChartOption>({
-    width: 600,
-    height: 600,
+    width: 500,
+    height: 500,
     showTooltip: true,
-    donutWidth: 35,
-    cornerRadius: 4,
-    animationDuration: 800,
+    donutWidth: 40,
+    cornerRadius: 6,
+    animationDuration: 1000,
     animationEasing: 'ease-in-out',
   });
 
