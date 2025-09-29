@@ -1,0 +1,14 @@
+<div class="ax-w-full ax-h-[800px] ax-flex ax-flex-col ax-gap-8">
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+    <ax-donut-chart
+      [data]="donutChartData()"
+      [options]="donutChartOptions()"
+      #chartRef
+    ></ax-donut-chart>
+
+    <ax-chart-legend
+      [chart]="chartRef"
+      [options]="legendOptions()"
+    ></ax-chart-legend>
+  </div>
+</div>

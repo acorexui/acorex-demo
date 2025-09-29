@@ -88,6 +88,12 @@ export const appRoutes: Route[] = [
       ),
   },
   {
+    path: 'chart-legend',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/chart-legend/chart-legend.routes').then((c) => c.routes),
+  },
+  {
     path: 'check-box',
     component: MasterLayoutComponent,
     loadChildren: () =>

@@ -1,0 +1,57 @@
+<div class="ax-w-full ax-h-[800px] ax-flex ax-flex-col ax-gap-8">
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-6">
+    <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+      <h4 class="ax-text-md ax-font-semibold">
+        Custom Legend 1 (Vertical + Values + Percentage)
+      </h4>
+      <div class="ax-flex ax-items-center ax-gap-6">
+        <ax-donut-chart
+          [data]="donutChartData()"
+          [options]="donutChartOptions()"
+          #chartRef1
+        ></ax-donut-chart>
+
+        <ax-chart-legend
+          [chart]="chartRef1"
+          [options]="customLegendOptions1()"
+        ></ax-chart-legend>
+      </div>
+    </div>
+
+    <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+      <h4 class="ax-text-md ax-font-semibold">
+        Custom Legend 2 (Horizontal + Percentage Only)
+      </h4>
+      <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+        <ax-donut-chart
+          [data]="donutChartData()"
+          [options]="donutChartOptions()"
+          #chartRef2
+        ></ax-donut-chart>
+
+        <ax-chart-legend
+          [chart]="chartRef2"
+          [options]="customLegendOptions2()"
+        ></ax-chart-legend>
+      </div>
+    </div>
+
+    <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+      <h4 class="ax-text-md ax-font-semibold">
+        Custom Legend 3 (Non-Interactive + Values Only)
+      </h4>
+      <div class="ax-flex ax-items-center ax-gap-6">
+        <ax-donut-chart
+          [data]="donutChartData()"
+          [options]="donutChartOptions()"
+          #chartRef3
+        ></ax-donut-chart>
+
+        <ax-chart-legend
+          [chart]="chartRef3"
+          [options]="customLegendOptions3()"
+        ></ax-chart-legend>
+      </div>
+    </div>
+  </div>
+</div>
