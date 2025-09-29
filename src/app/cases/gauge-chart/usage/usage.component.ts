@@ -10,22 +10,24 @@ import {
   imports: [AXGaugeChartComponent],
 })
 export class UsageComponent {
-  gaugeChartValue = signal<AXGaugeChartValue>(Math.floor(Math.random() * 100));
+  gaugeChartValue = signal<AXGaugeChartValue>(75);
 
   gaugeChartOptions = signal<AXGaugeChartOption>({
     minValue: 0,
     maxValue: 100,
+    width: 400,
+    height: 200,
     gaugeWidth: 25,
     cornerRadius: 5,
     showValue: true,
-    label: 'Percentage',
-    animationDuration: 750,
+    label: 'CPU Usage',
+    showTooltip: true,
+    animationDuration: 1000,
     animationEasing: 'ease-in-out',
     thresholds: [
-      { value: 25, color: '#10b981' }, // Green for low values
-      { value: 50, color: '#f59e0b' }, // Yellow for medium values
-      { value: 75, color: '#ef4444' }, // Red for high values
-      { value: 100, color: 'blue' }, // Blue for very high values
+      { value: 30, color: '#10b981', label: 'Low' },
+      { value: 60, color: '#f59e0b', label: 'Medium' },
+      { value: 85, color: '#ef4444', label: 'High' },
     ],
   });
 }

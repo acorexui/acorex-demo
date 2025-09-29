@@ -1,0 +1,25 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-8">
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+    <h3 class="ax-text-lg ax-font-semibold">Small Gauge (250x125)</h3>
+    <ax-gauge-chart
+      [value]="gaugeChartValue()"
+      [options]="smallGaugeOptions()"
+    ></ax-gauge-chart>
+  </div>
+
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+    <h3 class="ax-text-lg ax-font-semibold">Medium Gauge (400x200)</h3>
+    <ax-gauge-chart
+      [value]="gaugeChartValue()"
+      [options]="mediumGaugeOptions()"
+    ></ax-gauge-chart>
+  </div>
+
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+    <h3 class="ax-text-lg ax-font-semibold">Large Gauge (600x300)</h3>
+    <ax-gauge-chart
+      [value]="gaugeChartValue()"
+      [options]="largeGaugeOptions()"
+    ></ax-gauge-chart>
+  </div>
+</div>
