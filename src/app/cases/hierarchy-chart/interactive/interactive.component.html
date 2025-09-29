@@ -3,5 +3,6 @@
     [data]="hierarchyChartData()"
     [options]="hierarchyChartOptions()"
     (itemClick)="handleHierarchyChartNodeClick($event)"
+    (nodeToggle)="handleHierarchyChartNodeToggle($event)"
   ></ax-hierarchy-chart>
 </div>

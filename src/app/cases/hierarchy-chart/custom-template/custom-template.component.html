@@ -1,0 +1,61 @@
+<div class="ax-size-[800px]">
+  <ax-hierarchy-chart
+    [data]="hierarchyChartData()"
+    [options]="hierarchyChartOptions()"
+    (itemClick)="handleHierarchyChartNodeClick($event)"
+  >
+    <ng-template #nodeTemplate let-node>
+      <div
+        class="ax-h-full ax-w-full ax-rounded-md ax-border ax-p-3 ax-shadow-sm"
+        [class.ax-border-primary-200]="node.expanded"
+        [class.ax-border-danger-200]="!node.expanded"
+        [class.ax-bg-white]="true"
+      >
+        <div class="ax-flex ax-h-full ax-flex-col ax-gap-1">
+          <div class="ax-flex ax-items-center ax-justify-between">
+            <div class="ax-flex ax-items-center ax-gap-2">
+              <div
+                class="ax-flex ax-h-6 ax-w-6 ax-flex-none ax-items-center ax-justify-center ax-rounded-full ax-bg-primary-100"
+              >
+                <i
+                  class="fa-solid ax-text-xs ax-text-primary-500"
+                  [class.fa-user-tie]="node.type === 'CEO'"
+                  [class.fa-user-gear]="
+                    node.type === 'CTO' || node.type === 'CFO'
+                  "
+                  [class.fa-user]="
+                    node.type !== 'CEO' &&
+                    node.type !== 'CTO' &&
+                    node.type !== 'CFO'
+                  "
+                ></i>
+              </div>
+              <div class="ax-truncate ax-font-medium ax-text-gray-800">
+                {{ node.name || node.label }}
+              </div>
+            </div>
+
+            @if(node.children && node.children.length) {
+            <button
+              (click)="node.toggleExpanded()"
+              class="ax-flex ax-h-5 ax-w-5 ax-items-center ax-justify-center ax-rounded ax-border ax-border-gray-200 ax-text-xs ax-text-gray-500"
+            >
+              <i
+                class="fa-solid"
+                [class.fa-chevron-up]="node.expanded"
+                [class.fa-chevron-down]="!node.expanded"
+              ></i>
+            </button>
+            }
+          </div>
+
+          @if(node.subtitle) {
+          <div class="ax-mt-1 ax-text-xs ax-text-gray-500">
+            {{ node.subtitle }}
+          </div>
+          }
+        </div>
+      </div>
+    </ng-template>
+  </ax-hierarchy-chart>
+</div>
