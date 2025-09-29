@@ -17,16 +17,24 @@ export class BasicContextMenuComponent {
     { text: 'Open', icon: 'fa-regular fa-folder-open' },
     { text: 'Edit', icon: 'fa-solid fa-pen' },
     { text: 'Rename', icon: 'fa-regular fa-i-cursor' },
-    { text: '—', break: true },
     {
       text: 'Share',
       icon: 'fa-solid fa-share-nodes',
       items: [
-        { text: 'Copy link', icon: 'fa-solid fa-link', suffix: { text: 'Ctrl + C' } },
+        {
+          text: 'Copy link',
+          icon: 'fa-solid fa-link',
+          suffix: { text: 'Ctrl + C' },
+        },
         { text: 'Email', icon: 'fa-regular fa-envelope' },
       ],
     },
-    { text: 'Delete', icon: 'fa-solid fa-trash', color: 'danger', disabled: true },
+    {
+      text: 'Delete',
+      icon: 'fa-solid fa-trash',
+      color: 'danger',
+      disabled: true,
+    },
   ];
 
   protected handleOpening(e: AXContextMenuOpeningEvent) {
@@ -40,5 +48,3 @@ export class BasicContextMenuComponent {
     }
   }
 }
-
-

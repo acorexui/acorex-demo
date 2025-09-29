@@ -12,6 +12,28 @@ export const routes: Routes = [
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
   {
+    path: 'label',
+    loadComponent: () =>
+      import('./label/label.component').then((e) => e.LabelComponent),
+  },
+  {
+    path: 'look',
+    loadComponent: () =>
+      import('./look/look.component').then((e) => e.LookComponent),
+  },
+  {
+    path: 'messageStyle',
+    loadComponent: () =>
+      import('./messageStyle/messageStyle.component').then(
+        (e) => e.MessageStyleComponent
+      ),
+  },
+  {
+    path: 'updateOn',
+    loadComponent: () =>
+      import('./updateOn/updateOn.component').then((e) => e.UpdateOnComponent),
+  },
+  {
     path: 'summary',
     loadComponent: () =>
       import('./summary/summary.component').then((e) => e.SummaryComponent),
