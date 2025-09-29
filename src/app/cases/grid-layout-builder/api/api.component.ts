@@ -1,10 +1,19 @@
-import { Component, ChangeDetectionStrategy, ViewChild, signal } from '@angular/core';
-import { AXGridLayoutBuilderModule, AXGridLayoutContainerComponent } from '@acorex/components/grid-layout-builder';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  ViewChild,
+  signal,
+} from '@angular/core';
+import {
+  AXGridLayoutBuilderModule,
+  AXGridLayoutContainerComponent,
+} from '@acorex/components/grid-layout-builder';
+import { AXButtonComponent } from '@acorex/components/button';
 
 @Component({
   selector: 'demo-grid-layout-builder-api',
   standalone: true,
-  imports: [AXGridLayoutBuilderModule],
+  imports: [AXGridLayoutBuilderModule, AXButtonComponent],
   templateUrl: './api.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -23,7 +32,10 @@ export class GridLayoutBuilderApiComponent {
     const size = { width: 2, height: 2 } as const;
     const pos = this.grid.findEmptySpace(size);
     const id = `w${this.nextId()}`;
-    this.grid.addWidget({ x: pos.x, y: pos.y, width: size.width, height: size.height, id }, true);
+    this.grid.addWidget(
+      { x: pos.x, y: pos.y, width: size.width, height: size.height, id },
+      true
+    );
     this.nextId.update((n) => n + 1);
   }
 
@@ -43,5 +55,3 @@ export class GridLayoutBuilderApiComponent {
     this.grid.removeAll(true);
   }
 }
-
-
