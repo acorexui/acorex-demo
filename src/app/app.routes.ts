@@ -394,6 +394,12 @@ export const appRoutes: Route[] = [
       import('./cases/result/result.routes').then((c) => c.routes),
   },
   {
+    path: 'rrule',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/rrule/rrule.routes').then((c) => c.routes),
+  },
+  {
     path: 'rail-navigation',
     component: MasterLayoutComponent,
     loadChildren: () =>
