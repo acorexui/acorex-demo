@@ -1,0 +1,21 @@
+<div class="ax-flex ax-flex-col ax-gap-6 ax-p-4">
+  <ax-range-slider
+    class="ax-w-80 ax-h-5"
+    [(ngModel)]="singleValue"
+    [mode]="'single'"
+    [min]="0"
+    [max]="100"
+    [step]="1"
+    [color]="'primary'"
+  ></ax-range-slider>
+
+  <ax-range-slider
+    class="ax-w-80 ax-h-5"
+    [(ngModel)]="dualValue"
+    [mode]="'dual'"
+    [min]="0"
+    [max]="100"
+    [step]="1"
+    [color]="'primary'"
+  ></ax-range-slider>
+</div>

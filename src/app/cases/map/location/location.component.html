@@ -1,0 +1,13 @@
+<div class="ax-w-full ax-h-96 ax-border ax-rounded">
+  <ax-map
+    [latitude]="latitude()"
+    [longitude]="longitude()"
+    [zoomLevel]="zoomLevel()"
+    [hasLocator]="hasLocator()"
+    [locatePlace]="locatePlace()"
+    (onLocationFound)="onLocationFound($event)"
+    (onMapReady)="onMapReady()"
+    (onLoadError)="onLoadError($event)"
+  >
+  </ax-map>
+</div>

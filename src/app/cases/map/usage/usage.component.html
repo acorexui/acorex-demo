@@ -1,3 +1,10 @@
 <div class="ax-w-96 ax-h-96">
-  <ax-map #map [hasLocator]="false" [hasDraw]="true"> </ax-map>
+  <ax-map
+    [latitude]="latitude()"
+    [longitude]="longitude()"
+    [zoomLevel]="zoomLevel()"
+    [hasLocator]="false"
+    [hasDraw]="true"
+  >
+  </ax-map>
 </div>
