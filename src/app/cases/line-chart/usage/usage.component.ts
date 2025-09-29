@@ -12,53 +12,71 @@ import {
 export class UsageComponent {
   lineChartData = signal<AXLineChartValue>([
     {
-      id: 'series-1',
-      label: 'Series 1',
+      id: 'revenue',
+      label: 'Revenue',
       lineColor: '#3498db',
       fillColor: 'rgba(52, 152, 219, 0.2)',
-      data: this.generateDataPoints(12),
+      data: [
+        { x: 'Jan', y: 12000 },
+        { x: 'Feb', y: 15000 },
+        { x: 'Mar', y: 18000 },
+        { x: 'Apr', y: 16000 },
+        { x: 'May', y: 22000 },
+        { x: 'Jun', y: 25000 },
+        { x: 'Jul', y: 28000 },
+        { x: 'Aug', y: 26000 },
+        { x: 'Sep', y: 30000 },
+        { x: 'Oct', y: 32000 },
+        { x: 'Nov', y: 29000 },
+        { x: 'Dec', y: 35000 },
+      ],
     },
     {
-      id: 'series-2',
-      label: 'Series 2',
+      id: 'expenses',
+      label: 'Expenses',
       lineColor: '#e74c3c',
       fillColor: 'rgba(231, 76, 60, 0.2)',
-      data: this.generateDataPoints(12),
+      data: [
+        { x: 'Jan', y: 8000 },
+        { x: 'Feb', y: 9500 },
+        { x: 'Mar', y: 11000 },
+        { x: 'Apr', y: 10500 },
+        { x: 'May', y: 12000 },
+        { x: 'Jun', y: 13000 },
+        { x: 'Jul', y: 14000 },
+        { x: 'Aug', y: 13500 },
+        { x: 'Sep', y: 15000 },
+        { x: 'Oct', y: 16000 },
+        { x: 'Nov', y: 15500 },
+        { x: 'Dec', y: 17000 },
+      ],
     },
   ]);
-
-  private generateDataPoints(count: number): { x: number; y: number }[] {
-    return Array.from({ length: count }, (_, i) => ({
-      x: i,
-      y: this.generateRandomValue(0, 100),
-    }));
-  }
-
-  private generateRandomValue(min: number, max: number): number {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
 
   lineChartOptions = signal<AXLineChartOption>({
     showXAxis: true,
     showYAxis: true,
     showGrid: true,
-    xAxisLabel: 'X axis',
-    yAxisLabel: 'Y axis',
+    xAxisLabel: 'Month',
+    yAxisLabel: 'Amount ($)',
+    width: 600,
+    height: 400,
     lineWidth: 3,
     showPoints: true,
     pointRadius: 6,
-    smoothLine: false,
-    fillArea: false,
-    fillOpacity: 50,
+    smoothLine: true,
+    fillArea: true,
+    fillOpacity: 20,
     showVerticalGrid: true,
     showCrosshair: true,
+    showTooltip: true,
     animationDuration: 1000,
-    animationEasing: 'linear',
+    animationEasing: 'ease-in-out',
   });
 
   handleLineChartPointClick(event: AXLineChartPointClickEvent): void {
     console.log(
-      `Bar clicked | Label: ${event.series.label} | point with x: ${event.point.x} and y: ${event.point.y}`
+      `Line chart point clicked | Label: ${event.series.label} | point with x: ${event.point.x} and y: ${event.point.y}`
     );
   }
 }

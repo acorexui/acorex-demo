@@ -1,0 +1,28 @@
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-8">
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+    <h3 class="ax-text-lg ax-font-semibold">Small Chart (300x200)</h3>
+    <ax-line-chart
+      (pointClick)="handleLineChartPointClick($event)"
+      [data]="lineChartData()"
+      [options]="smallChartOptions()"
+    ></ax-line-chart>
+  </div>
+
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+    <h3 class="ax-text-lg ax-font-semibold">Medium Chart (500x350)</h3>
+    <ax-line-chart
+      (pointClick)="handleLineChartPointClick($event)"
+      [data]="lineChartData()"
+      [options]="mediumChartOptions()"
+    ></ax-line-chart>
+  </div>
+
+  <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+    <h3 class="ax-text-lg ax-font-semibold">Large Chart (700x450)</h3>
+    <ax-line-chart
+      (pointClick)="handleLineChartPointClick($event)"
+      [data]="lineChartData()"
+      [options]="largeChartOptions()"
+    ></ax-line-chart>
+  </div>
+</div>
