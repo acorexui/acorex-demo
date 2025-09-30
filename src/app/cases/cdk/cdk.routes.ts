@@ -62,4 +62,10 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./virtual-scroll/virtual-scroll.routes').then((c) => c.routes),
   },
+  {
+    path: 'pan-view',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./pan-view/pan-view.routes').then((c) => c.routes),
+  },
 ];
