@@ -1,0 +1,62 @@
+<div
+  axOutlineContainer
+  [activationOffset]="100"
+  class="ax-flex ax-gap-6 ax-px-4"
+  scrollableElementId="scrollableElement"
+>
+  <ax-side-menu axOutlineSideMenu class="ax-w-72"></ax-side-menu>
+  <div
+    id="scrollableElement"
+    class="ax-flex ax-flex-col ax-gap-6 ax-max-w-4xl ax-mx-auto ax-p-6 ax-h-[95vh] ax-border ax-rounded ax-overflow-auto"
+  >
+    <ax-heading>
+      <h1 class="ax-h1">Scroll Offset Example</h1>
+    </ax-heading>
+
+    <ax-heading>
+      <h2 axOutlineItem class="ax-h2">What is Activation Offset?</h2>
+      <ax-subtitle>
+        The activation offset determines how far from the top of the viewport an
+        outline item needs to be before it becomes active. This example uses a
+        100px offset, meaning items become active when they're 100 pixels from
+        the top of the viewport.
+      </ax-subtitle>
+    </ax-heading>
+
+    <ax-heading>
+      <h2 axOutlineItem class="ax-h2">Default vs Custom Offset</h2>
+      <ax-subtitle>
+        By default, the activation offset is 16px. In this example, we've
+        increased it to 100px to demonstrate how it affects the timing of when
+        outline items become active.
+      </ax-subtitle>
+    </ax-heading>
+
+    <ax-heading>
+      <h2 axOutlineItem class="ax-h2">Use Cases</h2>
+      <ax-subtitle>
+        A larger offset is useful when you have fixed headers or navigation bars
+        that might cover the content, ensuring the outline activates at the
+        right moment for your layout.
+      </ax-subtitle>
+    </ax-heading>
+
+    <ax-heading>
+      <h2 axOutlineItem class="ax-h2">Responsive Considerations</h2>
+      <ax-subtitle>
+        Consider adjusting the activation offset based on your responsive
+        design. You might want different offsets for mobile vs desktop layouts
+        to account for different header heights.
+      </ax-subtitle>
+    </ax-heading>
+
+    <ax-heading>
+      <h2 axOutlineItem class="ax-h2">Performance Impact</h2>
+      <ax-subtitle>
+        The activation offset doesn't significantly impact performance, but it
+        does affect the user experience by determining when navigation items
+        become active during scrolling.
+      </ax-subtitle>
+    </ax-heading>
+  </div>
+</div>

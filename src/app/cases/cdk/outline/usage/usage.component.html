@@ -1,0 +1,68 @@
+<div
+  axOutlineContainer
+  class="ax-flex ax-gap-6 ax-px-4"
+  scrollableElementId="scrollableElement"
+>
+  <ax-side-menu axOutlineSideMenu class="ax-w-72"></ax-side-menu>
+  <div
+    id="scrollableElement"
+    class="ax-flex ax-flex-col ax-gap-6 ax-max-w-4xl ax-mx-auto ax-p-6 ax-h-[95vh] ax-border ax-rounded ax-overflow-auto"
+  >
+    <ax-heading>
+      <h1 class="ax-h1">Outline Directive Usage</h1>
+    </ax-heading>
+
+    <ax-heading>
+      <h2 axOutlineItem class="ax-h2">Introduction</h2>
+      <ax-subtitle>
+        The outline directive provides a way to create dynamic navigation menus
+        that automatically highlight the currently visible section as you scroll
+        through the content.
+      </ax-subtitle>
+    </ax-heading>
+
+    <ax-heading>
+      <h2 axOutlineItem class="ax-h2">Features</h2>
+      <ax-subtitle>
+        This directive offers several powerful features including automatic item
+        detection, scroll-based activation, and smooth scrolling navigation.
+      </ax-subtitle>
+    </ax-heading>
+
+    <ax-heading>
+      <h3 class="ax-h3">Automatic Detection</h3>
+      <ax-subtitle>
+        The directive automatically detects elements marked with the
+        axOutlineItem directive and creates a navigation structure based on
+        their hierarchy.
+      </ax-subtitle>
+    </ax-heading>
+
+    <ax-heading>
+      <h3 class="ax-h3">Scroll Activation</h3>
+      <ax-subtitle>
+        As you scroll through the content, the corresponding navigation item
+        becomes active, providing visual feedback about your current position in
+        the document.
+      </ax-subtitle>
+    </ax-heading>
+
+    <ax-heading>
+      <h2 axOutlineItem class="ax-h2">Implementation</h2>
+      <ax-subtitle>
+        To use the outline directive, simply apply the axOutlineContainer
+        directive to a container element and mark the sections you want to
+        include in the navigation with axOutlineItem.
+      </ax-subtitle>
+    </ax-heading>
+
+    <ax-heading>
+      <h2 axOutlineItem class="ax-h2">Benefits</h2>
+      <ax-subtitle>
+        This approach provides better user experience for long-form content,
+        making it easier for users to navigate and understand their current
+        position within the document.
+      </ax-subtitle>
+    </ax-heading>
+  </div>
+</div>

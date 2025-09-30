@@ -1,0 +1,19 @@
+<div class="ax-flex ax-flex-col ax-gap-4">
+  <div
+    class="ax-w-96 ax-h-96 ax-border ax-border-surface ax-rounded-lg ax-overflow-hidden"
+  >
+    <img
+      src="https://picsum.photos/800/600"
+      alt="Free Mode Image"
+      axPanView
+      [freeMode]="freeMode()"
+      class="ax-w-full ax-h-full ax-object-contain"
+    />
+  </div>
+
+  <ax-button
+    (onClick)="toggleFreeMode()"
+    [color]="freeMode() ? 'success' : 'default'"
+    [text]="freeMode() ? 'Free Mode: ON' : 'Free Mode: OFF'"
+  ></ax-button>
+</div>
