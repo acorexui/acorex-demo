@@ -80,3 +80,4 @@ export class ByWeekdayComponent {
     return `Selected: ${dayLabels.join(', ')}`;
   }
 }
+

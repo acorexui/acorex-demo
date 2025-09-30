@@ -69,3 +69,4 @@ export class FrequencyOptionsComponent {
     return descriptions[frequency as keyof typeof descriptions] || '';
   }
 }
+
