@@ -17,10 +17,10 @@ import {
 export class StylingComponent {
   // Sample data for the donut chart
   donutChartData = signal<AXDonutChartData[]>([
-    { id: 'q1', label: 'Q1 2024', value: 30, color: '#3498db' },
-    { id: 'q2', label: 'Q2 2024', value: 25, color: '#e74c3c' },
-    { id: 'q3', label: 'Q3 2024', value: 20, color: '#2ecc71' },
-    { id: 'q4', label: 'Q4 2024', value: 25, color: '#f39c12' },
+    { id: 'q1', label: 'Q1', value: 30, color: '#3498db' },
+    { id: 'q2', label: 'Q2', value: 25, color: '#e74c3c' },
+    { id: 'q3', label: 'Q3', value: 20, color: '#2ecc71' },
+    { id: 'q4', label: 'Q4', value: 25, color: '#f39c12' },
   ]);
 
   // Donut chart options
@@ -28,8 +28,8 @@ export class StylingComponent {
     width: 350,
     height: 350,
     showTooltip: true,
-    donutWidth: 35,
-    cornerRadius: 6,
+    donutWidth: 45,
+    cornerRadius: 15,
     animationDuration: 1000,
     animationEasing: 'ease-in-out',
   });

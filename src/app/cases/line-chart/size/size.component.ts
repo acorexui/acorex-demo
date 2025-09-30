@@ -36,8 +36,6 @@ export class SizeComponent {
     showGrid: true,
     xAxisLabel: 'Week',
     yAxisLabel: 'Score',
-    width: 300,
-    height: 200,
     lineWidth: 2,
     showPoints: true,
     pointRadius: 4,
@@ -48,50 +46,6 @@ export class SizeComponent {
     animationDuration: 800,
     animationEasing: 'ease-in-out',
   });
-
-  // Demo: Medium size chart
-  mediumChartOptions = signal<AXLineChartOption>({
-    showXAxis: true,
-    showYAxis: true,
-    showGrid: true,
-    xAxisLabel: 'Week',
-    yAxisLabel: 'Score',
-    width: 500,
-    height: 350,
-    lineWidth: 3,
-    showPoints: true,
-    pointRadius: 6,
-    smoothLine: true,
-    fillArea: true,
-    fillOpacity: 20,
-    showCrosshair: true,
-    showTooltip: true,
-    animationDuration: 1000,
-    animationEasing: 'ease-in-out',
-  });
-
-  // Demo: Large size chart
-  largeChartOptions = signal<AXLineChartOption>({
-    showXAxis: true,
-    showYAxis: true,
-    showGrid: true,
-    showVerticalGrid: true,
-    xAxisLabel: 'Week',
-    yAxisLabel: 'Score',
-    width: 700,
-    height: 450,
-    lineWidth: 4,
-    showPoints: true,
-    pointRadius: 8,
-    smoothLine: true,
-    fillArea: true,
-    fillOpacity: 25,
-    showCrosshair: true,
-    showTooltip: true,
-    animationDuration: 1200,
-    animationEasing: 'ease-in-out',
-  });
-
   handleLineChartPointClick(event: AXLineChartPointClickEvent): void {
     console.log('Size demo point clicked:', event.series.label, event.point);
   }

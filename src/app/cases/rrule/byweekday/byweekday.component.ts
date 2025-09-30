@@ -39,7 +39,6 @@ export class ByWeekdayComponent {
       this.rruleString.set(value);
     }
   }
-
   toggleDay(dayValue: number) {
     const currentDays = this.selectedDays();
     if (currentDays.includes(dayValue)) {
@@ -80,4 +79,3 @@ export class ByWeekdayComponent {
     return `Selected: ${dayLabels.join(', ')}`;
   }
 }
-

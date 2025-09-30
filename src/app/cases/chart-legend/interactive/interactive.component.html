@@ -1,45 +1,19 @@
-<div class="ax-w-full ax-h-[800px] ax-flex ax-flex-col ax-gap-8">
-  <div class="ax-flex ax-flex-col ax-items-center ax-gap-6">
-    <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
-      <h4 class="ax-text-md ax-font-semibold">Interactive Legend</h4>
-      <p class="ax-text-sm ax-text-gray-600 ax-text-center">
-        Click on legend items to toggle chart segments. Hover for highlighting.
-      </p>
-      <div class="ax-flex ax-items-center ax-gap-6">
-        <ax-donut-chart
-          [data]="donutChartData()"
-          [options]="donutChartOptions()"
-          #chartRef1
-        ></ax-donut-chart>
+<div class="ax-w-full ax-text-center ax-space-y-8">
+  <section>
+    <div class="ax-flex ax-items-center ax-justify-center ax-gap-6">
+      <ax-donut-chart
+        [data]="donutChartData()"
+        [options]="donutChartOptions()"
+        #chartRef1
+      ></ax-donut-chart>
 
-        <ax-chart-legend
-          [chart]="chartRef1"
-          [options]="interactiveLegendOptions()"
-          (itemClick)="handleLegendItemClick($event)"
-          (itemMouseEnter)="handleLegendItemMouseEnter($event)"
-          (itemMouseLeave)="handleLegendItemMouseLeave($event)"
-        ></ax-chart-legend>
-      </div>
+      <ax-chart-legend
+        [chart]="chartRef1"
+        [options]="interactiveLegendOptions()"
+        (itemClick)="handleLegendItemClick($event)"
+        (itemMouseEnter)="handleLegendItemMouseEnter($event)"
+        (itemMouseLeave)="handleLegendItemMouseLeave($event)"
+      ></ax-chart-legend>
     </div>
-
-    <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
-      <h4 class="ax-text-md ax-font-semibold">Non-Interactive Legend</h4>
-      <p class="ax-text-sm ax-text-gray-600 ax-text-center">
-        Legend items are not clickable and don't affect chart segments.
-      </p>
-      <div class="ax-flex ax-items-center ax-gap-6">
-        <ax-donut-chart
-          [data]="donutChartData()"
-          [options]="donutChartOptions()"
-          #chartRef2
-        ></ax-donut-chart>
-
-        <ax-chart-legend
-          [chart]="chartRef2"
-          [options]="nonInteractiveLegendOptions()"
-          (itemClick)="handleLegendItemClick($event)"
-        ></ax-chart-legend>
-      </div>
-    </div>
-  </div>
+  </section>
 </div>
