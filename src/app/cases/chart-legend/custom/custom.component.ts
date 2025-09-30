@@ -26,12 +26,13 @@ export class CustomComponent {
   // Donut chart options
   donutChartOptions = signal<AXDonutChartOption>({
     width: 400,
-    height: 400,
+    height: 300,
     showTooltip: true,
-    donutWidth: 40,
-    cornerRadius: 6,
+    donutWidth: 15,
+    cornerRadius: 30,
     animationDuration: 1000,
     animationEasing: 'ease-in-out',
+    showDataLabels: false,
   });
 
   // Custom legend options with different configurations
@@ -49,13 +50,5 @@ export class CustomComponent {
     showPercentage: true,
     interactive: true,
     className: 'custom-legend-2',
-  });
-
-  customLegendOptions3 = signal<AXChartLegendOptions>({
-    mode: 'vertical',
-    showValues: true,
-    showPercentage: false,
-    interactive: false,
-    className: 'custom-legend-3',
   });
 }

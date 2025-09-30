@@ -32,6 +32,7 @@ export class ModesComponent {
     cornerRadius: 6,
     animationDuration: 1000,
     animationEasing: 'ease-in-out',
+    showDataLabels: false,
   });
 
   // Vertical legend options

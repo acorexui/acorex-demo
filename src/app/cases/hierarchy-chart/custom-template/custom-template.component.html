@@ -1,4 +1,4 @@
-<div class="ax-size-[800px]">
+<div class="ax-h-[500px] ax-w-[800px]">
   <ax-hierarchy-chart
     [data]="hierarchyChartData()"
     [options]="hierarchyChartOptions()"
@@ -6,7 +6,7 @@
   >
     <ng-template #nodeTemplate let-node>
       <div
-        class="ax-h-full ax-w-full ax-rounded-md ax-border ax-p-3 ax-shadow-sm"
+        class="ax-h-full ax-w-[800px] ax-rounded-md ax-border ax-p-3 ax-shadow-sm"
         [class.ax-border-primary-200]="node.expanded"
         [class.ax-border-danger-200]="!node.expanded"
         [class.ax-bg-white]="true"
