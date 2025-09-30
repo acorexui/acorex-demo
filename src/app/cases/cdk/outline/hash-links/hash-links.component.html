@@ -1,0 +1,62 @@
+<div
+  axOutlineContainer
+  class="ax-flex ax-gap-6 ax-px-4"
+  scrollableElementId="scrollableElement"
+>
+  <ax-side-menu axOutlineSideMenu class="ax-w-72"></ax-side-menu>
+  <div
+    id="scrollableElement"
+    class="ax-flex ax-flex-col ax-gap-6 ax-max-w-4xl ax-mx-auto ax-p-6 ax-h-[95vh] ax-border ax-rounded ax-overflow-auto"
+  >
+    <ax-heading>
+      <h1 class="ax-h1">Hash Links Example</h1>
+    </ax-heading>
+
+    <ax-heading>
+      <h2 axOutlineItem class="ax-h2">What are Hash Links?</h2>
+      <ax-subtitle>
+        Hash links are clickable anchor symbols (#) that appear next to each
+        section heading. They allow users to copy the URL to a specific section
+        or navigate directly to it.
+      </ax-subtitle>
+    </ax-heading>
+
+    <ax-heading>
+      <h2 axOutlineItem class="ax-h2">How to Enable</h2>
+      <ax-subtitle>
+        To enable hash links, set the <code>showHashItem</code> property to
+        <code>true</code>
+        on the axOutlineContainer directive. You can also enable URL copying by
+        setting
+        <code>copyUrlOnClick</code> to <code>true</code>.
+      </ax-subtitle>
+    </ax-heading>
+
+    <ax-heading>
+      <h2 axOutlineItem class="ax-h2">User Experience</h2>
+      <ax-subtitle>
+        When users hover over a section heading, a hash link appears. Clicking
+        it will either copy the URL to the clipboard (if copyUrlOnClick is
+        enabled) or navigate to that section.
+      </ax-subtitle>
+    </ax-heading>
+
+    <ax-heading>
+      <h2 axOutlineItem class="ax-h2">Accessibility</h2>
+      <ax-subtitle>
+        Hash links are marked with <code>aria-hidden="true"</code> to avoid
+        confusion for screen readers, as the main heading text already provides
+        the necessary information.
+      </ax-subtitle>
+    </ax-heading>
+
+    <ax-heading>
+      <h2 axOutlineItem class="ax-h2">Styling</h2>
+      <ax-subtitle>
+        The hash links are styled to be subtle and only appear on hover,
+        ensuring they don't interfere with the reading experience while
+        remaining easily accessible when needed.
+      </ax-subtitle>
+    </ax-heading>
+  </div>
+</div>

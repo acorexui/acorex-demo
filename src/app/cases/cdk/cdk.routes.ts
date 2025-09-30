@@ -68,4 +68,10 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./pan-view/pan-view.routes').then((c) => c.routes),
   },
+  {
+    path: 'outline',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./outline/outline.routes').then((c) => c.routes),
+  },
 ];
