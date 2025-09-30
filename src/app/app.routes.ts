@@ -192,6 +192,12 @@ export const appRoutes: Route[] = [
       import('./cases/dialog/dialog.routes').then((c) => c.routes),
   },
   {
+    path: 'decorators',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/decorators/decorators.routes').then((c) => c.routes),
+  },
+  {
     path: 'donut-chart',
     component: MasterLayoutComponent,
     loadChildren: () =>
