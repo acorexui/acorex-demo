@@ -32,6 +32,7 @@ export class UsageComponent {
     cornerRadius: 6,
     animationDuration: 1000,
     animationEasing: 'ease-in-out',
+    showDataLabels: false,
   });
 
   // Legend options

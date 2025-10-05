@@ -46,6 +46,25 @@ export class SizeComponent {
     animationDuration: 800,
     animationEasing: 'ease-in-out',
   });
+
+  // Demo: Medium size chart
+  mediumChartOptions = signal<AXLineChartOption>({
+    showXAxis: true,
+    showYAxis: true,
+    showGrid: true,
+    xAxisLabel: 'Month',
+    yAxisLabel: 'Performance',
+    lineWidth: 3,
+    showPoints: true,
+    pointRadius: 5,
+    smoothLine: true,
+    fillArea: true,
+    showCrosshair: true,
+    showTooltip: true,
+    animationDuration: 1000,
+    animationEasing: 'ease-out',
+  });
+
   handleLineChartPointClick(event: AXLineChartPointClickEvent): void {
     console.log('Size demo point clicked:', event.series.label, event.point);
   }

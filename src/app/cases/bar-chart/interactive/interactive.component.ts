@@ -36,6 +36,6 @@ export class InteractiveComponent {
   });
 
   handleBarClick(event: AXBarChartClickEvent): void {
-    console.log('Interactive bar clicked:', event.item);
+    alert('Interactive bar clicked:' + event.item.label);
   }
 }

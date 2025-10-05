@@ -30,13 +30,13 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./styling/styling.component').then((e) => e.StylingComponent),
   },
-  {
-    path: 'interactive',
-    loadComponent: () =>
-      import('./interactive/interactive.component').then(
-        (e) => e.InteractiveComponent
-      ),
-  },
+  // {
+  //   path: 'interactive',
+  //   loadComponent: () =>
+  //     import('./interactive/interactive.component').then(
+  //       (e) => e.InteractiveComponent
+  //     ),
+  // },
   {
     path: 'size',
     loadComponent: () =>

@@ -4,9 +4,11 @@
     [(ngModel)]="value1"
     [mode]="'single'"
     [min]="0"
-    [max]="100"
+    [max]="10"
     [step]="1"
     [color]="'primary'"
+    [hasSnap]="true"
+    [snap]="1"
   ></ax-range-slider>
 
   <ax-range-slider
@@ -14,9 +16,11 @@
     [(ngModel)]="value2"
     [mode]="'single'"
     [min]="0"
-    [max]="100"
-    [step]="5"
+    [max]="10"
+    [step]="2"
     [color]="'primary'"
+    [hasSnap]="true"
+    [snap]="2"
   ></ax-range-slider>
 
   <ax-range-slider
@@ -24,8 +28,10 @@
     [(ngModel)]="value3"
     [mode]="'single'"
     [min]="0"
-    [max]="100"
-    [step]="10"
+    [max]="10"
+    [step]="5"
     [color]="'primary'"
+    [hasSnap]="true"
+    [snap]="5"
   ></ax-range-slider>
 </div>

@@ -16,13 +16,13 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./styling/styling.component').then((e) => e.StylingComponent),
   },
-  {
-    path: 'animation',
-    loadComponent: () =>
-      import('./animation/animation.component').then(
-        (e) => e.AnimationComponent
-      ),
-  },
+  // {
+  //   path: 'animation',
+  //   loadComponent: () =>
+  //     import('./animation/animation.component').then(
+  //       (e) => e.AnimationComponent
+  //     ),
+  // },
   {
     path: 'interactive',
     loadComponent: () =>

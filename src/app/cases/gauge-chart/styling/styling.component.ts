@@ -26,9 +26,9 @@ export class StylingComponent {
     animationDuration: 1500,
     animationEasing: 'ease-in-out',
     thresholds: [
-      { value: 30, color: '#ef4444', label: 'Below Target' },
-      { value: 60, color: '#f59e0b', label: 'On Track' },
-      { value: 85, color: '#10b981', label: 'Exceeding' },
+      { value: 30, color: 'green', label: 'Below Target' },
+      { value: 60, color: 'yellow', label: 'On Track' },
+      { value: 85, color: 'blue', label: 'Exceeding' },
     ],
   });
 }
