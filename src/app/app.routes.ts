@@ -192,6 +192,12 @@ export const appRoutes: Route[] = [
       import('./cases/dialog/dialog.routes').then((c) => c.routes),
   },
   {
+    path: 'decorators',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/decorators/decorators.routes').then((c) => c.routes),
+  },
+  {
     path: 'donut-chart',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -202,6 +208,12 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/drawer/drawer.routes').then((c) => c.routes),
+  },
+  {
+    path: 'dropdown',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/dropdown/dropdown.routes').then((c) => c.routes),
   },
   {
     path: 'dropdown-button',
