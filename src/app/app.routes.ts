@@ -610,6 +610,12 @@ export const appRoutes: Route[] = [
       import('./cases/autocomplete/autocomplete.routes').then((c) => c.routes),
   },
   {
+    path: 'aspect-ratio',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/aspect-ratio/aspect-ratio.routes').then((c) => c.routes),
+  },
+  {
     path: 'label',
     component: MasterLayoutComponent,
     loadChildren: () =>
