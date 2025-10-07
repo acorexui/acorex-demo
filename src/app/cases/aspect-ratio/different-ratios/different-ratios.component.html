@@ -1,0 +1,91 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-p-4"
+>
+  <div
+    class="ax-grid ax-grid-cols-1 md:ax-grid-cols-2 lg:ax-grid-cols-3 ax-gap-4 ax-max-w-4xl ax-h-[90vh] ax-w-[90vw]"
+  >
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <ax-label>Square (1:1)</ax-label>
+      <ax-aspect-ratio
+        [ratio]="1"
+        class="ax-w-full ax-border ax-border-surface ax-rounded-lg ax-overflow-hidden"
+      >
+        <div
+          class="ax-bg-red-500 ax-h-full ax-flex ax-items-center ax-justify-center ax-text-white ax-font-bold"
+        >
+          1:1
+        </div>
+      </ax-aspect-ratio>
+    </div>
+
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <ax-label>Standard (4:3)</ax-label>
+      <ax-aspect-ratio
+        [ratio]="4 / 3"
+        class="ax-w-full ax-border ax-border-surface ax-rounded-lg ax-overflow-hidden"
+      >
+        <div
+          class="ax-bg-green-500 ax-h-full ax-flex ax-items-center ax-justify-center ax-text-white ax-font-bold"
+        >
+          4:3
+        </div>
+      </ax-aspect-ratio>
+    </div>
+
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <ax-label>Widescreen (16:9)</ax-label>
+      <ax-aspect-ratio
+        [ratio]="16 / 9"
+        class="ax-w-full ax-border ax-border-surface ax-rounded-lg ax-overflow-hidden"
+      >
+        <div
+          class="ax-bg-blue-500 ax-h-full ax-flex ax-items-center ax-justify-center ax-text-white ax-font-bold"
+        >
+          16:9
+        </div>
+      </ax-aspect-ratio>
+    </div>
+
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <ax-label>Photo (3:2)</ax-label>
+      <ax-aspect-ratio
+        [ratio]="3 / 2"
+        class="ax-w-full ax-border ax-border-surface ax-rounded-lg ax-overflow-hidden"
+      >
+        <div
+          class="ax-bg-yellow-500 ax-h-full ax-flex ax-items-center ax-justify-center ax-text-white ax-font-bold"
+        >
+          3:2
+        </div>
+      </ax-aspect-ratio>
+    </div>
+
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <ax-label>Ultrawide (21:9)</ax-label>
+      <ax-aspect-ratio
+        [ratio]="21 / 9"
+        class="ax-w-full ax-border ax-border-surface ax-rounded-lg ax-overflow-hidden"
+      >
+        <div
+          class="ax-bg-purple-500 ax-h-full ax-flex ax-items-center ax-justify-center ax-text-white ax-font-bold"
+        >
+          21:9
+        </div>
+      </ax-aspect-ratio>
+    </div>
+
+    <div class="ax-flex ax-flex-col ax-gap-2">
+      <ax-label>Cinema (2:1)</ax-label>
+      <ax-aspect-ratio
+        [ratio]="2"
+        class="ax-w-full ax-border ax-border-surface ax-rounded-lg ax-overflow-hidden"
+      >
+        <div
+          class="ax-bg-pink-500 ax-h-full ax-flex ax-items-center ax-justify-center ax-text-white ax-font-bold"
+        >
+          2:1
+        </div>
+      </ax-aspect-ratio>
+    </div>
+  </div>
+</div>

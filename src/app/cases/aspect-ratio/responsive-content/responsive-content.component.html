@@ -1,0 +1,118 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-p-4"
+>
+  <div
+    class="ax-grid ax-grid-cols-1 md:ax-grid-cols-2 ax-gap-6 ax-max-w-4xl ax-h-[90vh] ax-w-[90vw]"
+  >
+    <div class="ax-flex ax-flex-col ax-gap-4">
+      <ax-label>Square Content (1:1)</ax-label>
+      <ax-aspect-ratio
+        [ratio]="1"
+        class="ax-w-full ax-border ax-border-surface ax-rounded-lg ax-overflow-hidden"
+      >
+        <div
+          class="ax-bg-gradient-to-br ax-from-green-400 ax-to-blue-500 ax-h-full ax-flex ax-items-center ax-justify-center ax-text-white ax-p-4"
+        >
+          <div class="ax-text-center">
+            <div class="ax-text-3xl">📱</div>
+            <ax-title class="ax-text-xl ax-font-bold">Square</ax-title>
+            <ax-subtitle> Perfect for avatars and icons </ax-subtitle>
+          </div>
+        </div>
+      </ax-aspect-ratio>
+    </div>
+
+    <div class="ax-flex ax-flex-col ax-gap-4">
+      <ax-label>Image Gallery (4:3)</ax-label>
+      <ax-aspect-ratio
+        [ratio]="4 / 3"
+        class="ax-w-full ax-border ax-border-surface ax-rounded-lg ax-overflow-hidden"
+      >
+        <div
+          class="ax-bg-gradient-to-br ax-from-indigo-500 ax-to-cyan-500 ax-h-full ax-flex ax-items-center ax-justify-center ax-text-white ax-p-4"
+        >
+          <div class="ax-text-center">
+            <ax-title class="ax-text-2xl ax-font-bold">
+              📸 Photo Gallery
+            </ax-title>
+            <ax-subtitle> Perfect for image thumbnails </ax-subtitle>
+            <div class="ax-mt-4 ax-grid ax-grid-cols-2 ax-gap-2">
+              <div
+                class="ax-w-8 ax-h-8 ax-bg-white ax-bg-opacity-20 ax-rounded ax-m-auto ax-overflow-hidden"
+              >
+                <img src="https://placehold.co/50" />
+              </div>
+              <div
+                class="ax-w-8 ax-h-8 ax-bg-white ax-bg-opacity-20 ax-rounded ax-m-auto ax-overflow-hidden"
+              >
+                <img src="https://placehold.co/50" />
+              </div>
+              <div
+                class="ax-w-8 ax-h-8 ax-bg-white ax-bg-opacity-20 ax-rounded ax-m-auto ax-overflow-hidden"
+              >
+                <img src="https://placehold.co/50" />
+              </div>
+              <div
+                class="ax-w-8 ax-h-8 ax-bg-white ax-bg-opacity-20 ax-rounded ax-m-auto ax-overflow-hidden"
+              >
+                <img src="https://placehold.co/50" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </ax-aspect-ratio>
+    </div>
+
+    <div class="ax-flex ax-flex-col ax-gap-4">
+      <ax-label>Card Layout (3:2)</ax-label>
+      <ax-aspect-ratio
+        [ratio]="3 / 2"
+        class="ax-w-full ax-border ax-border-surface ax-rounded-lg ax-overflow-hidden"
+      >
+        <div class="ax-surface ax-h-full ax-border ax-p-4">
+          <div class="ax-h-full ax-flex ax-flex-col">
+            <div
+              class="ax-h-20 ax-bg-gradient-to-r ax-from-blue-500 ax-to-purple-600 ax-rounded ax-mb-3"
+            ></div>
+            <div class="ax-flex-1 ax-flex ax-flex-col ax-justify-between">
+              <div>
+                <ax-title class="ax-text-xl ax-font-bold">
+                  Product Card
+                </ax-title>
+                <ax-subtitle>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Consequatur praesentium magnam quia, fugiat modi impedit.
+                </ax-subtitle>
+              </div>
+              <ax-button class="ax-w-full" text="View Details"></ax-button>
+            </div>
+          </div>
+        </div>
+      </ax-aspect-ratio>
+    </div>
+
+    <div class="ax-flex ax-flex-col ax-gap-4">
+      <ax-label>Video Content (16:9)</ax-label>
+      <ax-aspect-ratio
+        [ratio]="16 / 9"
+        class="ax-w-full ax-border ax-border-surface ax-rounded-lg ax-overflow-hidden"
+      >
+        <div
+          class="ax-bg-gray-900 ax-h-full ax-flex ax-flex-col ax-items-center ax-justify-center ax-text-white ax-p-4"
+        >
+          <div class="ax-text-center">
+            <ax-title class="ax-text-2xl ax-font-bold">
+              🎥 Video Player
+            </ax-title>
+            <ax-subtitle> Maintains 16:9 aspect ratio </ax-subtitle>
+            <div
+              class="ax-mt-4 ax-w-16 ax-h-16 ax-bg-red-600 ax-rounded-full ax-flex ax-items-center ax-justify-center ax-mx-auto"
+            >
+              ▶
+            </div>
+          </div>
+        </div>
+      </ax-aspect-ratio>
+    </div>
+  </div>
+</div>
