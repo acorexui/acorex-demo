@@ -4,6 +4,10 @@ import { Component, signal } from '@angular/core';
 @Component({
   templateUrl: 'byweekday.component.html',
   imports: [AXRrulePreviewComponent],
+  styles: `:host{
+    display:block;
+    width: 100%;
+  }`,
 })
 export class ByWeekdayComponent {
   rruleString = signal<string>(
