@@ -5,11 +5,12 @@ import {
 } from '@acorex/components/scheduler';
 import { AXSelectBoxComponent } from '@acorex/components/select-box';
 import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-views',
   templateUrl: './views.component.html',
-  imports: [AXSchedulerComponent, AXSelectBoxComponent],
+  imports: [FormsModule, AXSchedulerComponent, AXSelectBoxComponent],
   styles: `ax-scheduler{
     --ax-comp-scheduler-width:100%;
   }`,

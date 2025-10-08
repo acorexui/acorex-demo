@@ -6,7 +6,7 @@
     <ax-select-box
       style="width: 200px"
       [dataSource]="modes()"
-      [value]="selectedMode()"
+      [ngModel]="selectedMode()"
       (onValueChanged)="onModeChange($event.value)"
     ></ax-select-box>
   </div>
