@@ -4,6 +4,10 @@ import { Component, signal } from '@angular/core';
 @Component({
   templateUrl: 'complex-rules.component.html',
   imports: [AXRrulePreviewComponent],
+  styles: `:host{
+    display:block;
+    width: 100%;
+  }`,
 })
 export class ComplexRulesComponent {
   rruleString = signal<string>(

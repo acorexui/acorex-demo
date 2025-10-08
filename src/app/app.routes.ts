@@ -37,7 +37,7 @@ export const appRoutes: Route[] = [
     path: 'bar-chart',
     component: MasterLayoutComponent,
     loadChildren: () =>
-      import('./cases/bar-chart/bar-chart.routes').then((c) => c.routes),
+      import('./cases/charts/bar-chart/bar-chart.routes').then((c) => c.routes),
   },
   {
     path: 'bottom-navigation',
@@ -91,7 +91,9 @@ export const appRoutes: Route[] = [
     path: 'chart-legend',
     component: MasterLayoutComponent,
     loadChildren: () =>
-      import('./cases/chart-legend/chart-legend.routes').then((c) => c.routes),
+      import('./cases/charts/chart-legend/chart-legend.routes').then(
+        (c) => c.routes
+      ),
   },
   {
     path: 'check-box',
@@ -201,7 +203,9 @@ export const appRoutes: Route[] = [
     path: 'donut-chart',
     component: MasterLayoutComponent,
     loadChildren: () =>
-      import('./cases/donut-chart/donut-chart.routes').then((c) => c.routes),
+      import('./cases/charts/donut-chart/donut-chart.routes').then(
+        (c) => c.routes
+      ),
   },
   {
     path: 'drawer',
@@ -233,7 +237,9 @@ export const appRoutes: Route[] = [
     path: 'gauge-chart',
     component: MasterLayoutComponent,
     loadChildren: () =>
-      import('./cases/gauge-chart/gauge-chart.routes').then((c) => c.routes),
+      import('./cases/charts/gauge-chart/gauge-chart.routes').then(
+        (c) => c.routes
+      ),
   },
   {
     path: 'file-explorer',
@@ -261,7 +267,7 @@ export const appRoutes: Route[] = [
     path: 'hierarchy-chart',
     component: MasterLayoutComponent,
     loadChildren: () =>
-      import('./cases/hierarchy-chart/hierarchy-chart.routes').then(
+      import('./cases/charts/hierarchy-chart/hierarchy-chart.routes').then(
         (c) => c.routes
       ),
   },
@@ -577,7 +583,9 @@ export const appRoutes: Route[] = [
     path: 'line-chart',
     component: MasterLayoutComponent,
     loadChildren: () =>
-      import('./cases/line-chart/line-chart.routes').then((c) => c.routes),
+      import('./cases/charts/line-chart/line-chart.routes').then(
+        (c) => c.routes
+      ),
   },
   {
     path: 'context-menu',
