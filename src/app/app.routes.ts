@@ -228,6 +228,12 @@ export const appRoutes: Route[] = [
       ),
   },
   {
+    path: 'editor',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/editor/editor.routes').then((c) => c.routes),
+  },
+  {
     path: 'form',
     component: MasterLayoutComponent,
     loadChildren: () =>
