@@ -7,7 +7,9 @@
       "prev": "Previous",
       "retry": "Retry",
       "uploading": "Uploading",
-      "search": "Search"
+      "search": "Search",
+      "okay": "Okay",
+      "apply": "Apply"
     },
     "form": {
       "title": "Title",
@@ -31,11 +33,14 @@
       "no-result-found": "No results found",
       "more-items": "{{ number }} more",
       "no-record": "No record",
-      "no-data-yet": "No Data Loaded Yet."
+      "no-data-yet": "No Data Loaded Yet.",
+      "full-screen": "Full Screen",
+      "clear": "Clear",
+      "close": "Close",
+      "close-all": "Close All"
     },
     "notifications": {
-      "more": "And {{ number }} more...",
-      "info": "Info"
+      "more": "And {{ number }} more..."
     }
   },
   "error": {
@@ -47,7 +52,9 @@
       "required": "{{ title }} is required",
       "email": "Please enter a valid email address {{ title }}!",
       "phone": "Please enter a valid phone number!",
-      "invalid-rull-name": "Invalid rule name: <b>\"{{ name }}\"</b>"
+      "invalid-rull-name": "Invalid rule name: <b>\"{{ name }}\"</b>",
+      "min": "The value must be greater than {{ value }}",
+      "max": "The value must be less than {{ value }}"
     }
   },
   "password-strength": {
@@ -125,15 +132,7 @@
       "years": "Years"
     },
     "weekdays": {
-      "short": {
-        "0": "Sun",
-        "1": "Mon",
-        "2": "Tue",
-        "3": "Wed",
-        "4": "Thu",
-        "5": "Fri",
-        "6": "Sat"
-      },
+      "short": { "0": "Sun", "1": "Mon", "2": "Tue", "3": "Wed", "4": "Thu", "5": "Fri", "6": "Sat" },
       "long": {
         "0": "Sunday",
         "1": "Monday",

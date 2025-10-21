@@ -1,0 +1,9 @@
+{
+  "actions": {
+    "cancel": "Cancel",
+    "close": "Close",
+    "confirm": "Confirm",
+    "done": "Done",
+    "save": "Save"
+  }
+}
