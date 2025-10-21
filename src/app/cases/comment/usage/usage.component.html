@@ -123,7 +123,7 @@
         [(ngModel)]="value"
       >
         <ax-wysiwyg-view class="ax-min-h-28"></ax-wysiwyg-view>
-        <ax-toolbar>
+        <ax-wysiwyg-toolbar>
           <ax-prefix>
             <ax-wysiwyg-history></ax-wysiwyg-history>
             <ax-wysiwyg-font-style></ax-wysiwyg-font-style>
@@ -134,9 +134,9 @@
           </ax-prefix>
 
           <ax-suffix>
-            <ax-button type="submit" color="primary" text="Send"></ax-button
-          ></ax-suffix>
-        </ax-toolbar>
+            <ax-button type="submit" text="Send"></ax-button>
+          </ax-suffix>
+        </ax-wysiwyg-toolbar>
         <ax-validation-rule
           rule="callback"
           [options]="{ validate: validateFn }"

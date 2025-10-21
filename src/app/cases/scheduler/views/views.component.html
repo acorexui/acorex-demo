@@ -6,7 +6,7 @@
     <ax-select-box
       style="width: 200px"
       [dataSource]="views()"
-      [value]="selectedView()"
+      [ngModel]="selectedView()"
       (onValueChanged)="onViewChange($event.value)"
     ></ax-select-box>
   </div>

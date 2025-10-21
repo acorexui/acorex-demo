@@ -1,4 +1,3 @@
-import { AXDecoratorGenericComponent } from '@acorex/components/decorators';
 import {
   AXSchedulerAppointment,
   AXSchedulerComponent,
@@ -7,14 +6,12 @@ import {
 import { AXSelectBoxComponent } from '@acorex/components/select-box';
 import { AXHolidayDate } from '@acorex/core/date-time';
 import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-holidays',
   standalone: true,
-  imports: [
-    AXSchedulerComponent,
-    AXSelectBoxComponent,
-  ],
+  imports: [FormsModule, AXSchedulerComponent, AXSelectBoxComponent],
   templateUrl: './holidays.component.html',
 })
 export class HolidaysComponent {

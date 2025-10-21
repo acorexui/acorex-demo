@@ -6,10 +6,12 @@ import {
 import { AXSelectBoxComponent } from '@acorex/components/select-box';
 import { AXFormatPipe } from '@acorex/core/format';
 import { Component, signal, TemplateRef, ViewChild } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-custom-templates',
   imports: [
+    FormsModule,
     AXFormatPipe,
     AXSchedulerComponent,
     AXSelectBoxComponent,

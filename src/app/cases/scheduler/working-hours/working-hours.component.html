@@ -5,8 +5,8 @@
     <span class="ax-text-sm ax-font-medium">Select Mode:</span>
     <ax-select-box
       [dataSource]="modes()"
-      [value]="selectedMode()"
-      (valueChange)="onModeChange($event)"
+      [ngModel]="selectedMode()"
+      (onValueChanged)="onModeChange($event.value)"
       style="width: 250px"
     ></ax-select-box>
   </div>

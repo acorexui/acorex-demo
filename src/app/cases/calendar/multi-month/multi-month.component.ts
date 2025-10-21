@@ -1,15 +1,8 @@
-import { AXButtonComponent } from '@acorex/components/button';
 import { AXCalendarComponent } from '@acorex/components/calendar';
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   templateUrl: 'multi-month.component.html',
-  imports: [AXCalendarComponent, AXButtonComponent],
+  imports: [AXCalendarComponent],
 })
-export class MultiMonthComponent {
-  count = signal<number>(2);
-
-  toggleCount() {
-    this.count.update((c) => (c === 2 ? 3 : 2));
-  }
-}
+export class MultiMonthComponent {}
