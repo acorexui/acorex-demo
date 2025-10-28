@@ -10,14 +10,16 @@
     (onTagDblClick)="onTagDblClick($event)"
     (onTagContextMenu)="onTagContextMenu($event)"
   >
+    <ax-clear-button></ax-clear-button>
     <ax-autocomplete
+      valueField="id"
+      textField="text"
+      [multiple]="true"
+      [itemHeight]="56"
       [dataSource]="data()"
       [itemTemplate]="itemTemplate"
       [emptyTemplate]="emptyTemplate"
       [loadingTemplate]="loadingTemplate"
-      valueField="id"
-      textField="text"
-      [multiple]="true"
     ></ax-autocomplete>
   </ax-tag-box>
 </div>
@@ -41,7 +43,7 @@
 </div>
 
 <!-- Custom Tag Template -->
-<ng-template #tagTemplate let-item>
+<ng-template #tagTemplate let-item let-index="index">
   <ax-tag
     [text]="item.text"
     [color]="item.color"
@@ -51,6 +53,11 @@
     <ax-prefix>
       <ax-icon [class]="getCategoryIcon(item.category)"></ax-icon>
     </ax-prefix>
+    <ax-suffix>
+      <button (click)="tagBoxComponent()?.removeItem(index)" type="button">
+        <ax-icon class="ax-icon ax-icon-close"></ax-icon>
+      </button>
+    </ax-suffix>
   </ax-tag>
 </ng-template>
 
@@ -58,18 +65,18 @@
 <ng-template #itemTemplate let-context>
   @let item = context.data;
   <div
-    class="ax-flex ax-items-center ax-gap-3 ax-rounded ax-p-2 ax-transition-colors ax-w-full"
+    class="ax-flex ax-w-full ax-items-center ax-gap-3 ax-rounded ax-p-2 ax-transition-colors"
   >
     <div
       class="ax-flex ax-h-8 ax-w-8 ax-items-center ax-justify-center ax-rounded-full"
       [ngClass]="{
-        'ax-bg-primary-500/15 ax-text-primary-500': item.color === 'primary',
-        'ax-bg-success-500/15 ax-text-success-500': item.color === 'success',
-        'ax-bg-danger-500/15 ax-text-danger-500': item.color === 'danger',
-        'ax-bg-warning-500/15 ax-text-warning-500': item.color === 'warning',
-        'ax-bg-info-500/15 ax-text-info-500': item.color === 'info',
-        'ax-bg-muted-500/15 ax-text-muted-500': item.color === 'muted',
-      }"
+          'ax-bg-primary-500/15 ax-text-primary-500': item.color === 'primary',
+          'ax-bg-success-500/15 ax-text-success-500': item.color === 'success',
+          'ax-bg-danger-500/15 ax-text-danger-500': item.color === 'danger',
+          'ax-bg-warning-500/15 ax-text-warning-500': item.color === 'warning',
+          'ax-bg-info-500/15 ax-text-info-500': item.color === 'info',
+          'ax-bg-muted-500/15 ax-text-muted-500': item.color === 'muted',
+        }"
     >
       <ax-icon [class]="getCategoryIcon(item.category)"></ax-icon>
     </div>

@@ -1,6 +1,7 @@
 import { AXValueChangedEvent } from '@acorex/cdk/common';
 import { AXAutocompleteComponent } from '@acorex/components/autocomplete';
 import {
+  AXDecoratorClearButtonComponent,
   AXDecoratorGenericComponent,
   AXDecoratorIconComponent,
 } from '@acorex/components/decorators';
@@ -29,6 +30,7 @@ interface TagItem {
     AXAutocompleteComponent,
     AXDecoratorIconComponent,
     AXDecoratorGenericComponent,
+    AXDecoratorClearButtonComponent,
   ],
 })
 export class CustomTemplatesComponent {
