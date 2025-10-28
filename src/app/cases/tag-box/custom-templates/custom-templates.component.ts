@@ -8,7 +8,7 @@ import {
 import { AXTagComponent } from '@acorex/components/tag';
 import { AXTagBoxComponent } from '@acorex/components/tag-box';
 import { NgClass } from '@angular/common';
-import { Component, signal, viewChild } from '@angular/core';
+import { Component, signal, viewChild, ViewEncapsulation } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 interface TagItem {
@@ -22,6 +22,7 @@ interface TagItem {
 @Component({
   templateUrl: 'custom-templates.component.html',
   styleUrl: 'custom-templates.component.css',
+  encapsulation: ViewEncapsulation.None,
   imports: [
     NgClass,
     FormsModule,
