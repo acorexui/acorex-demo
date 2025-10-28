@@ -1,0 +1,6 @@
+ax-list .empty-container {
+  --ax-comp-list-empty-container-height: 7.5rem;
+}
+ax-list {
+  min-height: 7.5rem;
+}

@@ -1,6 +1,6 @@
 <div class="ax-w-96">
-  <ax-drawer2-container class="ax-h-96 ax-w-full">
-    <ax-drawer2
+  <ax-drawer-container class="ax-h-96 ax-w-full">
+    <ax-drawer
       (collapsedStateChanged)="onCollapsedChange($event)"
       mode="push"
       #drawer1
@@ -16,9 +16,9 @@
         <div>Some contents...</div>
         <div>Some contents...</div>
       </ax-content>
-    </ax-drawer2>
+    </ax-drawer>
 
-    <ax-drawer2
+    <ax-drawer
       (collapsedStateChanged)="onCollapsedChange($event)"
       mode="overlay"
       #drawer2
@@ -34,7 +34,7 @@
         <div>Some contents...</div>
         <div>Some contents...</div>
       </ax-content>
-    </ax-drawer2>
+    </ax-drawer>
 
     <ax-content
       class="ax-flex ax-h-full ax-w-full ax-items-center ax-justify-around ax-p-3"
@@ -45,5 +45,5 @@
       <ax-button (onClick)="drawer2.toggle()" color="primary" text="Open End">
       </ax-button>
     </ax-content>
-  </ax-drawer2-container>
+  </ax-drawer-container>
 </div>

@@ -18,4 +18,11 @@ export const routes: Routes = [
         (e) => e.AutoCompleteComponent
       ),
   },
+  {
+    path: 'custom-templates',
+    loadComponent: () =>
+      import('./custom-templates/custom-templates.component').then(
+        (e) => e.CustomTemplatesComponent
+      ),
+  },
 ];

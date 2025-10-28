@@ -1,17 +1,12 @@
 import { AXDecoratorModule } from '@acorex/components/decorators';
-import { AXNumberBox2Component } from '@acorex/components/number-box-2';
+import { AXNumberBoxComponent } from '@acorex/components/number-box';
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   templateUrl: './usage.component.html',
-  imports: [
-    AXNumberBox2Component,
-    AXDecoratorModule,
-    FormsModule,
-    CommonModule,
-  ],
+  imports: [AXNumberBoxComponent, AXDecoratorModule, FormsModule, CommonModule],
 })
 export class UsageComponent {
   protected options = signal({
