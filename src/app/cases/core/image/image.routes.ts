@@ -7,11 +7,4 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
-  {
-    path: 'selectone',
-    loadComponent: () =>
-      import('./select-one/select-one.component').then(
-        (e) => e.SelectOneComponent
-      ),
-  },
 ];

@@ -8,10 +8,10 @@ export const routes: Routes = [
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
   {
-    path: 'selectone',
+    path: 'advanced-operations',
     loadComponent: () =>
-      import('./select-one/select-one.component').then(
-        (e) => e.SelectOneComponent
+      import('./advanced-operations/advanced-operations.component').then(
+        (e) => e.AdvancedOperationsComponent
       ),
   },
 ];
