@@ -25,7 +25,7 @@ interface Skill {
   ],
 })
 export class HeaderFooterTemplatesComponent {
-  tagBoxValue = signal<string[]>([]);
+  tagBoxValue = signal<Skill[]>([]);
 
   listHeaderTemplate = viewChild<TemplateRef<unknown>>('listHeaderTemplate');
   listFooterTemplate = viewChild<TemplateRef<unknown>>('listFooterTemplate');

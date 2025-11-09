@@ -24,7 +24,7 @@
     <ax-title size="sm">Selected Skills ({{ tagBoxValue().length }})</ax-title>
     <div class="ax-mt-2 ax-flex ax-flex-wrap ax-gap-2">
       @for (tag of tagBoxValue(); track tag) {
-      <ax-tag [text]="tag" look="twotone" color="primary"></ax-tag>
+      <ax-tag [text]="tag.text" look="twotone" color="primary"></ax-tag>
       }
     </div>
   </div>
