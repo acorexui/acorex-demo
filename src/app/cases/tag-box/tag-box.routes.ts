@@ -25,4 +25,11 @@ export const routes: Routes = [
         (e) => e.CustomTemplatesComponent
       ),
   },
+  {
+    path: 'header-footer-templates',
+    loadComponent: () =>
+      import('./header-footer-templates/header-footer-templates.component').then(
+        (e) => e.HeaderFooterTemplatesComponent
+      ),
+  },
 ];

@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
 import { AXEditorComponent, EditorJsTool } from '@acorex/components/editor';
 import { AXFormModule } from '@acorex/components/form';
 import { AXLabelModule } from '@acorex/components/label';
+import { Component } from '@angular/core';
 
 @Component({
   templateUrl: 'disabled.component.html',
@@ -14,7 +14,6 @@ export class DisabledComponent {
     'raw',
     'image',
     'quote',
-    'code',
     'underline',
     'color',
   ];

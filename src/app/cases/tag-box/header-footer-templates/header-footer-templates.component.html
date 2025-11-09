@@ -1,0 +1,64 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-w-full ax-min-w-[30rem]"
+>
+  <div class="ax-w-full">
+    <ax-tag-box
+      [(ngModel)]="tagBoxValue"
+      [allowDuplicateValues]="false"
+      placeholder="Search and add skills..."
+      (onValueChanged)="handleValueChange($event)"
+    >
+      <ax-autocomplete
+        valueField="id"
+        textField="text"
+        [multiple]="true"
+        [dataSource]="data()"
+        [listHeaderTemplate]="listHeaderTemplate"
+        [listFooterTemplate]="listFooterTemplate"
+      ></ax-autocomplete>
+    </ax-tag-box>
+  </div>
+
+  @if (tagBoxValue().length > 0) {
+  <div class="ax-mt-4 ax-w-full">
+    <ax-title size="sm">Selected Skills ({{ tagBoxValue().length }})</ax-title>
+    <div class="ax-mt-2 ax-flex ax-flex-wrap ax-gap-2">
+      @for (tag of tagBoxValue(); track tag) {
+      <ax-tag [text]="tag" look="twotone" color="primary"></ax-tag>
+      }
+    </div>
+  </div>
+  }
+</div>
+
+<!-- List Header Template -->
+<ng-template #listHeaderTemplate>
+  <div
+    class="ax-flex ax-items-center ax-justify-between ax-px-4 ax-py-3 ax-border-b ax-border-surface"
+  >
+    <ax-title size="sm">Available Skills</ax-title>
+    <ax-subtitle size="xs"> {{ data().length }} skills available </ax-subtitle>
+  </div>
+</ng-template>
+
+<!-- List Footer Template -->
+<ng-template #listFooterTemplate>
+  <div
+    class="ax-flex ax-flex-col ax-gap-2 ax-px-4 ax-py-3 ax-border-t ax-surface"
+  >
+    <ax-title size="xs" class="ax-mb-1">Skill Categories</ax-title>
+    <div class="ax-flex ax-flex-wrap ax-gap-2">
+      @for (category of getUniqueCategories(); track category) {
+      <ax-tag
+        size="xs"
+        look="outline"
+        color="primary"
+        [text]="category"
+      ></ax-tag>
+      }
+    </div>
+    <ax-subtitle size="xs" class="ax-mt-2">
+      Select skills from different categories to build your profile
+    </ax-subtitle>
+  </div>
+</ng-template>

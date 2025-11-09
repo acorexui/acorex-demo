@@ -14,7 +14,6 @@ export class ReadonlyComponent {
     'raw',
     'image',
     'quote',
-    'code',
     'underline',
     'color',
   ];

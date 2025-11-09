@@ -15,7 +15,6 @@ export class EditorUsageComponent {
     'raw',
     'image',
     'quote',
-    'code',
     'underline',
     'color',
   ];
