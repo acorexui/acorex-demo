@@ -4,7 +4,7 @@
   <div class="ax-flex ax-gap-2 ax-mb-4 ax-flex-wrap">
     <ax-button
       (onClick)="toggleMultiple()"
-      [text]="multiple ? 'Single File' : 'Multiple Files'"
+      [text]="multiple() ? 'Single File' : 'Multiple Files'"
     >
     </ax-button>
     <ax-button (onClick)="setAcceptImages()" text="Images Only"></ax-button>
@@ -18,11 +18,12 @@
   <div class="ax-w-full ax-max-w-2xl">
     <div
       axUploaderZone
-      [accept]="accept"
-      [multiple]="multiple"
-      (onChanged)="onFilesChanged($event)"
-      (onFileUploadComplete)="onFileUploadComplete($event)"
-      (onFilesUploadComplete)="onFilesUploadComplete($event)"
+      [accept]="$any(accept)"
+      [multiple]="multiple()"
+      (fileChange)="onFileChange($event)"
+      (dragEnter)="onDragEnter($event)"
+      (dragLeave)="onDragLeave($event)"
+      (dragOver)="onDragOver($event)"
       class="ax-border-2 ax-border-dashed ax-surface ax-rounded-lg ax-p-8 ax-text-center hover:ax-lighter-surface ax-transition-colors"
     >
       <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
@@ -30,7 +31,7 @@
         <div>
           <ax-title>Drop files here</ax-title>
           <ax-subtitle>
-            {{ multiple ? "Multiple files allowed" : "Single file only" }}
+            {{ multiple() ? "Multiple files allowed" : "Single file only" }}
           </ax-subtitle>
           <ax-subtitle>
             {{
