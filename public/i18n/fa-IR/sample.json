@@ -1,0 +1,6 @@
+{
+  "sample-actions": {
+    "cancel": "@general:actions.cancel",
+    "save": "t('actions.save',{scope:'general'})"
+  }
+}

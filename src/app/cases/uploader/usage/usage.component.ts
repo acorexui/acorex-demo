@@ -1,9 +1,10 @@
-import { AXButtonComponent } from '@acorex/components/button';
 import {
   AXUploaderBrowseDirective,
   AXUploaderService,
   AXUploaderZoneDirective,
-} from '@acorex/components/uploader';
+} from '@acorex/cdk/uploader';
+import { AXButtonComponent } from '@acorex/components/button';
+import { AXDecoratorGenericComponent } from '@acorex/components/decorators';
 import { Component, inject } from '@angular/core';
 
 @Component({
@@ -12,8 +13,13 @@ import { Component, inject } from '@angular/core';
     AXButtonComponent,
     AXUploaderZoneDirective,
     AXUploaderBrowseDirective,
+    AXDecoratorGenericComponent,
   ],
 })
 export class UsageComponent {
   uploaderService: AXUploaderService = inject(AXUploaderService);
+
+  onFileChange(event: { event: Event; files: File[] }) {
+    console.log('Files selected:', event.files);
+  }
 }

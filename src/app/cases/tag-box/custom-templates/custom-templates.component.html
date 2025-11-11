@@ -1,0 +1,120 @@
+<div class="ax-w-full ax-min-w-[30rem]">
+  <ax-tag-box
+    #tagBox
+    [tagTemplate]="tagTemplate"
+    [(ngModel)]="tagBoxValue"
+    [allowDuplicateValues]="false"
+    placeholder="Search and add skills..."
+    (onValueChanged)="handleValueChange($event)"
+    (onTagClick)="onTagClick($event)"
+    (onTagDblClick)="onTagDblClick($event)"
+    (onTagContextMenu)="onTagContextMenu($event)"
+  >
+    <ax-clear-button></ax-clear-button>
+    <ax-autocomplete
+      valueField="id"
+      textField="text"
+      [multiple]="true"
+      [itemHeight]="56"
+      [dataSource]="data()"
+      [itemTemplate]="itemTemplate"
+      [emptyTemplate]="emptyTemplate"
+      [loadingTemplate]="loadingTemplate"
+    ></ax-autocomplete>
+  </ax-tag-box>
+</div>
+
+<div class="ax-mt-4 ax-w-full ax-max-w-2xl">
+  <ax-title size="sm">Selected Items ({{ tagBoxValue().length }})</ax-title>
+  <div class="ax-mt-2 ax-flex ax-flex-wrap ax-gap-2">
+    @for (item of tagBoxValue(); track item.id) {
+    <ax-tag
+      [text]="item.text"
+      [color]="item.color"
+      look="twotone"
+      (onClick)="onTagClick($event)"
+    >
+      <ax-prefix>
+        <ax-icon [class]="getCategoryIcon(item.category)"></ax-icon>
+      </ax-prefix>
+    </ax-tag>
+    }
+  </div>
+</div>
+
+<!-- Custom Tag Template -->
+<ng-template #tagTemplate let-item let-index="index">
+  <ax-tag
+    [text]="item.text"
+    [color]="item.color"
+    look="twotone"
+    (onClick)="onTagClick($event)"
+  >
+    <ax-prefix>
+      <ax-icon [class]="getCategoryIcon(item.category)"></ax-icon>
+    </ax-prefix>
+    <ax-suffix>
+      <button (click)="tagBoxComponent()?.removeItem(index)" type="button">
+        <ax-icon class="ax-icon ax-icon-close"></ax-icon>
+      </button>
+    </ax-suffix>
+  </ax-tag>
+</ng-template>
+
+<!-- Custom Autocomplete Item Template -->
+<ng-template #itemTemplate let-context>
+  @let item = context.data;
+  <div
+    class="ax-flex ax-w-full ax-items-center ax-gap-3 ax-rounded ax-p-2 ax-transition-colors"
+  >
+    <div
+      class="ax-flex ax-h-8 ax-w-8 ax-items-center ax-justify-center ax-rounded-full"
+      [ngClass]="{
+          'ax-bg-primary-500/15 ax-text-primary-500': item.color === 'primary',
+          'ax-bg-success-500/15 ax-text-success-500': item.color === 'success',
+          'ax-bg-danger-500/15 ax-text-danger-500': item.color === 'danger',
+          'ax-bg-warning-500/15 ax-text-warning-500': item.color === 'warning',
+          'ax-bg-info-500/15 ax-text-info-500': item.color === 'info',
+          'ax-bg-muted-500/15 ax-text-muted-500': item.color === 'muted',
+        }"
+    >
+      <ax-icon [class]="getCategoryIcon(item.category)"></ax-icon>
+    </div>
+    <div class="ax-flex-1">
+      <ax-title>{{ item.text }}</ax-title>
+      <ax-subtitle>{{ item.description }}</ax-subtitle>
+    </div>
+    <div class="ax-flex ax-items-center ax-gap-1">
+      <ax-tag
+        [text]="getCategoryLabel(item.category)"
+        [color]="item.color"
+        look="outline"
+        size="xs"
+      ></ax-tag>
+    </div>
+  </div>
+</ng-template>
+
+<!-- Custom Empty Template -->
+<ng-template #emptyTemplate>
+  <div
+    class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-px-4 ax-py-8"
+  >
+    <ax-icon
+      class="fa-light fa-magnifying-glass ax-mb-2 ax-text-4xl ax-text-gray-400"
+    ></ax-icon>
+    <ax-title>No results found</ax-title>
+  </div>
+</ng-template>
+
+<!-- Custom Loading Template -->
+<ng-template #loadingTemplate>
+  <div class="ax-flex ax-items-center ax-justify-center ax-py-4">
+    <div class="ax-flex ax-items-center ax-gap-2">
+      <div
+        class="ax-animate-spin ax-h-4 ax-w-4 ax-rounded-full ax-border-2 ax-border-primary ax-border-t-transparent"
+      ></div>
+      <span class="ax-text-sm ax-text-gray-500">Searching...</span>
+    </div>
+  </div>
+</ng-template>

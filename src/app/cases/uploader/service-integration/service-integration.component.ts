@@ -1,6 +1,6 @@
 import { AXButtonComponent } from '@acorex/components/button';
 import { AXDecoratorGenericComponent } from '@acorex/components/decorators';
-import { AXUploaderService } from '@acorex/components/uploader';
+import { AXUploaderService } from '@acorex/cdk/uploader';
 import { Component, inject, signal } from '@angular/core';
 
 @Component({

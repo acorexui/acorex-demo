@@ -1,15 +1,11 @@
-import { Component, signal, viewChild } from '@angular/core';
-import { AXDrawerMode, AXDrawerModule } from '@acorex/components/drawer';
-import { CommonModule } from '@angular/common';
-import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXButtonModule } from '@acorex/components/button';
-import {
-  AXDrawer2Component,
-  AXDrawer2Module,
-} from '@acorex/components/drawer-2';
+import { AXDecoratorModule } from '@acorex/components/decorators';
+import { AXDrawerModule } from '@acorex/components/drawer';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 @Component({
   templateUrl: './usage.component.html',
-  imports: [AXDrawer2Module, CommonModule, AXDecoratorModule, AXButtonModule],
+  imports: [AXDrawerModule, CommonModule, AXDecoratorModule, AXButtonModule],
 })
 export class DrawerUsageComponent {
   onCollapsedChange(event: boolean) {

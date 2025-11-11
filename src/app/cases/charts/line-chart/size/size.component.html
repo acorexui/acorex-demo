@@ -1,7 +1,5 @@
 <div class="ax-flex ax-flex-col ax-gap-8 ax-p-8">
-  <div
-    class="ax-w-[400px] ax-h-[250px] ax-border ax-border-gray-200 ax-rounded-lg ax-p-4"
-  >
+  <div class="ax-w-[400px] ax-h-[250px] ax-p-4">
     <ax-line-chart
       (pointClick)="handleLineChartPointClick($event)"
       [data]="lineChartData()"
@@ -9,9 +7,7 @@
     ></ax-line-chart>
   </div>
 
-  <div
-    class="ax-w-[600px] ax-h-[350px] ax-border ax-border-gray-200 ax-rounded-lg ax-p-4"
-  >
+  <div class="ax-w-[600px] ax-h-[350px] ax-p-4">
     <ax-line-chart
       (pointClick)="handleLineChartPointClick($event)"
       [data]="lineChartData()"
