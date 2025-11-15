@@ -1,0 +1,449 @@
+<div class="ax-pt-1 ax-pb-1 ax-px-2 ax-max-w-3xl ax-mx-auto ax-space-y-2">
+  <!-- Header -->
+  <div class="ax-text-center ax-mb-2">
+    <h1
+      class="ax-text-xl ax-font-bold ax-text-gray-900 dark:ax-text-gray-100 ax-mb-1"
+    >
+      Image Service Usage
+    </h1>
+    <p
+      class="ax-text-sm ax-text-gray-600 dark:ax-text-gray-400 ax-max-w-lg ax-mx-auto"
+    >
+      Demonstrate image resizing, compression, and format conversion
+      capabilities
+    </p>
+  </div>
+
+  <!-- Error Alert -->
+  @if (errorMessage()) {
+  <div
+    class="ax-bg-red-50 dark:ax-bg-red-900/20 ax-border ax-border-red-200 dark:ax-border-red-800 ax-text-red-700 dark:ax-text-red-300 ax-px-6 ax-py-4 ax-rounded-lg ax-shadow-sm"
+  >
+    {{ errorMessage() }}
+  </div>
+  }
+
+  <!-- Main Content Layout -->
+  <div
+    class="ax-grid ax-grid-cols-1 lg:ax-grid-cols-2 ax-gap-4 ax-mx-auto ax-justify-items-center"
+  >
+    <!-- Left Column: File Selection and Resize Options -->
+    <div class="ax-space-y-4 ax-w-full ax-max-w-md">
+      <!-- File Selection -->
+      <div
+        class="ax-bg-white dark:ax-bg-gray-800 ax-p-3 ax-rounded-lg ax-border ax-border-gray-200 dark:ax-border-gray-700 ax-shadow-sm"
+      >
+        <h3
+          class="ax-text-base ax-font-bold ax-text-gray-900 dark:ax-text-gray-100 ax-mb-2 ax-flex ax-items-center ax-gap-2"
+        >
+          <span
+            class="ax-w-4 ax-h-4 ax-bg-blue-100 dark:ax-bg-blue-900 ax-text-blue-600 dark:ax-text-blue-300 ax-rounded-full ax-flex ax-items-center ax-justify-center ax-text-xs ax-font-bold"
+            >1</span
+          >
+          Select Image
+        </h3>
+        <div class="ax-space-y-2">
+          <div>
+            <label
+              for="fileInput"
+              class="ax-block ax-text-xs ax-font-semibold ax-text-gray-900 dark:ax-text-gray-100 ax-mb-1"
+            >
+              Choose an image file
+            </label>
+            <input
+              id="fileInput"
+              type="file"
+              accept="image/*"
+              (change)="onFileSelected($event)"
+              class="ax-block ax-w-full ax-text-base ax-text-gray-600 dark:ax-text-gray-300 file:ax-mr-4 file:ax-py-3 file:ax-px-6 file:ax-rounded-lg file:ax-border-0 file:ax-text-base file:ax-font-semibold file:ax-bg-blue-50 dark:file:ax-bg-blue-900 file:ax-text-blue-700 dark:file:ax-text-blue-300 hover:file:ax-bg-blue-100 dark:hover:file:ax-bg-blue-800 ax-cursor-pointer"
+            />
+          </div>
+
+          @if (selectedFile()) {
+          <div
+            class="ax-bg-green-50 dark:ax-bg-green-900/20 ax-p-3 ax-rounded-lg ax-border ax-border-green-200 dark:ax-border-green-800"
+          >
+            <div class="ax-flex ax-items-center ax-gap-2 ax-mb-2">
+              <div
+                class="ax-w-4 ax-h-4 ax-bg-green-500 ax-rounded-full ax-flex ax-items-center ax-justify-center"
+              >
+                <svg
+                  class="ax-w-4 ax-h-4 ax-text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h4
+                class="ax-text-sm ax-font-semibold ax-text-green-800 dark:ax-text-green-200"
+              >
+                File Selected Successfully
+              </h4>
+            </div>
+            <div class="ax-grid ax-grid-cols-1 md:ax-grid-cols-3 ax-gap-2">
+              <div
+                class="ax-bg-white dark:ax-bg-gray-800 ax-p-2 ax-rounded-lg ax-border ax-border-gray-200 dark:ax-border-gray-600"
+              >
+                <p
+                  class="ax-text-sm ax-font-medium ax-text-gray-500 dark:ax-text-gray-400 ax-mb-1"
+                >
+                  File Name
+                </p>
+                <p
+                  class="ax-text-base ax-font-semibold ax-text-gray-900 dark:ax-text-gray-100 ax-truncate"
+                >
+                  {{ selectedFile()?.name }}
+                </p>
+              </div>
+              <div
+                class="ax-bg-white dark:ax-bg-gray-800 ax-p-4 ax-rounded-lg ax-border ax-border-gray-200 dark:ax-border-gray-600"
+              >
+                <p
+                  class="ax-text-sm ax-font-medium ax-text-gray-500 dark:ax-text-gray-400 ax-mb-1"
+                >
+                  File Size
+                </p>
+                <p
+                  class="ax-text-base ax-font-semibold ax-text-gray-900 dark:ax-text-gray-100"
+                >
+                  {{ getFileSize(selectedFile()?.size || 0) }}
+                </p>
+              </div>
+              <div
+                class="ax-bg-white dark:ax-bg-gray-800 ax-p-4 ax-rounded-lg ax-border ax-border-gray-200 dark:ax-border-gray-600"
+              >
+                <p
+                  class="ax-text-sm ax-font-medium ax-text-gray-500 dark:ax-text-gray-400 ax-mb-1"
+                >
+                  File Type
+                </p>
+                <p
+                  class="ax-text-base ax-font-semibold ax-text-gray-900 dark:ax-text-gray-100"
+                >
+                  {{ selectedFile()?.type }}
+                </p>
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+
+      <!-- Resize Options -->
+      <div
+        class="ax-bg-white dark:ax-bg-gray-800 ax-p-3 ax-rounded-lg ax-border ax-border-gray-200 dark:ax-border-gray-700 ax-shadow-sm"
+      >
+        <h3
+          class="ax-text-base ax-font-bold ax-text-gray-900 dark:ax-text-gray-100 ax-mb-2 ax-flex ax-items-center ax-gap-2"
+        >
+          <span
+            class="ax-w-4 ax-h-4 ax-bg-blue-100 dark:ax-bg-blue-900 ax-text-blue-600 dark:ax-text-blue-300 ax-rounded-full ax-flex ax-items-center ax-justify-center ax-text-xs ax-font-bold"
+            >2</span
+          >
+          Configure Resize Options
+        </h3>
+        <div class="ax-grid ax-grid-cols-1 md:ax-grid-cols-3 ax-gap-2">
+          <div
+            class="ax-bg-gray-50 dark:ax-bg-gray-700 ax-p-2 ax-rounded-lg ax-border ax-border-gray-200 dark:ax-border-gray-600"
+          >
+            <label
+              class="ax-block ax-text-xs ax-font-semibold ax-text-gray-900 dark:ax-text-gray-100 ax-mb-1"
+            >
+              Max Size (pixels)
+            </label>
+            <input
+              type="number"
+              [value]="maxSize()"
+              (input)="updateMaxSize($event)"
+              placeholder="800"
+              min="100"
+              max="4000"
+              class="ax-w-full ax-px-4 ax-py-3 ax-border ax-border-gray-300 dark:ax-border-gray-600 ax-rounded-lg ax-bg-white dark:ax-bg-gray-800 ax-text-gray-900 dark:ax-text-gray-100 focus:ax-outline-none focus:ax-ring-2 focus:ax-ring-blue-500 focus:ax-border-transparent ax-text-lg"
+            />
+            <p
+              class="ax-text-xs ax-text-gray-500 dark:ax-text-gray-400 ax-mt-1"
+            >
+              Maximum width or height in pixels
+            </p>
+          </div>
+
+          <div
+            class="ax-bg-gray-50 dark:ax-bg-gray-700 ax-p-2 ax-rounded-lg ax-border ax-border-gray-200 dark:ax-border-gray-600"
+          >
+            <label
+              class="ax-block ax-text-xs ax-font-semibold ax-text-gray-900 dark:ax-text-gray-100 ax-mb-1"
+            >
+              Output Format
+            </label>
+            <select
+              [value]="outputType()"
+              (change)="onFormatChange($any($event.target).value)"
+              class="ax-w-full ax-px-3 ax-py-2 ax-border ax-border-gray-300 dark:ax-border-gray-600 ax-rounded-md ax-bg-white dark:ax-bg-gray-800 ax-text-gray-900 dark:ax-text-gray-100 focus:ax-outline-none focus:ax-ring-2 focus:ax-ring-blue-500"
+            >
+              <option
+                *ngFor="let option of formatOptions"
+                [value]="option.value"
+              >
+                {{ option.text }}
+              </option>
+            </select>
+            <p
+              class="ax-text-xs ax-text-gray-500 dark:ax-text-gray-400 ax-mt-1"
+            >
+              Choose the output image format
+            </p>
+          </div>
+
+          <div
+            class="ax-bg-gray-50 dark:ax-bg-gray-700 ax-p-2 ax-rounded-lg ax-border ax-border-gray-200 dark:ax-border-gray-600"
+          >
+            <label
+              class="ax-block ax-text-xs ax-font-semibold ax-text-gray-900 dark:ax-text-gray-100 ax-mb-1"
+            >
+              Quality (%)
+            </label>
+            <input
+              type="number"
+              [value]="quality()"
+              (input)="updateQuality($event)"
+              placeholder="90"
+              min="1"
+              max="100"
+              step="1"
+              class="ax-w-full ax-px-4 ax-py-3 ax-border ax-border-gray-300 dark:ax-border-gray-600 ax-rounded-lg ax-bg-white dark:ax-bg-gray-800 ax-text-gray-900 dark:ax-text-gray-100 focus:ax-outline-none focus:ax-ring-2 focus:ax-ring-blue-500 focus:ax-border-transparent ax-text-lg"
+            />
+            <p
+              class="ax-text-xs ax-text-gray-500 dark:ax-text-gray-400 ax-mt-1"
+            >
+              Image quality (1-100%)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Image Comparison -->
+    @if (originalImageUrl() || resizedImageUrl()) {
+    <div
+      class="ax-bg-white dark:ax-bg-gray-800 ax-p-3 ax-rounded-lg ax-border ax-border-gray-200 dark:ax-border-gray-700 ax-shadow-sm"
+    >
+      <h3
+        class="ax-text-base ax-font-bold ax-text-gray-900 dark:ax-text-gray-100 ax-mb-2 ax-flex ax-items-center ax-gap-2"
+      >
+        <span
+          class="ax-w-4 ax-h-4 ax-bg-blue-100 dark:ax-bg-blue-900 ax-text-blue-600 dark:ax-text-blue-300 ax-rounded-full ax-flex ax-items-center ax-justify-center ax-text-xs ax-font-bold"
+          >3</span
+        >
+        Image Comparison
+      </h3>
+      <div class="ax-space-y-3">
+        <!-- Original Image -->
+        @if (originalImageUrl()) {
+        <div
+          class="ax-bg-gray-50 dark:ax-bg-gray-700 ax-p-2 ax-rounded-lg ax-border ax-border-gray-200 dark:ax-border-gray-600"
+        >
+          <h4
+            class="ax-text-sm ax-font-bold ax-text-gray-900 dark:ax-text-gray-100 ax-mb-1 ax-flex ax-items-center ax-gap-2"
+          >
+            <div
+              class="ax-w-3 ax-h-3 ax-bg-blue-500 ax-rounded-full ax-flex ax-items-center ax-justify-center"
+            >
+              <svg
+                class="ax-w-4 ax-h-4 ax-text-white"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            Original Image
+          </h4>
+          <div
+            class="ax-bg-white dark:ax-bg-gray-800 ax-p-2 ax-rounded-lg ax-border ax-border-gray-200 dark:ax-border-gray-600 ax-shadow-sm"
+          >
+            <img
+              [src]="originalImageUrl()"
+              alt="Original"
+              class="ax-w-full ax-h-auto ax-rounded-lg ax-shadow-md"
+              style="max-height: 150px; object-fit: contain"
+            />
+            @if (selectedFile()) {
+            <div class="ax-mt-1 ax-grid ax-grid-cols-2 ax-gap-1">
+              <div
+                class="ax-bg-gray-100 dark:ax-bg-gray-700 ax-p-1 ax-rounded-lg"
+              >
+                <p
+                  class="ax-text-sm ax-font-medium ax-text-gray-500 dark:ax-text-gray-400 ax-mb-1"
+                >
+                  File Size
+                </p>
+                <p
+                  class="ax-text-lg ax-font-bold ax-text-gray-900 dark:ax-text-gray-100"
+                >
+                  {{ getFileSize(selectedFile()?.size || 0) }}
+                </p>
+              </div>
+              <div
+                class="ax-bg-gray-100 dark:ax-bg-gray-700 ax-p-3 ax-rounded-lg"
+              >
+                <p
+                  class="ax-text-sm ax-font-medium ax-text-gray-500 dark:ax-text-gray-400 ax-mb-1"
+                >
+                  Dimensions
+                </p>
+                <p
+                  class="ax-text-lg ax-font-bold ax-text-gray-900 dark:ax-text-gray-100"
+                >
+                  Loading...
+                </p>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+        }
+
+        <!-- Resized Image -->
+        @if (resizedImageUrl()) {
+        <div
+          class="ax-bg-gray-50 dark:ax-bg-gray-700 ax-p-2 ax-rounded-lg ax-border ax-border-gray-200 dark:ax-border-gray-600"
+        >
+          <h4
+            class="ax-text-sm ax-font-bold ax-text-gray-900 dark:ax-text-gray-100 ax-mb-1 ax-flex ax-items-center ax-gap-2"
+          >
+            <div
+              class="ax-w-3 ax-h-3 ax-bg-green-500 ax-rounded-full ax-flex ax-items-center ax-justify-center"
+            >
+              <svg
+                class="ax-w-4 ax-h-4 ax-text-white"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            Resized
+          </h4>
+          <div
+            class="ax-bg-white dark:ax-bg-gray-800 ax-p-2 ax-rounded-lg ax-border ax-border-gray-200 dark:ax-border-gray-600 ax-shadow-sm"
+          >
+            <img
+              [src]="resizedImageUrl()"
+              alt="Resized"
+              class="ax-w-full ax-h-auto ax-rounded-lg ax-shadow-md"
+              style="max-height: 150px; object-fit: contain"
+            />
+            <div class="ax-mt-1 ax-grid ax-grid-cols-2 ax-gap-1">
+              <div
+                class="ax-bg-gray-100 dark:ax-bg-gray-700 ax-p-1 ax-rounded-lg"
+              >
+                <p
+                  class="ax-text-sm ax-font-medium ax-text-gray-500 dark:ax-text-gray-400 ax-mb-1"
+                >
+                  Max Size
+                </p>
+                <p
+                  class="ax-text-lg ax-font-bold ax-text-gray-900 dark:ax-text-gray-100"
+                >
+                  {{ maxSize() }}px
+                </p>
+              </div>
+              <div
+                class="ax-bg-gray-100 dark:ax-bg-gray-700 ax-p-3 ax-rounded-lg"
+              >
+                <p
+                  class="ax-text-sm ax-font-medium ax-text-gray-500 dark:ax-text-gray-400 ax-mb-1"
+                >
+                  Format
+                </p>
+                <p
+                  class="ax-text-lg ax-font-bold ax-text-gray-900 dark:ax-text-gray-100"
+                >
+                  {{ getCurrentFormat() }}
+                </p>
+              </div>
+              <div
+                class="ax-bg-gray-100 dark:ax-bg-gray-700 ax-p-3 ax-rounded-lg"
+              >
+                <p
+                  class="ax-text-sm ax-font-medium ax-text-gray-500 dark:ax-text-gray-400 ax-mb-1"
+                >
+                  Quality
+                </p>
+                <p
+                  class="ax-text-lg ax-font-bold ax-text-gray-900 dark:ax-text-gray-100"
+                >
+                  {{ quality() }}%
+                </p>
+              </div>
+              <div
+                class="ax-bg-gray-100 dark:ax-bg-gray-700 ax-p-3 ax-rounded-lg"
+              >
+                <p
+                  class="ax-text-sm ax-font-medium ax-text-gray-500 dark:ax-text-gray-400 ax-mb-1"
+                >
+                  Status
+                </p>
+                <p
+                  class="ax-text-lg ax-font-bold ax-text-green-600 dark:ax-text-green-400"
+                >
+                  Ready
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+
+      <!-- Action Buttons -->
+      @if (selectedFile()) {
+      <div
+        class="ax-mt-3 ax-pt-3 ax-border-t ax-border-gray-200 dark:ax-border-gray-700"
+      >
+        <div class="ax-flex ax-flex-wrap ax-gap-2 ax-justify-center">
+          <ax-button
+            (click)="resizeImage()"
+            [disabled]="!selectedFile() || isProcessing()"
+            class="ax-px-3 ax-py-1.5 ax-text-xs ax-font-semibold ax-min-w-20"
+          >
+            {{ isProcessing() ? "Processing..." : "Resize" }}
+          </ax-button>
+
+          @if (resizedImageUrl()) {
+          <ax-button
+            color="secondary"
+            (click)="downloadResizedImage()"
+            class="ax-px-3 ax-py-1.5 ax-text-xs ax-font-semibold ax-min-w-28 ax-h-10"
+          >
+            Export
+          </ax-button>
+          }
+
+          <ax-button
+            color="outline"
+            (click)="resetImage()"
+            class="ax-px-3 ax-py-1.5 ax-text-xs ax-font-semibold ax-min-w-20"
+          >
+            Reset
+          </ax-button>
+        </div>
+      </div>
+      }
+    </div>
+    }
+  </div>
+</div>

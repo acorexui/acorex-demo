@@ -1,0 +1,110 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-p-6 ax-pt-16"
+>
+  <ax-heading color="lightest" weight="bold">AXSafePipe Examples</ax-heading>
+  <ax-heading color="lightest" weight="regular"
+    >Safe content rendering with Angular's DomSanitizer</ax-heading
+  >
+
+  <!-- HTML Example -->
+  <div class="ax-w-full ax-max-w-2xl">
+    <h3
+      class="ax-text-lg ax-font-semibold ax-mb-3 ax-text-gray-900 dark:ax-text-gray-100"
+    >
+      1. Safe HTML
+    </h3>
+    <div
+      class="ax-bg-gray-50 dark:ax-bg-gray-800 ax-p-4 ax-rounded-lg ax-border ax-border-gray-200 dark:ax-border-gray-700"
+    >
+      <p class="ax-text-sm ax-text-gray-600 dark:ax-text-gray-300 ax-mb-2">
+        Code:
+      </p>
+      <pre
+        class="ax-bg-gray-100 dark:ax-bg-gray-700 ax-p-2 ax-rounded ax-text-sm ax-mb-3 ax-text-gray-800 dark:ax-text-gray-200"
+        >{{ htmlContent() }}</pre
+      >
+      <p class="ax-text-sm ax-text-gray-600 dark:ax-text-gray-300 ax-mb-2">
+        Result:
+      </p>
+      <div [innerHTML]="htmlContent() | safe : 'html'"></div>
+    </div>
+  </div>
+
+  <!-- Style Example -->
+  <div class="ax-w-full ax-max-w-2xl">
+    <h3
+      class="ax-text-lg ax-font-semibold ax-mb-3 ax-text-gray-900 dark:ax-text-gray-100"
+    >
+      2. Safe Styles
+    </h3>
+    <div
+      class="ax-bg-gray-50 dark:ax-bg-gray-800 ax-p-4 ax-rounded-lg ax-border ax-border-gray-200 dark:ax-border-gray-700"
+    >
+      <p class="ax-text-sm ax-text-gray-600 dark:ax-text-gray-300 ax-mb-2">
+        Code:
+      </p>
+      <pre
+        class="ax-bg-gray-100 dark:ax-bg-gray-700 ax-p-2 ax-rounded ax-text-sm ax-mb-3 ax-text-gray-800 dark:ax-text-gray-200"
+        >{{ dynamicStyle() }}</pre
+      >
+      <p class="ax-text-sm ax-text-gray-600 dark:ax-text-gray-300 ax-mb-2">
+        Result:
+      </p>
+      <div
+        [style]="dynamicStyle() | safe : 'style'"
+        class="ax-text-center ax-font-semibold ax-text-gray-900 dark:ax-text-gray-100"
+      >
+        Styled with safe pipe!
+      </div>
+    </div>
+  </div>
+
+  <!-- URL Example -->
+  <div class="ax-w-full ax-max-w-2xl">
+    <h3
+      class="ax-text-lg ax-font-semibold ax-mb-3 ax-text-gray-900 dark:ax-text-gray-100"
+    >
+      3. Safe URLs
+    </h3>
+    <div
+      class="ax-bg-gray-50 dark:ax-bg-gray-800 ax-p-4 ax-rounded-lg ax-border ax-border-gray-200 dark:ax-border-gray-700"
+    >
+      <p class="ax-text-sm ax-text-gray-600 dark:ax-text-gray-300 ax-mb-2">
+        Code:
+      </p>
+      <pre
+        class="ax-bg-gray-100 dark:ax-bg-gray-700 ax-p-2 ax-rounded ax-text-sm ax-mb-3 ax-text-gray-800 dark:ax-text-gray-200"
+        >{{ externalUrl() }}</pre
+      >
+      <p class="ax-text-sm ax-text-gray-600 dark:ax-text-gray-300 ax-mb-2">
+        Result:
+      </p>
+      <a
+        [href]="externalUrl() | safe : 'url'"
+        target="_blank"
+        class="ax-text-blue-600 dark:ax-text-blue-400 ax-underline"
+      >
+        Visit Angular.io
+      </a>
+    </div>
+  </div>
+
+  <!-- Usage Info -->
+  <div
+    class="ax-w-full ax-max-w-2xl ax-bg-blue-50 dark:ax-bg-blue-900/20 ax-p-4 ax-rounded-lg ax-border ax-border-blue-200 dark:ax-border-blue-800"
+  >
+    <h3
+      class="ax-text-lg ax-font-semibold ax-text-blue-800 dark:ax-text-blue-200 ax-mb-2"
+    >
+      Usage
+    </h3>
+    <p class="ax-text-blue-700 dark:ax-text-blue-300 ax-mb-2">
+      Use the safe pipe to render trusted content safely:
+    </p>
+    <ul class="ax-text-blue-700 dark:ax-text-blue-300 ax-space-y-1">
+      <li>• <code>| safe: 'html'</code> - for HTML content</li>
+      <li>• <code>| safe: 'style'</code> - for CSS styles</li>
+      <li>• <code>| safe: 'url'</code> - for URLs</li>
+    </ul>
+  </div>
+</div>
