@@ -2,7 +2,7 @@
   <ax-form class="" labelMode="static" messageStyle="float" updateOn="change">
     <ax-form-field class="ax-flex-1">
       <ax-label>editor</ax-label>
-      <ax-editor (onValueChanged)="editorChange($event)" #f [modules]="tools">
+      <ax-editor (onValueChanged)="editorChange($event)">
         <ax-validation-rule rule="required"></ax-validation-rule>
       </ax-editor>
     </ax-form-field>
