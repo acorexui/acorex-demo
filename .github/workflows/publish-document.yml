@@ -8,7 +8,7 @@ on:
 env:
   APP_PORT_IN: 80
   APP_PORT_OUT: ${{ secrets.APP_PORT }}
-  APP_IMAGE_NAME: ${{ secrets.APP_IMAGE_NAME }}
+  APP_IMAGE_NAME: demo.acorex.io
 
   SERVER_IP: ${{ secrets.SERVER_IP }}
   SERVER_USERNAME: ${{ secrets.SERVER_USERNAME }}
@@ -18,7 +18,7 @@ env:
 
   DOCKER_FILE_PATH: ./Dockerfile
 
-  REMOTE_DIR_PATH: /tmp/${{ secrets.APP_IMAGE_NAME }}
+  REMOTE_DIR_PATH: /tmp/demo.acorex.io
 
   REPO_NAME: ${{ secrets.REPO_NAME }}
   REPO_OWNER: ${{ secrets.REPO_OWNER }}
