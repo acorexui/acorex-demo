@@ -1,18 +1,18 @@
 import {
-  AXTreeItemClickBaseEvent,
-  AXTreeViewComponent,
-  AXTreeViewModule,
-} from '@acorex/components/tree-view';
+  AXTreeViewLegacyModule,
+  AXTreeViewLegacyComponent,
+  AXTreeItemClickBaseEventLegacy,
+} from '@acorex/components/tree-view-legacy';
 import { CommonModule } from '@angular/common';
 import { Component, signal, viewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   templateUrl: 'usage.component.html',
-  imports: [CommonModule, FormsModule, AXTreeViewModule],
+  imports: [CommonModule, FormsModule, AXTreeViewLegacyModule],
 })
 export class UsageComponent {
-  treeRef = viewChild<AXTreeViewComponent>('treeRef');
+  treeRef = viewChild<AXTreeViewLegacyComponent>('treeRef');
 
   treeViewData = signal<any[]>([
     {
@@ -86,7 +86,7 @@ export class UsageComponent {
     }
   };
 
-  handleNodeClick(e: AXTreeItemClickBaseEvent) {
+  handleNodeClick(e: AXTreeItemClickBaseEventLegacy) {
     console.log(e);
   }
 }

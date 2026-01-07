@@ -1,0 +1,11 @@
+<ax-command
+  [customTemplate]="customItemTemplate"
+  (onSubmit)="submitHandler($event)"
+  [(ngModel)]="value"
+></ax-command>
+
+<ng-template #customItemTemplate let-item let-isActive="isActive">
+  <h1>{{ item.text }}</h1>
+  <i>{{ item.icon }}</i>
+  <h1>{{ isActive }}</h1>
+</ng-template>
