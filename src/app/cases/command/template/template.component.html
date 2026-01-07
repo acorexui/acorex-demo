@@ -5,7 +5,11 @@
 ></ax-command>
 
 <ng-template #customItemTemplate let-item let-isActive="isActive">
-  <h1>{{ item.text }}</h1>
-  <i>{{ item.icon }}</i>
-  <h1>{{ isActive }}</h1>
+  <div
+    class="ax-flex ax-items-center ax-p-2 ax-gap-2"
+    [class]="isActive ? 'ax-border ax-border-primary-500 ax-rounded' : ''"
+  >
+    <ax-icon [class]="item.icon"></ax-icon>
+    <ax-text>{{ item.text }}</ax-text>
+  </div>
 </ng-template>

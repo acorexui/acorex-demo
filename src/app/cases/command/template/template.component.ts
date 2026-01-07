@@ -5,10 +5,11 @@ import {
   CommandMenuItem,
 } from '@acorex/components/command';
 import { FormsModule } from '@angular/forms';
+import { AXDecoratorModule } from '@acorex/components/decorators';
 
 @Component({
   templateUrl: './template.component.html',
-  imports: [AXCommandModule, FormsModule],
+  imports: [AXCommandModule, FormsModule, AXDecoratorModule],
 })
 export class TemplateComponent {
   value: CommandMenuItem = {
