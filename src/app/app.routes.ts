@@ -640,6 +640,11 @@ export const appRoutes: Route[] = [
     loadChildren: () => import('./cases/cdk/cdk.routes').then((c) => c.routes),
   },
   {
+    path: 'core',
+    loadChildren: () =>
+      import('./cases/core/core.routes').then((c) => c.routes),
+  },
+  {
     path: '**',
     component: MasterLayoutComponent,
     loadChildren: () =>
