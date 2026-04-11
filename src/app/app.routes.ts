@@ -44,7 +44,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/bottom-navigation/bottom-navigation.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -64,7 +64,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/button-item-list/button-item-list.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -84,7 +84,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/calendar-range/calendar-range.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -92,7 +92,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/charts/chart-legend/chart-legend.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -112,7 +112,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/circular-progress/circular-progress.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -132,7 +132,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/color-palette/color-palette.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -176,7 +176,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/date-time-box/date-time-box.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -184,7 +184,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/date-time-picker/date-time-picker.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -204,7 +204,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/charts/donut-chart/donut-chart.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -224,7 +224,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/dropdown-button/dropdown-button.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -240,11 +240,16 @@ export const appRoutes: Route[] = [
       import('./cases/form/form.routes').then((c) => c.routes),
   },
   {
+    path: 'fab',
+    component: MasterLayoutComponent,
+    loadChildren: () => import('./cases/fab/fab.routes').then((c) => c.routes),
+  },
+  {
     path: 'gauge-chart',
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/charts/gauge-chart/gauge-chart.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -252,7 +257,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/file-explorer/file-explorer.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -266,7 +271,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/grid-layout-builder/grid-layout-builder.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -274,7 +279,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/charts/hierarchy-chart/hierarchy-chart.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -306,7 +311,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/loading-dialog/loading-dialog.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -408,7 +413,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/query-builder/query-builder.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -428,7 +433,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/rail-navigation/rail-navigation.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -448,7 +453,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/selection-list/selection-list.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -486,7 +491,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/rest-api-generator/rest-api-generator.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -535,7 +540,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/time-duration/time-duration.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -590,7 +595,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/charts/line-chart/line-chart.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
   {
@@ -644,7 +649,7 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./shared/layout/not-found.component.html/not-found.routes').then(
-        (c) => c.routes
+        (c) => c.routes,
       ),
   },
 ];

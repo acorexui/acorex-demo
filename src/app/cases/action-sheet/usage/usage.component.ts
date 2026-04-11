@@ -13,7 +13,7 @@ import { Component, inject, signal } from '@angular/core';
 })
 export class UsageComponent {
   private actionSheet = inject(AXActionSheetService);
-  lastResult = signal<unknown>(null);
+  lastResult = signal<unknown | null>(null);
 
   async open(): Promise<void> {
     const items: AXActionSheetItem[] = [
@@ -26,6 +26,6 @@ export class UsageComponent {
       items,
       closeOnBackdropClick: true,
     });
-    ref.closed.subscribe((res) => this.lastResult.set(res?.data ?? null));
+    ref.onClose.subscribe((res) => this.lastResult.set(res ?? null));
   }
 }
