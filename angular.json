@@ -42,6 +42,7 @@
               "src/favicon.ico"
             ],
             "styles": [
+              "node_modules/@angular/cdk/overlay-prebuilt.css",
               "src/styles.scss",
               "public/fonts/fontawesome/styles/index.scss"
             ],

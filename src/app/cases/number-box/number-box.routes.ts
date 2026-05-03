@@ -11,14 +11,28 @@ export const routes: Routes = [
     path: 'change-on-scroll',
     loadComponent: () =>
       import('./change-on-scroll/change-on-scroll.component').then(
-        (e) => e.ChangeOnScrollComponent
+        (e) => e.ChangeOnScrollComponent,
       ),
   },
   {
     path: 'separator',
     loadComponent: () =>
       import('./separator/separator.component').then(
-        (e) => e.SeparatorComponent
+        (e) => e.SeparatorComponent,
+      ),
+  },
+  {
+    path: 'max-min-value',
+    loadComponent: () =>
+      import('./max-minvaluse/maxminvaluse.component').then(
+        (e) => e.NumberBoxMaxMinValueComponent,
+      ),
+  },
+  {
+    path: 'step-size',
+    loadComponent: () =>
+      import('./step-size/step.component').then(
+        (e) => e.NumberBoxStepSizeComponent,
       ),
   },
 ];

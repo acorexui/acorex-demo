@@ -23,4 +23,25 @@ export const routes: Routes = [
         (c) => c.DropdownButtonDisabledComponent
       ),
   },
+  {
+    path: 'colors',
+    loadComponent: () =>
+      import('./colors/color.component').then(
+        (c) => c.DropdownButtonColorsComponent
+      ),
+  },
+  {
+    path: 'look',
+    loadComponent: () =>
+      import('./Look/look.component').then(
+        (c) => c.DropdownButtonLooksComponent
+      ),
+  },
+  {
+    path: 'size',
+    loadComponent: () =>
+      import('./size/size.component').then(
+        (c) => c.DropdownButtonSizesComponent
+      ),
+  },
 ];

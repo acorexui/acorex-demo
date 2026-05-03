@@ -183,9 +183,15 @@ export const ssgRoutes = [
   'drawer/location',
   'drawer/mode',
   'drawer/usage',
+  'dropdown-button/colors',
   'dropdown-button/disabled',
+  'dropdown-button/look',
+  'dropdown-button/size',
   'dropdown-button/dropdown-mode',
   'dropdown-button/usage',
+  'fab/label',
+  'fab/tooltip',
+  'fab/usage',
   'file-explorer/usage',
   'flow-chart/usage',
   'form/summary',
@@ -253,6 +259,7 @@ export const ssgRoutes = [
   'loading/spinner-text',
   'loading/usage',
   'map/usage',
+  'media-viewer/imageviewing',
   'media-viewer/usage',
   'menu/color',
   'menu/data-driven',
@@ -284,7 +291,9 @@ export const ssgRoutes = [
   'notification/timeout-progress',
   'notification/usage',
   'number-box/change-on-scroll',
+  'number-box/max-min-value',
   'number-box/separator',
+  'number-box/step-size',
   'number-box/usage',
   'otp/auto-focus',
   'otp/copy-paste',
@@ -387,7 +396,7 @@ export const ssgRoutes = [
   'tree-view/usage',
   'uploader/feature-title',
   'uploader/usage',
-  'wysiwyg/usage'
+  'wysiwyg/usage',
 ];
 
 export default ssgRoutes;
