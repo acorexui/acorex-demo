@@ -1,13 +1,13 @@
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXNumberBoxComponent } from '@acorex/components/number-box';
-import { CommonModule } from '@angular/common';
+
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'demo-number-box-step-size',
   templateUrl: './step.component.html',
-  imports: [AXNumberBoxComponent, AXDecoratorModule, FormsModule, CommonModule],
+  imports: [AXNumberBoxComponent, AXDecoratorModule, FormsModule],
 })
 export class NumberBoxStepSizeComponent {
   protected readonly caption =
