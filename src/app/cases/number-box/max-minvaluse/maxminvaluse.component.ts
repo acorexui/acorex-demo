@@ -1,13 +1,13 @@
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import { AXNumberBoxComponent } from '@acorex/components/number-box';
-import { CommonModule } from '@angular/common';
+
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'demo-number-box-max-min-value',
   templateUrl: './maxminvaluse.component.html',
-  imports: [AXNumberBoxComponent, AXDecoratorModule, FormsModule, CommonModule],
+  imports: [AXNumberBoxComponent, AXDecoratorModule, FormsModule],
 })
 export class NumberBoxMaxMinValueComponent {
   /** Clamped between 0 and 100 */

@@ -5,6 +5,8 @@
   [showSpinButtons]="options().showSpinButtons"
   [readonly]="options().readonly"
   [disabled]="options().disabled"
->
-  <ax-clear-button *ngIf="options().allowClear"></ax-clear-button>
+  >
+  @if (options().allowClear) {
+    <ax-clear-button></ax-clear-button>
+  }
 </ax-number-box>

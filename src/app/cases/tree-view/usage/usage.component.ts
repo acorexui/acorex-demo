@@ -3,13 +3,13 @@ import {
   AXTreeViewLegacyComponent,
   AXTreeItemClickBaseEventLegacy,
 } from '@acorex/components/tree-view-legacy';
-import { CommonModule } from '@angular/common';
+
 import { Component, signal, viewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   templateUrl: 'usage.component.html',
-  imports: [CommonModule, FormsModule, AXTreeViewLegacyModule],
+  imports: [FormsModule, AXTreeViewLegacyModule],
 })
 export class UsageComponent {
   treeRef = viewChild<AXTreeViewLegacyComponent>('treeRef');
