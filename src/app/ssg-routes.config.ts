@@ -261,6 +261,7 @@ export const ssgRoutes = [
   'map/usage',
   'media-viewer/imageviewing',
   'media-viewer/usage',
+  'media-viewer/videoplay',
   'menu/color',
   'menu/data-driven',
   'menu/disabled',

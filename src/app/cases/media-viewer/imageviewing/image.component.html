@@ -1,0 +1,78 @@
+<div class="ax-mx-[5rem] ax-flex ax-flex-col ax-gap-4">
+  <div class="ax-flex ax-flex-wrap ax-items-center ax-gap-2">
+    <ax-button
+      [color]="fit() === 'contain' ? 'primary' : 'default'"
+      (click)="setFit('contain')"
+      class="ax-min-w-[5rem]"
+      title="Fit: contain"
+    >
+      Contain
+    </ax-button>
+    <ax-button
+      [color]="fit() === 'cover' ? 'primary' : 'default'"
+      (click)="setFit('cover')"
+      title="Fit: cover"
+      class="ax-min-w-[5rem]"
+    >
+      Cover
+    </ax-button>
+
+    <ax-button color="default" (click)="rotateLeft()" title="Rotate left">
+      <ax-icon><i class="fa-solid fa-rotate-left"></i></ax-icon>
+    </ax-button>
+    <ax-button color="default" (click)="rotateRight()" title="Rotate right">
+      <ax-icon><i class="fa-solid fa-rotate-right"></i></ax-icon>
+    </ax-button>
+
+    <ax-button
+      color="default"
+      (click)="resetView()"
+      title="Reset view"
+      class="ax-min-w-[5rem]"
+    >
+      Reset
+    </ax-button>
+
+    <label
+      class="ax-flex ax-items-center ax-gap-2 ax-text-sm ax-text-neutral-500"
+    >
+      <span class="ax-text-neutral-600 dark:ax-text-neutral-400">Zoom</span>
+      <input
+        type="range"
+        min="50"
+        max="300"
+        step="1"
+        class="ax-min-h-6 ax-w-56 ax-cursor-pointer"
+        [value]="zoom()"
+        (input)="setZoomFromSlider($event)"
+      />
+      <span class="ax-w-12 ax-text-right ax-tabular-nums">{{
+        zoomLabel()
+      }}</span>
+    </label>
+  </div>
+
+  <div
+    #viewport
+    class="ax-relative ax-h-[28rem] ax-w-full ax-overflow-hidden ax-rounded-lg ax-border ax-border-neutral-200 ax-bg-neutral-50 dark:ax-border-neutral-700 dark:ax-bg-neutral-900"
+    (pointerdown)="onPointerDown($event)"
+    (pointermove)="onPointerMove($event)"
+    (pointerup)="onPointerUp($event)"
+    (pointercancel)="onPointerUp($event)"
+  >
+    <img
+      [src]="src()"
+      [class]="viewportClass()"
+      class="ax-absolute ax-left-auto ax-top-auto ax-h-full ax-w-full ax-select-none"
+      [style]="imageStyle()"
+      draggable="false"
+      alt="Showcase image"
+    />
+
+    <div
+      class="ax-absolute ax-bottom-3 ax-left-3 ax-rounded ax-bg-black/60 ax-px-2 ax-py-1 ax-text-xs ax-text-white"
+    >
+      Drag to pan • Zoom {{ zoomLabel() }} • Rotate {{ rotate() }}°
+    </div>
+  </div>
+</div>
