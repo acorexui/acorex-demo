@@ -4,7 +4,7 @@
       <small class="ax-text-center">
         Selected:
         {{
-          selectedRange().start ? selectedRange().start!.toDateString() : "None"
+          selectedRange().from ? selectedRange().from!.toDateString() : "None"
         }}
         to
         {{ selectedRange().end ? selectedRange().end!.toDateString() : "None" }}

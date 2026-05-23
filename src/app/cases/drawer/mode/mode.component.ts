@@ -6,12 +6,7 @@ import { Component } from '@angular/core';
 
 @Component({
   templateUrl: './mode.component.html',
-  imports: [
-    AXDrawerModule,
-    AXDecoratorModule,
-    AXButtonModule,
-    AXDrawerModule
-],
+  imports: [AXDrawerModule, AXDecoratorModule, AXButtonModule, AXDrawerModule],
 })
 export class DrawerModeComponent {
   onCollapsedChange(event: boolean) {

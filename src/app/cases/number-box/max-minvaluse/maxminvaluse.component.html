@@ -2,23 +2,6 @@
   class="ax-flex ax-w-full ax-max-w-2xl ax-flex-col ax-gap-8 ax-py-4 ax-px-4"
 >
   <div class="ax-flex ax-flex-col ax-gap-2">
-    <ax-title>0 – 100</ax-title>
-    <ax-text>
-      <code>minValue</code> and <code>maxValue</code> define the allowed range;
-      spin buttons and typed input stay within the bounds.
-    </ax-text>
-    <ax-number-box
-      [ngModel]="value0100()"
-      (ngModelChange)="value0100.set($event)"
-      [minValue]="0"
-      [maxValue]="100"
-      [showSpinButtons]="true"
-      [step]="5"
-      placeholder="0–100"
-    />
-  </div>
-
-  <div class="ax-flex ax-flex-col ax-gap-2">
     <ax-title>−20 – 20</ax-title>
     <ax-text> Min and max can be negative or span across zero. </ax-text>
     <ax-number-box

@@ -1,9 +1,9 @@
 import { AXButtonModule } from '@acorex/components/button';
 import {
-  AXFormComponent,
   AXFormMessageStyle,
   AXFormModule,
   AXFormUpdateOn,
+  AXFormValidationEvent,
 } from '@acorex/components/form';
 import { AXLabelModule } from '@acorex/components/label';
 import { AXTextBoxModule } from '@acorex/components/text-box';
@@ -25,9 +25,7 @@ export class ValidateOnValidateComponent {
     messageStyle: 'float' as AXFormMessageStyle,
   };
 
-  validate(form: AXFormComponent) {
-    form.validate().then((res) => {
-      console.log(res);
-    });
+  onFormValidated(event: AXFormValidationEvent) {
+    console.log(event.result);
   }
 }
