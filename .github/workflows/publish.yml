@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+  contents: write
+
 env:
   APP_PORT_IN: 80
   APP_PORT_OUT: ${{ secrets.APP_PORT }}
