@@ -148,12 +148,6 @@ export const appRoutes: Route[] = [
       import('./cases/comment/comment.routes').then((c) => c.routes),
   },
   {
-    path: 'conversation',
-    component: MasterLayoutComponent,
-    loadChildren: () =>
-      import('./cases/conversation/conversation.routes').then((c) => c.routes),
-  },
-  {
     path: 'cron-job',
     component: MasterLayoutComponent,
     loadChildren: () =>
