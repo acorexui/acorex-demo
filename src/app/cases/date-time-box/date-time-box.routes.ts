@@ -27,6 +27,21 @@ export const routes: Routes = [
       import('./min-max/min-max.component').then((e) => e.MinMaxComponent),
   },
   {
+    path: 'year-range',
+    loadComponent: () =>
+      import('./year-range/year-range.component').then((e) => e.YearRangeComponent),
+  },
+  {
+    path: 'box-look',
+    loadComponent: () =>
+      import('./box-look/box-look.component').then((e) => e.CalendarLookComponent),
+  },
+  {
+    path: 'calendar-look',
+    loadComponent: () =>
+      import('./calendar-look/calendar-look.component').then((e) => e.CalendarLookComponent),
+  },
+  {
     path: 'states',
     loadComponent: () =>
       import('./states/states.component').then((e) => e.StatesComponent),

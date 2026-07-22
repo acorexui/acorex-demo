@@ -8,6 +8,17 @@ export const routes: Routes = [
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
   {
+    path: 'look',
+    loadComponent: () =>
+      import('./look/look.component').then((e) => e.LookComponent),
+  },
+  {
+    path: 'year-range',
+    loadComponent: () =>
+      import('./year-range/year-range.component').then((e) => e.YearRangeComponent),
+  },
+  
+  {
     path: 'type',
     loadComponent: () =>
       import('./type/type.component').then((e) => e.TypeComponent),
