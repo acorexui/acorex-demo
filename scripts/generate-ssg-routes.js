@@ -113,8 +113,36 @@ function generateSSGRoutes() {
     }
   }
 
-  // Remove duplicates and sort
-  const uniqueRoutes = [...new Set(allRoutes)].sort();
+  // Browser-heavy demos that crash Node prerender (canvas, maps, editors, etc.)
+  // Keep in sync with csrPrefixes in src/app/app.routes.server.ts.
+  const denylistPrefixes = [
+    "map/",
+    "paint/",
+    "editor/",
+    "wysiwyg/",
+    "file-explorer/",
+    "image-editor/",
+    "bar-chart",
+    "donut-chart/",
+    "gauge-chart/",
+    "hierarchy-chart/",
+    "line-chart/",
+    "flow-chart/",
+    "chart-legend",
+    "grid-layout-builder/",
+    "media-viewer/",
+  ];
+
+  // Remove duplicates, denylist, and sort
+  const uniqueRoutes = [...new Set(allRoutes)]
+    .filter((route) => {
+      const normalized = route.replace(/^\//, "");
+      return !denylistPrefixes.some(
+        (prefix) =>
+          normalized === prefix.slice(0, -1) || normalized.startsWith(prefix)
+      );
+    })
+    .sort();
 
   // Generate the SSG routes configuration
   const ssgRoutesConfig = `// Auto-generated SSG routes configuration
@@ -137,10 +165,18 @@ export default ssgRoutes;
   );
   fs.writeFileSync(outputPath, ssgRoutesConfig);
 
+  // Angular routesFile format (one route per line, leading slash)
+  const routesTxtPath = path.join(__dirname, "..", "routes.txt");
+  const routesTxt = uniqueRoutes
+    .map((route) => (route.startsWith("/") ? route : `/${route}`))
+    .join("\n");
+  fs.writeFileSync(routesTxtPath, routesTxt + "\n");
+
   console.log(
     `Generated SSG routes configuration with ${uniqueRoutes.length} routes:`
   );
   console.log(`Output file: ${outputPath}`);
+  console.log(`Routes file: ${routesTxtPath}`);
   console.log("\nRoutes:");
   uniqueRoutes.forEach((route) => console.log(`  ${route}`));
 

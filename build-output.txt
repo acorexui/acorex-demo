@@ -1,0 +1,3458 @@
+
+> acorex-demo@0.0.0 build:ssg
+> npm run generate:ssg-routes && npx ng build --prerender
+
+
+> acorex-demo@0.0.0 generate:ssg-routes
+> node scripts/generate-ssg-routes.js
+
+Generated SSG routes configuration with 536 routes:
+Output file: C:\Users\sh.kahrizi\Desktop\code\acorex-demo\src\app\ssg-routes.config.ts
+
+Routes:
+  /
+  accordion/accordion-mode
+  accordion/custom-header-template
+  accordion/header-icon
+  accordion/loading
+  accordion/usage
+  action-sheet/both-mode
+  action-sheet/custom-content
+  action-sheet/drag-up-fullscreen
+  action-sheet/draggable
+  action-sheet/lifecycle-events
+  action-sheet/usage
+  alert/auto-timeout
+  alert/block-layout
+  alert/color-variants
+  alert/custom-icon
+  alert/events
+  alert/inline
+  alert/long-content
+  alert/programmatic-close
+  alert/usage
+  aspect-ratio/different-ratios
+  aspect-ratio/responsive-content
+  aspect-ratio/usage
+  autocomplete/usage
+  avatar/avatar-group
+  avatar/badge
+  avatar/content
+  avatar/defaults
+  avatar/events
+  avatar/group
+  avatar/icon-mode
+  avatar/image-mode
+  avatar/look
+  avatar/shape
+  avatar/size
+  avatar/text-mode
+  avatar/usage
+  badge/badge-in-button
+  badge/colors
+  badge/look
+  badge/mini-badge
+  badge/prefix-suffix
+  badge/single-character
+  badge/usage
+  bar-chart
+  bottom-navigation/disabled
+  bottom-navigation/has-border
+  bottom-navigation/icon-only
+  bottom-navigation/indicator-position
+  bottom-navigation/look
+  bottom-navigation/many-items
+  bottom-navigation/prefix-suffix
+  bottom-navigation/usage
+  breadcrumb/activated-mode
+  breadcrumb/custom-divider
+  breadcrumb/disabled-change
+  breadcrumb/disabled-mode
+  breadcrumb/dynamic-async
+  breadcrumb/icon-mode
+  breadcrumb/long-labels-tooltip
+  breadcrumb/overflow-scroll
+  breadcrumb/prefix-suffix
+  breadcrumb/usage
+  button-group/color
+  button-group/dividers
+  button-group/dropdown-items
+  button-group/icon-only
+  button-group/look
+  button-group/per-item-overrides
+  button-group/selection-modes
+  button-group/size
+  button-group/splitted-button
+  button-group/usage
+  button-item-list/color-variants
+  button-item-list/disabled-state
+  button-item-list/mixed-content
+  button-item-list/selected-state
+  button-item-list/usage
+  button-item-list/with-dividers
+  button-item-list/with-items-array
+  button/badge-in-button
+  button/color
+  button/decorators
+  button/form-submit-reset
+  button/icon-button
+  button/loading-state
+  button/loading-text-async
+  button/look
+  button/size
+  button/toggleable-selected
+  button/usage
+  calendar-range/depth-active-view
+  calendar-range/disabled-holiday
+  calendar-range/disabled-readonly
+  calendar-range/min-max
+  calendar-range/usage
+  calendar/depth
+  calendar/disabled-dates
+  calendar/holiday
+  calendar/look
+  calendar/min-max
+  calendar/multi-month
+  calendar/navigation
+  calendar/range
+  calendar/type
+  calendar/usage
+  calendar/year-range
+  cdk/accordion
+  cdk/carousel
+  cdk/drag-drop
+  cdk/drawer
+  cdk/focus-trap
+  cdk/input-mask
+  cdk/list-navigation
+  cdk/outline
+  cdk/pan-view
+  cdk/selection
+  cdk/sliding-item
+  cdk/virtual-scroll
+  chart-legend
+  check-box/colors
+  check-box/disabled-readonly
+  check-box/hint
+  check-box/indeterminate
+  check-box/loading
+  check-box/usage
+  check-box/validation
+  chips/colors
+  chips/look
+  chips/size
+  chips/usage
+  circular-progress/async-progress
+  circular-progress/customization
+  circular-progress/indeterminate
+  circular-progress/usage
+  circular-progress/using-content-inside
+  collapse/accordion-mode
+  collapse/active-index
+  collapse/custom-header-template
+  collapse/disabled
+  collapse/header-icon
+  collapse/hidden-header
+  collapse/loading
+  collapse/looks
+  collapse/programmatic-control
+  collapse/usage
+  color-box/clear-behavior
+  color-box/disable
+  color-box/read-only
+  color-box/usage
+  color-box/using-decorators
+  color-box/visual-toggles
+  color-palette/custom-swatches-favorites
+  color-palette/full-options
+  color-palette/inputs
+  color-palette/preview
+  color-palette/swatches
+  color-palette/usage
+  command/template
+  command/usage
+  comment/interactions
+  comment/programmatic
+  comment/usage
+  context-menu/basic
+  context-menu/dynamic-items
+  context-menu/programmatic-open
+  context-menu/usage
+  core/constants
+  core/date-time
+  core/event
+  core/file
+  core/format
+  core/icon
+  core/image
+  core/locale
+  core/memoize
+  core/network
+  core/pipes
+  core/platform
+  core/storage
+  core/translation
+  core/utils
+  core/validation
+  cron-job/usage
+  data-pager/compact-interaction
+  data-pager/usage
+  data-table/allow-resize-and-reorder
+  data-table/cell-template
+  data-table/empty-template
+  data-table/usage
+  date-time-box/allow-typing
+  date-time-box/box-look
+  date-time-box/calendar-look
+  date-time-box/calendar-types
+  date-time-box/date-only
+  date-time-box/looks
+  date-time-box/min-max
+  date-time-box/states
+  date-time-box/time-only
+  date-time-box/usage
+  date-time-box/year-range
+  date-time-picker/calendar-look
+  date-time-picker/constraints
+  date-time-picker/picker
+  date-time-picker/states
+  date-time-picker/type
+  date-time-picker/usage
+  date-time-picker/year-range
+  decorators/clear-button
+  decorators/close-button
+  decorators/color-indicator
+  decorators/full-screen-button
+  decorators/generic-content
+  decorators/heading
+  decorators/icon
+  dialog/asynchronous-process
+  dialog/confirm-default-action
+  dialog/custom-buttons
+  dialog/programmatic-open
+  dialog/usage
+  donut-chart
+  drawer/location
+  drawer/mode
+  drawer/usage
+  dropdown-button/colors
+  dropdown-button/disabled
+  dropdown-button/dropdown-mode
+  dropdown-button/look
+  dropdown-button/size
+  dropdown-button/usage
+  dropdown/dropdown-box
+  dropdown/dropdown-panel
+  editor/disabled-state
+  editor/readonly-mode
+  editor/usage
+  fab/label
+  fab/tooltip
+  fab/usage
+  file-explorer/usage
+  flow-chart/usage
+  form/label
+  form/look
+  form/messageStyle
+  form/summary
+  form/updateOn
+  form/usage
+  form/validate
+  gauge-chart
+  grid-layout-builder/api
+  grid-layout-builder/responsive
+  grid-layout-builder/usage
+  hierarchy-chart
+  image-editor/usage
+  image/loading-placeholder
+  image/overlay
+  image/usage
+  json-viewer/dynamic
+  json-viewer/nested
+  json-viewer/usage
+  kanban/action-click
+  kanban/custom-templates
+  kanban/drag-start-delay
+  kanban/empty-state
+  kanban/mouse-events
+  kanban/priority
+  kanban/tooltips
+  kanban/usage
+  kbd/key-combinations
+  kbd/modifier-keys
+  kbd/single-key
+  kbd/usage
+  label/accessibility
+  label/error-state
+  label/form-association
+  label/required
+  label/usage
+  line-chart
+  list/custom-empty
+  list/custom-footer
+  list/custom-header
+  list/custom-item
+  list/custom-loading
+  list/multiple
+  list/selection-mode
+  list/usage
+  loading-dialog/accessibility
+  loading-dialog/button-states
+  loading-dialog/dynamic-updates
+  loading-dialog/indeterminate
+  loading-dialog/long-text
+  loading-dialog/multiple-buttons
+  loading-dialog/no-buttons
+  loading-dialog/progress-colors
+  loading-dialog/usage
+  loading/context
+  loading/custom-spinner
+  loading/directive
+  loading/loading-spinner
+  loading/multi-loader-state
+  loading/region
+  loading/service-doloading
+  loading/service-overlay
+  loading/spinner-color
+  loading/spinner-contrast
+  loading/spinner-size
+  loading/spinner-stroke-size
+  loading/spinner-text
+  loading/usage
+  map/boundary
+  map/draw-controls
+  map/fitbounds
+  map/location
+  map/markers
+  map/poi
+  map/polygons
+  map/popup
+  map/usage
+  media-viewer/gallery
+  media-viewer/imageviewing
+  media-viewer/usage
+  media-viewer/videoplay
+  menu/color
+  menu/data-driven
+  menu/disabled
+  menu/dividers
+  menu/hide-arrows
+  menu/multi-level
+  menu/open-close
+  menu/programmatic-close
+  menu/rtl
+  menu/scrollable
+  menu/usage
+  menu/use-decorators
+  menu/vertical
+  modal/backdrop-options
+  modal/draggable
+  modal/minimize-maximize
+  modal/service
+  modal/sizes
+  modal/template
+  modal/usage
+  navbar/content-projection
+  navbar/look-variants
+  navbar/simple-usage
+  notification/asynchronous-process
+  notification/custom-content
+  notification/interactive-features
+  notification/locations
+  notification/timeout-progress
+  notification/usage
+  number-box/change-on-scroll
+  number-box/max-min-value
+  number-box/separator
+  number-box/step-size
+  number-box/usage
+  otp/auto-focus
+  otp/copy-paste
+  otp/disabled-readonly
+  otp/length
+  otp/looks
+  otp/states
+  otp/usage
+  otp/validation
+  paint/signature-box
+  paint/usage
+  password-box/auto-complete
+  password-box/clear-button
+  password-box/password-strength-validation
+  password-box/read-only-disable
+  password-box/toggle
+  password-box/usage
+  phone-box/exclude
+  phone-box/only-countries
+  phone-box/usage
+  phone-box/validation
+  picker/usage
+  popover/hover
+  popover/leave
+  popover/methods
+  popover/usage
+  popup/header
+  popup/size
+  popup/size-in-screens
+  popup/usage
+  progress-bar/custom-height
+  progress-bar/mode
+  progress-bar/usage
+  progress-bar/using-decorators
+  qrcode/colors
+  qrcode/error-levels
+  qrcode/logo
+  qrcode/output-types
+  qrcode/sizes
+  qrcode/usage
+  query-builder/usage
+  rail-navigation/locations
+  rail-navigation/looks
+  rail-navigation/service
+  rail-navigation/states
+  rail-navigation/usage
+  range-slider/colors
+  range-slider/modes
+  range-slider/music-player
+  range-slider/ranges
+  range-slider/snap-labels
+  range-slider/snap-modes
+  range-slider/states
+  range-slider/steps
+  range-slider/tooltip-modes
+  range-slider/usage
+  range-slider/vertical
+  rate-picker/custom-icon
+  rate-picker/icons
+  rate-picker/max-values
+  rate-picker/sizes
+  rate-picker/states
+  rate-picker/step-precision
+  rate-picker/transitions
+  rate-picker/usage
+  rest-api-generator/usage
+  result/usage
+  rrule/bymonthday
+  rrule/byweekday
+  rrule/complex-rules
+  rrule/frequency-options
+  rrule/interval-count
+  rrule/rrule-picker
+  rrule/until-date
+  rrule/usage
+  scheduler/actions
+  scheduler/calendar-types
+  scheduler/current-time-indicator
+  scheduler/custom-header
+  scheduler/custom-templates
+  scheduler/data-loading
+  scheduler/drag-drop
+  scheduler/event-handling
+  scheduler/holidays
+  scheduler/readonly
+  scheduler/resources
+  scheduler/responsive
+  scheduler/usage
+  scheduler/views
+  scheduler/working-hours
+  search-box/changing-default-icon
+  search-box/usage
+  search-box/using-decorators
+  select-box/api-call
+  select-box/custom-empty-template
+  select-box/custom-item-template
+  select-box/custom-loading-template
+  select-box/multiple-selection
+  select-box/usage
+  selection-list/control
+  selection-list/custom
+  selection-list/hint
+  selection-list/horizontal
+  selection-list/multiple
+  selection-list/usage
+  side-menu/color
+  side-menu/customize-font
+  side-menu/group-title
+  side-menu/usage
+  side-menu/use-decorator
+  skeleton/animated
+  skeleton/usage
+  sliding-item/usage
+  step-wizard/connector-options
+  step-wizard/different-looks
+  step-wizard/different-sizes
+  step-wizard/interactive-steps
+  step-wizard/methods
+  step-wizard/navigation-state
+  step-wizard/orientation
+  step-wizard/usage
+  switch/color
+  switch/content
+  switch/disabled-readonly
+  switch/loading
+  switch/on-off
+  switch/on-off-content
+  switch/size
+  switch/usage
+  tabs/custom-template
+  tabs/decoration
+  tabs/disabled-state
+  tabs/event-handling
+  tabs/location-variants
+  tabs/look-variants
+  tabs/tab-with-content
+  tabs/usage
+  tag-box/auto-complete
+  tag-box/custom-templates
+  tag-box/header-footer-templates
+  tag-box/usage
+  tag/colors
+  tag/decorators
+  tag/look
+  tag/size
+  tag/usage
+  text-area/counter
+  text-area/counter-max-length
+  text-area/rows
+  text-area/usage
+  text-box/number-mode
+  text-box/usage
+  text-box/using-decorators
+  time-duration/usage
+  time-line/no-icon
+  time-line/usage
+  time-line/with-icon
+  toast/close-buttons
+  toast/color-variants
+  toast/config-override
+  toast/icon-customization
+  toast/pause-hover
+  toast/positioning
+  toast/service-methods
+  toast/timeout-progress
+  toast/translation
+  toast/usage
+  toolbar/usage
+  tooltip/custom-template
+  tooltip/usage
+  tree-view/usage
+  uploader/browse-handle
+  uploader/custom-template
+  uploader/dialog-container
+  uploader/drag-drop-zone
+  uploader/feature-title
+  uploader/file-list
+  uploader/service-integration
+  uploader/usage
+  uploader/zone-directive
+  wysiwyg/usage
+[33m❯[39m Building...
+[1m[33mOne or more browsers which are configured in the project's Browserslist configuration will be ignored as ES5 output is not supported by the Angular CLI.
+Ignored browsers:
+bb 10, bb 7, ie 11, ie 10, ie_mob 11, ie_mob 10, kaios 2.5, op_mini all[39m[22m
+[1m[33mOne or more browsers which are configured in the project's Browserslist configuration fall outside Angular's browser support for this version.
+Unsupported browsers:
+and_qq 14.9, and_uc 15.5, android 150, baidu 13.52, ios_saf 15.6-15.8, ios_saf 15.5, ios_saf 15.4, ios_saf 15.2-15.3, ios_saf 15.0-15.1, ios_saf 14.5-14.8, ios_saf 14.0-14.4, ios_saf 13.4-13.7, ios_saf 13.3, ios_saf 13.2, kaios 3.0-3.1, op_mob 80, opera 131, opera 127, samsung 30, samsung 29[39m[22m
+ERROR T [Error]: NG0201
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:7413)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:7358)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:7358)
+    at qn.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:31:7180)
+    at qp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:25438)
+    at Wp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:25642)
+    at uo (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:31:7555)
+    at ge (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:2482)
+    at D (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:2515)
+    at new n (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-J4J5GVYR.mjs:2:4495) {
+  code: -201
+}
+ERROR T [Error]: NG0201
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:7413)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:7358)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:7358)
+    at qn.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:31:7180)
+    at qp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:25438)
+    at Wp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:25642)
+    at uo (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:31:7555)
+    at ge (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:2482)
+    at D (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:2515)
+    at new n (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-J4J5GVYR.mjs:2:4495) {
+  code: -201
+}
+ERROR T [Error]: NG0201
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:7413)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:7358)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:7358)
+    at qn.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:31:7180)
+    at qp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:25438)
+    at Wp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:25642)
+    at uo (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:31:7555)
+    at ge (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:2482)
+    at D (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:2515)
+    at new n (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-J4J5GVYR.mjs:2:4495) {
+  code: -201
+}
+ERROR T [Error]: NG0201
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:7413)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:7358)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:7358)
+    at qn.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:31:7180)
+    at qp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:25438)
+    at Wp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:25642)
+    at uo (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:31:7555)
+    at ge (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:2482)
+    at D (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:2515)
+    at new n (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-J4J5GVYR.mjs:2:4495) {
+  code: -201
+}
+ERROR T [Error]: NG0201
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:7413)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:7358)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:7358)
+    at qn.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:31:7180)
+    at qp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:25438)
+    at Wp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:25642)
+    at uo (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:31:7555)
+    at ge (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:2482)
+    at D (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:2515)
+    at new n (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-J4J5GVYR.mjs:2:4495) {
+  code: -201
+}
+ERROR T [Error]: NG0201
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:7413)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:7358)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:7358)
+    at qn.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:31:7180)
+    at qp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:25438)
+    at Wp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:25642)
+    at uo (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:31:7555)
+    at ge (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:2482)
+    at D (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:2515)
+    at new n (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-J4J5GVYR.mjs:2:4495) {
+  code: -201
+}
+ERROR T [Error]: NG0201
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:7413)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:7358)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:7358)
+    at qn.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:31:7180)
+    at qp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:25438)
+    at Wp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:25642)
+    at uo (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:31:7555)
+    at ge (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:2482)
+    at D (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:2515)
+    at new n (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-J4J5GVYR.mjs:2:4495) {
+  code: -201
+}
+ERROR T [Error]: NG0201
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:7413)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:7358)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:7358)
+    at qn.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:31:7180)
+    at qp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:25438)
+    at Wp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:25642)
+    at uo (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:31:7555)
+    at ge (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:2482)
+    at D (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:5:2515)
+    at new n (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-J4J5GVYR.mjs:2:4495) {
+  code: -201
+}
+ERROR T [Error]: NG0201
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:7413)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:7358)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:7358)
+    at qn.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:31:7180)
+    at qp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:25438)
+    at Wp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:25642)
+    at uo (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:31:7555)
+    at ge (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:2482)
+    at D (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:5:2515)
+    at new n (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-J4J5GVYR.mjs:2:4495) {
+  code: -201
+}
+ERROR T [Error]: NG0201
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:7413)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:7358)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:7358)
+    at qn.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:31:7180)
+    at qp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:25438)
+    at Wp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:25642)
+    at uo (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:31:7555)
+    at ge (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:2482)
+    at D (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:2515)
+    at new n (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-J4J5GVYR.mjs:2:4495) {
+  code: -201
+}
+ERROR T [Error]: NG0201
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:7413)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:7358)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:7358)
+    at qn.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:31:7180)
+    at qp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:25438)
+    at Wp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:25642)
+    at uo (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:31:7555)
+    at ge (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:2482)
+    at D (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:2515)
+    at new n (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-J4J5GVYR.mjs:2:4495) {
+  code: -201
+}
+ERROR T [Error]: NG0201
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:7413)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:7358)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:7358)
+    at qn.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:31:7180)
+    at qp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:25438)
+    at Wp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:25642)
+    at uo (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:31:7555)
+    at ge (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:2482)
+    at D (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:2515)
+    at new n (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-J4J5GVYR.mjs:2:4495) {
+  code: -201
+}
+ERROR TypeError: Cannot read properties of undefined (reading 'maska')
+    at j (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-EC4PPE7F.mjs:2:1232)
+    at x.init (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-EC4PPE7F.mjs:2:5768)
+    at new x (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-EC4PPE7F.mjs:2:5288)
+    at u.<anonymous> (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-XJ6Q4VGK.mjs:2:1254)
+    at Generator.next (<anonymous>)
+    at f (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-24TWMIZ7.mjs:2:1894)
+    at s.invoke (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/polyfills.server.mjs:3:7672)
+    at Object.onInvoke (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/chunk-ZQNZL6Y4.mjs:31:40468)
+    at s.invoke (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/polyfills.server.mjs:3:7612)
+    at H.run (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/53997e66-217f-4fb9-aeba-4c9632e7b891/polyfills.server.mjs:3:2218)
+ERROR TypeError: Cannot read properties of undefined (reading 'maska')
+    at j (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-EC4PPE7F.mjs:2:1232)
+    at x.init (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-EC4PPE7F.mjs:2:5768)
+    at new x (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-EC4PPE7F.mjs:2:5288)
+    at u.<anonymous> (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-XJ6Q4VGK.mjs:2:1254)
+    at Generator.next (<anonymous>)
+    at f (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-24TWMIZ7.mjs:2:1894)
+    at s.invoke (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/polyfills.server.mjs:3:7672)
+    at Object.onInvoke (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/chunk-ZQNZL6Y4.mjs:31:40468)
+    at s.invoke (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/polyfills.server.mjs:3:7612)
+    at H.run (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/ddb1e5e2-1abb-4074-b593-3c1d04d12eae/polyfills.server.mjs:3:2218)
+ERROR T [Error]: NG0201
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:7413)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:7358)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:7358)
+    at qn.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:31:7180)
+    at qp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:25438)
+    at Wp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:25642)
+    at uo (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:31:7555)
+    at ge (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:2482)
+    at D (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-ZQNZL6Y4.mjs:5:2515)
+    at new n (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/badb8b15-c899-4903-9688-41e860d9e242/chunk-J4J5GVYR.mjs:2:4495) {
+  code: -201
+}
+ERROR T [Error]: NG0201
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:7413)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:7358)
+    at Zt.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:7358)
+    at qn.get (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:31:7180)
+    at qp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:25438)
+    at Wp (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:25642)
+    at uo (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:31:7555)
+    at ge (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:2482)
+    at D (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-ZQNZL6Y4.mjs:5:2515)
+    at new n (file:///C:/Users/sh.kahrizi/Desktop/code/acorex-demo/.angular/prerender-root/a154dd03-7dd7-420f-b9df-641f5eb88144/chunk-J4J5GVYR.mjs:2:4495) {
+  code: -201
+}
+[32m✔[39m Building...
+[35mBrowser bundles[39m      
+[1mInitial chunk files[22m  [2m | [22m[1mNames[22m           [2m | [22m [1mRaw size[22m[2m | [22m[1mEstimated transfer size[22m
+[32mstyles-SCZZ7P75.css[39m  [2m | [22m[2mstyles[22m          [2m | [22m  [36m2.51 MB[39m[2m | [22m              [36m111.54 kB[39m
+[32mchunk-CZB5IH2H.js[39m    [2m | [22m[2m-[22m               [2m | [22m[36m203.52 kB[39m[2m | [22m               [36m58.41 kB[39m
+[32mchunk-AHWWWBVI.js[39m    [2m | [22m[2m-[22m               [2m | [22m[36m176.22 kB[39m[2m | [22m                [36m5.95 kB[39m
+[32mchunk-5G2PAVH3.js[39m    [2m | [22m[2m-[22m               [2m | [22m[36m117.30 kB[39m[2m | [22m               [36m29.58 kB[39m
+[32mchunk-VB727VFH.js[39m    [2m | [22m[2m-[22m               [2m | [22m [36m84.40 kB[39m[2m | [22m               [36m20.54 kB[39m
+[32mmain-XB7VGB57.js[39m     [2m | [22m[2mmain[22m            [2m | [22m [36m77.26 kB[39m[2m | [22m               [36m19.11 kB[39m
+[32mchunk-EYZF76QB.js[39m    [2m | [22m[2m-[22m               [2m | [22m [36m59.26 kB[39m[2m | [22m               [36m11.49 kB[39m
+[32mchunk-C6DKBROL.js[39m    [2m | [22m[2m-[22m               [2m | [22m [36m42.49 kB[39m[2m | [22m               [36m12.30 kB[39m
+[32mchunk-GE6WC4XA.js[39m    [2m | [22m[2m-[22m               [2m | [22m [36m40.38 kB[39m[2m | [22m               [36m11.03 kB[39m
+[32mpolyfills-M7NHVEHY.js[39m[2m | [22m[2mpolyfills[22m       [2m | [22m [36m35.39 kB[39m[2m | [22m               [36m11.46 kB[39m
+[32mchunk-X3F7NKXZ.js[39m    [2m | [22m[2m-[22m               [2m | [22m [36m32.18 kB[39m[2m | [22m               [36m10.71 kB[39m
+[32mchunk-3C6GMUHB.js[39m    [2m | [22m[2m-[22m               [2m | [22m [36m27.32 kB[39m[2m | [22m                [36m6.63 kB[39m
+[32mchunk-MRDTUDRO.js[39m    [2m | [22m[2m-[22m               [2m | [22m [36m12.71 kB[39m[2m | [22m                [36m2.96 kB[39m
+[32mchunk-6ZXICA22.js[39m    [2m | [22m[2m-[22m               [2m | [22m  [36m9.82 kB[39m[2m | [22m                [36m2.71 kB[39m
+[32mchunk-4U57ZRCZ.js[39m    [2m | [22m[2m-[22m               [2m | [22m  [36m9.72 kB[39m[2m | [22m                [36m2.67 kB[39m
+[32mchunk-H3SM5GV7.js[39m    [2m | [22m[2m-[22m               [2m | [22m  [36m6.28 kB[39m[2m | [22m                [36m1.98 kB[39m
+[32mchunk-5CIB7QUZ.js[39m    [2m | [22m[2m-[22m               [2m | [22m  [36m4.04 kB[39m[2m | [22m                [36m1.19 kB[39m
+[32mchunk-YTFYETTO.js[39m    [2m | [22m[2m-[22m               [2m | [22m  [36m3.99 kB[39m[2m | [22m                [36m1.27 kB[39m
+[32mchunk-UID3DRH3.js[39m    [2m | [22m[2m-[22m               [2m | [22m  [36m3.67 kB[39m[2m | [22m                [36m1.32 kB[39m
+[32mchunk-BIA3BTWF.js[39m    [2m | [22m[2m-[22m               [2m | [22m  [36m3.27 kB[39m[2m | [22m                [36m1.20 kB[39m
+[32mchunk-VGXS5UXD.js[39m    [2m | [22m[2m-[22m               [2m | [22m  [36m2.58 kB[39m[2m | [22m                [36m1.08 kB[39m
+[32mchunk-AA6EVG7H.js[39m    [2m | [22m[2m-[22m               [2m | [22m  [36m1.63 kB[39m[2m | [22m              [36m722 bytes[39m
+[32mchunk-KLS763IQ.js[39m    [2m | [22m[2m-[22m               [2m | [22m[36m928 bytes[39m[2m | [22m              [36m928 bytes[39m
+[32mchunk-OUAOBIKB.js[39m    [2m | [22m[2m-[22m               [2m | [22m[36m813 bytes[39m[2m | [22m              [36m813 bytes[39m
+
+[1m [22m                    [2m | [22m[1mInitial total[22m   [2m | [22m  [1m3.47 MB[22m[2m | [22m              [1m327.59 kB[22m
+
+[1mLazy chunk files[22m     [2m | [22m[1mNames[22m           [2m | [22m [1mRaw size[22m[2m | [22m[1mEstimated transfer size[22m
+[32mchunk-WNJJM7SW.js[39m    [2m | [22m[2mindex[22m           [2m | [22m  [36m1.08 MB[39m[2m | [22m              [36m244.01 kB[39m
+[32mchunk-BNK3NFGB.js[39m    [2m | [22m[2m-[22m               [2m | [22m[36m356.86 kB[39m[2m | [22m               [36m32.03 kB[39m
+[32mchunk-Q3U64PIP.js[39m    [2m | [22m[2mindex[22m           [2m | [22m[36m283.31 kB[39m[2m | [22m               [36m81.14 kB[39m
+[32mchunk-UMKHOHVR.js[39m    [2m | [22m[2meditorjs[22m        [2m | [22m[36m213.46 kB[39m[2m | [22m               [36m47.08 kB[39m
+[32mchunk-QLWIRF2O.js[39m    [2m | [22m[2mquill[22m           [2m | [22m[36m175.29 kB[39m[2m | [22m               [36m45.24 kB[39m
+[32mchunk-VM4TMNK5.js[39m    [2m | [22m[2m-[22m               [2m | [22m[36m149.55 kB[39m[2m | [22m               [36m37.62 kB[39m
+[32mchunk-RCASKTDX.js[39m    [2m | [22m[2m-[22m               [2m | [22m[36m145.97 kB[39m[2m | [22m               [36m26.24 kB[39m
+[32mchunk-HOFKA73L.js[39m    [2m | [22m[2mgridstack[22m       [2m | [22m [36m88.47 kB[39m[2m | [22m               [36m21.82 kB[39m
+[32mchunk-VDSX4R3Z.js[39m    [2m | [22m[2mindex[22m           [2m | [22m [36m87.20 kB[39m[2m | [22m               [36m23.17 kB[39m
+[32mchunk-ZGX27MNN.js[39m    [2m | [22m[2musage-component[22m [2m | [22m [36m78.90 kB[39m[2m | [22m               [36m15.25 kB[39m
+[32mchunk-OOEITELI.js[39m    [2m | [22m[2musage-component[22m [2m | [22m [36m77.19 kB[39m[2m | [22m                [36m8.01 kB[39m
+[32mchunk-HNSMDJY6.js[39m    [2m | [22m[2m-[22m               [2m | [22m [36m75.26 kB[39m[2m | [22m               [36m21.00 kB[39m
+[32mchunk-LATI5BD5.js[39m    [2m | [22m[2m-[22m               [2m | [22m [36m74.73 kB[39m[2m | [22m               [36m26.39 kB[39m
+[32mchunk-MBDLCX3O.js[39m    [2m | [22m[2m-[22m               [2m | [22m [36m73.76 kB[39m[2m | [22m               [36m17.93 kB[39m
+[32mchunk-XJGVAOHS.js[39m    [2m | [22m[2m-[22m               [2m | [22m [36m72.02 kB[39m[2m | [22m               [36m15.09 kB[39m
+[2m...and 833 more lazy chunks files. Use "--verbose" to show all the files.[22m
+
+
+[35mServer bundles[39m       
+[1mInitial chunk files[22m  [2m | [22m[1mNames[22m           [2m | [22m [1mRaw size[22m
+[32mserver.mjs[39m           [2m | [22m[2mserver[22m          [2m | [22m[36m814.18 kB[39m[2m | [22m                       
+[32mchunk-DLLNI4OV.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m[36m531.15 kB[39m[2m | [22m                       
+[32mpolyfills.server.mjs[39m [2m | [22m[2mpolyfills.server[22m[2m | [22m[36m266.12 kB[39m[2m | [22m                       
+[32mchunk-ZQNZL6Y4.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m[36m223.19 kB[39m[2m | [22m                       
+[32mchunk-W3QL7YRI.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m[36m176.26 kB[39m[2m | [22m                       
+[32mchunk-DFCP74SQ.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m[36m132.93 kB[39m[2m | [22m                       
+[32mchunk-ZNV6TUFX.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m [36m84.45 kB[39m[2m | [22m                       
+[32mchunk-FHODLBQR.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m [36m59.30 kB[39m[2m | [22m                       
+[32mchunk-CFGUXXF6.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m [36m42.94 kB[39m[2m | [22m                       
+[32mchunk-DYODCNA6.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m [36m39.45 kB[39m[2m | [22m                       
+[32mchunk-YVUILYVH.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m [36m32.21 kB[39m[2m | [22m                       
+[32mchunk-I4UNBRIW.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m [36m27.36 kB[39m[2m | [22m                       
+[32mchunk-JKBS6IJA.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m [36m12.74 kB[39m[2m | [22m                       
+[32mchunk-PJICG6RA.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m  [36m9.86 kB[39m[2m | [22m                       
+[32mchunk-4SS4QNPN.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m  [36m9.76 kB[39m[2m | [22m                       
+[32mchunk-QNQDFCYP.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m  [36m6.32 kB[39m[2m | [22m                       
+[32mchunk-OG4O6IAB.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m  [36m4.08 kB[39m[2m | [22m                       
+[32mchunk-OFCXNO4O.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m  [36m4.03 kB[39m[2m | [22m                       
+[32mchunk-KCZAGP37.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m  [36m3.70 kB[39m[2m | [22m                       
+[32mchunk-VBDD77QO.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m  [36m3.30 kB[39m[2m | [22m                       
+[32mchunk-24TWMIZ7.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m  [36m3.26 kB[39m[2m | [22m                       
+[32mchunk-RY75CAGL.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m  [36m1.67 kB[39m[2m | [22m                       
+[32mchunk-4DB6DE5Z.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m[36m965 bytes[39m[2m | [22m                       
+[32mmain.server.mjs[39m      [2m | [22m[2mmain.server[22m     [2m | [22m[36m945 bytes[39m[2m | [22m                       
+[32mchunk-EWYGZGDY.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m[36m847 bytes[39m[2m | [22m                       
+
+[1mLazy chunk files[22m     [2m | [22m[1mNames[22m           [2m | [22m [1mRaw size[22m
+[32mchunk-KYG5JSGR.mjs[39m   [2m | [22m[2mindex[22m           [2m | [22m  [36m1.08 MB[39m[2m | [22m                       
+[32mchunk-ZMRCIQD7.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m[36m356.90 kB[39m[2m | [22m                       
+[32mchunk-ZWCVN55Q.mjs[39m   [2m | [22m[2mindex[22m           [2m | [22m[36m283.35 kB[39m[2m | [22m                       
+[32mchunk-KEW2VZYN.mjs[39m   [2m | [22m[2meditorjs[22m        [2m | [22m[36m213.50 kB[39m[2m | [22m                       
+[32mchunk-FKL42ICM.mjs[39m   [2m | [22m[2mquill[22m           [2m | [22m[36m175.32 kB[39m[2m | [22m                       
+[32mchunk-AY2MR6LF.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m[36m149.58 kB[39m[2m | [22m                       
+[32mchunk-IPTLDTWM.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m[36m146.02 kB[39m[2m | [22m                       
+[32mchunk-WVAKNEFD.mjs[39m   [2m | [22m[2mgridstack[22m       [2m | [22m [36m88.50 kB[39m[2m | [22m                       
+[32mchunk-NPLB2R6U.mjs[39m   [2m | [22m[2mindex[22m           [2m | [22m [36m87.23 kB[39m[2m | [22m                       
+[32mchunk-A66VVT7A.mjs[39m   [2m | [22m[2musage-component[22m [2m | [22m [36m78.98 kB[39m[2m | [22m                       
+[32mchunk-5ZG7BYVZ.mjs[39m   [2m | [22m[2musage-component[22m [2m | [22m [36m77.25 kB[39m[2m | [22m                       
+[32mchunk-NOYT2TXF.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m [36m75.30 kB[39m[2m | [22m                       
+[32mchunk-PHILUIQ4.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m [36m74.77 kB[39m[2m | [22m                       
+[32mchunk-4AOMJKOC.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m [36m73.80 kB[39m[2m | [22m                       
+[32mchunk-YADMAIUD.mjs[39m   [2m | [22m[2m-[22m               [2m | [22m [36m72.07 kB[39m[2m | [22m                       
+[2m...and 834 more lazy chunks files. Use "--verbose" to show all the files.[22m
+
+[35mPrerendered 718 static routes.[39m
+Application bundle generation failed. [40.153 seconds] - 2026-07-22T10:52:42.295Z
+
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: AXSelectBoxComponent is not used within the template of UsageComponent[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/cases/core/image/usage/usage.component.ts:10:31:
+[37m      10 │ ...: [AXButtonComponent, [32mAXSelectBoxComponent[37m, NgStyle, CommonModu...
+         ╵                          [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: NgStyle is not used within the template of UsageComponent[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/cases/core/image/usage/usage.component.ts:10:53:
+[37m      10 │ ... [AXButtonComponent, AXSelectBoxComponent, [32mNgStyle[37m, CommonModule],
+         ╵                                               [32m~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mangular:styles/component:scss;9d451df6f21046bac1ee4a830b3800d12ae0e6075cfe15bc3200ef6686db570e;C:/Users/sh.kahrizi/Desktop/code/acorex-demo/src/app/cases/cdk/carousel/usage/usage.component.ts exceeded maximum budget. Budget 2.00 kB was not met by 16.73 kB with a total of 18.73 kB.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mModule 'leaflet' used by 'node_modules/leaflet.locatecontrol/dist/L.Control.Locate.esm.js' is not ESM[0m
+
+  CommonJS or AMD dependencies can cause optimization bailouts.
+  For more information see: [4mhttps://angular.dev/tools/cli/build#configuring-commonjs-dependencies[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mModule 'tinygradient-es' used by 'node_modules/@acorex/core/fesm2022/acorex-core-utils.mjs' is not ESM[0m
+
+  CommonJS or AMD dependencies can cause optimization bailouts.
+  For more information see: [4mhttps://angular.dev/tools/cli/build#configuring-commonjs-dependencies[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mModule 'quill-delta-to-html' used by 'node_modules/@acorex/components/fesm2022/acorex-components-wysiwyg.mjs' is not ESM[0m
+
+  CommonJS or AMD dependencies can cause optimization bailouts.
+  For more information see: [4mhttps://angular.dev/tools/cli/build#configuring-commonjs-dependencies[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mModule 'leaflet-draw' used by 'node_modules/@acorex/components/fesm2022/acorex-components-map.mjs' is not ESM[0m
+
+  CommonJS or AMD dependencies can cause optimization bailouts.
+  For more information see: [4mhttps://angular.dev/tools/cli/build#configuring-commonjs-dependencies[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mModule '@bomdi/codebox' used by 'node_modules/@acorex/components/fesm2022/acorex-components-editor.mjs' is not ESM[0m
+
+  CommonJS or AMD dependencies can cause optimization bailouts.
+  For more information see: [4mhttps://angular.dev/tools/cli/build#configuring-commonjs-dependencies[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mModule 'editorjs-text-color-plugin' used by 'node_modules/@acorex/components/fesm2022/acorex-components-editor.mjs' is not ESM[0m
+
+  CommonJS or AMD dependencies can cause optimization bailouts.
+  For more information see: [4mhttps://angular.dev/tools/cli/build#configuring-commonjs-dependencies[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mModule 'quill-delta' used by 'node_modules/quill/core.js' is not ESM[0m
+
+  CommonJS or AMD dependencies can cause optimization bailouts.
+  For more information see: [4mhttps://angular.dev/tools/cli/build#configuring-commonjs-dependencies[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mModule 'qrcode' used by 'node_modules/@acorex/cdk/fesm2022/acorex-cdk-qrcode.mjs' is not ESM[0m
+
+  CommonJS or AMD dependencies can cause optimization bailouts.
+  For more information see: [4mhttps://angular.dev/tools/cli/build#configuring-commonjs-dependencies[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mModule 'memoizee' used by 'node_modules/@acorex/core/fesm2022/acorex-core-memoize.mjs' is not ESM[0m
+
+  CommonJS or AMD dependencies can cause optimization bailouts.
+  For more information see: [4mhttps://angular.dev/tools/cli/build#configuring-commonjs-dependencies[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/date-time-box/looks'.
+
+document is not defined[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/date-time-box/calendar-types'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/date-time-picker/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/date-time-picker/year-range'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/date-time-picker/calendar-look'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/date-time-picker/picker'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/date-time-picker/type'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/date-time-picker/states'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/date-time-picker/constraints'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/dialog/asynchronous-process'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/dialog/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/dialog/confirm-default-action'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/dialog/custom-buttons'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/dialog/programmatic-open'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/decorators/clear-button'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/decorators/close-button'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/decorators/color-indicator'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/decorators/full-screen-button'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/decorators/generic-content'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/decorators/heading'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/decorators/icon'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/donut-chart/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/donut-chart/styling'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/donut-chart/animation'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/donut-chart/interactive'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/donut-chart/size'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/drawer/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/drawer/mode'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/drawer/location'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/dropdown/dropdown-panel'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/dropdown/dropdown-box'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/dropdown-button/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/dropdown-button/dropdown-mode'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/dropdown-button/disabled'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/dropdown-button/colors'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/dropdown-button/look'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/dropdown-button/size'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/editor/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/editor/disabled-state'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/editor/readonly-mode'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/form/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/form/label'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/form/look'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/form/messageStyle'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/form/updateOn'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/form/summary'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/form/validate'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/fab/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/fab/tooltip'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/fab/label'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/gauge-chart/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/gauge-chart/thresholds'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/gauge-chart/animation'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/gauge-chart/styling'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/gauge-chart/size'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/file-explorer/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/flow-chart/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/grid-layout-builder/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/grid-layout-builder/responsive'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/grid-layout-builder/api'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/hierarchy-chart/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/hierarchy-chart/styling'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/hierarchy-chart/interactive'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/hierarchy-chart/size'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/hierarchy-chart/direction'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/hierarchy-chart/custom-template'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/image/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/image/overlay'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/image/loading-placeholder'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/image-editor/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/list/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/list/multiple'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/list/custom-header'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/list/custom-footer'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/list/custom-item'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/list/custom-loading'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/list/custom-empty'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/list/selection-mode'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading/region'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading/directive'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading/service-overlay'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading/service-doloading'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading/multi-loader-state'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading/context'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading/custom-spinner'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading/spinner-color'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading/spinner-text'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading/spinner-contrast'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading/spinner-size'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading/spinner-stroke-size'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading/loading-spinner'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading-dialog/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading-dialog/indeterminate'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading-dialog/multiple-buttons'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading-dialog/button-states'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading-dialog/progress-colors'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading-dialog/dynamic-updates'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading-dialog/no-buttons'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading-dialog/long-text'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/loading-dialog/accessibility'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/map/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/map/markers'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/map/polygons'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/map/location'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/map/draw-controls'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/map/boundary'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/map/popup'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/map/fitbounds'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/map/poi'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/menu/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/menu/use-decorators'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/menu/multi-level'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/menu/vertical'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/menu/data-driven'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/menu/open-close'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/menu/disabled'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/menu/color'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/menu/hide-arrows'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/menu/dividers'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/menu/programmatic-close'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/menu/rtl'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/menu/scrollable'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/media-viewer/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/media-viewer/imageviewing'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/media-viewer/videoplay'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/media-viewer/gallery'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/modal/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/modal/service'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/modal/template'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/modal/sizes'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/modal/draggable'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/modal/minimize-maximize'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/modal/backdrop-options'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/navbar/simple-usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/navbar/look-variants'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/navbar/content-projection'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/notification/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/notification/asynchronous-process'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/notification/custom-content'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/notification/locations'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/notification/timeout-progress'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/notification/interactive-features'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/number-box/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/number-box/change-on-scroll'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/number-box/separator'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/number-box/max-min-value'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/number-box/step-size'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/otp/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/otp/length'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/otp/copy-paste'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/otp/validation'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/otp/auto-focus'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/otp/looks'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/otp/states'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/otp/disabled-readonly'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/paint/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/paint/signature-box'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/picker/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/password-box/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/password-box/auto-complete'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/password-box/clear-button'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/password-box/read-only-disable'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/password-box/toggle'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/password-box/password-strength-validation'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/phone-box/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/phone-box/validation'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/phone-box/only-countries'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/phone-box/exclude'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/popover/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/popover/hover'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/popover/leave'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/popover/methods'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/popup/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/popup/size'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/popup/size-in-screens'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/popup/header'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/progress-bar/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/progress-bar/using-decorators'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/progress-bar/custom-height'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/progress-bar/mode'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/qrcode/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/qrcode/logo'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/qrcode/output-types'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/qrcode/error-levels'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/qrcode/sizes'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/qrcode/colors'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/query-builder/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/result/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rrule/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rrule/frequency-options'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rrule/interval-count'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rrule/byweekday'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rrule/bymonthday'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rrule/until-date'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rrule/complex-rules'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rrule/rrule-picker'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rail-navigation/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rail-navigation/looks'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rail-navigation/states'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rail-navigation/locations'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rail-navigation/service'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/search-box/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/search-box/changing-default-icon'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/search-box/using-decorators'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/select-box/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/select-box/multiple-selection'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/select-box/custom-item-template'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/select-box/custom-loading-template'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/select-box/custom-empty-template'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/select-box/api-call'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/selection-list/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/selection-list/control'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/selection-list/hint'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/selection-list/horizontal'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/selection-list/multiple'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/selection-list/custom'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/side-menu/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/side-menu/color'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/side-menu/customize-font'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/side-menu/use-decorator'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/side-menu/group-title'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/skeleton/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/skeleton/animated'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/sliding-item/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/range-slider/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/range-slider/vertical'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/range-slider/music-player'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/range-slider/modes'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/range-slider/steps'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/range-slider/snap-modes'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/range-slider/tooltip-modes'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/range-slider/colors'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/range-slider/states'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/range-slider/ranges'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/range-slider/snap-labels'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rate-picker/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rate-picker/custom-icon'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rate-picker/max-values'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rate-picker/step-precision'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rate-picker/transitions'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rate-picker/states'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rate-picker/icons'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rate-picker/sizes'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/rest-api-generator/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/step-wizard/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/step-wizard/methods'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/step-wizard/navigation-state'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/step-wizard/different-looks'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/step-wizard/different-sizes'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/step-wizard/orientation'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/step-wizard/connector-options'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/step-wizard/interactive-steps'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/switch/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/switch/color'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/switch/on-off'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/switch/content'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/switch/on-off-content'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/switch/loading'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/switch/size'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/switch/disabled-readonly'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tabs/decoration'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tabs/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tabs/custom-template'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tabs/tab-with-content'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tabs/look-variants'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tabs/location-variants'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tabs/disabled-state'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tabs/event-handling'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tag/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tag/colors'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tag/look'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tag/size'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tag/decorators'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/text-area/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/text-area/counter'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/text-area/counter-max-length'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/text-area/rows'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/text-box/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/text-box/using-decorators'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/text-box/number-mode'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/time-line/with-icon'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/time-line/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/time-line/no-icon'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/time-duration/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/toast/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/toast/color-variants'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/toast/service-methods'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/toast/positioning'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/toast/timeout-progress'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/toast/close-buttons'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/toast/icon-customization'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/toast/pause-hover'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/toast/config-override'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/toast/translation'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tooltip/custom-template'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tooltip/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tree-view/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/toolbar/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/uploader/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/uploader/feature-title'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/uploader/drag-drop-zone'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/uploader/zone-directive'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/uploader/browse-handle'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/uploader/service-integration'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/uploader/custom-template'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/wysiwyg/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/json-viewer/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/json-viewer/nested'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/json-viewer/dynamic'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/kbd/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/kbd/single-key'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/kbd/key-combinations'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/kbd/modifier-keys'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/line-chart/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/line-chart/axis'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/line-chart/animation'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/line-chart/styling'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/line-chart/interactive'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/line-chart/size'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/line-chart/multi-series'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/context-menu/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/context-menu/basic'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/context-menu/dynamic-items'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/context-menu/programmatic-open'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tag-box/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tag-box/auto-complete'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tag-box/custom-templates'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/tag-box/header-footer-templates'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/scheduler/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/scheduler/views'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/scheduler/calendar-types'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/scheduler/working-hours'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/scheduler/drag-drop'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/scheduler/event-handling'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/scheduler/readonly'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/scheduler/custom-templates'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/scheduler/data-loading'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/scheduler/holidays'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/scheduler/responsive'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/scheduler/custom-header'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/scheduler/actions'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/scheduler/current-time-indicator'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/scheduler/resources'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/kanban/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/kanban/action-click'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/kanban/empty-state'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/kanban/tooltips'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/kanban/priority'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/kanban/drag-start-delay'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/kanban/custom-templates'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/kanban/mouse-events'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/autocomplete/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/aspect-ratio/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/aspect-ratio/different-ratios'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/aspect-ratio/responsive-content'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/label/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/label/required'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/label/form-association'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/label/error-state'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/label/accessibility'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/drag-drop/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/drag-drop/axis-lock'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/drag-drop/boundary'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/drag-drop/drag-handle'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/drag-drop/drop-zone'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/drag-drop/clone-drag'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/drag-drop/drop-list'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/drag-drop/connected-lists'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/carousel/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/accordion/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/accordion/accordion-mode'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/accordion/without-toggle-button'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/drawer/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/drawer/mode'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/drawer/location'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/focus-trap/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/input-mask/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/input-mask/decimal'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/input-mask/digits'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/input-mask/hijri-date'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/input-mask/min-and-max-value'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/input-mask/thousands-separator'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/list-navigation/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/list-navigation/orientation'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/selection/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/selection/multiple'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/sliding-item/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/virtual-scroll/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/pan-view/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/pan-view/free-mode'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/pan-view/zoom-controls'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/pan-view/model-properties'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/outline/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/outline/hash-links'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/outline/scroll-offset'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cdk/outline/target-selector'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/constants/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/constants/selectone'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/image/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/date-time/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/date-time/advanced-operations'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/event/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/format/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/icon/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/file/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/locale/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/memoize/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/network/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/pipes/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/platform/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/storage/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/translation/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/utils/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/core/validation/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/accordion/header-icon'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/accordion/loading'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/accordion/custom-header-template'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/action-sheet/both-mode'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/action-sheet/draggable'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/action-sheet/lifecycle-events'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/alert/inline'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/alert/auto-timeout'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/alert/color-variants'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/alert/block-layout'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/alert/long-content'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/avatar/size'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/avatar/icon-mode'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/avatar/look'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/avatar/avatar-group'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/avatar/events'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/avatar/content'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/badge/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/badge/look'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/badge/badge-in-button'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/badge/prefix-suffix'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/bar-chart/axis'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/bar-chart/styling'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/bar-chart/size'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/bottom-navigation/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/bottom-navigation/indicator-position'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/bottom-navigation/disabled'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/bottom-navigation/icon-only'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/breadcrumb/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/breadcrumb/disabled-mode'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/breadcrumb/custom-divider'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/breadcrumb/dynamic-async'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/breadcrumb/disabled-change'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/button/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/button/decorators'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/button/loading-state'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/button/color'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/button/toggleable-selected'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/button/loading-text-async'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/button-item-list/with-items-array'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/button-item-list/with-dividers'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/button-item-list/color-variants'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/button-group/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/button-group/look'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/button-group/size'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/button-group/dropdown-items'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/button-group/dividers'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/calendar/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/calendar/year-range'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/calendar/depth'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/calendar/holiday'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/calendar/multi-month'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/calendar/min-max'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/calendar-range/min-max'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/calendar-range/depth-active-view'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/chart-legend/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/chart-legend/interactive'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/chart-legend/custom'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/check-box/hint'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/check-box/disabled-readonly'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/check-box/colors'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/chips/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/chips/look'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/circular-progress/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/circular-progress/customization'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/circular-progress/async-progress'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/collapse/disabled'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/collapse/header-icon'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/collapse/custom-header-template'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/collapse/programmatic-control'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/collapse/hidden-header'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/color-box/disable'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/color-box/using-decorators'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/color-box/clear-behavior'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/color-palette/swatches'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/color-palette/preview'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/color-palette/custom-swatches-favorites'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/command/template'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/comment/interactions'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/cron-job/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/data-pager/compact-interaction'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/data-table/cell-template'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/data-table/allow-resize-and-reorder'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/date-time-box/time-only'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/date-time-box/min-max'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/date-time-box/box-look'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/date-time-box/states'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/date-time-box/allow-typing'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/data-table/usage'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/date-time-box/year-range'.
+
+Terminating worker thread[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mAn error occurred while prerendering route '/date-time-box/calendar-look'.
+
+Terminating worker thread[0m
+
+[39m[22m

@@ -17,7 +17,7 @@ import {
 import { AXValidationModule } from '@acorex/core/validation';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { MyCustomHolidaysLoader, MyTranslationLoader } from './app.loaders';
-import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AXMediaViewerModule } from '@acorex/components/media-viewer';
 import { AXLocaleModule } from '@acorex/core/locale';
 
@@ -27,7 +27,8 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(appRoutes),
     provideHttpClient(withFetch()),
-    provideAnimations(),
+    // Auto-switches to noop animations under ngServerMode (SSR/prerender).
+    provideAnimationsAsync(),
     importProvidersFrom(
       AXLocaleModule,
       AXValidationModule.forRoot(),

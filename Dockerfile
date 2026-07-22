@@ -1,10 +1,10 @@
-# Stage 1: Build the Angular application (browser bundle for nginx)
+# Stage 1: Build the Angular application with SSG
 FROM node:latest AS build
 
 WORKDIR /usr/src/app
 
-# Copy package manifests and npm registry config
-COPY package*.json .npmrc ./
+# Copy package.json and package-lock.json
+COPY package*.json ./
 
 # Install dependencies
 RUN npm i
@@ -12,9 +12,8 @@ RUN npm i
 # Copy the entire application source code
 COPY . .
 
-# Use `npm run build` (prerender disabled). `build:ssg` fails on SSR
-# (NG0201 / window|document is not defined) for many demo routes.
-RUN npm run build
+# Build the Angular application with SSG (Static Site Generation)
+RUN npm run build:ssg
 
 # Stage 2: Create the final production image with Nginx
 FROM nginx:alpine

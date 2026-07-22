@@ -74,6 +74,11 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "ssg": {
+              "outputMode": "static",
+              "prerender": true,
+              "ssr": false
             }
           },
           "defaultConfiguration": "production"
