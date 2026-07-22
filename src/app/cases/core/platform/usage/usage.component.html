@@ -1,0 +1,182 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-8 ax-px-4 ax-py-12"
+>
+  <div class="ax-text-xl ax-font-semibold">Platform Service - Usage</div>
+  <div class="ax-text-sm ax-text-muted ax-text-center ax-max-w-2xl">
+    Demonstrates platform detection, theme management, orientation tracking, and
+    event observables from
+    <code>AXPlatform</code> service.
+  </div>
+
+  <!-- Platform Detection Section -->
+  <div
+    class="ax-w-full ax-max-w-4xl ax-border ax-border-default ax-rounded-lg ax-p-6"
+  >
+    <ax-title class="ax-text-lg ax-font-semibold ax-mb-2"
+      >Platform Detection</ax-title
+    >
+    <ax-subtitle class="ax-mb-4">
+      Detect browser type, device platform, screen size, and installed
+      technologies.
+    </ax-subtitle>
+
+    <div class="ax-grid ax-grid-cols-1 md:ax-grid-cols-2 ax-gap-4 ax-mb-6">
+      <!-- Browser Detection -->
+      <div class="ax-bg-muted ax-rounded ax-p-4">
+        <div class="ax-text-sm ax-font-semibold ax-mb-2">Browser</div>
+        <div class="ax-flex ax-flex-col ax-gap-1">
+          @for (item of [['Chrome', platformInfo()['Chrome']], ['Firefox',
+          platformInfo()['Firefox']], ['Safari', platformInfo()['Safari']],
+          ['Edge', platformInfo()['Edge']], ['Opera', platformInfo()['Opera']]];
+          track $index) {
+          <div class="ax-flex ax-justify-between ax-items-center">
+            <span class="ax-text-xs">{{ item[0] }}</span>
+            <span
+              [class]="item[1] ? 'ax-text-success' : 'ax-text-muted'"
+              class="ax-text-xs ax-font-mono"
+            >
+              {{ item[1] ? "✓" : "—" }}
+            </span>
+          </div>
+          }
+        </div>
+      </div>
+
+      <!-- Platform Detection -->
+      <div class="ax-bg-muted ax-rounded ax-p-4">
+        <div class="ax-text-sm ax-font-semibold ax-mb-2">Platform</div>
+        <div class="ax-flex ax-flex-col ax-gap-1">
+          @for (item of [['Desktop', platformInfo()['Desktop']], ['Mobile',
+          platformInfo()['Mobile']], ['Android', platformInfo()['Android']],
+          ['iOS', platformInfo()['iOS']]]; track $index) {
+          <div class="ax-flex ax-justify-between ax-items-center">
+            <span class="ax-text-xs">{{ item[0] }}</span>
+            <span
+              [class]="item[1] ? 'ax-text-success' : 'ax-text-muted'"
+              class="ax-text-xs ax-font-mono"
+            >
+              {{ item[1] ? "✓" : "—" }}
+            </span>
+          </div>
+          }
+        </div>
+      </div>
+
+      <!-- Technology Detection -->
+      <div class="ax-bg-muted ax-rounded ax-p-4">
+        <div class="ax-text-sm ax-font-semibold ax-mb-2">Technology</div>
+        <div class="ax-flex ax-flex-col ax-gap-1">
+          @for (item of [['PWA', platformInfo()['PWA']], ['Electron',
+          platformInfo()['Electron']], ['Hybrid', platformInfo()['Hybrid']]];
+          track $index) {
+          <div class="ax-flex ax-justify-between ax-items-center">
+            <span class="ax-text-xs">{{ item[0] }}</span>
+            <span
+              [class]="item[1] ? 'ax-text-success' : 'ax-text-muted'"
+              class="ax-text-xs ax-font-mono"
+            >
+              {{ item[1] ? "✓" : "—" }}
+            </span>
+          </div>
+          }
+        </div>
+      </div>
+
+      <!-- Screen & Layout Info -->
+      <div class="ax-bg-muted ax-rounded ax-p-4">
+        <div class="ax-text-sm ax-font-semibold ax-mb-2">Screen & Layout</div>
+        <div class="ax-flex ax-flex-col ax-gap-1">
+          <div class="ax-flex ax-justify-between ax-items-center">
+            <span class="ax-text-xs">Screen Size</span>
+            <span class="ax-text-xs ax-font-mono ax-font-semibold">{{
+              screenSize()
+            }}</span>
+          </div>
+          <div class="ax-flex ax-justify-between ax-items-center">
+            <span class="ax-text-xs">Dimensions</span>
+            <span class="ax-text-xs ax-font-mono">
+              {{ windowSize().width }} × {{ windowSize().height }}
+            </span>
+          </div>
+          <div class="ax-flex ax-justify-between ax-items-center">
+            <span class="ax-text-xs">Orientation</span>
+            <span class="ax-text-xs ax-font-mono">{{ orientation() }}</span>
+          </div>
+          <div class="ax-flex ax-justify-between ax-items-center">
+            <span class="ax-text-xs">RTL Mode</span>
+            <span
+              [class]="isRtl() ? 'ax-text-warning' : 'ax-text-muted'"
+              class="ax-text-xs ax-font-mono"
+            >
+              {{ isRtl() ? "Enabled" : "Disabled" }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ax-flex ax-gap-2 ax-flex-wrap">
+      <ax-button
+        text="Refresh Info"
+        look="outline"
+        color="secondary"
+        (onClick)="refreshPlatformInfo()"
+      ></ax-button>
+    </div>
+  </div>
+
+  <!-- Theme Management Section -->
+  <div
+    class="ax-w-full ax-max-w-4xl ax-border ax-border-default ax-rounded-lg ax-p-6"
+  >
+    <ax-title class="ax-text-lg ax-font-semibold ax-mb-2"
+      >Theme Management</ax-title
+    >
+    <ax-subtitle class="ax-mb-4">
+      Switch between light, dark, and system theme modes. The preference is
+      persisted in localStorage.
+    </ax-subtitle>
+
+    <div class="ax-bg-muted ax-rounded ax-p-4 ax-mb-6">
+      <div class="ax-flex ax-items-center ax-justify-between">
+        <div>
+          <div class="ax-text-sm ax-font-semibold">Current Theme Mode</div>
+          <div class="ax-text-xs ax-text-muted">{{ themeDisplay() }}</div>
+        </div>
+        <div class="ax-flex ax-items-center ax-gap-2">
+          <div
+            [class]="
+              isDarkMode()
+                ? 'ax-bg-dark ax-text-white'
+                : 'ax-bg-light ax-text-black'
+            "
+            class="ax-px-3 ax-py-1 ax-rounded ax-text-xs ax-font-semibold"
+          >
+            {{ isDarkMode() ? "Dark" : "Light" }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ax-flex ax-gap-2 ax-flex-wrap">
+      <ax-button
+        text="Light Mode"
+        look="solid"
+        color="default"
+        (onClick)="switchToLightMode()"
+      ></ax-button>
+      <ax-button
+        text="Dark Mode"
+        look="solid"
+        color="default"
+        (onClick)="switchToDarkMode()"
+      ></ax-button>
+      <ax-button
+        text="System Mode"
+        look="outline"
+        color="secondary"
+        (onClick)="switchToSystemMode()"
+      ></ax-button>
+    </div>
+  </div>
+</div>

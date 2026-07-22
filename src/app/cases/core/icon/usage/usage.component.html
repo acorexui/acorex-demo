@@ -1,0 +1,68 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-px-4"
+>
+  <ax-title>Icon Resolver - Usage</ax-title>
+  <ax-subtitle>
+    Demonstrates how to resolve icon names to their SVG representations using
+    the AXIconResolverService.
+  </ax-subtitle>
+
+  <div class="ax-flex ax-gap-2 ax-flex-wrap ax-justify-center">
+    @for (icon of availableIcons; track icon) {
+    <ax-button
+      style="width: max-content; height: max-content"
+      [look]="selectedIcon() === icon ? 'solid' : 'outline'"
+      [color]="selectedIcon() === icon ? 'primary' : 'default'"
+      (onClick)="resolveIcon(icon)"
+      >{{ icon }}</ax-button
+    >
+    }
+  </div>
+
+  <div
+    class="ax-flex ax-flex-col ax-gap-4 ax-items-start ax-w-full"
+    style="max-width: 800px"
+  >
+    <div class="ax-w-full">
+      <div class="ax-text-base ax-font-semibold ax-mb-2">
+        Selected Icon Name:
+      </div>
+      <code class="ax-px-3 ax-py-2 ax-bg-surface ax-border ax-rounded ax-block">
+        {{ selectedIcon() }}
+      </code>
+    </div>
+
+    @if (isLoading()) {
+    <div class="ax-text-muted">Resolving icon...</div>
+    } @else if (error()) {
+    <div class="ax-text-red-500 ax-font-medium">Error: {{ error() }}</div>
+    } @else if (resolvedSvg()) {
+    <div class="ax-w-full">
+      <div class="ax-text-base ax-font-semibold ax-mb-2">
+        Resolved SVG Code:
+      </div>
+      <pre
+        class="ax-p-4 ax-bg-surface ax-border ax-rounded ax-text-sm ax-overflow-x-auto"
+        style="max-height: 200px; overflow-y: auto"
+      ><code>{{ resolvedSvg() }}</code></pre>
+    </div>
+
+    <div class="ax-w-full">
+      <div class="ax-text-base ax-font-semibold ax-mb-2">Rendered Icon:</div>
+      <div
+        class="ax-p-4 ax-bg-surface ax-border ax-rounded ax-flex ax-items-center ax-justify-center"
+        style="min-height: 100px"
+        [innerHTML]="resolvedSvg()"
+      ></div>
+    </div>
+    }
+  </div>
+
+  <div class="ax-w-full" style="max-width: 800px">
+    <ax-subtitle class="ax-text-sm ax-text-muted ax-mt-4">
+      Click on any icon button above to resolve it to its SVG representation.
+      The resolver uses a custom DemoIconResolver that maps icon names to SVG
+      strings.
+    </ax-subtitle>
+  </div>
+</div>
