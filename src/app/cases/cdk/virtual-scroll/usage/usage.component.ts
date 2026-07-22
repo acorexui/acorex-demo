@@ -1,5 +1,4 @@
 import { AXVirtualScrollModule } from '@acorex/cdk/virtual-scroll';
-import type { AXConversationMessage } from '@acorex/components/conversation';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import { Component, signal } from '@angular/core';
 
@@ -8,7 +7,7 @@ import { Component, signal } from '@angular/core';
   imports: [AXDecoratorModule, AXVirtualScrollModule],
 })
 export class UsageComponent {
-  protected chat = signal<AXConversationMessage[]>([
+  protected chat = signal<any[]>([
     {
       id: '0',
       sendTime: new Date(),

@@ -10,7 +10,7 @@ import {
   imports: [AXGaugeChartComponent],
 })
 export class ThresholdsComponent {
-  gaugeChartValue = signal<AXGaugeChartValue>(65);
+  gaugeChartValue = signal(65);
 
   // Demo: Different threshold configurations
   gaugeChartOptions = signal<AXGaugeChartOption>({

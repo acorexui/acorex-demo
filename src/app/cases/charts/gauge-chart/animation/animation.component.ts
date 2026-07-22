@@ -10,7 +10,7 @@ import {
   imports: [AXGaugeChartComponent],
 })
 export class AnimationComponent {
-  gaugeChartValue = signal<AXGaugeChartValue>(85);
+  gaugeChartValue = signal(85);
 
   // Demo: Animation options with different easing
   gaugeChartOptions = signal<AXGaugeChartOption>({
