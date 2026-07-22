@@ -8,7 +8,7 @@
       <span class="ax-text-sm ax-font-medium">View:</span>
       <ax-select-box
         [dataSource]="views()"
-        [value]="selectedView()"
+        [ngModel]="selectedView()"
         (onValueChanged)="onViewChange($event.value)"
         style="width: 150px"
       ></ax-select-box>

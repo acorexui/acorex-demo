@@ -1,4 +1,9 @@
-<ax-uploader-drop-zone
-  axUploaderZone
-  [description]="description"
-></ax-uploader-drop-zone>
+<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4">
+  <div class="ax-w-full ax-max-w-2xl">
+    <ax-uploader-drop-zone
+      axUploaderZone
+      [description]="description()"
+      (fileChange)="onFileChange($event)"
+    ></ax-uploader-drop-zone>
+  </div>
+</div>

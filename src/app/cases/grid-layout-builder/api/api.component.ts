@@ -34,7 +34,7 @@ export class GridLayoutBuilderApiComponent {
     const id = `w${this.nextId()}`;
     this.grid.addWidget(
       { x: pos.x, y: pos.y, width: size.width, height: size.height, id },
-      true
+      true,
     );
     this.nextId.update((n) => n + 1);
   }
@@ -48,7 +48,7 @@ export class GridLayoutBuilderApiComponent {
   }
 
   setCellHeight(px: number) {
-    this.grid.setCellHeight(px, true);
+    this.grid.setCellHeight(px);
   }
 
   clearAll() {

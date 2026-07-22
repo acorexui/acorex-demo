@@ -5,7 +5,7 @@
     <span class="ax-text-sm ax-font-medium">Template:</span>
     <ax-select-box
       [dataSource]="options()"
-      [value]="selectedTemplate()"
+      [ngModel]="selectedTemplate()"
       (onValueChanged)="onTemplateChange($event.value)"
       style="width: 200px"
     ></ax-select-box>

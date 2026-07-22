@@ -1,0 +1,13 @@
+<div class="ax-flex ax-gap-3 ax-mb-3">
+  <ax-button text="Open" (click)="openPanel()"></ax-button>
+  <ax-button text="Close" (click)="closePanel()"></ax-button>
+</div>
+
+<ax-dropdown-box popoverWidth="180px">
+  <ng-container input>
+    <p>input</p>
+  </ng-container>
+  <ng-container panel>
+    <p class="ax-p-3">panel</p>
+  </ng-container>
+</ax-dropdown-box>

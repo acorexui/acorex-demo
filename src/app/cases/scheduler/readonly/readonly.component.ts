@@ -4,10 +4,11 @@ import {
 } from '@acorex/components/scheduler';
 import { AXSelectBoxComponent } from '@acorex/components/select-box';
 import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-readonly',
-  imports: [AXSchedulerComponent, AXSelectBoxComponent],
+  imports: [AXSchedulerComponent, AXSelectBoxComponent, FormsModule],
   templateUrl: './readonly.component.html',
   styles: `ax-scheduler{
     --ax-comp-scheduler-width:100%;

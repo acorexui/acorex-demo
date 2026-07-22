@@ -1,0 +1,7 @@
+<div class="ax-pt-[28rem] ax-px-[10rem] ax-pb-[3rem]">
+  <h2 class="ax-pb-2 ax-ps-1 ax-text-xl ax-font-bold">Rrule Editor</h2>
+  <ax-rrule [(value)]="rule" (stringChange)="onStringChange($event)" />
+  <hr />
+  <h2 class="ax-pb-2 ax-ps-1 ax-pt-6 ax-text-xl ax-font-bold">Rrule Preview</h2>
+  <ax-rrule-preview [value]="string()"></ax-rrule-preview>
+</div>

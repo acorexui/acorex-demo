@@ -1,12 +1,21 @@
 import { Component, signal } from '@angular/core';
 import { AXClickEvent } from '@acorex/cdk/common';
-import { AXAccordionModule } from '@acorex/components/accordion';
+import {
+  AXAccordionModule,
+  type AXAccordionLook,
+} from '@acorex/components/accordion';
+
+type AccordionUsageOptions = {
+  isAccordion: boolean;
+  look: AXAccordionLook;
+};
+
 @Component({
   templateUrl: 'usage.component.html',
   imports: [AXAccordionModule],
 })
 export class UsageComponent {
-  protected options = signal({
+  protected options = signal<AccordionUsageOptions>({
     isAccordion: true,
     look: 'solid',
   });

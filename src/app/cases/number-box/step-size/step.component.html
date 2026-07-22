@@ -1,0 +1,42 @@
+<div class="ax-flex ax-w-full ax-max-w-2xl ax-flex-col ax-gap-6 ax-py-4 ax-px-4">
+  <ax-subtitle>{{ caption }}</ax-subtitle>
+
+  <div class="ax-flex ax-flex-col ax-gap-2">
+    <ax-title>step = 1</ax-title>
+    <ax-text>Spin buttons and keyboard change the value by 1.</ax-text>
+    <ax-number-box
+      [ngModel]="valueStep1()"
+      (ngModelChange)="valueStep1.set($event)"
+      [minValue]="0"
+      [maxValue]="20"
+      [step]="1"
+      [showSpinButtons]="true"
+    />
+  </div>
+
+  <div class="ax-flex ax-flex-col ax-gap-2">
+    <ax-title>step = 5</ax-title>
+    <ax-text>Larger steps for coarser adjustment (0–100).</ax-text>
+    <ax-number-box
+      [ngModel]="valueStep5()"
+      (ngModelChange)="valueStep5.set($event)"
+      [minValue]="0"
+      [maxValue]="100"
+      [step]="5"
+      [showSpinButtons]="true"
+    />
+  </div>
+
+  <div class="ax-flex ax-flex-col ax-gap-2">
+    <ax-title>step = 25</ax-title>
+    <ax-text>Quick jumps across a wide range (0–200).</ax-text>
+    <ax-number-box
+      [ngModel]="valueStep25()"
+      (ngModelChange)="valueStep25.set($event)"
+      [minValue]="0"
+      [maxValue]="200"
+      [step]="25"
+      [showSpinButtons]="true"
+    />
+  </div>
+</div>

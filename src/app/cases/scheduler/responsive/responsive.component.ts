@@ -5,11 +5,13 @@ import {
 } from '@acorex/components/scheduler';
 import { AXSelectBoxComponent } from '@acorex/components/select-box';
 import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-responsive',
   standalone: true,
   imports: [
+    FormsModule,
     AXSchedulerComponent,
     AXSelectBoxComponent,
     AXDecoratorGenericComponent,

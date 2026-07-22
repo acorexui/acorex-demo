@@ -56,4 +56,11 @@ export const routes: Routes = [
         (e) => e.ServiceIntegrationComponent
       ),
   },
+  {
+    path: 'custom-template',
+    loadComponent: () =>
+      import('./custom-template/custom-template.component').then(
+        (e) => e.CustomTemplateComponent
+      ),
+  },
 ];

@@ -4,7 +4,7 @@
   <div class="ax-flex ax-items-center ax-gap-2">
     <span class="ax-text-sm ax-font-medium">Mode:</span>
     <ax-select-box
-      [value]="readonly()"
+      [ngModel]="readonly()"
       style="width: 200px"
       [dataSource]="options()"
       (onValueChanged)="onReadonlyChange($event.value)"

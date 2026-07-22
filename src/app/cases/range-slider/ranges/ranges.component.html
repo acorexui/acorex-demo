@@ -1,31 +1,44 @@
-<div class="ax-flex ax-flex-col ax-gap-6 ax-p-4">
-  <ax-range-slider
-    class="ax-w-80 ax-h-5"
-    [(ngModel)]="value1"
-    [mode]="'single'"
-    [min]="0"
-    [max]="50"
-    [step]="1"
-    [color]="'primary'"
-  ></ax-range-slider>
-
-  <ax-range-slider
-    class="ax-w-80 ax-h-5"
-    [(ngModel)]="value2"
-    [mode]="'single'"
-    [min]="0"
-    [max]="100"
-    [step]="1"
-    [color]="'primary'"
-  ></ax-range-slider>
-
-  <ax-range-slider
-    class="ax-w-80 ax-h-5"
-    [(ngModel)]="value3"
-    [mode]="'single'"
-    [min]="0"
-    [max]="200"
-    [step]="1"
-    [color]="'primary'"
-  ></ax-range-slider>
+<div class="ax-flex ax-flex-col ax-gap-14 ax-p-4">
+  <div class="ax-flex ax-justify-center ax-items-center ax-gap-2">
+    <span>0</span>
+    <ax-range-slider
+      class="ax-w-80 ax-h-5"
+      [(ngModel)]="value1"
+      [mode]="'single'"
+      [min]="0"
+      [max]="50"
+      [step]="1"
+      [color]="'primary'"
+      [hasTooltip]="true"
+    ></ax-range-slider>
+    <span>50</span>
+  </div>
+  <div class="ax-flex ax-justify-center ax-items-center ax-gap-2">
+    <span>0</span>
+    <ax-range-slider
+      class="ax-w-80 ax-h-5"
+      [(ngModel)]="value2"
+      [mode]="'single'"
+      [min]="0"
+      [max]="100"
+      [step]="1"
+      [color]="'primary'"
+      [hasTooltip]="true"
+    ></ax-range-slider>
+    <span>100</span>
+  </div>
+  <div class="ax-flex ax-justify-center ax-items-center ax-gap-2">
+    <span>0</span>
+    <ax-range-slider
+      class="ax-w-80 ax-h-5"
+      [(ngModel)]="value3"
+      [mode]="'single'"
+      [min]="0"
+      [max]="200"
+      [step]="1"
+      [color]="'primary'"
+      [hasTooltip]="true"
+    ></ax-range-slider>
+    <span>200</span>
+  </div>
 </div>

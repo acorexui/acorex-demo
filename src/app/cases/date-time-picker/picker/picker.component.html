@@ -2,8 +2,11 @@
   <div class="ax-flex ax-flex-col ax-items-center">
     <ax-label>Picker Mode</ax-label>
     <ax-select-box
+      valueField="id"
+      textField="text"
       [dataSource]="pickerModes"
-      [(ngModel)]="currentPickerMode"
+      [ngModel]="currentPickerMode()"
+      (onValueChanged)="onPickerModeChange($event)"
     ></ax-select-box>
   </div>
 

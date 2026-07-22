@@ -5,14 +5,17 @@ import {
 } from '@acorex/components/scheduler';
 import { AXSelectBoxComponent } from '@acorex/components/select-box';
 import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-views',
   templateUrl: './views.component.html',
-  imports: [AXSchedulerComponent, AXSelectBoxComponent],
-  styles: `ax-scheduler{
-    --ax-comp-scheduler-width:100%;
-  }`,
+  imports: [FormsModule, AXSchedulerComponent, AXSelectBoxComponent],
+  styles: `
+    ax-scheduler {
+      --ax-comp-scheduler-width: 100%;
+    }
+  `,
 })
 export class ViewsComponent {
   startingDate = signal(new Date());
@@ -22,7 +25,6 @@ export class ViewsComponent {
     'agenda',
     'timeline-day',
     'timeline-month',
-    'timeline-multi-day',
   ]);
 
   appointmentsData = signal<AXSchedulerAppointment[]>([
@@ -45,7 +47,7 @@ export class ViewsComponent {
       title: 'Team Retrospective',
       startDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // Next week
       endDate: new Date(
-        Date.now() + 7 * 24 * 60 * 60 * 1000 + 1 * 60 * 60 * 1000
+        Date.now() + 7 * 24 * 60 * 60 * 1000 + 1 * 60 * 60 * 1000,
       ), // Next week + 1 hour
       description: 'Sprint retrospective meeting',
     },

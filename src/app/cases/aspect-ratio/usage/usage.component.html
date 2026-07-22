@@ -1,0 +1,41 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+>
+  <ax-aspect-ratio
+    [ratio]="currentRatio()"
+    class="ax-w-full ax-max-w-md ax-border ax-border-surface ax-rounded-lg ax-overflow-hidden"
+  >
+    <div
+      class="ax-bg-gradient-to-br ax-from-blue-500 ax-to-purple-600 ax-h-full ax-flex ax-items-center ax-justify-center ax-text-white ax-font-bold ax-text-xl"
+    >
+      Content with {{ currentRatio() | number : "1.1-1" }}:1 ratio
+    </div>
+  </ax-aspect-ratio>
+
+  <div class="ax-flex ax-gap-2 ax-justify-center ax-items-center ax-w-full">
+    <ax-label class="ax-text-nowrap">Preset Ratios:</ax-label>
+    <ax-select-box
+      textField="label"
+      valueField="value"
+      [ngModel]="selectedRatio()"
+      placeholder="Select ratio"
+      [dataSource]="ratioOptions"
+      (valueChange)="onPresetRatioChange($event)"
+    >
+    </ax-select-box>
+  </div>
+
+  <div class="ax-flex ax-gap-2 ax-justify-center ax-items-center">
+    <ax-label>Custom Ratio:</ax-label>
+    <ax-number-box
+      [step]="0.1"
+      [decimals]="1"
+      [maxValue]="10"
+      [minValue]="0.5"
+      [value]="customRatio()"
+      placeholder="Enter ratio"
+      (valueChange)="onCustomRatioChange($event)"
+    >
+    </ax-number-box>
+  </div>
+</div>

@@ -30,26 +30,21 @@
     </ax-select-box>
   </div>
 
-  @defer () {
-  <ax-scheduler
-    [views]="[
-      'timeline-day',
-      'timeline-multi-day',
-      'timeline-month',
-      'timeline-year'
-    ]"
-    [endDayHour]="20"
-    [readonly]="false"
-    [startDayHour]="8"
-    [draggable]="true"
-    [hasActions]="true"
-    [resources]="resources"
-    [selectedView]="selectedView()"
-    [startingDate]="startingDate()"
-    [dataSource]="appointmentsData()"
-    [showResourceHeaders]="showResourceHeaders()"
-    class="ax-bg-lightest dark:ax-bg-darkest ax-h-[90%]"
-    [showUnassignedAppointments]="showUnassignedAppointments()"
-  ></ax-scheduler>
+  @defer {
+    <ax-scheduler
+      [views]="['timeline-day', 'timeline-month', 'timeline-year']"
+      [endDayHour]="20"
+      [readonly]="false"
+      [startDayHour]="8"
+      [draggable]="true"
+      [hasActions]="true"
+      [resources]="resources"
+      [selectedView]="selectedView()"
+      [startingDate]="startingDate()"
+      [dataSource]="appointmentsData()"
+      [showResourceHeaders]="showResourceHeaders()"
+      class="ax-bg-lightest dark:ax-bg-darkest ax-h-[90%]"
+      [showUnassignedAppointments]="showUnassignedAppointments()"
+    ></ax-scheduler>
   }
 </div>

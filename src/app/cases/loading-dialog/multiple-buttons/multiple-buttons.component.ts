@@ -64,10 +64,10 @@ export class MultipleButtonsComponent {
             currentProgress = Math.min(currentProgress + 20, 100);
             d.setProgressValue(currentProgress);
             d.setProgressText(
-              `Skipped to file ${Math.floor(currentProgress / 20) + 1}/5`
+              `Skipped to file ${Math.floor(currentProgress / 20) + 1}/5`,
             );
             d.setProgressStatus(
-              `${Math.floor(currentProgress / 20) + 1}/5 files`
+              `${Math.floor(currentProgress / 20) + 1}/5 files`,
             );
 
             if (currentProgress >= 100) {

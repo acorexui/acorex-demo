@@ -1,7 +1,26 @@
-<div axUploaderZone>
-  <ax-button
-    color="primary"
-    text="Simple button"
-    axUploaderBrowseHandle
-  ></ax-button>
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+>
+  <div class="ax-w-full ax-max-w-2xl">
+    <div
+      axUploaderZone
+      (fileChange)="onFileChange($event)"
+      class="ax-border-2 ax-border-dashed ax-surface ax-rounded-lg ax-p-8 ax-text-center hover:ax-lighter-surface ax-transition-colors"
+    >
+      <div class="ax-flex ax-flex-col ax-items-center ax-gap-4">
+        <div class="ax-text-4xl">📁</div>
+        <div>
+          <ax-title>Upload Files</ax-title>
+          <ax-subtitle>
+            Drag and drop files here or click the button below to browse
+          </ax-subtitle>
+        </div>
+        <ax-button
+          color="primary"
+          text="Browse Files"
+          axUploaderBrowseHandle
+        ></ax-button>
+      </div>
+    </div>
+  </div>
 </div>

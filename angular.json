@@ -31,20 +31,24 @@
               },
               {
                 "glob": "**/*",
+                "input": "public/images/leaflet",
+                "output": "assets/images/leaflet"
+              },
+              {
+                "glob": "**/*",
                 "input": "src/assets",
                 "output": "/assets"
               },
               "src/favicon.ico"
             ],
             "styles": [
+              "node_modules/@angular/cdk/overlay-prebuilt.css",
               "src/styles.scss",
               "public/fonts/fontawesome/styles/index.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
-            "prerender": {
-              "routesFile": "prerender.config.ts"
-            },
+            "prerender": true,
             "ssr": {
               "entry": "server.ts"
             }

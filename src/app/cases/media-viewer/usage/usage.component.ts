@@ -9,14 +9,14 @@ import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-    templateUrl: './usage.component.html',
-    imports: [
-        AXDecoratorModule,
-        AXButtonModule,
-        AXFormModule,
-        FormsModule,
-        AXMediaViewerModule,
-    ]
+  templateUrl: './usage.component.html',
+  imports: [
+    AXDecoratorModule,
+    AXButtonModule,
+    AXFormModule,
+    FormsModule,
+    AXMediaViewerModule,
+  ],
 })
 export class UsageComponent {
   protected data = signal<AXMediaViewerData[]>([
@@ -26,7 +26,7 @@ export class UsageComponent {
       type: 'image',
       size: '128kb',
       url: 'https://picsum.photos/id/20/500/500',
-      thumbnail: 'https://picsum.photos/id/20/500/500',
+      thumbnailUrl: 'https://picsum.photos/id/20/500/500',
     },
     {
       id: '2',
@@ -48,7 +48,7 @@ export class UsageComponent {
       type: 'video',
       size: '1024kb',
       url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-      thumbnail: 'https://i.postimg.cc/N0k5YK3m/5617.jpg',
+      thumbnailUrl: 'https://i.postimg.cc/N0k5YK3m/5617.jpg',
     },
     {
       id: '5',
@@ -56,7 +56,7 @@ export class UsageComponent {
       type: 'image',
       size: '290kb',
       url: 'https://picsum.photos/id/30/500/500',
-      thumbnail: 'https://picsum.photos/id/30/500/500',
+      thumbnailUrl: 'https://picsum.photos/id/30/500/500',
     },
     {
       id: '6',
@@ -64,7 +64,7 @@ export class UsageComponent {
       type: 'image',
       size: '300kb',
       url: 'https://picsum.photos/id/41/500/500',
-      thumbnail: 'https://picsum.photos/id/41/500/500',
+      thumbnailUrl: 'https://picsum.photos/id/41/500/500',
     },
   ]);
 }

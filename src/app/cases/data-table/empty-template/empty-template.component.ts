@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { AXBadgeModule } from '@acorex/components/badge';
 import {
   AXDataTableModule,
@@ -9,7 +9,7 @@ import { AXDataSource } from '@acorex/cdk/common';
 
 @Component({
   templateUrl: './empty-template.component.html',
-  imports: [CommonModule, AXBadgeModule, AXDataTableModule],
+  imports: [AXBadgeModule, AXDataTableModule],
 })
 export class EmptyTemplateComponent {
   protected _options = {

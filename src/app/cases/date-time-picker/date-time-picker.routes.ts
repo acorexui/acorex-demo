@@ -8,6 +8,15 @@ export const routes: Routes = [
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
   {
+    path: 'year-range',
+    loadComponent: () =>
+      import('./year-range/year-range.component').then((e) => e.YearRangeComponent),
+  },{
+    path: 'calendar-look',
+    loadComponent: () =>
+      import('./calendar-look/calendar-look.component').then((e) => e.CalendarLookComponent),
+  },
+  {
     path: 'picker',
     loadComponent: () =>
       import('./picker/picker.component').then((e) => e.PickerComponent),

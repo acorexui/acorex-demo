@@ -8,8 +8,8 @@
     <span class="ax-text-sm ax-font-medium">Container Size:</span>
     <ax-select-box
       [dataSource]="sizes()"
-      [value]="selectedSize()"
-      (valueChange)="onSizeChange($event)"
+      [ngModel]="selectedSize()"
+      (onValueChanged)="onSizeChange($event.value)"
       style="width: 200px"
     ></ax-select-box>
   </div>

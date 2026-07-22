@@ -1,0 +1,17 @@
+<div
+  class="ax-flex ax-w-full ax-max-w-2xl ax-flex-col ax-gap-8 ax-py-4 ax-px-4"
+>
+  <div class="ax-flex ax-flex-col ax-gap-2">
+    <ax-title>−20 – 20</ax-title>
+    <ax-text> Min and max can be negative or span across zero. </ax-text>
+    <ax-number-box
+      [ngModel]="valueNegPos()"
+      (ngModelChange)="valueNegPos.set($event)"
+      [minValue]="-20"
+      [maxValue]="20"
+      [showSpinButtons]="true"
+      [step]="1"
+      placeholder="−20 … 20"
+    />
+  </div>
+</div>

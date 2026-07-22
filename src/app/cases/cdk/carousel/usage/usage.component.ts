@@ -9,13 +9,13 @@ import { Component, signal, viewChild, ViewEncapsulation } from '@angular/core';
   imports: [AXCarouselDirective],
   encapsulation: ViewEncapsulation.None,
   styles: `
-  @use "swiper/swiper-bundle.css" as *;
-  .ax-carousel {
-    overflow: hidden;
-    display: block;
-    width : 40rem;
-    height: 40rem;
-  }
+    @use 'swiper/swiper-bundle.css' as *;
+    .ax-carousel {
+      overflow: hidden;
+      display: block;
+      width: 40rem;
+      height: 40rem;
+    }
   `,
 })
 export class UsageComponent {
@@ -61,4 +61,14 @@ export class UsageComponent {
       thumbnail: 'https://picsum.photos/id/41/500/500',
     },
   ]);
+
+  ngOnInit(): void {
+    this.init();
+  }
+
+  private async init() {
+    const ref = this.swiperRef();
+    if (!ref) return;
+    await ref.init(this.carouselOptions());
+  }
 }

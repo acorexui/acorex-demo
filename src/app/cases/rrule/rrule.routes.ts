@@ -53,4 +53,11 @@ export const routes: Routes = [
         (c) => c.ComplexRulesComponent
       ),
   },
+  {
+    path: 'rrule-picker',
+    loadComponent: () =>
+      import('./rrule-picker/rrule-picker.component').then(
+        (c) => c.RRulePickerComponent
+      ),
+  },
 ];

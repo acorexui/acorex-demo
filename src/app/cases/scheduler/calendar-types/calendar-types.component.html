@@ -5,7 +5,7 @@
     <span class="ax-text-sm ax-font-medium">Select Calendar:</span>
     <ax-select-box
       [dataSource]="calendars()"
-      [value]="selectedCalendar()"
+      [ngModel]="selectedCalendar()"
       (onValueChanged)="onCalendarChange($event.value)"
       style="width: 250px"
     ></ax-select-box>
