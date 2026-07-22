@@ -1,5 +1,6 @@
 import { AXPlatform } from '@acorex/core/platform';
-import { Component, inject, signal } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, inject, PLATFORM_ID, signal } from '@angular/core';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -11,8 +12,13 @@ import { ActivatedRoute, RouterOutlet } from '@angular/router';
 export class MasterLayoutComponent {
   platform = inject(AXPlatform);
   route = inject(ActivatedRoute);
+  private readonly platformId = inject(PLATFORM_ID);
 
   constructor() {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
     this.route.queryParamMap.subscribe((param) => {
       switch (param.get('theme')) {
         case 'dark':
