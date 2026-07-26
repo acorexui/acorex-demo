@@ -182,6 +182,14 @@ export const appRoutes: Route[] = [
       ),
   },
   {
+    path: 'date-time-text-box',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/date-time-text-box/date-time-text-box.routes').then(
+        (c) => c.routes,
+      ),
+  },
+  {
     path: 'dialog',
     component: MasterLayoutComponent,
     loadChildren: () =>
