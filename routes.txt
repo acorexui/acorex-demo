@@ -205,16 +205,6 @@
 /date-time-picker/type
 /date-time-picker/usage
 /date-time-picker/year-range
-/date-time-text-box/calendar-types
-/date-time-text-box/date-only
-/date-time-text-box/format
-/date-time-text-box/keyboard-editing
-/date-time-text-box/looks
-/date-time-text-box/min-max
-/date-time-text-box/states
-/date-time-text-box/time-only
-/date-time-text-box/usage
-/date-time-text-box/using-decorators
 /decorators/clear-button
 /decorators/close-button
 /decorators/color-indicator
