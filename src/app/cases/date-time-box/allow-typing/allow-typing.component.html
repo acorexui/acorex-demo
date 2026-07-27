@@ -1,30 +1,34 @@
 <div
   class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-py-8"
 >
-  <div class="ax-w-72">
+  <div class="ax-w-80 ax-flex ax-flex-col ax-gap-3">
     <ax-form-field>
       <ax-label>Meeting date and time</ax-label>
       <ax-datetime-box
+        [ngModel]="value()"
+        (ngModelChange)="value.set($event)"
         [allowTyping]="allowTyping()"
-        placeholder="Select the meeting date and time"
+        placeholder="Select or type a date and time"
       >
         <ax-clear-button></ax-clear-button>
       </ax-datetime-box>
     </ax-form-field>
-  </div>
 
-  <div class="ax-flex ax-flex-col ax-gap-2 ax-w-72">
-    <ax-button
-      (click)="toggleAllowTyping()"
-      [look]="allowTyping() ? 'solid' : 'outline'"
-      [text]="`${allowTyping() ? 'Disable' : 'Enable'} Manual Typing`"
-    ></ax-button>
     <ax-subtitle>
-      {{
-        allowTyping()
-          ? "You can now type directly in the input field"
-          : "Click the calendar icon to select date/time"
-      }}
+      @if (allowTyping()) {
+        Click the input to type into segments (arrows move between parts). Use
+        the calendar icon to open the picker. Typed values stay in sync with the
+        picker.
+      } @else {
+        Click anywhere on the box (including the input) to open the datetime
+        picker. Enable typing to edit segments from the keyboard.
+      }
     </ax-subtitle>
   </div>
+
+  <ax-button
+    (onClick)="toggleAllowTyping()"
+    [look]="allowTyping() ? 'solid' : 'outline'"
+    [text]="allowTyping() ? 'Disable typing' : 'Enable typing'"
+  ></ax-button>
 </div>

@@ -10,7 +10,7 @@ import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  templateUrl: 'allow-typing.component.html',
+  templateUrl: 'format.component.html',
   imports: [
     FormsModule,
     AXLabelComponent,
@@ -21,11 +21,23 @@ import { FormsModule } from '@angular/forms';
     AXDecoratorClearButtonComponent,
   ],
 })
-export class AllowTypingComponent {
-  protected allowTyping = signal(true);
+export class FormatComponent {
   protected value = signal<Date | null>(new Date());
+  protected calendar = signal<'gregorian' | 'solar-hijri'>('solar-hijri');
+  protected format = signal<string | null>(null);
 
-  protected toggleAllowTyping() {
-    this.allowTyping.update((v) => !v);
+  protected readonly presets: { label: string; value: string | null }[] = [
+    { label: 'Default (by calendar)', value: null },
+    { label: 'dd/MM/yyyy HH:mm', value: 'dd/MM/yyyy HH:mm' },
+    { label: 'yyyy/MM/dd HH:mm', value: 'yyyy/MM/dd HH:mm' },
+    { label: 'MM/dd/yyyy hh:mm a', value: 'MM/dd/yyyy hh:mm a' },
+  ];
+
+  protected setCalendar(calendar: 'gregorian' | 'solar-hijri') {
+    this.calendar.set(calendar);
+  }
+
+  protected setFormat(format: string | null) {
+    this.format.set(format);
   }
 }

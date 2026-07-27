@@ -1,6 +1,9 @@
 import { AXButtonComponent } from '@acorex/components/button';
 import { AXDateTimeBoxComponent } from '@acorex/components/datetime-box';
-import { AXDecoratorClearButtonComponent } from '@acorex/components/decorators';
+import {
+  AXDecoratorClearButtonComponent,
+  AXDecoratorGenericComponent,
+} from '@acorex/components/decorators';
 import { AXFormFieldComponent } from '@acorex/components/form';
 import { AXLabelComponent } from '@acorex/components/label';
 import { Component, signal } from '@angular/core';
@@ -12,11 +15,12 @@ import { Component, signal } from '@angular/core';
     AXButtonComponent,
     AXFormFieldComponent,
     AXDateTimeBoxComponent,
+    AXDecoratorGenericComponent,
     AXDecoratorClearButtonComponent,
   ],
 })
 export class CalendarTypesComponent {
-  protected currentCalendar = signal<string>('gregorian');
+  protected currentCalendar = signal<string>('solar-hijri');
 
   protected calendars: { value: string; label: string }[] = [
     { value: 'gregorian', label: 'Gregorian' },

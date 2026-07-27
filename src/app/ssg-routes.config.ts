@@ -196,6 +196,7 @@ export const ssgRoutes = [
   'date-time-box/calendar-look',
   'date-time-box/calendar-types',
   'date-time-box/date-only',
+  'date-time-box/format',
   'date-time-box/looks',
   'date-time-box/min-max',
   'date-time-box/states',
