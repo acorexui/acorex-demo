@@ -1,14 +1,10 @@
-<ax-accordion-item
+<ax-accordion-group [accordion]="_options.isAccordion">
+  <ax-accordion-item
   [look]="_options.look"
   [headerTemplate]="h1"
   class="ax-container ax-px-12"
 >
-  <p>
-    Google LLC is an American multinational technology company focusing on
-    artificial intelligence, online advertising, search engine technology, cloud
-    computing, computer software, quantum computing, e-commerce, and consumer
-    electronics.
-  </p>
+  
   <ng-template #h1>
     <div
       class="ax-flex ax-items-center ax-gap-2 ax-bg-surface ax-p-3 ax-rounded-lg"
@@ -20,4 +16,12 @@
       <span>Google</span>
     </div>
   </ng-template>
+  <p>
+    Google LLC is an American multinational technology company focusing on
+    artificial intelligence, online advertising, search engine technology, cloud
+    computing, computer software, quantum computing, e-commerce, and consumer
+    electronics.
+  </p>
 </ax-accordion-item>
+
+</ax-accordion-group>

@@ -2,7 +2,7 @@ import {
   AXCarouselDirective,
   type AXCarouselOptions,
 } from '@acorex/cdk/carousel';
-import { Component, signal, viewChild, ViewEncapsulation } from '@angular/core';
+import { afterNextRender, Component, signal, viewChild, ViewEncapsulation } from '@angular/core';
 
 @Component({
   templateUrl: 'usage.component.html',
@@ -22,8 +22,18 @@ export class UsageComponent {
   private swiperRef = viewChild<AXCarouselDirective>('f');
 
   carouselOptions = signal<AXCarouselOptions>({
-    slidesPerView: 1,
+    slidesPerView:1,
+    spaceBetween:20,
+     breakpoints: {
+      320: {
+        slidesPerView: 2,
+      },
+      480: {
+        slidesPerView: 2,
+      }
+    },
     keyboard: true,
+    autoplay:true,
     pagination: {
       el: '.ax-carousel-pagination',
       clickable: true,
@@ -33,6 +43,9 @@ export class UsageComponent {
       prevEl: '.ax-carousel-button-prev',
     },
     loop: true,
+  });
+  #init = afterNextRender(async () => {
+    await this.swiperRef()?.init(this.carouselOptions());
   });
 
   protected data = signal([

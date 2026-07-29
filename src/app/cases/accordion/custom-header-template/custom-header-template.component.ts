@@ -7,9 +7,8 @@ import { Component } from '@angular/core';
   imports: [AXAccordionModule, AXImageModule],
 })
 export class CustomHeaderTemplate {
-  protected _options: { color: string; isAccordion: boolean; look: any } = {
-    look: 'solid',
-    color: 'primary',
-    isAccordion: false,
+  protected _options: {  isAccordion: boolean; look: any } = {
+    look: 'fill',
+    isAccordion: true,
   };
 }
