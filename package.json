@@ -14,11 +14,11 @@
   },
   "private": true,
   "dependencies": {
-    "@acorex/cdk": "20.8.28",
-    "@acorex/charts": "20.8.28",
-    "@acorex/components": "20.8.28",
-    "@acorex/core": "20.8.28",
-    "@acorex/styles": "20.8.28",
+    "@acorex/cdk": "22.0.0-next.27",
+    "@acorex/charts": "22.0.0-next.27",
+    "@acorex/components": "22.0.0-next.27",
+    "@acorex/core": "22.0.0-next.27",
+    "@acorex/styles": "22.0.0-next.27",
     "@angular/animations": "^21.2.11",
     "@angular/cdk": "^20.2.14",
     "@angular/common": "^21.2.11",
@@ -50,7 +50,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.17",
+    "tailwindcss": "^4.0.0",
     "typescript": "~5.9.3"
   }
 }

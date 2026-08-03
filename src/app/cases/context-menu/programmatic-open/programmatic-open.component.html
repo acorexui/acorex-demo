@@ -1,4 +1,4 @@
-<div class="ax-rounded ax-bg-surface ax-p-4">
+<div class="rounded bg-surface p-4">
   <h3>Programmatic open with showAt</h3>
   <p>
     Click the button to open the context menu at the click position (no target
@@ -6,13 +6,13 @@
   </p>
 
   <ax-button
-    class="ax-my-5"
+    class="my-5"
     color="primary"
     text="Open menu at cursor"
     (onClick)="openAtClick($event)"
   ></ax-button>
 
-  <div class="ax-text-secondary">Last action: {{ lastAction || "—" }}</div>
+  <div class="text-secondary">Last action: {{ lastAction || "—" }}</div>
 
   <ax-context-menu
     (onOpening)="handleOpening($event)"

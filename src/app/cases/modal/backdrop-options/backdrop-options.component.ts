@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
 @Component({
   templateUrl: 'backdrop-options.component.html',
   imports: [AXModalComponent, AXButtonComponent, AXDecoratorGenericComponent],
-  styles: `ax-modal{display:none}`,
+  styles: `@reference '@acorex/styles/themes/default.css';
+ax-modal{display:none}`,
 })
 export class BackdropOptionsComponent {
   protected defaultBackdropOptions: AXModalOptions = {

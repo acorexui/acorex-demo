@@ -1,15 +1,15 @@
 <div
-  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-py-16 ax-text-center"
+  class="flex flex-col items-center justify-center gap-6 py-16 text-center"
 >
   <div>
-    <div class="ax-h4">OTP Disabled & Readonly States</div>
-    <p class="ax-text-sm">
+    <div class="h4">OTP Disabled & Readonly States</div>
+    <p class="text-sm">
       Control the disabled and readonly states of the OTP component
     </p>
   </div>
 
-  <div class="ax-flex ax-flex-col ax-gap-4 ax-items-center">
-    <div class="ax-flex ax-items-center ax-gap-3">
+  <div class="flex flex-col gap-4 items-center">
+    <div class="flex items-center gap-3">
       <ax-switch
         [ngModel]="isDisabled()"
         (onValueChanged)="toggleDisabled($event.value)"
@@ -17,7 +17,7 @@
       <span>Disabled</span>
     </div>
 
-    <div class="ax-flex ax-items-center ax-gap-3">
+    <div class="flex items-center gap-3">
       <ax-switch
         [ngModel]="isReadonly()"
         (onValueChanged)="toggleReadonly($event.value)"
@@ -26,7 +26,7 @@
     </div>
   </div>
 
-  <div class="ax-w-80">
+  <div class="w-80">
     <ax-otp
       [length]="4"
       [ngModel]="otpValue"
@@ -36,13 +36,13 @@
     ></ax-otp>
   </div>
 
-  <div class="ax-text-xs ax-text-muted">
+  <div class="text-xs text-muted">
     @if (isDisabled()) {
-    <div class="ax-text-warning">Component is disabled</div>
+    <div class="text-warning">Component is disabled</div>
     } @if (isReadonly()) {
-    <div class="ax-text-info">Component is readonly</div>
+    <div class="text-info">Component is readonly</div>
     } @if (!isDisabled() && !isReadonly()) {
-    <div class="ax-text-success">Component is interactive</div>
+    <div class="text-success">Component is interactive</div>
     }
   </div>
 </div>

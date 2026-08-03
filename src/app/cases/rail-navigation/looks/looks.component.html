@@ -1,5 +1,5 @@
-<div class="ax-flex ax-items-center ax-justify-center ax-gap-4 ">
-  <ax-rail-navigation [look]="currentLook()" class="ax-h-[100vh]">
+<div class="flex items-center justify-center gap-4">
+  <ax-rail-navigation [look]="currentLook()" class="h-[100vh]">
     <ax-rail-navigation-item [active]="true">
       <ax-icon class="fa-solid fa-home"></ax-icon>
       <ax-text>Home</ax-text>
@@ -23,10 +23,10 @@
     </ax-suffix>
   </ax-rail-navigation>
 
-  <div class="ax-flex ax-flex-col ax-gap-2">
-    <label class="ax-text-sm ax-font-medium">Select Look:</label>
+  <div class="flex flex-col gap-2">
+    <label class="text-sm font-medium">Select Look:</label>
     <ax-select-box
-      class="ax-w-40"
+      class="w-40"
       textField="text"
       valueField="value"
       [ngModel]="currentLook()"

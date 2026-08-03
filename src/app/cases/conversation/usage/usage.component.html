@@ -1,9 +1,9 @@
-<div class="ax-m-10">
+<div class="m-10">
   <ax-conversation-container [chatData]="chat()">
     <ax-conversation-view
       (onScrollEnd)="loadData($event)"
       (onAction)="handleOnAction($event)"
-      class="ax-mb-3"
+      class="mb-3"
       chatBoxHeight="400px"
     >
     </ax-conversation-view>
@@ -17,7 +17,7 @@
       (onEnterPressed)="keydownHandler($event)"
     >
       <ax-icon>
-        <i class="ax-icon ax-icon-arrow-long-up"></i>
+        <i class="icon icon-arrow-long-up"></i>
       </ax-icon>
     </ax-conversation-input>
   </ax-conversation-container>

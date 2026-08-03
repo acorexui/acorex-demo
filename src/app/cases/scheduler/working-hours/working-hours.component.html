@@ -1,8 +1,8 @@
 <div
-  class="ax-w-[100vw] ax-h-[100vh] ax-flex ax-justify-center ax-items-center ax-flex-col ax-gap-4 ax-p-4"
+  class="w-[100vw] h-[100vh] flex justify-center items-center flex-col gap-4 p-4"
 >
-  <div class="ax-flex ax-items-center ax-gap-2">
-    <span class="ax-text-sm ax-font-medium">Select Mode:</span>
+  <div class="flex items-center gap-2">
+    <span class="text-sm font-medium">Select Mode:</span>
     <ax-select-box
       [dataSource]="modes()"
       [ngModel]="selectedMode()"
@@ -18,7 +18,7 @@
     [startingDate]="startingDate()"
     [startDayHour]="startDayHour()"
     [dataSource]="appointmentsData()"
-    class="ax-bg-lightest dark:ax-bg-darkest ax-h-[90%]"
+    class="bg-lightest dark:bg-darkest h-[90%]"
   ></ax-scheduler>
   }
 </div>

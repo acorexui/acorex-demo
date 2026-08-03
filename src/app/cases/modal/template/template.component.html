@@ -1,4 +1,4 @@
-<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4">
+<div class="flex flex-col items-center justify-center gap-4">
   <ax-button
     (onClick)="handleOpenServiceTemplate()"
     color="primary"
@@ -6,11 +6,11 @@
   ></ax-button>
 
   <ng-template #c>
-    <div class="ax-px-4 ax-py-2">
-      <ax-title class="ax-text-lg ax-font-medium ax-mb-4">
+    <div class="px-4 py-2">
+      <ax-title class="text-lg font-medium mb-4">
         Template Content
       </ax-title>
-      <ax-subtitle class="ax-mb-4">
+      <ax-subtitle class="mb-4">
         This modal content is created using a template. Templates allow you to
         create complex layouts with custom styling.
       </ax-subtitle>
@@ -20,7 +20,7 @@
       </ax-subtitle>
     </div>
 
-    <ax-modal-footer class="ax-px-4 ax-py-2">
+    <ax-modal-footer class="px-4 py-2">
       <ax-prefix>
         <ax-button
           color="danger"

@@ -1,8 +1,8 @@
 <div
-  class="ax-w-[100vw] ax-h-[100vh] ax-flex ax-justify-center ax-items-center ax-flex-col ax-gap-4 ax-p-4"
+  class="w-[100vw] h-[100vh] flex justify-center items-center flex-col gap-4 p-4"
 >
-  <div class="ax-flex ax-items-center ax-gap-2">
-    <span class="ax-text-sm ax-font-medium">Template:</span>
+  <div class="flex items-center gap-2">
+    <span class="text-sm font-medium">Template:</span>
     <ax-select-box
       [dataSource]="options()"
       [ngModel]="selectedTemplate()"
@@ -17,21 +17,21 @@
     [startingDate]="startingDate()"
     [dataSource]="appointmentsData()"
     [tooltipTemplate]="tooltipTemplate || ''"
-    class="ax-bg-lightest dark:ax-bg-darkest ax-h-[90%]"
+    class="bg-lightest dark:bg-darkest h-[90%]"
   ></ax-scheduler>
   }
 
   <!-- Custom tooltip template -->
   <ng-template #tooltipTemplate let-appointment>
-    <div class="ax-p-3 ax-surface ax-border ax-rounded-lg ax-shadow-lg">
+    <div class="p-3 surface border rounded-lg shadow-lg">
       <ax-title> {{ appointment.title }} </ax-title>
       <ax-subtitle> {{ appointment.description }} </ax-subtitle>
-      <div class="ax-flex ax-justify-between ax-text-xs">
+      <div class="flex justify-between text-xs">
         <span>Start: {{ appointment.startDate | format : "datetime" }}</span>
         <span>End: {{ appointment.endDate | format : "datetime" }}</span>
       </div>
-      <div class="ax-mt-2 ax-pt-2 ax-border-t">
-        <div class="ax-text-xs">
+      <div class="mt-2 pt-2 border-t">
+        <div class="text-xs">
           Priority: {{ appointment.priority || "Medium" }}
         </div>
       </div>

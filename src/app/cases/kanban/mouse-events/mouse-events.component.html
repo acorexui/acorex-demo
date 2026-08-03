@@ -1,22 +1,22 @@
 <div
-  class="ax-flex ax-flex-col ax-h-full ax-gap-4 ax-p-4 ax-max-w-[100vw] ax-max-h-[100vh]"
+  class="flex flex-col h-full gap-4 p-4 max-w-[100vw] max-h-[100vh]"
 >
   <!-- Event Display Panel -->
-  <div class="ax-flex ax-flex-col ax-gap-2 ax-p-4 ax-surface ax-rounded-lg">
-    <ax-title class="ax-text-lg">Event Log</ax-title>
-    <div class="ax-flex ax-gap-4 ax-items-center">
-      <div class="ax-flex-1">
+  <div class="flex flex-col gap-2 p-4 surface rounded-lg">
+    <ax-title class="text-lg">Event Log</ax-title>
+    <div class="flex gap-4 items-center">
+      <div class="flex-1">
         <ax-subtitle> Last Event: </ax-subtitle>
         <div
-          class="ax-text-sm ax-font-mono ax-lighter-surface ax-p-2 ax-rounded ax-border"
+          class="text-sm font-mono lighter-surface p-2 rounded border"
         >
           {{ lastEvent() || "No events yet" }}
         </div>
       </div>
-      <div class="ax-flex-1">
+      <div class="flex-1">
         <ax-subtitle>Selected Item:</ax-subtitle>
         <div
-          class="ax-text-sm ax-font-mono ax-lighter-surface ax-p-2 ax-rounded ax-border"
+          class="text-sm font-mono lighter-surface p-2 rounded border"
         >
           {{ selectedItem() ? selectedItem()?.title : "None" }}
         </div>
@@ -24,7 +24,7 @@
       <ax-button
         text="Clear"
         look="outline"
-        class="ax-self-end"
+        class="self-end"
         (click)="clearSelection()"
       ></ax-button>
     </div>

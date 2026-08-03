@@ -1,7 +1,7 @@
 <div
-  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-py-8"
+  class="flex flex-col items-center justify-center gap-6 py-8"
 >
-  <div class="ax-w-72">
+  <div class="w-72">
     <ax-form-field>
       <ax-label>Meeting date and time</ax-label>
       <ax-datetime-box
@@ -13,7 +13,7 @@
     </ax-form-field>
   </div>
 
-  <div class="ax-flex ax-flex-wrap ax-gap-2 ax-justify-center">
+  <div class="flex flex-wrap gap-2 justify-center">
     @for (calendar of calendars; track calendar.value) {
     <ax-button
       class="ax-sm"

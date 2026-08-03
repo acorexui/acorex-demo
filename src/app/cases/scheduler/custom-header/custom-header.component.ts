@@ -19,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     AXDecoratorIconComponent,
   ],
   templateUrl: './custom-header.component.html',
-  styles: `ax-scheduler{
+  styles: `@reference '@acorex/styles/themes/default.css';
+ax-scheduler{
     --ax-comp-scheduler-width:100%;
   }`,
 })

@@ -5,7 +5,7 @@ import { isPlatformBrowser } from '@angular/common';
 @Component({
     selector: 'app-master-layout',
     templateUrl: './master-layout.component.html',
-    styleUrls: ['./master-layout.component.scss'],
+    styleUrls: ['./master-layout.component.css'],
     imports: [RouterOutlet]
 })
 export class MasterLayoutComponent {

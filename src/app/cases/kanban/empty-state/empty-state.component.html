@@ -1,6 +1,6 @@
-<div class="ax-max-w-[100vw] ax-max-h-[100vh]">
+<div class="max-w-[100vw] max-h-[100vh]">
   <ax-kanban
-    class="ax-p-4"
+    class="p-4"
     [statuses]="statuses()"
     [emptyTemplate]="empty"
     [dataSource]="dataSource()"
@@ -9,7 +9,7 @@
 </div>
 
 <ng-template #empty>
-  <div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-h-full">
+  <div class="flex flex-col items-center justify-center h-full">
     <ax-subtitle>No tasks found!</ax-subtitle>
   </div>
 </ng-template>

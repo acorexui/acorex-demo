@@ -1,4 +1,4 @@
-<div class="ax-flex ax-h-[300px] ax-w-full ax-items-center ax-justify-center">
+<div class="flex h-[300px] w-full items-center justify-center">
   <ax-button text="Show Popover" #methodsBtn color="primary"></ax-button>
 </div>
 <ax-popover
@@ -8,8 +8,8 @@
   (onOpened)="writeLog('opened')"
   (onClosed)="writeLog('closed')"
 >
-  <div class="ax-overlay-pane ax-p-4">
-    <b class="ax-text-sm">Title</b>
+  <div class="overlay-pane p-4">
+    <b class="text-sm">Title</b>
     <br />
     <small>Lorem, ipsum dolor sit amet consectetur adipisicing elit</small>
   </div>

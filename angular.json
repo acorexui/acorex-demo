@@ -20,7 +20,9 @@
             "outputPath": "dist/acorex-demo",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": ["zone.js"],
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -43,7 +45,7 @@
             ],
             "styles": [
               "node_modules/@angular/cdk/overlay-prebuilt.css",
-              "src/styles.scss",
+              "src/styles.css",
               "public/fonts/fontawesome/styles/index.scss"
             ],
             "scripts": [],
@@ -96,7 +98,10 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": ["zone.js", "zone.js/testing"],
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -105,7 +110,9 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "src/styles.css"
+            ],
             "scripts": []
           }
         }

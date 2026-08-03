@@ -5,7 +5,7 @@ import { Component, TemplateRef, ViewChild, signal } from '@angular/core';
 
 @Component({
   templateUrl: './custom-template.component.html',
-  styleUrls: ['./custom-template.component.scss'],
+  styleUrls: ['./custom-template.component.css'],
   imports: [
     AXButtonComponent,
     AXUploaderZoneDirective,

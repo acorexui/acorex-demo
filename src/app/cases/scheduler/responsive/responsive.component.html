@@ -1,11 +1,11 @@
-<div class="ax-flex ax-flex-col ax-gap-4 ax-p-4">
-  <div class="ax-flex ax-items-center ax-gap-4">
+<div class="flex flex-col gap-4 p-4">
+  <div class="flex items-center gap-4">
     <ax-title>Responsive Demo</ax-title>
     <ax-subtitle>Test scheduler in different container sizes</ax-subtitle>
   </div>
 
-  <div class="ax-flex ax-items-center ax-gap-2">
-    <span class="ax-text-sm ax-font-medium">Container Size:</span>
+  <div class="flex items-center gap-2">
+    <span class="text-sm font-medium">Container Size:</span>
     <ax-select-box
       [dataSource]="sizes()"
       [ngModel]="selectedSize()"
@@ -15,7 +15,7 @@
   </div>
 
   <div
-    class="ax-border-2 ax-border-dashed ax-border-gray-300 ax-rounded-lg ax-overflow-hidden"
+    class="border-2 border-dashed border-gray-300 rounded-lg overflow-hidden"
     [style.width]="currentSize().width"
     [style.height]="currentSize().height"
   >

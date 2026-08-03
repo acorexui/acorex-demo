@@ -1,4 +1,4 @@
-<div class="ax-flex ax-flex-col ax-gap-4">
+<div class="flex flex-col gap-4">
   <ax-color-box
     [ngModel]="color()"
     (onValueChanged)="color.set($event.value)"
@@ -16,5 +16,5 @@
     <ax-clear-button></ax-clear-button>
   </ax-color-box>
 
-  <div class="ax-text-sm">Current: {{ value() ?? "null" }}</div>
+  <div class="text-sm">Current: {{ value() ?? "null" }}</div>
 </div>

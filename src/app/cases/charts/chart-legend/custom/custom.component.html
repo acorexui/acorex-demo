@@ -1,6 +1,6 @@
-<div class="ax-w-full ax-flex ax-flex-col ax-gap-8">
-  <section class="ax-text-center">
-    <div class="ax-flex ax-justify-center ax-mt-2">
+<div class="w-full flex flex-col gap-8">
+  <section class="text-center">
+    <div class="flex justify-center mt-2">
       <ax-donut-chart
         [data]="donutChartData()"
         [options]="donutChartOptions()"
@@ -8,7 +8,7 @@
       ></ax-donut-chart>
     </div>
 
-    <div class="ax-flex ax-justify-center ax-mt-2">
+    <div class="flex justify-center mt-2">
       <ax-chart-legend
         [chart]="chartRef2"
         [options]="customLegendOptions2()"

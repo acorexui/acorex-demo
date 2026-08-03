@@ -1,19 +1,19 @@
 <div
-  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+  class="flex flex-col items-center justify-center gap-4 p-4"
 >
   <ax-aspect-ratio
     [ratio]="currentRatio()"
-    class="ax-w-full ax-max-w-md ax-border ax-border-surface ax-rounded-lg ax-overflow-hidden"
+    class="w-full max-w-md border border-surface rounded-lg overflow-hidden"
   >
     <div
-      class="ax-bg-gradient-to-br ax-from-blue-500 ax-to-purple-600 ax-h-full ax-flex ax-items-center ax-justify-center ax-text-white ax-font-bold ax-text-xl"
+      class="bg-gradient-to-br from-blue-500 to-purple-600 h-full flex items-center justify-center text-white font-bold text-xl"
     >
       Content with {{ currentRatio() | number : "1.1-1" }}:1 ratio
     </div>
   </ax-aspect-ratio>
 
-  <div class="ax-flex ax-gap-2 ax-justify-center ax-items-center ax-w-full">
-    <ax-label class="ax-text-nowrap">Preset Ratios:</ax-label>
+  <div class="flex gap-2 justify-center items-center w-full">
+    <ax-label class="text-nowrap">Preset Ratios:</ax-label>
     <ax-select-box
       textField="label"
       valueField="value"
@@ -25,7 +25,7 @@
     </ax-select-box>
   </div>
 
-  <div class="ax-flex ax-gap-2 ax-justify-center ax-items-center">
+  <div class="flex gap-2 justify-center items-center">
     <ax-label>Custom Ratio:</ax-label>
     <ax-number-box
       [step]="0.1"

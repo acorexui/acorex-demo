@@ -5,11 +5,11 @@
   <ax-tab-item track [active]="tab.active!" [headerTemplate]="tabHeader">
     <ng-template let-item #tabHeader>
       <div
-        class="ax-flex ax-flex-col ax-items-center ax-p-3 hover:ax-cursor-pointer hover:ax-text-info-400"
-        [class.ax-text-info-500]="item.active"
+        class="flex flex-col items-center p-3 hover:cursor-pointer hover:text-info-400"
+        [class.text-info-500]="item.active"
       >
         <div>
-          <ax-icon icon="far {{ tab.icon }}" class="ax-text-2xl"></ax-icon>
+          <ax-icon icon="far {{ tab.icon }}" class="text-2xl"></ax-icon>
         </div>
         <div>{{ tab.text }}</div>
       </div>

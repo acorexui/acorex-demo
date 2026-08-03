@@ -1,4 +1,4 @@
-<div class="ax-flex ax-flex-col ax-gap-1">
+<div class="flex flex-col gap-1">
   @if (visible()) {
   <ax-button text="Close now" (onClick)="a.close()"></ax-button>
   <ax-alert #a color="danger" (onClosed)="visible.set(false)">

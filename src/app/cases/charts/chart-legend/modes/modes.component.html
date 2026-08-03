@@ -1,13 +1,13 @@
-<div class="ax-w-full ax-text-center ax-space-y-8">
+<div class="w-full text-center space-y-8">
   <section>
-    <div class="ax-flex ax-justify-center ax-w-[400px] ax-m-auto">
+    <div class="flex justify-center w-[400px] m-auto">
       <ax-donut-chart
         [data]="donutChartData()"
         [options]="donutChartOptions()"
         #chartRef2
       ></ax-donut-chart>
     </div>
-    <div class="ax-flex ax-justify-center ax-mt-4">
+    <div class="flex justify-center mt-4">
       <ax-chart-legend
         [chart]="chartRef2"
         [options]="horizontalLegendOptions()"

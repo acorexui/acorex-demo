@@ -1,11 +1,19 @@
-@use "@acorex/styles/index.scss" as *;
-@use "@acorex/styles/themes/default.scss" as *;
-@use "@acorex/styles/icons/fontawesome/index.scss" as *;
+@import "@acorex/styles/index.scss";
+@import "@acorex/styles/icons/fontawesome/index.scss";
+@import "tailwindcss";
+@import '@acorex/styles/themes/default.css';
+@source '../node_modules/@acorex';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/*
+ * Tailwind can't detect dynamic classes (e.g. [color], runtime values).
+ * Uncomment if you use accent colors like: bg-accent2-lightest
+ * Keep minimal to avoid extra CSS.
+ */
 
+/*
+@source inline("ax-accent ax-accent1 ax-accent2 ax-accent3 ax-accent4 ax-accent5 ax-accent6");
+@source inline("bg-{primary,secondary,danger,warning,success,accent1,accent2,accent3}-lightest");
+*/
 html,
 body {
   height: 100%;

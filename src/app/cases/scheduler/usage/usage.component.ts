@@ -9,7 +9,8 @@ import { Component, signal } from '@angular/core';
   selector: 'app-usage',
   imports: [AXSchedulerComponent],
   templateUrl: './usage.component.html',
-  styles: `ax-scheduler{
+  styles: `@reference '@acorex/styles/themes/default.css';
+ax-scheduler{
     --ax-comp-scheduler-width:100%;
   }`,
 })

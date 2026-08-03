@@ -16,7 +16,8 @@ type FitMode = 'contain' | 'cover';
 @Component({
   templateUrl: 'image.component.html',
   imports: [CommonModule, AXButtonModule, AXDecoratorModule],
-  styles: `
+  styles: `@reference '@acorex/styles/themes/default.css';
+
     :host {
       display: block;
       width: 100%;

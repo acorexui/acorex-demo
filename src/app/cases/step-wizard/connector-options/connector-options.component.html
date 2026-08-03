@@ -1,8 +1,8 @@
 <div
-  class="ax-w-full ax-flex ax-justify-center ax-items-center ax-flex-col ax-gap-4"
+  class="w-full flex justify-center items-center flex-col gap-4"
 >
-  <div class="ax-flex ax-gap-2">
-    <ax-label class="ax-mt-1">Connectors Visible</ax-label>
+  <div class="flex gap-2">
+    <ax-label class="mt-1">Connectors Visible</ax-label>
     <ax-switch
       [ngModel]="showConnector()"
       (onValueChanged)="toggleConnector($event.value)"
@@ -12,7 +12,7 @@
   <ax-step-wizard
     #wizard
     [size]="'ax-md'"
-    class="ax-w-[45rem]"
+    class="w-[45rem]"
     [scrollToStep]="false"
     [look]="'circular-icon'"
     [connector]="showConnector()"
@@ -50,7 +50,7 @@
     </ax-step-wizard-item>
   </ax-step-wizard>
 
-  <div class="ax-flex ax-justify-center ax-gap-2">
+  <div class="flex justify-center gap-2">
     <ax-button
       (onClick)="wizard.previous()"
       [disabled]="wizard.isFirst()"

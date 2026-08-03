@@ -8,9 +8,10 @@ import { afterNextRender, Component, signal, viewChild, ViewEncapsulation } from
   templateUrl: 'usage.component.html',
   imports: [AXCarouselDirective],
   encapsulation: ViewEncapsulation.None,
-  styles: `
+  styles: `@reference '@acorex/styles/themes/default.css';
+
     @use 'swiper/swiper-bundle.css' as *;
-    .ax-carousel {
+    .carousel {
       overflow: hidden;
       display: block;
       width: 40rem;

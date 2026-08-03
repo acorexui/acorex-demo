@@ -1,6 +1,6 @@
-<div class="ax-flex ax-flex-col ax-gap-4">
-  <div class="ax-flex ax-gap-2 ax-items-center">
-    <span class="ax-text-sm ax-font-medium">Location:</span>
+<div class="flex flex-col gap-4">
+  <div class="flex gap-2 items-center">
+    <span class="text-sm font-medium">Location:</span>
     <ax-button-group [selection]="selection">
       @for (location of locations; track location.value) {
       <ax-button-group-item
@@ -14,7 +14,7 @@
   </div>
 
   <div
-    class="ax-border ax-surface ax-rounded-lg ax-p-4"
+    class="border surface rounded-lg p-4"
     style="min-height: 200px"
   >
     <ax-tabs [location]="selectedLocation()" [look]="'with-line-color'">

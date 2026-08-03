@@ -1,12 +1,12 @@
-<div class="ax-mx-3 ax-flex ax-flex-col ax-items-center">
+<div class="mx-3 flex flex-col items-center">
   <div
     #host
-    class="ax-max-w-3xl ax-overflow-hidden ax-rounded-lg ax-bg-neutral-900 ax-shadow-lg"
+    class="max-w-3xl overflow-hidden rounded-lg bg-neutral-900 shadow-lg"
   >
-    <div class="ax-relative ax-aspect-video ax-bg-black">
+    <div class="relative aspect-video bg-black">
       <video
         #video
-        class="ax-h-full ax-w-full ax-object-contain"
+        class="h-full w-full object-contain"
         [src]="src()"
         playsinline
         preload="metadata"
@@ -20,12 +20,12 @@
     </div>
 
     <div
-      class="ax-flex ax-flex-col ax-gap-3 ax-border-t ax-border-neutral-700 ax-p-4 ax-text-neutral-100"
+      class="flex flex-col gap-3 border-t border-neutral-700 p-4 text-neutral-100"
     >
-      <div class="ax-flex ax-items-center ax-gap-3">
+      <div class="flex items-center gap-3">
         <input
           type="range"
-          class="ax-min-h-6 ax-flex-1 ax-cursor-pointer"
+          class="min-h-6 flex-1 cursor-pointer"
           min="0"
           max="100"
           step="0.1"
@@ -35,13 +35,13 @@
           [attr.aria-valuetext]="timeLabel()"
         />
         <span
-          class="ax-shrink-0 ax-tabular-nums ax-text-xs ax-text-neutral-400"
+          class="shrink-0 tabular-nums text-xs text-neutral-400"
         >
           {{ timeLabel() }}
         </span>
       </div>
 
-      <div class="ax-flex ax-flex-wrap ax-items-center ax-gap-2">
+      <div class="flex flex-wrap items-center gap-2">
         <ax-button color="default" (click)="skip(-10)" title="Back 10 seconds">
           <ax-icon>
             <i class="fa-solid fa-backward"></i>
@@ -78,12 +78,12 @@
           </ax-icon>
         </ax-button>
 
-        <label class="ax-flex ax-flex-1 ax-items-center ax-gap-2">
-          <span class="ax-sr-only">Volume</span>
-          <i class="fa-solid fa-volume-low ax-text-neutral-500"></i>
+        <label class="flex flex-1 items-center gap-2">
+          <span class="sr-only">Volume</span>
+          <i class="fa-solid fa-volume-low text-neutral-500"></i>
           <input
             type="range"
-            class="ax-min-h-6 ax-flex-1 ax-cursor-pointer"
+            class="min-h-6 flex-1 cursor-pointer"
             min="0"
             max="100"
             step="1"
@@ -92,11 +92,11 @@
           />
         </label>
 
-        <div class="ax-flex ax-flex-1 ax-items-center ax-gap-1">
+        <div class="flex flex-1 items-center gap-1">
           @for (rate of playbackRates; track rate) {
             <ax-button
               [color]="playbackRate() === rate ? 'primary' : 'default'"
-              class="ax-min-w-[4rem] ax-px-2"
+              class="min-w-[4rem] px-2"
               (click)="setPlaybackRate(rate)"
               [title]="'Playback speed ' + rate + '×'"
             >

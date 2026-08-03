@@ -27,9 +27,9 @@ export class ServiceComponent {
 
   protected async handleOpenServiceComponent() {
     const modalContent = `
-      <div class="ax-px-4 ax-py-2">
-        <ax-title class="ax-text-lg ax-font-medium ax-mb-4">Service Modal</ax-title>
-        <ax-subtitle class="ax-mb-4">
+      <div class="px-4 py-2">
+        <ax-title class="text-lg font-medium mb-4">Service Modal</ax-title>
+        <ax-subtitle class="mb-4">
           This modal was opened using the modal service programmatically.
         </ax-subtitle>
         <ax-subtitle>

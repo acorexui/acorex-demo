@@ -1,6 +1,6 @@
-<div class="ax-flex ax-flex-col ax-gap-4">
+<div class="flex flex-col gap-4">
   <div
-    class="ax-w-96 ax-h-72 ax-border ax-border-surface ax-rounded-lg ax-overflow-hidden"
+    class="w-96 h-72 border border-surface rounded-lg overflow-hidden"
   >
     <img
       axPanView
@@ -8,11 +8,11 @@
       src="https://picsum.photos/800/600"
       alt="Zoom Controls Image"
       (zoomChange)="onZoomChange($event)"
-      class="ax-w-full ax-h-full ax-object-contain"
+      class="w-full h-full object-contain"
     />
   </div>
 
-  <div class="ax-flex ax-gap-2 ax-flex-wrap">
+  <div class="flex gap-2 flex-wrap">
     <ax-button
       text="Zoom In"
       color="primary"
@@ -28,7 +28,7 @@
       color="success"
       (onClick)="panViewRef.resetPosition()"
     ></ax-button>
-    <span class="ax-px-3 ax-py-2 ax-bg-surface ax-rounded ax-text-sm">
+    <span class="px-3 py-2 bg-surface rounded text-sm">
       Zoom: {{ currentZoom() }}%
     </span>
   </div>

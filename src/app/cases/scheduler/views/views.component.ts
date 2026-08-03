@@ -11,7 +11,8 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-views',
   templateUrl: './views.component.html',
   imports: [FormsModule, AXSchedulerComponent, AXSelectBoxComponent],
-  styles: `
+  styles: `@reference '@acorex/styles/themes/default.css';
+
     ax-scheduler {
       --ax-comp-scheduler-width: 100%;
     }

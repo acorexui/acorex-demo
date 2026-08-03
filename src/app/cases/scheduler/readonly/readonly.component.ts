@@ -10,7 +10,8 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-readonly',
   imports: [AXSchedulerComponent, AXSelectBoxComponent, FormsModule],
   templateUrl: './readonly.component.html',
-  styles: `ax-scheduler{
+  styles: `@reference '@acorex/styles/themes/default.css';
+ax-scheduler{
     --ax-comp-scheduler-width:100%;
   }`,
 })

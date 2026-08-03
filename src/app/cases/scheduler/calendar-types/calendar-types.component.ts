@@ -10,7 +10,8 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-calendar-types',
   templateUrl: './calendar-types.component.html',
   imports: [AXSchedulerComponent, AXSelectBoxComponent, FormsModule],
-  styles: `ax-scheduler{
+  styles: `@reference '@acorex/styles/themes/default.css';
+ax-scheduler{
     --ax-comp-scheduler-width:100%;
   }`,
 })

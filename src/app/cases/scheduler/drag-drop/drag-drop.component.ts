@@ -10,7 +10,8 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-drag-drop',
   templateUrl: './drag-drop.component.html',
   imports: [FormsModule, AXSchedulerComponent, AXSelectBoxComponent],
-  styles: `ax-scheduler{
+  styles: `@reference '@acorex/styles/themes/default.css';
+ax-scheduler{
     --ax-comp-scheduler-width:100%;
   }`,
 })

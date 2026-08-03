@@ -1,8 +1,8 @@
-<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-2">
+<div class="flex flex-col items-center justify-center gap-2">
   <ax-collapse-group
     look="fill"
     [accordion]="true"
-    class="ax-container ax-px-12 ax-gap-2"
+    class="container px-12 gap-2"
   >
     <ax-collapse
       #c
@@ -18,7 +18,7 @@
         consumer electronics.
       </p>
     </ax-collapse>
-    <div class="ax-flex ax-justify-end ax-w-full">
+    <div class="flex justify-end w-full">
       <ax-button look="outline" (onClick)="_restart(c)">Restart</ax-button>
     </div>
   </ax-collapse-group>

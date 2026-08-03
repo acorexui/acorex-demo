@@ -1,4 +1,4 @@
-<div class="ax-w-full ax-max-w-4xl ax-mx-auto">
+<div class="w-full max-w-4xl mx-auto">
   <ax-step-wizard
     #navigationWizard
     [size]="'ax-md'"
@@ -14,14 +14,14 @@
       [description]="'Validate input data'"
     >
       <ax-icon class="fas fa-check-circle"></ax-icon>
-      <ax-content class="ax-w-full">
-        <ax-title level="3" class="ax-mb-4">Data Validation</ax-title>
-        <ax-subtitle class="ax-mb-4">
+      <ax-content class="w-full">
+        <ax-title level="3" class="mb-4">Data Validation</ax-title>
+        <ax-subtitle class="mb-4">
           Validate the input data for completeness and accuracy.
         </ax-subtitle>
 
-        <div class="ax-space-y-4">
-          <div class="ax-flex ax-items-center ax-gap-3">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
             <ax-button
               (onClick)="setValidationState('pending')"
               color="warning"
@@ -43,9 +43,9 @@
           </div>
 
           <div
-            class="dark:ax-light-surface ax-dark-surface ax-p-4 ax-rounded-md ax-border"
+            class="dark:light-surface dark-surface p-4 rounded-md border"
           >
-            <ax-title level="4" class="ax-mb-2">
+            <ax-title level="4" class="mb-2">
               Current State: {{ validationState() }}
             </ax-title>
             <ax-subtitle>
@@ -67,14 +67,14 @@
       [state]="processingState()"
     >
       <ax-icon class="fas fa-cogs"></ax-icon>
-      <ax-content class="ax-w-full">
-        <ax-title level="3" class="ax-mb-4">Data Processing</ax-title>
-        <ax-subtitle class="ax-mb-4">
+      <ax-content class="w-full">
+        <ax-title level="3" class="mb-4">Data Processing</ax-title>
+        <ax-subtitle class="mb-4">
           Process and transform the validated data.
         </ax-subtitle>
 
-        <div class="ax-space-y-4">
-          <div class="ax-flex ax-items-center ax-gap-3">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
             <ax-button
               (onClick)="setProcessingState('pending')"
               color="warning"
@@ -96,9 +96,9 @@
           </div>
 
           <div
-            class="dark:ax-light-surface ax-dark-surface ax-p-4 ax-rounded-md ax-border"
+            class="dark:light-surface dark-surface p-4 rounded-md border"
           >
-            <ax-title level="4" class="ax-mb-2">
+            <ax-title level="4" class="mb-2">
               Current State: {{ processingState() }}
             </ax-title>
             <ax-subtitle>
@@ -120,14 +120,14 @@
       [state]="qualityState()"
     >
       <ax-icon class="fas fa-search"></ax-icon>
-      <ax-content class="ax-w-full">
-        <ax-title level="3" class="ax-mb-4">Quality Check</ax-title>
-        <ax-subtitle class="ax-mb-4">
+      <ax-content class="w-full">
+        <ax-title level="3" class="mb-4">Quality Check</ax-title>
+        <ax-subtitle class="mb-4">
           Verify the quality and accuracy of processed data.
         </ax-subtitle>
 
-        <div class="ax-space-y-4">
-          <div class="ax-flex ax-items-center ax-gap-3">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
             <ax-button
               (onClick)="setQualityState('pending')"
               color="warning"
@@ -149,9 +149,9 @@
           </div>
 
           <div
-            class="dark:ax-light-surface ax-dark-surface ax-p-4 ax-rounded-md ax-border"
+            class="dark:light-surface dark-surface p-4 rounded-md border"
           >
-            <ax-title level="4" class="ax-mb-2">
+            <ax-title level="4" class="mb-2">
               Current State: {{ qualityState() }}
             </ax-title>
             <ax-subtitle>
@@ -173,14 +173,14 @@
       [state]="reviewState()"
     >
       <ax-icon class="fas fa-clipboard-check"></ax-icon>
-      <ax-content class="ax-w-full">
-        <ax-title level="3" class="ax-mb-4">Final Review</ax-title>
-        <ax-subtitle class="ax-mb-4">
+      <ax-content class="w-full">
+        <ax-title level="3" class="mb-4">Final Review</ax-title>
+        <ax-subtitle class="mb-4">
           Review all results and approve for final delivery.
         </ax-subtitle>
 
-        <div class="ax-space-y-4">
-          <div class="ax-flex ax-items-center ax-gap-3">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
             <ax-button
               (onClick)="setReviewState('pending')"
               color="warning"
@@ -202,9 +202,9 @@
           </div>
 
           <div
-            class="dark:ax-light-surface ax-dark-surface ax-p-4 ax-rounded-md ax-border"
+            class="dark:light-surface dark-surface p-4 rounded-md border"
           >
-            <ax-title level="4" class="ax-mb-2">
+            <ax-title level="4" class="mb-2">
               Current State: {{ reviewState() }}
             </ax-title>
             <ax-subtitle>
@@ -221,10 +221,10 @@
   </ax-step-wizard>
 
   <div
-    class="ax-p-4 dark:ax-light-surface ax-dark-surface ax-rounded-lg ax-mt-4"
+    class="p-4 dark:light-surface dark-surface rounded-lg mt-4"
   >
     <div
-      class="ax-flex ax-justify-center ax-w-full ax-pb-4 ax-border-b ax-border-surface ax-mb-2"
+      class="flex justify-center w-full pb-4 border-b border-surface mb-2"
     >
       <ng-template
         [axStepWizardContent]
@@ -233,16 +233,16 @@
       </ng-template>
     </div>
 
-    <ax-title level="3" class="ax-mb-4">State Management</ax-title>
-    <ax-subtitle class="ax-mb-4">
+    <ax-title level="3" class="mb-4">State Management</ax-title>
+    <ax-subtitle class="mb-4">
       Use the buttons above each step to change its state and see how it affects
       the visual appearance.
     </ax-subtitle>
 
-    <div class="ax-flex ax-justify-between">
-      <div class="ax-space-y-3">
+    <div class="flex justify-between">
+      <div class="space-y-3">
         <ax-title level="4">Navigation Controls</ax-title>
-        <div class="ax-flex ax-gap-2 ax-flex-wrap">
+        <div class="flex gap-2 flex-wrap">
           <ax-button
             (onClick)="navigationWizard.previous()"
             [disabled]="navigationWizard.isFirst()"
@@ -259,9 +259,9 @@
         </div>
       </div>
 
-      <div class="ax-space-y-3">
+      <div class="space-y-3">
         <ax-title level="4">Quick Actions</ax-title>
-        <div class="ax-flex ax-gap-2 ax-flex-wrap">
+        <div class="flex gap-2 flex-wrap">
           <ax-button
             (onClick)="resetAllStates()"
             color="danger"
@@ -278,12 +278,12 @@
       </div>
     </div>
 
-    <div class="ax-mt-4 ax-pt-2 ax-border-t ax-border-surface">
-      <ax-title level="4" class="ax-mb-3">Current Progress</ax-title>
-      <ax-subtitle class="ax-flex ax-items-center">
+    <div class="mt-4 pt-2 border-t border-surface">
+      <ax-title level="4" class="mb-3">Current Progress</ax-title>
+      <ax-subtitle class="flex items-center">
         Current Step: {{ getCurrentStep(navigationWizard) }} of 4
         <ax-badge
-          class="ax-ml-4"
+          class="ml-4"
           [text]="getCompletedSteps() + ' steps completed'"
         >
         </ax-badge>

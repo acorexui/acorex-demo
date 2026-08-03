@@ -1,7 +1,7 @@
 <div
-  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-w-full ax-min-w-[30rem]"
+  class="flex flex-col items-center justify-center gap-4 w-full min-w-[30rem]"
 >
-  <div class="ax-w-full">
+  <div class="w-full">
     <ax-tag-box
       [(ngModel)]="tagBoxValue"
       [allowDuplicateValues]="false"
@@ -20,9 +20,9 @@
   </div>
 
   @if (tagBoxValue().length > 0) {
-  <div class="ax-mt-4 ax-w-full">
+  <div class="mt-4 w-full">
     <ax-title size="sm">Selected Skills ({{ tagBoxValue().length }})</ax-title>
-    <div class="ax-mt-2 ax-flex ax-flex-wrap ax-gap-2">
+    <div class="mt-2 flex flex-wrap gap-2">
       @for (tag of tagBoxValue(); track tag) {
       <ax-tag [text]="tag.text" look="twotone" color="primary"></ax-tag>
       }
@@ -34,7 +34,7 @@
 <!-- List Header Template -->
 <ng-template #listHeaderTemplate>
   <div
-    class="ax-flex ax-items-center ax-justify-between ax-px-4 ax-py-3 ax-border-b ax-border-surface"
+    class="flex items-center justify-between px-4 py-3 border-b border-surface"
   >
     <ax-title size="sm">Available Skills</ax-title>
     <ax-subtitle size="xs"> {{ data().length }} skills available </ax-subtitle>
@@ -44,10 +44,10 @@
 <!-- List Footer Template -->
 <ng-template #listFooterTemplate>
   <div
-    class="ax-flex ax-flex-col ax-gap-2 ax-px-4 ax-py-3 ax-border-t ax-surface"
+    class="flex flex-col gap-2 px-4 py-3 border-t surface"
   >
-    <ax-title size="xs" class="ax-mb-1">Skill Categories</ax-title>
-    <div class="ax-flex ax-flex-wrap ax-gap-2">
+    <ax-title size="xs" class="mb-1">Skill Categories</ax-title>
+    <div class="flex flex-wrap gap-2">
       @for (category of getUniqueCategories(); track category) {
       <ax-tag
         size="xs"
@@ -57,7 +57,7 @@
       ></ax-tag>
       }
     </div>
-    <ax-subtitle size="xs" class="ax-mt-2">
+    <ax-subtitle size="xs" class="mt-2">
       Select skills from different categories to build your profile
     </ax-subtitle>
   </div>
