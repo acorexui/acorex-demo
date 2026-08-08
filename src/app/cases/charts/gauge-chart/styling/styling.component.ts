@@ -10,7 +10,7 @@ import {
   imports: [AXGaugeChartComponent],
 })
 export class StylingComponent {
-  gaugeChartValue = signal<AXGaugeChartValue>(72);
+  gaugeChartValue = signal(72);
 
   // Demo: Styling options (gaugeWidth, cornerRadius, colors)
   gaugeChartOptions = signal<AXGaugeChartOption>({

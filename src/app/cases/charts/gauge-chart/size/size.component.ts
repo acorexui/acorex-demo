@@ -10,7 +10,7 @@ import {
   imports: [AXGaugeChartComponent],
 })
 export class SizeComponent {
-  gaugeChartValue = signal<AXGaugeChartValue>(68);
+  gaugeChartValue = signal(68);
 
   // Demo: Small size gauge
   smallGaugeOptions = signal<AXGaugeChartOption>({

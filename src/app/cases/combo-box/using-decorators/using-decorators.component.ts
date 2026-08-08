@@ -1,7 +1,42 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { AXComboBoxComponent, AXComboBoxItem } from "@acorex/components/combo-box";
+import { AXDecoratorGenericComponent, AXDecoratorIconComponent } from "@acorex/components/decorators";
 
 @Component({
     templateUrl: 'using-decorators.component.html',
-    imports: []
+    imports: [AXComboBoxComponent, AXDecoratorGenericComponent, AXDecoratorIconComponent]
 })
-export class UsingDecoratorsComponent {}
+export class UsingDecoratorsComponent {
+    decoratorValue = signal<string | number >('');
+    decoratorSelectValue = signal<string | number >('us');
+    
+    fruits: AXComboBoxItem[] = [
+        { id: 'apple', text: 'Apple', value: 1 },
+        { id: 'banana', text: 'Banana', value: 2 },
+        { id: 'cherry', text: 'Cherry', value: 3 },
+        { id: 'grape', text: 'Grape', value: 4 },
+        { id: 'mango', text: 'Mango', value: 5 },
+        { id: 'orange', text: 'Orange', value: 6 },
+      ];
+
+      countries: AXComboBoxItem[] = [
+        { id: 'ar', text: 'Argentina', value: 'ar' },
+        { id: 'au', text: 'Australia', value: 'au' },
+        { id: 'br', text: 'Brazil', value: 'br' },
+        { id: 'ca', text: 'Canada', value: 'ca' },
+        { id: 'fr', text: 'France', value: 'fr' },
+        { id: 'de', text: 'Germany', value: 'de' },
+        { id: 'in', text: 'India', value: 'in' },
+        { id: 'ir', text: 'Iran', value: 'ir' },
+        { id: 'it', text: 'Italy', value: 'it' },
+        { id: 'jp', text: 'Japan', value: 'jp' },
+        { id: 'nl', text: 'Netherlands', value: 'nl' },
+        { id: 'no', text: 'Norway', value: 'no' },
+        { id: 'es', text: 'Spain', value: 'es' },
+        { id: 'se', text: 'Sweden', value: 'se' },
+        { id: 'tr', text: 'Turkey', value: 'tr' },
+        { id: 'gb', text: 'United Kingdom', value: 'gb' },
+        { id: 'us', text: 'United States', value: 'us' },
+      ];
+    
+}

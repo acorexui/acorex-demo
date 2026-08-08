@@ -2,15 +2,21 @@ import {
   AXCarouselDirective,
   type AXCarouselOptions,
 } from '@acorex/cdk/carousel';
-import { afterNextRender, Component, signal, viewChild, ViewEncapsulation } from '@angular/core';
+import {
+  afterNextRender,
+  Component,
+  signal,
+  viewChild,
+  ViewEncapsulation,
+} from '@angular/core';
 
 @Component({
   templateUrl: 'usage.component.html',
   imports: [AXCarouselDirective],
   encapsulation: ViewEncapsulation.None,
-  styles: `@reference '@acorex/styles/themes/default.css';
-
-    @use 'swiper/swiper-bundle.css' as *;
+  styles: `
+    @reference '@acorex/styles/themes/default.css';
+    @import 'swiper/swiper-bundle.css';
     .carousel {
       overflow: hidden;
       display: block;
@@ -23,18 +29,18 @@ export class UsageComponent {
   private swiperRef = viewChild<AXCarouselDirective>('f');
 
   carouselOptions = signal<AXCarouselOptions>({
-    slidesPerView:1,
-    spaceBetween:20,
-     breakpoints: {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
       320: {
         slidesPerView: 2,
       },
       480: {
         slidesPerView: 2,
-      }
+      },
     },
     keyboard: true,
-    autoplay:true,
+    autoplay: true,
     pagination: {
       el: '.ax-carousel-pagination',
       clickable: true,

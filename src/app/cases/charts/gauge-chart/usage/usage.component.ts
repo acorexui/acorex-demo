@@ -10,7 +10,7 @@ import {
   imports: [AXGaugeChartComponent],
 })
 export class UsageComponent {
-  gaugeChartValue = signal<AXGaugeChartValue>(75);
+  gaugeChartValue = signal(75);
 
   gaugeChartOptions = signal<AXGaugeChartOption>({
     minValue: 0,

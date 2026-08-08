@@ -1,5 +1,5 @@
-@import "@acorex/styles/index.scss";
-@import "@acorex/styles/icons/fontawesome/index.scss";
+@import "@acorex/styles/index.css";
+@import "@acorex/styles/icons/fontawesome/index.css";
 @import "tailwindcss";
 @import '@acorex/styles/themes/default.css';
 @source '../node_modules/@acorex';

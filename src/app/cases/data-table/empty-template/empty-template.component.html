@@ -1,4 +1,10 @@
 <div class="max-w-[40rem]">
+  <!--
+    Deferred so the data-table is not rendered during SSR/prerendering:
+    the library's text-highlight cleanup accesses `document` on destroy,
+    which crashes the prerender worker on the server.
+  -->
+  @defer (on idle) {
   <ax-data-table
     [showHeader]="_options.showHeader"
     [fixedHeader]="_options.fixedHeader"
@@ -55,6 +61,13 @@
       caption="email"
     ></ax-text-column>
   </ax-data-table>
+  } @placeholder {
+  <div
+    class="flex h-64 items-center justify-center rounded border border-dashed"
+  >
+    <span>Loading table...</span>
+  </div>
+  }
 
   <ng-template #emptyTemplateRef>
     <div class="flex items-center justify-center text-white w-fit">
