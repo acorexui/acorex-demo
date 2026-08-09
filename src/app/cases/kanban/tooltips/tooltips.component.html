@@ -1,6 +1,6 @@
-<div class="ax-max-w-[100vw] ax-max-h-[100vh]">
+<div class="max-w-[100vw] max-h-[100vh]">
   <ax-kanban
-    class="ax-p-4"
+    class="p-4"
     [statuses]="statuses()"
     [dataSource]="dataSource()"
     (onSortChanged)="sort($event)"
@@ -12,22 +12,22 @@
 <ng-template #tooltipTemplate let-item>
   @if (item.id === 2) {
   <div
-    class="ax-flex ax-flex-col ax-gap-2 ax-p-3 ax-max-w-xs ax-surface ax-rounded-lg ax-shadow-lg ax-border"
+    class="flex flex-col gap-2 p-3 max-w-xs surface rounded-lg shadow-lg border"
   >
-    <div class="ax-flex ax-items-center ax-gap-2">
-      <div class="ax-w-2 ax-h-2 ax-bg-blue-500 ax-rounded-full"></div>
-      <span class="ax-font-medium">{{ item.title }}</span>
+    <div class="flex items-center gap-2">
+      <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+      <span class="font-medium">{{ item.title }}</span>
     </div>
-    <p class="ax-text-sm ax-text-muted">{{ item.description }}</p>
-    <div class="ax-flex ax-justify-between ax-items-center ax-text-xs">
+    <p class="text-sm text-muted">{{ item.description }}</p>
+    <div class="flex justify-between items-center text-xs">
       <span>Priority: {{ item.priority || "none" }}</span>
       <span>Status: {{ item.statusKey }}</span>
     </div>
   </div>
   } @else {
-  <div class="ax-p-2 ax-surface ax-rounded ax-shadow ax-border">
-    <div class="ax-font-medium">{{ item.title }}</div>
-    <div class="ax-text-sm ax-text-muted">{{ item.description }}</div>
+  <div class="p-2 surface rounded shadow border">
+    <div class="font-medium">{{ item.title }}</div>
+    <div class="text-sm text-muted">{{ item.description }}</div>
   </div>
   }
 </ng-template>

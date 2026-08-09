@@ -1,9 +1,9 @@
 <div
-  class="ax-w-[100vw] ax-h-[100vh] ax-flex ax-justify-center ax-items-center ax-flex-col ax-gap-4 ax-p-4"
+  class="w-[100vw] h-[100vh] flex justify-center items-center flex-col gap-4 p-4"
 >
-  <div class="ax-flex ax-gap-4">
-    <div class="ax-flex-1">
-      <div class="ax-h-[40rem] ax-w-[40rem]">
+  <div class="flex gap-4">
+    <div class="flex-1">
+      <div class="h-[40rem] w-[40rem]">
         @defer(){
         <ax-scheduler
           selectedView="month"
@@ -20,20 +20,20 @@
       </div>
     </div>
 
-    <div class="ax-w-80">
-      <div class="ax-flex ax-items-center ax-justify-between ax-mb-2">
+    <div class="w-80">
+      <div class="flex items-center justify-between mb-2">
         <ax-subtitle>Event Log</ax-subtitle>
         <ax-button (click)="clearLog()" class="ax-sm" text="Clear"></ax-button>
       </div>
       <div
-        class="ax-bg-gray-50 ax-p-3 ax-rounded ax-h-[40rem] ax-overflow-y-auto"
+        class="bg-gray-50 p-3 rounded h-[40rem] overflow-y-auto"
       >
         @for (event of eventLog(); track $index) {
-        <div class="ax-text-sm ax-text-gray-700 ax-mb-1 ax-font-mono">
+        <div class="text-sm text-gray-700 mb-1 font-mono">
           {{ event }}
         </div>
         } @if (eventLog().length === 0) {
-        <div class="ax-text-gray-500 ax-text-sm">
+        <div class="text-gray-500 text-sm">
           No events yet. Click on slots or appointments to see events.
         </div>
         }

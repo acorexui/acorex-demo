@@ -7,16 +7,7 @@ import { Component, signal } from '@angular/core';
   imports: [AXDecoratorModule, AXVirtualScrollModule],
 })
 export class UsageComponent {
-  protected chat = signal<any[]>([
-    {
-      id: '0',
-      sendTime: new Date(),
-      type: 'text',
-      readTime: new Date(),
-      content: 'Hello',
-      name: 'John',
-      showActionButton: true,
-    },
+  protected chat = signal([
     {
       id: '1',
       fromId: '10',

@@ -14,7 +14,8 @@ import { Component, signal, viewChild } from '@angular/core';
   selector: 'app-actions',
   templateUrl: './actions.component.html',
   imports: [AXSchedulerComponent, AXContextMenuComponent],
-  styles: `ax-scheduler{
+  styles: `@reference '@acorex/styles/themes/default.css';
+ax-scheduler{
     --ax-comp-scheduler-width:100%;
   }`,
 })

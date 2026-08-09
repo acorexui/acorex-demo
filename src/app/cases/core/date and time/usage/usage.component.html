@@ -1,12 +1,10 @@
-<div
-  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-px-4"
->
-  <div class="ax-text-xl ax-font-semibold">Date & Time - Usage</div>
-  <div class="ax-text-sm ax-text-muted">
+<div class="flex flex-col items-center justify-center gap-4 px-4">
+  <div class="text-xl font-semibold">Date & Time - Usage</div>
+  <div class="text-sm text-muted">
     Demonstrates calendar switching, formatting, and utilities.
   </div>
 
-  <div class="ax-flex ax-gap-2 ax-flex-wrap">
+  <div class="flex gap-2 flex-wrap">
     <ax-button
       style="width: max-content; height: max-content"
       look="solid"
@@ -24,7 +22,7 @@
   </div>
 
   <div
-    class="ax-flex ax-flex-col ax-gap-2 ax-items-start ax-w-full md:ax-w-2/3"
+    class="flex flex-col gap-2 items-start w-full md:w-2/3"
     style="width: max-content"
   >
     <div><b>Active calendar:</b> {{ activeCalendar() }}</div>
@@ -34,10 +32,10 @@
   </div>
 
   <div
-    class="ax-flex ax-flex-col ax-gap-2 ax-items-start ax-w-full md:ax-w-2/3"
+    class="flex flex-col gap-2 items-start w-full md:w-2/3"
     style="width: max-content"
   >
-    <div class="ax-text-base ax-font-semibold">Utilities</div>
+    <div class="text-base font-semibold">Utilities</div>
     <div><b>+36 hours (long date):</b> {{ plus36h() }}</div>
     <div>
       <b>Compare (+36h is after now?):</b>
@@ -49,7 +47,7 @@
     </div>
   </div>
 
-  <div class="ax-flex ax-gap-2">
+  <div class="flex gap-2">
     <ax-button
       style="width: max-content; height: max-content"
       look="outline"

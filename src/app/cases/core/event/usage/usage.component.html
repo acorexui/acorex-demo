@@ -1,25 +1,19 @@
-<div
-  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-px-4 ax-py-8"
->
-  <div class="ax-text-xl ax-font-semibold">Event Service - Usage</div>
-  <div class="ax-text-sm ax-text-muted ax-text-center ax-max-w-2xl">
+<div class="flex flex-col items-center justify-center gap-6 px-4 py-8">
+  <div class="text-xl font-semibold">Event Service - Usage</div>
+  <div class="text-sm text-muted text-center max-w-2xl">
     Demonstrates both Observable-based and callback-based event systems from
     <code>AXEventService</code>.
   </div>
 
   <!-- Observable-based Events Section -->
-  <div
-    class="ax-w-full ax-max-w-4xl ax-border ax-border-default ax-rounded-lg ax-p-4"
-  >
-    <div class="ax-text-lg ax-font-semibold ax-mb-4">
-      Observable-based Events
-    </div>
-    <div class="ax-text-sm ax-text-muted ax-mb-4">
+  <div class="w-full max-w-4xl border border-default rounded-lg p-4">
+    <div class="text-lg font-semibold mb-4">Observable-based Events</div>
+    <div class="text-sm text-muted mb-4">
       Subscribe to events using RxJS Observables. Events are typed with
       <code>AXEventData</code>.
     </div>
 
-    <div class="ax-flex ax-gap-2 ax-flex-wrap ax-mb-4">
+    <div class="flex gap-2 flex-wrap mb-4">
       <ax-button
         text="Emit Locale Changed"
         look="solid"
@@ -58,35 +52,35 @@
       ></ax-button>
     </div>
 
-    <div class="ax-bg-muted ax-rounded ax-p-3">
-      <div class="ax-text-sm ax-font-semibold ax-mb-2">
+    <div class="bg-muted rounded p-3">
+      <div class="text-sm font-semibold mb-2">
         Event Log ({{ eventCount() }} events)
       </div>
-      <div class="ax-flex ax-flex-col ax-gap-1">
+      <div class="flex flex-col gap-1">
         @if (eventLog().length === 0) {
-        <div class="ax-text-muted ax-italic">No events emitted yet...</div>
-        } @else { @for (log of eventLog(); track $index) {
-        <div
-          class="ax-text-xs ax-font-mono ax-text-default ax-bg-background ax-p-2 ax-rounded"
-        >
-          {{ log }}
-        </div>
-        } }
+          <div class="text-muted italic">No events emitted yet...</div>
+        } @else {
+          @for (log of eventLog(); track $index) {
+            <div
+              class="text-xs font-mono text-default bg-background p-2 rounded"
+            >
+              {{ log }}
+            </div>
+          }
+        }
       </div>
     </div>
   </div>
 
   <!-- Callback-based Events Section -->
-  <div
-    class="ax-w-full ax-max-w-4xl ax-border ax-border-default ax-rounded-lg ax-p-4"
-  >
-    <div class="ax-text-lg ax-font-semibold ax-mb-4">Callback-based Events</div>
-    <div class="ax-text-sm ax-text-muted ax-mb-4">
+  <div class="w-full mw-4xl border border-default rounded-lg p-4">
+    <div class="text-lg font-semibold mb-4">Callback-based Events</div>
+    <div class="text-sm text-muted mb-4">
       Use <code>on()</code>, <code>broadcast()</code>, and
       <code>destroy()</code> for callback-based event handling.
     </div>
 
-    <div class="ax-flex ax-gap-2 ax-flex-wrap ax-mb-4">
+    <div class="flex gap-2 flex-wrap mb-4">
       <ax-button
         text="Broadcast Event"
         look="solid"
@@ -107,26 +101,28 @@
       ></ax-button>
     </div>
 
-    <div class="ax-bg-muted ax-rounded ax-p-3">
-      <div class="ax-text-sm ax-font-semibold ax-mb-2">
+    <div class="bg-muted rounded p-3">
+      <div class="text-sm font-semibold mb-2">
         Callback Log ({{ callbackCount() }} callbacks)
       </div>
-      <div class="ax-flex ax-flex-col ax-gap-1">
+      <div class="flex flex-col gap-1">
         @if (callbackLog().length === 0) {
-        <div class="ax-text-muted ax-italic">No callbacks received yet...</div>
-        } @else { @for (log of callbackLog(); track $index) {
-        <div
-          class="ax-text-xs ax-font-mono ax-text-default ax-bg-background ax-p-2 ax-rounded"
-        >
-          {{ log }}
-        </div>
-        } }
+          <div class="text-muted italic">No callbacks received yet...</div>
+        } @else {
+          @for (log of callbackLog(); track $index) {
+            <div
+              class="text-xs font-mono text-default bg-background p-2 rounded"
+            >
+              {{ log }}
+            </div>
+          }
+        }
       </div>
     </div>
   </div>
 
   <!-- Clear All Button -->
-  <div class="ax-flex ax-gap-2">
+  <div class="flex gap-2">
     <ax-button
       text="Clear All Logs"
       look="outline"

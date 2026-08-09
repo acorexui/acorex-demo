@@ -1,5 +1,5 @@
-<div class="ax-flex ax-items-center ax-justify-center ax-gap-4 ">
-  <ax-rail-navigation look="pills-color" class="ax-h-[100vh]">
+<div class="flex items-center justify-center gap-4">
+  <ax-rail-navigation look="pills-color" class="h-[100vh]">
     <ax-rail-navigation-item
       [active]="isActive(0)"
       [disabled]="isDisabled(0)"
@@ -39,10 +39,10 @@
     </ax-suffix>
   </ax-rail-navigation>
 
-  <div class="ax-flex-1 ax-flex ax-flex-col ax-gap-4">
-    <div class="ax-flex ax-flex-col ax-gap-2">
-      <h3 class="ax-text-lg ax-font-semibold">Active Item</h3>
-      <div class="ax-flex ax-gap-2 ax-flex-wrap">
+  <div class="flex-1 flex flex-col gap-4">
+    <div class="flex flex-col gap-2">
+      <h3 class="text-lg font-semibold">Active Item</h3>
+      <div class="flex gap-2 flex-wrap">
         @for (item of ['Home', 'Store', 'Profile', 'Settings']; track $index) {
         <ax-button
           [text]="item"
@@ -56,10 +56,10 @@
       </div>
     </div>
 
-    <div class="ax-flex-1 ax-flex ax-flex-col ax-gap-4">
-      <div class="ax-flex ax-flex-col ax-gap-2">
-        <h3 class="ax-text-lg ax-font-semibold">Disabled Items</h3>
-        <div class="ax-flex ax-gap-2 ax-flex-wrap">
+    <div class="flex-1 flex flex-col gap-4">
+      <div class="flex flex-col gap-2">
+        <h3 class="text-lg font-semibold">Disabled Items</h3>
+        <div class="flex gap-2 flex-wrap">
           @for (item of ['Home', 'Store', 'Profile', 'Settings']; track $index)
           {
           <ax-button

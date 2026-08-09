@@ -1,23 +1,23 @@
 <div
-  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+  class="flex flex-col items-center justify-center gap-4 p-4"
 >
-  <div class="ax-flex ax-gap-2 ax-mb-4 ax-flex-wrap">
+  <div class="flex gap-2 mb-4 flex-wrap">
     <ax-button (onClick)="browseFiles()" text="Browse Files"></ax-button>
     <ax-button (onClick)="addSampleFiles()" text="Add Sample Files"></ax-button>
     <ax-button (onClick)="cancelAll()" text="Cancel All"></ax-button>
     <ax-button (onClick)="clearAll()" text="Clear All"></ax-button>
   </div>
 
-  <div class="ax-w-full ax-max-w-2xl ax-surface ax-rounded-lg ax-p-6">
-    <div class="ax-grid ax-grid-cols-1 ax-gap-4">
-      <div class="ax-dark-surface ax-p-4 ax-rounded ax-border">
+  <div class="w-full max-w-2xl surface rounded-lg p-6">
+    <div class="grid grid-cols-1 gap-4">
+      <div class="dark-surface p-4 rounded border">
         <ax-title>Upload Status</ax-title>
         <ax-subtitle>{{ uploadStatus() }}</ax-subtitle>
       </div>
 
-      <div class="ax-dark-surface ax-p-4 ax-rounded ax-border">
+      <div class="dark-surface p-4 rounded border">
         <ax-title>Service Properties</ax-title>
-        <div class="ax-text-sm ax-space-y-1">
+        <div class="text-sm space-y-1">
           <ax-subtitle>
             <strong>Is Any Determined:</strong>
             {{ isAnyDetermined }}
@@ -33,17 +33,17 @@
         </div>
       </div>
 
-      <div class="ax-dark-surface ax-p-4 ax-rounded ax-border">
+      <div class="dark-surface p-4 rounded border">
         <ax-title>Uploaded Files</ax-title>
-        <div class="ax-text-sm">
+        <div class="text-sm">
           @if (uploadedFiles().length === 0) {
           <ax-subtitle>No files uploaded yet</ax-subtitle>
           } @else {
-          <ul class="ax-space-y-1">
+          <ul class="space-y-1">
             @for (file of uploadedFiles(); track file) {
-            <li class="ax-flex ax-items-center ax-gap-2">
+            <li class="flex items-center gap-2">
               <span
-                class="ax-w-2 ax-h-2 ax-bg-green-500 ax-rounded-full"
+                class="w-2 h-2 bg-green-500 rounded-full"
               ></span>
               {{ file.file?.name || "Unknown file" }}
             </li>

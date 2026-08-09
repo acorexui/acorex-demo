@@ -1,16 +1,16 @@
 <div
-  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+  class="flex flex-col items-center justify-center gap-4 p-4"
 >
-  <div class="ax-w-full ax-max-w-2xl">
+  <div class="w-full max-w-2xl">
     <div
       axUploaderZone
       [overlayTemplate]="customOverlayTemplate"
       (fileChange)="onFileChange($event)"
-      class="ax-flex ax-justify-center ax-items-center ax-border-2 ax-border-dashed ax-surface ax-rounded-lg ax-p-8 ax-text-center hover:ax-lighter-surface ax-transition-colors"
+      class="flex justify-center items-center border-2 border-dashed surface rounded-lg p-8 text-center hover:lighter-surface transition-colors"
       style="min-height: 300px"
     >
-      <div class="ax-flex ax-flex-col ax-items-center ax-gap-6">
-        <div class="ax-text-4xl">📁</div>
+      <div class="flex flex-col items-center gap-6">
+        <div class="text-4xl">📁</div>
         <div>
           <ax-title>Upload Files</ax-title>
           <ax-subtitle>
@@ -22,8 +22,8 @@
   </div>
 
   @if (selectedFiles().length > 0) {
-  <div class="ax-w-full ax-max-w-2xl ax-surface ax-rounded-lg ax-p-4">
-    <div class="ax-flex ax-items-center ax-justify-between ax-mb-2">
+  <div class="w-full max-w-2xl surface rounded-lg p-4">
+    <div class="flex items-center justify-between mb-2">
       <ax-title>Selected Files</ax-title>
       <ax-button
         (onClick)="clearFiles()"
@@ -32,14 +32,14 @@
         size="sm"
       ></ax-button>
     </div>
-    <ul class="ax-space-y-2">
+    <ul class="space-y-2">
       @for (file of selectedFiles(); track file.name) {
       <li
-        class="ax-flex ax-items-center ax-gap-2 ax-p-2 ax-dark-surface ax-rounded"
+        class="flex items-center gap-2 p-2 dark-surface rounded"
       >
-        <span class="ax-text-sm">📄</span>
-        <span class="ax-text-sm ax-flex-1">{{ file.name }}</span>
-        <span class="ax-text-xs ax-text-muted">
+        <span class="text-sm">📄</span>
+        <span class="text-sm flex-1">{{ file.name }}</span>
+        <span class="text-xs text-muted">
           {{ (file.size / 1024).toFixed(2) }} KB
         </span>
       </li>
@@ -52,10 +52,10 @@
 <!-- Custom Overlay Template -->
 <ng-template #customOverlayTemplate>
   <div
-    class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-8"
+    class="flex flex-col items-center justify-center gap-4 p-8"
   >
-    <div class="ax-text-6xl custom-overlay-icon">🎯</div>
-    <div class="ax-text-center">
+    <div class="text-6xl custom-overlay-icon">🎯</div>
+    <div class="text-center">
       <ax-title style="font-size: 1.5rem; line-height: 2rem"
         >Drop Files Here</ax-title
       >
@@ -63,10 +63,10 @@
         Release to upload your files
       </ax-subtitle>
     </div>
-    <div class="ax-flex ax-gap-2" style="margin-top: 1rem">
-      <div class="ax-w-2 ax-h-2 ax-rounded-full custom-overlay-dot"></div>
-      <div class="ax-w-2 ax-h-2 ax-rounded-full custom-overlay-dot"></div>
-      <div class="ax-w-2 ax-h-2 ax-rounded-full custom-overlay-dot"></div>
+    <div class="flex gap-2" style="margin-top: 1rem">
+      <div class="w-2 h-2 rounded-full custom-overlay-dot"></div>
+      <div class="w-2 h-2 rounded-full custom-overlay-dot"></div>
+      <div class="w-2 h-2 rounded-full custom-overlay-dot"></div>
     </div>
   </div>
 </ng-template>

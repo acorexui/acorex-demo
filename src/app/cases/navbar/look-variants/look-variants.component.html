@@ -1,14 +1,14 @@
 <div
-  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-w-[40rem] ax-bg-dark dark:ax-bg-light ax-p-4 ax-rounded-lg"
+  class="flex flex-col items-center justify-center gap-4 w-[40rem] bg-dark dark:bg-light p-4 rounded-lg"
 >
-  <div class="ax-flex ax-items-center ax-gap-2">
+  <div class="flex items-center gap-2">
     <ax-label>Select Look:</ax-label>
     <ax-select-box
       [dataSource]="lookOptions"
       textField="text"
       valueField="value"
       [(ngModel)]="selectedLook"
-      class="ax-w-32"
+      class="w-32"
     >
     </ax-select-box>
   </div>

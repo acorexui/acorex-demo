@@ -7,7 +7,8 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-current-time-indicator',
   imports: [AXSchedulerComponent, AXSelectBoxComponent, FormsModule],
   templateUrl: './current-time-indicator.component.html',
-  styles: `ax-scheduler{
+  styles: `@reference '@acorex/styles/themes/default.css';
+ax-scheduler{
     --ax-comp-scheduler-width:100%;
   }`,
 })

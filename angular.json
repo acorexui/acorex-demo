@@ -43,8 +43,8 @@
             ],
             "styles": [
               "node_modules/@angular/cdk/overlay-prebuilt.css",
-              "src/styles.scss",
-              "public/fonts/fontawesome/styles/index.scss"
+              "src/styles.css",
+              "public/fonts/fontawesome/styles/index.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -110,7 +110,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": ["src/styles.css"],
             "scripts": []
           }
         }

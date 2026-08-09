@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AXCollapseClickEvent } from '@acorex/components/collapse';
 import { AXAccordionModule } from '@acorex/components/accordion';
 import { AXClickEvent } from '@acorex/cdk/common';
 

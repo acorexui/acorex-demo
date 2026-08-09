@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
 @Component({
   templateUrl: 'custom-empty.component.html',
   imports: [AXListComponent],
-  styles: `ax-list{--ax-comp-list-empty-container-height:100%;}`,
+  styles: `@reference '@acorex/styles/themes/default.css';
+ax-list{--ax-comp-list-empty-container-height:100%;}`,
 })
 export class CustomEmptyComponent {
   // Empty data source to demonstrate empty state

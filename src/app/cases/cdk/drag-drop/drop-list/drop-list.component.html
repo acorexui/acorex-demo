@@ -1,31 +1,31 @@
-<p class="ax-pb-2">Vertical List (Default):</p>
+<p class="pb-2">Vertical List (Default):</p>
 <div
   axDropList
   id="simple-list"
   (dropListDropped)="drop($event)"
-  class="ax-drop-list max-w-[12.5rem] ax-flex ax-w-full ax-flex-col ax-rounded-sm ax-border ax-border-dashed ax-border-primary"
+  class="drop-list max-w-[12.5rem] flex w-full flex-col rounded-sm border border-dashed border-primary"
 >
   @for(item of items; track item) {
   <div
     axDrag
-    class="ax-drag ax-bg-background ax-cursor-move ax-border-b ax-border-primary/20 ax-px-4 ax-py-2 ax-text-center"
+    class="drag bg-background cursor-move border-b border-primary/20 px-4 py-2 text-center select-none"
   >
     {{ item }}
   </div>
   }
 </div>
-<p class="ax-py-2">Horizontal List :</p>
+<p class="py-2">Horizontal List :</p>
 <div
   axDropList
   id="simple-list"
   (dropListDropped)="drop($event)"
   [dropListOrientation]="'horizontal'"
-  class="max-w-[12.5rem] ax-flex ax-w-full ax-rounded-sm ax-border ax-border-dashed ax-border-primary"
+  class="max-w-[12.5rem] flex w-full rounded-sm border border-dashed border-primary"
 >
   @for(item of items; track item) {
   <div
     axDrag
-    class="ax-drag ax-bg-background ax-w-full ax-cursor-move ax-border-r ax-border-primary/20 ax-px-4 ax-py-2 ax-text-center"
+    class="drag bg-background w-full cursor-move border-r border-primary/20 px-4 py-2 text-center select-none"
   >
     {{ item }}
   </div>

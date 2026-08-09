@@ -4,7 +4,8 @@ import { Component, signal } from '@angular/core';
 @Component({
   templateUrl: 'frequency-options.component.html',
   imports: [AXRrulePreviewComponent],
-  styles: `:host{
+  styles: `@reference '@acorex/styles/themes/default.css';
+:host{
     display:block;
     width: 100%;
   }`,

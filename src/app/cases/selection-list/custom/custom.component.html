@@ -1,5 +1,5 @@
-<div class="ax-w-96">
-  <strong class="ax-mb-4 ax-block">Select your pet:</strong>
+<div class="w-96">
+  <strong class="mb-4 block">Select your pet:</strong>
   <ax-selection-list2
     [direction]="_usageOptions.direction"
     [items]="animalItems"
@@ -9,7 +9,7 @@
     [customTemplate]="w"
   >
     <ng-template #w let-item>
-      <i [class]="item.data.icon + ' fa-xl ax-pe-2'"></i>
+      <i [class]="item.data.icon + ' fa-xl pe-2'"></i>
       <span>{{ item.data.text }}</span>
     </ng-template>
   </ax-selection-list2>

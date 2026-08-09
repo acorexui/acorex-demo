@@ -1,14 +1,14 @@
-<div class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4">
-  <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
-    <div class="ax-flex ax-gap-2">
+<div class="flex flex-col items-center justify-center gap-4">
+  <div class="flex flex-col items-center gap-2">
+    <div class="flex gap-2">
       <ax-button (click)="goToPrevMonth()" text="Previous Month"></ax-button>
       <ax-button (click)="goToToday()" text="Today"></ax-button>
       <ax-button (click)="goToNextMonth()" text="Next Month"></ax-button>
     </div>
   </div>
 
-  <div class="ax-flex ax-flex-col ax-items-center ax-gap-2">
-    <small class="ax-text-center">
+  <div class="flex flex-col items-center gap-2">
+    <small class="text-center">
       Selected Date:
       {{ selectedDate() ? selectedDate()!.toDateString() : "None" }}
     </small>

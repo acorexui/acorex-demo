@@ -3,6 +3,7 @@ import {
   AXInputMaskDirective,
   type AXInputMaskEvent,
 } from '@acorex/cdk/input-mask';
+import { AXTextBoxComponent } from "@acorex/components/text-box";
 
 @Component({
   templateUrl: 'decimal.component.html',

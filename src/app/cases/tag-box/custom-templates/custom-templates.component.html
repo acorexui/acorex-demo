@@ -1,4 +1,4 @@
-<div class="ax-w-full ax-min-w-[30rem]">
+<div class="w-full min-w-[30rem]">
   <ax-tag-box
     #tagBox
     [tagTemplate]="tagTemplate"
@@ -24,20 +24,20 @@
   </ax-tag-box>
 </div>
 
-<div class="ax-mt-4 ax-w-full ax-max-w-2xl">
+<div class="mt-4 w-full max-w-2xl">
   <ax-title size="sm">Selected Items ({{ tagBoxValue().length }})</ax-title>
-  <div class="ax-mt-2 ax-flex ax-flex-wrap ax-gap-2">
+  <div class="mt-2 flex flex-wrap gap-2">
     @for (item of tagBoxValue(); track item.id) {
-    <ax-tag
-      [text]="item.text"
-      [color]="item.color"
-      look="twotone"
-      (onClick)="onTagClick($event)"
-    >
-      <ax-prefix>
-        <ax-icon [class]="getCategoryIcon(item.category)"></ax-icon>
-      </ax-prefix>
-    </ax-tag>
+      <ax-tag
+        [text]="item.text"
+        [color]="item.color"
+        look="twotone"
+        (onClick)="onTagClick($event)"
+      >
+        <ax-prefix>
+          <ax-icon [class]="getCategoryIcon(item.category)"></ax-icon>
+        </ax-prefix>
+      </ax-tag>
     }
   </div>
 </div>
@@ -55,7 +55,7 @@
     </ax-prefix>
     <ax-suffix>
       <button (click)="tagBoxComponent()?.removeItem(index)" type="button">
-        <ax-icon class="ax-icon ax-icon-close"></ax-icon>
+        <ax-icon class="icon icon-close"></ax-icon>
       </button>
     </ax-suffix>
   </ax-tag>
@@ -64,27 +64,25 @@
 <!-- Custom Autocomplete Item Template -->
 <ng-template #itemTemplate let-context>
   @let item = context.data;
-  <div
-    class="ax-flex ax-w-full ax-items-center ax-gap-3 ax-rounded ax-p-2 ax-transition-colors"
-  >
+  <div class="flex w-full items-center gap-3 rounded p-2 transition-colors">
     <div
-      class="ax-flex ax-h-8 ax-w-8 ax-items-center ax-justify-center ax-rounded-full"
+      class="flex h-8 w-8 items-center justify-center rounded-full"
       [ngClass]="{
-          'ax-bg-primary-500/15 ax-text-primary-500': item.color === 'primary',
-          'ax-bg-success-500/15 ax-text-success-500': item.color === 'success',
-          'ax-bg-danger-500/15 ax-text-danger-500': item.color === 'danger',
-          'ax-bg-warning-500/15 ax-text-warning-500': item.color === 'warning',
-          'ax-bg-info-500/15 ax-text-info-500': item.color === 'info',
-          'ax-bg-muted-500/15 ax-text-muted-500': item.color === 'muted',
-        }"
+        'bg-primary-500/15 text-primary-500': item.color === 'primary',
+        'bg-success-500/15 text-success-500': item.color === 'success',
+        'bg-danger-500/15 text-danger-500': item.color === 'danger',
+        'bg-warning-500/15 text-warning-500': item.color === 'warning',
+        'bg-info-500/15 text-info-500': item.color === 'info',
+        'bg-muted-500/15 text-muted-500': item.color === 'muted',
+      }"
     >
       <ax-icon [class]="getCategoryIcon(item.category)"></ax-icon>
     </div>
-    <div class="ax-flex-1">
+    <div class="flex-1">
       <ax-title>{{ item.text }}</ax-title>
       <ax-subtitle>{{ item.description }}</ax-subtitle>
     </div>
-    <div class="ax-flex ax-items-center ax-gap-1">
+    <div class="flex items-center gap-1">
       <ax-tag
         [text]="getCategoryLabel(item.category)"
         [color]="item.color"
@@ -97,11 +95,9 @@
 
 <!-- Custom Empty Template -->
 <ng-template #emptyTemplate>
-  <div
-    class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-px-4 ax-py-8"
-  >
+  <div class="flex flex-col items-center justify-center px-4 py-8">
     <ax-icon
-      class="fa-light fa-magnifying-glass ax-mb-2 ax-text-4xl ax-text-gray-400"
+      class="fa-light fa-magnifying-glass mb-2 text-4xl text-gray-400"
     ></ax-icon>
     <ax-title>No results found</ax-title>
   </div>
@@ -109,12 +105,12 @@
 
 <!-- Custom Loading Template -->
 <ng-template #loadingTemplate>
-  <div class="ax-flex ax-items-center ax-justify-center ax-py-4">
-    <div class="ax-flex ax-items-center ax-gap-2">
+  <div class="flex items-center justify-center py-4">
+    <div class="flex items-center gap-2">
       <div
-        class="ax-animate-spin ax-h-4 ax-w-4 ax-rounded-full ax-border-2 ax-border-primary ax-border-t-transparent"
+        class="animate-spin h-4 w-4 rounded-full border-2 border-primary border-t-transparent"
       ></div>
-      <span class="ax-text-sm ax-text-gray-500">Searching...</span>
+      <span class="text-sm text-gray-500">Searching...</span>
     </div>
   </div>
 </ng-template>

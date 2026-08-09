@@ -1,5 +1,5 @@
-<div class="ax-flex ax-flex-col ax-gap-4">
-  <div class="ax-flex ax-items-center ax-gap-2">
+<div class="flex flex-col gap-4">
+  <div class="flex items-center gap-2">
     <ax-check-box [(ngModel)]="showBadge">
       <ax-label>Show badge</ax-label>
     </ax-check-box>
@@ -19,5 +19,5 @@
     [showIcon]="showIcon()"
   ></ax-color-box>
 
-  <div class="ax-text-sm">Current: {{ color() ?? "null" }}</div>
+  <div class="text-sm">Current: {{ color() ?? "null" }}</div>
 </div>

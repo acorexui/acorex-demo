@@ -1,11 +1,11 @@
-<div class="ax-w-[100vw] ax-h-[100vh] ax-p-4">
+<div class="w-[100vw] h-[100vh] p-4">
   @defer () {
   <ax-scheduler
     [selectedView]="'month'"
     [startingDate]="startingDate()"
     [dataSource]="appointmentsData()"
     (onAppointmentDrop)="apptDropHandler($event)"
-    class="ax-bg-lightest dark:ax-bg-darkest"
+    class="bg-lightest dark:bg-darkest"
   ></ax-scheduler>
   }
 </div>

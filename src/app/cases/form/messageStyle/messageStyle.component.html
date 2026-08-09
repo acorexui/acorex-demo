@@ -1,16 +1,16 @@
-<div class="ax-flex ax-items-center">
+<div class="flex items-center">
   <ax-form #form1 messageStyle="float">
     <div
-      class="ax-flex ax-w-80 ax-flex-col ax-justify-center ax-gap-4 ax-py-10"
+      class="flex w-80 flex-col justify-center gap-4 py-10"
     >
-      <div class="ax-flex ax-w-full ax-flex-row ax-gap-4">
-        <ax-form-field class="ax-flex-1">
+      <div class="flex w-full flex-row gap-4">
+        <ax-form-field class="flex-1">
           <ax-label>Firstname</ax-label>
           <ax-text-box name="firstname">
             <ax-validation-rule rule="required"> </ax-validation-rule>
           </ax-text-box>
         </ax-form-field>
-        <ax-form-field class="ax-flex-1">
+        <ax-form-field class="flex-1">
           <ax-label>Lastname</ax-label>
           <ax-text-box name="lastname">
             <ax-validation-rule rule="required"> </ax-validation-rule>
@@ -24,16 +24,16 @@
           <ax-validation-rule rule="custom" value="email"> </ax-validation-rule>
         </ax-text-box>
       </ax-form-field>
-      <div class="ax-flex ax-w-full ax-flex-row ax-gap-4">
+      <div class="flex w-full flex-row gap-4">
         <ax-button
-          class="ax-flex-1"
+          class="flex-1"
           [type]="'submit'"
           text="Submit"
           color="primary"
         >
         </ax-button>
         <ax-button
-          class="ax-flex-1"
+          class="flex-1"
           [type]="'reset'"
           text="Clear"
           color="danger"

@@ -1,13 +1,14 @@
-<div
+<div class="rounded-lg min-w-40 overflow-hidden"
   [multiple]="true"
   (selectedKeysChange)="changeState($event)"
   #f="axSelectionGroup"
   axSelectionGroup
+ 
 >
   <div
     key="1"
-    class="ax-cursor-pointer ax-p-2"
-    [class]="{ 'ax-bg-blue-500': a.isActive() }"
+    class="cursor-pointer p-2"
+    [class]="{ 'bg-blue-500': a.isActive() }"
     #a="axSelectionItem"
     axSelectionItem
   >
@@ -15,8 +16,8 @@
   </div>
   <div
     key="2"
-    class="ax-cursor-pointer ax-p-2"
-    [class]="{ 'ax-bg-red-500': b.isActive() }"
+    class="cursor-pointer p-2"
+    [class]="{ 'bg-red-500': b.isActive() }"
     #b="axSelectionItem"
     axSelectionItem
   >
@@ -24,8 +25,8 @@
   </div>
   <div
     key="3"
-    class="ax-cursor-pointer ax-p-2"
-    [class]="{ 'ax-bg-green-500': c.isActive() }"
+    class="cursor-pointer p-2"
+    [class]="{ 'bg-green-500': c.isActive() }"
     #c="axSelectionItem"
     axSelectionItem
   >

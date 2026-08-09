@@ -116,12 +116,6 @@ export const appRoutes: Route[] = [
       ),
   },
   {
-    path: 'collapse',
-    component: MasterLayoutComponent,
-    loadChildren: () =>
-      import('./cases/collapse/collapse.routes').then((c) => c.routes),
-  },
-  {
     path: 'color-box',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -146,6 +140,12 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/comment/comment.routes').then((c) => c.routes),
+  },
+  {
+  path:'combo-box',
+  component: MasterLayoutComponent,
+  loadChildren: () =>
+    import('./cases/combo-box/combo-box.routes').then((c) => c.routes)  
   },
   {
     path: 'cron-job',
@@ -247,14 +247,6 @@ export const appRoutes: Route[] = [
       ),
   },
   {
-    path: 'file-explorer',
-    component: MasterLayoutComponent,
-    loadChildren: () =>
-      import('./cases/file-explorer/file-explorer.routes').then(
-        (c) => c.routes,
-      ),
-  },
-  {
     path: 'flow-chart',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -325,12 +317,7 @@ export const appRoutes: Route[] = [
     loadChildren: () =>
       import('./cases/media-viewer/media-viewer.routes').then((c) => c.routes),
   },
-  {
-    path: 'modal',
-    component: MasterLayoutComponent,
-    loadChildren: () =>
-      import('./cases/modal/modal.routes').then((c) => c.routes),
-  },
+
   {
     path: 'navbar',
     component: MasterLayoutComponent,
@@ -548,12 +535,6 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/tooltip/tooltip.routes').then((c) => c.routes),
-  },
-  {
-    path: 'tree-view',
-    component: MasterLayoutComponent,
-    loadChildren: () =>
-      import('./cases/tree-view/tree-view.routes').then((c) => c.routes),
   },
   {
     path: 'toolbar',

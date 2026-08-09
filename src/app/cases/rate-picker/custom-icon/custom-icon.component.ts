@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  styles: `ax-rate-picker{ --ax-comp-rate-picker-bg-color: var(--ax-sys-color-primary-surface) }`,
+  styles: `@reference '@acorex/styles/themes/default.css';
+ax-rate-picker{ --ax-comp-rate-picker-bg-color: var(--ax-sys-color-primary-surface) }`,
   templateUrl: './custom-icon.component.html',
   imports: [AXRatePickerModule, FormsModule],
 })

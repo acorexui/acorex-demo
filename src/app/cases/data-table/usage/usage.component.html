@@ -1,4 +1,10 @@
-<div class="ax-max-w-[40rem]">
+<div class="max-w-[40rem]">
+  <!--
+    Deferred so the data-table is not rendered during SSR/prerendering:
+    the library's text-highlight cleanup accesses `document` on destroy,
+    which crashes the prerender worker on the server.
+  -->
+  @defer (on idle) {
   <ax-data-table
     (selectedRowsChange)="handleSelectionChange($event)"
     [dataSource]="dataSource"
@@ -29,4 +35,11 @@
     >
     </ax-text-column>
   </ax-data-table>
+  } @placeholder {
+  <div
+    class="flex h-64 items-center justify-center rounded border border-dashed"
+  >
+    <span>Loading table...</span>
+  </div>
+  }
 </div>

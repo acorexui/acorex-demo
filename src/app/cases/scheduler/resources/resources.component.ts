@@ -10,7 +10,8 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-resources',
   imports: [AXSchedulerComponent, AXSelectBoxComponent, FormsModule],
   templateUrl: './resources.component.html',
-  styles: `ax-scheduler{
+  styles: `@reference '@acorex/styles/themes/default.css';
+ax-scheduler{
     --ax-comp-scheduler-width:100%;
   }`,
 })

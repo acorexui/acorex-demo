@@ -16,7 +16,8 @@ type FitMode = 'contain' | 'cover';
 @Component({
   templateUrl: 'image.component.html',
   imports: [CommonModule, AXButtonModule, AXDecoratorModule],
-  styles: `
+  styles: `@reference '@acorex/styles/themes/default.css';
+
     :host {
       display: block;
       width: 100%;
@@ -63,7 +64,7 @@ export class ImageComponent {
   });
 
   protected readonly viewportClass = computed(() => {
-    return this.fit() === 'cover' ? 'ax-object-cover' : 'ax-object-contain';
+    return this.fit() === 'cover' ? 'object-cover' : 'object-contain';
   });
 
   setFit(mode: FitMode): void {

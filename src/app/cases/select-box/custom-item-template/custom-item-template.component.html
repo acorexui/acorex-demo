@@ -1,7 +1,7 @@
 <ax-form
   [messageStyle]="'float'"
   [updateOn]="'change'"
-  class="ax-min-w-60 ax-block"
+  class="min-w-60 block"
 >
   <ax-form-field>
     <ax-select-box
@@ -10,7 +10,7 @@
       [itemTemplate]="customItemTemplate"
     >
       <ng-template #customItemTemplate let-item>
-        <div class="ax-p-2">Custom Item {{ item.data.id }}<br /></div>
+        <div class="p-2">Custom Item {{ item.data.id }}<br /></div>
       </ng-template>
       <ax-search-box look="fill"></ax-search-box>
       <ax-validation-rule message="field can't be empty" rule="required">

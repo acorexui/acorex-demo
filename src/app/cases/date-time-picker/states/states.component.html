@@ -1,15 +1,15 @@
-<div class="ax-flex ax-flex-row ax-items-center ax-justify-center ax-gap-4">
-  <div class="ax-flex ax-flex-col ax-gap-4">
+<div class="flex flex-row items-center justify-center gap-4">
+  <div class="flex flex-col gap-4">
     <ax-label>Component States</ax-label>
-    <div class="ax-flex ax-gap-4">
-      <div class="ax-flex ax-items-center ax-gap-2">
+    <div class="flex gap-4">
+      <div class="flex items-center gap-2">
         <ax-switch
           [(ngModel)]="isDisabled"
           (ngModelChange)="isDisabled.set($event)"
         ></ax-switch>
         <span>Disabled</span>
       </div>
-      <div class="ax-flex ax-items-center ax-gap-2">
+      <div class="flex items-center gap-2">
         <ax-switch
           [(ngModel)]="isReadonly"
           (ngModelChange)="isReadonly.set($event)"

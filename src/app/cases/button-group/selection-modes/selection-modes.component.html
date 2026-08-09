@@ -1,8 +1,8 @@
 <div
-  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-px-4"
+  class="flex flex-col items-center justify-center gap-4 px-4"
 >
-  <section class="ax-w-full">
-    <h4 class="ax-text-sm ax-mb-2">None (no selection)</h4>
+  <section class="w-full">
+    <h4 class="text-sm mb-2">None (no selection)</h4>
     <ax-button-group
       [selection]="modeNone"
       (onClick)="handleGroupClick($event)"
@@ -17,8 +17,8 @@
     </ax-button-group>
   </section>
 
-  <section class="ax-w-full">
-    <h4 class="ax-text-sm ax-mb-2">Single (with pre-selected)</h4>
+  <section class="w-full">
+    <h4 class="text-sm mb-2">Single (with pre-selected)</h4>
     <ax-button-group
       [selection]="modeSingle"
       (onClick)="handleGroupClick($event)"
@@ -37,8 +37,8 @@
     </ax-button-group>
   </section>
 
-  <section class="ax-w-full">
-    <h4 class="ax-text-sm ax-mb-2">Multiple (with pre-selected)</h4>
+  <section class="w-full">
+    <h4 class="text-sm mb-2">Multiple (with pre-selected)</h4>
     <ax-button-group
       [selection]="modeMultiple"
       (onClick)="handleGroupClick($event)"
@@ -61,7 +61,7 @@
     </ax-button-group>
   </section>
 
-  <div class="ax-text-xs ax-text-subtle ax-w-full">
+  <div class="text-xs text-subtle w-full">
     <div>Last onClick: {{ lastGroupEvent() }}</div>
     <div>Last selectedButtonChange: {{ lastSelectedButton() }}</div>
   </div>

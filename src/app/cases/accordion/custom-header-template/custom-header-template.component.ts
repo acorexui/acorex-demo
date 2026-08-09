@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   imports: [AXAccordionModule, AXImageModule],
 })
 export class CustomHeaderTemplate {
+  isCollapsed = true;
   protected _options: { color: string; isAccordion: boolean; look: any } = {
     look: 'solid',
     color: 'primary',

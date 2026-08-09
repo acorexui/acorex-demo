@@ -1,12 +1,12 @@
-<div #f="axCarousel" axCarousel class="ax-carousel">
-  <div class="ax-carousel-wrapper">
+<div #f="axCarousel" axCarousel class="carousel">
+  <div class="carousel-wrapper">
     @for (item of data(); track item.id) {
-      <div class="ax-carousel-slide">
-        <img class="ax-w-full" src="{{ item.url }}" alt="" />
+      <div class="carousel-slide">
+        <img class="w-full" src="{{ item.url }}" alt="" />
       </div>
     }
   </div>
-  <div class="ax-carousel-pagination"></div>
-  <div class="ax-carousel-button-prev"></div>
-  <div class="ax-carousel-button-next"></div>
+  <div class="carousel-pagination"></div>
+  <div class="carousel-button-prev"></div>
+  <div class="carousel-button-next"></div>
 </div>

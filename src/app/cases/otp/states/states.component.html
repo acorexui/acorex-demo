@@ -1,12 +1,12 @@
 <div
-  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-py-16 ax-text-center"
+  class="flex flex-col items-center justify-center gap-6 py-16 text-center"
 >
   <div>
-    <div class="ax-h4">OTP Validation States</div>
-    <p class="ax-text-sm">Different validation states for the OTP component</p>
+    <div class="h4">OTP Validation States</div>
+    <p class="text-sm">Different validation states for the OTP component</p>
   </div>
 
-  <div class="ax-flex ax-flex-wrap ax-justify-center ax-gap-2">
+  <div class="flex flex-wrap justify-center gap-2">
     <ax-button-group>
       @for (state of states; track state.value) {
       <ax-button-group-item
@@ -20,7 +20,7 @@
     </ax-button-group>
   </div>
 
-  <div class="ax-w-80">
+  <div class="w-80">
     <ax-otp
       [length]="4"
       [(ngModel)]="otpValue"
@@ -29,7 +29,7 @@
     ></ax-otp>
   </div>
 
-  <div class="ax-text-xs ax-text-muted">
+  <div class="text-xs text-muted">
     Current state: <strong>{{ selectedState() }}</strong>
     @if (otpValue()) {
     <br />Value: <strong>{{ otpValue() }}</strong>

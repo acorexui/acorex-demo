@@ -8,7 +8,8 @@ import { Component, signal } from '@angular/core';
 @Component({
   templateUrl: 'rrule-picker.component.html',
   imports: [AXRruleComponent, AXRrulePreviewComponent],
-  styles: `:host{
+  styles: `@reference '@acorex/styles/themes/default.css';
+:host{
       display:block;
       width: 100%;
     }`,
