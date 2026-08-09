@@ -59,6 +59,11 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'format',
+    loadComponent: () =>
+      import('./format/format.component').then((e) => e.FormatComponent),
+  },
+  {
     path: 'calendar-types',
     loadComponent: () =>
       import('./calendar-types/calendar-types.component').then(

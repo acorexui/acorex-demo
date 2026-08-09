@@ -1,0 +1,137 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-px-4 ax-py-8"
+>
+  <div class="ax-text-xl ax-font-semibold">Event Service - Usage</div>
+  <div class="ax-text-sm ax-text-muted ax-text-center ax-max-w-2xl">
+    Demonstrates both Observable-based and callback-based event systems from
+    <code>AXEventService</code>.
+  </div>
+
+  <!-- Observable-based Events Section -->
+  <div
+    class="ax-w-full ax-max-w-4xl ax-border ax-border-default ax-rounded-lg ax-p-4"
+  >
+    <div class="ax-text-lg ax-font-semibold ax-mb-4">
+      Observable-based Events
+    </div>
+    <div class="ax-text-sm ax-text-muted ax-mb-4">
+      Subscribe to events using RxJS Observables. Events are typed with
+      <code>AXEventData</code>.
+    </div>
+
+    <div class="ax-flex ax-gap-2 ax-flex-wrap ax-mb-4">
+      <ax-button
+        text="Emit Locale Changed"
+        look="solid"
+        color="primary"
+        (onClick)="emitSystemEvent(AXSystemEvents.AXLocaleChanged)"
+      ></ax-button>
+      <ax-button
+        text="Emit Calendar Changed"
+        look="solid"
+        color="primary"
+        (onClick)="emitSystemEvent(AXSystemEvents.AXCalendarChanged)"
+      ></ax-button>
+      <ax-button
+        text="Emit Language Changed"
+        look="solid"
+        color="primary"
+        (onClick)="emitSystemEvent(AXSystemEvents.AXLanguageChanged)"
+      ></ax-button>
+      <ax-button
+        text="Emit Custom Event"
+        look="outline"
+        color="secondary"
+        (onClick)="emitCustomObservableEvent()"
+      ></ax-button>
+      <ax-button
+        text="Emit Event with Payload"
+        look="outline"
+        color="secondary"
+        (onClick)="emitEventWithPayload()"
+      ></ax-button>
+      <ax-button
+        text="Clear Logs"
+        look="blank"
+        color="danger"
+        (onClick)="clearObservableLogs()"
+      ></ax-button>
+    </div>
+
+    <div class="ax-bg-muted ax-rounded ax-p-3">
+      <div class="ax-text-sm ax-font-semibold ax-mb-2">
+        Event Log ({{ eventCount() }} events)
+      </div>
+      <div class="ax-flex ax-flex-col ax-gap-1">
+        @if (eventLog().length === 0) {
+        <div class="ax-text-muted ax-italic">No events emitted yet...</div>
+        } @else { @for (log of eventLog(); track $index) {
+        <div
+          class="ax-text-xs ax-font-mono ax-text-default ax-bg-background ax-p-2 ax-rounded"
+        >
+          {{ log }}
+        </div>
+        } }
+      </div>
+    </div>
+  </div>
+
+  <!-- Callback-based Events Section -->
+  <div
+    class="ax-w-full ax-max-w-4xl ax-border ax-border-default ax-rounded-lg ax-p-4"
+  >
+    <div class="ax-text-lg ax-font-semibold ax-mb-4">Callback-based Events</div>
+    <div class="ax-text-sm ax-text-muted ax-mb-4">
+      Use <code>on()</code>, <code>broadcast()</code>, and
+      <code>destroy()</code> for callback-based event handling.
+    </div>
+
+    <div class="ax-flex ax-gap-2 ax-flex-wrap ax-mb-4">
+      <ax-button
+        text="Broadcast Event"
+        look="solid"
+        color="success"
+        (onClick)="broadcastCallbackEvent()"
+      ></ax-button>
+      <ax-button
+        text="Broadcast with Data"
+        look="solid"
+        color="success"
+        (onClick)="broadcastMultipleData()"
+      ></ax-button>
+      <ax-button
+        text="Clear Logs"
+        look="blank"
+        color="danger"
+        (onClick)="clearCallbackLogs()"
+      ></ax-button>
+    </div>
+
+    <div class="ax-bg-muted ax-rounded ax-p-3">
+      <div class="ax-text-sm ax-font-semibold ax-mb-2">
+        Callback Log ({{ callbackCount() }} callbacks)
+      </div>
+      <div class="ax-flex ax-flex-col ax-gap-1">
+        @if (callbackLog().length === 0) {
+        <div class="ax-text-muted ax-italic">No callbacks received yet...</div>
+        } @else { @for (log of callbackLog(); track $index) {
+        <div
+          class="ax-text-xs ax-font-mono ax-text-default ax-bg-background ax-p-2 ax-rounded"
+        >
+          {{ log }}
+        </div>
+        } }
+      </div>
+    </div>
+  </div>
+
+  <!-- Clear All Button -->
+  <div class="ax-flex ax-gap-2">
+    <ax-button
+      text="Clear All Logs"
+      look="outline"
+      color="danger"
+      (onClick)="clearAllLogs()"
+    ></ax-button>
+  </div>
+</div>

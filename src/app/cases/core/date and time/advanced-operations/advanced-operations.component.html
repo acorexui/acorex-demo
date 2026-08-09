@@ -1,0 +1,134 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-8 ax-px-4"
+>
+  <div class="ax-text-xl ax-font-semibold">Advanced Operations</div>
+  <div class="ax-text-sm ax-text-muted">
+    Demonstrates advanced date-time operations including creation from different
+    sources, calendar conversion, date manipulation, comparisons, custom
+    formatting, and range operations.
+  </div>
+
+  <div class="ax-flex ax-gap-4 ax-flex-wrap">
+    <ax-button
+      style="width: max-content; height: max-content"
+      look="solid"
+      color="primary"
+      (onClick)="switchToGregorian()"
+      >Gregorian Calendar</ax-button
+    >
+    <ax-button
+      style="width: max-content; height: max-content"
+      look="solid"
+      color="secondary"
+      (onClick)="switchToSolarHijri()"
+      >Solar Hijri Calendar</ax-button
+    >
+    <ax-button
+      style="width: max-content; height: max-content"
+      look="outline"
+      (onClick)="refreshNow()"
+      >Refresh Now</ax-button
+    >
+  </div>
+
+  <!-- Custom Formatting and Date Properties at the top -->
+  <div
+    class="ax-flex ax-flex-row ax-flex-wrap ax-gap-6 ax-items-start ax-w-full ax-justify-center"
+  >
+    <!-- Custom Formatting -->
+    <div
+      class="ax-flex ax-flex-col ax-gap-5 ax-items-start ax-min-w-64 ax-max-w-xs"
+    >
+      <div class="ax-text-lg ax-font-semibold">Custom Formatting</div>
+      <div><b>YYYY/MM/DD:</b> {{ customFormat1() }}</div>
+      <div><b>DD MMMM YYYY:</b> {{ customFormat2() }}</div>
+      <div><b>dddd, MMMM DD, YYYY:</b> {{ customFormat3() }}</div>
+      <div><b>HH:mm:ss:</b> {{ customFormat4() }}</div>
+      <div><b>YYYY-MM-DD HH:mm:ss:</b> {{ customFormat5() }}</div>
+    </div>
+
+    <!-- Date Range and Enumeration -->
+    <div
+      class="ax-flex ax-flex-col ax-gap-5 ax-items-start ax-min-w-64 ax-max-w-xs"
+    >
+      <div class="ax-text-lg ax-font-semibold">Date Range Operations</div>
+      <div><b>Week Range Duration:</b> {{ rangeDuration() }}</div>
+      <div><b>Days in Current Week:</b></div>
+      <div class="ax-flex ax-flex-col ax-gap-2 ax-ml-4">
+        @for (day of weekDays(); track $index) {
+        <div>{{ day }}</div>
+        }
+      </div>
+    </div>
+
+    <!-- Date Properties -->
+    <div
+      class="ax-flex ax-flex-col ax-gap-5 ax-items-start ax-min-w-64 ax-max-w-xs"
+    >
+      <div class="ax-text-lg ax-font-semibold">Date Properties</div>
+      <div><b>Day of Month:</b> {{ dateProperties().dayOfMonth }}</div>
+      <div><b>Day of Week:</b> {{ dateProperties().dayOfWeek }}</div>
+      <div><b>Day of Year:</b> {{ dateProperties().dayOfYear }}</div>
+      <div><b>Month of Year:</b> {{ dateProperties().monthOfYear }}</div>
+      <div><b>Week of Year:</b> {{ dateProperties().weekOfYear }}</div>
+      <div><b>Year:</b> {{ dateProperties().year }}</div>
+      <div><b>Hour:</b> {{ dateProperties().hour }}</div>
+      <div><b>Minute:</b> {{ dateProperties().minute }}</div>
+      <div><b>Second:</b> {{ dateProperties().second }}</div>
+    </div>
+  </div>
+
+  <!-- Content sections in row layout -->
+  <div
+    class="ax-flex ax-flex-row ax-flex-wrap ax-gap-6 ax-items-start ax-w-full ax-justify-center"
+  >
+    <!-- Date Creation Examples -->
+    <div
+      class="ax-flex ax-flex-col ax-gap-5 ax-items-start ax-min-w-64 ax-max-w-xs"
+    >
+      <div class="ax-text-lg ax-font-semibold">
+        Date Creation from Different Sources
+      </div>
+      <div><b>From String:</b> {{ dateFromString() }}</div>
+      <div><b>From DateValue Object:</b> {{ dateFromDateValue() }}</div>
+      <div><b>From Date Object:</b> {{ dateFromDateObject() }}</div>
+    </div>
+
+    <!-- Calendar Conversion -->
+    <div
+      class="ax-flex ax-flex-col ax-gap-5 ax-items-start ax-min-w-64 ax-max-w-xs"
+    >
+      <div class="ax-text-lg ax-font-semibold">Calendar Conversion</div>
+      <div>
+        <b>Gregorian (current):</b> {{ gregorianDate().format("longDate") }}
+      </div>
+      <div><b>Converted to Solar Hijri:</b> {{ convertedToSolarHijri() }}</div>
+    </div>
+
+    <!-- Date Manipulation: set -->
+    <div
+      class="ax-flex ax-flex-col ax-gap-5 ax-items-start ax-min-w-64 ax-max-w-xs"
+    >
+      <div class="ax-text-lg ax-font-semibold">Date Manipulation (set)</div>
+      <div><b>Current Date:</b> {{ now().format("YYYY-MM-DD") }}</div>
+      <div><b>Set Day to 15:</b> {{ setExample() }}</div>
+    </div>
+
+    <!-- Date Comparisons -->
+    <div
+      class="ax-flex ax-flex-col ax-gap-5 ax-items-start ax-min-w-64 ax-max-w-xs"
+    >
+      <div class="ax-text-lg ax-font-semibold">Date Comparisons</div>
+      <div><b>Now:</b> {{ now().format("longDate") }}</div>
+      <div><b>Future (+7 days):</b> {{ futureDate().format("longDate") }}</div>
+      <div>
+        <b>Future is after now?</b> {{ isFutureAfterNow() ? "Yes" : "No" }}
+      </div>
+      <div>
+        <b>Future is before now?</b> {{ isFutureBeforeNow() ? "Yes" : "No" }}
+      </div>
+      <div><b>Is same day?</b> {{ isSameDay() ? "Yes" : "No" }}</div>
+      <div><b>Compare result:</b> {{ compareResult() }}</div>
+    </div>
+  </div>
+</div>

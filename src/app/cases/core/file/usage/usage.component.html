@@ -1,0 +1,63 @@
+<div
+  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-4 ax-p-4"
+>
+  <ax-heading>
+    <h1>File Service Demo</h1>
+    <ax-subtitle
+      >Demonstrates file selection and size formatting capabilities</ax-subtitle
+    >
+  </ax-heading>
+
+  <div class="ax-flex ax-gap-4 ax-flex-wrap ax-justify-center">
+    <ax-button
+      (click)="selectFiles()"
+      variant="primary"
+      class="ax-min-w-56 ax-h-14 ax-text-white"
+    >
+      Select Any Files
+    </ax-button>
+    <ax-button
+      (click)="selectImages()"
+      variant="secondary"
+      class="ax-min-w-56 ax-h-14"
+    >
+      Select Images Only
+    </ax-button>
+    <ax-button
+      (click)="clearFiles()"
+      variant="outline"
+      class="ax-min-w-56 ax-h-14 ax-text-gray-700 ax-border-gray-300 hover:ax-bg-gray-50"
+    >
+      Clear Files
+    </ax-button>
+  </div>
+
+  @if (selectedFiles().length > 0) {
+  <div class="ax-w-full ax-max-w-2xl">
+    <ax-heading class="ax-mb-2">
+      <h3>Selected Files ({{ selectedFiles().length }})</h3>
+    </ax-heading>
+    <div class="ax-space-y-2">
+      @for (info of fileInfo(); track info.name) {
+      <div class="ax-p-3 ax-bg-gray-50 ax-rounded-lg ax-border">
+        <div class="ax-flex ax-justify-between ax-items-start">
+          <div>
+            <div class="ax-font-medium ax-text-gray-900">{{ info.name }}</div>
+            <div class="ax-text-sm ax-text-gray-500">{{ info.type }}</div>
+          </div>
+          <div class="ax-text-sm ax-font-mono ax-text-gray-600">
+            {{ info.size }}
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  } @else {
+  <div class="ax-text-center ax-text-gray-500 ax-py-8">
+    <ax-icon class="ax-icon ax-icon-document ax-mb-2" size="lg"></ax-icon>
+    <div>No files selected</div>
+    <div class="ax-text-sm">Click a button above to select files</div>
+  </div>
+  }
+</div>

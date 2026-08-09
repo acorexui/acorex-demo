@@ -7,10 +7,12 @@ import {
 import { AXFormFieldComponent } from '@acorex/components/form';
 import { AXLabelComponent } from '@acorex/components/label';
 import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   templateUrl: 'allow-typing.component.html',
   imports: [
+    FormsModule,
     AXLabelComponent,
     AXButtonComponent,
     AXFormFieldComponent,
@@ -20,7 +22,8 @@ import { Component, signal } from '@angular/core';
   ],
 })
 export class AllowTypingComponent {
-  protected allowTyping = signal(false);
+  protected allowTyping = signal(true);
+  protected value = signal<Date | null>(new Date());
 
   protected toggleAllowTyping() {
     this.allowTyping.update((v) => !v);

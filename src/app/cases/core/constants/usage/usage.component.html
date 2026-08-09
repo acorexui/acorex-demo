@@ -1,0 +1,20 @@
+<div class="ax-h-[100vh]">
+  @for(country of countries; track $index){
+  <div class="ax-flex ax-items-center ax-gap-4 ax-mb-4">
+    @if(country.bkPosition){
+    <div
+      class="ax-w-[25px] ax-h-[20px] ax-bg-repeat"
+      [ngStyle]="{
+          'background-image': 'url(' + flagSprite + ')',
+          'background-position': country.bkPosition.x + ' ' + country.bkPosition.y,
+        }"
+    ></div>
+    }
+    <div class="ax-flex ax-gap-2">
+      <span class="country-name">{{ country.name }}</span>
+      <span class="country-code">({{ country.code }})</span>
+      <span class="country-iso2code">{{ country.iso2code }}</span>
+    </div>
+  </div>
+  }
+</div>

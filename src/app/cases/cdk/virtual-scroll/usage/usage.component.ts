@@ -1,5 +1,4 @@
 import { AXVirtualScrollModule } from '@acorex/cdk/virtual-scroll';
-import type { AXConversationMessage } from '@acorex/components/conversation';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import { Component, signal } from '@angular/core';
 
