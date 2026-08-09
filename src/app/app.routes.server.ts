@@ -24,6 +24,14 @@ const csrPrefixes = [
 ] as const;
 
 export const serverRoutes: ServerRoute[] = [
+  // Keep "/" as CSR so index.html stays an app shell.
+  // If "/" is prerendered, Angular writes a meta-refresh to action-sheet/usage
+  // (app.routes redirect). nginx then serves that file for missing CSR paths
+  // (e.g. /gauge-chart/usage) and the browser is bounced away from the chart.
+  {
+    path: '',
+    renderMode: RenderMode.Client,
+  },
   ...csrPrefixes.map(
     (prefix): ServerRoute => ({
       path: `${prefix}/**`,

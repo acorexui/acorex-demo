@@ -89,18 +89,20 @@ function generateSSGRoutes() {
 
   const allRoutes = [];
 
-  // Add root route
-  allRoutes.push("/");
+  // Do not prerender "/": app.routes redirects it to action-sheet/usage, and a
+  // prerendered index.html meta-refresh breaks SPA fallback for CSR demos.
+  // Root is RenderMode.Client in app.routes.server.ts.
 
   // Process each main route
   for (const mainRoute of mainRouteNames) {
     if (mainRoute === "") continue;
 
-    // Find the corresponding route file
+    // Find the corresponding route file (cases/{name}, cases/charts/{name}, …)
     const routeFile = routeFiles.find((file) => {
       const relativePath = path.relative(srcDir, file);
       const routeDir = path.dirname(relativePath).replace(/\\/g, "/");
-      return routeDir === `cases/${mainRoute}`;
+      const leafDir = routeDir.split("/").pop();
+      return leafDir === mainRoute && routeDir.startsWith("cases/");
     });
 
     if (routeFile) {
