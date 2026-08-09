@@ -4,12 +4,6 @@ import { MasterLayoutComponent } from '../../shared/layout/master-layout/master-
 export const routes: Routes = [
   { path: '', redirectTo: 'constants', pathMatch: 'full' },
   {
-    path: 'constants',
-    component: MasterLayoutComponent,
-    loadChildren: () =>
-      import('./constants/constants.routes').then((e) => e.routes),
-  },
-  {
     path: 'image',
     component: MasterLayoutComponent,
     loadChildren: () => import('./image/image.routes').then((e) => e.routes),

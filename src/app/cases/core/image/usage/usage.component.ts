@@ -7,7 +7,7 @@ import { NgStyle, CommonModule } from '@angular/common';
   selector: 'app-usage',
   standalone: true,
   templateUrl: './usage.component.html',
-  imports: [AXButtonComponent, AXSelectBoxComponent, NgStyle, CommonModule],
+  imports: [AXButtonComponent, CommonModule],
 })
 export class UsageComponent {
   selectedFile = signal<File | null>(null);
@@ -64,7 +64,7 @@ export class UsageComponent {
         file,
         this.maxSize(),
         this.outputType(),
-        this.quality()
+        this.quality(),
       );
 
       const resizedUrl = URL.createObjectURL(resizedBlob);
@@ -91,7 +91,7 @@ export class UsageComponent {
     file: File,
     maxSize: number,
     outputType: string,
-    quality: number
+    quality: number,
   ): Promise<Blob> {
     return new Promise((resolve, reject) => {
       const canvas = document.createElement('canvas');
@@ -102,7 +102,7 @@ export class UsageComponent {
         const { width, height } = this.calculateDimensions(
           img.width,
           img.height,
-          maxSize
+          maxSize,
         );
 
         canvas.width = width;
@@ -119,7 +119,7 @@ export class UsageComponent {
             }
           },
           outputType,
-          quality / 100
+          quality / 100,
         );
       };
 
@@ -131,7 +131,7 @@ export class UsageComponent {
   private calculateDimensions(
     originalWidth: number,
     originalHeight: number,
-    maxSize: number
+    maxSize: number,
   ): { width: number; height: number } {
     if (originalWidth <= maxSize && originalHeight <= maxSize) {
       return { width: originalWidth, height: originalHeight };

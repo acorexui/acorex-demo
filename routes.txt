@@ -133,16 +133,6 @@
 /circular-progress/indeterminate
 /circular-progress/usage
 /circular-progress/using-content-inside
-/collapse/accordion-mode
-/collapse/active-index
-/collapse/custom-header-template
-/collapse/disabled
-/collapse/header-icon
-/collapse/hidden-header
-/collapse/loading
-/collapse/looks
-/collapse/programmatic-control
-/collapse/usage
 /color-box/clear-behavior
 /color-box/disable
 /color-box/read-only
@@ -155,6 +145,9 @@
 /color-palette/preview
 /color-palette/swatches
 /color-palette/usage
+/combo-box/non-editable
+/combo-box/usage
+/combo-box/using-decorators
 /command/template
 /command/usage
 /comment/interactions
@@ -164,7 +157,6 @@
 /context-menu/dynamic-items
 /context-menu/programmatic-open
 /context-menu/usage
-/core/constants
 /core/date-time
 /core/event
 /core/file
@@ -306,13 +298,6 @@
 /menu/usage
 /menu/use-decorators
 /menu/vertical
-/modal/backdrop-options
-/modal/draggable
-/modal/minimize-maximize
-/modal/service
-/modal/sizes
-/modal/template
-/modal/usage
 /navbar/content-projection
 /navbar/look-variants
 /navbar/simple-usage
@@ -494,7 +479,6 @@
 /toolbar/usage
 /tooltip/custom-template
 /tooltip/usage
-/tree-view/usage
 /uploader/browse-handle
 /uploader/custom-template
 /uploader/dialog-container
