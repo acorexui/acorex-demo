@@ -1,7 +1,5 @@
-<div
-  class="ax-flex ax-flex-col ax-items-center ax-justify-center ax-gap-6 ax-py-8"
->
-  <div class="ax-w-80 ax-flex ax-flex-col ax-gap-3">
+<div class="flex flex-col items-center justify-center gap-6 py-8">
+  <div class="w-80 flex flex-col gap-3">
     <ax-form-field>
       <ax-label>Formatted date and time</ax-label>
       @if (format() !== null) {
@@ -34,7 +32,7 @@
     </ax-subtitle>
   </div>
 
-  <div class="ax-flex ax-flex-wrap ax-gap-2 ax-justify-center">
+  <div class="flex flex-wrap gap-2 justify-center">
     <ax-button
       class="ax-sm"
       text="Gregorian"
@@ -49,7 +47,7 @@
     ></ax-button>
   </div>
 
-  <div class="ax-flex ax-flex-wrap ax-gap-2 ax-justify-center">
+  <div class="flex flex-wrap gap-2 justify-center">
     @for (preset of presets; track preset.label) {
       <ax-button
         class="ax-sm"

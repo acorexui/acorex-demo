@@ -10,7 +10,7 @@ import { AXDecoratorHeadingComponent } from '@acorex/components/decorators';
 export class UsageComponent {
   // Simple examples
   htmlContent = signal(
-    '<p class="ax-text-green-600 ax-font-bold">Hello from safe HTML!</p>'
+    '<p class="text-green-600 font-bold">Hello from safe HTML!</p>'
   );
   dynamicStyle = signal(
     'background: #4ade80; color: white; padding: 16px; border-radius: 8px;'

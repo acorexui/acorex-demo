@@ -7,7 +7,7 @@
 <ng-template #customItemTemplate let-item let-isActive="isActive">
   <div
     class="flex items-center p-2 gap-2"
-    [class]="isActive ? 'ax-border ax-border-primary-500 ax-rounded' : ''"
+    [class]="isActive ? 'border border-primary-500 rounded' : ''"
   >
     <ax-icon [class]="item.icon"></ax-icon>
     <ax-text>{{ item.text }}</ax-text>

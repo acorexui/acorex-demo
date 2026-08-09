@@ -43,42 +43,38 @@
     <ax-button
       class="ax-sm"
       look="outline"
-      [text]="`Add Item to ${ status.title }`"
+      [text]="`Add Item to ${status.title}`"
     ></ax-button>
   </div>
 </ng-template>
 
 <!-- Custom Item Template -->
 <ng-template #item let-item>
-  <div
-    class="flex flex-col gap-2 p-3 surface rounded-lg shadow-sm border"
-  >
+  <div class="flex flex-col gap-2 p-3 surface rounded-lg shadow-sm border">
     <div class="flex justify-between items-start">
       <ax-title class="text-sm font-medium">{{ item.title }}</ax-title>
       <div
         class="text-xs px-2 py-1 rounded-full"
         [ngClass]="{
-          'ax-bg-red-100 ax-text-red-800 dark:ax-bg-red-900 dark:ax-text-red-200':
+          'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200':
             item.priority === 'highest',
-          'ax-bg-orange-100 ax-text-orange-800 dark:ax-bg-orange-900 dark:ax-text-orange-200':
+          'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200':
             item.priority === 'high',
-          'ax-bg-yellow-100 ax-text-yellow-800 dark:ax-bg-yellow-900 dark:ax-text-yellow-200':
+          'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200':
             item.priority === 'medium',
-          'ax-bg-green-100 ax-text-green-800 dark:ax-bg-green-900 dark:ax-text-green-200':
+          'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200':
             item.priority === 'low',
-          'ax-bg-blue-100 ax-text-blue-800 dark:ax-bg-blue-900 dark:ax-text-blue-200':
+          'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200':
             item.priority === 'lowest',
-          'ax-bg-gray-100 ax-text-gray-800 dark:ax-bg-gray-700 dark:ax-text-gray-200':
-            !item.priority
+          'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200':
+            !item.priority,
         }"
       >
         {{ item.priority || "none" }}
       </div>
     </div>
     <ax-subtitle>{{ item.description }}</ax-subtitle>
-    <div
-      class="flex justify-between items-center text-xs text-muted"
-    >
+    <div class="flex justify-between items-center text-xs text-muted">
       <span>ID: {{ item.id }}</span>
       <span>{{ item.statusKey }}</span>
     </div>
