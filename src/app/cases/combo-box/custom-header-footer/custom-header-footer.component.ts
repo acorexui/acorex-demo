@@ -14,7 +14,7 @@ import {
   ],
 })
 export class CustomHeaderFooterComponent {
-  value = signal<string | number | null>(null);
+  value = signal<string | number>('');
 
   countries: AXComboBoxItem[] = [
     { id: 'ar', text: 'Argentina', value: 'ar' },

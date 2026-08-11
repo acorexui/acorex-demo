@@ -40,9 +40,14 @@ export class RemoteDatasourceComponent {
       });
     },
     byKey: (key) => {
-      return new Promise((resolve) => {
+      return new Promise((resolve, reject) => {
         setTimeout(() => {
-          resolve(this.#employees.find((item) => item.id == key));
+          const item = this.#employees.find((employee) => employee.id == key);
+          if (!item) {
+            reject(new Error(`Employee not found: ${String(key)}`));
+            return;
+          }
+          resolve(item);
         }, 400);
       });
     },

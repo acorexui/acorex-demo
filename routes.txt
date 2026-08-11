@@ -147,6 +147,7 @@
 /combo-box/custom-empty-template
 /combo-box/custom-header-footer
 /combo-box/custom-templates
+/combo-box/multiple
 /combo-box/non-searchable
 /combo-box/usage
 /combo-box/using-decorators

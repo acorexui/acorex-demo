@@ -8,7 +8,7 @@ import { AXDecoratorClearButtonComponent } from '@acorex/components/decorators';
 })
 export class NonSearchableComponent {
   /** With searchable=false the control behaves like a simple select. */
-  value = signal<string | number | null>('de');
+  value = signal<string | number>('de');
 
   countries: AXComboBoxItem[] = [
     { id: 'ar', text: 'Argentina', value: 'ar' },

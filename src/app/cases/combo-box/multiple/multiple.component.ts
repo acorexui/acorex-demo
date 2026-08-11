@@ -1,20 +1,14 @@
 import { Component, signal } from '@angular/core';
 import { AXComboBoxComponent, AXComboBoxItem } from '@acorex/components/combo-box';
-import {
-  AXDecoratorClearButtonComponent,
-  AXDecoratorIconComponent,
-} from '@acorex/components/decorators';
+import { AXDecoratorClearButtonComponent } from '@acorex/components/decorators';
 
 @Component({
-  templateUrl: 'custom-empty-template.component.html',
-  imports: [
-    AXComboBoxComponent,
-    AXDecoratorClearButtonComponent,
-    AXDecoratorIconComponent,
-  ],
+  templateUrl: 'multiple.component.html',
+  imports: [AXComboBoxComponent, AXDecoratorClearButtonComponent],
 })
-export class CustomEmptyTemplateComponent {
-  value = signal<string | number>('');
+export class MultipleComponent {
+  /** Selected fruit values shown as chips. */
+  value = signal<(string | number)[]>([1, 3]);
 
   fruits: AXComboBoxItem[] = [
     { id: 'apple', text: 'Apple', value: 1 },

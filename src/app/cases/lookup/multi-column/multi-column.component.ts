@@ -40,8 +40,13 @@ export class MultiColumnComponent {
         }, 250);
       });
     },
-    byKey: (key) =>
-      Promise.resolve(this.#employees.find((item) => item.id == key)),
+    byKey: (key) => {
+      const item = this.#employees.find((employee) => employee.id == key);
+      if (!item) {
+        throw new Error(`Employee not found: ${String(key)}`);
+      }
+      return Promise.resolve(item);
+    },
   });
 
   /** Columns rendered as an ax-data-table inside the popup. */

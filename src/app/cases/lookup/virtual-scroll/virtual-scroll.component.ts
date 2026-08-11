@@ -44,6 +44,12 @@ export class VirtualScrollComponent {
         );
       });
     },
-    byKey: (key) => this.#items.find((item) => item.id == key),
+    byKey: (key) => {
+      const item = this.#items.find((entry) => entry.id == key);
+      if (!item) {
+        throw new Error(`Item not found: ${String(key)}`);
+      }
+      return item;
+    },
   });
 }

@@ -16,8 +16,8 @@ import {
   ],
 })
 export class UsingDecoratorsComponent {
-  fruitValue = signal<string | number | null>(null);
-  countryValue = signal<string | number | null>('us');
+  fruitValue = signal<string | number>('');
+  countryValue = signal<string | number>('us');
 
   fruits: AXComboBoxItem[] = [
     { id: 'apple', text: 'Apple', value: 1 },

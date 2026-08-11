@@ -1,5 +1,5 @@
 // Auto-generated SSG routes configuration
-// Generated on: 2026-08-11T06:25:01.961Z
+// Generated on: 2026-08-11T06:40:44.656Z
 
 export const ssgRoutes = [
   'accordion/accordion-mode',

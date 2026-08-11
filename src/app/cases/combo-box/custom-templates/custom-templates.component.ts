@@ -9,7 +9,7 @@ type ContactItem = AXComboBoxItem & { email: string; initials: string };
   imports: [AXComboBoxComponent, AXDecoratorClearButtonComponent],
 })
 export class CustomTemplatesComponent {
-  value = signal<string | number | null>('1');
+  value = signal<string | number>('1');
 
   contacts: ContactItem[] = [
     {

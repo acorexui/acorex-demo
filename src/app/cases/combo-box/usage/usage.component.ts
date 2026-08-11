@@ -8,7 +8,7 @@ import { AXDecoratorClearButtonComponent } from '@acorex/components/decorators';
 })
 export class UsageComponent {
   /** Selected fruit value (`value` field of the item). */
-  value = signal<string | number | null>(null);
+  value = signal<string | number>('');
 
   fruits: AXComboBoxItem[] = [
     { id: 'apple', text: 'Apple', value: 1 },

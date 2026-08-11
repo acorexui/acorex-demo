@@ -4,22 +4,21 @@ export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'usage' },
   {
     path: 'usage',
-    loadComponent: () =>
-      import('./usage/usage.component').then((m) => m.UsageComponent),
+    loadComponent: () => import('./usage/usage.component').then((m) => m.UsageComponent),
   },
   {
     path: 'non-searchable',
     loadComponent: () =>
-      import('./non-searchable/non-searchable.component').then(
-        (m) => m.NonSearchableComponent
-      ),
+      import('./non-searchable/non-searchable.component').then((m) => m.NonSearchableComponent),
+  },
+  {
+    path: 'multiple',
+    loadComponent: () => import('./multiple/multiple.component').then((m) => m.MultipleComponent),
   },
   {
     path: 'using-decorators',
     loadComponent: () =>
-      import('./using-decorators/using-decorators.component').then(
-        (m) => m.UsingDecoratorsComponent
-      ),
+      import('./using-decorators/using-decorators.component').then((m) => m.UsingDecoratorsComponent),
   },
   {
     path: 'custom-header-footer',
@@ -38,8 +37,6 @@ export const routes: Routes = [
   {
     path: 'custom-templates',
     loadComponent: () =>
-      import('./custom-templates/custom-templates.component').then(
-        (m) => m.CustomTemplatesComponent
-      ),
+      import('./custom-templates/custom-templates.component').then((m) => m.CustomTemplatesComponent),
   },
 ];
