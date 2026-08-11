@@ -259,8 +259,6 @@
 /form/updateOn
 /form/usage
 /form/validate
-/image/loading-placeholder
-/image/overlay
 /image/usage
 /json-viewer/dynamic
 /json-viewer/nested
