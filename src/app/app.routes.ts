@@ -142,10 +142,10 @@ export const appRoutes: Route[] = [
       import('./cases/comment/comment.routes').then((c) => c.routes),
   },
   {
-  path:'combo-box',
-  component: MasterLayoutComponent,
-  loadChildren: () =>
-    import('./cases/combo-box/combo-box.routes').then((c) => c.routes)  
+    path: 'combo-box',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/combo-box/combo-box.routes').then((c) => c.routes),
   },
   {
     path: 'cron-job',
@@ -285,6 +285,12 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/list/list.routes').then((c) => c.routes),
+  },
+  {
+    path: 'lookup',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/lookup/lookup.routes').then((c) => c.routes),
   },
   {
     path: 'loading',

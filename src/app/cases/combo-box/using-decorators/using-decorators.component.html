@@ -1,24 +1,32 @@
 <div class="flex w-72 flex-col gap-4">
-    <ax-combo-box [items]="fruits" [(value)]="decoratorValue" placeholder="Select a fruit">
-      <ax-prefix>
-        <ax-icon icon="fa-solid fa-magnifying-glass"></ax-icon>
-      </ax-prefix>
-      <ax-suffix>
-        <ax-text>FR</ax-text>
-      </ax-suffix>
-    </ax-combo-box>
+  <!-- Searchable combo with prefix, clear button, and text suffix -->
+  <ax-combo-box
+    [items]="fruits"
+    [(value)]="fruitValue"
+    placeholder="Select a fruit"
+  >
+    <ax-prefix>
+      <ax-icon icon="fa-solid fa-magnifying-glass"></ax-icon>
+    </ax-prefix>
+    <ax-clear-button></ax-clear-button>
+    <ax-suffix>
+      <ax-text>FR</ax-text>
+    </ax-suffix>
+  </ax-combo-box>
 
-    <ax-combo-box
-      [items]="countries"
-      [(value)]="decoratorSelectValue"
-      [editable]="false"
-      placeholder="Select a country"
-    >
-      <ax-prefix>
-        <ax-icon icon="fa-solid fa-globe"></ax-icon>
-      </ax-prefix>
-      <ax-suffix>
-        <ax-icon icon="fa-regular fa-flag"></ax-icon>
-      </ax-suffix>
-    </ax-combo-box>
-  </div>
+  <!-- Non-searchable combo with icon prefix/suffix -->
+  <ax-combo-box
+    [items]="countries"
+    [(value)]="countryValue"
+    [searchable]="false"
+    placeholder="Select a country"
+  >
+    <ax-prefix>
+      <ax-icon icon="fa-solid fa-globe"></ax-icon>
+    </ax-prefix>
+    <ax-clear-button></ax-clear-button>
+    <ax-suffix>
+      <ax-icon icon="fa-regular fa-flag"></ax-icon>
+    </ax-suffix>
+  </ax-combo-box>
+</div>

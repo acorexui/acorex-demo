@@ -1,0 +1,17 @@
+<div class="w-full max-w-2xl">
+  <!--
+    Multi-column mode shows a table grid in the popup.
+    Type in the trigger to filter; scroll to load more pages.
+  -->
+  <ax-lookup
+    mode="multi-column"
+    [dataSource]="dataSource"
+    valueField="id"
+    textField="name"
+    [columns]="columns"
+    placeholder="Type to search employees..."
+    [(value)]="value"
+  >
+    <ax-clear-button></ax-clear-button>
+  </ax-lookup>
+</div>

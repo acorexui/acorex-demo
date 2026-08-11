@@ -3,30 +3,18 @@ import { AXComboBoxComponent, AXComboBoxItem } from '@acorex/components/combo-bo
 import {
   AXDecoratorClearButtonComponent,
   AXDecoratorGenericComponent,
-  AXDecoratorIconComponent,
 } from '@acorex/components/decorators';
 
 @Component({
-  templateUrl: 'using-decorators.component.html',
+  templateUrl: 'custom-header-footer.component.html',
   imports: [
     AXComboBoxComponent,
     AXDecoratorClearButtonComponent,
     AXDecoratorGenericComponent,
-    AXDecoratorIconComponent,
   ],
 })
-export class UsingDecoratorsComponent {
-  fruitValue = signal<string | number | null>(null);
-  countryValue = signal<string | number | null>('us');
-
-  fruits: AXComboBoxItem[] = [
-    { id: 'apple', text: 'Apple', value: 1 },
-    { id: 'banana', text: 'Banana', value: 2 },
-    { id: 'cherry', text: 'Cherry', value: 3 },
-    { id: 'grape', text: 'Grape', value: 4 },
-    { id: 'mango', text: 'Mango', value: 5 },
-    { id: 'orange', text: 'Orange', value: 6 },
-  ];
+export class CustomHeaderFooterComponent {
+  value = signal<string | number | null>(null);
 
   countries: AXComboBoxItem[] = [
     { id: 'ar', text: 'Argentina', value: 'ar' },

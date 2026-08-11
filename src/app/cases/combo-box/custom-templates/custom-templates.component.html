@@ -1,0 +1,39 @@
+<div class="w-80">
+  <ax-combo-box
+    [items]="contacts"
+    [(value)]="value"
+    [searchable]="false"
+    [itemTemplate]="itemTpl"
+    [selectedTemplate]="selectedTpl"
+    placeholder="Select a contact..."
+  >
+    <ax-clear-button></ax-clear-button>
+  </ax-combo-box>
+
+  <!-- How each contact appears in the open list -->
+  <ng-template #itemTpl let-item>
+    <div class="flex items-center gap-3 overflow-hidden px-3 py-2">
+      <span
+        class="bg-primary/15 text-primary flex size-9 shrink-0 items-center justify-center rounded-full text-xs font-bold"
+      >
+        {{ item.initials }}
+      </span>
+      <span class="flex min-w-0 flex-col">
+        <span class="truncate font-medium">{{ item.text }}</span>
+        <span class="truncate text-xs opacity-60">{{ item.email }}</span>
+      </span>
+    </div>
+  </ng-template>
+
+  <!-- How the selected contact appears in the trigger -->
+  <ng-template #selectedTpl let-item>
+    <span class="flex items-center gap-2 overflow-hidden">
+      <span
+        class="bg-primary/15 text-primary flex size-6 shrink-0 items-center justify-center rounded-full text-[10px] font-bold"
+      >
+        {{ item.initials }}
+      </span>
+      <span class="truncate">{{ item.text }}</span>
+    </span>
+  </ng-template>
+</div>

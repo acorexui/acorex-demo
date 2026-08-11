@@ -1,32 +1,14 @@
 import { Component, signal } from '@angular/core';
 import { AXComboBoxComponent, AXComboBoxItem } from '@acorex/components/combo-box';
-import {
-  AXDecoratorClearButtonComponent,
-  AXDecoratorGenericComponent,
-  AXDecoratorIconComponent,
-} from '@acorex/components/decorators';
+import { AXDecoratorClearButtonComponent } from '@acorex/components/decorators';
 
 @Component({
-  templateUrl: 'using-decorators.component.html',
-  imports: [
-    AXComboBoxComponent,
-    AXDecoratorClearButtonComponent,
-    AXDecoratorGenericComponent,
-    AXDecoratorIconComponent,
-  ],
+  templateUrl: 'non-searchable.component.html',
+  imports: [AXComboBoxComponent, AXDecoratorClearButtonComponent],
 })
-export class UsingDecoratorsComponent {
-  fruitValue = signal<string | number | null>(null);
-  countryValue = signal<string | number | null>('us');
-
-  fruits: AXComboBoxItem[] = [
-    { id: 'apple', text: 'Apple', value: 1 },
-    { id: 'banana', text: 'Banana', value: 2 },
-    { id: 'cherry', text: 'Cherry', value: 3 },
-    { id: 'grape', text: 'Grape', value: 4 },
-    { id: 'mango', text: 'Mango', value: 5 },
-    { id: 'orange', text: 'Orange', value: 6 },
-  ];
+export class NonSearchableComponent {
+  /** With searchable=false the control behaves like a simple select. */
+  value = signal<string | number | null>('de');
 
   countries: AXComboBoxItem[] = [
     { id: 'ar', text: 'Argentina', value: 'ar' },

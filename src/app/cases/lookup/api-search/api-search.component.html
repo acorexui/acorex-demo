@@ -1,0 +1,12 @@
+<div class="w-full max-w-md">
+  <!-- Type a name to search users from https://jsonplaceholder.typicode.com/users -->
+  <ax-lookup
+    mode="drop-down-list"
+    [dataSource]="dataSource"
+    valueField="id"
+    textField="name"
+    placeholder="Search users by name..."
+    [searchable]="true"
+    [(value)]="value"
+  ></ax-lookup>
+</div>

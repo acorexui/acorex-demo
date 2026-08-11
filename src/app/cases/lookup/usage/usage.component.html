@@ -1,0 +1,13 @@
+<div class="w-full max-w-md">
+  <!-- Basic single-select list (mode="drop-down-list") -->
+  <ax-lookup
+    mode="drop-down-list"
+    [dataSource]="countries"
+    valueField="id"
+    textField="name"
+    placeholder="Select a country..."
+    [(value)]="value"
+  >
+    <ax-clear-button></ax-clear-button>
+  </ax-lookup>
+</div>

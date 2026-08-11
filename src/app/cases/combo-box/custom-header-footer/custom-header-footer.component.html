@@ -1,0 +1,20 @@
+<div class="w-72">
+  <ax-combo-box
+    [items]="countries"
+    [(value)]="value"
+    [searchable]="false"
+    placeholder="Select a country"
+  >
+    <ax-clear-button></ax-clear-button>
+
+    <!-- Content shown at the top of the open list -->
+    <ax-header class="bg-on-surface/5 px-3 py-2 text-sm font-semibold">
+      Popular destinations
+    </ax-header>
+
+    <!-- Content shown at the bottom of the open list -->
+    <ax-footer class="bg-on-surface/5 px-3 py-2 text-xs opacity-70">
+      {{ countries.length }} countries available
+    </ax-footer>
+  </ax-combo-box>
+</div>

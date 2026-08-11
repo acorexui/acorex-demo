@@ -1,0 +1,12 @@
+<div class="w-full max-w-md">
+  <!-- Open the list and scroll to load more pages on demand -->
+  <ax-lookup
+    mode="drop-down-list"
+    [dataSource]="dataSource"
+    valueField="id"
+    textField="text"
+    placeholder="Select from 10,000 items..."
+    [maxVisibleItems]="10"
+    [(value)]="value"
+  ></ax-lookup>
+</div>

@@ -1,0 +1,47 @@
+<div class="w-full max-w-md">
+  <ax-lookup
+    mode="multi-select"
+    [dataSource]="contacts"
+    valueField="id"
+    textField="text"
+    placeholder="Select contacts..."
+    [itemHeight]="56"
+    [itemTemplate]="itemTpl"
+    [selectedTemplate]="chipTpl"
+    [emptyTemplate]="emptyTpl"
+    [(value)]="value"
+  ></ax-lookup>
+
+  <!-- Row template in the popup list -->
+  <ng-template #itemTpl let-item>
+    <div class="flex items-center gap-3 overflow-hidden">
+      <span
+        class="bg-primary/15 text-primary flex size-9 shrink-0 items-center justify-center rounded-full text-xs font-bold"
+      >
+        {{ item.initials }}
+      </span>
+      <span class="flex min-w-0 flex-col">
+        <span class="truncate font-medium">{{ item.text }}</span>
+        <span class="truncate text-xs opacity-60">
+          {{ item.email }} · {{ item.role }}
+        </span>
+      </span>
+    </div>
+  </ng-template>
+
+  <!-- Chip template in the trigger -->
+  <ng-template #chipTpl let-item>
+    <span class="flex items-center gap-1">
+      <span
+        class="bg-primary/15 text-primary flex size-4 shrink-0 items-center justify-center rounded-full text-[9px] font-bold"
+      >
+        {{ item.initials }}
+      </span>
+      {{ item.text }}
+    </span>
+  </ng-template>
+
+  <ng-template #emptyTpl>
+    <span class="text-sm italic opacity-60">No contacts match your search.</span>
+  </ng-template>
+</div>
