@@ -22,18 +22,26 @@ function findRouteFiles(dir, routeFiles = []) {
   return routeFiles;
 }
 
+function stripComments(content) {
+  return content
+    .replace(/\/\*[\s\S]*?\*\//g, "")
+    .replace(/^\s*\/\/.*$/gm, "");
+}
+
 // Function to extract routes from a route file
 function extractRoutesFromFile(filePath) {
-  const content = fs.readFileSync(filePath, "utf8");
+  const content = stripComments(fs.readFileSync(filePath, "utf8"));
   const routes = [];
 
   // Simple regex to extract path patterns
   const pathMatches = content.match(/path:\s*['"`]([^'"`]+)['"`]/g);
   if (pathMatches) {
     pathMatches.forEach((match) => {
-      const path = match.replace(/path:\s*['"`]/, "").replace(/['"`]$/, "");
-      if (path && path !== "**" && path !== "") {
-        routes.push(path);
+      const routePath = match
+        .replace(/path:\s*['"`]/, "")
+        .replace(/['"`]$/, "");
+      if (routePath && routePath !== "**" && routePath !== "") {
+        routes.push(routePath);
       }
     });
   }
@@ -41,14 +49,48 @@ function extractRoutesFromFile(filePath) {
   return routes;
 }
 
-// Function to generate route paths
-function generateRoutePaths(basePath, routes) {
+// Map parent path -> nested route module path from loadChildren imports
+function extractLoadChildrenMap(filePath) {
+  const content = stripComments(fs.readFileSync(filePath, "utf8"));
+  const map = new Map();
+  const routeBlocks = [
+    ...content.matchAll(
+      /\{\s*path:\s*['"`]([^'"`]+)['"`][\s\S]*?loadChildren:\s*\(\)\s*=>\s*[\s\S]*?import\(\s*['"`]([^'"`]+)['"`]\s*\)/g
+    ),
+  ];
+
+  for (const match of routeBlocks) {
+    map.set(match[1], match[2]);
+  }
+
+  return map;
+}
+
+// Expand a route file into leaf paths, following loadChildren one level
+function expandRouteFile(filePath, basePath = "") {
+  const routes = extractRoutesFromFile(filePath);
+  const loadChildrenMap = extractLoadChildrenMap(filePath);
   const paths = [];
+  const fileDir = path.dirname(filePath);
 
   for (const route of routes) {
     if (route === "") continue;
 
     const fullPath = basePath ? `${basePath}/${route}` : route;
+    const nestedImport = loadChildrenMap.get(route);
+
+    if (nestedImport) {
+      const nestedFile = path.resolve(fileDir, nestedImport);
+      const nestedTs = nestedFile.endsWith(".ts")
+        ? nestedFile
+        : `${nestedFile}.ts`;
+
+      if (fs.existsSync(nestedTs)) {
+        paths.push(...expandRouteFile(nestedTs, fullPath));
+        continue;
+      }
+    }
+
     paths.push(fullPath);
   }
 
@@ -71,9 +113,11 @@ function parseAppRoutes() {
 
   if (pathMatches) {
     pathMatches.forEach((match) => {
-      const path = match.replace(/path:\s*['"`]/, "").replace(/['"`]$/, "");
-      if (path && path !== "**" && path !== "") {
-        routeNames.push(path);
+      const routePath = match
+        .replace(/path:\s*['"`]/, "")
+        .replace(/['"`]$/, "");
+      if (routePath && routePath !== "**" && routePath !== "") {
+        routeNames.push(routePath);
       }
     });
   }
@@ -106,9 +150,7 @@ function generateSSGRoutes() {
     });
 
     if (routeFile) {
-      const routes = extractRoutesFromFile(routeFile);
-      const routePaths = generateRoutePaths(mainRoute, routes);
-      allRoutes.push(...routePaths);
+      allRoutes.push(...expandRouteFile(routeFile, mainRoute));
     } else {
       // If no specific route file found, just add the main route
       allRoutes.push(mainRoute);

@@ -1,0 +1,15 @@
+<div class="w-full max-w-md flex flex-col gap-3">
+  <!--
+    valueItems seeds the cache for id 2 — no byKey / GET /users/2 on first paint.
+    Opening the list and picking another user (or binding an unknown id) still uses byKey.
+  -->
+  <ax-lookup
+    mode="drop-down-list"
+    [dataSource]="dataSource"
+    [valueItems]="valueItems()"
+    valueField="id"
+    textField="name"
+    placeholder="Select a user..."
+    [(value)]="value"
+  ></ax-lookup>
+</div>

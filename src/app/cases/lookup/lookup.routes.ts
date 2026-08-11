@@ -50,6 +50,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'value-items',
+    loadComponent: () =>
+      import('./value-items/value-items.component').then(
+        (m) => m.ValueItemsComponent
+      ),
+  },
+  {
     path: 'api-search',
     loadComponent: () =>
       import('./api-search/api-search.component').then(
