@@ -23,8 +23,8 @@ function run(cmd, args) {
 }
 
 const gen = run('npm', ['run', 'generate:ssg-routes']);
-const build = run('npx', ['ng', 'build', '--configuration=production,ssg']);
-const combined = `=== generate:ssg-routes (exit ${gen.code}) ===\n${gen.out}\n\n=== ng build production,ssg (exit ${build.code}) ===\n${build.out}\n`;
+const build = run('npx', ['ng', 'build', '--configuration', 'ssg']);
+const combined = `=== generate:ssg-routes (exit ${gen.code}) ===\n${gen.out}\n\n=== ng build ssg (exit ${build.code}) ===\n${build.out}\n`;
 fs.writeFileSync(path.join(root, 'ssg-build-output.txt'), combined, 'utf8');
 
 const failed = /Application bundle generation failed/i.test(build.out);

@@ -133,6 +133,7 @@ function generateSSGRoutes() {
     "chart-legend",
     "grid-layout-builder/",
     "media-viewer/",
+    "lookup/",
   ];
 
   // Remove duplicates, denylist, and sort

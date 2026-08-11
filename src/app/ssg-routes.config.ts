@@ -1,5 +1,5 @@
 // Auto-generated SSG routes configuration
-// Generated on: 2026-08-11T06:40:44.656Z
+// Generated on: 2026-08-11T08:24:23.447Z
 
 export const ssgRoutes = [
   'accordion/accordion-mode',
@@ -151,6 +151,7 @@ export const ssgRoutes = [
   'combo-box/custom-empty-template',
   'combo-box/custom-header-footer',
   'combo-box/custom-templates',
+  'combo-box/multiple',
   'combo-box/non-searchable',
   'combo-box/usage',
   'combo-box/using-decorators',
@@ -289,18 +290,6 @@ export const ssgRoutes = [
   'loading/spinner-stroke-size',
   'loading/spinner-text',
   'loading/usage',
-  'lookup/api-search',
-  'lookup/api-tree',
-  'lookup/custom-empty-template',
-  'lookup/custom-header-footer',
-  'lookup/custom-templates',
-  'lookup/drop-down-tree',
-  'lookup/multi-column',
-  'lookup/multi-select',
-  'lookup/multi-select-tree',
-  'lookup/remote-datasource',
-  'lookup/usage',
-  'lookup/virtual-scroll',
   'menu/color',
   'menu/data-driven',
   'menu/disabled',

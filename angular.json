@@ -79,8 +79,21 @@
               "sourceMap": true
             },
             "ssg": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "5MB",
+                  "maximumError": "10MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "20kB",
+                  "maximumError": "500kB"
+                }
+              ],
+              "outputHashing": "all",
+              "namedChunks": false,
               "outputMode": "static",
-              "prerender": true,
               "ssr": false
             }
           },

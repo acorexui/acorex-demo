@@ -21,6 +21,8 @@ const csrPrefixes = [
   'chart-legend',
   'grid-layout-builder',
   'media-viewer',
+  // Overlay/popup DOM breaks hydration serialization (NG0502) during prerender.
+  'lookup',
 ] as const;
 
 export const serverRoutes: ServerRoute[] = [
