@@ -1,0 +1,65 @@
+<div class="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 py-10">
+  <div class="grid gap-6 md:grid-cols-2">
+    @for (zone of zones; track zone.id) {
+      @if (zone.translucentBackdrop) {
+        <div
+          class="rounded-2xl bg-[linear-gradient(135deg,rgb(59_130_246/0.2),rgb(168_85_247/0.18))] p-1.5"
+        >
+          <div
+            #zoneOrigin
+            class="flex min-h-48 flex-col gap-4 rounded-xl bg-[rgba(var(--ax-sys-color-lightest-surface),var(--ax-sys-surface-fill-opacity,1))] p-5 backdrop-[var(--ax-sys-backdrop-filter-surface,none)] lightest-surface {{
+              zone.themeClass
+            }} {{ zone.appearanceClass }}"
+          >
+            <code class="text-xs text-muted">{{ zone.label }}</code>
+            <p class="text-xs text-muted">{{ zone.description }}</p>
+            <ax-button
+              color="primary"
+              look="solid"
+              text="Open dialog"
+              (onClick)="openDialog(zoneOrigin, zone.description)"
+            ></ax-button>
+          </div>
+        </div>
+      } @else {
+        <div
+          #zoneOrigin
+          class="flex min-h-48 flex-col gap-4 rounded-xl bg-darker p-5 lightest-surface {{
+            zone.themeClass
+          }} {{ zone.appearanceClass }}"
+        >
+          <code class="text-xs text-muted">{{ zone.label }}</code>
+          <p class="text-xs text-muted">{{ zone.description }}</p>
+          <ax-button
+            color="primary"
+            look="solid"
+            text="Open dialog"
+            (onClick)="openDialog(zoneOrigin, zone.description)"
+          ></ax-button>
+        </div>
+      }
+    }
+  </div>
+
+  <div class="flex flex-col gap-3">
+    <div
+      class="ax-dark ax-appearance-depth flex flex-col gap-4 rounded-xl bg-darker p-5"
+    >
+      <code class="text-xs text-muted">{{ nestedZone.outerLabel }}</code>
+
+      <div
+        #nestedOrigin
+        class="ax-light flex flex-col gap-4 rounded-xl bg-lighter p-5"
+      >
+        <code class="text-xs text-muted">{{ nestedZone.innerLabel }}</code>
+        <p class="text-xs text-muted">{{ nestedZone.description }}</p>
+        <ax-button
+          color="primary"
+          look="outline"
+          text="Open dialog"
+          (onClick)="openDialog(nestedOrigin, nestedZone.description)"
+        ></ax-button>
+      </div>
+    </div>
+  </div>
+</div>

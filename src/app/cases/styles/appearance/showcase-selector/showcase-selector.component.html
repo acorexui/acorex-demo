@@ -1,0 +1,19 @@
+<div class="mx-auto flex w-full max-w-4xl flex-col gap-8 px-4 py-10">
+
+  <div class="grid gap-4 sm:grid-cols-3">
+    @for (appearance of appearances; track appearance.kind) {
+      <div
+        #appearanceZone
+        class="appearance-zone  {{ appearance.className }}"
+      >
+        <code class="appearance-zone__label"></code>
+        <ax-button
+          color="primary"
+          look="outline"
+          text="Show {{ appearance.label }}"
+          (onClick)="openNotification(appearanceZone, appearance)"
+        ></ax-button>
+      </div>
+    }
+  </div>
+</div>

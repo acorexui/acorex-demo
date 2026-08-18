@@ -1,0 +1,44 @@
+<div class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-10">
+
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+    @for (column of columns; track column.className) {
+      <div class="flex flex-col gap-2">
+     
+
+        @if (column.translucentBackdrop) {
+          <div
+            class="rounded-2xl "
+          >
+            <div
+              class="flex min-h-52 flex-col gap-3 rounded-xl  p-4 lightest-surface {{ column.className }}"
+            >
+          
+              <ax-button color="primary" look="solid" text="Solid"></ax-button>
+              <ax-text-box placeholder="Field"></ax-text-box>
+              <div
+                class="lightest-surface ax-effect-overlay flex min-h-16 items-center justify-center rounded-xl  px-4 py-3.5 text-sm font-medium "
+              >
+                Overlay card
+              </div>
+            </div>
+          </div>
+        } @else {
+          <div
+            class="flex min-h-52 flex-col gap-3 rounded-xl bg-lighter p-4 lightest-surface {{ column.className }}"
+          >
+        
+            <ax-button color="primary" look="solid" text="Solid"></ax-button>
+            <ax-text-box placeholder="Field"></ax-text-box>
+            <div
+              class="lightest-surface ax-effect-overlay flex min-h-16 items-center justify-center rounded-xl px-4 py-3.5 text-sm font-medium"
+            >
+              Overlay card
+            </div>
+          </div>
+        }
+
+        <code class="text-center text-xs text-muted">{{ column.className }}</code>
+      </div>
+    }
+  </div>
+</div>

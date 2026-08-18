@@ -1,0 +1,81 @@
+<div class="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-10">
+
+  <div class="grid gap-6 md:grid-cols-[minmax(12rem,16rem)_1fr]">
+    <aside class="flex flex-col gap-4">
+      <div class="flex flex-col gap-1.5">
+        <ax-label>Contrast</ax-label>
+        <ax-select-box
+          class="w-full"
+          name="contrast"
+          [dataSource]="contrastOptions"
+          textField="label"
+          valueField="id"
+          [ngModel]="contrast()"
+          (ngModelChange)="setContrast($event)"
+          [ngModelOptions]="{ standalone: true }"
+        ></ax-select-box>
+      </div>
+    </aside>
+
+    <div
+      #previewZone
+      class="ax-appearance-flat lightest-surface ax-effect-surface flex flex-col gap-4 rounded-xl p-6"
+      [class.ax-contrast-enhanced]="contrast() === 'enhanced'"
+      [class.ax-contrast-high]="contrast() === 'high'"
+    >
+      <p class="text-sm text-muted">
+        Preview uses
+        <code class="text-xs">ax-appearance-flat</code>
+        @if (contrastClass()) {
+          + <code class="text-xs">{{ contrastClass() }}</code>
+        }
+      </p>
+
+      <div class="grid gap-3 sm:grid-cols-2">
+        @for (demo of surfaceDemos; track demo.kind) {
+          <div class="flex flex-col gap-1.5">
+            <span class="text-xs text-muted">{{ demo.label }}</span>
+
+            @switch (demo.kind) {
+             
+
+              @case ('notification') {
+                <div data-visual-role="prominent-floating">
+                  <ax-notification
+                    class="w-full max-w-none"
+                    [config]="notificationPreview"
+                  />
+                </div>
+              }
+
+             
+
+              @case ('tooltip') {
+                <div
+                  class="flex min-h-16 items-center justify-center rounded-xl"
+                  data-visual-role="floating"
+                >
+                  <ax-button
+                    color="default"
+                    look="outline"
+                    text="Hover for tooltip"
+                    axTooltip="Tooltip surface"
+                    axTooltipPlacement="top"
+                  ></ax-button>
+                </div>
+              }
+
+             
+            }
+          </div>
+        }
+      </div>
+
+      <div class="flex flex-col gap-3 border-t border-default pt-4">
+        <ax-button color="primary" look="solid" text="Solid"></ax-button>
+        <ax-button color="primary" look="outline" text="Outline"></ax-button>
+        <ax-text-box placeholder="Field"></ax-text-box>
+      </div>
+    </div>
+  </div>
+</div>

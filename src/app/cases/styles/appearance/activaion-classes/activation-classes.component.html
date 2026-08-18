@@ -1,0 +1,29 @@
+<div class="mx-auto flex w-full max-w-6xl flex-col justify-center px-4 gap-8 lightest-surface rounded-lg min-h-44">
+  <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+    @for (panel of panels; track panel.label) {
+      <div class="flex flex-col gap-3">
+        @if (panel.translucentBackdrop) {
+          <div class="rounded-2xl">
+            <div
+              class="{{
+                panel.className
+              }} flex flex-col gap-3 rounded-xl p-4 "
+            >
+              <ax-button color="primary" look="solid" text="Solid" ></ax-button>
+            </div>
+          </div>
+        } @else {
+          <div
+            class="{{
+              panel.className
+            }}   flex flex-col gap-3 rounded-xl p-4 "
+          >
+            <ax-button color="primary" look="solid" text="Solid" ></ax-button>
+          </div>
+        }
+
+        <code class="text-center text-xs text-muted">{{ panel.label }}</code>
+      </div>
+    }
+  </div>
+</div>

@@ -1,5 +1,5 @@
 // Auto-generated SSG routes configuration
-// Generated on: 2026-08-08T07:22:37.746Z
+// Generated on: 2026-08-09T04:59:48.764Z
 
 export const ssgRoutes = [
   '/',
@@ -151,6 +151,9 @@ export const ssgRoutes = [
   'color-palette/preview',
   'color-palette/swatches',
   'color-palette/usage',
+  'combo-box/non-editable',
+  'combo-box/usage',
+  'combo-box/using-decorators',
   'command/template',
   'command/usage',
   'comment/interactions',
@@ -502,7 +505,7 @@ export const ssgRoutes = [
   'uploader/service-integration',
   'uploader/usage',
   'uploader/zone-directive',
-  'wysiwyg/usage'
+  'wysiwyg/usage',
 ];
 
 export default ssgRoutes;

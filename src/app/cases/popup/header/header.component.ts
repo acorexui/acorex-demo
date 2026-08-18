@@ -14,6 +14,7 @@ export class PopUpHeaderComponent {
   dontShowHeader() {
     this.popup.open(AgreementComponents, {
       header: false,
+      size:'sm'
     });
   }
 }

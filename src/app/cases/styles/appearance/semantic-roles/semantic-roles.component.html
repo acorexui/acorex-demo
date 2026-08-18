@@ -1,0 +1,103 @@
+<div class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-10">
+
+
+  <div
+    class="rounded-2xl  p-4 sm:p-6"
+  >
+    <div
+      class="ax-appearance-depth flex flex-col gap-6 rounded-xl bg-lighter/90 p-4 backdrop-blur-sm sm:p-6"
+    >
+      <div
+        class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5"
+      >
+        @for (card of roleCards; track card.label) {
+          <div class="flex flex-col gap-2">
+            <span class="text-center text-xs font-medium">{{ card.label }}</span>
+
+            @switch (card.label) {
+              @case ('Dropdown / Menu') {
+                <div
+                  class="lightest-surface ax-effect-overlay overflow-hidden rounded-xl"
+                  data-visual-role="overlay"
+                >
+                  <ax-button-item-list class="w-full border-0 ">
+                    <ax-button-item text="Edit" name="edit">
+                      <ax-prefix>
+                        <ax-icon icon="fa-solid fa-pen"></ax-icon>
+                      </ax-prefix>
+                    </ax-button-item>
+                    <ax-button-item text="Duplicate" name="duplicate">
+                      <ax-prefix>
+                        <ax-icon icon="fa-solid fa-copy"></ax-icon>
+                      </ax-prefix>
+                    </ax-button-item>
+                    <ax-button-item text="Delete" name="delete" color="danger">
+                      <ax-prefix>
+                        <ax-icon icon="fa-solid fa-trash-can"></ax-icon>
+                      </ax-prefix>
+                    </ax-button-item>
+                  </ax-button-item-list>
+                </div>
+              }
+
+              @case ('Toast') {
+                <div
+                  class="flex w-full justify-center"
+                  data-visual-role="floating"
+                >
+                  <ax-toast class="w-full max-w-none" [config]="toastPreview" />
+                </div>
+              }
+
+              @case ('Notification') {
+                <div
+                  class="flex w-full justify-center"
+                  data-visual-role="prominent-floating"
+                >
+                  <ax-notification
+                    class="w-full max-w-none"
+                    [config]="notificationPreview"
+                  />
+                </div>
+              }
+
+              @case ('Tooltip') {
+                <div
+                  class="lightest-surface ax-effect-floating flex min-h-28 flex-col items-center justify-center gap-3 rounded-xl p-4"
+                  data-visual-role="floating"
+                >
+                  
+                  <ax-button
+                    color="default"
+                    look="outline"
+                    text="Hover target"
+                    axTooltip="Tooltip text"
+                    axTooltipPlacement="top"
+                  ></ax-button>
+                </div>
+              }
+
+              @case ('Dialog panel') {
+                <div
+                  #dialogZone
+                  class="lightest-surface ax-effect-modal flex min-h-28 flex-col items-center justify-center gap-3 rounded-xl p-4"
+                  data-visual-role="modal"
+                >
+                  
+                  <ax-button
+                    color="primary"
+                    look="solid"
+                    text="Open dialog"
+                    (onClick)="openDialog(dialogZone)"
+                  ></ax-button>
+                </div>
+              }
+            }
+
+            <code class="text-center text-xs text-muted">{{ card.token }}</code>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

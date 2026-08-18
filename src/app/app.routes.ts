@@ -142,10 +142,10 @@ export const appRoutes: Route[] = [
       import('./cases/comment/comment.routes').then((c) => c.routes),
   },
   {
-  path:'combo-box',
-  component: MasterLayoutComponent,
-  loadChildren: () =>
-    import('./cases/combo-box/combo-box.routes').then((c) => c.routes)  
+    path: 'combo-box',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/combo-box/combo-box.routes').then((c) => c.routes),
   },
   {
     path: 'cron-job',
@@ -430,14 +430,6 @@ export const appRoutes: Route[] = [
       import('./cases/select-box/select-box.routes').then((c) => c.routes),
   },
   {
-    path: 'selection-list',
-    component: MasterLayoutComponent,
-    loadChildren: () =>
-      import('./cases/selection-list/selection-list.routes').then(
-        (c) => c.routes,
-      ),
-  },
-  {
     path: 'side-menu',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -564,6 +556,12 @@ export const appRoutes: Route[] = [
     path: 'kbd',
     component: MasterLayoutComponent,
     loadChildren: () => import('./cases/kbd/kbd.routes').then((c) => c.routes),
+  },
+  {
+    path: 'styles',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/styles/styles.routes').then((c) => c.routes),
   },
   {
     path: 'line-chart',
