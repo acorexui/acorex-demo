@@ -430,6 +430,14 @@ export const appRoutes: Route[] = [
       import('./cases/select-box/select-box.routes').then((c) => c.routes),
   },
   {
+    path: 'selection-list',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/selection-list/selection-list.routes').then(
+        (c) => c.routes,
+      ),
+  },
+  {
     path: 'side-menu',
     component: MasterLayoutComponent,
     loadChildren: () =>
