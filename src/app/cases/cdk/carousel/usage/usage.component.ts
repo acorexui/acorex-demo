@@ -40,7 +40,10 @@ export class UsageComponent {
       },
     },
     keyboard: true,
-    autoplay: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: '.ax-carousel-pagination',
       clickable: true,
@@ -81,14 +84,4 @@ export class UsageComponent {
       thumbnail: 'https://picsum.photos/id/41/500/500',
     },
   ]);
-
-  ngOnInit(): void {
-    this.init();
-  }
-
-  private async init() {
-    const ref = this.swiperRef();
-    if (!ref) return;
-    await ref.init(this.carouselOptions());
-  }
 }
