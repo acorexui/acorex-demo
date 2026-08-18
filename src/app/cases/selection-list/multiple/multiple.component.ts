@@ -6,17 +6,11 @@ import {
   AXSelectionListLook,
   AXSelectionListModule,
 } from '@acorex/components/selection-list';
-import { AXSelectionList2Module } from '@acorex/components/selection-list-2';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   templateUrl: 'multiple.component.html',
-  imports: [
-    AXSelectionListModule,
-    AXDecoratorModule,
-    AXSelectionList2Module,
-    FormsModule,
-  ],
+  imports: [AXSelectionListModule, AXDecoratorModule, FormsModule],
 })
 export class UsageComponent {
   protected options = signal({
@@ -40,7 +34,7 @@ export class UsageComponent {
     console.log(
       `<b>Selected Items:</b> [${e.component.selectedItems
         .map((c: any) => c['text'])
-        .join(', ')}]`
+        .join(', ')}]`,
     );
   }
 }

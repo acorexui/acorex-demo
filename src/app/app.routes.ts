@@ -572,6 +572,12 @@ export const appRoutes: Route[] = [
     loadChildren: () => import('./cases/kbd/kbd.routes').then((c) => c.routes),
   },
   {
+    path: 'styles',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/styles/styles.routes').then((c) => c.routes),
+  },
+  {
     path: 'line-chart',
     component: MasterLayoutComponent,
     loadChildren: () =>

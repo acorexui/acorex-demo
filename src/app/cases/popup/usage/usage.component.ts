@@ -11,6 +11,6 @@ export class PopUpUsageComponent {
   private popup: AXPopupService = inject(AXPopupService);
 
   simpleUsage() {
-    this.popup.open(AgreementComponents, 'Software Agreement');
+    this.popup.open(AgreementComponents,{size:'lg',title:'Software Agreement'} );
   }
 }

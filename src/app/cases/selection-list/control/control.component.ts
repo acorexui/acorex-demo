@@ -5,12 +5,12 @@ import { AXDecoratorModule } from '@acorex/components/decorators';
 import {
   AXSelectionListLook,
   AXSelectionListModule,
+  AXSelectionListComponent,
 } from '@acorex/components/selection-list';
-import { AXSelectionList2Module } from '@acorex/components/selection-list-2';
 
 @Component({
   templateUrl: 'control.component.html',
-  imports: [AXSelectionList2Module, AXDecoratorModule],
+  imports: [AXDecoratorModule, AXSelectionListComponent],
 })
 export class UsageComponent {
   protected items = [

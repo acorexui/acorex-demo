@@ -1,7 +1,10 @@
 @import "@acorex/styles/index.css";
 @import "@acorex/styles/icons/fontawesome/index.css";
 @import "tailwindcss";
-@import '@acorex/styles/themes/default.css';
+@import "@acorex/styles/themes/default.css";
+@import '@acorex/styles/themes/appearance.css';
+@import "@acorex/styles/themes/contrast";
+@import "@acorex/styles/themes/contrast/enhanced.css";
 @source '../node_modules/@acorex';
 
 /*

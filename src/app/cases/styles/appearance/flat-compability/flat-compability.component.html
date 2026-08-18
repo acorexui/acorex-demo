@@ -1,0 +1,68 @@
+<div class="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 py-10">
+  <div
+    #flatZone
+    class="ax-appearance-flat flex flex-col gap-6 rounded-2xl  p-6 "
+  >
+    <p class="text-center text-xs text-muted">
+    </p>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      @for (card of effectCards; track card.kind) {
+        <div class="flex flex-col items-center gap-2">
+          <span class="text-xs font-medium">{{ card.label }}</span>
+
+          @switch (card.kind) {
+            @case ("toast") {
+              <div class="w-full" [attr.data-visual-role]="card.role">
+                <ax-toast class="w-full max-w-none" [config]="toastPreview" />
+              </div>
+            }
+
+            @case ("notification") {
+              <div class="w-full" [attr.data-visual-role]="card.role">
+                <ax-notification
+                  class="w-full max-w-none"
+                  [config]="notificationPreview"
+                />
+              </div>
+            }
+
+            @case ("menu") {
+              <ax-button-item-list
+                class="lightest-surface ax-effect-overlay w-full overflow-hidden rounded-xl border-0 shadow-none"
+                [attr.data-visual-role]="card.role"
+              >
+                <ax-button-item text="Edit" name="edit">
+                  <ax-prefix>
+                    <ax-icon icon="fa-solid fa-pen"></ax-icon>
+                  </ax-prefix>
+                </ax-button-item>
+                <ax-button-item text="Delete" name="delete" color="danger">
+                  <ax-prefix>
+                    <ax-icon icon="fa-solid fa-trash-can"></ax-icon>
+                  </ax-prefix>
+                </ax-button-item>
+              </ax-button-item-list>
+            }
+
+            @case ("dialog") {
+              <div
+                class="lightest-surface ax-effect-modal flex min-h-24 w-full items-center justify-center rounded-xl px-4"
+                [attr.data-visual-role]="card.role"
+              >
+                <ax-button
+                  color="primary"
+                  look="solid"
+                  text="Open dialog"
+                  (onClick)="openDialog(flatZone)"
+                ></ax-button>
+              </div>
+            }
+          }
+
+          <code class="text-center text-xs text-muted">{{ card.token }}</code>
+        </div>
+      }
+    </div>
+  </div>
+</div>

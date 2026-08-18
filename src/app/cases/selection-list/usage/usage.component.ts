@@ -1,5 +1,4 @@
 import { Component, signal } from '@angular/core';
-import { AXSelectionList2Module } from '@acorex/components/selection-list-2';
 import { AXDirection, AXValueChangedEvent } from '@acorex/cdk/common';
 import { AXDecoratorModule } from '@acorex/components/decorators';
 import {
@@ -10,12 +9,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   templateUrl: 'usage.component.html',
-  imports: [
-    AXSelectionListModule,
-    AXDecoratorModule,
-    AXSelectionList2Module,
-    FormsModule,
-  ],
+  imports: [AXSelectionListModule, AXDecoratorModule, FormsModule],
 })
 export class UsageComponent {
   protected options = signal({
@@ -39,7 +33,7 @@ export class UsageComponent {
     console.log(
       `<b>Selected Items:</b> [${e.component.selectedItems
         .map((c: any) => c['text'])
-        .join(', ')}]`
+        .join(', ')}]`,
     );
   }
 }
