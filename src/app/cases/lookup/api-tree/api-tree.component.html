@@ -1,0 +1,29 @@
+<div class="flex w-full max-w-md flex-col gap-6">
+  <div class="flex flex-col gap-2">
+    <ax-label>DropDownTree</ax-label>
+    <ax-lookup
+      mode="drop-down-tree"
+      [treeDataSource]="treeDataSource"
+      valueField="id"
+      textField="title"
+      placeholder="Select a user, post, or comment..."
+      [(value)]="singleValue"
+    >
+      <ax-clear-button></ax-clear-button>
+    </ax-lookup>
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <ax-label>MultiSelectTree</ax-label>
+    <ax-lookup
+      mode="multi-select-tree"
+      [treeDataSource]="treeDataSource"
+      valueField="id"
+      textField="title"
+      placeholder="Select users, posts, or comments..."
+      [(value)]="multiValue"
+    >
+      <ax-clear-button></ax-clear-button>
+    </ax-lookup>
+  </div>
+</div>

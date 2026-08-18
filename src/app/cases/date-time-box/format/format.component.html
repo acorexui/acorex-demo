@@ -1,0 +1,60 @@
+<div class="flex flex-col items-center justify-center gap-6 py-8">
+  <div class="w-80 flex flex-col gap-3">
+    <ax-form-field>
+      <ax-label>Formatted date and time</ax-label>
+      @if (format() !== null) {
+        <ax-datetime-box
+          [ngModel]="value()"
+          (ngModelChange)="value.set($event)"
+          [allowTyping]="true"
+          [calendar]="calendar()"
+          [format]="format()!"
+          placeholder="Format follows calendar or override"
+        >
+          <ax-clear-button></ax-clear-button>
+        </ax-datetime-box>
+      } @else {
+        <ax-datetime-box
+          [ngModel]="value()"
+          (ngModelChange)="value.set($event)"
+          [allowTyping]="true"
+          [calendar]="calendar()"
+          placeholder="Format follows calendar or override"
+        >
+          <ax-clear-button></ax-clear-button>
+        </ax-datetime-box>
+      }
+    </ax-form-field>
+
+    <ax-subtitle>
+      Solar Hijri defaults to day/month/year (<code>DD/MM/YYYY</code>). Pick a
+      custom format to override, or switch calendar to compare defaults.
+    </ax-subtitle>
+  </div>
+
+  <div class="flex flex-wrap gap-2 justify-center">
+    <ax-button
+      class="ax-sm"
+      text="Gregorian"
+      (onClick)="setCalendar('gregorian')"
+      [look]="calendar() === 'gregorian' ? 'solid' : 'outline'"
+    ></ax-button>
+    <ax-button
+      class="ax-sm"
+      text="Solar Hijri"
+      (onClick)="setCalendar('solar-hijri')"
+      [look]="calendar() === 'solar-hijri' ? 'solid' : 'outline'"
+    ></ax-button>
+  </div>
+
+  <div class="flex flex-wrap gap-2 justify-center">
+    @for (preset of presets; track preset.label) {
+      <ax-button
+        class="ax-sm"
+        [text]="preset.label"
+        (onClick)="setFormat(preset.value)"
+        [look]="format() === preset.value ? 'solid' : 'outline'"
+      ></ax-button>
+    }
+  </div>
+</div>

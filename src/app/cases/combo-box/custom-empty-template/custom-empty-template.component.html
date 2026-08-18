@@ -1,0 +1,18 @@
+<div class="w-72">
+  <!-- Type a query that does not match any fruit (for example "xyz") to see the empty state -->
+  <ax-combo-box
+    [items]="fruits"
+    [(value)]="value"
+    [emptyTemplate]="emptyTpl"
+    placeholder="Search fruits..."
+  >
+    <ax-clear-button></ax-clear-button>
+  </ax-combo-box>
+
+  <ng-template #emptyTpl>
+    <div class="flex flex-col items-center gap-1 py-2 text-center text-sm opacity-70">
+      <ax-icon icon="fa-solid fa-magnifying-glass"></ax-icon>
+      <span>No fruits match your search.</span>
+    </div>
+  </ng-template>
+</div>

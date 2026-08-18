@@ -1,0 +1,47 @@
+import { RenderMode, ServerRoute } from '@angular/ssr';
+
+/**
+ * Demos that rely on canvas/maps/editors and are not safe to prerender in Node.
+ * Only include paths that exist in app.routes.ts.
+ * Keep in sync with denylistPrefixes in scripts/generate-ssg-routes.js.
+ */
+const csrPrefixes = [
+  'map',
+  'paint',
+  'editor',
+  'wysiwyg',
+  'file-explorer',
+  'image-editor',
+  'bar-chart',
+  'donut-chart',
+  'gauge-chart',
+  'flow-chart',
+  'hierarchy-chart',
+  'line-chart',
+  'chart-legend',
+  'grid-layout-builder',
+  'media-viewer',
+  // Overlay/popup DOM breaks hydration serialization (NG0502) during prerender.
+  'lookup',
+] as const;
+
+export const serverRoutes: ServerRoute[] = [
+  // Keep "/" as CSR so index.html stays an app shell.
+  // If "/" is prerendered, Angular writes a meta-refresh to action-sheet/usage
+  // (app.routes redirect). nginx then serves that file for missing CSR paths
+  // (e.g. /gauge-chart/usage) and the browser is bounced away from the chart.
+  {
+    path: '',
+    renderMode: RenderMode.Client,
+  },
+  ...csrPrefixes.map(
+    (prefix): ServerRoute => ({
+      path: `${prefix}/**`,
+      renderMode: RenderMode.Client,
+    }),
+  ),
+  {
+    path: '**',
+    renderMode: RenderMode.Prerender,
+  },
+];

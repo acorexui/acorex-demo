@@ -1,0 +1,16 @@
+<div class="w-full max-w-md">
+  <!--
+    Custom AXDataSource with load + byKey:
+    - pages load remotely (simulated)
+    - search filters server-side via e.filter
+    - initial value (3) is resolved with byKey
+  -->
+  <ax-lookup
+    mode="drop-down-list"
+    [dataSource]="dataSource"
+    valueField="id"
+    textField="name"
+    placeholder="Select an employee..."
+    [(value)]="value"
+  ></ax-lookup>
+</div>

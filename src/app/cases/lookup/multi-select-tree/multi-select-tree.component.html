@@ -1,0 +1,18 @@
+<div class="w-full max-w-md">
+  <!--
+    Multi-select tree with lazy children.
+    treeSelectionBehavior controls how parent/child selection cascades
+    (all | intermediate | leaf | nested | intermediate-nested).
+  -->
+  <ax-lookup
+    mode="multi-select-tree"
+    [treeDataSource]="treeDataSource"
+    valueField="id"
+    textField="title"
+    treeSelectionBehavior="all"
+    placeholder="Select locations..."
+    [(value)]="value"
+  >
+    <ax-clear-button></ax-clear-button>
+  </ax-lookup>
+</div>

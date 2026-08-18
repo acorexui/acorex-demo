@@ -1,0 +1,13 @@
+<div class="w-full max-w-md">
+  <!-- Multiple selection: value is an array, selected items render as chips -->
+  <ax-lookup
+    mode="multi-select"
+    [dataSource]="countries"
+    valueField="id"
+    textField="name"
+    placeholder="Select countries..."
+    [(value)]="value"
+  >
+    <ax-clear-button></ax-clear-button>
+  </ax-lookup>
+</div>

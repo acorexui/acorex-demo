@@ -1,0 +1,20 @@
+<div class="w-full max-w-md">
+  <ax-lookup
+    mode="drop-down-list"
+    [dataSource]="countries"
+    valueField="id"
+    textField="name"
+    placeholder="Select a country..."
+    [(value)]="value"
+  >
+    <ax-clear-button></ax-clear-button>
+
+    <ax-header class="bg-on-surface/5 px-3 py-2 text-sm font-semibold">
+      Choose a country
+    </ax-header>
+
+    <ax-footer class="bg-on-surface/5 px-3 py-2 text-xs opacity-70">
+      {{ countries.length }} countries available
+    </ax-footer>
+  </ax-lookup>
+</div>

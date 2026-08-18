@@ -1,0 +1,58 @@
+<div class="flex flex-col items-center justify-center gap-4 px-4">
+  <div class="text-xl font-semibold">Date & Time - Usage</div>
+  <div class="text-sm text-muted">
+    Demonstrates calendar switching, formatting, and utilities.
+  </div>
+
+  <div class="flex gap-2 flex-wrap">
+    <ax-button
+      style="width: max-content; height: max-content"
+      look="solid"
+      color="primary"
+      (onClick)="switchCalendar('gregorian')"
+      >Gregorian</ax-button
+    >
+    <ax-button
+      style="width: max-content; height: max-content"
+      look="solid"
+      color="secondary"
+      (onClick)="switchCalendar('solar-hijri')"
+      >Solar Hijri</ax-button
+    >
+  </div>
+
+  <div
+    class="flex flex-col gap-2 items-start w-full md:w-2/3"
+    style="width: max-content"
+  >
+    <div><b>Active calendar:</b> {{ activeCalendar() }}</div>
+    <div><b>Now (date):</b> {{ formattedDate() }}</div>
+    <div><b>Now (time):</b> {{ formattedTime() }}</div>
+    <div><b>Now (datetime):</b> {{ formattedDateTime() }}</div>
+  </div>
+
+  <div
+    class="flex flex-col gap-2 items-start w-full md:w-2/3"
+    style="width: max-content"
+  >
+    <div class="text-base font-semibold">Utilities</div>
+    <div><b>+36 hours (long date):</b> {{ plus36h() }}</div>
+    <div>
+      <b>Compare (+36h is after now?):</b>
+      {{ laterIsAfterNow() ? "Yes" : "No" }}
+    </div>
+    <div>
+      <b>Duration (now → +36h):</b>
+      {{ durationText() }}
+    </div>
+  </div>
+
+  <div class="flex gap-2">
+    <ax-button
+      style="width: max-content; height: max-content"
+      look="outline"
+      (onClick)="refreshNow()"
+      >Refresh now</ax-button
+    >
+  </div>
+</div>

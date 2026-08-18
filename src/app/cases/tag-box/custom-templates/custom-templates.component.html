@@ -28,16 +28,16 @@
   <ax-title size="sm">Selected Items ({{ tagBoxValue().length }})</ax-title>
   <div class="mt-2 flex flex-wrap gap-2">
     @for (item of tagBoxValue(); track item.id) {
-    <ax-tag
-      [text]="item.text"
-      [color]="item.color"
-      look="twotone"
-      (onClick)="onTagClick($event)"
-    >
-      <ax-prefix>
-        <ax-icon [class]="getCategoryIcon(item.category)"></ax-icon>
-      </ax-prefix>
-    </ax-tag>
+      <ax-tag
+        [text]="item.text"
+        [color]="item.color"
+        look="twotone"
+        (onClick)="onTagClick($event)"
+      >
+        <ax-prefix>
+          <ax-icon [class]="getCategoryIcon(item.category)"></ax-icon>
+        </ax-prefix>
+      </ax-tag>
     }
   </div>
 </div>
@@ -64,19 +64,17 @@
 <!-- Custom Autocomplete Item Template -->
 <ng-template #itemTemplate let-context>
   @let item = context.data;
-  <div
-    class="flex w-full items-center gap-3 rounded p-2 transition-colors"
-  >
+  <div class="flex w-full items-center gap-3 rounded p-2 transition-colors">
     <div
       class="flex h-8 w-8 items-center justify-center rounded-full"
       [ngClass]="{
-          'ax-bg-primary-500/15 ax-text-primary-500': item.color === 'primary',
-          'ax-bg-success-500/15 ax-text-success-500': item.color === 'success',
-          'ax-bg-danger-500/15 ax-text-danger-500': item.color === 'danger',
-          'ax-bg-warning-500/15 ax-text-warning-500': item.color === 'warning',
-          'ax-bg-info-500/15 ax-text-info-500': item.color === 'info',
-          'ax-bg-muted-500/15 ax-text-muted-500': item.color === 'muted',
-        }"
+        'bg-primary-500/15 text-primary-500': item.color === 'primary',
+        'bg-success-500/15 text-success-500': item.color === 'success',
+        'bg-danger-500/15 text-danger-500': item.color === 'danger',
+        'bg-warning-500/15 text-warning-500': item.color === 'warning',
+        'bg-info-500/15 text-info-500': item.color === 'info',
+        'bg-muted-500/15 text-muted-500': item.color === 'muted',
+      }"
     >
       <ax-icon [class]="getCategoryIcon(item.category)"></ax-icon>
     </div>
@@ -97,9 +95,7 @@
 
 <!-- Custom Empty Template -->
 <ng-template #emptyTemplate>
-  <div
-    class="flex flex-col items-center justify-center px-4 py-8"
-  >
+  <div class="flex flex-col items-center justify-center px-4 py-8">
     <ax-icon
       class="fa-light fa-magnifying-glass mb-2 text-4xl text-gray-400"
     ></ax-icon>

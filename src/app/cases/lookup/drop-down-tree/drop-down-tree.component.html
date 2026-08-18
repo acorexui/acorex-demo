@@ -1,0 +1,13 @@
+<div class="w-full max-w-md">
+  <!-- Tree single-select: use treeDataSource and textField="title" for default node shape -->
+  <ax-lookup
+    mode="drop-down-tree"
+    [treeDataSource]="treeNodes"
+    valueField="id"
+    textField="title"
+    placeholder="Select a location..."
+    [(value)]="value"
+  >
+    <ax-clear-button></ax-clear-button>
+  </ax-lookup>
+</div>

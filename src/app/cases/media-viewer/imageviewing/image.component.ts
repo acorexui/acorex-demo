@@ -64,7 +64,7 @@ export class ImageComponent {
   });
 
   protected readonly viewportClass = computed(() => {
-    return this.fit() === 'cover' ? 'ax-object-cover' : 'ax-object-contain';
+    return this.fit() === 'cover' ? 'object-cover' : 'object-contain';
   });
 
   setFit(mode: FitMode): void {

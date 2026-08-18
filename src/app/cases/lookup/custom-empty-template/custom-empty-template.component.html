@@ -1,0 +1,22 @@
+<div class="w-full max-w-md">
+  <!-- Type a query that does not match any country (for example "xyz") to see the empty state -->
+  <ax-lookup
+    mode="drop-down-list"
+    [dataSource]="countries"
+    valueField="id"
+    textField="name"
+    placeholder="Search countries..."
+    [emptyTemplate]="emptyTpl"
+    [(value)]="value"
+  >
+    <ax-clear-button></ax-clear-button>
+  </ax-lookup>
+
+  <ng-template #emptyTpl>
+    <div class="flex flex-col items-center gap-1 py-4 text-center text-sm opacity-70">
+      <ax-icon icon="fa-solid fa-magnifying-glass"></ax-icon>
+      <span>No countries match your search.</span>
+      <span class="text-xs opacity-60">Try a different keyword.</span>
+    </div>
+  </ng-template>
+</div>

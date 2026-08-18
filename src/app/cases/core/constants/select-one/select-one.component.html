@@ -1,0 +1,202 @@
+<div class="flex flex-col items-center justify-center gap-6 p-6">
+  <!-- Header -->
+  <div class="text-center mb-4">
+    <h1 class="text-3xl font-bold mb-2 text-gray-900 dark:text-gray-100">
+      Country Selection Showcase
+    </h1>
+    <p class="text-gray-600 dark:text-gray-400">
+      Interactive demonstration of the constants package with country data
+    </p>
+  </div>
+
+  <div class="flex gap-4 flex-row-reverse">
+    <!-- Selected Country Display -->
+    @if (selectedCountry(); as country) {
+      <div
+        class="w-full mw-2xl bg-white dark:bg-gray-800 border dark:darkest-surface rounded-lg shadow-sm"
+      >
+        <div class="p-6">
+          <!-- Header with Clear Button -->
+          <div class="flex justify-between items-start mb-4">
+            <div class="flex items-center gap-4">
+              @if (country.bkPosition) {
+                <div
+                  class="w-[25px] h-[20px] bg-repeat flex-shrink-0"
+                  [ngStyle]="{
+                    'background-image': 'url(' + flagSprite + ')',
+                    'background-position':
+                      country.bkPosition.x + ' ' + country.bkPosition.y,
+                  }"
+                ></div>
+              }
+              <div>
+                <h3
+                  class="text-xl font-semibold text-lightest-surface dark:text-gray-100"
+                >
+                  {{ country.name }}
+                </h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  {{ country.code | uppercase }} • {{ country.iso2code }}
+                </p>
+              </div>
+            </div>
+            <!-- Clear Selection Button -->
+            <ax-button
+              (click)="clearSelection()"
+              color="secondary"
+              class="px-6 py-2 text-base font-medium"
+              style="width: max-content"
+            >
+              Clear
+            </ax-button>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Phone Format -->
+            <div>
+              <h4 class="font-medium mb-2 text-gray-900 dark:text-gray-100">
+                Phone Format
+              </h4>
+              <p
+                class="text-sm bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 p-2 rounded font-mono"
+              >
+                {{ getFormattedPhone(country) }}
+              </p>
+            </div>
+
+            <!-- Area Codes -->
+            @if (country.areaCodes && country.areaCodes.length > 0) {
+              <div>
+                <h4 class="font-medium mb-2 text-gray-900 dark:text-gray-100">
+                  Area Codes
+                </h4>
+                <p
+                  class="text-sm bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 p-2 rounded"
+                >
+                  {{ getAreaCodes(country) }}
+                </p>
+              </div>
+            }
+
+            <!-- Regions -->
+            <div>
+              <h4 class="font-medium mb-2 text-gray-900 dark:text-gray-100">
+                Regions
+              </h4>
+              <div class="flex flex-wrap gap-1">
+                @for (region of country.regions; track region) {
+                  <span
+                    class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded"
+                  >
+                    {{ region }}
+                  </span>
+                }
+              </div>
+            </div>
+
+            <!-- Priority -->
+            @if (country.orderPriority !== undefined) {
+              <div>
+                <h4 class="font-medium mb-2 text-gray-900 dark:text-gray-100">
+                  Priority
+                </h4>
+                <p
+                  class="text-sm bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 p-2 rounded"
+                >
+                  {{ country.orderPriority }}
+                </p>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    }
+
+    <!-- Countries List -->
+    <div
+      class="w-full mw-4xl bg-white dark:bg-gray-800 border dark:darkest-surface rounded-lg shadow-sm"
+    >
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
+            Countries ({{ displayedCountries().length }})
+          </h3>
+        </div>
+
+        <div class="mh-96 overflow-y-auto border dark:border-gray-700 rounded">
+          <div class="divide-y dark:divide-gray-700">
+            @for (country of displayedCountries(); track country.code) {
+              <div
+                class="p-4 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                [class.bg-blue-50]="selectedCountry()?.code === country.code"
+                [class.dark:bg-blue-900]="
+                  selectedCountry()?.code === country.code
+                "
+                (click)="selectCountry(country)"
+              >
+                <div class="flex items-center gap-3">
+                  @if (country.bkPosition) {
+                    <div
+                      class="w-[25px] h-[20px] bg-repeat flex-shrink-0"
+                      [ngStyle]="{
+                        'background-image': 'url(' + flagSprite + ')',
+                        'background-position':
+                          country.bkPosition.x + ' ' + country.bkPosition.y,
+                      }"
+                    ></div>
+                  } @else {
+                    <div
+                      class="w-[25px] h-[20px] bg-gray-200 dark:bg-gray-600 rounded flex-shrink-0"
+                    ></div>
+                  }
+
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="font-medium text-gray-900 dark:text-gray-100"
+                        >{{ country.name }}</span
+                      >
+                      @if (country.orderPriority !== undefined) {
+                        <span
+                          class="inline-block bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-1 py-0.5 rounded"
+                        >
+                          Priority
+                        </span>
+                      }
+                    </div>
+                    <div
+                      class="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400"
+                    >
+                      <span>{{ country.code | uppercase }}</span>
+                      <span>{{ country.iso2code }}</span>
+                      @if (country.format) {
+                        <span class="font-mono">{{ country.format }}</span>
+                      }
+                    </div>
+                    <div class="flex flex-wrap gap-1 mt-1">
+                      @for (
+                        region of country.regions.slice(0, 3);
+                        track region
+                      ) {
+                        <span
+                          class="inline-block bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs px-1 py-0.5 rounded"
+                        >
+                          {{ region }}
+                        </span>
+                      }
+                      @if (country.regions.length > 3) {
+                        <span class="text-xs text-gray-500 dark:text-gray-400"
+                          >+{{ country.regions.length - 3 }} more</span
+                        >
+                      }
+                    </div>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

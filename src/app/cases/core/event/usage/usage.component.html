@@ -1,0 +1,133 @@
+<div class="flex flex-col items-center justify-center gap-6 px-4 py-8">
+  <div class="text-xl font-semibold">Event Service - Usage</div>
+  <div class="text-sm text-muted text-center max-w-2xl">
+    Demonstrates both Observable-based and callback-based event systems from
+    <code>AXEventService</code>.
+  </div>
+
+  <!-- Observable-based Events Section -->
+  <div class="w-full max-w-4xl border border-default rounded-lg p-4">
+    <div class="text-lg font-semibold mb-4">Observable-based Events</div>
+    <div class="text-sm text-muted mb-4">
+      Subscribe to events using RxJS Observables. Events are typed with
+      <code>AXEventData</code>.
+    </div>
+
+    <div class="flex gap-2 flex-wrap mb-4">
+      <ax-button
+        text="Emit Locale Changed"
+        look="solid"
+        color="primary"
+        (onClick)="emitSystemEvent(AXSystemEvents.AXLocaleChanged)"
+      ></ax-button>
+      <ax-button
+        text="Emit Calendar Changed"
+        look="solid"
+        color="primary"
+        (onClick)="emitSystemEvent(AXSystemEvents.AXCalendarChanged)"
+      ></ax-button>
+      <ax-button
+        text="Emit Language Changed"
+        look="solid"
+        color="primary"
+        (onClick)="emitSystemEvent(AXSystemEvents.AXLanguageChanged)"
+      ></ax-button>
+      <ax-button
+        text="Emit Custom Event"
+        look="outline"
+        color="secondary"
+        (onClick)="emitCustomObservableEvent()"
+      ></ax-button>
+      <ax-button
+        text="Emit Event with Payload"
+        look="outline"
+        color="secondary"
+        (onClick)="emitEventWithPayload()"
+      ></ax-button>
+      <ax-button
+        text="Clear Logs"
+        look="blank"
+        color="danger"
+        (onClick)="clearObservableLogs()"
+      ></ax-button>
+    </div>
+
+    <div class="bg-muted rounded p-3">
+      <div class="text-sm font-semibold mb-2">
+        Event Log ({{ eventCount() }} events)
+      </div>
+      <div class="flex flex-col gap-1">
+        @if (eventLog().length === 0) {
+          <div class="text-muted italic">No events emitted yet...</div>
+        } @else {
+          @for (log of eventLog(); track $index) {
+            <div
+              class="text-xs font-mono text-default bg-background p-2 rounded"
+            >
+              {{ log }}
+            </div>
+          }
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Callback-based Events Section -->
+  <div class="w-full mw-4xl border border-default rounded-lg p-4">
+    <div class="text-lg font-semibold mb-4">Callback-based Events</div>
+    <div class="text-sm text-muted mb-4">
+      Use <code>on()</code>, <code>broadcast()</code>, and
+      <code>destroy()</code> for callback-based event handling.
+    </div>
+
+    <div class="flex gap-2 flex-wrap mb-4">
+      <ax-button
+        text="Broadcast Event"
+        look="solid"
+        color="success"
+        (onClick)="broadcastCallbackEvent()"
+      ></ax-button>
+      <ax-button
+        text="Broadcast with Data"
+        look="solid"
+        color="success"
+        (onClick)="broadcastMultipleData()"
+      ></ax-button>
+      <ax-button
+        text="Clear Logs"
+        look="blank"
+        color="danger"
+        (onClick)="clearCallbackLogs()"
+      ></ax-button>
+    </div>
+
+    <div class="bg-muted rounded p-3">
+      <div class="text-sm font-semibold mb-2">
+        Callback Log ({{ callbackCount() }} callbacks)
+      </div>
+      <div class="flex flex-col gap-1">
+        @if (callbackLog().length === 0) {
+          <div class="text-muted italic">No callbacks received yet...</div>
+        } @else {
+          @for (log of callbackLog(); track $index) {
+            <div
+              class="text-xs font-mono text-default bg-background p-2 rounded"
+            >
+              {{ log }}
+            </div>
+          }
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Clear All Button -->
+  <div class="flex gap-2">
+    <ax-button
+      text="Clear All Logs"
+      look="outline"
+      color="danger"
+      (onClick)="clearAllLogs()"
+    ></ax-button>
+  </div>
+</div>

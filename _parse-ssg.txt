@@ -1,0 +1,13 @@
+1. Count of "An error occurred while prerendering route": 100
+
+2. Routes whose Error is NOT "Terminating worker thread" (real root failures):
+   Count: 1
+   1. /lookup/usage
+      Error: Error: NG0502: During serialization, Angular was unable to find an element in the DOM:
+
+3. Count of "isBefore" errors: 3
+
+4. "Application bundle generation failed" appears: YES
+
+5. Prerendered static routes line:
+   Prerendered 640 static routes.

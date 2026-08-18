@@ -1,12 +1,16 @@
 import { Component, signal } from '@angular/core';
-import { AXComboBoxItem, AXComboBoxModule } from '@acorex/components/combo-box';
+import { AXComboBoxComponent, AXComboBoxItem } from '@acorex/components/combo-box';
+import { AXDecoratorClearButtonComponent } from '@acorex/components/decorators';
+
 @Component({
   templateUrl: 'usage.component.html',
-  imports: [AXComboBoxModule],
+  imports: [AXComboBoxComponent, AXDecoratorClearButtonComponent],
 })
 export class UsageComponent {
-  usageValue = signal<string | number >('');
-  protected fruits: AXComboBoxItem[] = [
+  /** Selected fruit value (`value` field of the item). */
+  value = signal<string | number>('');
+
+  fruits: AXComboBoxItem[] = [
     { id: 'apple', text: 'Apple', value: 1 },
     { id: 'banana', text: 'Banana', value: 2 },
     { id: 'cherry', text: 'Cherry', value: 3 },

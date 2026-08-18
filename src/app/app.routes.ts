@@ -287,6 +287,12 @@ export const appRoutes: Route[] = [
       import('./cases/list/list.routes').then((c) => c.routes),
   },
   {
+    path: 'lookup',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/lookup/lookup.routes').then((c) => c.routes),
+  },
+  {
     path: 'loading',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -624,6 +630,11 @@ export const appRoutes: Route[] = [
   {
     path: 'cdk',
     loadChildren: () => import('./cases/cdk/cdk.routes').then((c) => c.routes),
+  },
+  {
+    path: 'core',
+    loadChildren: () =>
+      import('./cases/core/core.routes').then((c) => c.routes),
   },
   {
     path: '**',
