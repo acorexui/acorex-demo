@@ -18,6 +18,7 @@ import { AXValidationModule } from '@acorex/core/validation';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { MyCustomHolidaysLoader, MyTranslationLoader } from './app.loaders';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideFileViewer } from '@acorex/components/file-viewer';
 import { AXMediaViewerModule } from '@acorex/components/media-viewer';
 import { AXLocaleModule } from '@acorex/core/locale';
 
@@ -29,6 +30,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withFetch()),
     // Auto-switches to noop animations under ngServerMode (SSR/prerender).
     provideAnimationsAsync(),
+    ...provideFileViewer(),
     importProvidersFrom(
       AXLocaleModule,
       AXValidationModule.forRoot(),

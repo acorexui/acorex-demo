@@ -253,6 +253,12 @@ export const appRoutes: Route[] = [
       import('./cases/flow-chart/flow-chart.routes').then((c) => c.routes),
   },
   {
+    path: 'file-viewer',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/file-viewer/file-viewer.routes').then((c) => c.routes),
+  },
+  {
     path: 'grid-layout-builder',
     component: MasterLayoutComponent,
     loadChildren: () =>
