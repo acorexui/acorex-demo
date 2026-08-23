@@ -176,6 +176,7 @@ function generateSSGRoutes() {
     "grid-layout-builder/",
     "media-viewer/",
     "lookup/",
+    "combo-box/",
   ];
 
   // Remove duplicates, denylist, and sort

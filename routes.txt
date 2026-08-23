@@ -168,13 +168,6 @@
 /color-palette/preview
 /color-palette/swatches
 /color-palette/usage
-/combo-box/custom-empty-template
-/combo-box/custom-header-footer
-/combo-box/custom-templates
-/combo-box/multiple
-/combo-box/non-searchable
-/combo-box/usage
-/combo-box/using-decorators
 /command/template
 /command/usage
 /comment/interactions
@@ -252,6 +245,7 @@
 /fab/label
 /fab/tooltip
 /fab/usage
+/file-viewer/usage
 /form/label
 /form/look
 /form/messageStyle
@@ -456,6 +450,13 @@
 /step-wizard/navigation-state
 /step-wizard/orientation
 /step-wizard/usage
+/styles/appearance/activation-classes
+/styles/appearance/contrast
+/styles/appearance/flat-compability
+/styles/appearance/overlay-context
+/styles/appearance/semantic-roles
+/styles/appearance/showcase-selector
+/styles/appearance/visual-charecter
 /switch/color
 /switch/content
 /switch/disabled-readonly
