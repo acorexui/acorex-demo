@@ -1,5 +1,5 @@
 // Auto-generated SSG routes configuration
-// Generated on: 2026-08-11T11:32:11.218Z
+// Generated on: 2026-08-23T04:49:40.298Z
 
 export const ssgRoutes = [
   'accordion/accordion-mode',
@@ -172,13 +172,6 @@ export const ssgRoutes = [
   'color-palette/preview',
   'color-palette/swatches',
   'color-palette/usage',
-  'combo-box/custom-empty-template',
-  'combo-box/custom-header-footer',
-  'combo-box/custom-templates',
-  'combo-box/multiple',
-  'combo-box/non-searchable',
-  'combo-box/usage',
-  'combo-box/using-decorators',
   'command/template',
   'command/usage',
   'comment/interactions',
@@ -256,6 +249,7 @@ export const ssgRoutes = [
   'fab/label',
   'fab/tooltip',
   'fab/usage',
+  'file-viewer/usage',
   'form/label',
   'form/look',
   'form/messageStyle',
@@ -460,6 +454,13 @@ export const ssgRoutes = [
   'step-wizard/navigation-state',
   'step-wizard/orientation',
   'step-wizard/usage',
+  'styles/appearance/activation-classes',
+  'styles/appearance/contrast',
+  'styles/appearance/flat-compability',
+  'styles/appearance/overlay-context',
+  'styles/appearance/semantic-roles',
+  'styles/appearance/showcase-selector',
+  'styles/appearance/visual-charecter',
   'switch/color',
   'switch/content',
   'switch/disabled-readonly',
