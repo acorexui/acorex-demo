@@ -1,1 +1,10 @@
-<ax-datetime-box [boxLook]="look"></ax-datetime-box>
+<div class="flex gap-10 flex-col md:flex-row items-center">
+  <ax-datetime-box
+    [(ngModel)]="options().value"
+    [boxLook]="ClassicLook"
+  ></ax-datetime-box>
+  <ax-datetime-box
+    [(ngModel)]="options().value"
+    [boxLook]="DefaultLook"
+  ></ax-datetime-box>
+</div>

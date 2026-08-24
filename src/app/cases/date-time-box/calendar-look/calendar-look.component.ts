@@ -1,13 +1,12 @@
-import {
-AXCalendarNavigationLookType 
-} from '@acorex/components/calendar';
+import { AXCalendarNavigationLookType } from '@acorex/components/calendar';
 import { Component } from '@angular/core';
-import { AXDateTimeBoxComponent } from "@acorex/components/datetime-box";
+import { AXDateTimeBoxComponent } from '@acorex/components/datetime-box';
 
 @Component({
   templateUrl: 'calendar-look.component.html',
-  imports: [ AXDateTimeBoxComponent],
+  imports: [AXDateTimeBoxComponent],
 })
 export class CalendarLookComponent {
-    look:AXCalendarNavigationLookType='classic'
+  ClassicLook: AXCalendarNavigationLookType = 'classic';
+  SelectLook: AXCalendarNavigationLookType = 'select';
 }
