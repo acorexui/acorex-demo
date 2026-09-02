@@ -63,5 +63,13 @@ export const routes: Routes = [
     path: 'min-max',
     loadComponent: () =>
       import('./min-max/min-max.component').then((e) => e.MinMaxComponent),
+  },{
+    path: 'template',
+    loadComponent: () =>
+      import('./calendar-tempelate/calendar-template.component').then((e) => e.templatecomponent),
+  },{
+    path: 'footer',
+    loadComponent: () =>
+      import('./calendar-footer/calendar-footer.component').then((e) => e.calendarfootercomponent),
   },
 ];
