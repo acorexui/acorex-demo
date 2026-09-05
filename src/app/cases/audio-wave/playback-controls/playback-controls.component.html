@@ -1,0 +1,56 @@
+<div class="w-full max-w-4xl mx-auto flex flex-col gap-6 p-4">
+  <ax-audio-wave
+    #audioWave
+    [config]="waveConfig()"
+    (onStatusChanged)="onStatusChanged($event)"
+  />
+
+  <div class="flex items-center justify-between text-sm opacity-75">
+    <span>{{ currentTimeLabel() }} / {{ durationLabel() }}</span>
+    <span>Status: {{ lastStatus() || 'idle' }}</span>
+  </div>
+
+  <div class="p-4 surface rounded-lg flex flex-col gap-4">
+    <ax-title level="4">Playback Controls</ax-title>
+
+    <div class="flex flex-wrap items-center gap-2">
+      <ax-button color="primary" (onClick)="togglePlay()">
+        <ax-icon>
+          <i
+            class="fa-solid"
+            [class.fa-play]="!isPlaying()"
+            [class.fa-pause]="isPlaying()"
+          ></i>
+        </ax-icon>
+      </ax-button>
+
+      <ax-button
+        color="default"
+        look="outline"
+        (onClick)="toggleMute()"
+        [text]="isMuted() ? 'Unmute' : 'Mute'"
+      />
+
+      <ax-button
+        color="default"
+        look="outline"
+        text="Reload"
+        (onClick)="reload()"
+      />
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <ax-title level="5">Playback Rate</ax-title>
+      <div class="flex flex-wrap gap-2">
+        @for (rate of [0.5, 1, 1.5, 2]; track rate) {
+          <ax-button
+            [color]="playbackRate() === rate ? 'primary' : 'default'"
+            [look]="playbackRate() === rate ? 'solid' : 'outline'"
+            [text]="rate + 'x'"
+            (onClick)="setRate(rate)"
+          />
+        }
+      </div>
+    </div>
+  </div>
+</div>
