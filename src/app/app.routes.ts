@@ -26,6 +26,11 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/avatar/avatar.routes').then((c) => c.routes),
+  },{
+    path: 'audio-wave',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/audio-wave/audio-wave.routes').then((c) => c.routes),
   },
   {
     path: 'badge',
