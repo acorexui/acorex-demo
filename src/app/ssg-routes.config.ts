@@ -1,5 +1,5 @@
 // Auto-generated SSG routes configuration
-// Generated on: 2026-08-23T04:49:40.298Z
+// Generated on: 2026-09-05T10:33:11.624Z
 
 export const ssgRoutes = [
   'accordion/accordion-mode',
@@ -99,12 +99,14 @@ export const ssgRoutes = [
   'calendar-range/usage',
   'calendar/depth',
   'calendar/disabled-dates',
+  'calendar/footer',
   'calendar/holiday',
   'calendar/look',
   'calendar/min-max',
   'calendar/multi-month',
   'calendar/navigation',
   'calendar/range',
+  'calendar/template',
   'calendar/type',
   'calendar/usage',
   'calendar/year-range',
@@ -475,6 +477,8 @@ export const ssgRoutes = [
   'tabs/event-handling',
   'tabs/location-variants',
   'tabs/look-variants',
+  'tabs/reorder',
+  'tabs/scrollable',
   'tabs/tab-with-content',
   'tabs/usage',
   'tag-box/auto-complete',

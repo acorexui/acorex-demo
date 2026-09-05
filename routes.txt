@@ -95,12 +95,14 @@
 /calendar-range/usage
 /calendar/depth
 /calendar/disabled-dates
+/calendar/footer
 /calendar/holiday
 /calendar/look
 /calendar/min-max
 /calendar/multi-month
 /calendar/navigation
 /calendar/range
+/calendar/template
 /calendar/type
 /calendar/usage
 /calendar/year-range
@@ -471,6 +473,8 @@
 /tabs/event-handling
 /tabs/location-variants
 /tabs/look-variants
+/tabs/reorder
+/tabs/scrollable
 /tabs/tab-with-content
 /tabs/usage
 /tag-box/auto-complete
