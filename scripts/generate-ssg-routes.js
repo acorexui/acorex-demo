@@ -171,7 +171,6 @@ function generateSSGRoutes() {
     "gauge-chart/",
     "hierarchy-chart/",
     "line-chart/",
-    "flow-chart/",
     "chart-legend",
     "grid-layout-builder/",
     "media-viewer/",

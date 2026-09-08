@@ -73,5 +73,10 @@ export const routes: Routes = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./outline/outline.routes').then((c) => c.routes),
+  },{
+    path: 'shimmer',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./shimmer/shimmer.routes').then((c) => c.routes),
   },
 ];

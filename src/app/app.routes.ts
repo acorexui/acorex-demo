@@ -252,12 +252,6 @@ export const appRoutes: Route[] = [
       ),
   },
   {
-    path: 'flow-chart',
-    component: MasterLayoutComponent,
-    loadChildren: () =>
-      import('./cases/flow-chart/flow-chart.routes').then((c) => c.routes),
-  },
-  {
     path: 'file-viewer',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -405,14 +399,6 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/qrcode/qrcode.routes').then((c) => c.routes),
-  },
-  {
-    path: 'query-builder',
-    component: MasterLayoutComponent,
-    loadChildren: () =>
-      import('./cases/query-builder/query-builder.routes').then(
-        (c) => c.routes,
-      ),
   },
   {
     path: 'result',

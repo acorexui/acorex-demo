@@ -16,9 +16,11 @@
         <ax-image-editor-view src="https://picsum.photos/600/600" />
 
         <ax-footer>
-          <ax-image-editor-tool-selector
-            [aspectRatio]="cropAspectRatios()"
-          />
+          <ax-image-editor-tools-bar>
+            <ax-image-editor-pen />
+            <ax-image-editor-crop [aspectRatio]="cropAspectRatios()" />
+            <ax-image-editor-rotate />
+          </ax-image-editor-tools-bar>
         </ax-footer>
 
         <ax-validation-rule

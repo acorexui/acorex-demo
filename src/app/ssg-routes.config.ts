@@ -375,7 +375,6 @@ export const ssgRoutes = [
   'qrcode/output-types',
   'qrcode/sizes',
   'qrcode/usage',
-  'query-builder/usage',
   'rail-navigation/locations',
   'rail-navigation/looks',
   'rail-navigation/service',

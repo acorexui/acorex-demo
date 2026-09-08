@@ -15,7 +15,6 @@ const csrPrefixes = [
   'bar-chart',
   'donut-chart',
   'gauge-chart',
-  'flow-chart',
   'hierarchy-chart',
   'line-chart',
   'chart-legend',

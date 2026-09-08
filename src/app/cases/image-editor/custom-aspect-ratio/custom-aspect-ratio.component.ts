@@ -5,7 +5,7 @@ import { AXToolBarModule } from '@acorex/components/toolbar';
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { AXImageEditorModule } from '@acorex/components/image-editor';
 @Component({
-  templateUrl: './usage.component.html',
+  templateUrl: './custom-aspect-ratio.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AXFormModule,
@@ -14,7 +14,7 @@ import { AXImageEditorModule } from '@acorex/components/image-editor';
     AXImageEditorModule
   ],
 })
-export class UsageComponent {
+export class customAspectraioComponent {
   protected readonly options = signal<{
     look: AXStyleLookType;
   }>({
@@ -22,10 +22,10 @@ export class UsageComponent {
   });
 
   protected readonly cropAspectRatios = signal([
-    '2:1',
-    '1:2',
-    '24:7',
-    '7:24',
+    '4:3',
+    '3:4',
+    '34:8',
+    '8:34:active',
   ]);
 
   protected saveHandler(e: AXValueChangedEvent<Blob[]>): void {
