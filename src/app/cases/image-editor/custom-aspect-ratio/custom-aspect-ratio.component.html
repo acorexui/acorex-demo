@@ -1,0 +1,32 @@
+<div class="flex w-full justify-center p-4">
+    <ax-form class="w-full max-w-3xl">
+      <ax-form-field>
+        <ax-image-editor-container
+          [look]="options().look"
+          (onValueChanged)="saveHandler($event)"
+        >
+          <ax-header>
+            <ax-toolbar>
+              <ax-prefix>
+                <ax-image-editor-history />
+              </ax-prefix>
+            </ax-toolbar>
+          </ax-header>
+  
+          <ax-image-editor-view src="https://picsum.photos/600/600" />
+  
+          <ax-footer>
+            <ax-image-editor-tool-selector
+              [aspectRatio]="cropAspectRatios()"
+            />
+          </ax-footer>
+  
+          <ax-validation-rule
+            rule="callback"
+            [options]="{ validate: validateFn }"
+          />
+        </ax-image-editor-container>
+      </ax-form-field>
+    </ax-form>
+  </div>
+  

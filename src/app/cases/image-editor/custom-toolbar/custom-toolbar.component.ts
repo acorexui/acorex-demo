@@ -1,20 +1,35 @@
 import { AXStyleLookType, AXValueChangedEvent } from '@acorex/cdk/common';
-import { AXFormModule } from '@acorex/components/form';
 import { AXDecoratorModule } from '@acorex/components/decorators';
+import { AXFormModule } from '@acorex/components/form';
+import {
+  AXImageEditorContainerComponent,
+  AXImageEditorCropComponent,
+  AXImageEditorHistoryComponent,
+  AXImageEditorPenComponent,
+  AXImageEditorRotateComponent,
+  AXImageEditorToolsBarComponent,
+  AXImageEditorViewComponent,
+} from '@acorex/components/image-editor';
 import { AXToolBarModule } from '@acorex/components/toolbar';
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
-import { AXImageEditorModule } from '@acorex/components/image-editor';
+
 @Component({
-  templateUrl: './usage.component.html',
+  templateUrl: './custom-toolbar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AXFormModule,
     AXToolBarModule,
     AXDecoratorModule,
-    AXImageEditorModule
+    AXImageEditorContainerComponent,
+    AXImageEditorViewComponent,
+    AXImageEditorHistoryComponent,
+    AXImageEditorToolsBarComponent,
+    AXImageEditorPenComponent,
+    AXImageEditorCropComponent,
+    AXImageEditorRotateComponent,
   ],
 })
-export class UsageComponent {
+export class customToolbarComponent {
   protected readonly options = signal<{
     look: AXStyleLookType;
   }>({
@@ -24,8 +39,7 @@ export class UsageComponent {
   protected readonly cropAspectRatios = signal([
     '2:1',
     '1:2',
-    '24:7',
-    '7:24',
+    '16:9:active',
   ]);
 
   protected saveHandler(e: AXValueChangedEvent<Blob[]>): void {
