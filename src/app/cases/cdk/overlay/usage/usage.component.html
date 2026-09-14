@@ -1,0 +1,20 @@
+<div class="flex flex-wrap gap-3">
+  <ax-button
+    color="primary"
+    text="Open TemplateRef overlay"
+    (onClick)="openTemplate()"
+  ></ax-button>
+  <ax-button text="Open component overlay" (onClick)="openComponent()"></ax-button>
+</div>
+
+<ng-template #templatePanel>
+  <div class="rounded-lg border border-on-surface bg-surface p-4 shadow-lg">
+    <ax-heading>TemplateRef overlay</ax-heading>
+    <ax-text class="mt-2 block">
+      Created with AXOverlayService.create() and an ng-template.
+    </ax-text>
+    <div class="mt-4 flex justify-end">
+      <ax-button text="Close" (onClick)="close()"></ax-button>
+    </div>
+  </div>
+</ng-template>

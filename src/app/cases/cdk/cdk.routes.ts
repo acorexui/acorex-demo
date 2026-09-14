@@ -78,5 +78,16 @@ export const routes: Routes = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./shimmer/shimmer.routes').then((c) => c.routes),
+  },{
+    path: 'gesture',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./gesture/gesture.routes').then((c) => c.routes),
+  },
+  {
+    path: 'overlay',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./overlay/overlay.routes').then((c) => c.routes),
   },
 ];

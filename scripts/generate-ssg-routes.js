@@ -175,6 +175,7 @@ function generateSSGRoutes() {
     "grid-layout-builder/",
     "media-viewer/",
     "lookup/",
+    "cdk/overlay/",
   ];
 
   // Remove duplicates, denylist, and sort

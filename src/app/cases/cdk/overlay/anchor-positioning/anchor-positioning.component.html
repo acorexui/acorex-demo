@@ -1,0 +1,57 @@
+<div class="flex flex-col items-center gap-6">
+  <div #anchor class="inline-flex">
+    <ax-button
+      color="primary"
+      text="Anchor element"
+      (onClick)="open(activePlacement())"
+    ></ax-button>
+  </div>
+
+  <div class="flex flex-wrap items-center justify-center gap-3">
+    <label class="flex items-center gap-2 text-sm">
+      <input
+        type="checkbox"
+        [checked]="autoFlip()"
+        (change)="autoFlip.set($any($event.target).checked)"
+      />
+      autoFlip
+    </label>
+    <label class="flex items-center gap-2 text-sm">
+      offsetX
+      <input
+        class="w-16 rounded border border-on-surface px-2 py-1"
+        type="number"
+        [value]="offsetX()"
+        (input)="offsetX.set(+$any($event.target).value)"
+      />
+    </label>
+    <label class="flex items-center gap-2 text-sm">
+      offsetY
+      <input
+        class="w-16 rounded border border-on-surface px-2 py-1"
+        type="number"
+        [value]="offsetY()"
+        (input)="offsetY.set(+$any($event.target).value)"
+      />
+    </label>
+  </div>
+
+  <div class="flex max-w-xl flex-wrap justify-center gap-2">
+    @for (placement of placements; track placement) {
+      <ax-button
+        [text]="placement"
+        [color]="activePlacement() === placement ? 'primary' : 'default'"
+        (onClick)="open(placement)"
+      ></ax-button>
+    }
+  </div>
+</div>
+
+<ng-template #panel>
+  <div class="rounded-lg border border-on-surface bg-surface p-3 shadow-lg">
+    <ax-heading>Placement: {{ activePlacement() }}</ax-heading>
+    <div class="mt-2 flex justify-end">
+      <ax-button text="Close" (onClick)="close()"></ax-button>
+    </div>
+  </div>
+</ng-template>

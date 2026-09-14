@@ -7,11 +7,13 @@ import {
   AXRailLocation,
   AXRailNavigationComponent,
   AXRailNavigationItemComponent,
+  AXRailNavigationService,
 } from '@acorex/components/rail-navigation';
 import { Component, signal } from '@angular/core';
 
 @Component({
   templateUrl: './locations.component.html',
+  providers: [AXRailNavigationService],
   imports: [
     AXButtonComponent,
     AXDecoratorIconComponent,

@@ -5,6 +5,9 @@ import {
 } from '@acorex/components/loading-dialog';
 import { Component, inject } from '@angular/core';
 
+const FILE_COUNT = 5;
+const PROGRESS_STEP = 100 / FILE_COUNT;
+
 @Component({
   templateUrl: './multiple-buttons.component.html',
   imports: [AXLoadingDialogModule, AXButtonComponent],
@@ -12,17 +15,20 @@ import { Component, inject } from '@angular/core';
 export class MultipleButtonsComponent {
   private loadingDialog = inject(AXLoadingDialogService);
 
-  handleOpenDialog() {
-    let isPaused = false;
-    let currentProgress = 0;
-    let progressInterval: any;
+  handleOpenDialog(): void {
+    let paused = false;
+    let progress = 0;
+    let progressInterval: ReturnType<typeof setInterval>;
+
+    const fileIndex = (value: number) =>
+      Math.min(Math.floor(value / PROGRESS_STEP) + 1, FILE_COUNT);
 
     const d = this.loadingDialog.show({
       title: 'Uploading files...',
       mode: 'determinate',
       progressColor: 'primary',
       progressValue: 0,
-      status: '0/5 files',
+      status: `0/${FILE_COUNT} files`,
       text: 'Preparing upload...',
       buttons: [
         {
@@ -30,17 +36,9 @@ export class MultipleButtonsComponent {
           color: 'warning',
           look: 'outline',
           onClick: () => {
-            if (isPaused) {
-              // Resume
-              isPaused = false;
-              d.setProgressText('Resuming upload...');
-              d.setProgressStatus('Resuming...');
-            } else {
-              // Pause
-              isPaused = true;
-              d.setProgressText('Upload paused');
-              d.setProgressStatus('Paused');
-            }
+            paused = !paused;
+            d.setProgressText(paused ? 'Upload paused' : 'Resuming upload...');
+            d.setProgressStatus(paused ? 'Paused' : 'Resuming...');
           },
         },
         {
@@ -51,59 +49,51 @@ export class MultipleButtonsComponent {
             d.setProgressText('Cancelling upload...');
             d.setProgressStatus('Cancelled');
             d.setProgressColor('danger');
-            setTimeout(() => {
-              d.close();
-            }, 1000);
+            setTimeout(() => d.close(), 1000);
           },
         },
         {
           text: 'Continue',
           color: 'success',
           onClick: () => {
-            // Skip to next file
-            currentProgress = Math.min(currentProgress + 20, 100);
-            d.setProgressValue(currentProgress);
-            d.setProgressText(
-              `Skipped to file ${Math.floor(currentProgress / 20) + 1}/5`,
-            );
-            d.setProgressStatus(
-              `${Math.floor(currentProgress / 20) + 1}/5 files`,
-            );
-
-            if (currentProgress >= 100) {
-              d.setProgressText('Upload complete!');
-              d.setProgressStatus('5/5 files');
-              d.setProgressColor('success');
+            progress = Math.min(progress + PROGRESS_STEP, 100);
+            d.setProgressValue(progress);
+            const index = fileIndex(progress);
+            d.setProgressText(`Skipped to file ${index}/${FILE_COUNT}`);
+            d.setProgressStatus(`${index}/${FILE_COUNT} files`);
+            if (progress >= 100) {
+              finishUpload();
             }
           },
         },
       ],
     });
 
-    // Simulate file upload progress with pause/resume functionality
-    const updateProgress = () => {
-      if (!isPaused && currentProgress < 100) {
-        currentProgress += 2;
-        d.setProgressValue(currentProgress);
-
-        const fileNumber = Math.floor(currentProgress / 20) + 1;
-        d.setProgressText(`Uploading file ${fileNumber}/5...`);
-        d.setProgressStatus(`${fileNumber}/5 files`);
-
-        if (currentProgress >= 100) {
-          d.setProgressText('Upload complete!');
-          d.setProgressStatus('5/5 files');
-          d.setProgressColor('success');
-          clearInterval(progressInterval);
-        }
-      }
+    const finishUpload = () => {
+      d.setProgressText('Upload complete!');
+      d.setProgressStatus(`${FILE_COUNT}/${FILE_COUNT} files`);
+      d.setProgressColor('success');
+      clearInterval(progressInterval);
     };
 
-    progressInterval = setInterval(updateProgress, 100);
+    progressInterval = setInterval(() => {
+      if (paused || progress >= 100) {
+        return;
+      }
 
-    // Auto-close after completion
+      progress += 2;
+      d.setProgressValue(progress);
+      const index = fileIndex(progress);
+      d.setProgressText(`Uploading file ${index}/${FILE_COUNT}...`);
+      d.setProgressStatus(`${index}/${FILE_COUNT} files`);
+
+      if (progress >= 100) {
+        finishUpload();
+      }
+    }, 100);
+
     setTimeout(() => {
-      if (currentProgress >= 100) {
+      if (progress >= 100) {
         d.close();
       }
     }, 7000);

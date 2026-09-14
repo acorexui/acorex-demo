@@ -13,6 +13,7 @@ import { Component, inject, signal } from '@angular/core';
 
 @Component({
   templateUrl: './service.component.html',
+  providers: [AXRailNavigationService],
   imports: [
     AXButtonComponent,
     AXDecoratorIconComponent,

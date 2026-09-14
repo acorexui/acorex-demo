@@ -6,6 +6,7 @@ import {
   AXRailLook,
   AXRailNavigationComponent,
   AXRailNavigationItemComponent,
+  AXRailNavigationService,
 } from '@acorex/components/rail-navigation';
 import { AXSelectBoxComponent } from '@acorex/components/select-box';
 import { Component, computed, signal } from '@angular/core';
@@ -13,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   templateUrl: './looks.component.html',
+  providers: [AXRailNavigationService],
   imports: [
     FormsModule,
     AXSelectBoxComponent,
