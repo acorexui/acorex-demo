@@ -5,11 +5,14 @@ import {
 import {
   AXRailNavigationComponent,
   AXRailNavigationItemComponent,
+  AXRailNavigationService,
 } from '@acorex/components/rail-navigation';
+
 import { Component } from '@angular/core';
 
 @Component({
   templateUrl: './usage.component.html',
+  providers: [AXRailNavigationService],
   imports: [
     AXDecoratorIconComponent,
     AXRailNavigationComponent,

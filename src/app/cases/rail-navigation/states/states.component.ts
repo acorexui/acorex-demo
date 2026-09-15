@@ -6,12 +6,14 @@ import {
 import {
   AXRailNavigationComponent,
   AXRailNavigationItemComponent,
+  AXRailNavigationService,
 } from '@acorex/components/rail-navigation';
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   templateUrl: './states.component.html',
+  providers: [AXRailNavigationService],
   imports: [
     FormsModule,
     AXButtonComponent,

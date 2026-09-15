@@ -175,6 +175,7 @@ function generateSSGRoutes() {
     "grid-layout-builder/",
     "media-viewer/",
     "lookup/",
+    "cdk/overlay/",
     "combo-box/",
   ];
 

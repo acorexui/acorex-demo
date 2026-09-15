@@ -1,0 +1,97 @@
+<div class="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-6">
+  <div class="grid gap-6 md:grid-cols-2">
+    <div
+      #darkOrigin
+      class="ax-dark ax-appearance-depth lightest-surface flex min-h-44 flex-col gap-3 rounded-xl bg-darker p-5"
+    >
+      <ax-text class="text-sm">ax-dark + ax-appearance-depth</ax-text>
+      <div class="flex flex-wrap gap-2">
+        <ax-button
+          text="full"
+          color="primary"
+          (onClick)="open(darkOrigin, 'full', 'Dark + depth')"
+        ></ax-button>
+        <ax-button
+          text="theme"
+          (onClick)="open(darkOrigin, 'theme', 'Dark + depth')"
+        ></ax-button>
+      </div>
+    </div>
+
+    <div
+      class="rounded-2xl bg-[linear-gradient(135deg,rgb(59_130_246/0.2),rgb(168_85_247/0.18))] p-1.5"
+    >
+      <div
+        #lightOrigin
+        class="ax-light ax-appearance-translucent lightest-surface flex min-h-44 flex-col gap-3 rounded-xl bg-lighter p-5 backdrop-[var(--ax-sys-backdrop-filter-surface,none)]"
+      >
+        <ax-text class="text-sm">ax-light + ax-appearance-translucent</ax-text>
+        <div class="flex flex-wrap gap-2">
+          <ax-button
+            text="full"
+            color="primary"
+            (onClick)="open(lightOrigin, 'full', 'Light + translucent')"
+          ></ax-button>
+          <ax-button
+            text="theme"
+            (onClick)="open(lightOrigin, 'theme', 'Light + translucent')"
+          ></ax-button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="ax-dark ax-appearance-depth flex flex-col gap-4 rounded-xl bg-darker p-5"
+  >
+    <ax-text class="text-sm">Nested: dark depth container</ax-text>
+    <div
+      #nestedOrigin
+      class="ax-light lightest-surface flex flex-col gap-3 rounded-xl bg-lighter p-5"
+    >
+      <ax-text class="text-sm">Inner ax-light (contextElement)</ax-text>
+      <ax-text class="text-xs">
+        <code class="text-xs">full</code> adds depth from the outer dark box;
+        <code class="text-xs">theme</code> keeps only
+        <code class="text-xs">ax-light</code> on the pane.
+      </ax-text>
+      <div class="flex flex-wrap gap-2">
+        <ax-button
+          text="full"
+          color="primary"
+          look="outline"
+          (onClick)="open(nestedOrigin, 'full', 'Nested light origin')"
+        ></ax-button>
+        <ax-button
+          text="theme"
+          look="outline"
+          (onClick)="open(nestedOrigin, 'theme', 'Nested light origin')"
+        ></ax-button>
+      </div>
+    </div>
+  </div>
+
+  @if (activeLabel()) {
+    <ax-text class="text-sm">
+      {{ activeLabel() }} · scope <strong>{{ activeScope() }}</strong>
+      @if (paneClasses().length) {
+        · pane: <code class="text-xs">{{ paneClasses().join(" ") }}</code>
+      }
+    </ax-text>
+  }
+</div>
+
+<ng-template #panel>
+  <div
+    class="lightest-surface flex flex-col gap-3 rounded-xl border border-on-surface p-4 shadow-lg bg-[rgba(var(--ax-sys-color-lightest-surface),var(--ax-sys-surface-fill-opacity,1))] backdrop-[var(--ax-sys-backdrop-filter-surface,none)]"
+  >
+    <ax-heading>Visual context</ax-heading>
+    <ax-text class="text-sm">
+      scope: <strong>{{ activeScope() }}</strong>
+    </ax-text>
+    <ax-text class="text-xs">{{ scopeHint[activeScope()] }}</ax-text>
+    <div class="flex justify-end">
+      <ax-button text="Close" (onClick)="close()"></ax-button>
+    </div>
+  </div>
+</ng-template>

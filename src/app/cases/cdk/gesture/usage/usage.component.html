@@ -1,0 +1,14 @@
+<div class="surface flex flex-col items-start gap-3 rounded p-4 w-100">
+    <div
+      axGesture
+      direction="all"
+      class="primary-surface flex h-48 w-full max-w-md cursor-pointer items-center justify-center rounded select-none"
+      (tap)="onGesture($event)"
+      (doubletap)="onGesture($event)"
+      (press)="onGesture($event)"
+      (pan)="onGesture($event)"
+    >
+      Tap, press, or pan
+    </div>
+    <span class="text-sm opacity-70">{{ lastEvent() }}</span>
+  </div>

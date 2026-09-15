@@ -1,9 +1,10 @@
-<div class="flex w-full justify-center p-4">
+
     <ax-form class="w-full max-w-3xl">
-      <ax-form-field>
+      <ax-form-field class="w-100">
         <ax-image-editor-container
           [look]="options().look"
           (onValueChanged)="saveHandler($event)"
+          class="w-full"
         >
           <ax-header>
             <ax-toolbar>
@@ -28,5 +29,4 @@
         </ax-image-editor-container>
       </ax-form-field>
     </ax-form>
-  </div>
   

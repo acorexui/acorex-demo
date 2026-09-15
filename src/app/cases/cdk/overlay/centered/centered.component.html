@@ -1,0 +1,30 @@
+<div class="flex flex-wrap gap-3">
+  <ax-button text="Default backdrop" (onClick)="open('default')"></ax-button>
+  <ax-button
+    text="Transparent backdrop"
+    (onClick)="open('transparent')"
+  ></ax-button>
+  <ax-button
+    text="Custom backdrop class"
+    (onClick)="open('custom')"
+  ></ax-button>
+</div>
+
+@if (activeMode()) {
+  <ax-text class="mt-3 block text-sm">
+    Active mode: {{ activeMode() }}
+  </ax-text>
+}
+
+<ng-template #panel>
+  <div class="rounded-lg border border-on-surface bg-surface p-4 shadow-lg">
+    <ax-heading>Centered overlay</ax-heading>
+    <ax-text class="mt-2 block">
+      Modal-style overlay with backdrop, ax-popup-overlay panel class, and
+      configurable width.
+    </ax-text>
+    <div class="mt-3 flex justify-end">
+      <ax-button text="Close" (onClick)="close()"></ax-button>
+    </div>
+  </div>
+</ng-template>
