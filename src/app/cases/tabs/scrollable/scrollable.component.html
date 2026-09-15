@@ -1,0 +1,22 @@
+<div class="flex w-full flex-col gap-8">
+  <div>
+    <ax-label>Horizontal (swipe or pan)</ax-label>
+    <div class="mt-2 max-w-xs">
+      <ax-tabs look="with-line-color" location="bottom">
+        @for (tab of scrollableTabs(); track tab) {
+          <ax-tab-item [text]="tab"></ax-tab-item>
+        }
+      </ax-tabs>
+    </div>
+  </div>
+  <div>
+    <ax-label>Vertical (swipe or pan)</ax-label>
+    <div class="mt-2 h-48 max-w-xs">
+      <ax-tabs look="with-line-color" location="start">
+        @for (tab of scrollableTabs(); track tab) {
+          <ax-tab-item [text]="tab"></ax-tab-item>
+        }
+      </ax-tabs>
+    </div>
+  </div>
+</div>

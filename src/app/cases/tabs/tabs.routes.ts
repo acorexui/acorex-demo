@@ -56,4 +56,16 @@ export const routes: Routes = [
         (e) => e.EventHandlingComponent
       ),
   },
+  {
+    path: 'reorder',
+    loadComponent: () =>
+      import('./reorder/reorder.component').then((e) => e.ReorderComponent),
+  },
+  {
+    path: 'scrollable',
+    loadComponent: () =>
+      import('./scrollable/scrollable.component').then(
+        (e) => e.ScrollableComponent
+      ),
+  },
 ];
