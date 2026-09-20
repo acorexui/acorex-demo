@@ -22,9 +22,8 @@
   <ax-step-wizard
     #wizard
     [connector]="true"
-    class="w-[45rem]"
+    [class]="'w-[45rem] ' + selectedSize()"
     [scrollToStep]="false"
-    [size]="selectedSize()"
     [look]="'circular-icon'"
   >
     <ax-step-wizard-item

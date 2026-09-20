@@ -1,0 +1,54 @@
+<div class="flex flex-col gap-4">
+
+  <div class="flex flex-col gap-4 lg:flex-row lg:items-start">
+    <div
+      class="w-60 shrink-0 rounded-md bg-primary-surface p-2 text-primary-on-surface"
+    >
+      <ax-side-menu [look]="$any(selectedLook())">
+        <ax-side-menu-item [active]="true" color="primary" >
+          <span>Dashboard</span>
+          <ax-prefix>
+            <ax-icon>
+              <i class="fa-solid fa-gauge-simple"></i>
+            </ax-icon>
+          </ax-prefix>
+        </ax-side-menu-item>
+        <ax-side-menu-item [isCollapsed]="false">
+          <span>Users</span>
+          <ax-prefix>
+            <ax-icon>
+              <i class="fa-solid fa-user-group"></i>
+            </ax-icon>
+          </ax-prefix>
+          <ax-side-menu-item text="List of users"></ax-side-menu-item>
+          <ax-side-menu-item
+            text="Verified users"
+            [active]="true"
+          ></ax-side-menu-item>
+          <ax-side-menu-item text="Unverified users"></ax-side-menu-item>
+        </ax-side-menu-item>
+        <ax-side-menu-item>
+          <span>Settings</span>
+          <ax-prefix>
+            <ax-icon>
+              <i class="fa-solid fa-gear"></i>
+            </ax-icon>
+          </ax-prefix>
+        </ax-side-menu-item>
+      </ax-side-menu>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <span class="text-sm font-medium">Look</span>
+      <ax-button-group [selection]="selection">
+        @for (look of looks; track look.value) {
+          <ax-button-group-item
+            [text]="look.text"
+            [selected]="selectedLook() === look.value"
+            (onClick)="selectedLook.set(look.value)"
+          ></ax-button-group-item>
+        }
+      </ax-button-group>
+    </div>
+  </div>
+</div>

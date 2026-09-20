@@ -1,0 +1,48 @@
+<div class="flex flex-col gap-4">
+  <ax-text class="text-sm text-on-surface">
+    The <code>default</code> look shows a subtle vertical rail for nested
+    children in <code>full</code> mode.
+  </ax-text>
+
+  <div
+    class="w-60 rounded-md bg-primary-surface p-2 text-primary-on-surface"
+  >
+    <ax-side-menu look="default">
+      <ax-side-menu-item>
+        <span>Dashboard</span>
+        <ax-prefix>
+          <ax-icon>
+            <i class="fa-solid fa-gauge-simple"></i>
+          </ax-icon>
+        </ax-prefix>
+      </ax-side-menu-item>
+      <ax-side-menu-item [isCollapsed]="false">
+        <span>Users</span>
+        <ax-prefix>
+          <ax-icon>
+            <i class="fa-solid fa-user-group"></i>
+          </ax-icon>
+        </ax-prefix>
+        <ax-side-menu-item>
+          <span>List of users</span>
+        </ax-side-menu-item>
+        <ax-side-menu-item [active]="true">
+          <span>Verified users</span>
+        </ax-side-menu-item>
+        <ax-side-menu-item>
+          <span>Unverified users</span>
+        </ax-side-menu-item>
+      </ax-side-menu-item>
+      <ax-side-menu-item [isCollapsed]="false">
+        <span>Settings</span>
+        <ax-prefix>
+          <ax-icon>
+            <i class="fa-solid fa-gear"></i>
+          </ax-icon>
+        </ax-prefix>
+        <ax-side-menu-item text="Profile"></ax-side-menu-item>
+        <ax-side-menu-item text="Notifications"></ax-side-menu-item>
+      </ax-side-menu-item>
+    </ax-side-menu>
+  </div>
+</div>

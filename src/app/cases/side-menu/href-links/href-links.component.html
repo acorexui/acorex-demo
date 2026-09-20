@@ -1,0 +1,37 @@
+<div class="flex flex-col gap-4">
+  <ax-text class="text-sm text-on-surface">
+    Use <code>href</code> and <code>target</code> for external navigation.
+    Prefer <code>routerLink</code> for in-app routes.
+  </ax-text>
+
+  <div
+    class="w-60 rounded-md bg-primary-surface p-2 text-primary-on-surface"
+  >
+    <ax-side-menu>
+      <ax-side-menu-item routerLink="/side-menu/usage" [active]="true">
+        <span>Usage (in-app)</span>
+        <ax-prefix>
+          <ax-icon>
+            <i class="fa-solid fa-house"></i>
+          </ax-icon>
+        </ax-prefix>
+      </ax-side-menu-item>
+      <ax-side-menu-item routerLink="/side-menu/dividers">
+        <span>Dividers (in-app)</span>
+        <ax-prefix>
+          <ax-icon>
+            <i class="fa-solid fa-minus"></i>
+          </ax-icon>
+        </ax-prefix>
+      </ax-side-menu-item>
+      <ax-side-menu-item href="https://angular.dev/" target="_blank">
+        <span>Angular docs</span>
+        <ax-prefix>
+          <ax-icon>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </ax-icon>
+        </ax-prefix>
+      </ax-side-menu-item>
+    </ax-side-menu>
+  </div>
+</div>

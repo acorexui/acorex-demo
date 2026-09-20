@@ -1,7 +1,9 @@
-<ax-tag-box
+<div class="min-w-[30rem]">
+  <ax-tag-box
   [addOnComma]="false"
   [(ngModel)]="tagBoxValue"
   [allowDuplicateValues]="true"
   placeholder="Enter your tags..."
   (onValueChanged)="handleValueChange($event)"
 ></ax-tag-box>
+</div>

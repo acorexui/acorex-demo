@@ -1,0 +1,50 @@
+<div class="flex flex-col gap-4">
+  <ax-text class="text-sm text-on-surface">
+    Set <code>[toggleOnClick]="false"</code> when expansion should be controlled
+    externally.
+  </ax-text>
+
+  <ax-button
+    [text]="usersExpanded() ? 'Collapse Users' : 'Expand Users'"
+    (click)="toggleUsers()"
+  ></ax-button>
+
+  <div
+    class="w-60 rounded-md bg-primary-surface p-2 text-primary-on-surface"
+  >
+    <ax-side-menu>
+      <ax-side-menu-item [active]="true">
+        <span>Dashboard</span>
+        <ax-prefix>
+          <ax-icon>
+            <i class="fa-solid fa-gauge-simple"></i>
+          </ax-icon>
+        </ax-prefix>
+      </ax-side-menu-item>
+      <ax-side-menu-item
+        [toggleOnClick]="false"
+        [isCollapsed]="!usersExpanded()"
+      >
+        <span>Users</span>
+        <ax-prefix>
+          <ax-icon>
+            <i class="fa-solid fa-user-group"></i>
+          </ax-icon>
+        </ax-prefix>
+        <ax-side-menu-item text="List of users"></ax-side-menu-item>
+        <ax-side-menu-item text="Verified users"></ax-side-menu-item>
+        <ax-side-menu-item text="Unverified users"></ax-side-menu-item>
+      </ax-side-menu-item>
+      <ax-side-menu-item>
+        <span>Reports (click toggles)</span>
+        <ax-prefix>
+          <ax-icon>
+            <i class="fa-solid fa-chart-line"></i>
+          </ax-icon>
+        </ax-prefix>
+        <ax-side-menu-item text="Monthly"></ax-side-menu-item>
+        <ax-side-menu-item text="Yearly"></ax-side-menu-item>
+      </ax-side-menu-item>
+    </ax-side-menu>
+  </div>
+</div>

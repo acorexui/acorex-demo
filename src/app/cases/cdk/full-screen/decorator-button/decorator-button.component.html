@@ -1,0 +1,45 @@
+<div class="mx-auto flex max-w-3xl flex-col gap-8">
+  <ax-text class="text-sm text-on-surface">
+    Use <code>ax-fullscreen-button</code> with <code>[element]</code> and
+    optional <code>mode</code> for a ready-made toggle.
+  </ax-text>
+
+  <section class="flex flex-col gap-3">
+    <ax-subtitle>Overlay (default)</ax-subtitle>
+    <div
+      #overlayPanel
+      class="relative min-h-40 rounded-lg border border-on-surface bg-surface p-4 pt-10"
+    >
+      @if (overlayTarget(); as target) {
+        <ax-fullscreen-button
+          #overlayBtn
+          class="absolute right-2 top-2"
+          [element]="target"
+          [isActive]="overlayActive()"
+        ></ax-fullscreen-button>
+      }
+      <ax-text>Panel with overlay fullscreen button.</ax-text>
+    </div>
+  </section>
+
+  <section class="flex flex-col gap-3">
+    <ax-subtitle>Browser mode</ax-subtitle>
+    <div
+      #browserPanel
+      class="relative min-h-40 rounded-lg border border-on-surface bg-surface p-4 pt-10"
+    >
+      @if (browserTarget(); as target) {
+        <ax-fullscreen-button
+          #browserBtn
+          class="absolute right-2 top-2"
+          [element]="target"
+          mode="browser"
+          [isActive]="browserActive()"
+        ></ax-fullscreen-button>
+      }
+      <ax-text
+        >Panel with browser fullscreen button. Press Esc to exit.</ax-text
+      >
+    </div>
+  </section>
+</div>

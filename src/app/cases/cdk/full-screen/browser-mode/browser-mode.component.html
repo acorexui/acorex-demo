@@ -1,0 +1,32 @@
+<div
+  #browserPanel
+  axFullscreen
+  mode="browser"
+  #browserFs="axFullscreen"
+  class="flex min-h-48 flex-col justify-between gap-4 rounded p-6 surface"
+  (fullscreenChange)="browserActive.set($event)"
+>
+  <div class="flex flex-col gap-3">
+    <ax-text class="text-sm opacity-80">
+      This panel uses <code>mode="browser"</code>. On supported browsers the
+      element enters true fullscreen.
+    </ax-text>
+    <div class="flex items-center gap-2">
+      <ax-text class="text-sm">Status:</ax-text>
+      <ax-badge
+        look="twotone"
+        [color]="browserActive() ? 'success' : 'secondary'"
+        [text]="browserActive() ? 'Active' : 'Inactive'"
+      ></ax-badge>
+    </div>
+  </div>
+  <div class="flex items-center gap-3">
+    <ax-button
+      color="primary"
+      [text]="
+        browserActive() ? 'Exit browser fullscreen' : 'Enter browser fullscreen'
+      "
+      (click)="browserFs.toggle()"
+    ></ax-button>
+  </div>
+</div>

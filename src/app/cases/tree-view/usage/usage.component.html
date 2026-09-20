@@ -1,0 +1,14 @@
+<div class="flex h-full flex-col items-center justify-center gap-4">
+  <ax-tree-view
+    selectMode="multiple"
+    [datasource]="treeViewData()"
+    (onNodeClick)="handleNodeClick($event)"
+    (onSelectionChange)="handleSelectionChange($event)"
+  ></ax-tree-view>
+
+  @if (selectedIds().length) {
+    <p class="text-sm text-on-surface">
+      Selected: {{ selectedIds().join(', ') }}
+    </p>
+  }
+</div>
