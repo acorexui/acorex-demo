@@ -1,0 +1,23 @@
+<div class="flex items-center gap-3">
+  <ax-label>Lock aspect ratio</ax-label>
+  <ax-switch
+    [value]="lockAspectRatio()"
+    (valueChange)="lockAspectRatio.set($event)"
+  ></ax-switch>
+</div>
+<div class="h-90 w-150 overflow-hidden rounded border border-on-surface p-4">
+  <div
+    [axResizable]="true"
+    [handles]="cornerHandles"
+    [lockAspectRatio]="lockAspectRatio()"
+    [width]="220"
+    [height]="160"
+    [defaultWidth]="220"
+    [defaultHeight]="160"
+    [minWidth]="120"
+    [minHeight]="80"
+    class="border border-on-surface bg-surface p-4"
+  >
+    <ax-text>Drag the bottom-end corner.</ax-text>
+  </div>
+</div>
