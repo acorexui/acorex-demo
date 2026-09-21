@@ -1,0 +1,18 @@
+<div class="flex flex-col gap-4">
+  <ax-text class="text-sm text-on-surface">
+    Show the minimize control via <code>buttons.minimize</code> (position
+    <code>bottom-right</code> or <code>bottom-left</code>).
+  </ax-text>
+
+  <div class="flex flex-wrap gap-2">
+    <ax-button
+      color="primary"
+      text="Minimize bottom-right"
+      (onClick)="openMinimize('bottom-right')"
+    ></ax-button>
+    <ax-button
+      text="Minimize bottom-left"
+      (onClick)="openMinimize('bottom-left')"
+    ></ax-button>
+  </div>
+</div>
