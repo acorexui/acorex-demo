@@ -544,6 +544,11 @@ export const appRoutes: Route[] = [
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/toolbar/toolbar.routes').then((c) => c.routes),
+  },{
+    path: 'tree-view',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/tree-view/tree-view.routes').then((c) => c.routes),
   },
   {
     path: 'uploader',
@@ -632,6 +637,12 @@ export const appRoutes: Route[] = [
     path: 'core',
     loadChildren: () =>
       import('./cases/core/core.routes').then((c) => c.routes),
+  },
+  {
+    path: 'side-bar',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/side-bar/side-bar.routes').then((c) => c.routes),
   },
   {
     path: '**',

@@ -1,0 +1,52 @@
+<div class="flex flex-col gap-4">
+  <div class="flex flex-wrap gap-2">
+    <ax-button
+      text="Toggle Users"
+      (click)="usersCollapsed.set(!usersCollapsed())"
+    ></ax-button>
+    <ax-button
+      text="Toggle Comments"
+      (click)="commentsCollapsed.set(!commentsCollapsed())"
+    ></ax-button>
+  </div>
+
+  <div class="w-60 rounded-md bg-primary-surface p-2 text-primary-on-surface">
+    <ax-side-menu>
+      <ax-side-menu-item [active]="true">
+        <span>Dashboard</span>
+        <ax-prefix>
+          <ax-icon>
+            <i class="fa-solid fa-gauge-simple"></i>
+          </ax-icon>
+        </ax-prefix>
+      </ax-side-menu-item>
+      <ax-side-menu-item [isCollapsed]="usersCollapsed()">
+        <span>Users</span>
+        <ax-prefix>
+          <ax-icon>
+            <i class="fa-solid fa-user-group"></i>
+          </ax-icon>
+        </ax-prefix>
+        <ax-side-menu-item>
+          <span>List of users</span>
+        </ax-side-menu-item>
+        <ax-side-menu-item>
+          <span>Verified users</span>
+        </ax-side-menu-item>
+        <ax-side-menu-item>
+          <span>Unverified users</span>
+        </ax-side-menu-item>
+      </ax-side-menu-item>
+      <ax-side-menu-item [isCollapsed]="commentsCollapsed()">
+        <span>Comments</span>
+        <ax-prefix>
+          <ax-icon>
+            <i class="fa-solid fa-comments"></i>
+          </ax-icon>
+        </ax-prefix>
+        <ax-side-menu-item text="All comments"></ax-side-menu-item>
+        <ax-side-menu-item text="Awaiting review"></ax-side-menu-item>
+      </ax-side-menu-item>
+    </ax-side-menu>
+  </div>
+</div>

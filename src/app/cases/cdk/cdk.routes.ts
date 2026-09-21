@@ -33,6 +33,12 @@ export const routes: Routes = [
       import('./focus-trap/focus-trap.routes').then((c) => c.routes),
   },
   {
+    path: 'full-screen',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./full-screen/full-screen.routes').then((c) => c.routes),
+  },
+  {
     path: 'input-mask',
     component: MasterLayoutComponent,
     loadChildren: () =>

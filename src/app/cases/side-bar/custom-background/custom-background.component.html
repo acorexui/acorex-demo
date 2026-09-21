@@ -1,0 +1,53 @@
+<div class="flex flex-col gap-4">
+  <div
+    class="demo-sidebar-branded flex h-[min(28rem,75vh)] overflow-hidden rounded-md border border-lightest"
+  >
+    <ax-sidebar
+      class="shrink-0 bg-primary"
+      [(mode)]="mode"
+      [navigationId]="navigationId"
+      ariaLabel="Branded sidebar"
+    >
+      <ax-header axSidebarHeader class="w-full justify-center">
+        @if (mode() === "full") {
+          <span class="text-sm font-semibold">Brand</span>
+        } @else {
+          <ax-icon>
+            <i class="fa-solid fa-bolt"></i>
+          </ax-icon>
+        }
+      </ax-header>
+
+      <ax-side-menu axSidebarNavigation [mode]="mode()">
+        <ax-side-menu-item [active]="true">
+          <span>Overview</span>
+          <ax-prefix>
+            <ax-icon>
+              <i class="fa-solid fa-gauge-simple"></i>
+            </ax-icon>
+          </ax-prefix>
+        </ax-side-menu-item>
+        <ax-side-menu-item>
+          <span>Analytics</span>
+          <ax-prefix>
+            <ax-icon>
+              <i class="fa-solid fa-chart-pie"></i>
+            </ax-icon>
+          </ax-prefix>
+        </ax-side-menu-item>
+      </ax-side-menu>
+
+      <ax-sidebar-collapse
+        axSidebarCollapse
+        [(mode)]="mode"
+        [ariaControls]="navigationId"
+      ></ax-sidebar-collapse>
+    </ax-sidebar>
+
+    <main
+      class="flex flex-1 items-center justify-center bg-lighter-surface p-6 text-sm text-on-surface opacity-80 min-w-120"
+    >
+      Content area
+    </main>
+  </div>
+</div>

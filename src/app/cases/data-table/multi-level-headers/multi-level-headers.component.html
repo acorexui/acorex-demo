@@ -1,0 +1,67 @@
+<div class="flex max-w-4xl flex-col gap-4">
+  <ax-text class="text-sm text-on-surface">
+    Nest an <code>ax-text-column</code> (or other column component) inside
+    another column to create grouped header bands. Only leaf columns render body
+    cells; parent columns provide captions and layout via
+    <code>colspan</code> and <code>rowspan</code>.
+  </ax-text>
+
+  @defer (on idle) {
+    <ax-data-table [dataSource]="dataSource" [paging]="true">
+      <ax-index-column [width]="'56px'" fixed="start"></ax-index-column>
+
+      <ax-text-column caption="Employee" [width]="'auto'">
+        <ax-text-column caption="Name" [width]="'auto'">
+          <ax-text-column
+            name="firstName"
+            caption="First"
+            [width]="'140px'"
+            [dataField]="'firstName'"
+          ></ax-text-column>
+          <ax-text-column
+            name="lastName"
+            caption="Last"
+            [width]="'140px'"
+            [dataField]="'lastName'"
+          ></ax-text-column>
+        </ax-text-column>
+      </ax-text-column>
+
+      <ax-text-column caption="Contact" [width]="'auto'">
+        <ax-text-column
+          name="email"
+          caption="Email"
+          [width]="'200px'"
+          [dataField]="'email'"
+        ></ax-text-column>
+        <ax-text-column
+          name="mobile"
+          caption="Phone"
+          [width]="'160px'"
+          [dataField]="'mobile'"
+        ></ax-text-column>
+      </ax-text-column>
+
+      <ax-text-column caption="Location" [width]="'auto'">
+        <ax-text-column
+          name="city"
+          caption="City"
+          [width]="'140px'"
+          [dataField]="'city'"
+        ></ax-text-column>
+        <ax-text-column
+          name="country"
+          caption="Country"
+          [width]="'100px'"
+          [dataField]="'country'"
+        ></ax-text-column>
+      </ax-text-column>
+    </ax-data-table>
+  } @placeholder {
+    <div
+      class="flex h-64 items-center justify-center rounded border border-dashed"
+    >
+      <span>Loading table...</span>
+    </div>
+  }
+</div>

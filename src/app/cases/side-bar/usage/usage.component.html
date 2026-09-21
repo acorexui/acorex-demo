@@ -1,0 +1,76 @@
+<div class="flex flex-col gap-4">
+  <div
+    class="flex h-[min(28rem,75vh)] overflow-hidden rounded-md border border-lightest"
+  >
+    <ax-sidebar
+      class="shrink-0"
+      [(mode)]="mode"
+      [navigationId]="navigationId"
+      ariaLabel="Application sidebar"
+    >
+      <ax-header axSidebarHeader class="w-full justify-center gap-2">
+
+        @if (mode() === "full") {
+          <span class="text-sm font-semibold">Acorex</span>
+        }
+      </ax-header>
+
+      <ax-side-menu axSidebarNavigation [mode]="mode()">
+        <ax-side-menu-item [active]="true">
+          <span>Dashboard</span>
+          <ax-prefix>
+            <ax-icon>
+              <i class="fa-solid fa-gauge-simple"></i>
+            </ax-icon>
+          </ax-prefix>
+        </ax-side-menu-item>
+        <ax-side-menu-item [isCollapsed]="true">
+          <span>Users</span>
+          <ax-prefix>
+            <ax-icon>
+              <i class="fa-solid fa-user-group"></i>
+            </ax-icon>
+          </ax-prefix>
+          <ax-side-menu-item text="All users"></ax-side-menu-item>
+          <ax-side-menu-item text="Roles"></ax-side-menu-item>
+        </ax-side-menu-item>
+        <ax-side-menu-item>
+          <span>Reports</span>
+          <ax-prefix>
+            <ax-icon>
+              <i class="fa-solid fa-chart-line"></i>
+            </ax-icon>
+          </ax-prefix>
+        </ax-side-menu-item>
+      </ax-side-menu>
+
+      <ax-sidebar-user
+        axSidebarUser
+        name="Jane Cooper"
+        description="Administrator"
+        [compact]="mode() === 'compact'"
+        tooltip="Jane Cooper"
+      >
+        <ax-avatar text="JC"></ax-avatar>
+        <ax-suffix>
+          <ax-icon>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </ax-icon>
+        </ax-suffix>
+      </ax-sidebar-user>
+
+      <ax-sidebar-collapse
+        axSidebarCollapse
+        [(mode)]="mode"
+        [ariaControls]="navigationId"
+      ></ax-sidebar-collapse>
+    </ax-sidebar>
+
+    <main
+      class="flex flex-1 items-center justify-center bg-lighter-surface p-6 text-sm text-on-surface opacity-80"
+    >
+      Main content — collapse control toggles sidebar
+      <code class="mx-1">{{ mode() }}</code> mode.
+    </main>
+  </div>
+</div>

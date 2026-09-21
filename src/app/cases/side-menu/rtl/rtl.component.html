@@ -1,0 +1,36 @@
+<div class="flex flex-col gap-4">
+  <div dir="rtl">
+    <div class="w-60 rounded-md bg-primary-surface p-2 text-primary-on-surface">
+      <ax-side-menu look="with-line">
+        <ax-side-menu-item [active]="true">
+          <span>داشبورد</span>
+          <ax-prefix>
+            <ax-icon>
+              <i class="fa-solid fa-gauge-simple"></i>
+            </ax-icon>
+          </ax-prefix>
+        </ax-side-menu-item>
+        <ax-side-menu-item [isCollapsed]="false">
+          <span>کاربران</span>
+          <ax-prefix>
+            <ax-icon>
+              <i class="fa-solid fa-user-group"></i>
+            </ax-icon>
+          </ax-prefix>
+          <ax-side-menu-item text="فهرست کاربران"></ax-side-menu-item>
+          <ax-side-menu-item text="کاربران تأیید‌شده" [active]="true">
+          </ax-side-menu-item>
+          <ax-side-menu-item text="کاربران تأیید‌نشده"></ax-side-menu-item>
+        </ax-side-menu-item>
+        <ax-side-menu-item>
+          <span>گزارش‌ها</span>
+          <ax-prefix>
+            <ax-icon>
+              <i class="fa-solid fa-chart-line"></i>
+            </ax-icon>
+          </ax-prefix>
+        </ax-side-menu-item>
+      </ax-side-menu>
+    </div>
+  </div>
+</div>

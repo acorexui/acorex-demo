@@ -1,0 +1,19 @@
+<div class="flex flex-col gap-4">
+  <ax-text class="text-sm text-on-surface">
+    Toggle the dimmed overlay with <code>hasBackdrop</code> and optional
+    <code>backdropClass</code>.
+  </ax-text>
+
+  <div class="flex flex-wrap gap-2">
+    <ax-button
+      color="primary"
+      text="With backdrop"
+      (onClick)="openWithBackdrop()"
+    ></ax-button>
+    <ax-button text="No backdrop" (onClick)="openWithoutBackdrop()"></ax-button>
+    <ax-button
+      text="Custom backdropClass"
+      (onClick)="openWithCustomBackdropClass()"
+    ></ax-button>
+  </div>
+</div>

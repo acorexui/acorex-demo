@@ -28,4 +28,11 @@ export const routes: Routes = [
         './allow-resize-and-reorder/allow-resize-and-reorder.component'
       ).then((e) => e.AllowResizeAndReorderComponent),
   },
+  {
+    path: 'multi-level-headers',
+    loadComponent: () =>
+      import('./multi-level-headers/multi-level-headers.component').then(
+        (e) => e.MultiLevelHeadersComponent,
+      ),
+  },
 ];
