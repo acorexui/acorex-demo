@@ -1,0 +1,46 @@
+<div class="flex flex-col gap-4">
+  <ax-text class="text-sm text-on-surface">
+    Double-clicking a handle runs <code>dblClickAction</code>:
+    <code>reset</code> (default width/height), <code>maximize</code> (clamp to max
+    size on the active axes), or <code>fit</code> (fit-content on the active
+    axes). Listen with <code>(onResizingDblClick)</code>.
+  </ax-text>
+
+  <div class="flex flex-wrap gap-2">
+    <ax-button
+      [color]="dblClickAction() === 'reset' ? 'primary' : 'default'"
+      text="reset"
+      (onClick)="setAction('reset')"
+    ></ax-button>
+    <ax-button
+      [color]="dblClickAction() === 'maximize' ? 'primary' : 'default'"
+      text="maximize"
+      (onClick)="setAction('maximize')"
+    ></ax-button>
+    <ax-button
+      [color]="dblClickAction() === 'fit' ? 'primary' : 'default'"
+      text="fit"
+      (onClick)="setAction('fit')"
+    ></ax-button>
+  </div>
+
+  <div
+    class="w-full max-w-2xl rounded border border-dashed border-[rgba(var(--ax-sys-color-border-lighter-surface))] p-3"
+  >
+    <div
+      [axResizable]="true"
+      [(width)]="width"
+      [defaultWidth]="defaultWidth"
+      [maxWidth]="maxWidth()"
+      [dblClickAction]="dblClickAction()"
+      class="min-h-24 w-fit max-w-full rounded border border-[rgba(var(--ax-sys-color-border-lighter-surface))] bg-[rgba(var(--ax-sys-color-lighter-surface))] p-4 text-sm text-on-surface"
+      (onResizingDblClick)="onResizingDblClick($event)"
+    >
+      <span class="whitespace-nowrap">Double-click the resize handle.</span>
+    </div>
+  </div>
+
+  <ax-text class="text-sm opacity-70">
+    Width: {{ width() }}px · Last dbl-click: {{ lastDblClick() }}
+  </ax-text>
+</div>
