@@ -1,12 +1,12 @@
-<div #f="axCarousel" axCarousel class="carousel">
+<div axCarousel class="carousel swiper">
   <div class="ax-carousel-wrapper">
     @for (item of data(); track item.id) {
       <div class="ax-carousel-slide">
-        <img class="w-full" [src]="item.url" [alt]="item.name" />
+        <img [src]="item.url" [alt]="item.name" />
       </div>
     }
   </div>
   <div class="ax-carousel-pagination"></div>
-  <div class="ax-carousel-button-prev"></div>
-  <div class="ax-carousel-button-next"></div>
+  <div class="ax-carousel-button-prev" aria-label="Previous slide"></div>
+  <div class="ax-carousel-button-next" aria-label="Next slide"></div>
 </div>

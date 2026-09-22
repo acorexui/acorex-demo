@@ -1,11 +1,4 @@
 <div class="flex flex-col gap-4">
-  <ax-text class="text-sm text-on-surface">
-    Double-clicking a handle runs <code>dblClickAction</code>:
-    <code>reset</code> (default width/height), <code>maximize</code> (clamp to max
-    size on the active axes), or <code>fit</code> (fit-content on the active
-    axes). Listen with <code>(onResizingDblClick)</code>.
-  </ax-text>
-
   <div class="flex flex-wrap gap-2">
     <ax-button
       [color]="dblClickAction() === 'reset' ? 'primary' : 'default'"
