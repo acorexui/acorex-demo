@@ -1,0 +1,49 @@
+<div class="flex w-full flex-col gap-3">
+  <div class="flex flex-wrap gap-2">
+    <ax-button
+      text="Fly to Shiraz"
+      [disabled]="!ready()"
+      (onClick)="flyToShiraz()"
+    ></ax-button>
+    <ax-button
+      text="Add Isfahan"
+      [disabled]="!ready()"
+      (onClick)="addIsfahanMarker()"
+    ></ax-button>
+    <ax-button
+      text="Update popup"
+      [disabled]="!ready()"
+      (onClick)="updateTehranPopup()"
+    ></ax-button>
+    <ax-button
+      text="Fit bounds"
+      [disabled]="!ready()"
+      (onClick)="fitBounds()"
+    ></ax-button>
+    <ax-button
+      text="Log items"
+      [disabled]="!ready()"
+      (onClick)="logDrawItems()"
+    ></ax-button>
+    <ax-button
+      text="Clear"
+      [disabled]="!ready()"
+      (onClick)="clearItems()"
+    ></ax-button>
+  </div>
+
+  <div class="text-sm text-muted">{{ lastAction() }}</div>
+
+  <div class="h-96 w-full rounded border">
+    <ax-map
+      #map
+      [(latitude)]="latitude"
+      [(longitude)]="longitude"
+      [(zoomLevel)]="zoomLevel"
+      [markers]="markers()"
+      [polygons]="polygons()"
+      (onMapReady)="onMapReady()"
+    >
+    </ax-map>
+  </div>
+</div>

@@ -1,15 +1,26 @@
 <div class="w-full h-96 border rounded">
   <ax-map
-    [latitude]="latitude()"
-    [longitude]="longitude()"
-    [zoomLevel]="zoomLevel()"
+    [(latitude)]="latitude"
+    [(longitude)]="longitude"
+    [(zoomLevel)]="zoomLevel"
+    [markers]="markers()"
     [hasDraw]="hasDraw()"
+    [markerPlace]="markerPlace()"
     [maxMarker]="maxMarker()"
     [maxPolygon]="maxPolygon()"
+    [maxPolyline]="maxPolyline()"
+    [maxRectangle]="maxRectangle()"
+    [maxCircle]="maxCircle()"
     (onMarkerAdded)="onMarkerAdded($event)"
     (onMarkerChanged)="onMarkerChanged($event)"
     (onPolygonAdded)="onPolygonAdded($event)"
     (onPolygonChanged)="onPolygonChanged($event)"
+    (onPolylineAdded)="onPolylineAdded($event)"
+    (onPolylineChanged)="onPolylineChanged($event)"
+    (onRectangleAdded)="onRectangleAdded($event)"
+    (onRectangleChanged)="onRectangleChanged($event)"
+    (onCircleAdded)="onCircleAdded($event)"
+    (onCircleChanged)="onCircleChanged($event)"
   >
   </ax-map>
 </div>

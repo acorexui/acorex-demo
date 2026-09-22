@@ -1,24 +1,24 @@
+import {
+  AXMapComponent,
+  AXMapControlPlace,
+  AXMapLocation,
+} from '@acorex/components/map';
 import { Component, signal } from '@angular/core';
-import { AXMapControlPlace, AXMapModule } from '@acorex/components/map';
-import { AXMapMarker } from '@acorex/components/map';
 
 @Component({
   selector: 'app-location-demo',
   templateUrl: './location.component.html',
-  imports: [AXMapModule],
-  standalone: true,
+  imports: [AXMapComponent],
 })
 export class LocationDemoComponent {
-  // Location inputs demonstration
   hasLocator = signal(true);
   locatePlace = signal<AXMapControlPlace>('bottomright');
 
-  // Map configuration inputs
   latitude = signal(35.6892);
   longitude = signal(51.389);
   zoomLevel = signal(10);
 
-  onLocationFound(location: AXMapMarker) {
+  onLocationFound(location: AXMapLocation) {
     console.log('Location found:', location);
   }
 
