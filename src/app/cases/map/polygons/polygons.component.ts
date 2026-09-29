@@ -1,17 +1,15 @@
+import { AXMapComponent, AXMapPolygon } from '@acorex/components/map';
 import { Component, signal } from '@angular/core';
-import { AXMapModule } from '@acorex/components/map';
-import { AXMapPolygon } from '@acorex/components/map';
 
 @Component({
   selector: 'app-polygons-demo',
   templateUrl: './polygons.component.html',
-  imports: [AXMapModule],
-  standalone: true,
+  imports: [AXMapComponent],
 })
 export class PolygonsDemoComponent {
-  // Polygon inputs demonstration
   polygons = signal<AXMapPolygon[]>([
     {
+      id: 'square',
       points: [
         { latitude: 35.6, longitude: 51.3 },
         { latitude: 35.6, longitude: 51.5 },
@@ -23,6 +21,7 @@ export class PolygonsDemoComponent {
       color: '#FF0000',
     },
     {
+      id: 'triangle',
       points: [
         { latitude: 32.6, longitude: 51.6 },
         { latitude: 32.5, longitude: 51.5 },
@@ -34,10 +33,10 @@ export class PolygonsDemoComponent {
     },
   ]);
 
-  // Map configuration inputs
   latitude = signal(35.6892);
   longitude = signal(51.389);
   zoomLevel = signal(6);
+  hasDraw = signal(true);
   maxPolygon = signal(5);
 
   onPolygonAdded(polygon: AXMapPolygon) {

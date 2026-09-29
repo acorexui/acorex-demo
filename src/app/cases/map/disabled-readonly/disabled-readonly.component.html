@@ -1,0 +1,29 @@
+<div class="flex w-full flex-col gap-3">
+  <div class="flex flex-wrap gap-2">
+    <ax-button
+      [look]="disabled() ? 'solid' : 'outline'"
+      [text]="disabled() ? 'Enable map' : 'Disable map'"
+      (onClick)="toggleDisabled()"
+    ></ax-button>
+    <ax-button
+      [look]="readonly() ? 'solid' : 'outline'"
+      [text]="readonly() ? 'Make editable' : 'Make readonly'"
+      [disabled]="disabled()"
+      (onClick)="toggleReadonly()"
+    ></ax-button>
+  </div>
+
+  <div class="h-96 w-full rounded border">
+    <ax-map
+      [(latitude)]="latitude"
+      [(longitude)]="longitude"
+      [(zoomLevel)]="zoomLevel"
+      [markers]="markers()"
+      [hasDraw]="hasDraw()"
+      [hasLocator]="hasLocator()"
+      [readonly]="readonly()"
+      [disabled]="disabled()"
+    >
+    </ax-map>
+  </div>
+</div>

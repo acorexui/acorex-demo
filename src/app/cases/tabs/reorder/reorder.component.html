@@ -1,0 +1,25 @@
+<div class="flex w-full flex-col gap-8">
+  <div>
+    <ax-label>Static tabs</ax-label>
+    <ax-tabs [reorderable]="true" look="with-line-color" location="bottom" class="mt-2">
+      <ax-tab-item text="My Account" [active]="true"></ax-tab-item>
+      <ax-tab-item text="Company"></ax-tab-item>
+      <ax-tab-item text="Team Members"></ax-tab-item>
+      <ax-tab-item text="Billing"></ax-tab-item>
+    </ax-tabs>
+  </div>
+  <div>
+    <ax-label>Array-driven tabs</ax-label>
+    <ax-tabs
+      [reorderable]="true"
+      look="with-line-color"
+      location="bottom"
+      class="mt-2"
+      (onTabsReordered)="onTabsReordered($event)"
+    >
+      @for (tab of reorderableTabs(); track tab) {
+        <ax-tab-item [text]="tab"></ax-tab-item>
+      }
+    </ax-tabs>
+  </div>
+</div>

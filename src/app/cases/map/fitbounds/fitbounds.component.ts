@@ -1,15 +1,16 @@
+import {
+  AXMapComponent,
+  AXMapMarker,
+  AXMapPolygon,
+} from '@acorex/components/map';
 import { Component, signal } from '@angular/core';
-import { AXMapModule } from '@acorex/components/map';
-import { AXMapMarker, AXMapPolygon } from '@acorex/components/map';
 
 @Component({
   selector: 'app-fitbounds-demo',
   templateUrl: './fitbounds.component.html',
-  imports: [AXMapModule],
-  standalone: true,
+  imports: [AXMapComponent],
 })
 export class FitBoundsDemoComponent {
-  // FitBounds inputs demonstration
   markers = signal<AXMapMarker[]>([
     {
       latitude: 35.6892,
@@ -45,7 +46,6 @@ export class FitBoundsDemoComponent {
     },
   ]);
 
-  // Map configuration inputs
   latitude = signal(35.6892);
   longitude = signal(51.389);
   zoomLevel = signal(6);

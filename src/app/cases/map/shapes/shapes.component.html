@@ -1,0 +1,14 @@
+<div class="w-full h-96 border rounded">
+  <ax-map
+    [(latitude)]="latitude"
+    [(longitude)]="longitude"
+    [(zoomLevel)]="zoomLevel"
+    [polylines]="polylines()"
+    [rectangles]="rectangles()"
+    [circles]="circles()"
+    (onPolylineClick)="onPolylineClick($event)"
+    (onRectangleClick)="onRectangleClick($event)"
+    (onCircleClick)="onCircleClick($event)"
+  >
+  </ax-map>
+</div>
