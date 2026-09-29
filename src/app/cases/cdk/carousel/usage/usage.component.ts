@@ -17,71 +17,72 @@ import {
   styles: `
     @reference '@acorex/styles/themes/default.css';
     @import 'swiper/swiper-bundle.css';
-    .carousel {
+
+    .carousel.swiper {
+      position: relative;
       overflow: hidden;
       display: block;
-      width: 40rem;
-      height: 40rem;
+      width: 100%;
+      max-width: 18rem;
+      height: 12rem;
+      --swiper-navigation-color: rgba(var(--ax-sys-color-primary-surface), 1);
+      --swiper-pagination-color: rgba(var(--ax-sys-color-primary-surface), 1);
+    }
+
+    .carousel .ax-carousel-slide img {
+      display: block;
+      height: 12rem;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .carousel .swiper-button-prev,
+    .carousel .swiper-button-next {
+      --swiper-navigation-size: 1.75rem;
     }
   `,
 })
 export class UsageComponent {
-  private swiperRef = viewChild<AXCarouselDirective>('f');
+  private readonly carousel = viewChild.required(AXCarouselDirective);
 
-  carouselOptions = signal<AXCarouselOptions>({
+  private readonly carouselOptions: AXCarouselOptions = {
     slidesPerView: 1,
-    spaceBetween: 20,
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-      },
-      480: {
-        slidesPerView: 2,
-      },
-    },
+    spaceBetween: 12,
     keyboard: true,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
     },
     pagination: {
-      el: '.ax-carousel-pagination',
+      el: '.carousel .ax-carousel-pagination',
       clickable: true,
     },
     navigation: {
-      nextEl: '.ax-carousel-button-next',
-      prevEl: '.ax-carousel-button-prev',
+      nextEl: '.carousel .ax-carousel-button-next',
+      prevEl: '.carousel .ax-carousel-button-prev',
     },
     loop: true,
-  });
-  #init = afterNextRender(async () => {
-    await this.swiperRef()?.init(this.carouselOptions());
+  };
+
+  #init = afterNextRender(() => {
+    void this.carousel().init(this.carouselOptions);
   });
 
   protected data = signal([
     {
       id: '1',
       name: 'Library',
-      type: 'image',
-      size: '128kb',
-      url: 'https://picsum.photos/id/20/500/500',
-      thumbnail: 'https://picsum.photos/id/20/500/500',
+      url: 'https://picsum.photos/id/20/360/240',
     },
     {
       id: '5',
       name: 'Coffee',
-      type: 'image',
-      size: '290kb',
-      url: 'https://picsum.photos/id/30/500/500',
-      thumbnail: 'https://picsum.photos/id/30/500/500',
+      url: 'https://picsum.photos/id/30/360/240',
     },
     {
       id: '6',
       name: 'Rain',
-      type: 'image',
-      size: '300kb',
-      url: 'https://picsum.photos/id/41/500/500',
-      thumbnail: 'https://picsum.photos/id/41/500/500',
+      url: 'https://picsum.photos/id/41/360/240',
     },
   ]);
 }

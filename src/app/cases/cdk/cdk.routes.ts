@@ -96,4 +96,10 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./overlay/overlay.routes').then((c) => c.routes),
   },
+  {
+    path: 'resizer',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./resizer/resizer.routes').then((c) => c.routes),
+  },
 ];
