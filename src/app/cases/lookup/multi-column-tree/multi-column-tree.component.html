@@ -1,0 +1,32 @@
+<div class="flex w-lg flex-col gap-8">
+
+  <div class="flex flex-col gap-2">
+    <ax-text class="text-sm font-medium">Nested children</ax-text>
+    <ax-lookup
+      mode="multi-column-tree"
+      [treeDataSource]="nestedTree"
+      [columns]="columns"
+      valueField="id"
+      textField="title"
+      placeholder="Select a country or state..."
+      [(value)]="nestedValue"
+    >
+      <ax-clear-button></ax-clear-button>
+    </ax-lookup>
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <ax-text class="text-sm font-medium">Lazy children callback</ax-text>
+    <ax-lookup
+      mode="multi-column-tree"
+      [treeDataSource]="lazyTree"
+      [columns]="columns"
+      valueField="id"
+      textField="title"
+      placeholder="Expand countries to load states..."
+      [(value)]="lazyValue"
+    >
+      <ax-clear-button></ax-clear-button>
+    </ax-lookup>
+  </div>
+</div>
