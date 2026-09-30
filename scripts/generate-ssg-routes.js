@@ -176,6 +176,8 @@ function generateSSGRoutes() {
     "media-viewer/",
     "lookup/",
     "cdk/overlay/",
+    "combo-box/",
+    "step-wizard/",
   ];
 
   // Remove duplicates, denylist, and sort

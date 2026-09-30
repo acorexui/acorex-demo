@@ -36,6 +36,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'multi-column-tree',
+    loadComponent: () =>
+      import('./multi-column-tree/multi-column-tree.component').then(
+        (m) => m.MultiColumnTreeComponent,
+      ),
+  },
+  {
     path: 'virtual-scroll',
     loadComponent: () =>
       import('./virtual-scroll/virtual-scroll.component').then(

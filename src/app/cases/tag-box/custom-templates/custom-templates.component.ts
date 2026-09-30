@@ -235,4 +235,16 @@ export class CustomTemplatesComponent {
         return 'Other';
     }
   }
+
+  /** Same chip colors as autocomplete rows — visible inside tag-box input. */
+  getItemColorClasses(color: string): Record<string, boolean> {
+    return {
+      'bg-primary-500/15 text-primary-500': color === 'primary',
+      'bg-success-500/15 text-success-500': color === 'success',
+      'bg-danger-500/15 text-danger-500': color === 'danger',
+      'bg-warning-500/15 text-warning-500': color === 'warning',
+      'bg-info-500/15 text-info-500': color === 'info',
+      'bg-muted-500/15 text-muted-500': color === 'muted',
+    };
+  }
 }

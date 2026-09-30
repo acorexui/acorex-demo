@@ -1,147 +1,145 @@
-<ax-step-wizard
-  #stepWizard
-  class="ax-md"
-  [connector]="true"
-  [changeStep]="true"
-  [scrollToStep]="false"
-  [look]="'circular-icon'"
-  [content]="usageContent"
->
-  <ax-step-wizard-item
-    [label]="'Personal Information'"
-    [description]="'Enter your basic details'"
-    [id]="'personal'"
+<div class="w-full max-w-4xl mx-auto">
+  <ax-step-wizard
+    #wizard
+    class="ax-md"
+    [connector]="true"
+    [content]="content"
+    [scrollToStep]="false"
+    [look]="'circular-icon'"
   >
-    <ax-icon class="fas fa-user"></ax-icon>
-    <ax-content class="w-full">
-      <div class="p-4 surface rounded-lg border">
-        <ax-title level="3" class="mb-4">Personal Information</ax-title>
-        <ax-subtitle class="mb-4">
-          Please provide your personal information to continue with the
-          registration process.
-        </ax-subtitle>
-        <div class="grid grid-cols-2 gap-4">
-          <div class="flex flex-col">
-            <ax-text-box placeholder="John">
-              <label> First Name </label>
-            </ax-text-box>
-          </div>
-          <div class="flex flex-col">
-            <ax-text-box type="text" placeholder="Doe">
-              <label> Last Name </label>
-            </ax-text-box>
+    <ax-step-wizard-item
+      [label]="'Personal Information'"
+      [description]="'Enter your basic details'"
+      [id]="'personal'"
+    >
+      <ax-icon class="fas fa-user"></ax-icon>
+      <ax-content>
+        <div class="p-4 surface rounded-lg border w-full">
+          <ax-title level="3" class="mb-4">Personal Information</ax-title>
+          <ax-subtitle class="mb-4">
+            Please provide your personal information to continue with the
+            registration process.
+          </ax-subtitle>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <ax-form-field>
+              <ax-label>First Name</ax-label>
+              <ax-text-box placeholder="John"></ax-text-box>
+            </ax-form-field>
+            <ax-form-field>
+              <ax-label>Last Name</ax-label>
+              <ax-text-box placeholder="Doe"></ax-text-box>
+            </ax-form-field>
           </div>
         </div>
-      </div>
-    </ax-content>
-  </ax-step-wizard-item>
+      </ax-content>
+    </ax-step-wizard-item>
 
-  <ax-step-wizard-item
-    [label]="'Contact Details'"
-    [description]="'Provide contact information'"
-    [id]="'contact'"
-  >
-    <ax-icon class="fas fa-envelope"></ax-icon>
-    <ax-content class="w-full">
-      <div class="p-4 surface rounded-lg border">
-        <ax-title level="3" class="mb-4">Contact Details</ax-title>
-        <ax-subtitle class="mb-4">
-          We need your contact information to send you important updates.
-        </ax-subtitle>
-        <div class="grid grid-cols-2 gap-4">
-          <div class="flex flex-col">
-            <ax-text-box type="email" placeholder="john.doe@example.com">
-              <label>Email Address</label>
-            </ax-text-box>
-          </div>
-          <div class="flex flex-col">
-            <ax-text-box type="tel" placeholder="+1 (555) 123-4567">
-              <label>Phone Number</label>
-            </ax-text-box>
-          </div>
-        </div>
-      </div>
-    </ax-content>
-  </ax-step-wizard-item>
-
-  <ax-step-wizard-item
-    [id]="'account'"
-    [label]="'Account Setup'"
-    [description]="'Create your account'"
-  >
-    <ax-icon class="fas fa-lock"></ax-icon>
-    <ax-content class="w-full">
-      <div class="p-4 surface rounded-lg border">
-        <ax-title level="3" class="mb-4">Account Setup</ax-title>
-        <ax-subtitle class="mb-4">
-          Choose a username and password for your new account.
-        </ax-subtitle>
-        <div class="grid grid-cols-2 gap-4">
-          <div class="flex flex-col">
-            <ax-text-box type="text" placeholder="johndoe">
-              <label>Username</label>
-            </ax-text-box>
-          </div>
-          <div class="flex flex-col">
-            <ax-text-box type="password" placeholder="••••••••">
-              <label>Password</label>
-            </ax-text-box>
+    <ax-step-wizard-item
+      [label]="'Contact Details'"
+      [description]="'Provide contact information'"
+      [id]="'contact'"
+    >
+      <ax-icon class="fas fa-envelope"></ax-icon>
+      <ax-content>
+        <div class="p-4 surface rounded-lg border w-full">
+          <ax-title level="3" class="mb-4">Contact Details</ax-title>
+          <ax-subtitle class="mb-4">
+            We need your contact information to send you important updates.
+          </ax-subtitle>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <ax-form-field>
+              <ax-label>Email Address</ax-label>
+              <ax-text-box
+                type="email"
+                placeholder="john.doe@example.com"
+              ></ax-text-box>
+            </ax-form-field>
+            <ax-form-field>
+              <ax-label>Phone Number</ax-label>
+              <ax-text-box type="tel" placeholder="+1 (555) 123-4567"></ax-text-box>
+            </ax-form-field>
           </div>
         </div>
-      </div>
-    </ax-content>
-  </ax-step-wizard-item>
+      </ax-content>
+    </ax-step-wizard-item>
 
-  <ax-step-wizard-item
-    [label]="'Review & Submit'"
-    [description]="'Confirm your information'"
-    [id]="'review'"
-  >
-    <ax-icon class="fas fa-check-circle"></ax-icon>
-    <ax-content class="w-full">
-      <div class="p-4 surface rounded-lg border">
-        <ax-title level="3" class="mb-4">Review & Submit</ax-title>
-        <ax-subtitle class="mb-4">
-          Please review all the information you've provided before submitting.
-        </ax-subtitle>
-        <div
-          class="surface-dark dark:surface-light p-2 rounded-md border"
-        >
-          <ax-title level="4" class="mb-4">Summary</ax-title>
-          <ul class="text-sm space-y-1 opacity-75">
-            <li>✓ Personal Information completed</li>
-            <li>✓ Contact Details completed</li>
-            <li>✓ Account Setup completed</li>
-            <li>✓ Ready to submit</li>
-          </ul>
+    <ax-step-wizard-item
+      [id]="'account'"
+      [label]="'Account Setup'"
+      [description]="'Create your account'"
+    >
+      <ax-icon class="fas fa-lock"></ax-icon>
+      <ax-content>
+        <div class="p-4 surface rounded-lg border w-full">
+          <ax-title level="3" class="mb-4">Account Setup</ax-title>
+          <ax-subtitle class="mb-4">
+            Choose a username and password for your new account.
+          </ax-subtitle>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <ax-form-field>
+              <ax-label>Username</ax-label>
+              <ax-text-box placeholder="johndoe"></ax-text-box>
+            </ax-form-field>
+            <ax-form-field>
+              <ax-label>Password</ax-label>
+              <ax-text-box type="password" placeholder="••••••••"></ax-text-box>
+            </ax-form-field>
+          </div>
         </div>
-      </div>
-    </ax-content>
-  </ax-step-wizard-item>
-</ax-step-wizard>
+      </ax-content>
+    </ax-step-wizard-item>
 
-<div class="flex justify-center p-5">
-  <ng-template [axStepWizardContent] #usageContent="axStepWizardContent">
-  </ng-template>
-</div>
+    <ax-step-wizard-item
+      [label]="'Review & Submit'"
+      [description]="'Confirm your information'"
+      [id]="'review'"
+    >
+      <ax-icon class="fas fa-check-circle"></ax-icon>
+      <ax-content>
+        <div class="p-4 surface rounded-lg border w-full">
+          <ax-title level="3" class="mb-4">Review & Submit</ax-title>
+          <ax-subtitle class="mb-4">
+            Please review all the information you've provided before submitting.
+          </ax-subtitle>
+          <div class="surface-dark dark:surface-light p-2 rounded-md border">
+            <ax-title level="4" class="mb-4">Summary</ax-title>
+            <ul class="text-sm space-y-1 opacity-75">
+              <li>✓ Personal Information completed</li>
+              <li>✓ Contact Details completed</li>
+              <li>✓ Account Setup completed</li>
+              <li>✓ Ready to submit</li>
+            </ul>
+          </div>
+        </div>
+      </ax-content>
+    </ax-step-wizard-item>
+  </ax-step-wizard>
 
-<div
-  class="mt-8 flex justify-between items-center p-4 surface rounded-lg"
->
-  <span>Step {{ getCurrentStep(stepWizard) }} of 4</span>
-  <div class="flex gap-3">
-    <ax-button
-      look="outline"
-      color="primary"
-      text="Previous"
-      (onClick)="stepWizard.previous()"
-      [disabled]="stepWizard.isFirst()"
-    ></ax-button>
-    <ax-button
-      text="Next"
-      color="primary"
-      (onClick)="stepWizard.next()"
-      [disabled]="stepWizard.isLast()"
-    ></ax-button>
+  <div class="flex justify-center p-4">
+    <ng-template [axStepWizardContent] #content="axStepWizardContent">
+    </ng-template>
+  </div>
+
+  <div
+    class="mt-4 flex flex-wrap justify-between items-center gap-4 p-4 surface rounded-lg border"
+  >
+    <span class="text-sm opacity-75">
+      Current Step: {{ getCurrentStep() }} of 4
+    </span>
+    <div class="flex gap-2">
+      <ax-button
+        (onClick)="wizard.previous()"
+        [disabled]="wizard.isFirst()"
+        color="primary"
+        look="outline"
+        text="Previous"
+      ></ax-button>
+      <ax-button
+        (onClick)="wizard.next()"
+        [disabled]="wizard.isLast()"
+        color="primary"
+        text="Next"
+      ></ax-button>
+    </div>
   </div>
 </div>

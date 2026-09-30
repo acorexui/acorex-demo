@@ -20,6 +20,11 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'shapes',
+    loadComponent: () =>
+      import('./shapes/shapes.component').then((e) => e.ShapesDemoComponent),
+  },
+  {
     path: 'location',
     loadComponent: () =>
       import('./location/location.component').then(
@@ -56,5 +61,17 @@ export const routes: Routes = [
     path: 'poi',
     loadComponent: () =>
       import('./poi/poi.component').then((e) => e.PoiDemoComponent),
+  },
+  {
+    path: 'disabled-readonly',
+    loadComponent: () =>
+      import('./disabled-readonly/disabled-readonly.component').then(
+        (e) => e.DisabledReadonlyDemoComponent
+      ),
+  },
+  {
+    path: 'methods',
+    loadComponent: () =>
+      import('./methods/methods.component').then((e) => e.MethodsDemoComponent),
   },
 ];

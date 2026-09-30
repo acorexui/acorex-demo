@@ -38,6 +38,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'multi-level',
+    loadComponent: () =>
+      import('./multi-level/multi-level.component').then(
+        (c) => c.DropdownButtonMultiLevelComponent
+      ),
+  },
+  {
     path: 'size',
     loadComponent: () =>
       import('./size/size.component').then(

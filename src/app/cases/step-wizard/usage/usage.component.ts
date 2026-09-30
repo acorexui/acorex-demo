@@ -3,13 +3,15 @@ import {
   AXDecoratorGenericComponent,
   AXDecoratorIconComponent,
 } from '@acorex/components/decorators';
+import { AXFormFieldComponent } from '@acorex/components/form';
+import { AXLabelComponent } from '@acorex/components/label';
 import {
   AXStepWizardComponent,
   AXStepWizardContentDirective,
   AXStepWizardItemComponent,
 } from '@acorex/components/step-wizard';
 import { AXTextBoxComponent } from '@acorex/components/text-box';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, viewChild } from '@angular/core';
 
 @Component({
   templateUrl: './usage.component.html',
@@ -17,6 +19,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   imports: [
     AXButtonComponent,
     AXTextBoxComponent,
+    AXLabelComponent,
+    AXFormFieldComponent,
     AXStepWizardComponent,
     AXDecoratorIconComponent,
     AXStepWizardItemComponent,
@@ -25,7 +29,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   ],
 })
 export class UsageComponent {
-  getCurrentStep(stepWizard: AXStepWizardComponent): number {
-    return (stepWizard.activeStepIndex() ?? 0) + 1;
+  wizard = viewChild<AXStepWizardComponent>('wizard');
+
+  getCurrentStep(): number {
+    return (this.wizard()?.activeStepIndex() ?? 0) + 1;
   }
 }

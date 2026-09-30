@@ -1,15 +1,12 @@
+import { AXMapComponent, AXMapPolygon } from '@acorex/components/map';
 import { Component, signal } from '@angular/core';
-import { AXMapModule } from '@acorex/components/map';
-import { AXMapPolygon } from '@acorex/components/map';
 
 @Component({
   selector: 'app-boundary-demo',
   templateUrl: './boundary.component.html',
-  imports: [AXMapModule],
-  standalone: true,
+  imports: [AXMapComponent],
 })
 export class BoundaryDemoComponent {
-  // Boundary inputs demonstration
   limitDraw = signal<AXMapPolygon[]>([
     {
       points: [
@@ -24,7 +21,6 @@ export class BoundaryDemoComponent {
     },
   ]);
 
-  // Map configuration inputs
   latitude = signal(35.6892);
   longitude = signal(51.389);
   zoomLevel = signal(10);

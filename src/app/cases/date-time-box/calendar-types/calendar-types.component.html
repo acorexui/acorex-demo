@@ -4,13 +4,30 @@
   <div class="w-72">
     <ax-form-field>
       <ax-label>Meeting date and time</ax-label>
-      <ax-datetime-box
-        [allowTyping]="true"
-        [calendar]="currentCalendar()"
-        placeholder="Select the meeting date and time"
-      >
-        <ax-clear-button></ax-clear-button>
-      </ax-datetime-box>
+      @switch (currentCalendar()) {
+        @case ('gregorian') {
+          <ax-datetime-box
+            [ngModel]="value()"
+            (ngModelChange)="value.set($event)"
+            [allowTyping]="true"
+            calendar="gregorian"
+            placeholder="Select the meeting date and time"
+          >
+            <ax-clear-button></ax-clear-button>
+          </ax-datetime-box>
+        }
+        @case ('solar-hijri') {
+          <ax-datetime-box
+            [ngModel]="value()"
+            (ngModelChange)="value.set($event)"
+            [allowTyping]="true"
+            calendar="solar-hijri"
+            placeholder="Select the meeting date and time"
+          >
+            <ax-clear-button></ax-clear-button>
+          </ax-datetime-box>
+        }
+      }
     </ax-form-field>
 
     <ax-subtitle>
@@ -23,13 +40,17 @@
   </div>
 
   <div class="flex flex-wrap gap-2 justify-center">
-    @for (calendar of calendars; track calendar.value) {
-      <ax-button
-        class="ax-sm"
-        [text]="calendar.label"
-        (onClick)="setCalendar(calendar.value)"
-        [look]="currentCalendar() === calendar.value ? 'solid' : 'outline'"
-      ></ax-button>
-    }
+    <ax-button
+      class="ax-sm"
+      text="Gregorian"
+      (onClick)="setCalendar('gregorian')"
+      [look]="currentCalendar() === 'gregorian' ? 'solid' : 'outline'"
+    ></ax-button>
+    <ax-button
+      class="ax-sm"
+      text="Solar Hijri"
+      (onClick)="setCalendar('solar-hijri')"
+      [look]="currentCalendar() === 'solar-hijri' ? 'solid' : 'outline'"
+    ></ax-button>
   </div>
 </div>

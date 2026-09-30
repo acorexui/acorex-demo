@@ -34,8 +34,13 @@
               },
               {
                 "glob": "**/*",
-                "input": "public/images/leaflet",
-                "output": "assets/images/leaflet"
+                "input": "node_modules/leaflet/dist/images",
+                "output": "/assets/images/leaflet"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/leaflet-draw/dist/images",
+                "output": "/assets/images/leaflet"
               },
               {
                 "glob": "**/*",
@@ -46,6 +51,9 @@
             ],
             "styles": [
               "node_modules/@angular/cdk/overlay-prebuilt.css",
+              "node_modules/leaflet/dist/leaflet.css",
+              "node_modules/leaflet-draw/dist/leaflet.draw.css",
+              "node_modules/leaflet.locatecontrol/dist/L.Control.Locate.min.css",
               "src/styles.css",
               "public/fonts/fontawesome/styles/index.css"
             ],

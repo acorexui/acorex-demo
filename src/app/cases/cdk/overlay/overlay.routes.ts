@@ -5,7 +5,7 @@ export const routes: Routes = [
   {
     path: 'usage',
     loadComponent: () =>
-      import('./usage/usage.component').then((e) => e.UsageComponent),
+      import('./usage/overlay-usage.component').then((e) => e.OverlayUsageComponent),
   },
   {
     path: 'anchor-positioning',
