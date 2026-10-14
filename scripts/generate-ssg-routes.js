@@ -178,6 +178,8 @@ function generateSSGRoutes() {
     "cdk/overlay/",
     "combo-box/",
     "step-wizard/",
+    "data-table/",
+    "scheduler/",
   ];
 
   // Remove duplicates, denylist, and sort

@@ -6,7 +6,6 @@ import {
 import { provideRouter } from '@angular/router';
 
 import { appRoutes } from './app.routes';
-import { provideClientHydration } from '@angular/platform-browser';
 import { AX_DATETIME_HOLIDAYS_LOADER } from '@acorex/core/date-time';
 import { AXFormatModule } from '@acorex/core/format';
 import {
@@ -24,7 +23,6 @@ import { AXLocaleModule } from '@acorex/core/locale';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideClientHydration(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(appRoutes),
     provideHttpClient(withFetch()),

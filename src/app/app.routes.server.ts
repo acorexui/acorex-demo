@@ -1,4 +1,5 @@
 import { RenderMode, ServerRoute } from '@angular/ssr';
+import { ssgRoutes } from './ssg-routes.config';
 
 /**
  * Demos that rely on canvas/maps/editors and are not safe to prerender in Node.
@@ -26,6 +27,10 @@ const csrPrefixes = [
   'combo-box',
   // Step content is moved into a portal after init (setTimeout); prerender HTML ≠ client.
   'step-wizard',
+  // data-table text-highlight cleanup touches document on destroy (see data-table demos).
+  'data-table',
+  // Heavy client scheduler; prerender workers are unreliable for these demos.
+  'scheduler',
 ] as const;
 
 export const serverRoutes: ServerRoute[] = [
@@ -43,8 +48,15 @@ export const serverRoutes: ServerRoute[] = [
       renderMode: RenderMode.Client,
     }),
   ),
+  // Only prerender routes from generate-ssg-routes (denylist applied there).
+  ...ssgRoutes.map(
+    (route): ServerRoute => ({
+      path: route,
+      renderMode: RenderMode.Prerender,
+    }),
+  ),
   {
     path: '**',
-    renderMode: RenderMode.Prerender,
+    renderMode: RenderMode.Client,
   },
 ];
