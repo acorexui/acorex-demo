@@ -1,8 +1,19 @@
-<div
-  class="flex w-full items-center justify-center gap-4 py-6"
->
-  <ax-badge color="primary" text="solid" look="solid"></ax-badge>
-  <ax-badge color="primary" text="outline" look="outline"></ax-badge>
-  <ax-badge color="primary" text="twotone" look="twotone"></ax-badge>
-  <ax-badge color="primary" text="blank" look="blank"></ax-badge>
+<div class="flex w-52 flex-col items-stretch gap-4 py-6">
+  @for (look of [currentLook()]; track look) {
+    <div class="flex justify-center">
+      <ax-badge
+        color="primary"
+        [text]="badgeText()"
+        [look]="look"
+      ></ax-badge>
+    </div>
+  }
+
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    placeholder="Choose look..."
+    [(ngModel)]="currentLook"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
 </div>

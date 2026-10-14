@@ -1,7 +1,10 @@
-<div class="flex gap-3 flex-col w-40">
-  <ax-button text="Smallest" class="ax-xs"> </ax-button>
-  <ax-button text="Small" class="ax-sm"> </ax-button>
-  <ax-button text="Medium" class="ax-md"> </ax-button>
-  <ax-button text="Large" class="ax-lg"> </ax-button>
-  <ax-button text="Largest" class="ax-xl"> </ax-button>
+<div class="flex w-40 flex-col items-stretch gap-4">
+  <ax-button [text]="buttonText()" [class]="currentSize()"></ax-button>
+
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentSize"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
 </div>

@@ -1,59 +1,23 @@
-<ax-bottom-navigation class="w-96" look="solid">
-  <ax-bottom-navigation-item name="home" [active]="true">
-    <ax-icon class="fa-light fa-house"> </ax-icon>
-    <ax-text> Home </ax-text>
-  </ax-bottom-navigation-item>
-  <ax-bottom-navigation-item name="favorite">
-    <ax-icon class="fa-light fa-heart"> </ax-icon>
-    <ax-text> Favorite </ax-text>
-  </ax-bottom-navigation-item>
-  <ax-bottom-navigation-item name="profile">
-    <ax-icon class="fa-light fa-user"> </ax-icon>
-    <ax-text> Profile </ax-text>
-  </ax-bottom-navigation-item>
-</ax-bottom-navigation>
+<div class="flex w-96 flex-col items-stretch gap-4">
+  <ax-bottom-navigation [look]="currentLook()" (onItemClick)="handleItemClick($event)">
+    <ax-bottom-navigation-item name="home" [active]="'home' === selectedItem()">
+      <ax-icon class="fa-light fa-house"> </ax-icon>
+      <ax-text> Home </ax-text>
+    </ax-bottom-navigation-item>
+    <ax-bottom-navigation-item name="favorite" [active]="'favorite' === selectedItem()">
+      <ax-icon class="fa-light fa-heart"> </ax-icon>
+      <ax-text> Favorite </ax-text>
+    </ax-bottom-navigation-item>
+    <ax-bottom-navigation-item name="profile" [active]="'profile' === selectedItem()">
+      <ax-icon class="fa-light fa-user"> </ax-icon>
+      <ax-text> Profile </ax-text>
+    </ax-bottom-navigation-item>
+  </ax-bottom-navigation>
 
-<ax-bottom-navigation class="w-96" look="with-line">
-  <ax-bottom-navigation-item name="home" [active]="true">
-    <ax-icon class="fa-light fa-house"> </ax-icon>
-    <ax-text> Home </ax-text>
-  </ax-bottom-navigation-item>
-  <ax-bottom-navigation-item name="favorite">
-    <ax-icon class="fa-light fa-heart"> </ax-icon>
-    <ax-text> Favorite </ax-text>
-  </ax-bottom-navigation-item>
-  <ax-bottom-navigation-item name="profile">
-    <ax-icon class="fa-light fa-user"> </ax-icon>
-    <ax-text> Profile </ax-text>
-  </ax-bottom-navigation-item>
-</ax-bottom-navigation>
-
-<ax-bottom-navigation class="w-96" look="pills">
-  <ax-bottom-navigation-item name="home" [active]="true">
-    <ax-icon class="fa-light fa-house"> </ax-icon>
-    <ax-text> Home </ax-text>
-  </ax-bottom-navigation-item>
-  <ax-bottom-navigation-item name="favorite">
-    <ax-icon class="fa-light fa-heart"> </ax-icon>
-    <ax-text> Favorite </ax-text>
-  </ax-bottom-navigation-item>
-  <ax-bottom-navigation-item name="profile">
-    <ax-icon class="fa-light fa-user"> </ax-icon>
-    <ax-text> Profile </ax-text>
-  </ax-bottom-navigation-item>
-</ax-bottom-navigation>
-
-<ax-bottom-navigation class="w-96" look="pills-color">
-  <ax-bottom-navigation-item name="home" [active]="true">
-    <ax-icon class="fa-light fa-house"> </ax-icon>
-    <ax-text> Home </ax-text>
-  </ax-bottom-navigation-item>
-  <ax-bottom-navigation-item name="favorite">
-    <ax-icon class="fa-light fa-heart"> </ax-icon>
-    <ax-text> Favorite </ax-text>
-  </ax-bottom-navigation-item>
-  <ax-bottom-navigation-item name="profile">
-    <ax-icon class="fa-light fa-user"> </ax-icon>
-    <ax-text> Profile </ax-text>
-  </ax-bottom-navigation-item>
-</ax-bottom-navigation>
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentLook"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
+</div>

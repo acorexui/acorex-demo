@@ -1,10 +1,15 @@
-<div
-  class="flex w-full items-center justify-center gap-4 py-6"
->
-  <ax-badge color="primary" text="primary"></ax-badge>
-  <ax-badge color="secondary" text="secondary"></ax-badge>
-  <ax-badge color="success" text="success"></ax-badge>
-  <ax-badge color="warning" text="warning"></ax-badge>
-  <ax-badge color="danger" text="danger"></ax-badge>
-  <ax-badge color="default" text="default"></ax-badge>
+<div class="flex w-52 flex-col items-stretch gap-4 py-6">
+  @for (color of [currentColor()]; track color) {
+    <div class="flex justify-center">
+      <ax-badge [color]="color" [text]="badgeText()" look="solid"></ax-badge>
+    </div>
+  }
+
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    placeholder="Choose color..."
+    [(ngModel)]="currentColor"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
 </div>

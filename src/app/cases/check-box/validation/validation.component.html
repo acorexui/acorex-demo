@@ -1,15 +1,31 @@
-<div class="flex flex-col items-center justify-center gap-4">
+<ax-form
+  class="flex w-full max-w-sm flex-col gap-4"
+  [messageStyle]="'float'"
+  [updateOn]="'submit'"
+  (onValidate)="onFormValidated($event)"
+>
   <ax-form-field>
-    <ax-check-box [(ngModel)]="value">
-      <ax-label>Accept Terms</ax-label>
+    <ax-check-box name="acceptTerms" [(ngModel)]="value">
+      <ax-label>Accept terms and conditions</ax-label>
       <ax-validation-rule
         rule="required"
-        message="Please accept terms to continue."
+        message="Please accept the terms to continue."
       ></ax-validation-rule>
     </ax-check-box>
   </ax-form-field>
-  <div>
+
+  <ax-button
+    class="mt-8"
+    [type]="'submit'"
+    text="Submit"
+    color="primary"
+  ></ax-button>
+
+  <p class="text-sm text-muted">
     Value:
-    {{ value() === true ? "true" : value() === false ? "false" : "null" }}
-  </div>
-</div>
+    {{ value() === true ? 'true' : value() === false ? 'false' : 'null' }}
+    @if (submitMessage()) {
+      <span class="text-on-surface"> — {{ submitMessage() }}</span>
+    }
+  </p>
+</ax-form>

@@ -1,0 +1,17 @@
+<div class="flex w-52 flex-col items-stretch gap-4">
+  @for (look of [currentLook()]; track look) {
+    <div class="flex justify-center">
+      <ax-kbd [look]="look">
+        <ax-kbd-item [keys]="['Ctrl', 'S']"></ax-kbd-item>
+        <ax-kbd-item [keys]="['Ctrl', 'Shift', 'P']"></ax-kbd-item>
+      </ax-kbd>
+    </div>
+  }
+
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentLook"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
+</div>

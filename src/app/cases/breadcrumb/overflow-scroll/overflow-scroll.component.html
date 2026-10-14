@@ -1,16 +1,12 @@
-<div
-  class="flex flex-col items-center justify-center gap-3 p-6"
->
+<div class="flex flex-col items-center justify-center gap-3 p-6">
   <div class="w-80">
     <ax-breadcrumbs>
-      @for (i of [1,2,3,4,5,6,7,8,9,10]; track i) {
-      <ax-breadcrumbs-item [active]="i === 10">
-        <a>Level {{ i }}</a>
-      </ax-breadcrumbs-item>
+      @for (i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; track i) {
+        <ax-breadcrumbs-item [active]="i === 10">
+          <a>Level {{ i }}</a>
+        </ax-breadcrumbs-item>
       }
     </ax-breadcrumbs>
   </div>
-  <p class="text-xs text-muted-500 mt-2">
-    Auto-scrolls to last item on init
-  </p>
+  <p class="text-xs text-muted-500 mt-2">Auto-scrolls to last item on init</p>
 </div>

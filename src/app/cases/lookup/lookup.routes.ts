@@ -29,6 +29,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'select-all',
+    loadComponent: () =>
+      import('./select-all/select-all.component').then(
+        (m) => m.SelectAllComponent
+      ),
+  },
+  {
     path: 'multi-column',
     loadComponent: () =>
       import('./multi-column/multi-column.component').then(

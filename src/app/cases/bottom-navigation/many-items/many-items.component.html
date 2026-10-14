@@ -1,22 +1,21 @@
-<ax-bottom-navigation class="w-96">
-	<ax-bottom-navigation-item name="home" [active]="true">
+<ax-bottom-navigation class="w-96" (onItemClick)="handleItemClick($event)">
+	<ax-bottom-navigation-item name="home" [active]="'home' === selectedItem()">
 		<ax-icon class="fa-light fa-house"></ax-icon>
 	</ax-bottom-navigation-item>
-	<ax-bottom-navigation-item name="search">
+	<ax-bottom-navigation-item name="search" [active]="'search' === selectedItem()">
 		<ax-icon class="fa-light fa-magnifying-glass"></ax-icon>
 	</ax-bottom-navigation-item>
-	<ax-bottom-navigation-item name="orders">
+	<ax-bottom-navigation-item name="orders" [active]="'orders' === selectedItem()">
 		<ax-icon class="fa-light fa-receipt"></ax-icon>
 	</ax-bottom-navigation-item>
-	<ax-bottom-navigation-item name="favorites">
+	<ax-bottom-navigation-item name="favorites" [active]="'favorites' === selectedItem()">
 		<ax-icon class="fa-light fa-heart"></ax-icon>
 	</ax-bottom-navigation-item>
-	<ax-bottom-navigation-item name="notifications">
+	<ax-bottom-navigation-item name="notifications" [active]="'notifications' === selectedItem()">
 		<ax-icon class="fa-light fa-bell"></ax-icon>
 	</ax-bottom-navigation-item>
-	<ax-bottom-navigation-item name="profile">
+	<ax-bottom-navigation-item name="profile" [active]="'profile' === selectedItem()">
 		<ax-icon class="fa-light fa-user"></ax-icon>
 	</ax-bottom-navigation-item>
 </ax-bottom-navigation>
-
 

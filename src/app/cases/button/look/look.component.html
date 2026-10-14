@@ -1,7 +1,14 @@
-<div class="flex gap-2 flex-col w-40">
-  <ax-button text="Solid" [look]="'solid'" [color]="'primary'"> </ax-button>
-  <ax-button text="Twotone" [look]="'twotone'" [color]="'primary'"> </ax-button>
-  <ax-button text="Outline" [look]="'outline'" [color]="'primary'"> </ax-button>
-  <ax-button text="Blank" [look]="'blank'" [color]="'primary'"> </ax-button>
-  <ax-button text="Link" [look]="'link'" [color]="'primary'"> </ax-button>
+<div class="flex w-40 flex-col items-stretch gap-4">
+  <ax-button
+    [text]="buttonText()"
+    [look]="currentLook()"
+    color="primary"
+  ></ax-button>
+
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentLook"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
 </div>

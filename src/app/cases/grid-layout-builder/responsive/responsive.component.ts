@@ -15,7 +15,7 @@ export class GridLayoutBuilderResponsiveComponent {
     float: true,
     responsiveLayout: [
       { width: 1200, column: 12 },
-      { width: 900, column: 8 },
+      { width: 900, column: 10 },
       { width: 600, column: 4 },
     ],
   });

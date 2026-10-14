@@ -1,3 +1,4 @@
+import { AXClickEvent } from '@acorex/cdk/common';
 import {
   AXBottomNavigationComponent,
   AXBottomNavigationItemComponent,
@@ -6,7 +7,7 @@ import {
   AXDecoratorIconComponent,
   AXDecoratorGenericComponent,
 } from '@acorex/components/decorators';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   templateUrl: 'disabled.component.html',
@@ -17,4 +18,10 @@ import { Component } from '@angular/core';
     AXDecoratorGenericComponent,
   ],
 })
-export class disabledComponent {}
+export class disabledComponent {
+  protected selectedItem = signal('home');
+
+  handleItemClick(e: AXClickEvent): void {
+    this.selectedItem.set(e.data.name);
+  }
+}
