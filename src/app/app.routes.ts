@@ -153,12 +153,6 @@ export const appRoutes: Route[] = [
       import('./cases/combo-box/combo-box.routes').then((c) => c.routes),
   },
   {
-    path: 'cron-job',
-    component: MasterLayoutComponent,
-    loadChildren: () =>
-      import('./cases/cron-job/cron-job.routes').then((c) => c.routes),
-  },
-  {
     path: 'data-pager',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -225,12 +219,6 @@ export const appRoutes: Route[] = [
       import('./cases/dropdown-button/dropdown-button.routes').then(
         (c) => c.routes,
       ),
-  },
-  {
-    path: 'editor',
-    component: MasterLayoutComponent,
-    loadChildren: () =>
-      import('./cases/editor/editor.routes').then((c) => c.routes),
   },
   {
     path: 'form',
