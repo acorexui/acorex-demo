@@ -4,7 +4,7 @@ import {
   AXDecoratorIconComponent,
 } from '@acorex/components/decorators';
 import { Component } from '@angular/core';
-import { AXDecoratorCloseButtonComponent } from '@acorex/components/button';
+import { AXDecoratorCloseButtonComponent } from '@acorex/components/button'
 
 @Component({
   templateUrl: 'inline.component.html',
