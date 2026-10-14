@@ -1,0 +1,16 @@
+<div class="w-72 py-8">
+  <ax-form-field>
+    <ax-label>Birthdate</ax-label>
+    <ax-datetime-box
+      [boxLook]="boxLook"
+      picker="date"
+      format="yyyy/MM/dd"
+      placeholder="yyyy/MM/dd"
+      [value]="defaultBirthdate"
+      [maxValue]="maxValue"
+      [yearRange]="yearRange"
+    >
+      <ax-clear-button></ax-clear-button>
+    </ax-datetime-box>
+  </ax-form-field>
+</div>

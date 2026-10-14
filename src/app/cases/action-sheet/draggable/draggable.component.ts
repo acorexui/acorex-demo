@@ -26,7 +26,7 @@ export class DraggableComponent {
     },
     {
       text: 'Cut',
-      icon: 'fa-solid fa-scissors',
+      icon: 'fa-regular fa-scissors',
       onClick: () => {
         alert('Cut clicked!');
       },
@@ -34,7 +34,7 @@ export class DraggableComponent {
     {
       name: 'REPORT',
       text: 'Report',
-      icon: 'fa-solid fa-bug',
+      icon: 'fa-regular fa-bug',
       color: 'danger',
       onClick: () => {
         confirm('Do you want report');

@@ -1,8 +1,9 @@
-<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-4 ">
   <ax-color-box
     [ngModel]="color()"
     (onValueChanged)="color.set($event.value)"
     placeholder="Theme color"
+    class="w-sm"
   >
     <ax-prefix>
       <ax-button color="secondary" (onClick)="reset()">

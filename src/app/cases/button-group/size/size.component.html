@@ -1,31 +1,17 @@
-<div class="flex gap-3 flex-col">
-  <ax-button-group [color]="'primary'" [selection]="selection" class="ax-xs">
-    <ax-button-group-item text="Start" [selected]="true"></ax-button-group-item>
-    <ax-button-group-item text="Middle"></ax-button-group-item>
-    <ax-button-group-item text="End"></ax-button-group-item>
-  </ax-button-group>
+<div class="flex flex-col items-stretch gap-4">
+  @for (size of [currentSize()]; track size) {
+    <ax-button-group color="primary" [selection]="selection" [class]="size">
+      <ax-button-group-item text="Start" [selected]="true"></ax-button-group-item>
+      <ax-button-group-item text="Middle"></ax-button-group-item>
+      <ax-button-group-item text="End"></ax-button-group-item>
+    </ax-button-group>
+  }
 
-  <ax-button-group [color]="'primary'" [selection]="selection" class="ax-sm">
-    <ax-button-group-item text="Start" [selected]="true"></ax-button-group-item>
-    <ax-button-group-item text="Middle"> </ax-button-group-item>
-    <ax-button-group-item text="End"></ax-button-group-item>
-  </ax-button-group>
-
-  <ax-button-group [color]="'primary'" [selection]="selection" class="ax-md">
-    <ax-button-group-item text="Start" [selected]="true"></ax-button-group-item>
-    <ax-button-group-item text="Middle"> </ax-button-group-item>
-    <ax-button-group-item text="End"></ax-button-group-item>
-  </ax-button-group>
-
-  <ax-button-group [color]="'primary'" [selection]="selection" class="ax-lg">
-    <ax-button-group-item text="Start" [selected]="true"></ax-button-group-item>
-    <ax-button-group-item text="Middle"> </ax-button-group-item>
-    <ax-button-group-item text="End"></ax-button-group-item>
-  </ax-button-group>
-
-  <ax-button-group [color]="'primary'" [selection]="selection" class="ax-xl">
-    <ax-button-group-item text="Start" [selected]="true"></ax-button-group-item>
-    <ax-button-group-item text="Middle"></ax-button-group-item>
-    <ax-button-group-item text="End"></ax-button-group-item>
-  </ax-button-group>
+  <ax-select-box
+  class="w-52"
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentSize"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
 </div>

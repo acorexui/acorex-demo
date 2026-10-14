@@ -1,39 +1,16 @@
-<div class="flex gap-3 flex-col">
-  <ax-button-group [color]="'primary'" [look]="'solid'" [selection]="selection">
-    <ax-button-group-item text="Start" [selected]="true"></ax-button-group-item>
-    <ax-button-group-item text="Middle"></ax-button-group-item>
-    <ax-button-group-item text="End"></ax-button-group-item>
-  </ax-button-group>
+<div class="flex w-52 flex-col items-stretch gap-4">
+  @for (look of [currentLook()]; track look) {
+    <ax-button-group color="primary" [look]="look" [selection]="selection">
+      <ax-button-group-item text="Start" [selected]="true"></ax-button-group-item>
+      <ax-button-group-item text="Middle"></ax-button-group-item>
+      <ax-button-group-item text="End"></ax-button-group-item>
+    </ax-button-group>
+  }
 
-  <ax-button-group
-    [color]="'primary'"
-    [look]="'twotone'"
-    [selection]="selection"
-  >
-    <ax-button-group-item text="Start" [selected]="true"></ax-button-group-item>
-    <ax-button-group-item text="Middle"> </ax-button-group-item>
-    <ax-button-group-item text="End"></ax-button-group-item>
-  </ax-button-group>
-
-  <ax-button-group
-    [color]="'primary'"
-    [look]="'outline'"
-    [selection]="selection"
-  >
-    <ax-button-group-item text="Start" [selected]="true"></ax-button-group-item>
-    <ax-button-group-item text="Middle"> </ax-button-group-item>
-    <ax-button-group-item text="End"></ax-button-group-item>
-  </ax-button-group>
-
-  <ax-button-group [color]="'primary'" [look]="'blank'" [selection]="selection">
-    <ax-button-group-item text="Start" [selected]="true"></ax-button-group-item>
-    <ax-button-group-item text="Middle"> </ax-button-group-item>
-    <ax-button-group-item text="End"></ax-button-group-item>
-  </ax-button-group>
-
-  <ax-button-group [color]="'primary'" [look]="'link'" [selection]="selection">
-    <ax-button-group-item text="Start" [selected]="true"></ax-button-group-item>
-    <ax-button-group-item text="Middle"></ax-button-group-item>
-    <ax-button-group-item text="End"></ax-button-group-item>
-  </ax-button-group>
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentLook"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
 </div>

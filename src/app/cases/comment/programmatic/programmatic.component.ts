@@ -1,24 +1,31 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, ViewChild } from '@angular/core';
-import { AXCommentModule } from '@acorex/components/comment';
+import {
+  AXCommentContainerComponent,
+  AXCommentItemComponent,
+  AXCommentModule,
+} from '@acorex/components/comment';
 import { AXAvatarModule } from '@acorex/components/avatar';
 import { AXButtonModule } from '@acorex/components/button';
+import { Component, viewChild } from '@angular/core';
+import { AXDecoratorGenericComponent } from '@acorex/components/decorators';
 
 @Component({
-  standalone: true,
   selector: 'app-comment-programmatic',
-  imports: [AXCommentModule, AXAvatarModule, AXButtonModule],
   templateUrl: './programmatic.component.html',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  imports: [AXCommentModule, AXAvatarModule, AXButtonModule, AXDecoratorGenericComponent],
 })
 export class ProgrammaticComponent {
-  @ViewChild('container') container?: any;
-  @ViewChild('parentItem') parentItem?: any;
+  private readonly container = viewChild<AXCommentContainerComponent>(
+    'container',
+  );
+  private readonly parentItem = viewChild<AXCommentItemComponent>('parentItem');
 
   toggleReplies(): void {
-    this.parentItem?.toggleCollapse();
+    this.parentItem()?.toggleReplies();
   }
 
   scrollToR2(): void {
-    this.container?.scrollToReply('r2');
+    const parent = this.parentItem();
+    parent?.showReplies();
+    this.container()?.scrollToReply('r2');
   }
 }

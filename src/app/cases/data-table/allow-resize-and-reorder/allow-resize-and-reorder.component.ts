@@ -6,6 +6,7 @@ import {
   AXRowCommandItem,
 } from '@acorex/components/data-table';
 import { AXDataSource } from '@acorex/cdk/common';
+import { demoPersonName } from '../data-table-sample-data';
 
 @Component({
   templateUrl: './allow-resize-and-reorder.component.html',
@@ -29,8 +30,7 @@ export class AllowResizeAndReorderComponent {
 
   protected result = Array.from({ length: 10 }, (_, i) => ({
     id: i,
-    firstName: `first name ${i}`,
-    lastName: `last name ${i}`,
+    ...demoPersonName(i),
     email: `email-${i}@gmail.com`,
     mobile: `+98233765${i}`,
     country: 'USA',

@@ -23,7 +23,7 @@ export class LongTextComponent {
       text: 'This is an extremely long progress text that demonstrates how the loading dialog component handles very long text content in the progress description area. The text should wrap properly and maintain readability while providing detailed information about the current operation being performed.',
       buttons: [
         {
-          text: 'Cancel this very long operation',
+          text: 'Cancel',
           color: 'danger',
           look: 'outline',
           onClick: () => {
@@ -31,7 +31,7 @@ export class LongTextComponent {
           },
         },
         {
-          text: 'Continue with the process',
+          text: 'Continue',
           color: 'success',
           onClick: () => {
             console.log('Continue clicked');

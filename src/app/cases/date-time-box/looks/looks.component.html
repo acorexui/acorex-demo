@@ -2,7 +2,10 @@
   <div class="w-72">
     <ax-form-field>
       <ax-label>Meeting date and time</ax-label>
-      <ax-datetime-box placeholder="Select the meeting date and time">
+      <ax-datetime-box
+        [look]="currentLook()"
+        placeholder="Select the meeting date and time"
+      >
         <ax-clear-button></ax-clear-button>
       </ax-datetime-box>
     </ax-form-field>
@@ -13,7 +16,7 @@
       <ax-button
         class="ax-sm"
         [text]="look.label"
-        (click)="setLook(look.value)"
+        (onClick)="setLook(look.value)"
         [look]="currentLook() === look.value ? 'solid' : 'outline'"
       ></ax-button>
     }

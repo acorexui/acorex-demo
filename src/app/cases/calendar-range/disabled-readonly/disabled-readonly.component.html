@@ -1,20 +1,36 @@
-<div
-  class="flex flex-col items-center justify-center gap-2 px-4"
->
-  <div class="flex gap-2 items-center">
+<div class="flex flex-col items-center justify-center gap-2 px-4">
+  <div class="flex flex-wrap gap-2 items-center justify-center">
     <ax-button
       [text]="'Toggle Disabled'"
       [class.state-selected]="disabled()"
-      (click)="disabled.set(!this.disabled())"
+      (click)="disabled.set(!disabled())"
     ></ax-button>
     <ax-button
       [text]="'Toggle Readonly'"
-      [class.state-selected]="readonly()"
-      (click)="readonly.set(!this.readonly())"
+      [class.state-selected]="readOnly()"
+      (click)="readOnly.set(!readOnly())"
     ></ax-button>
   </div>
+
+  <small class="text-center text-neutral-500">
+    Selected:
+    {{
+      selectedRange().from ? selectedRange().from!.toDateString() : 'None'
+    }}
+    —
+    {{ selectedRange().end ? selectedRange().end!.toDateString() : 'None' }}
+  </small>
+
   <ax-calendar-range
     [disabled]="disabled()"
-    [readonly]="readonly()"
+    [readonly]="readOnly()"
+    [value]="selectedRange()"
+    (onValueChanged)="onRangeChanged($event)"
   ></ax-calendar-range>
+
+  @if (readOnly()) {
+    <small class="text-center text-neutral-500 max-w-md">
+      Range is read-only: clicks do not update the selection above.
+    </small>
+  }
 </div>

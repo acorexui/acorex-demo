@@ -1,28 +1,19 @@
-<div
-  class="flex w-full items-center justify-center gap-4 py-6"
->
-  <ax-chips text="solid" color="primary" look="solid">
-    <ax-prefix>
-      <ax-icon icon="fa-solid fa-bars"></ax-icon>
-    </ax-prefix>
-    <ax-suffix>
-      <ax-icon icon="ax-icon ax-icon-close"></ax-icon>
-    </ax-suffix>
-  </ax-chips>
-  <ax-chips text="outline" color="primary" look="outline">
-    <ax-prefix>
-      <ax-icon icon="fa-solid fa-bars"></ax-icon>
-    </ax-prefix>
-    <ax-suffix>
-      <ax-icon icon="ax-icon ax-icon-close"></ax-icon>
-    </ax-suffix>
-  </ax-chips>
-  <ax-chips text="twotone" color="primary" look="twotone">
-    <ax-prefix>
-      <ax-icon icon="fa-solid fa-bars"></ax-icon>
-    </ax-prefix>
-    <ax-suffix>
-      <ax-icon icon="ax-icon ax-icon-close"></ax-icon>
-    </ax-suffix>
-  </ax-chips>
+<div class="flex w-52 flex-col items-stretch gap-4">
+  @for (look of [currentLook()]; track look) {
+    <div class="flex justify-center">
+      <ax-chips
+        [text]="chipText()"
+        color="primary"
+        [look]="look"
+        class="w-fit"
+      ></ax-chips>
+    </div>
+  }
+
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentLook"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
 </div>

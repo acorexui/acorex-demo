@@ -1,9 +1,14 @@
 import {
+  AXAudioWaveChangeEvent,
   AXAudioWaveComponent,
   AXWaveConfig,
 } from '@acorex/components/audio-wave';
+import { AXButtonComponent } from '@acorex/components/button';
 import { AXColorBoxComponent } from '@acorex/components/color-box';
-import { AXDecoratorGenericComponent } from '@acorex/components/decorators';
+import {
+  AXDecoratorGenericComponent,
+  AXDecoratorIconComponent,
+} from '@acorex/components/decorators';
 import { AXFormFieldComponent } from '@acorex/components/form';
 import { AXLabelComponent } from '@acorex/components/label';
 import { AXNumberBoxComponent } from '@acorex/components/number-box';
@@ -13,6 +18,7 @@ import {
   Component,
   computed,
   signal,
+  viewChild,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -28,9 +34,14 @@ import { FormsModule } from '@angular/forms';
     AXLabelComponent,
     AXNumberBoxComponent,
     AXTextBoxComponent,
+    AXButtonComponent,
+    AXDecoratorIconComponent,
   ],
 })
 export class configurationComponent {
+  private readonly audioWave = viewChild<AXAudioWaveComponent>('audioWave');
+
+  protected readonly isPlaying = signal(false);
   protected readonly url = signal(
     'https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3'
   );
@@ -65,4 +76,28 @@ export class configurationComponent {
 
     return config;
   });
+
+  protected togglePlay(): void {
+    const wave = this.audioWave();
+    if (!wave) {
+      return;
+    }
+    if (this.isPlaying()) {
+      wave.pause();
+      return;
+    }
+    void wave.play();
+  }
+
+  protected onStatusChanged(event: AXAudioWaveChangeEvent): void {
+    switch (event.status) {
+      case 'play':
+        this.isPlaying.set(true);
+        break;
+      case 'pause':
+      case 'finish':
+        this.isPlaying.set(false);
+        break;
+    }
+  }
 }

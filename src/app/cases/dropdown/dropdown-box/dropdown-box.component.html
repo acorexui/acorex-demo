@@ -1,13 +1,83 @@
-<div class="flex gap-3 mb-3">
-  <ax-button text="Open" (click)="openPanel()"></ax-button>
-  <ax-button text="Close" (click)="closePanel()"></ax-button>
-</div>
+<div class="flex flex-col items-center gap-6 px-4 py-10">
+  <div class="w-full max-w-sm space-y-4">
+    <p class="text-center text-sm text-neutral-500">
+      The panel opens and closes only with the Open and Close buttons below.
+    </p>
 
-<ax-dropdown-box popoverWidth="180px">
-  <ng-container input>
-    <p>input</p>
-  </ng-container>
-  <ng-container panel>
-    <p class="p-3">panel</p>
-  </ng-container>
-</ax-dropdown-box>
+    <ax-dropdown-box
+      class="block w-full"
+      look="outline"
+      popoverWidth="min(100%, 20rem)"
+      [tabIndex]="-1"
+      (onOpened)="onPanelOpened()"
+      (onClosed)="onPanelClosed()"
+    >
+      <ng-container input>
+        <div
+          class="ax-editor ax-chips-container ax-content ax-input min-w-0 flex-1"
+        >
+          @if (selected(); as value) {
+            <span class="truncate">{{ value.label }}</span>
+          } @else {
+            <div class="ax-placeholder" role="textbox" aria-readonly="true">
+              Choose status…
+            </div>
+          }
+        </div>
+      </ng-container>
+
+      <ng-container panel>
+        <div class="overflow-hidden rounded-lg p-1">
+          <ax-button-item-list>
+            @for (option of options; track option.id) {
+              <ax-button-item
+                [text]="option.label"
+                [selected]="selected()?.id === option.id"
+                (onClick)="selectOption(option)"
+              ></ax-button-item>
+            }
+          </ax-button-item-list>
+        </div>
+      </ng-container>
+    </ax-dropdown-box>
+
+    <div
+      class="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-dashed border-neutral-300 px-3 py-2 text-sm"
+    >
+      <span class="text-neutral-600">
+        Panel:
+        <span
+          class="font-medium"
+          [class.text-success]="panelOpen()"
+          [class.text-neutral-600]="!panelOpen()"
+        >
+          {{ panelOpen() ? 'Open' : 'Closed' }}
+        </span>
+      </span>
+      @if (selected(); as value) {
+        <span class="truncate text-neutral-500">
+          Selected: <span class="text-neutral-600">{{ value.label }}</span>
+        </span>
+      }
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-2">
+      <ax-button
+        class="min-w-28 flex-1"
+        text="Open"
+        look="outline"
+        color="primary"
+        [disabled]="panelOpen()"
+        (onClick)="openPanel()"
+      ></ax-button>
+      <ax-button
+        class="min-w-28 flex-1"
+        text="Close"
+        look="outline"
+        color="danger"
+        [disabled]="!panelOpen()"
+        (onClick)="closePanel()"
+      ></ax-button>
+    </div>
+  </div>
+</div>

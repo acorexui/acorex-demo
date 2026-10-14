@@ -1,58 +1,29 @@
-<div class="flex flex-col items-center gap-5">
+<div class="flex w-80 flex-col items-stretch gap-4">
+  @for (mode of [labelMode()]; track mode) {
+    <ax-form [labelMode]="mode">
+      <div class="flex w-full flex-row gap-4">
+        <ax-form-field class="flex-1">
+          <ax-label>First name</ax-label>
+          <ax-text-box name="firstname" placeholder="First name"></ax-text-box>
+        </ax-form-field>
+        <ax-form-field class="flex-1">
+          <ax-label>Last name</ax-label>
+          <ax-text-box name="lastname" placeholder="Last name"></ax-text-box>
+        </ax-form-field>
+      </div>
+    </ax-form>
+  }
+
   <ax-form labelMode="static">
-    <div class="flex w-80 flex-col justify-center gap-4">
-      <div class="flex w-full flex-row gap-4">
-        <ax-form-field class="flex-1">
-          <ax-label>Firstname</ax-label>
-          <ax-text-box name="firstname">
-            <ax-validation-rule rule="required"> </ax-validation-rule>
-          </ax-text-box>
-        </ax-form-field>
-        <ax-form-field class="flex-1">
-          <ax-label>Lastname</ax-label>
-          <ax-text-box name="lastname">
-            <ax-validation-rule rule="required"> </ax-validation-rule>
-          </ax-text-box>
-        </ax-form-field>
-      </div>
-    </div>
-  </ax-form>
-
-  <ax-form labelMode="over">
-    <div class="flex w-80 flex-col justify-center gap-4">
-      <div class="flex w-full flex-row gap-4">
-        <ax-form-field class="flex-1">
-          <ax-label>Firstname</ax-label>
-          <ax-text-box name="firstname">
-            <ax-validation-rule rule="required"> </ax-validation-rule>
-          </ax-text-box>
-        </ax-form-field>
-        <ax-form-field class="flex-1">
-          <ax-label>Lastname</ax-label>
-          <ax-text-box name="lastname">
-            <ax-validation-rule rule="required"> </ax-validation-rule>
-          </ax-text-box>
-        </ax-form-field>
-      </div>
-    </div>
-  </ax-form>
-
-  <ax-form labelMode="floating">
-    <div class="flex w-80 flex-col justify-center gap-4">
-      <div class="flex w-full flex-row gap-4">
-        <ax-form-field class="flex-1">
-          <ax-label>Firstname</ax-label>
-          <ax-text-box name="firstname">
-            <ax-validation-rule rule="required"> </ax-validation-rule>
-          </ax-text-box>
-        </ax-form-field>
-        <ax-form-field class="flex-1">
-          <ax-label>Lastname</ax-label>
-          <ax-text-box name="lastname">
-            <ax-validation-rule rule="required"> </ax-validation-rule>
-          </ax-text-box>
-        </ax-form-field>
-      </div>
-    </div>
+    <ax-form-field>
+      <ax-label>Label mode</ax-label>
+      <ax-select-box
+        textField="text"
+        valueField="value"
+        placeholder="Choose label mode..."
+        [(ngModel)]="labelMode"
+        [dataSource]="labelModeOptions()"
+      ></ax-select-box>
+    </ax-form-field>
   </ax-form>
 </div>

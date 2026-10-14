@@ -17,7 +17,6 @@ import { FormsModule } from '@angular/forms';
     AXButtonComponent,
     AXFormFieldComponent,
     AXDateTimeBoxComponent,
-    AXDecoratorGenericComponent,
     AXDecoratorClearButtonComponent,
   ],
 })

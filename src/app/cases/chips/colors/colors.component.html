@@ -1,50 +1,19 @@
-<div class="flex items-center justify-center gap-4 flex-col">
-  <ax-chips text="Primary" color="primary" look="solid">
-    <ax-prefix>
-      <ax-icon icon="fa-solid fa-bars"></ax-icon>
-    </ax-prefix>
-    <ax-suffix>
-      <ax-icon icon="ax-icon ax-icon-close"></ax-icon>
-    </ax-suffix>
-  </ax-chips>
-  <ax-chips text="Secondary" color="secondary" look="solid">
-    <ax-prefix>
-      <ax-icon icon="fa-solid fa-bars"></ax-icon>
-    </ax-prefix>
-    <ax-suffix>
-      <ax-icon icon="ax-icon ax-icon-close"></ax-icon>
-    </ax-suffix>
-  </ax-chips>
-  <ax-chips text="Warning" color="warning" look="solid">
-    <ax-prefix>
-      <ax-icon icon="fa-solid fa-bars"></ax-icon>
-    </ax-prefix>
-    <ax-suffix>
-      <ax-icon icon="ax-icon ax-icon-close"></ax-icon>
-    </ax-suffix>
-  </ax-chips>
-  <ax-chips text="Success" color="success" look="solid">
-    <ax-prefix>
-      <ax-icon icon="fa-solid fa-bars"></ax-icon>
-    </ax-prefix>
-    <ax-suffix>
-      <ax-icon icon="ax-icon ax-icon-close"></ax-icon>
-    </ax-suffix>
-  </ax-chips>
-  <ax-chips text="Danger" color="danger" look="solid">
-    <ax-prefix>
-      <ax-icon icon="fa-solid fa-bars"></ax-icon>
-    </ax-prefix>
-    <ax-suffix>
-      <ax-icon icon="ax-icon ax-icon-close"></ax-icon>
-    </ax-suffix>
-  </ax-chips>
-  <ax-chips text="Default" color="default" look="solid">
-    <ax-prefix>
-      <ax-icon icon="fa-solid fa-bars"></ax-icon>
-    </ax-prefix>
-    <ax-suffix>
-      <ax-icon icon="ax-icon ax-icon-close"></ax-icon>
-    </ax-suffix>
-  </ax-chips>
+<div class="flex w-52 flex-col items-stretch gap-4">
+  @for (color of [currentColor()]; track color) {
+    <div class="flex justify-center">
+      <ax-chips
+        [text]="chipText()"
+        [color]="color"
+        look="solid"
+        class="w-fit"
+      ></ax-chips>
+    </div>
+  }
+
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentColor"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
 </div>

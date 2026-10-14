@@ -1,7 +1,18 @@
-<div
-  class="flex w-full items-center justify-center gap-4 py-6"
->
-  <ax-chips text="Small" color="primary" size="ax-sm"></ax-chips>
-  <ax-chips text="Medium" color="primary" size="ax-md"></ax-chips>
-  <ax-chips text="Large" color="primary" size="ax-lg"></ax-chips>
+<div class="flex w-52 flex-col items-stretch gap-4">
+  @for (size of [currentSize()]; track size) {
+    <div class="flex justify-center">
+      <ax-chips
+        [text]="chipText()"
+        color="primary"
+        [class]="size + ' w-fit'"
+      ></ax-chips>
+    </div>
+  }
+
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentSize"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
 </div>

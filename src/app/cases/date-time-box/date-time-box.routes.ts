@@ -32,6 +32,13 @@ export const routes: Routes = [
       import('./year-range/year-range.component').then((e) => e.YearRangeComponent),
   },
   {
+    path: 'birthdate',
+    loadComponent: () =>
+      import('./birthdate/birthdate.component').then(
+        (e) => e.BirthdateComponent,
+      ),
+  },
+  {
     path: 'box-look',
     loadComponent: () =>
       import('./box-look/box-look.component').then((e) => e.CalendarLookComponent),

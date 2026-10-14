@@ -24,6 +24,8 @@ const csrPrefixes = [
   'lookup',
   'cdk/overlay',
   'combo-box',
+  // Step content is moved into a portal after init (setTimeout); prerender HTML ≠ client.
+  'step-wizard',
 ] as const;
 
 export const serverRoutes: ServerRoute[] = [

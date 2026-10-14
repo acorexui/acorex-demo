@@ -9,18 +9,18 @@ import { Component, signal } from '@angular/core';
 export class MinMaxComponent {
   readonly today = new Date();
   min = signal<Date>(
-    new Date(this.today.getFullYear(), this.today.getMonth(), 5)
+    new Date(this.today.getFullYear(), this.today.getMonth(), 5),
   );
   max = signal<Date>(
-    new Date(this.today.getFullYear(), this.today.getMonth(), 25)
+    new Date(this.today.getFullYear(), this.today.getMonth(), 25),
   );
 
-  shiftWindow(days: number) {
+  shiftWindow(days: number): void {
     this.min.update(
-      (m) => new Date(m.getFullYear(), m.getMonth(), m.getDate() + days)
+      (m) => new Date(m.getFullYear(), m.getMonth(), m.getDate() + days),
     );
     this.max.update(
-      (x) => new Date(x.getFullYear(), x.getMonth(), x.getDate() + days)
+      (x) => new Date(x.getFullYear(), x.getMonth(), x.getDate() + days),
     );
   }
 }

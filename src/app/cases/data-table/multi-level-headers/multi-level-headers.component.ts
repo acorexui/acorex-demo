@@ -14,8 +14,6 @@ export class MultiLevelHeadersComponent {
     lastName: `Last ${i}`,
     email: `user-${i}@example.com`,
     mobile: `+1 555 01${String(i).padStart(2, '0')}`,
-    city: i % 2 === 0 ? 'Los Angeles' : 'New York',
-    country: 'USA',
   }));
 
   protected readonly dataSource = new AXDataSource({

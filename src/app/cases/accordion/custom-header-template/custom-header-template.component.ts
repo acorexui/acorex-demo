@@ -1,16 +1,12 @@
 import { AXAccordionModule } from '@acorex/components/accordion';
-import { AXImageModule } from '@acorex/components/image';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   templateUrl: 'custom-header-template.component.html',
-  imports: [AXAccordionModule, AXImageModule],
+  imports: [AXAccordionModule],
 })
 export class CustomHeaderTemplate {
-  isCollapsed = true;
-  protected _options: { color: string; isAccordion: boolean; look: any } = {
-    look: 'solid',
-    color: 'primary',
-    isAccordion: false,
-  };
+  protected googleCollapsed = signal(true);
+  protected microsoftCollapsed = signal(true);
+  protected appleCollapsed = signal(true);
 }

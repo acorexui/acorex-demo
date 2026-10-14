@@ -12,6 +12,11 @@ export const routes: Routes = [
       import('./usage/usage.component').then((e) => e.UsageComponent),
   },
   {
+    path: 'look',
+    loadComponent: () =>
+      import('./look/look.component').then((e) => e.LookComponent),
+  },
+  {
     path: 'single-key',
     loadComponent: () =>
       import('./single-key/single-key.component').then(

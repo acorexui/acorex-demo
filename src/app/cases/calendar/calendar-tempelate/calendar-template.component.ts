@@ -1,11 +1,14 @@
-import { AXCalendarComponent, AXCalendarViewType } from '@acorex/components/calendar';
+import {
+  AXCalendarComponent,
+  AXCalendarViewType,
+} from '@acorex/components/calendar';
 import { AXDateTime } from '@acorex/core/date-time';
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   templateUrl: './calendar-template.component.html',
-  imports: [AXCalendarComponent,FormsModule],
+  imports: [AXCalendarComponent, FormsModule],
 })
 export class templatecomponent {
   customCellDate = new Date();

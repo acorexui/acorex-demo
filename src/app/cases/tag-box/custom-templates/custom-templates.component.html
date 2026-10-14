@@ -51,11 +51,16 @@
     (onClick)="onTagClick($event)"
   >
     <ax-prefix>
-      <ax-icon [class]="getCategoryIcon(item.category)"></ax-icon>
+      <span
+        class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full [&_ax-icon]:text-current"
+        [ngClass]="getItemColorClasses(item.color)"
+      >
+        <ax-icon [class]="getCategoryIcon(item.category)"></ax-icon>
+      </span>
     </ax-prefix>
     <ax-suffix>
       <button (click)="tagBoxComponent()?.removeItem(index)" type="button">
-        <ax-icon class="icon icon-close"></ax-icon>
+        <ax-icon class="icon icon-close text-on-surface"></ax-icon>
       </button>
     </ax-suffix>
   </ax-tag>
@@ -67,14 +72,7 @@
   <div class="flex w-full items-center gap-3 rounded p-2 transition-colors">
     <div
       class="flex h-8 w-8 items-center justify-center rounded-full"
-      [ngClass]="{
-        'bg-primary-500/15 text-primary-500': item.color === 'primary',
-        'bg-success-500/15 text-success-500': item.color === 'success',
-        'bg-danger-500/15 text-danger-500': item.color === 'danger',
-        'bg-warning-500/15 text-warning-500': item.color === 'warning',
-        'bg-info-500/15 text-info-500': item.color === 'info',
-        'bg-muted-500/15 text-muted-500': item.color === 'muted',
-      }"
+      [ngClass]="getItemColorClasses(item.color)"
     >
       <ax-icon [class]="getCategoryIcon(item.category)"></ax-icon>
     </div>

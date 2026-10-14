@@ -1,5 +1,24 @@
 <div class="w-full max-w-4xl mx-auto flex flex-col gap-6 p-4">
-  <ax-audio-wave [config]="waveConfig()"></ax-audio-wave>
+  <div
+    class="flex items-center gap-3 rounded-lg border border-on-surface bg-surface p-3 shadow-sm"
+  >
+    <div class="min-w-0 flex-1">
+      <ax-audio-wave
+        #audioWave
+        [config]="waveConfig()"
+        (onStatusChanged)="onStatusChanged($event)"
+      />
+    </div>
+    <ax-button class="shrink-0" color="primary" (onClick)="togglePlay()">
+      <ax-icon>
+        <i
+          class="fa-solid"
+          [class.fa-play]="!isPlaying()"
+          [class.fa-pause]="isPlaying()"
+        ></i>
+      </ax-icon>
+    </ax-button>
+  </div>
 
   <div class="p-4 surface rounded-lg flex flex-col gap-4">
     <ax-title level="4">Wave Configuration</ax-title>

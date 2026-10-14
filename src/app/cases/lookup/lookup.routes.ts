@@ -29,10 +29,24 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'select-all',
+    loadComponent: () =>
+      import('./select-all/select-all.component').then(
+        (m) => m.SelectAllComponent
+      ),
+  },
+  {
     path: 'multi-column',
     loadComponent: () =>
       import('./multi-column/multi-column.component').then(
         (m) => m.MultiColumnComponent
+      ),
+  },
+  {
+    path: 'multi-column-tree',
+    loadComponent: () =>
+      import('./multi-column-tree/multi-column-tree.component').then(
+        (m) => m.MultiColumnTreeComponent,
       ),
   },
   {

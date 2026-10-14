@@ -9,7 +9,13 @@ import {
   AXDecoratorHeadingComponent,
 } from '@acorex/components/decorators';
 import { AXPopupModule } from '@acorex/components/popup';
-import { Component, inject, signal, TemplateRef, viewChild } from '@angular/core';
+import {
+  Component,
+  inject,
+  signal,
+  TemplateRef,
+  viewChild,
+} from '@angular/core';
 
 type BackdropMode = 'default' | 'transparent' | 'custom';
 
@@ -35,7 +41,12 @@ export class CenteredComponent {
     const options: AXOverlayOptions = {
       backdrop:
         mode === 'transparent'
-          ? { enabled: true, background: false, closeOnClick: true }
+          ? {
+              enabled: true,
+              background: true,
+              closeOnClick: true,
+              backdropClass: 'backdrop-blur-sm',
+            }
           : mode === 'custom'
             ? {
                 enabled: true,

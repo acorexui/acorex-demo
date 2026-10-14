@@ -3,12 +3,46 @@ import {
   AXButtonGroupComponent,
   AXButtonGroupItemComponent,
 } from '@acorex/components/button-group';
-import { Component } from '@angular/core';
+import { AXSelectBoxComponent } from '@acorex/components/select-box';
+import { Component, computed, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+type ButtonGroupColorDemo =
+  | 'default'
+  | 'primary'
+  | 'secondary'
+  | 'success'
+  | 'warning'
+  | 'danger';
 
 @Component({
   templateUrl: 'color.component.html',
-  imports: [AXButtonGroupComponent, AXButtonGroupItemComponent],
+  imports: [
+    FormsModule,
+    AXButtonGroupComponent,
+    AXButtonGroupItemComponent,
+    AXSelectBoxComponent,
+  ],
 })
 export class ColorComponent {
-  selection: AXSelectionMode = 'single';
+  protected readonly selection: AXSelectionMode = 'single';
+
+  protected currentColor = signal<ButtonGroupColorDemo>('primary');
+
+  protected readonly colors = signal<ButtonGroupColorDemo[]>([
+    'default',
+    'primary',
+    'secondary',
+    'success',
+    'warning',
+    'danger',
+  ]);
+
+  protected dataSource = computed(() =>
+    this.colors().map((color) => ({
+      value: color,
+      text: color.charAt(0).toUpperCase() + color.slice(1),
+    })),
+  );
+
 }

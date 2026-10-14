@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AXDataTableModule } from '@acorex/components/data-table';
 import { AXDataSource } from '@acorex/cdk/common';
+import { demoPersonName } from '../data-table-sample-data';
 
 @Component({
   templateUrl: 'usage.component.html',
@@ -9,8 +10,7 @@ import { AXDataSource } from '@acorex/cdk/common';
 export class UsageComponent {
   protected result = Array.from({ length: 100 }, (_, i) => ({
     id: i,
-    firstName: `first name ${i}`,
-    lastName: `last name ${i}`,
+    ...demoPersonName(i),
     email: `email-${i}@gmail.com`,
     mobile: `+98233765${i}`,
     country: 'USA',
