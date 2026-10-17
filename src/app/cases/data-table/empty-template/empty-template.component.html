@@ -1,55 +1,33 @@
-<div class="flex max-w-3xl flex-col gap-3">
-  <p class="text-sm text-muted">
-    Bind <code class="text-on-surface">[emptyTemplate]</code> when the data source
-    returns no rows. Keep the template about one line tall — body rows use
-    <code class="text-on-surface">itemHeight</code> (virtual scroll).
-  </p>
-
-  @defer (on idle) {
-    <ax-data-table
-      class="empty-template-table border border-default rounded-lg"
-      [showHeader]="_options.showHeader"
-      [fixedHeader]="_options.fixedHeader"
-      [loading]="_options.loading"
-      [itemHeight]="_options.itemHeight"
-      [dataSource]="dataSourceForEmpty"
-      [paging]="false"
-      [emptyTemplate]="emptyTemplateRef"
-    >
-      <ax-index-column [width]="'56px'" fixed="start"></ax-index-column>
-      <ax-text-column
-        name="firstName"
-        [width]="'160px'"
-        [dataField]="'firstName'"
-        caption="First name"
-      ></ax-text-column>
-      <ax-text-column
-        name="lastName"
-        [width]="'160px'"
-        [dataField]="'lastName'"
-        caption="Last name"
-      ></ax-text-column>
-      <ax-text-column
-        name="email"
-        [width]="'220px'"
-        [dataField]="'email'"
-        caption="Email"
-      ></ax-text-column>
-    </ax-data-table>
-  } @placeholder {
-    <div
-      class="flex h-32 items-center justify-center rounded border border-dashed border-default"
-    >
-      <span class="text-muted">Loading table…</span>
-    </div>
-  }
-
-  <ng-template #emptyTemplateRef>
-    <div
-      class="flex h-full w-full items-center justify-center gap-2 px-3 text-sm leading-none text-muted"
-    >
-      <ax-icon class="fa-light fa-inbox shrink-0 text-base"></ax-icon>
-      <span class="text-on-surface">No records — custom emptyTemplate</span>
-    </div>
-  </ng-template>
+<div class="h-[500px] w-full max-w-[800px]">
+  <ax-data-table
+    [dataSource]="emptyTableDataSource"
+    [paging]="false"
+    [alternative]="true"
+    [emptyTemplate]="dataTableEmptyTpl"
+  >
+    <ax-text-column
+      [dataField]="'firstName'"
+      caption="First Name"
+    ></ax-text-column>
+    <ax-text-column
+      [dataField]="'lastName'"
+      caption="Last Name"
+    ></ax-text-column>
+    <ax-text-column [dataField]="'email'" caption="Email"></ax-text-column>
+    <ng-template #dataTableEmptyTpl>
+      <div
+        class="text-on-surface/75 flex flex-col items-center justify-center gap-2 py-4"
+      >
+        <i class="ax-icon ax-icon-inbox text-3xl" aria-hidden="true"></i>
+        <span class="font-medium">No records found</span>
+        <span class="text-sm">Try changing filters or add a new row.</span>
+        <ax-button
+          class="ax-sm"
+          text="Refresh"
+          look="outline"
+          (onClick)="refreshEmptyTable()"
+        ></ax-button>
+      </div>
+    </ng-template>
+  </ax-data-table>
 </div>

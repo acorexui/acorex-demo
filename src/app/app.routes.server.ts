@@ -27,8 +27,11 @@ const csrPrefixes = [
   'combo-box',
   // Step content is moved into a portal after init (setTimeout); prerender HTML ≠ client.
   'step-wizard',
-  // data-table text-highlight cleanup touches document on destroy (see data-table demos).
-  'data-table',
+  // Other data-table demos are not safe to prerender in Node.
+  'data-table/usage',
+  'data-table/cell-template',
+  'data-table/allow-resize-and-reorder',
+  'data-table/multi-level-headers',
   // Heavy client scheduler; prerender workers are unreliable for these demos.
   'scheduler',
 ] as const;

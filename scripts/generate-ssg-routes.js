@@ -178,7 +178,10 @@ function generateSSGRoutes() {
     "cdk/overlay/",
     "combo-box/",
     "step-wizard/",
-    "data-table/",
+    "data-table/usage",
+    "data-table/cell-template",
+    "data-table/allow-resize-and-reorder",
+    "data-table/multi-level-headers",
     "scheduler/",
   ];
 
