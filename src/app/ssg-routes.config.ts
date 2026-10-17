@@ -216,6 +216,7 @@ export const ssgRoutes = [
   'core/validation/usage',
   'data-pager/compact-interaction',
   'data-pager/usage',
+  'data-table/empty-template',
   'date-time-box/allow-typing',
   'date-time-box/birthdate',
   'date-time-box/box-look',
