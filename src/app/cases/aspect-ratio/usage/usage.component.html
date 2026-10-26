@@ -1,17 +1,6 @@
 <div
   class="flex flex-col items-center justify-center gap-4 p-4"
 >
-  <ax-aspect-ratio
-    [ratio]="currentRatio()"
-    class="w-full max-w-md border border-surface rounded-lg overflow-hidden"
-  >
-    <div
-      class="bg-gradient-to-br from-blue-500 to-purple-600 h-full flex items-center justify-center text-white font-bold text-xl"
-    >
-      Content with {{ currentRatio() | number : "1.1-1" }}:1 ratio
-    </div>
-  </ax-aspect-ratio>
-
   <div class="flex gap-2 justify-center items-center w-full">
     <ax-label class="text-nowrap">Preset Ratios:</ax-label>
     <ax-select-box
@@ -38,4 +27,15 @@
     >
     </ax-number-box>
   </div>
+
+  <ax-aspect-ratio
+    [ratio]="currentRatio()"
+    class="w-full max-w-md border border-surface rounded-lg overflow-hidden"
+  >
+    <div
+      class="bg-gradient-to-br from-blue-500 to-purple-600 h-full flex items-center justify-center text-white font-bold text-xl"
+    >
+      Content with {{ currentRatio() | number : "1.1-1" }}:1 ratio
+    </div>
+  </ax-aspect-ratio>
 </div>

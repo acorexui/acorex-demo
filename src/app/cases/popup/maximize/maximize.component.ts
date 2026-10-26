@@ -1,32 +1,37 @@
 import { AXButtonModule } from '@acorex/components/button';
-import { AXDecoratorModule } from '@acorex/components/decorators';
+import { AXLabelComponent } from '@acorex/components/label';
 import { AXPopupModule, AXPopupService } from '@acorex/components/popup';
-import { Component, inject } from '@angular/core';
+import { AXSwitchComponent } from '@acorex/components/switch';
+import { Component, inject, signal } from '@angular/core';
 import { AgreementComponents } from '../../../shared/agreement/agreement.components';
 
 @Component({
   templateUrl: 'maximize.component.html',
-  imports: [AXButtonModule, AXPopupModule, AXDecoratorModule],
+  imports: [AXButtonModule, AXPopupModule, AXSwitchComponent, AXLabelComponent],
 })
 export class PopUpMaximizeComponent {
   private readonly popup = inject(AXPopupService);
 
-  protected openWithMaximizable(): void {
+  /** When false, uses `maximizable: true`; when true, uses `buttons.maximize`. */
+  protected readonly buttonsMaximize = signal(false);
+
+  protected openPopup(): void {
+    if (this.buttonsMaximize()) {
+      this.popup.open(AgreementComponents, {
+        title: 'Software Agreement',
+        size: 'md',
+        buttons: {
+          maximize: true,
+          close: true,
+        },
+      });
+      return;
+    }
+
     this.popup.open(AgreementComponents, {
       title: 'Software Agreement',
       size: 'md',
       maximizable: true,
-    });
-  }
-
-  protected openWithButtonsMaximize(): void {
-    this.popup.open(AgreementComponents, {
-      title: 'Software Agreement',
-      size: 'md',
-      buttons: {
-        maximize: true,
-        close: true,
-      },
     });
   }
 }

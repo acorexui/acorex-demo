@@ -1,5 +1,6 @@
 <ax-number-box
-  [(ngModel)]="options().value"
-  [thousandsSeparator]="options().thousandsSeparator"
+  [ngModel]="value()"
+  (ngModelChange)="value.set($event)"
+  [thousandsSeparator]="thousandsSeparator"
 >
 </ax-number-box>

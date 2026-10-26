@@ -1,13 +1,15 @@
-<div class="flex flex-col gap-4">
-  <div class="flex flex-wrap gap-2">
-    <ax-button
-      color="primary"
-      text="maximizable: true"
-      (onClick)="openWithMaximizable()"
-    ></ax-button>
-    <ax-button
-      text="buttons.maximize: true"
-      (onClick)="openWithButtonsMaximize()"
-    ></ax-button>
+<div class="flex flex-col items-center gap-4 py-10">
+  <div class="flex w-64 items-center justify-between gap-3">
+    <ax-label>buttons.maximize</ax-label>
+    <ax-switch
+      [value]="buttonsMaximize()"
+      (valueChange)="buttonsMaximize.set($event)"
+    ></ax-switch>
   </div>
+
+  <ax-button
+    color="primary"
+    text="Open popup"
+    (onClick)="openPopup()"
+  ></ax-button>
 </div>

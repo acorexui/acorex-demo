@@ -1,36 +1,15 @@
-<div
-  class="flex flex-col items-center justify-center gap-4 p-4"
->
-  <div class="flex flex-wrap gap-2 justify-center">
-    <ax-button color="primary" text="Top Start" (onClick)="showTopStart()">
-    </ax-button>
+<div class="flex flex-col items-center justify-center gap-4 p-4">
+  <ax-select-box
+    class="w-56"
+    [dataSource]="locationOptions"
+    textField="text"
+    valueField="value"
+    [(ngModel)]="selectedLocation"
+  ></ax-select-box>
 
-    <ax-button color="success" text="Top Center" (onClick)="showTopCenter()">
-    </ax-button>
-
-    <ax-button color="warning" text="Top End" (onClick)="showTopEnd()">
-    </ax-button>
-
-    <ax-button color="danger" text="Bottom Start" (onClick)="showBottomStart()">
-    </ax-button>
-
-    <ax-button
-      color="secondary"
-      text="Bottom Center"
-      (onClick)="showBottomCenter()"
-    >
-    </ax-button>
-
-    <ax-button color="default" text="Bottom End" (onClick)="showBottomEnd()">
-    </ax-button>
-  </div>
-
-  <div class="mt-4">
-    <ax-button
-      color="primary"
-      text="Show All Locations"
-      (onClick)="showMultipleLocations()"
-    >
-    </ax-button>
-  </div>
+  <ax-button
+    [color]="selectedButtonColor()"
+    [text]="selectedButtonText()"
+    (onClick)="showSelected()"
+  ></ax-button>
 </div>

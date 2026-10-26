@@ -1,0 +1,41 @@
+<div class="flex flex-col items-center justify-center gap-6 px-4 py-16">
+  <div class="text-center">
+    <ax-title>Date picker</ax-title>
+    <p class="mt-1 text-sm text-muted">
+      Choose month, day, and year in separate columns.
+    </p>
+  </div>
+
+  <ax-picker-container class="h-56 w-full max-w-md">
+    <ax-picker-title>
+      <div class="grid w-full grid-cols-3 gap-2 px-2 text-center text-sm font-medium">
+        <ax-text>Month</ax-text>
+        <ax-text>Day</ax-text>
+        <ax-text>Year</ax-text>
+      </div>
+    </ax-picker-title>
+    <ax-picker-items
+      class="min-w-0 flex-1"
+      [items]="months()"
+      [ngModel]="selectedMonth()"
+      (onValueChanged)="onMonthChanged($event)"
+    ></ax-picker-items>
+    <ax-picker-items
+      class="min-w-0 flex-1"
+      [items]="days()"
+      [ngModel]="selectedDay()"
+      (onValueChanged)="onDayChanged($event)"
+    ></ax-picker-items>
+    <ax-picker-items
+      class="min-w-0 flex-1"
+      [items]="years()"
+      [ngModel]="selectedYear()"
+      (onValueChanged)="onYearChanged($event)"
+    ></ax-picker-items>
+  </ax-picker-container>
+
+  <p class="text-sm text-muted">
+    Selected:
+    <strong class="text-on-surface">{{ formattedDate() }}</strong>
+  </p>
+</div>

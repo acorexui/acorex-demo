@@ -1,12 +1,12 @@
 <div class="flex w-40 flex-col items-stretch gap-4">
-  <ax-check-box [color]="currentColor()" [(ngModel)]="checked">
-    <ax-label>{{ labelText() }}</ax-label>
-  </ax-check-box>
-
   <ax-select-box
     textField="text"
     valueField="value"
     [(ngModel)]="currentColor"
     [dataSource]="dataSource()"
   ></ax-select-box>
+
+  <ax-check-box [color]="currentColor()" [(ngModel)]="checked">
+    <ax-label>{{ labelText() }}</ax-label>
+  </ax-check-box>
 </div>

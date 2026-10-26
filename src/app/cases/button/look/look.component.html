@@ -1,14 +1,14 @@
 <div class="flex w-40 flex-col items-stretch gap-4">
-  <ax-button
-    [text]="buttonText()"
-    [look]="currentLook()"
-    color="primary"
-  ></ax-button>
-
   <ax-select-box
     textField="text"
     valueField="value"
     [(ngModel)]="currentLook"
     [dataSource]="dataSource()"
   ></ax-select-box>
+
+  <ax-button
+    [text]="buttonText()"
+    [look]="currentLook()"
+    color="primary"
+  ></ax-button>
 </div>

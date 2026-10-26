@@ -1,13 +1,15 @@
-<div class="flex flex-col gap-4">
-  <div class="flex flex-wrap gap-2">
-    <ax-button
-      color="primary"
-      text="closeOnBackdropClick: true"
-      (onClick)="openCloseOnBackdrop()"
-    ></ax-button>
-    <ax-button
-      text="closeOnBackdropClick: false"
-      (onClick)="openKeepOpenOnBackdrop()"
-    ></ax-button>
+<div class="flex flex-col items-center gap-4 py-10">
+  <div class="flex items-center justify-between gap-3 w-64">
+    <ax-label>Close on backdrop click</ax-label>
+    <ax-switch
+      [value]="closeOnBackdropClick()"
+      (valueChange)="closeOnBackdropClick.set($event)"
+    ></ax-switch>
   </div>
+
+  <ax-button
+    color="primary"
+    text="Open popup"
+    (onClick)="openPopup()"
+  ></ax-button>
 </div>

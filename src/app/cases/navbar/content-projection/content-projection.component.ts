@@ -1,5 +1,4 @@
-import { AXAvatarComponent } from '@acorex/components/avatar';
-import { AXBadgeComponent } from '@acorex/components/badge';
+
 import { AXButtonComponent } from '@acorex/components/button';
 import {
   AXDecoratorGenericComponent,
@@ -15,8 +14,7 @@ import { Component } from '@angular/core';
     AXDecoratorGenericComponent,
     AXDecoratorIconComponent,
     AXButtonComponent,
-    AXBadgeComponent,
-    AXAvatarComponent,
+
   ],
 })
 export class ContentProjectionComponent {}

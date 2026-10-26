@@ -1,47 +1,28 @@
 import { AXButtonModule } from '@acorex/components/button';
-import { AXDecoratorModule } from '@acorex/components/decorators';
+import { AXLabelComponent } from '@acorex/components/label';
 import { AXPopupModule, AXPopupService } from '@acorex/components/popup';
-import { Component, inject } from '@angular/core';
+import { AXSwitchComponent } from '@acorex/components/switch';
+import { Component, inject, signal } from '@angular/core';
 import { AgreementComponents } from '../../../shared/agreement/agreement.components';
 
 @Component({
   templateUrl: 'close-on-escape.component.html',
-  imports: [AXButtonModule, AXPopupModule, AXDecoratorModule],
+  imports: [AXButtonModule, AXPopupModule, AXSwitchComponent, AXLabelComponent],
 })
 export class PopUpCloseOnEscapeComponent {
   private readonly popup = inject(AXPopupService);
 
-  protected openCloseOnEscape(): void {
-    this.popup.open(AgreementComponents, {
-      title: 'Software Agreement',
-      size: 'md',
-      closeOnEscape: true,
-      closeButton: false,
-    });
-  }
+  protected readonly closeOnEscape = signal(true);
+  protected readonly closeButton = signal(false);
 
-  protected openKeepOpenOnEscape(): void {
+  protected openPopup(): void {
+    const showCloseButton = this.closeButton();
     this.popup.open(AgreementComponents, {
       title: 'Software Agreement',
       size: 'md',
-      closeOnEscape: false,
-      closeButton: true,
-    });
-  }
-
-  protected openLegacyEscapeWithCloseButton(): void {
-    this.popup.open(AgreementComponents, {
-      title: 'Software Agreement',
-      size: 'md',
-      closeButton: true,
-    });
-  }
-
-  protected openLegacyEscapeWithoutCloseButton(): void {
-    this.popup.open(AgreementComponents, {
-      title: 'Software Agreement',
-      size: 'md',
-      closeButton: false,
+      closeOnEscape: this.closeOnEscape(),
+      closeButton: showCloseButton,
+      buttons: { close: showCloseButton },
     });
   }
 }
