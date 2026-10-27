@@ -1,19 +1,30 @@
-<div class="flex flex-col gap-4 items-center justify-center">
-  <div class="text-sm text-muted">Projected: ax-title and ax-divider</div>
-  <ax-menu [orientation]="'vertical'">
-    <ax-title>Section Header</ax-title>
-    <ax-menu-item>
-      <ax-text>Alpha</ax-text>
-    </ax-menu-item>
-    <ax-divider></ax-divider>
-    <ax-menu-item>
-      <ax-text>Beta</ax-text>
-    </ax-menu-item>
-    <ax-divider></ax-divider>
-    <ax-menu-item>
-      <ax-text>Gamma</ax-text>
-    </ax-menu-item>
-  </ax-menu>
-  <div class="text-sm text-muted">Data-driven: group.title and break</div>
-  <ax-menu [orientation]="'vertical'" [items]="items()"></ax-menu>
+<div class="flex flex-wrap items-start justify-center gap-8">
+  <div class="flex flex-col items-center gap-2">
+    <p class="text-center text-sm text-muted">
+      Projected: <code class="text-on-surface">ax-title</code> and
+      <code class="text-on-surface">ax-divider</code>
+    </p>
+    <ax-menu [orientation]="'vertical'">
+      <ax-title>Section Header</ax-title>
+      <ax-menu-item>
+        <ax-text>Alpha</ax-text>
+      </ax-menu-item>
+      <ax-divider></ax-divider>
+      <ax-menu-item>
+        <ax-text>Beta</ax-text>
+      </ax-menu-item>
+      <ax-divider></ax-divider>
+      <ax-menu-item>
+        <ax-text>Gamma</ax-text>
+      </ax-menu-item>
+    </ax-menu>
+  </div>
+
+  <div class="flex flex-col items-center gap-2">
+    <p class="text-center text-sm text-muted">
+      Data-driven: <code class="text-on-surface">group.title</code> and
+      <code class="text-on-surface">break</code>
+    </p>
+    <ax-menu [orientation]="'vertical'" [items]="items()"></ax-menu>
+  </div>
 </div>

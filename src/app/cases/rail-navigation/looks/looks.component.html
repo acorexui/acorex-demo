@@ -1,4 +1,17 @@
-<div class="flex items-center justify-center gap-4">
+<div class="flex flex-col items-center justify-center gap-4">
+  <div class="flex flex-col gap-2">
+    <label class="text-sm font-medium">Select Look:</label>
+    <ax-select-box
+      class="w-40"
+      textField="text"
+      valueField="value"
+      [ngModel]="currentLook()"
+      [dataSource]="dataSource()"
+      (onValueChanged)="onLookChange($event.value)"
+    >
+    </ax-select-box>
+  </div>
+
   <ax-rail-navigation [look]="currentLook()" class="h-[100vh]">
     <ax-rail-navigation-item [active]="true">
       <ax-icon class="fa-solid fa-home"></ax-icon>
@@ -22,17 +35,4 @@
       </ax-rail-navigation-item>
     </ax-suffix>
   </ax-rail-navigation>
-
-  <div class="flex flex-col gap-2">
-    <label class="text-sm font-medium">Select Look:</label>
-    <ax-select-box
-      class="w-40"
-      textField="text"
-      valueField="value"
-      [ngModel]="currentLook()"
-      [dataSource]="dataSource()"
-      (onValueChanged)="onLookChange($event.value)"
-    >
-    </ax-select-box>
-  </div>
 </div>

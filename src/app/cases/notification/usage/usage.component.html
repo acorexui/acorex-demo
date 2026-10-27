@@ -1,33 +1,15 @@
-<div
-  class="flex flex-col items-center justify-center gap-4 p-4"
->
-  <div class="flex flex-wrap gap-2 justify-center">
-    <ax-button
-      color="success"
-      text="Success Notification"
-      (onClick)="showBasicNotification()"
-    >
-    </ax-button>
+<div class="flex flex-col items-center justify-center gap-4 p-4">
+  <ax-select-box
+    class="w-52"
+    [dataSource]="typeOptions"
+    textField="text"
+    valueField="value"
+    [(ngModel)]="selectedType"
+  ></ax-select-box>
 
-    <ax-button
-      color="primary"
-      text="Info Notification"
-      (onClick)="showInfoNotification()"
-    >
-    </ax-button>
-
-    <ax-button
-      color="warning"
-      text="Warning Notification"
-      (onClick)="showWarningNotification()"
-    >
-    </ax-button>
-
-    <ax-button
-      color="danger"
-      text="Error Notification"
-      (onClick)="showErrorNotification()"
-    >
-    </ax-button>
-  </div>
+  <ax-button
+    [color]="selectedType()"
+    [text]="selectedButtonText()"
+    (onClick)="showNotification()"
+  ></ax-button>
 </div>

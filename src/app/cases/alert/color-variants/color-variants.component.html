@@ -1,13 +1,13 @@
 <div class="flex w-52 flex-col items-stretch gap-4">
-  <ax-alert [color]="currentColor()">
-    <ax-icon></ax-icon>
-    <ax-title>{{ titleText() }}</ax-title>
-  </ax-alert>
-
   <ax-select-box
     textField="text"
     valueField="value"
     [(ngModel)]="currentColor"
     [dataSource]="dataSource()"
   ></ax-select-box>
+
+  <ax-alert [color]="currentColor()">
+    <ax-icon></ax-icon>
+    <ax-title>{{ titleText() }}</ax-title>
+  </ax-alert>
 </div>

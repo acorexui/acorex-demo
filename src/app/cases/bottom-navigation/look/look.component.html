@@ -1,4 +1,11 @@
 <div class="flex w-96 flex-col items-stretch gap-4">
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentLook"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
+
   <ax-bottom-navigation [look]="currentLook()" (onItemClick)="handleItemClick($event)">
     <ax-bottom-navigation-item name="home" [active]="'home' === selectedItem()">
       <ax-icon class="fa-light fa-house"> </ax-icon>
@@ -13,11 +20,4 @@
       <ax-text> Profile </ax-text>
     </ax-bottom-navigation-item>
   </ax-bottom-navigation>
-
-  <ax-select-box
-    textField="text"
-    valueField="value"
-    [(ngModel)]="currentLook"
-    [dataSource]="dataSource()"
-  ></ax-select-box>
 </div>

@@ -1,4 +1,11 @@
 <div class="flex w-52 flex-col items-stretch gap-4">
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentSize"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
+
   @for (size of [currentSize()]; track size) {
     <div class="flex justify-center">
       <ax-chips
@@ -8,11 +15,4 @@
       ></ax-chips>
     </div>
   }
-
-  <ax-select-box
-    textField="text"
-    valueField="value"
-    [(ngModel)]="currentSize"
-    [dataSource]="dataSource()"
-  ></ax-select-box>
 </div>

@@ -18,22 +18,19 @@ import { FormsModule } from '@angular/forms';
 })
 export class StatesComponent {
   otpValue = signal('');
-  selectedState = signal<'clear' | 'success' | 'error'>('clear');
 
-  states = [
-    { value: 'clear', label: 'Clear', description: 'Default state' },
-    { value: 'success', label: 'Success', description: 'Valid input' },
-    { value: 'error', label: 'Error', description: 'Invalid input' },
-  ] as const;
+  protected readonly selectedState = signal<'clear' | 'error'>('clear');
 
-  setState(state: 'clear' | 'success' | 'error') {
+  protected readonly states = [
+    { value: 'clear' as const, label: 'Clear', description: 'Default state' },
+    { value: 'error' as const, label: 'Error', description: 'Invalid input' },
+  ];
+
+  protected setState(state: 'clear' | 'error'): void {
     this.selectedState.set(state);
   }
 
-  onCompleted(event: any) {
+  protected onCompleted(event: unknown): void {
     console.log('OTP completed:', event);
-    if (event.isCompleted) {
-      this.setState('success');
-    }
   }
 }

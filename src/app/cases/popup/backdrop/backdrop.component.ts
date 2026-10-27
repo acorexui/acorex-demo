@@ -11,6 +11,17 @@ import { AgreementComponents } from '../../../shared/agreement/agreement.compone
 @Component({
   templateUrl: 'backdrop.component.html',
   imports: [AXButtonModule, AXPopupModule, AXDecoratorModule],
+  encapsulation: ViewEncapsulation.None,
+  styles: `
+    .demo-popup-backdrop {
+      background: color-mix(
+        in srgb,
+        var(--ax-sys-color-primary) 50%,
+        transparent
+      ) !important;
+      backdrop-filter: blur(8px);
+    }
+  `,
 })
 export class PopUpBackdropComponent {
   private readonly popup = inject(AXPopupService);

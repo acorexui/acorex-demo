@@ -1,13 +1,15 @@
-<div class="flex flex-col gap-4">
-  <div class="flex flex-wrap gap-2">
-    <ax-button
-      color="primary"
-      text="Minimize bottom-right"
-      (onClick)="openMinimize('bottom-right')"
-    ></ax-button>
-    <ax-button
-      text="Minimize bottom-left"
-      (onClick)="openMinimize('bottom-left')"
-    ></ax-button>
-  </div>
+<div class="flex flex-col items-center justify-center gap-4 py-10">
+  <ax-select-box
+    class="w-56"
+    [dataSource]="positionOptions"
+    textField="text"
+    valueField="value"
+    [(ngModel)]="selectedPosition"
+  ></ax-select-box>
+
+  <ax-button
+    color="primary"
+    [text]="buttonText()"
+    (onClick)="openPopup()"
+  ></ax-button>
 </div>

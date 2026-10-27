@@ -1,43 +1,45 @@
-<div
-  class="flex flex-col items-center justify-center gap-4 p-4"
->
-  <div class="flex flex-wrap gap-2 justify-center">
-    <ax-button
-      color="primary"
-      text="Short Timeout (2s)"
-      (onClick)="showShortTimeout()"
-    >
-    </ax-button>
+<div class="flex w-full max-w-sm flex-col items-stretch gap-4 p-4">
 
-    <ax-button
-      color="success"
-      text="Long Timeout (10s)"
-      (onClick)="showLongTimeout()"
-    >
-    </ax-button>
 
-    <ax-button
-      color="warning"
-      text="No Progress Bar"
-      (onClick)="showNoProgress()"
-    >
-    </ax-button>
-
-    <ax-button text="Pause on Hover" (onClick)="showPauseOnHover()">
-    </ax-button>
-
-    <ax-button
-      color="danger"
-      text="No Pause on Hover"
-      (onClick)="showNoPauseOnHover()"
-    >
-    </ax-button>
-
-    <ax-button
-      color="secondary"
-      text="Manual Close Only"
-      (onClick)="showManualClose()"
-    >
-    </ax-button>
+  <div class="flex flex-col gap-1">
+    <ax-label>Timeout (seconds)</ax-label>
+    <ax-number-box
+      [value]="timeOutSeconds()"
+      [minValue]="1"
+      [maxValue]="120"
+      [step]="1"
+      [disabled]="manualClose()"
+      (valueChange)="timeOutSeconds.set($event ?? 5)"
+    ></ax-number-box>
   </div>
+  <div class="flex items-center justify-between gap-3">
+    <ax-label>Manual close</ax-label>
+    <ax-switch
+      [value]="manualClose()"
+      (valueChange)="manualClose.set($event)"
+    ></ax-switch>
+  </div>
+  <div class="flex items-center justify-between gap-3">
+    <ax-label>Pause on hover</ax-label>
+    <ax-switch
+      [value]="pauseOnHover()"
+      (valueChange)="pauseOnHover.set($event)"
+    ></ax-switch>
+  </div>
+
+  <div class="flex items-center justify-between gap-3">
+    <ax-label>Timeout progress bar</ax-label>
+    <ax-switch
+      [value]="timeOutProgress()"
+      [disabled]="manualClose()"
+      (valueChange)="timeOutProgress.set($event)"
+    ></ax-switch>
+  </div>
+
+  <ax-button
+    class="self-center"
+    color="primary"
+    text="Show notification"
+    (onClick)="showNotification()"
+  ></ax-button>
 </div>

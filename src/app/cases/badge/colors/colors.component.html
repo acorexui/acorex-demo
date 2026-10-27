@@ -1,10 +1,4 @@
 <div class="flex w-52 flex-col items-stretch gap-4 py-6">
-  @for (color of [currentColor()]; track color) {
-    <div class="flex justify-center">
-      <ax-badge [color]="color" [text]="badgeText()" look="solid"></ax-badge>
-    </div>
-  }
-
   <ax-select-box
     textField="text"
     valueField="value"
@@ -12,4 +6,10 @@
     [(ngModel)]="currentColor"
     [dataSource]="dataSource()"
   ></ax-select-box>
+
+  @for (color of [currentColor()]; track color) {
+    <div class="flex justify-center">
+      <ax-badge [color]="color" [text]="badgeText()" look="solid"></ax-badge>
+    </div>
+  }
 </div>

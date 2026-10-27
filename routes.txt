@@ -212,6 +212,7 @@
 /core/validation/usage
 /data-pager/compact-interaction
 /data-pager/usage
+/data-table/empty-template
 /date-time-box/allow-typing
 /date-time-box/birthdate
 /date-time-box/box-look
@@ -338,8 +339,13 @@
 /navbar/simple-usage
 /notification/asynchronous-process
 /notification/custom-content
-/notification/interactive-features
+/notification/custom-icon
+/notification/dynamic-buttons
+/notification/hide-all
+/notification/loading-buttons
 /notification/locations
+/notification/multi-step-process
+/notification/programmatic-control
 /notification/timeout-progress
 /notification/usage
 /number-box/change-on-scroll
@@ -350,6 +356,7 @@
 /otp/auto-focus
 /otp/copy-paste
 /otp/disabled-readonly
+/otp/in-form
 /otp/length
 /otp/looks
 /otp/states
@@ -365,6 +372,8 @@
 /phone-box/only-countries
 /phone-box/usage
 /phone-box/validation
+/picker/date
+/picker/text
 /picker/usage
 /popover/hover
 /popover/leave

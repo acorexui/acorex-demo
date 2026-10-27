@@ -50,4 +50,9 @@ export const routes: Routes = [
         (e) => e.DisabledReadonlyComponent
       ),
   },
+  {
+    path: 'in-form',
+    loadComponent: () =>
+      import('./in-form/in-form.component').then((e) => e.OtpInFormComponent),
+  },
 ];

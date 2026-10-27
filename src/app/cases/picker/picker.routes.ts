@@ -11,4 +11,14 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./usage/usage.component').then((b) => b.UsageComponent),
   },
+  {
+    path: 'text',
+    loadComponent: () =>
+      import('./text/text.component').then((b) => b.PickerTextComponent),
+  },
+  {
+    path: 'date',
+    loadComponent: () =>
+      import('./date/date.component').then((b) => b.PickerDateComponent),
+  },
 ];

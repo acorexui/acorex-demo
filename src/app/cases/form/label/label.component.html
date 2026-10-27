@@ -1,4 +1,17 @@
 <div class="flex w-80 flex-col items-stretch gap-4">
+  <ax-form labelMode="static">
+    <ax-form-field>
+      <ax-label>Label mode</ax-label>
+      <ax-select-box
+        textField="text"
+        valueField="value"
+        placeholder="Choose label mode..."
+        [(ngModel)]="labelMode"
+        [dataSource]="labelModeOptions()"
+      ></ax-select-box>
+    </ax-form-field>
+  </ax-form>
+
   @for (mode of [labelMode()]; track mode) {
     <ax-form [labelMode]="mode">
       <div class="flex w-full flex-row gap-4">
@@ -13,17 +26,4 @@
       </div>
     </ax-form>
   }
-
-  <ax-form labelMode="static">
-    <ax-form-field>
-      <ax-label>Label mode</ax-label>
-      <ax-select-box
-        textField="text"
-        valueField="value"
-        placeholder="Choose label mode..."
-        [(ngModel)]="labelMode"
-        [dataSource]="labelModeOptions()"
-      ></ax-select-box>
-    </ax-form-field>
-  </ax-form>
 </div>

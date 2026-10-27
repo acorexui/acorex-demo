@@ -1,0 +1,24 @@
+<div class="flex flex-col items-center justify-center gap-6 px-4 py-16">
+  <div class="text-center">
+    <ax-title>Text options</ax-title>
+    <p class="mt-1 text-sm text-muted">
+      Scroll to pick a label shown as text in each row.
+    </p>
+  </div>
+
+  <ax-picker-container class="h-56 w-56">
+    <ax-picker-title>
+      <ax-text>T-shirt size</ax-text>
+    </ax-picker-title>
+    <ax-picker-items
+      [items]="items()"
+      [ngModel]="selected()"
+      (onValueChanged)="onValueChanged($event)"
+    ></ax-picker-items>
+  </ax-picker-container>
+
+  <p class="text-sm text-muted">
+    Selected:
+    <strong class="text-on-surface">{{ selectedLabel() }}</strong>
+  </p>
+</div>

@@ -1,6 +1,4 @@
-<div
-  class="flex flex-col items-center justify-center gap-4 w-[40rem] bg-dark dark:bg-light p-4 rounded-lg"
->
+<div class="flex w-[40rem] flex-col items-center gap-4">
   <div class="flex items-center gap-2">
     <ax-label>Select Look:</ax-label>
     <ax-select-box
@@ -13,20 +11,24 @@
     </ax-select-box>
   </div>
 
-  <ax-navbar [look]="selectedLook()">
-    <ax-prefix>
-      <ax-button color="default" look="blank">
-        <ax-icon><i class="fa-solid fa-bars"></i></ax-icon>
-      </ax-button>
-    </ax-prefix>
-    <ax-title>Navbar - {{ selectedLook() | titlecase }}</ax-title>
-    <ax-suffix>
-      <ax-button color="default" look="blank">
-        <ax-icon><i class="fa-solid fa-user"></i></ax-icon>
-      </ax-button>
-      <ax-button color="default" look="blank">
-        <ax-icon><i class="fa-solid fa-bell"></i></ax-icon>
-      </ax-button>
-    </ax-suffix>
-  </ax-navbar>
+  <div
+    class="flex w-full flex-col items-center justify-center rounded-lg bg-dark p-4 dark:bg-light"
+  >
+    <ax-navbar [look]="selectedLook()">
+      <ax-prefix>
+        <ax-button color="default" look="blank">
+          <ax-icon><i class="fa-solid fa-bars"></i></ax-icon>
+        </ax-button>
+      </ax-prefix>
+      <ax-title>Navbar - {{ selectedLook() | titlecase }}</ax-title>
+      <ax-suffix>
+        <ax-button color="default" look="blank">
+          <ax-icon><i class="fa-solid fa-user"></i></ax-icon>
+        </ax-button>
+        <ax-button color="default" look="blank">
+          <ax-icon><i class="fa-solid fa-bell"></i></ax-icon>
+        </ax-button>
+      </ax-suffix>
+    </ax-navbar>
+  </div>
 </div>

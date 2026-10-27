@@ -1,21 +1,25 @@
-<div class="flex flex-col gap-4">
-  <div class="flex flex-wrap gap-2">
-    <ax-button
-      color="primary"
-      text="closeOnEscape: true"
-      (onClick)="openCloseOnEscape()"
-    ></ax-button>
-    <ax-button
-      text="closeOnEscape: false"
-      (onClick)="openKeepOpenOnEscape()"
-    ></ax-button>
-    <ax-button
-      text="Legacy — closeButton: true"
-      (onClick)="openLegacyEscapeWithCloseButton()"
-    ></ax-button>
-    <ax-button
-      text="Legacy — closeButton: false"
-      (onClick)="openLegacyEscapeWithoutCloseButton()"
-    ></ax-button>
+<div class="flex flex-col items-center gap-4 py-10">
+  <div class="flex w-64 flex-col gap-4">
+    <div class="flex items-center justify-between gap-3">
+      <ax-label>Close on escape</ax-label>
+      <ax-switch
+        [value]="closeOnEscape()"
+        (valueChange)="closeOnEscape.set($event)"
+      ></ax-switch>
+    </div>
+
+    <div class="flex items-center justify-between gap-3">
+      <ax-label>Close button</ax-label>
+      <ax-switch
+        [value]="closeButton()"
+        (valueChange)="closeButton.set($event)"
+      ></ax-switch>
+    </div>
   </div>
+
+  <ax-button
+    color="primary"
+    text="Open popup"
+    (onClick)="openPopup()"
+  ></ax-button>
 </div>

@@ -1,4 +1,12 @@
 <div class="flex w-52 flex-col items-stretch gap-4 py-6">
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    placeholder="Choose look..."
+    [(ngModel)]="currentLook"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
+
   @for (look of [currentLook()]; track look) {
     <div class="flex justify-center">
       <ax-badge
@@ -8,12 +16,4 @@
       ></ax-badge>
     </div>
   }
-
-  <ax-select-box
-    textField="text"
-    valueField="value"
-    placeholder="Choose look..."
-    [(ngModel)]="currentLook"
-    [dataSource]="dataSource()"
-  ></ax-select-box>
 </div>
