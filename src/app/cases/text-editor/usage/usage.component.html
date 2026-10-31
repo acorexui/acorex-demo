@@ -1,0 +1,30 @@
+<div class="flex w-3xl flex-col gap-4">
+  <ax-select-box
+    class="w-72"
+    [dataSource]="presetDataSource()"
+    textField="text"
+    valueField="value"
+    [(ngModel)]="preset"
+  ></ax-select-box>
+
+  <ax-text-editor
+    class="w-full"
+    [initialLine]="8"
+    placeHolder="Project a toolbar with undo/redo, zoom, palettes, and swatches. Content renders automatically when ax-text-editor-content is omitted."
+    [(ngModel)]="content"
+  >
+    <ax-text-editor-toolbar>
+      <ax-text-editor-history></ax-text-editor-history>
+      <ax-divider></ax-divider>
+      <ax-text-editor-zoom></ax-text-editor-zoom>
+      <ax-divider></ax-divider>
+      <ax-text-editor-colors></ax-text-editor-colors>
+      <ax-text-editor-color-swatches
+        [textColors]="textColors()"
+        [backgroundColors]="backgroundColors()"
+        [recentColors]="recentColors()"
+        (recentColorsChange)="recentColors.set($event)"
+      ></ax-text-editor-color-swatches>
+    </ax-text-editor-toolbar>
+  </ax-text-editor>
+</div>

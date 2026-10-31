@@ -1,0 +1,22 @@
+<div class="flex flex-col items-center gap-3 p-4">
+  <p class="max-w-md text-center text-sm opacity-70">
+    Scroll the panel to reveal the overlay scrollbar. Tokens such as
+    <code class="text-xs">--ax-comp-overlay-scrollbar-size</code>
+    and
+    <code class="text-xs">--ax-comp-overlay-scrollbar-thumb-color</code>
+    are set on the scroll host.
+  </p>
+
+  <div
+    axOverlayScrollbar
+    class="demo-overlay-scrollbar-panel surface h-64 w-full max-w-md overflow-y-auto rounded-lg border border-light-surface p-4"
+    [hideDelay]="1000"
+    [navigationButtons]="true"
+  >
+    @for (line of lines; track line) {
+      <p class="border-b border-lightest-surface py-2 last:border-0">
+        {{ line }}
+      </p>
+    }
+  </div>
+</div>

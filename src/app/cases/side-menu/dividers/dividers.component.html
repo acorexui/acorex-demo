@@ -3,7 +3,10 @@
     class="w-60 rounded-md bg-primary-surface p-2 text-primary-on-surface"
   >
     <ax-side-menu>
-      <ax-side-menu-item [active]="true">
+      <ax-side-menu-item
+        [active]="menu.isActive('dashboard')"
+        (onClick)="menu.select('dashboard', $event)"
+      >
         <span>Dashboard</span>
         <ax-prefix>
           <ax-icon>
@@ -12,7 +15,10 @@
         </ax-prefix>
       </ax-side-menu-item>
       <ax-divider></ax-divider>
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="menu.isActive('users')"
+        (onClick)="menu.select('users', $event)"
+      >
         <span>Users</span>
         <ax-prefix>
           <ax-icon>
@@ -21,7 +27,10 @@
         </ax-prefix>
       </ax-side-menu-item>
       <ax-divider></ax-divider>
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="menu.isActive('reports')"
+        (onClick)="menu.select('reports', $event)"
+      >
         <span>Reports</span>
         <ax-prefix>
           <ax-icon>

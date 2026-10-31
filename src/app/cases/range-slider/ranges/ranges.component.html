@@ -1,44 +1,23 @@
-<div class="flex flex-col gap-14 p-4">
-  <div class="flex justify-center items-center gap-2">
+<div class="flex w-80 flex-col items-stretch gap-4 p-4">
+  <div class="flex items-center gap-2">
     <span>0</span>
     <ax-range-slider
-      class="w-80 h-5"
-      [(ngModel)]="value1"
+      class="h-5 min-w-0 flex-1"
+      [(ngModel)]="value"
       [mode]="'single'"
       [min]="0"
-      [max]="50"
+      [max]="currentMax()"
       [step]="1"
       [color]="'primary'"
       [hasTooltip]="true"
     ></ax-range-slider>
-    <span>50</span>
+    <span>{{ currentMax() }}</span>
   </div>
-  <div class="flex justify-center items-center gap-2">
-    <span>0</span>
-    <ax-range-slider
-      class="w-80 h-5"
-      [(ngModel)]="value2"
-      [mode]="'single'"
-      [min]="0"
-      [max]="100"
-      [step]="1"
-      [color]="'primary'"
-      [hasTooltip]="true"
-    ></ax-range-slider>
-    <span>100</span>
-  </div>
-  <div class="flex justify-center items-center gap-2">
-    <span>0</span>
-    <ax-range-slider
-      class="w-80 h-5"
-      [(ngModel)]="value3"
-      [mode]="'single'"
-      [min]="0"
-      [max]="200"
-      [step]="1"
-      [color]="'primary'"
-      [hasTooltip]="true"
-    ></ax-range-slider>
-    <span>200</span>
-  </div>
+
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentMax"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
 </div>

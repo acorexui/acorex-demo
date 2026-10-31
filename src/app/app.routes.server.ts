@@ -11,6 +11,7 @@ const csrPrefixes = [
   'paint',
   'editor',
   'wysiwyg',
+  'text-editor',
   'file-explorer',
   'image-editor',
   'bar-chart',

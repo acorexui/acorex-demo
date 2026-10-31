@@ -9,9 +9,18 @@ import {
   AXSideMenuModule,
 } from '@acorex/components/side-menu';
 import { Component, signal } from '@angular/core';
+import { createSideMenuSelection } from '../side-menu-selection';
 
 /** Documented looks; `pills` and `with-line-color` map to host classes via `[look]`. */
 export type SideMenuLookDemo = AXSideMenuLook | 'pills' | 'with-line-color';
+
+type LooksMenuId =
+  | 'dashboard'
+  | 'users'
+  | 'users-list'
+  | 'users-verified'
+  | 'users-unverified'
+  | 'settings';
 
 @Component({
   templateUrl: 'looks.component.html',
@@ -23,6 +32,8 @@ export type SideMenuLookDemo = AXSideMenuLook | 'pills' | 'with-line-color';
   ],
 })
 export class LooksComponent {
+  protected readonly menu = createSideMenuSelection<LooksMenuId>('dashboard');
+
   protected readonly selection: AXSelectionMode = 'single';
 
   protected readonly selectedLook = signal<SideMenuLookDemo>('default');

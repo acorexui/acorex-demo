@@ -1,0 +1,26 @@
+<div
+  class="flex flex-col items-center justify-center gap-4 px-4 py-16 text-center"
+>
+  <div class="max-w-lg">
+    <div class="h4">Letter</div>
+    <p class="mt-1 text-sm text-muted">
+      Set <code>type="letter"</code> so each cell accepts English letters
+      (a–z and A–Z) only.
+    </p>
+  </div>
+
+  <div class="w-full max-w-sm">
+    <ax-otp
+      look="fill"
+      type="letter"
+      [length]="6"
+      [(ngModel)]="otpValue"
+    ></ax-otp>
+  </div>
+
+  @if (otpValue()) {
+    <p class="text-xs text-muted">
+      Value: <strong class="text-on-surface">{{ otpValue() }}</strong>
+    </p>
+  }
+</div>

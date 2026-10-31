@@ -1,26 +1,47 @@
 import { AXStyleColorType } from '@acorex/cdk/common';
 import { AXButtonComponent } from '@acorex/components/button';
+import { AXSelectBoxComponent } from '@acorex/components/select-box';
 import { AXToastModule, AXToastService } from '@acorex/components/toast';
-import { TitleCasePipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   templateUrl: './color-variants.component.html',
-  imports: [TitleCasePipe, AXToastModule, AXButtonComponent],
+  imports: [
+    FormsModule,
+    AXToastModule,
+    AXButtonComponent,
+    AXSelectBoxComponent,
+  ],
 })
 export class ColorVariantsComponent {
-  private toastService = inject(AXToastService);
+  private readonly toastService = inject(AXToastService);
 
-  colors: AXStyleColorType[] = [
+  protected currentColor = signal<AXStyleColorType>('primary');
+
+  protected readonly colors = signal<AXStyleColorType[]>([
     'primary',
     'secondary',
     'success',
     'warning',
     'danger',
     'default',
-  ];
+  ]);
 
-  showToast(color: AXStyleColorType) {
+  protected dataSource = computed(() =>
+    this.colors().map((color) => ({
+      value: color,
+      text: color.charAt(0).toUpperCase() + color.slice(1),
+    })),
+  );
+
+  protected buttonText = computed(() => {
+    const color = this.currentColor();
+    return `Show ${color.charAt(0).toUpperCase() + color.slice(1)} toast`;
+  });
+
+  protected showToast(): void {
+    const color = this.currentColor();
     this.toastService.show({
       color,
       title: `${color.charAt(0).toUpperCase() + color.slice(1)} Toast`,

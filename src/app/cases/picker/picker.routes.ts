@@ -21,4 +21,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./date/date.component').then((b) => b.PickerDateComponent),
   },
+  {
+    path: 'fade',
+    loadComponent: () =>
+      import('./fade/fade.component').then((b) => b.PickerFadeComponent),
+  },
 ];

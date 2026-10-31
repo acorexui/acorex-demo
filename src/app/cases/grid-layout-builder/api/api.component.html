@@ -16,15 +16,23 @@
   <ax-button text="Compact" type="button" (click)="compact()"></ax-button>
   <ax-button text="Remove all" type="button" (click)="clearAll()"></ax-button>
 
-  <span style="margin-left: 12px">Columns:</span>
-  <ax-button text="4" type="button" (click)="setCols(4)"></ax-button>
-  <ax-button text="8" type="button" (click)="setCols(8)"></ax-button>
-  <ax-button text="12" type="button" (click)="setCols(12)"></ax-button>
+  <ax-select-box
+    class="w-40"
+    textField="text"
+    valueField="value"
+    [(ngModel)]="columns"
+    [dataSource]="columnDataSource()"
+    (ngModelChange)="setCols($event)"
+  ></ax-select-box>
 
-  <span style="margin-left: 12px">Cell height:</span>
-  <ax-button text="80" type="button" (click)="setCellHeight(80)"></ax-button>
-  <ax-button text="120" type="button" (click)="setCellHeight(120)"></ax-button>
-  <ax-button text="0" type="button" (click)="setCellHeight(0)"></ax-button>
+  <ax-select-box
+    class="w-40"
+    textField="text"
+    valueField="value"
+    [(ngModel)]="cellHeight"
+    [dataSource]="cellHeightDataSource()"
+    (ngModelChange)="setCellHeight($event)"
+  ></ax-select-box>
 </div>
 
 <ax-grid-layout-container #grid [options]="containerOptions()">

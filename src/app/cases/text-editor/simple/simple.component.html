@@ -1,0 +1,22 @@
+<div class="w-3xl">
+  <ax-text-editor
+    class="w-full"
+    [initialLine]="10"
+    placeHolder="Compact toolbar: history, headings, lists, blocks, alignment, marks, and links. Inline code and code block are separate tools."
+    [(ngModel)]="content"
+  >
+    <ax-text-editor-toolbar>
+      <ax-text-editor-history></ax-text-editor-history>
+      <ax-divider></ax-divider>
+      <ax-text-editor-heading></ax-text-editor-heading>
+      <ax-divider></ax-divider>
+      <ax-text-editor-list></ax-text-editor-list>
+      <ax-text-editor-blocks></ax-text-editor-blocks>
+      <ax-divider></ax-divider>
+      <ax-text-editor-alignment></ax-text-editor-alignment>
+      <ax-divider></ax-divider>
+      <ax-text-editor-font-style></ax-text-editor-font-style>
+      <ax-text-editor-link></ax-text-editor-link>
+    </ax-text-editor-toolbar>
+  </ax-text-editor>
+</div>

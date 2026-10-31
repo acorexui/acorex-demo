@@ -1,17 +1,13 @@
-<div
-  class="flex flex-col items-center justify-center gap-4 px-4"
->
-  <ax-button
-    class="w-full"
-    color="primary"
-    text="With Pause on Hover"
-    (onClick)="showWithPauseOnHover()"
-  ></ax-button>
+<div class="flex w-72 flex-col items-stretch gap-4 py-6">
+  <div class="flex items-center justify-between gap-4">
+    <ax-label>Pause on hover</ax-label>
+    <ax-switch color="primary" [(ngModel)]="pauseOnHover"></ax-switch>
+  </div>
 
   <ax-button
     class="w-full"
-    color="warning"
-    text="Without Pause on Hover"
-    (onClick)="showWithoutPauseOnHover()"
+    color="primary"
+    text="Show toast"
+    (onClick)="showToast()"
   ></ax-button>
 </div>

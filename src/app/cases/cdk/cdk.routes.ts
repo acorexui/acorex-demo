@@ -97,6 +97,14 @@ export const routes: Routes = [
       import('./overlay/overlay.routes').then((c) => c.routes),
   },
   {
+    path: 'overlay-scrollbar',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./overlay-scrollbar/overlay-scrollbar.routes').then(
+        (c) => c.routes,
+      ),
+  },
+  {
     path: 'resizer',
     component: MasterLayoutComponent,
     loadChildren: () =>

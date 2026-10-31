@@ -1,41 +1,18 @@
-<div class="flex flex-col gap-6 p-4">
-  <ax-range-slider
-    class="w-80 h-5"
-    [(ngModel)]="value1"
-    [mode]="'single'"
-    [min]="0"
-    [max]="100"
-    [step]="1"
-    [color]="'primary'"
-  ></ax-range-slider>
+<div class="flex w-80 flex-col items-stretch gap-4 p-4">
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentColor"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
 
   <ax-range-slider
-    class="w-80 h-5"
-    [(ngModel)]="value2"
+    class="h-5 w-full"
+    [(ngModel)]="value"
     [mode]="'single'"
     [min]="0"
     [max]="100"
     [step]="1"
-    [color]="'success'"
-  ></ax-range-slider>
-
-  <ax-range-slider
-    class="w-80 h-5"
-    [(ngModel)]="value3"
-    [mode]="'single'"
-    [min]="0"
-    [max]="100"
-    [step]="1"
-    [color]="'warning'"
-  ></ax-range-slider>
-
-  <ax-range-slider
-    class="w-80 h-5"
-    [(ngModel)]="value4"
-    [mode]="'single'"
-    [min]="0"
-    [max]="100"
-    [step]="1"
-    [color]="'danger'"
+    [color]="currentColor()"
   ></ax-range-slider>
 </div>

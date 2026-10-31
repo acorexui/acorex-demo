@@ -1,9 +1,14 @@
-<div class="flex items-center justify-center gap-4 px-4">
-  @for (color of colors; track color) {
+<div class="flex w-52 flex-col items-stretch gap-4 py-6">
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentColor"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
+
   <ax-button
-    [color]="color"
-    [text]="color | titlecase"
-    (onClick)="showToast(color)"
+    [color]="currentColor()"
+    [text]="buttonText()"
+    (onClick)="showToast()"
   ></ax-button>
-  }
 </div>

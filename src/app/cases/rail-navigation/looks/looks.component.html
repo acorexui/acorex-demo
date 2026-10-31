@@ -13,19 +13,31 @@
   </div>
 
   <ax-rail-navigation [look]="currentLook()" class="h-[100vh]">
-    <ax-rail-navigation-item [active]="true">
+    <ax-rail-navigation-item
+      [active]="isActive(0)"
+      (onClick)="onItemClick(0)"
+    >
       <ax-icon class="fa-solid fa-home"></ax-icon>
       <ax-text>Home</ax-text>
     </ax-rail-navigation-item>
-    <ax-rail-navigation-item>
+    <ax-rail-navigation-item
+      [active]="isActive(1)"
+      (onClick)="onItemClick(1)"
+    >
       <ax-icon class="fa-solid fa-store"></ax-icon>
       <ax-text>Store</ax-text>
     </ax-rail-navigation-item>
-    <ax-rail-navigation-item>
+    <ax-rail-navigation-item
+      [active]="isActive(2)"
+      (onClick)="onItemClick(2)"
+    >
       <ax-icon class="fa-solid fa-user"></ax-icon>
       <ax-text>Profile</ax-text>
     </ax-rail-navigation-item>
-    <ax-rail-navigation-item>
+    <ax-rail-navigation-item
+      [active]="isActive(3)"
+      (onClick)="onItemClick(3)"
+    >
       <ax-icon class="fa-solid fa-cog"></ax-icon>
       <ax-text>Settings</ax-text>
     </ax-rail-navigation-item>

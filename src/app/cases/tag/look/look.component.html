@@ -1,7 +1,19 @@
-<div
-  class="flex w-full items-center justify-center gap-4 py-6"
->
-  <ax-tag text="solid" color="secondary" look="solid"></ax-tag>
-  <ax-tag text="outline" color="secondary" look="outline"></ax-tag>
-  <ax-tag text="twotone" color="secondary" look="twotone"></ax-tag>
+<div class="flex w-52 flex-col items-stretch gap-4 py-6">
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentLook"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
+
+  @for (look of [currentLook()]; track look) {
+    <div class="flex justify-center">
+      <ax-tag
+        [text]="tagText()"
+        color="secondary"
+        [look]="look"
+        class="w-fit"
+      ></ax-tag>
+    </div>
+  }
 </div>

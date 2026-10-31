@@ -19,7 +19,10 @@
       </ax-header>
 
       <ax-side-menu axSidebarNavigation [mode]="mode()">
-        <ax-side-menu-item [active]="true">
+        <ax-side-menu-item
+          [active]="isActive('overview')"
+          (onClick)="select('overview', $event)"
+        >
           <span>Overview</span>
           <ax-prefix>
             <ax-icon>
@@ -27,7 +30,10 @@
             </ax-icon>
           </ax-prefix>
         </ax-side-menu-item>
-        <ax-side-menu-item>
+        <ax-side-menu-item
+          [active]="isActive('analytics')"
+          (onClick)="select('analytics', $event)"
+        >
           <span>Analytics</span>
           <ax-prefix>
             <ax-icon>
@@ -45,9 +51,12 @@
     </ax-sidebar>
 
     <main
-      class="flex flex-1 items-center justify-center bg-lighter-surface p-6 text-sm text-on-surface opacity-80 min-w-120"
+      class="flex min-w-120 flex-1 flex-col items-center justify-center gap-1 bg-lighter-surface p-6 text-sm text-on-surface opacity-80"
     >
-      Content area
+      <span>
+        Selected:
+        <strong class="font-semibold opacity-100">{{ selectedLabel() }}</strong>
+      </span>
     </main>
   </div>
 </div>

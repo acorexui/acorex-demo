@@ -8,7 +8,9 @@ import {
   AXRailNavigationService,
 } from '@acorex/components/rail-navigation';
 
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+
+type UsageRailItem = 'home' | 'store' | 'google';
 
 @Component({
   templateUrl: './usage.component.html',
@@ -20,4 +22,14 @@ import { Component } from '@angular/core';
     AXRailNavigationItemComponent,
   ],
 })
-export class UsageComponent {}
+export class UsageComponent {
+  protected selectedItem = signal<UsageRailItem>('home');
+
+  protected selectItem(item: UsageRailItem) {
+    this.selectedItem.set(item);
+  }
+
+  protected isActive(item: UsageRailItem): boolean {
+    return this.selectedItem() === item;
+  }
+}

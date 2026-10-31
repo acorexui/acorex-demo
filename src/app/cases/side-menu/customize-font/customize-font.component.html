@@ -3,7 +3,10 @@
     class="w-60 rounded-md bg-primary-surface p-2 text-primary-on-surface"
   >
     <ax-side-menu>
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="menuSm.isActive('dashboard')"
+        (onClick)="menuSm.select('dashboard', $event)"
+      >
         <span>Dashboard</span>
         <ax-prefix>
           <ax-icon>
@@ -11,7 +14,10 @@
           </ax-icon>
         </ax-prefix>
       </ax-side-menu-item>
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="menuSm.isActive('users')"
+        (onClick)="menuSm.select('users', $event)"
+      >
         <span>Users</span>
         <ax-prefix>
           <ax-icon>
@@ -19,7 +25,11 @@
           </ax-icon>
         </ax-prefix>
       </ax-side-menu-item>
-      <ax-side-menu-item [isCollapsed]="true">
+      <ax-side-menu-item
+        [isCollapsed]="true"
+        [active]="menuSm.isActive('comments')"
+        (onClick)="menuSm.select('comments', $event)"
+      >
         <span>Comments</span>
         <ax-prefix>
           <ax-icon>
@@ -33,7 +43,10 @@
     class="w-60 rounded-md bg-primary-surface p-2 text-lg text-primary-on-surface"
   >
     <ax-side-menu class="text-base">
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="menuMd.isActive('dashboard')"
+        (onClick)="menuMd.select('dashboard', $event)"
+      >
         <span>Dashboard</span>
         <ax-prefix>
           <ax-icon>
@@ -41,7 +54,10 @@
           </ax-icon>
         </ax-prefix>
       </ax-side-menu-item>
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="menuMd.isActive('users')"
+        (onClick)="menuMd.select('users', $event)"
+      >
         <span>Users</span>
         <ax-prefix>
           <ax-icon>
@@ -49,7 +65,11 @@
           </ax-icon>
         </ax-prefix>
       </ax-side-menu-item>
-      <ax-side-menu-item [isCollapsed]="true">
+      <ax-side-menu-item
+        [isCollapsed]="true"
+        [active]="menuMd.isActive('comments')"
+        (onClick)="menuMd.select('comments', $event)"
+      >
         <span>Comments</span>
         <ax-prefix>
           <ax-icon>
@@ -63,7 +83,10 @@
     class="w-60 rounded-md bg-primary-surface p-2 text-xl text-primary-on-surface"
   >
     <ax-side-menu class="text-lg">
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="menuLg.isActive('dashboard')"
+        (onClick)="menuLg.select('dashboard', $event)"
+      >
         <span>Dashboard</span>
         <ax-prefix>
           <ax-icon>
@@ -71,7 +94,10 @@
           </ax-icon>
         </ax-prefix>
       </ax-side-menu-item>
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="menuLg.isActive('users')"
+        (onClick)="menuLg.select('users', $event)"
+      >
         <span>Users</span>
         <ax-prefix>
           <ax-icon>
@@ -79,7 +105,11 @@
           </ax-icon>
         </ax-prefix>
       </ax-side-menu-item>
-      <ax-side-menu-item [isCollapsed]="true">
+      <ax-side-menu-item
+        [isCollapsed]="true"
+        [active]="menuLg.isActive('comments')"
+        (onClick)="menuLg.select('comments', $event)"
+      >
         <span>Comments</span>
         <ax-prefix>
           <ax-icon>

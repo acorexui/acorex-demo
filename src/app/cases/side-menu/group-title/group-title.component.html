@@ -3,7 +3,11 @@
 >
   <ax-side-menu>
     <ax-title>Test</ax-title>
-    <ax-side-menu-item [isCollapsed]="true">
+    <ax-side-menu-item
+      [isCollapsed]="true"
+      [active]="menu.isActive('comments')"
+      (onClick)="menu.select('comments', $event)"
+    >
       <span>Comments</span>
       <ax-prefix>
         <ax-icon>
@@ -13,13 +17,22 @@
       <ax-suffix>
         <ax-badge text="+3" color="danger"></ax-badge>
       </ax-suffix>
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="menu.isActive('comments-all')"
+        (onClick)="menu.select('comments-all', $event)"
+      >
         <span>All Comments</span>
       </ax-side-menu-item>
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="menu.isActive('comments-approved')"
+        (onClick)="menu.select('comments-approved', $event)"
+      >
         <span>Comments approved</span>
       </ax-side-menu-item>
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="menu.isActive('comments-unverified')"
+        (onClick)="menu.select('comments-unverified', $event)"
+      >
         <span>Unverified comments</span>
       </ax-side-menu-item>
     </ax-side-menu-item>

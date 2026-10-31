@@ -1,0 +1,20 @@
+<div class="w-3xl">
+  <ax-text-editor
+    class="w-full"
+    [initialLine]="10"
+    [maxLine]="16"
+    placeHolder="Tools render in a side rail when the toolbar uses orientation=&quot;vertical&quot;."
+    [(ngModel)]="content"
+  >
+    <ax-text-editor-toolbar orientation="vertical">
+      <ax-text-editor-history></ax-text-editor-history>
+      <ax-text-editor-heading></ax-text-editor-heading>
+      <ax-text-editor-list></ax-text-editor-list>
+      <ax-text-editor-font-style></ax-text-editor-font-style>
+      <ax-text-editor-alignment></ax-text-editor-alignment>
+      <ax-text-editor-link></ax-text-editor-link>
+      <ax-text-editor-colors></ax-text-editor-colors>
+      <ax-text-editor-zoom></ax-text-editor-zoom>
+    </ax-text-editor-toolbar>
+  </ax-text-editor>
+</div>

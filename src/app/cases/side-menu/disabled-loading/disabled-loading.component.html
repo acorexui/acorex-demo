@@ -12,7 +12,10 @@
 
   <div class="w-60 rounded-md bg-primary-surface p-2 text-primary-on-surface">
     <ax-side-menu>
-      <ax-side-menu-item [active]="true">
+      <ax-side-menu-item
+        [active]="menu.isActive('dashboard')"
+        (onClick)="menu.select('dashboard', $event)"
+      >
         <span>Dashboard</span>
         <ax-prefix>
           <ax-icon>
@@ -20,7 +23,11 @@
           </ax-icon>
         </ax-prefix>
       </ax-side-menu-item>
-      <ax-side-menu-item [disabled]="disabled()">
+      <ax-side-menu-item
+        [disabled]="disabled()"
+        [active]="menu.isActive('users')"
+        (onClick)="menu.select('users', $event)"
+      >
         <span>Users (disabled)</span>
         <ax-prefix>
           <ax-icon>
@@ -28,7 +35,11 @@
           </ax-icon>
         </ax-prefix>
       </ax-side-menu-item>
-      <ax-side-menu-item [isLoading]="isLoading()">
+      <ax-side-menu-item
+        [isLoading]="isLoading()"
+        [active]="menu.isActive('sync')"
+        (onClick)="menu.select('sync', $event)"
+      >
         <span>Syncing data</span>
         <ax-prefix>
           <ax-icon>
@@ -36,7 +47,12 @@
           </ax-icon>
         </ax-prefix>
       </ax-side-menu-item>
-      <ax-side-menu-item [isLoading]="isLoading()" [disabled]="disabled()">
+      <ax-side-menu-item
+        [isLoading]="isLoading()"
+        [disabled]="disabled()"
+        [active]="menu.isActive('loading-disabled')"
+        (onClick)="menu.select('loading-disabled', $event)"
+      >
         <span>Loading + disabled</span>
         <ax-prefix>
           <ax-icon>

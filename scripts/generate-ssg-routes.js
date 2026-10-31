@@ -23,9 +23,7 @@ function findRouteFiles(dir, routeFiles = []) {
 }
 
 function stripComments(content) {
-  return content
-    .replace(/\/\*[\s\S]*?\*\//g, "")
-    .replace(/^\s*\/\/.*$/gm, "");
+  return content.replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "");
 }
 
 // Function to extract routes from a route file
@@ -55,7 +53,7 @@ function extractLoadChildrenMap(filePath) {
   const map = new Map();
   const routeBlocks = [
     ...content.matchAll(
-      /\{\s*path:\s*['"`]([^'"`]+)['"`][\s\S]*?loadChildren:\s*\(\)\s*=>\s*[\s\S]*?import\(\s*['"`]([^'"`]+)['"`]\s*\)/g
+      /\{\s*path:\s*['"`]([^'"`]+)['"`][\s\S]*?loadChildren:\s*\(\)\s*=>\s*[\s\S]*?import\(\s*['"`]([^'"`]+)['"`]\s*\)/g,
     ),
   ];
 
@@ -104,7 +102,7 @@ function parseAppRoutes() {
     "..",
     "src",
     "app",
-    "app.routes.ts"
+    "app.routes.ts",
   );
   const content = fs.readFileSync(appRoutesPath, "utf8");
 
@@ -138,16 +136,35 @@ function generateSSGRoutes() {
   // Root is RenderMode.Client in app.routes.server.ts.
 
   // Process each main route
+  const appRoutesPath = path.join(srcDir, "app.routes.ts");
+  const appLoadChildrenMap = extractLoadChildrenMap(appRoutesPath);
+
   for (const mainRoute of mainRouteNames) {
     if (mainRoute === "") continue;
 
     // Find the corresponding route file (cases/{name}, cases/charts/{name}, …)
-    const routeFile = routeFiles.find((file) => {
+    let routeFile = routeFiles.find((file) => {
       const relativePath = path.relative(srcDir, file);
       const routeDir = path.dirname(relativePath).replace(/\\/g, "/");
       const leafDir = routeDir.split("/").pop();
       return leafDir === mainRoute && routeDir.startsWith("cases/");
     });
+
+    if (!routeFile) {
+      const nestedImport = appLoadChildrenMap.get(mainRoute);
+      if (nestedImport) {
+        const nestedRelative = nestedImport.replace(/^\.\//, "");
+        const candidate = path.join(
+          srcDir,
+          nestedRelative.endsWith(".ts")
+            ? nestedRelative
+            : `${nestedRelative}.ts`,
+        );
+        if (fs.existsSync(candidate)) {
+          routeFile = candidate;
+        }
+      }
+    }
 
     if (routeFile) {
       allRoutes.push(...expandRouteFile(routeFile, mainRoute));
@@ -164,6 +181,7 @@ function generateSSGRoutes() {
     "paint/",
     "editor/",
     "wysiwyg/",
+    "text-editor/",
     "file-explorer/",
     "image-editor/",
     "bar-chart",
@@ -191,7 +209,7 @@ function generateSSGRoutes() {
       const normalized = route.replace(/^\//, "");
       return !denylistPrefixes.some(
         (prefix) =>
-          normalized === prefix.slice(0, -1) || normalized.startsWith(prefix)
+          normalized === prefix.slice(0, -1) || normalized.startsWith(prefix),
       );
     })
     .sort();
@@ -213,7 +231,7 @@ export default ssgRoutes;
     "..",
     "src",
     "app",
-    "ssg-routes.config.ts"
+    "ssg-routes.config.ts",
   );
   fs.writeFileSync(outputPath, ssgRoutesConfig);
 
@@ -225,7 +243,7 @@ export default ssgRoutes;
   fs.writeFileSync(routesTxtPath, routesTxt + "\n");
 
   console.log(
-    `Generated SSG routes configuration with ${uniqueRoutes.length} routes:`
+    `Generated SSG routes configuration with ${uniqueRoutes.length} routes:`,
   );
   console.log(`Output file: ${outputPath}`);
   console.log(`Routes file: ${routesTxtPath}`);

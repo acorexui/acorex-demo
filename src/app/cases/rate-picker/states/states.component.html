@@ -1,24 +1,17 @@
-<div class="flex flex-col gap-6 p-4">
-  <ax-rate-picker
-    [max]="5"
-    [class]="'ax-md'"
-    [(ngModel)]="valueNormal"
-    [iconName]="'fa-star'"
-  ></ax-rate-picker>
+<div class="flex w-80 flex-col items-stretch gap-4 p-4">
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentState"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
 
   <ax-rate-picker
     [max]="5"
-    [readonly]="true"
-    [class]="'ax-md'"
-    [(ngModel)]="valueReadonly"
+    class="ax-md"
+    [(ngModel)]="value"
     [iconName]="'fa-star'"
-  ></ax-rate-picker>
-
-  <ax-rate-picker
-    [max]="5"
-    [disabled]="true"
-    [class]="'ax-md'"
-    [(ngModel)]="valueDisabled"
-    [iconName]="'fa-star'"
+    [readonly]="isReadonly()"
+    [disabled]="isDisabled()"
   ></ax-rate-picker>
 </div>

@@ -1,45 +1,15 @@
-<div
-  class="flex flex-col items-center justify-center gap-4 px-4"
->
-  <ax-button
-    class="w-full"
-    color="primary"
-    text="Primary Toast"
-    (onClick)="showPrimary()"
-  ></ax-button>
+<div class="flex w-52 flex-col items-stretch gap-4 py-6">
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentMethod"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
 
   <ax-button
     class="w-full"
-    color="secondary"
-    text="Secondary Toast"
-    (onClick)="showSecondary()"
-  ></ax-button>
-
-  <ax-button
-    class="w-full"
-    color="success"
-    text="Success Toast"
-    (onClick)="showSuccess()"
-  ></ax-button>
-
-  <ax-button
-    class="w-full"
-    color="warning"
-    text="Warning Toast"
-    (onClick)="showWarning()"
-  ></ax-button>
-
-  <ax-button
-    class="w-full"
-    color="danger"
-    text="Danger Toast"
-    (onClick)="showDanger()"
-  ></ax-button>
-
-  <ax-button
-    class="w-full"
-    color="default"
-    text="Default Toast"
-    (onClick)="showDefault()"
+    [color]="currentMethod()"
+    [text]="buttonText()"
+    (onClick)="showToast()"
   ></ax-button>
 </div>
