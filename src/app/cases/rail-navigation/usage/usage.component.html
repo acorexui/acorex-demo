@@ -1,14 +1,25 @@
 <div class="h-[100vh]">
   <ax-rail-navigation look="pills-color">
-    <ax-rail-navigation-item routerLink="/" [active]="true">
+    <ax-rail-navigation-item
+      [active]="isActive('home')"
+      (onClick)="selectItem('home')"
+    >
       <ax-icon class="fa-solid fa-home"> </ax-icon>
       <ax-text>Home</ax-text>
     </ax-rail-navigation-item>
-    <ax-rail-navigation-item>
+    <ax-rail-navigation-item
+      [active]="isActive('store')"
+      (onClick)="selectItem('store')"
+    >
       <ax-icon class="fa-solid fa-store"> </ax-icon>
       <ax-text>Store</ax-text>
     </ax-rail-navigation-item>
-    <ax-rail-navigation-item href="https://google.com/" target="_blank">
+    <ax-rail-navigation-item
+      href="https://google.com/"
+      target="_blank"
+      [active]="isActive('google')"
+      (onClick)="selectItem('google')"
+    >
       <ax-icon class="fa-brands fa-google"> </ax-icon>
       <ax-text>Google</ax-text>
     </ax-rail-navigation-item>

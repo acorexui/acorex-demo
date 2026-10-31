@@ -5,7 +5,11 @@
         class="w-60 shrink-0 rounded-md bg-primary-surface p-2 text-primary-on-surface"
       >
         <ax-side-menu mode="compact">
-          <ax-side-menu-item [active]="true"  color="primary">
+          <ax-side-menu-item
+            color="primary"
+            [active]="menu.isActive('dashboard')"
+            (onClick)="menu.select('dashboard', $event)"
+          >
             <span>Dashboard</span>
             <ax-prefix>
               <ax-icon>
@@ -13,21 +17,36 @@
               </ax-icon>
             </ax-prefix>
           </ax-side-menu-item>
-          <ax-side-menu-item>
+          <ax-side-menu-item
+            [active]="menu.isActive('users')"
+            (onClick)="menu.select('users', $event)"
+          >
             <span>Users</span>
             <ax-prefix>
               <ax-icon>
                 <i class="fa-solid fa-user-group"></i>
               </ax-icon>
             </ax-prefix>
-            <ax-side-menu-item text="List of users"></ax-side-menu-item>
+            <ax-side-menu-item
+              text="List of users"
+              [active]="menu.isActive('users-list')"
+              (onClick)="menu.select('users-list', $event)"
+            ></ax-side-menu-item>
             <ax-side-menu-item
               text="Verified users"
-              [active]="true"
+              [active]="menu.isActive('users-verified')"
+              (onClick)="menu.select('users-verified', $event)"
             ></ax-side-menu-item>
-            <ax-side-menu-item text="Unverified users"></ax-side-menu-item>
+            <ax-side-menu-item
+              text="Unverified users"
+              [active]="menu.isActive('users-unverified')"
+              (onClick)="menu.select('users-unverified', $event)"
+            ></ax-side-menu-item>
           </ax-side-menu-item>
-          <ax-side-menu-item>
+          <ax-side-menu-item
+            [active]="menu.isActive('settings')"
+            (onClick)="menu.select('settings', $event)"
+          >
             <span>Settings</span>
             <ax-prefix>
               <ax-icon>

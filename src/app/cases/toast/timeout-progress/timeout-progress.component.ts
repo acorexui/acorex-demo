@@ -1,55 +1,41 @@
 import { AXButtonComponent } from '@acorex/components/button';
+import { AXFormModule } from '@acorex/components/form';
+import { AXLabelModule } from '@acorex/components/label';
+import { AXSwitchComponent } from '@acorex/components/switch';
+import { AXTextBoxModule } from '@acorex/components/text-box';
 import { AXToastModule, AXToastService } from '@acorex/components/toast';
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   templateUrl: './timeout-progress.component.html',
-  imports: [AXButtonComponent, AXToastModule],
+  imports: [
+    FormsModule,
+    AXButtonComponent,
+    AXToastModule,
+    AXSwitchComponent,
+    AXTextBoxModule,
+    AXFormModule,
+    AXLabelModule,
+  ],
 })
 export class TimeoutProgressComponent {
-  private toastService = inject(AXToastService);
+  private readonly toastService = inject(AXToastService);
 
-  showWithProgress() {
-    this.toastService.show({
-      color: 'success',
-      title: 'With Progress Bar',
-      content: 'This toast shows a progress bar indicating remaining time.',
-      closeButton: true,
-      timeOut: 5000,
-      timeOutProgress: true,
-    });
-  }
+  protected timeOutProgress = signal(true);
+  protected timeOut = signal(5000);
 
-  showWithoutProgress() {
-    this.toastService.show({
-      color: 'warning',
-      title: 'Without Progress Bar',
-      content: 'This toast has no progress bar but will still auto-dismiss.',
-      closeButton: true,
-      timeOut: 5000,
-      timeOutProgress: false,
-    });
-  }
+  protected showToast(): void {
+    const timeOut = Number(this.timeOut()) || 0;
+    const timeOutProgress = this.timeOutProgress();
 
-  showQuickTimeout() {
     this.toastService.show({
       color: 'primary',
-      title: 'Quick Timeout',
-      content: 'This toast will disappear in 2 seconds.',
+      title: timeOutProgress ? 'With progress bar' : 'Without progress bar',
+      content: `Auto-dismiss after ${timeOut} ms.`,
       closeButton: true,
-      timeOut: 2000,
-      timeOutProgress: true,
-    });
-  }
-
-  showLongTimeout() {
-    this.toastService.show({
-      color: 'secondary',
-      title: 'Long Timeout',
-      content: 'This toast will stay for 10 seconds.',
-      closeButton: true,
-      timeOut: 10000,
-      timeOutProgress: true,
+      timeOut,
+      timeOutProgress,
     });
   }
 }

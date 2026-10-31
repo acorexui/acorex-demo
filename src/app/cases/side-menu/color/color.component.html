@@ -1,7 +1,11 @@
 <div class="flex gap-2">
   <div class="w-60 rounded-md p-2">
     <ax-side-menu>
-      <ax-side-menu-item [active]="true" color="primary">
+      <ax-side-menu-item
+        color="primary"
+        [active]="primaryMenu.isActive('dashboard')"
+        (onClick)="primaryMenu.select('dashboard', $event)"
+      >
         <span>Dashboard</span>
         <ax-prefix>
           <ax-icon>
@@ -9,7 +13,10 @@
           </ax-icon>
         </ax-prefix>
       </ax-side-menu-item>
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="primaryMenu.isActive('users')"
+        (onClick)="primaryMenu.select('users', $event)"
+      >
         <span>Users</span>
         <ax-prefix>
           <ax-icon>
@@ -17,7 +24,11 @@
           </ax-icon>
         </ax-prefix>
       </ax-side-menu-item>
-      <ax-side-menu-item [isCollapsed]="true">
+      <ax-side-menu-item
+        [isCollapsed]="true"
+        [active]="primaryMenu.isActive('comments')"
+        (onClick)="primaryMenu.select('comments', $event)"
+      >
         <span>Comments</span>
         <ax-prefix>
           <ax-icon>
@@ -29,7 +40,11 @@
   </div>
   <div class="w-60 rounded-md p-2">
     <ax-side-menu>
-      <ax-side-menu-item [active]="true" color="success">
+      <ax-side-menu-item
+        color="success"
+        [active]="successMenu.isActive('dashboard')"
+        (onClick)="successMenu.select('dashboard', $event)"
+      >
         <span>Dashboard</span>
         <ax-prefix>
           <ax-icon>
@@ -37,7 +52,10 @@
           </ax-icon>
         </ax-prefix>
       </ax-side-menu-item>
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="successMenu.isActive('users')"
+        (onClick)="successMenu.select('users', $event)"
+      >
         <span>Users</span>
         <ax-prefix>
           <ax-icon>
@@ -45,7 +63,11 @@
           </ax-icon>
         </ax-prefix>
       </ax-side-menu-item>
-      <ax-side-menu-item [isCollapsed]="true">
+      <ax-side-menu-item
+        [isCollapsed]="true"
+        [active]="successMenu.isActive('comments')"
+        (onClick)="successMenu.select('comments', $event)"
+      >
         <span>Comments</span>
         <ax-prefix>
           <ax-icon>
@@ -57,7 +79,11 @@
   </div>
   <div class="w-60 rounded-md p-2">
     <ax-side-menu>
-      <ax-side-menu-item [active]="true" color="danger">
+      <ax-side-menu-item
+        color="danger"
+        [active]="dangerMenu.isActive('dashboard')"
+        (onClick)="dangerMenu.select('dashboard', $event)"
+      >
         <span>Dashboard</span>
         <ax-prefix>
           <ax-icon>
@@ -65,7 +91,10 @@
           </ax-icon>
         </ax-prefix>
       </ax-side-menu-item>
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="dangerMenu.isActive('users')"
+        (onClick)="dangerMenu.select('users', $event)"
+      >
         <span>Users</span>
         <ax-prefix>
           <ax-icon>
@@ -73,7 +102,11 @@
           </ax-icon>
         </ax-prefix>
       </ax-side-menu-item>
-      <ax-side-menu-item [isCollapsed]="true">
+      <ax-side-menu-item
+        [isCollapsed]="true"
+        [active]="dangerMenu.isActive('comments')"
+        (onClick)="dangerMenu.select('comments', $event)"
+      >
         <span>Comments</span>
         <ax-prefix>
           <ax-icon>

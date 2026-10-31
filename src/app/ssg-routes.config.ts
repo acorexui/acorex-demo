@@ -145,6 +145,8 @@ export const ssgRoutes = [
   'cdk/outline/scroll-offset',
   'cdk/outline/target-selector',
   'cdk/outline/usage',
+  'cdk/overlay-scrollbar/design-tokens',
+  'cdk/overlay-scrollbar/usage',
   'cdk/pan-view/free-mode',
   'cdk/pan-view/model-properties',
   'cdk/pan-view/usage',
@@ -362,8 +364,11 @@ export const ssgRoutes = [
   'otp/disabled-readonly',
   'otp/in-form',
   'otp/length',
+  'otp/letter',
   'otp/looks',
+  'otp/separator',
   'otp/states',
+  'otp/text',
   'otp/usage',
   'otp/validation',
   'password-box/auto-complete',
@@ -377,6 +382,7 @@ export const ssgRoutes = [
   'phone-box/usage',
   'phone-box/validation',
   'picker/date',
+  'picker/fade',
   'picker/text',
   'picker/usage',
   'popover/hover',
@@ -452,8 +458,8 @@ export const ssgRoutes = [
   'selection-list/horizontal',
   'selection-list/multiple',
   'selection-list/usage',
-  'side-bar/custom-background',
-  'side-bar/usage',
+  'sidebar/custom-background',
+  'sidebar/usage',
   'side-menu/color',
   'side-menu/compact',
   'side-menu/customize-font',
@@ -538,7 +544,7 @@ export const ssgRoutes = [
   'uploader/feature-title',
   'uploader/service-integration',
   'uploader/usage',
-  'uploader/zone-directive'
+  'uploader/zone-directive',
 ];
 
 export default ssgRoutes;

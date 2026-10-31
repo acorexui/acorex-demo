@@ -1,0 +1,56 @@
+<div
+  class="flex flex-col items-center justify-center gap-6 px-4 py-16 text-center"
+>
+
+
+  <ax-button-group>
+    @for (item of modes; track item.value) {
+      <ax-button-group-item
+        class="ax-sm"
+        [text]="item.label"
+        [selected]="mode() === item.value"
+        (onClick)="setMode(item.value)"
+      ></ax-button-group-item>
+    }
+  </ax-button-group>
+
+  <p class="max-w-md text-sm text-muted">{{ modeDescription() }}</p>
+
+  <div class="w-full max-w-md">
+    @switch (mode()) {
+      @case ('groupSize') {
+        <ax-otp
+          look="fill"
+          [length]="6"
+          separator="-"
+          [separatorGroupSize]="2"
+          [(ngModel)]="otpValue"
+        ></ax-otp>
+      }
+      @case ('groups') {
+        <ax-otp
+          look="fill"
+          [length]="6"
+          separator="-"
+          [separatorGroups]="[3, 3]"
+          [(ngModel)]="otpValue"
+        ></ax-otp>
+      }
+      @case ('after') {
+        <ax-otp
+          look="fill"
+          [length]="6"
+          separator="-"
+          [separatorAfter]="[1, 3]"
+          [(ngModel)]="otpValue"
+        ></ax-otp>
+      }
+    }
+  </div>
+
+  @if (otpValue()) {
+    <p class="text-xs text-muted">
+      Value: <strong class="text-on-surface">{{ otpValue() }}</strong>
+    </p>
+  }
+</div>

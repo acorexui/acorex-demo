@@ -16,7 +16,10 @@
       </ax-header>
 
       <ax-side-menu axSidebarNavigation [mode]="mode()">
-        <ax-side-menu-item [active]="true">
+        <ax-side-menu-item
+          [active]="isActive('dashboard')"
+          (onClick)="select('dashboard', $event)"
+        >
           <span>Dashboard</span>
           <ax-prefix>
             <ax-icon>
@@ -24,17 +27,32 @@
             </ax-icon>
           </ax-prefix>
         </ax-side-menu-item>
-        <ax-side-menu-item [isCollapsed]="true">
+        <ax-side-menu-item
+          [isCollapsed]="true"
+          [active]="isActive('users')"
+          (onClick)="select('users', $event)"
+        >
           <span>Users</span>
           <ax-prefix>
             <ax-icon>
               <i class="fa-solid fa-user-group"></i>
             </ax-icon>
           </ax-prefix>
-          <ax-side-menu-item text="All users"></ax-side-menu-item>
-          <ax-side-menu-item text="Roles"></ax-side-menu-item>
+          <ax-side-menu-item
+            text="All users"
+            [active]="isActive('users-all')"
+            (onClick)="select('users-all', $event)"
+          ></ax-side-menu-item>
+          <ax-side-menu-item
+            text="Roles"
+            [active]="isActive('users-roles')"
+            (onClick)="select('users-roles', $event)"
+          ></ax-side-menu-item>
         </ax-side-menu-item>
-        <ax-side-menu-item>
+        <ax-side-menu-item
+          [active]="isActive('reports')"
+          (onClick)="select('reports', $event)"
+        >
           <span>Reports</span>
           <ax-prefix>
             <ax-icon>
@@ -67,10 +85,16 @@
     </ax-sidebar>
 
     <main
-      class="flex flex-1 items-center justify-center bg-lighter-surface p-6 text-sm text-on-surface opacity-80"
+      class="flex flex-1 flex-col items-center justify-center gap-1 bg-lighter-surface p-6 text-sm text-on-surface opacity-80"
     >
-      Main content — collapse control toggles sidebar
-      <code class="mx-1">{{ mode() }}</code> mode.
+      <span>
+        Selected:
+        <strong class="font-semibold opacity-100">{{ selectedLabel() }}</strong>
+      </span>
+      <span>
+        Sidebar mode:
+        <code class="mx-1">{{ mode() }}</code>
+      </span>
     </main>
   </div>
 </div>

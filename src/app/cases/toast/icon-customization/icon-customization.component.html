@@ -1,36 +1,15 @@
-<div class="flex flex-col items-center justify-center gap-4">
-  <ax-button
-    class="w-full"
-    color="success"
-    text="Default Icon"
-    (onClick)="showWithDefaultIcon()"
-  ></ax-button>
+<div class="flex w-52 flex-col items-stretch gap-4 py-6">
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentIcon"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
 
   <ax-button
     class="w-full"
-    color="primary"
-    text="Custom Heart Icon"
-    (onClick)="showWithCustomIcon()"
-  ></ax-button>
-
-  <ax-button
-    class="w-full"
-    color="warning"
-    text="Custom Star Icon"
-    (onClick)="showWithStarIcon()"
-  ></ax-button>
-
-  <ax-button
-    class="w-full"
-    color="secondary"
-    text="Custom Settings Icon"
-    (onClick)="showWithSettingsIcon()"
-  ></ax-button>
-
-  <ax-button
-    class="w-full"
-    color="danger"
-    text="Custom Bell Icon"
-    (onClick)="showWithBellIcon()"
+    [color]="selectedOption().color"
+    text="Show toast"
+    (onClick)="showToast()"
   ></ax-button>
 </div>

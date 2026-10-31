@@ -502,6 +502,12 @@ export const appRoutes: Route[] = [
       import('./cases/text-box/text-box.routes').then((c) => c.routes),
   },
   {
+    path: 'text-editor',
+    component: MasterLayoutComponent,
+    loadChildren: () =>
+      import('./cases/text-editor/text-editor.routes').then((c) => c.routes),
+  },
+  {
     path: 'time-line',
     component: MasterLayoutComponent,
     loadChildren: () =>
@@ -627,7 +633,7 @@ export const appRoutes: Route[] = [
       import('./cases/core/core.routes').then((c) => c.routes),
   },
   {
-    path: 'side-bar',
+    path: 'sidebar',
     component: MasterLayoutComponent,
     loadChildren: () =>
       import('./cases/side-bar/side-bar.routes').then((c) => c.routes),

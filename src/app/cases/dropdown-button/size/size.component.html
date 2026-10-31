@@ -1,32 +1,38 @@
-<div class="flex w-full flex-wrap items-center justify-center gap-4 py-6">
-  @for (size of sizes(); track size) {
-    <div [class]="size">
-      <ax-dropdown-button
-        color="primary"
-        mode="split"
-        [size]="size"
-        [text]="size"
-      >
-        <ax-button-item-list>
-          <ax-button-item text="Save as..." name="save" data="save-data">
-            <ax-prefix>
-              <ax-icon icon="fa-regular fa-floppy-disk"></ax-icon>
-            </ax-prefix>
-          </ax-button-item>
-          <ax-title>Group</ax-title>
-          <ax-button-item text="Export" [disabled]="true" [divided]="true">
-            <ax-prefix>
-              <ax-icon icon="fa-solid fa-file-export"></ax-icon>
-            </ax-prefix>
-          </ax-button-item>
-          <ax-divider></ax-divider>
-          <ax-button-item text="Delete" color="danger">
-            <ax-prefix>
-              <ax-icon icon="fa-solid fa-trash-can"></ax-icon>
-            </ax-prefix>
-          </ax-button-item>
-        </ax-button-item-list>
-      </ax-dropdown-button>
-    </div>
-  }
+<div class="flex flex-col items-center gap-4 py-6">
+  <ax-select-box
+    class="w-52"
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentSize"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
+
+  <div [class]="currentSize()">
+    <ax-dropdown-button
+      color="primary"
+      mode="split"
+      [size]="currentSize()"
+      [text]="buttonText()"
+    >
+      <ax-button-item-list>
+        <ax-button-item text="Save as..." name="save" data="save-data">
+          <ax-prefix>
+            <ax-icon icon="fa-regular fa-floppy-disk"></ax-icon>
+          </ax-prefix>
+        </ax-button-item>
+        <ax-title>Group</ax-title>
+        <ax-button-item text="Export" [disabled]="true" [divided]="true">
+          <ax-prefix>
+            <ax-icon icon="fa-solid fa-file-export"></ax-icon>
+          </ax-prefix>
+        </ax-button-item>
+        <ax-divider></ax-divider>
+        <ax-button-item text="Delete" color="danger">
+          <ax-prefix>
+            <ax-icon icon="fa-solid fa-trash-can"></ax-icon>
+          </ax-prefix>
+        </ax-button-item>
+      </ax-button-item-list>
+    </ax-dropdown-button>
+  </div>
 </div>

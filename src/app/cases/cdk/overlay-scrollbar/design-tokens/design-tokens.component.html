@@ -1,0 +1,33 @@
+<div class="flex flex-wrap items-start justify-center gap-6 p-4">
+  <div class="flex w-full max-w-xs flex-col gap-2">
+    <span class="text-center text-sm font-medium">Default tokens</span>
+    <div
+      axOverlayScrollbar
+      class="overlay-scrollbar-tokens-default surface h-56 w-full overflow-y-auto rounded-lg border border-light-surface p-3"
+    >
+      @for (line of lines; track line) {
+        <p class="border-b border-lightest-surface py-2 text-sm last:border-0">
+          {{ line }}
+        </p>
+      }
+    </div>
+  </div>
+
+  <div class="flex w-full max-w-xs flex-col gap-2">
+    <span class="text-center text-sm font-medium">Custom tokens</span>
+    <p class="text-center text-xs opacity-70">
+      Overrides for size, thumb, track, borders, and fade duration
+    </p>
+    <div
+      axOverlayScrollbar
+      class="overlay-scrollbar-tokens-custom surface h-56 w-full overflow-y-auto rounded-lg border border-light-surface p-3"
+      [navigationButtons]="true"
+    >
+      @for (line of lines; track line) {
+        <p class="border-b border-lightest-surface py-2 text-sm last:border-0">
+          {{ line }}
+        </p>
+      }
+    </div>
+  </div>
+</div>

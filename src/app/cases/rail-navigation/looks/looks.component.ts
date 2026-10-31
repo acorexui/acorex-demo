@@ -26,6 +26,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class LooksComponent {
   protected currentLook = signal<AXRailLook>('with-line-color');
+  protected activeIndex = signal(0);
+
   protected looks = signal<AXRailLook[]>([
     'default',
     'pills',
@@ -33,11 +35,20 @@ export class LooksComponent {
     'with-line',
     'with-line-color',
   ]);
+
   protected dataSource = computed(() =>
-    this.looks().map((look) => ({ value: look, text: look }))
+    this.looks().map((look) => ({ value: look, text: look })),
   );
 
   protected onLookChange(look: AXRailLook) {
     this.currentLook.set(look);
+  }
+
+  protected onItemClick(index: number) {
+    this.activeIndex.set(index);
+  }
+
+  protected isActive(index: number): boolean {
+    return this.activeIndex() === index;
   }
 }

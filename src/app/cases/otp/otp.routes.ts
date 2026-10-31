@@ -39,9 +39,26 @@ export const routes: Routes = [
       import('./looks/looks.component').then((e) => e.LooksComponent),
   },
   {
+    path: 'letter',
+    loadComponent: () =>
+      import('./letter/letter.component').then((e) => e.LetterComponent),
+  },
+  {
+    path: 'separator',
+    loadComponent: () =>
+      import('./separator/separator.component').then(
+        (e) => e.SeparatorComponent,
+      ),
+  },
+  {
     path: 'states',
     loadComponent: () =>
       import('./states/states.component').then((e) => e.StatesComponent),
+  },
+  {
+    path: 'text',
+    loadComponent: () =>
+      import('./text/text.component').then((e) => e.TextComponent),
   },
   {
     path: 'disabled-readonly',

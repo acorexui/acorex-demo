@@ -2,7 +2,10 @@
   class="w-60 rounded-md bg-primary-surface p-2 text-primary-on-surface"
 >
   <ax-side-menu>
-    <ax-side-menu-item>
+    <ax-side-menu-item
+      [active]="menu.isActive('dashboard')"
+      (onClick)="menu.select('dashboard', $event)"
+    >
       <span>Dashboard</span>
       <ax-prefix>
         <ax-icon>
@@ -10,23 +13,38 @@
         </ax-icon>
       </ax-prefix>
     </ax-side-menu-item>
-    <ax-side-menu-item>
+    <ax-side-menu-item
+      [active]="menu.isActive('users')"
+      (onClick)="menu.select('users', $event)"
+    >
       <span>Users</span>
       <ax-prefix>
         <ax-icon>
           <i class="fa-solid fa-user-group"></i>
         </ax-icon>
       </ax-prefix>
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="menu.isActive('users-list')"
+        (onClick)="menu.select('users-list', $event)"
+      >
         <span>List of users</span>
       </ax-side-menu-item>
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="menu.isActive('users-verified')"
+        (onClick)="menu.select('users-verified', $event)"
+      >
         <span>Verified users</span>
       </ax-side-menu-item>
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="menu.isActive('users-unverified')"
+        (onClick)="menu.select('users-unverified', $event)"
+      >
         <span>Unverified users</span>
       </ax-side-menu-item>
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="menu.isActive('users-blocked')"
+        (onClick)="menu.select('users-blocked', $event)"
+      >
         <span>Users are blocked</span>
       </ax-side-menu-item>
     </ax-side-menu-item>
@@ -43,12 +61,20 @@
       <ax-side-menu-item
         text="All Comments"
         [disabled]="_options.disabled"
+        [active]="menu.isActive('comments-all')"
+        (onClick)="menu.select('comments-all', $event)"
       ></ax-side-menu-item>
       <ax-side-menu-item
         text="Comments approved"
         [disabled]="_options.disabled"
+        [active]="menu.isActive('comments-approved')"
+        (onClick)="menu.select('comments-approved', $event)"
       ></ax-side-menu-item>
-      <ax-side-menu-item text="Unverified comments"></ax-side-menu-item>
+      <ax-side-menu-item
+        text="Unverified comments"
+        [active]="menu.isActive('comments-unverified')"
+        (onClick)="menu.select('comments-unverified', $event)"
+      ></ax-side-menu-item>
     </ax-side-menu-item>
   </ax-side-menu>
 </div>

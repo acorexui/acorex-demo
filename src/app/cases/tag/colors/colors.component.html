@@ -1,10 +1,19 @@
-<div
-  class="flex w-full items-center justify-center gap-4 py-6"
->
-  <ax-tag text="primary" color="primary" look="solid"></ax-tag>
-  <ax-tag text="secondary" color="secondary" look="solid"></ax-tag>
-  <ax-tag text="danger" color="danger" look="solid"></ax-tag>
-  <ax-tag text="warning" color="warning" look="solid"></ax-tag>
-  <ax-tag text="success" color="success" look="solid"></ax-tag>
-  <ax-tag text="default" color="default" look="solid"></ax-tag>
+<div class="flex w-52 flex-col items-stretch gap-4 py-6">
+  <ax-select-box
+    textField="text"
+    valueField="value"
+    [(ngModel)]="currentColor"
+    [dataSource]="dataSource()"
+  ></ax-select-box>
+
+  @for (color of [currentColor()]; track color) {
+    <div class="flex justify-center">
+      <ax-tag
+        [text]="tagText()"
+        [color]="color"
+        look="solid"
+        class="w-fit"
+      ></ax-tag>
+    </div>
+  }
 </div>

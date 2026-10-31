@@ -1,0 +1,24 @@
+<div class="flex flex-col items-center justify-center gap-6 px-4 py-16">
+  @if (isBrowser) {
+    <div class="flex flex-wrap items-start justify-center gap-10">
+      <div class="flex flex-col items-center gap-3">
+        <span class="text-sm font-medium text-on-surface">Fade on</span>
+        <ax-picker-container class="h-56 w-36">
+          <ax-picker-title>
+            <ax-text>Minute</ax-text>
+          </ax-picker-title>
+          <ax-picker-items
+            [fade]="true"
+            [items]="items()"
+            [ngModel]="selectedWithFade()"
+            (onValueChanged)="onFadeOnChanged($event)"
+          ></ax-picker-items>
+        </ax-picker-container>
+        <p class="text-sm text-muted">
+          Selected:
+          <strong class="text-on-surface">{{ selectedWithFade().text }}</strong>
+        </p>
+      </div>
+    </div>
+  }
+</div>

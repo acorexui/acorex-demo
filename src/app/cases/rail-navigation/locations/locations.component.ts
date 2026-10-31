@@ -24,9 +24,18 @@ import { Component, signal } from '@angular/core';
 })
 export class LocationsComponent {
   protected currentLocation = signal<AXRailLocation>('start');
+  protected activeIndex = signal(0);
   protected locations: AXRailLocation[] = ['start', 'end'];
 
   protected onLocationChange(location: AXRailLocation) {
     this.currentLocation.set(location);
+  }
+
+  protected onItemClick(index: number) {
+    this.activeIndex.set(index);
+  }
+
+  protected isActive(index: number): boolean {
+    return this.activeIndex() === index;
   }
 }

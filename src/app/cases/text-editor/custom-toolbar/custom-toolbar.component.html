@@ -1,0 +1,35 @@
+<div class="flex w-3xl flex-col gap-3">
+  <p class="text-sm opacity-70">
+    Only the tools you need, plus custom actions via
+    <code class="text-xs">getEditorService()</code> on
+    <code class="text-xs">ax-text-editor</code>.
+  </p>
+
+  <ax-text-editor
+    class="w-full"
+    [initialLine]="8"
+    placeHolder="Pick a few built-in tools or add your own controls in the toolbar."
+    [(ngModel)]="content"
+  >
+    <ax-text-editor-toolbar>
+      <ax-text-editor-history></ax-text-editor-history>
+      <ax-text-editor-font-style></ax-text-editor-font-style>
+      <ax-text-editor-link></ax-text-editor-link>
+      <ax-suffix>
+        <ax-button
+          class="ax-sm"
+          look="blank"
+          text="Insert greeting"
+          (onClick)="insertGreeting()"
+        ></ax-button>
+        <ax-button
+          class="ax-sm"
+          look="blank"
+          color="danger"
+          text="Clear"
+          (onClick)="clearDocument()"
+        ></ax-button>
+      </ax-suffix>
+    </ax-text-editor-toolbar>
+  </ax-text-editor>
+</div>

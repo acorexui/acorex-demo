@@ -3,7 +3,10 @@
     class="w-60 rounded-md bg-primary-surface p-2 text-primary-on-surface"
   >
     <ax-side-menu look="default">
-      <ax-side-menu-item>
+      <ax-side-menu-item
+        [active]="menu.isActive('dashboard')"
+        (onClick)="menu.select('dashboard', $event)"
+      >
         <span>Dashboard</span>
         <ax-prefix>
           <ax-icon>
@@ -11,32 +14,57 @@
           </ax-icon>
         </ax-prefix>
       </ax-side-menu-item>
-      <ax-side-menu-item [isCollapsed]="false">
+      <ax-side-menu-item
+        [isCollapsed]="false"
+        [active]="menu.isActive('users')"
+        (onClick)="menu.select('users', $event)"
+      >
         <span>Users</span>
         <ax-prefix>
           <ax-icon>
             <i class="fa-solid fa-user-group"></i>
           </ax-icon>
         </ax-prefix>
-        <ax-side-menu-item>
+        <ax-side-menu-item
+          [active]="menu.isActive('users-list')"
+          (onClick)="menu.select('users-list', $event)"
+        >
           <span>List of users</span>
         </ax-side-menu-item>
-        <ax-side-menu-item [active]="true">
+        <ax-side-menu-item
+          [active]="menu.isActive('users-verified')"
+          (onClick)="menu.select('users-verified', $event)"
+        >
           <span>Verified users</span>
         </ax-side-menu-item>
-        <ax-side-menu-item>
+        <ax-side-menu-item
+          [active]="menu.isActive('users-unverified')"
+          (onClick)="menu.select('users-unverified', $event)"
+        >
           <span>Unverified users</span>
         </ax-side-menu-item>
       </ax-side-menu-item>
-      <ax-side-menu-item [isCollapsed]="false">
+      <ax-side-menu-item
+        [isCollapsed]="false"
+        [active]="menu.isActive('settings')"
+        (onClick)="menu.select('settings', $event)"
+      >
         <span>Settings</span>
         <ax-prefix>
           <ax-icon>
             <i class="fa-solid fa-gear"></i>
           </ax-icon>
         </ax-prefix>
-        <ax-side-menu-item text="Profile"></ax-side-menu-item>
-        <ax-side-menu-item text="Notifications"></ax-side-menu-item>
+        <ax-side-menu-item
+          text="Profile"
+          [active]="menu.isActive('settings-profile')"
+          (onClick)="menu.select('settings-profile', $event)"
+        ></ax-side-menu-item>
+        <ax-side-menu-item
+          text="Notifications"
+          [active]="menu.isActive('settings-notifications')"
+          (onClick)="menu.select('settings-notifications', $event)"
+        ></ax-side-menu-item>
       </ax-side-menu-item>
     </ax-side-menu>
   </div>
