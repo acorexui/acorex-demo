@@ -6,6 +6,6 @@ import { Component, model, signal } from '@angular/core';
   templateUrl: 'width-and-height.component.html',
   imports: [AXResizableDirective, AXDecoratorModule],
 })
-export class ResizerWidthAndHeightComponent {
+export class ResizableWidthAndHeightComponent {
   protected readonly twoAxisHandles: AXResizeHandle[] = ['end', 'bottom'];
 }

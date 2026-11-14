@@ -1,6 +1,6 @@
 import { AXPanViewDirective } from '@acorex/cdk/pan-view';
 import { AXButtonComponent } from '@acorex/components/button';
-import { Component, signal } from '@angular/core';
+import { Component, signal, viewChild } from '@angular/core';
 
 @Component({
   selector: 'app-model-properties',
@@ -9,6 +9,8 @@ import { Component, signal } from '@angular/core';
   templateUrl: './model-properties.component.html',
 })
 export class ModelPropertiesComponent {
+  private readonly panView = viewChild.required<AXPanViewDirective>('panViewRef');
+
   panX = signal(0);
   panY = signal(0);
   zoom = signal(100);
@@ -23,8 +25,6 @@ export class ModelPropertiesComponent {
   }
 
   resetView() {
-    this.panX.set(0);
-    this.panY.set(0);
-    this.zoom.set(100);
+    this.panView().resetPosition();
   }
 }

@@ -9,7 +9,7 @@ import { AXSwitchComponent } from '@acorex/components/switch';
   templateUrl: 'corner-resize.component.html',
   imports: [AXResizableDirective, AXDecoratorModule, AXLabelComponent, AXSwitchComponent],
 })
-export class ResizerCornerResizeComponent {
+export class ResizableCornerResizeComponent {
   protected readonly cornerHandles: AXResizeHandle[] = ['bottom-end'];
   protected readonly lockAspectRatio = signal(false);
 }

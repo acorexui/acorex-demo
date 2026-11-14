@@ -11,9 +11,11 @@ import { AXFormatModule } from '@acorex/core/format';
 import {
   AX_TRANSLATION_LOADER,
   AX_TRANSLATION_CONFIG,
+  AXTranslationModule,
   translationConfig,
 } from '@acorex/core/translation';
 import { AXValidationModule } from '@acorex/core/validation';
+import { provideOverlayScrollbar } from '@acorex/cdk/overlay-scrollbar';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { MyCustomHolidaysLoader, MyTranslationLoader } from './app.loaders';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -28,12 +30,37 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withFetch()),
     // Auto-switches to noop animations under ngServerMode (SSR/prerender).
     provideAnimationsAsync(),
+    provideOverlayScrollbar({
+      enabled: true,
+      hideDelay: 1200,
+      navigationButtons: false,
+      navScrollStep: 48,
+      designTokens: {
+        size: '4px',
+        thumbRadius: '4px',
+        trackRadius: '4px',
+        trackColor: 'transparent',
+        thumbColor:
+          'color-mix(in srgb, rgb(var(--ax-sys-color-on-lightest-surface)) 40%, rgb(var(--ax-sys-color-lightest-surface)))',
+        thumbHoverColor:
+          'color-mix(in srgb, rgb(var(--ax-sys-color-on-lightest-surface)) 62%, rgb(var(--ax-sys-color-lightest-surface)))',
+        thumbActiveColor:
+          'color-mix(in srgb, rgb(var(--ax-sys-color-on-lightest-surface)) 62%, rgb(var(--ax-sys-color-lightest-surface)))',
+        trackActiveColor: 'transparent',
+        thumbBorderWidth: '0',
+        thumbBorderColor: 'transparent',
+        trackBorderWidth: '0',
+        trackBorderColor: 'transparent',
+        fadeDuration: '0.35s',
+      },
+    }),
     ...provideFileViewer(),
     importProvidersFrom(
       AXLocaleModule,
+      AXTranslationModule,
       AXValidationModule.forRoot(),
       AXFormatModule.forRoot(),
-      AXMediaViewerModule.forRoot()
+      AXMediaViewerModule.forRoot(),
     ),
     {
       provide: AX_DATETIME_HOLIDAYS_LOADER,

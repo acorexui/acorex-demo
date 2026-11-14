@@ -132,7 +132,15 @@
       "years": "Years"
     },
     "weekdays": {
-      "short": { "0": "Sun", "1": "Mon", "2": "Tue", "3": "Wed", "4": "Thu", "5": "Fri", "6": "Sat" },
+      "short": {
+        "0": "Sun",
+        "1": "Mon",
+        "2": "Tue",
+        "3": "Wed",
+        "4": "Thu",
+        "5": "Fri",
+        "6": "Sat"
+      },
       "long": {
         "0": "Sunday",
         "1": "Monday",
@@ -251,7 +259,11 @@
   "comment": {
     "replies": "Replies",
     "reply": "Reply",
-    "view": "View"
+    "replying-to": "Replying to",
+    "you": "You",
+    "edited": "Edited",
+    "view": "View",
+    "hide": "Hide"
   },
   "paint": {
     "tools": {

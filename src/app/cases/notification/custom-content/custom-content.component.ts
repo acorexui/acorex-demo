@@ -15,7 +15,7 @@ export class CustomContentComponent {
 
   showTemplateNotification() {
     this.notificationService.show({
-      title: 'Custom Template',
+      icon: null,
       content: this.getCustomTemplate(),
       color: 'primary',
       location: 'top-center',
@@ -25,7 +25,7 @@ export class CustomContentComponent {
 
   showComponentNotification() {
     this.notificationService.show({
-      title: 'Custom Component',
+      icon: null,
       content: this.getCustomComponent(),
       color: 'success',
       location: 'bottom-center',
@@ -35,7 +35,7 @@ export class CustomContentComponent {
 
   showRichContentNotification() {
     this.notificationService.show({
-      title: 'Rich Content',
+      icon: null,
       content: `
         <div style="padding: 8px;">
           <h4 style="margin: 0 0 8px 0; color: #333;">Important Information</h4>

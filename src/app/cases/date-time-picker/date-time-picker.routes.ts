@@ -10,11 +10,16 @@ export const routes: Routes = [
   {
     path: 'year-range',
     loadComponent: () =>
-      import('./year-range/year-range.component').then((e) => e.YearRangeComponent),
-  },{
+      import('./year-range/year-range.component').then(
+        (e) => e.YearRangeComponent,
+      ),
+  },
+  {
     path: 'calendar-look',
     loadComponent: () =>
-      import('./calendar-look/calendar-look.component').then((e) => e.CalendarLookComponent),
+      import('./calendar-look/calendar-look.component').then(
+        (e) => e.CalendarLookComponent,
+      ),
   },
   {
     path: 'picker',
@@ -35,7 +40,7 @@ export const routes: Routes = [
     path: 'constraints',
     loadComponent: () =>
       import('./constraints/constraints.component').then(
-        (e) => e.ConstraintsComponent
+        (e) => e.ConstraintsComponent,
       ),
   },
 ];

@@ -147,10 +147,10 @@
 /cdk/pan-view/model-properties
 /cdk/pan-view/usage
 /cdk/pan-view/zoom-controls
-/cdk/resizer/corner-resize
-/cdk/resizer/double-click
-/cdk/resizer/usage
-/cdk/resizer/width-and-height
+/cdk/resizable/corner-resize
+/cdk/resizable/double-click
+/cdk/resizable/usage
+/cdk/resizable/width-and-height
 /cdk/selection/multiple
 /cdk/selection/usage
 /cdk/shimmer/custom-color

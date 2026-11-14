@@ -10,7 +10,7 @@ type DblClickAction = 'reset' | 'maximize' | 'fit';
   templateUrl: 'double-click-actions.component.html',
   imports: [AXResizableDirective, AXDecoratorModule, AXButtonModule],
 })
-export class ResizerDoubleClickActionsComponent {
+export class ResizableDoubleClickActionsComponent {
   protected readonly width = model(240);
   protected readonly defaultWidth = 240;
   protected readonly maxWidth = signal(480);

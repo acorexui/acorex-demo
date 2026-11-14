@@ -208,7 +208,11 @@
   "comment": {
     "view": "View",
     "reply": "Reply",
-    "replies": "Replies"
+    "replies": "Replies",
+    "replying-to": "Replying to",
+    "you": "You",
+    "edited": "Edited",
+    "hide": "Hide"
   },
   "custom": "Custom",
   "every": "Every",

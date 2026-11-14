@@ -105,9 +105,9 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'resizer',
+    path: 'resizable',
     component: MasterLayoutComponent,
     loadChildren: () =>
-      import('./resizer/resizer.routes').then((c) => c.routes),
+      import('./resizable/resizable.routes').then((c) => c.routes),
   },
 ];
