@@ -11,7 +11,7 @@ import {
 } from '@acorex/core/translation';
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable, delay, first, of } from 'rxjs';
+import { Observable, catchError, first } from 'rxjs';
 
 @Injectable()
 export class MyCustomHolidaysLoader implements AXHolidaysLoader {
@@ -38,13 +38,19 @@ export class MyTranslationLoader implements AXTranslationLoader {
   http = inject(HttpClient);
 
   load(options: AXTranslationLoaderOptions): Observable<AXTranslation> {
-    // Simulated delay in milliseconds
-    const simulatedDelay = 0; // 2 seconds
-    const httpRequest = this.http
-      .get<AXTranslation>(`/i18n/${options.lang}/${options.scope}.json`)
-      .pipe(first(), delay(simulatedDelay));
+    const publicUrl = `/i18n/${options.lang}/${options.scope}.json`;
+    const packageUrl = `/assets/i18n/${options.lang}/${options.scope}.json`;
 
-    return httpRequest;
+    // Library strings ship in @acorex/core/i18n and are copied to /assets/i18n.
+    // Demo-only scopes (sample, document, general, common) stay in /i18n.
+    if (options.scope === 'acorex') {
+      return this.http.get<AXTranslation>(packageUrl).pipe(
+        first(),
+        catchError(() => this.http.get<AXTranslation>(publicUrl).pipe(first())),
+      );
+    }
+
+    return this.http.get<AXTranslation>(publicUrl).pipe(first());
   }
 }
 

@@ -6,5 +6,4 @@ import { Component, model } from '@angular/core';
   templateUrl: 'usage.component.html',
   imports: [AXResizableDirective, AXDecoratorModule],
 })
-export class ResizerUsageComponent {
-}
+export class ResizableUsageComponent {}

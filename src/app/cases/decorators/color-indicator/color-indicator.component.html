@@ -1,6 +1,35 @@
-<div>
-  <ax-button #colorBtn look="blank">
-    <ax-icon class="icon icon-color-palette"></ax-icon>
-  </ax-button>
-  <ax-color-indicator previewColor="rgba(223, 223, 24)"></ax-color-indicator>
+<div class="flex flex-col gap-3">
+  <div class="relative inline-flex">
+    <ax-button
+      #colorBtn
+      class="ax-sm"
+      look="blank"
+      [iconOnly]="true"
+      aria-label="Pick a color"
+    >
+      <ax-icon class="ax-icon ax-icon-pen"></ax-icon>
+      <ax-color-indicator
+        class="pointer-events-none absolute bottom-0 left-1/2 z-1 w-3.5 -translate-x-1/2"
+        [previewColor]="color()"
+      ></ax-color-indicator>
+    </ax-button>
+    <ax-popover
+      [openOn]="'click'"
+      [target]="colorBtn"
+      placement="bottom-start"
+    >
+      <div class="overlay-pane flex flex-col gap-2 p-3">
+        <ax-color-palette
+          [ngModel]="color()"
+          (ngModelChange)="color.set($event)"
+        >
+          <ax-color-palette-picker></ax-color-palette-picker>
+          <ax-color-palette-swatches></ax-color-palette-swatches>
+          <ax-color-palette-input></ax-color-palette-input>
+        </ax-color-palette>
+      </div>
+    </ax-popover>
+  </div>
+
+  <p class="text-sm">Selected: {{ color() }}</p>
 </div>

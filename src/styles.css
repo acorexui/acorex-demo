@@ -11,6 +11,15 @@
 @source '../node_modules/@acorex';
 
 /*
+ * @acorex/styles maps ax-icon-arrow-turn-left to FA 6.5+ glyph \e632.
+ * This demo ships Font Awesome Pro 6.4.0, which does not include that codepoint
+ * (Reply in comment renders as a missing-glyph box). Use FA 6.4 fa-reply instead.
+ */
+:root {
+  --ax-icon-arrow-turn-left: "\f3e5";
+}
+
+/*
  * Tailwind can't detect dynamic classes (e.g. [color], runtime values).
  * Uncomment if you use accent colors like: bg-accent2-lightest
  * Keep minimal to avoid extra CSS.
@@ -65,4 +74,8 @@ body {
 
 ::-webkit-scrollbar-corner {
   background: transparent;
+}
+
+ax-datetime-picker > .ax-footer {
+  border-top-width: 0;
 }

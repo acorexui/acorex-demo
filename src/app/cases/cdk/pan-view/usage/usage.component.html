@@ -1,10 +1,9 @@
-<div
-  class="w-96 h-96 border border-surface rounded-lg overflow-hidden p-4"
->
+<div class="w-96 h-96 overflow-hidden rounded-lg border border-surface">
   <img
     src="https://picsum.photos/800/600"
     alt="Pannable Image"
     axPanView
-    class="w-full h-full object-contain"
+    [freeMode]="true"
+    class="h-full w-full object-contain"
   />
 </div>

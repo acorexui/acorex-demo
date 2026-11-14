@@ -21,13 +21,31 @@
         (onClick)="setLook('text-line')"
         [selected]="selectedLook() === 'text-line'"
       ></ax-button-group-item>
+      <ax-button-group-item
+        text="Minimal"
+        (onClick)="setLook('minimal')"
+        [selected]="selectedLook() === 'minimal'"
+      ></ax-button-group-item>
+      <ax-button-group-item
+        text="Rounded Arrow Minimal"
+        (onClick)="setLook('rounded-arrow-minimal')"
+        [selected]="selectedLook() === 'rounded-arrow-minimal'"
+      ></ax-button-group-item>
+      <ax-button-group-item
+        text="Rectangular Arrow Minimal"
+        (onClick)="setLook('rectangular-arrow-minimal')"
+        [selected]="selectedLook() === 'rectangular-arrow-minimal'"
+      ></ax-button-group-item>
     </ax-button-group>
   </div>
 
   <ax-step-wizard
     #wizard
-    class="ax-md"
-    [connector]="true"
+    class="ax-md w-full max-w-4xl"
+    [connector]="
+      selectedLook() !== 'rounded-arrow-minimal' &&
+      selectedLook() !== 'rectangular-arrow-minimal'
+    "
     [scrollToStep]="false"
     [look]="selectedLook()"
   >
