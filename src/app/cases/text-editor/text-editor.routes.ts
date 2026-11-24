@@ -26,4 +26,11 @@ export const routes: Routes = [
         (e) => e.CustomToolbarComponent,
       ),
   },
+  {
+    path: 'inline-toolbar',
+    loadComponent: () =>
+      import('./inline-toolbar/inline-toolbar.component').then(
+        (e) => e.InlineToolbarComponent,
+      ),
+  },
 ];

@@ -1,8 +1,9 @@
-<div
-  class="flex flex-col items-center justify-center gap-2 px-4"
->
+<div class="flex flex-col items-center justify-center gap-2 px-4">
+  <p class="text-center text-sm opacity-70">
+    Days +2 and +5 from today are disabled. Days +3 and +7 are holidays.
+  </p>
   <ax-calendar-range
-    [disabledDates]="disabledDates()"
-    [holidayDates]="holidayDates()"
+    [disabledDates]="disabledDates"
+    [holidayDates]="holidayDates"
   ></ax-calendar-range>
 </div>
