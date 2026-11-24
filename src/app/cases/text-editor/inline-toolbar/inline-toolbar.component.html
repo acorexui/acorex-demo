@@ -1,0 +1,23 @@
+<div class="flex w-3xl flex-col gap-3">
+  <p class="text-sm opacity-70">
+    No persistent toolbar. Select text to toggle inline marks, including
+    spoiler. Type
+    <code class="text-xs">&#64;</code>
+    to insert a mention tag from
+    <code class="text-xs">mentions</code>.
+  </p>
+
+  <ax-text-editor
+    class="w-full"
+    [initialLine]="8"
+    [mentions]="mentions"
+    placeHolder="Draft a message. Highlight text for bold, italic, underline, strike, code, or spoiler. Type @ to mention a teammate."
+    [(ngModel)]="content"
+  >
+    <ax-text-editor-inline-toolbar>
+      <ax-text-editor-font-style></ax-text-editor-font-style>
+      <ax-divider></ax-divider>
+      <ax-text-editor-spoiler></ax-text-editor-spoiler>
+    </ax-text-editor-inline-toolbar>
+  </ax-text-editor>
+</div>
